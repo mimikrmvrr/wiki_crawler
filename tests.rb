@@ -32,4 +32,9 @@ class TestSimpleNumber < Test::Unit::TestCase
     assert_equal(expected_links, internal_links(get_links(Nokogiri::HTML(html))))
   end
 
+  def test_absolute_urls
+    links = {"Foo"=>"#foo", "Bar"=>"#bar", "Main page"=>'/main'}
+    expected_urls = ['http://www.mediawiki.org/wiki/Installation#foo', 'http://www.mediawiki.org/wiki/Installation#bar', 'http://www.mediawiki.org/main']
+    assert_equal(expected_urls, get_absolute_urls(links))
+  end
 end

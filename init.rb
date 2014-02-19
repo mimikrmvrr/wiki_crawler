@@ -26,7 +26,13 @@ def get_links(page)
 end
 
 def internal_links(links)
-  links.select {|link_name, link| link.start_with?('/', '#')}
+  links.select { |link_name, link| link.start_with?('/', '#') }
+end
+
+def get_absolute_urls(links)
+  links.map do |link_name, link|
+    link.start_with?('#') ? "#{PAGE_URL}#{link}" : "#{BASE_URL}#{link}"
+  end
 end
 
 page = Nokogiri::HTML(open(PAGE_URL))
@@ -37,7 +43,7 @@ page.at('#toc').remove
 page.css('span[class="mw-editsection"]').map(&:remove)
 content = page.css('div#mw-content-text').text
 links = get_links(page.css('div#mw-content-text'))
-internal = internal_links(links)
+internal = get_absolute_urls(internal_links(links))
 parsed_file_name = "parsed.txt"
 begin
   file = File.open(parsed_file_name, "w")
