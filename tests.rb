@@ -37,4 +37,10 @@ class TestSimpleNumber < Test::Unit::TestCase
     expected_urls = ['http://www.mediawiki.org/wiki/Installation#foo', 'http://www.mediawiki.org/wiki/Installation#bar', 'http://www.mediawiki.org/main']
     assert_equal(expected_urls, get_absolute_urls(links))
   end
+
+  def test_absolute_urls_uniq
+    links = {"Foo"=>"#foo", "Bar"=>"#bar", "Main page"=>'/main', "Main"=>'/main', "IntenalFoo"=>"/foo", "Foobar"=>'#foo'}
+    expected_urls = ['http://www.mediawiki.org/wiki/Installation#foo', 'http://www.mediawiki.org/wiki/Installation#bar', 'http://www.mediawiki.org/main', 'http://www.mediawiki.org/foo']
+    assert_equal(expected_urls, get_absolute_urls(links))
+  end
 end

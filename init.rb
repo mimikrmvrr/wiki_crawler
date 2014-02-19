@@ -30,9 +30,10 @@ def internal_links(links)
 end
 
 def get_absolute_urls(links)
-  links.map do |link_name, link|
+  absolute_links = links.map do |link_name, link|
     link.start_with?('#') ? "#{PAGE_URL}#{link}" : "#{BASE_URL}#{link}"
   end
+  absolute_links.uniq
 end
 
 page = Nokogiri::HTML(open(PAGE_URL))
