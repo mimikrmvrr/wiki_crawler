@@ -19,4 +19,17 @@ class TestSimpleNumber < Test::Unit::TestCase
     assert_equal(expected_links, get_links(Nokogiri::HTML(html)))
   end
 
+  def test_internal_links
+    html = "<html>
+    <body>
+        <a href=#foo>Foo</a>
+        <a href=#bar>Bar </a>
+        <a href='https://www.google.com'>Google</a>
+        <a href='/main'>Main page</a>
+    </body>
+</html>"
+    expected_links = {"Foo"=>"#foo", "Bar"=>"#bar", "Main page"=>'/main'}
+    assert_equal(expected_links, internal_links(get_links(Nokogiri::HTML(html))))
+  end
+
 end
