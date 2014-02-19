@@ -2,7 +2,20 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-PAGE_URL = "http://www.mediawiki.org/wiki/Installation"
+PAGE_URL = "http://www.mediawiki.org/wiki/Manual:Upgrading"
+
+class Url
+  def initialize(url)
+    @url = url
+  end
+
+  def base_url()
+    uri = URI.parse(@url)
+    "#{uri.scheme}://#{uri.host}"
+  end
+end
+
+BASE_URL = Url.new(PAGE_URL).base_url
 
 page = Nokogiri::HTML(open(PAGE_URL))
 page_title = page.title
@@ -14,11 +27,10 @@ content = page.css('div#mw-content-text').text
 parsed_file_name = "parsed.txt"
 begin
   file = File.open(parsed_file_name, "w")
-  file.write(page_title)
   file.write(h1)
   file.write(redirected_from)
   file.write(content)
-  file.write(page.css('span[class="mw-editsection"]'))
+  #file.write(BASE_URL)
 rescue IOError => e
   #some error occur, dir not writable etc.
 ensure
