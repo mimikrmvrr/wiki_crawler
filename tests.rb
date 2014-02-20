@@ -1,6 +1,8 @@
 require './init'
 require "test/unit"
 
+PAGE_URL = "http://www.mediawiki.org/wiki/Installation"
+
 class TestSimpleNumber < Test::Unit::TestCase
 
   def test_get_base_url
@@ -53,4 +55,11 @@ class TestSimpleNumber < Test::Unit::TestCase
   #   assert_equal('http://www.mediawiki.org/wiki/Installation#bar', "#bar")
   #   assert_equal('http://www.mediawiki.org/main', "/main")
   # end
+
+  def test_pages
+    page = Page.new(PAGE_URL)
+    assert_equal("Manual:Installation guide", page.heading)
+    assert_equal("wiki_Installation", page.file_name)
+  end
+
 end
