@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Running MediaWiki on FreeBSD - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Running_MediaWiki_on_FreeBSD","wgTitle":"Running MediaWiki on FreeBSD","wgCurRevisionId":676806,"wgRevisionId":676806,"wgArticleId":14057,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Running_MediaWiki_on_FreeBSD","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":676806,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Running_MediaWiki_on_FreeBSD skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Running MediaWiki on FreeBSD</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="wikitable" style="float:right; margin: 0 0 1em 1em;">
+<tr>
+<th style="background-color:white"><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation guides</a></th>
+</tr>
+<tr>
+<th><strong class="selflink">on FreeBSD</strong></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Linux" title="Manual:Running MediaWiki on Linux" class="mw-redirect">on GNU/Linux</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_ALT_Linux" title="Manual:Running MediaWiki on ALT Linux">ALT Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Arch_Linux" title="Manual:Running MediaWiki on Arch Linux">Arch Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Damnsmalllinux" title="Manual:Running MediaWiki on Damnsmalllinux">Damnsmalllinux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux" title="Manual:Running MediaWiki on Debian GNU/Linux">Debian</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Fedora" title="Manual:Running MediaWiki on Fedora">Fedora</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Gentoo_Linux" title="Manual:Running MediaWiki on Gentoo Linux">Gentoo</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Mandriva" title="Manual:Running MediaWiki on Mandriva">Mandriva</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Red_Hat_Linux" title="Manual:Running MediaWiki on Red Hat Linux">Red Hat Enterprise Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Slackware_Linux" title="Manual:Running MediaWiki on Slackware Linux">Slackware</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu" title="Manual:Running MediaWiki on Ubuntu">Ubuntu</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Mac_OS_X" title="Manual:Running MediaWiki on Mac OS X">on Mac OS X</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_NetWare" title="Manual:Running MediaWiki on NetWare">on NetWare</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Solaris" title="Manual:Running MediaWiki on Solaris">on Solaris</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_11_/_opensolaris" title="Manual:Running MediaWiki on Solaris 11 / opensolaris">on Solaris 11 / opensolaris</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_10" title="Manual:Running MediaWiki on Solaris 10">on Solaris 10</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Windows" title="Manual:Running MediaWiki on Windows">on Windows</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2008" title="Manual:Installing MediaWiki on Windows Server 2008">Windows Server 2008</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2003" title="Manual:Installing MediaWiki on Windows Server 2003">Windows Server 2003</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Streamlined_Windows_Install_Guide" title="Manual:Streamlined Windows Install Guide">Streamlined Guide</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Simple_Windows_Apache_Installation" title="Manual:Simple Windows Apache Installation">Simple Windows/Apache Guide</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Wiki_on_a_stick" title="Manual:Wiki on a stick">on a stick</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_on_MoWeS_Portable_(Windows)" title="Manual:Installing on MoWeS Portable (Windows)">on MoWeS Portable</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installation_on_Uniform_Server_(Windows)" title="Manual:Installation on Uniform Server (Windows)">on Uniform Server</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_XAMPP" title="Manual:Installing MediaWiki on XAMPP">on XAMPP</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Running_MediaWiki_on_Sourceforge.net" title="Manual:Running MediaWiki on Sourceforge.net" class="mw-redirect">on Sourceforge.net</a></th>
+</tr>
+</table>
+<p>This installation guide assumes you are installing on the local machine (<tt>localhost</tt>) and that you are logged in as the superuser (<tt>root</tt>). Also, these instructions have been tested to work with FreeBSD 8.0+, PHP 5.2/5.3, MySQL 5.0/5.1, Apache 2.2, and MediaWiki 1.13 (or later). Other software versions might require slightly different steps. Instructions for older versions of FreeBSD are <a href="#Database">below</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Install_Apache.2C_PHP.2C_MySQL.2C_and_MediaWiki"><span class="tocnumber">1</span> <span class="toctext">Install Apache, PHP, MySQL, and MediaWiki</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Set_up_MySQL"><span class="tocnumber">2</span> <span class="toctext">Set up MySQL</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Edit_.2Fusr.2Flocal.2Fetc.2Fapache22.2Fhttpd.conf"><span class="tocnumber">3</span> <span class="toctext">Edit /usr/local/etc/apache22/httpd.conf</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Edit_.2Fetc.2Frc.conf"><span class="tocnumber">4</span> <span class="toctext">Edit /etc/rc.conf</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Run_the_MediaWiki_web_installer"><span class="tocnumber">5</span> <span class="toctext">Run the MediaWiki web installer</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Edit_.2Fusr.2Flocal.2Fwww.2Fmediawiki.2FLocalSettings.php"><span class="tocnumber">6</span> <span class="toctext">Edit /usr/local/www/mediawiki/LocalSettings.php</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#You.27re_done.21"><span class="tocnumber">7</span> <span class="toctext">You're done!</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Further_configuration_of_FreeBSD"><span class="tocnumber">7.1</span> <span class="toctext">Further configuration of FreeBSD</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Further_configuration_of_PHP"><span class="tocnumber">7.2</span> <span class="toctext">Further configuration of PHP</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#MediaWiki_extensions"><span class="tocnumber">7.3</span> <span class="toctext">MediaWiki extensions</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#SVG_support"><span class="tocnumber">7.4</span> <span class="toctext">SVG support</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#TeX_support"><span class="tocnumber">7.5</span> <span class="toctext">TeX support</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Custom_namespaces"><span class="tocnumber">7.6</span> <span class="toctext">Custom namespaces</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Job_queue_settings_and_performance"><span class="tocnumber">7.7</span> <span class="toctext">Job queue settings and performance</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Database"><span class="tocnumber">8</span> <span class="toctext">Database</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Web_server"><span class="tocnumber">9</span> <span class="toctext">Web server</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#TeX_support_2"><span class="tocnumber">10</span> <span class="toctext">TeX support</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Matrix_Support"><span class="tocnumber">10.1</span> <span class="toctext">Matrix Support</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#FreeBSD_6.2"><span class="tocnumber">10.1.1</span> <span class="toctext">FreeBSD 6.2</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#teTeX"><span class="tocnumber">10.1.2</span> <span class="toctext">teTeX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Memcached"><span class="tocnumber">11</span> <span class="toctext">Memcached</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Some_problems_and_workarounds"><span class="tocnumber">12</span> <span class="toctext">Some problems and workarounds</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#See_also"><span class="tocnumber">13</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#References"><span class="tocnumber">14</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Install_Apache.2C_PHP.2C_MySQL.2C_and_MediaWiki">Install Apache, PHP, MySQL, and MediaWiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=1" title="Edit section: Install Apache, PHP, MySQL, and MediaWiki" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=1" title="Edit section: Install Apache, PHP, MySQL, and MediaWiki">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>These can either be installed from binaries (using <tt>pkg_add</tt>) or from source via the ports tree under <tt>/usr/ports</tt>.</p>
+<p>To install from binaries (faster option):</p>
+<pre>
+ pkg_add -r apache22 mysql-server php5 php5-mysql mediawiki
+</pre>
+<p><i>NOTE: If you are using <b>FreeBSD 8.2</b>, replace the <tt>mysql-server</tt> with <tt>mysql50-server</tt> or <tt>mysql51-server</tt> (the latter matching <tt>mysql51-client</tt> that may already have been installed on 8.2 by other packages).</i></p>
+<p>Unfortunately, the binary installation of php5 does not include <tt>mod_php</tt>, which is needed by Apache to execute PHP code in pages. Therefore (taken from the FreeBSD handbook, section 29.7.6.4):<sup id="cite_ref-fbhb_1-0" class="reference"><a href="#cite_note-fbhb-1">[1]</a></sup></p>
+<pre>
+ cd /usr/ports/lang/php5
+ make config
+ make
+ make deinstall
+ make reinstall
+</pre>
+<p>During the <tt>make config</tt> step above, enable the "APACHE" option in the menu.</p>
+<h2><span class="mw-headline" id="Set_up_MySQL">Set up MySQL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=2" title="Edit section: Set up MySQL" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=2" title="Edit section: Set up MySQL">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The easiest method is to only set a root password and then let the MediaWiki installer script do the rest:</p>
+<pre>
+ mysqladmin -u root password <i>password</i>
+ history -c
+</pre>
+<p>Use</p>
+<pre>
+ /usr/local/etc/rc.d/mysql-server onestart
+</pre>
+<p>to start MySQL. (Later we will edit <i>rc.conf</i> so MySQL gets started automatically during boot.)</p>
+<h2><span class="mw-headline" id="Edit_.2Fusr.2Flocal.2Fetc.2Fapache22.2Fhttpd.conf">Edit /usr/local/etc/apache22/httpd.conf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=3" title="Edit section: Edit /usr/local/etc/apache22/httpd.conf" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=3" title="Edit section: Edit /usr/local/etc/apache22/httpd.conf">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Make sure the following sections have been added to /usr/local/etc/apache22/httpd.conf:<sup id="cite_ref-fbhb_1-1" class="reference"><a href="#cite_note-fbhb-1">[1]</a></sup></p>
+<pre>
+ LoadModule php5_module        libexec/apache/libphp5.so
+</pre>
+<pre>
+   &lt;IfModule php5_module&gt;
+       DirectoryIndex index.php index.html
+       AddType application/x-httpd-php .php
+       AddType application/x-httpd-php-source .phps
+   &lt;/IfModule&gt;
+</pre>
+<p>If you want to serve MediaWiki content exclusively, you can simply change the Apache document root to the MediaWiki installation directory:</p>
+<pre>
+ DocumentRoot "/usr/local/www/mediawiki"
+</pre>
+<p>Also add an entry for the MediaWiki directory to <tt>httpd.conf</tt>:</p>
+<pre>
+ &lt;Directory "/usr/local/www/mediawiki"&gt;
+   Options Indexes FollowSymLinks
+   DirectoryIndex index.php index.html
+   AllowOverride None
+   Order allow,deny
+   Allow from all
+ &lt;/Directory&gt;
+</pre>
+<p>Use</p>
+<pre>
+ apachectl restart
+</pre>
+<p>to launch (or relaunch) Apache. Open <a rel="nofollow" class="external free" href="http://localhost">http://localhost</a> in your browser to see if Apache works.</p>
+<h2><span class="mw-headline" id="Edit_.2Fetc.2Frc.conf">Edit /etc/rc.conf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=4" title="Edit section: Edit /etc/rc.conf" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=4" title="Edit section: Edit /etc/rc.conf">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Make sure your <tt>hostname</tt> in <tt>rc.conf</tt> contains a domain name, and that Apache and MySQL are set to start automatically during boot:</p>
+<pre>
+ hostname="mycomputer.example.com"
+ apache22_enable="YES"
+ mysql_enable="YES"
+</pre>
+<h2><span class="mw-headline" id="Run_the_MediaWiki_web_installer">Run the MediaWiki web installer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=5" title="Edit section: Run the MediaWiki web installer" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=5" title="Edit section: Run the MediaWiki web installer">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The directory for creating configuration files is <tt>mw-config</tt> (called <tt>config</tt> prior to MediaWiki 1.17).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> For versions of MediaWiki earlier than 1.17, you need to make that directory writable for the installer:</p>
+<pre>
+ cd /usr/local/www
+ chmod 777 mediawiki/config
+</pre>
+<p>Since MediaWiki 1.17 this is no longer necessary because the <tt>LocalSettings.php</tt> file will be downloaded by the browser from the installer web page instead of written directly to the configuration directory.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>Create the <tt>images</tt> directory for storing uploads if it does not exist yet:</p>
+<pre>
+ mkdir mediawiki/images
+</pre>
+<p>Make sure all MediaWiki files belong to user <tt>www</tt>:</p>
+<pre>
+ chown -R www mediawiki
+</pre>
+<p>Now open <a rel="nofollow" class="external free" href="http://localhost/mediawiki/mw-config/index.php">http://localhost/mediawiki/mw-config/index.php</a> in your browser to start installation. Enter <tt>root</tt> and your MySQL root password in the superuser name and password fields. See <a href="/wiki/Manual:Config_script" title="Manual:Config script">Manual:Config script</a> for more information on using the web installer.</p>
+<p>After the installer has finished successfully, copy the resulting <tt>LocalSettings.php</tt> file to the MediaWiki root directory. For MediaWiki versions earlier than 1.17 this means:</p>
+<pre>
+ cd /usr/local/www/mediawiki
+ cp config/LocalSettings.php .
+ chmod 700 config
+</pre>
+<p>Under MediaWiki 1.17 or later, just copy <tt>LocalSettings.php</tt> from where it was saved by your web browser to <tt>/usr/local/www/mediawiki</tt>.</p>
+<h2><span class="mw-headline" id="Edit_.2Fusr.2Flocal.2Fwww.2Fmediawiki.2FLocalSettings.php">Edit /usr/local/www/mediawiki/LocalSettings.php</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=6" title="Edit section: Edit /usr/local/www/mediawiki/LocalSettings.php" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=6" title="Edit section: Edit /usr/local/www/mediawiki/LocalSettings.php">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This is the main configuration file for your MediaWiki installation. You will probably want to enable uploads and change the logo. The logo image should be 135 pixels square:</p>
+<pre>
+ $wgEnableUploads = true;
+ $wgLogo = "<a rel="nofollow" class="external free" href="http://mycomputer.example.com/my_logo.png">http://mycomputer.example.com/my_logo.png</a>";
+</pre>
+<p>If you would like to use <tt>php maintenance/update.php</tt> to upgrade MediaWiki to the latest version, you should also add the database root password to <tt>LocalSettings.php</tt>:</p>
+<pre>
+ $wgDBadminuser = "root";
+ $wgDBadminpassword  = "<i>password</i>";
+</pre>
+<h2><span class="mw-headline" id="You.27re_done.21">You're done!</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=7" title="Edit section: You're done!" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=7" title="Edit section: You're done!">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Further_configuration_of_FreeBSD">Further configuration of FreeBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=8" title="Edit section: Further configuration of FreeBSD" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=8" title="Edit section: Further configuration of FreeBSD">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Please note that your Apache server will also serve pages to everyone else on the local network. You may want to check your firewall settings if you do not want to make your MediaWiki content available to other machines.</p>
+<h3><span class="mw-headline" id="Further_configuration_of_PHP">Further configuration of PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=9" title="Edit section: Further configuration of PHP" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=9" title="Edit section: Further configuration of PHP">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some parameters of the wiki such as maximum upload size must be set in PHP itself. Edit (or create) the file <tt>/usr/local/etc/php.ini</tt> if you need support for larger upload file sizes or if MediaWiki reports problems with session data ("Loss of session data. Please try again."). Also, large XML imports may require increasing maximum PHP execution time (set to 10 minutes below):</p>
+<pre>
+ upload_max_filesize  = 50M
+ post_max_size        = 50M
+ session.save_path    = "/var/lib/phpsess"
+ max_execution_time   = 600
+</pre>
+<p>The temporary directory for PHP sessions, <tt>/var/lib/phpsess</tt> in this sample setup, should be owned by user <tt>www</tt> and have permissions 733. When you make changes to <tt>php.ini</tt>, you have to restart Apache with <tt>apachectl restart</tt> for the changes to take effect.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<h3><span class="mw-headline" id="MediaWiki_extensions">MediaWiki extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=10" title="Edit section: MediaWiki extensions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=10" title="Edit section: MediaWiki extensions">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Manual:Extensions" title="Manual:Extensions">Extensions</a> are installed by extracting the ".tar.gz" archive to <tt>/usr/local/www/mediawiki/extensions/</tt>, registering the extension in <tt>LocalSettings.php</tt>, and restarting Apache.</p>
+<p>An important extension to get is <a href="/wiki/Extension:ParserFunctions" title="Extension:ParserFunctions">ParserFunctions</a>, necessary for template logic. (Import <tt>MediaWiki:Common.css</tt> from Wikipedia into your wiki if you want e.g. navbox colors to be the same as on Wikipedia. Import <tt>MediaWiki:Common.js</tt> for collapsible tables.) This extension also requires ctype to be installed for PHP:</p>
+<pre>
+ pkg_add -r php5-ctype
+</pre>
+<p>If you see garbage HTML tags on your wiki pages (sometimes found in templates due to incorrect mixing of wiki markup and HTML), this can be fixed by installing HTML Tidy (<tt>pkg_add -r tidy</tt>) and enabling it with</p>
+<pre>
+ $wgUseTidy = true;
+</pre>
+<p>in <tt>LocalSettings.php</tt>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p>Another useful extension for Wikipedia-style articles is <a href="/wiki/Extension:Cite/Cite.php" title="Extension:Cite/Cite.php">Cite</a> which handles references. Also, <a href="/wiki/Extension:SpecialInterwiki" title="Extension:SpecialInterwiki" class="mw-redirect">SpecialInterwiki</a> or <a href="/wiki/Extension:InterWiki" title="Extension:InterWiki">InterWiki</a> can be used for easier maintenance of <a href="/wiki/Help:Links#Interwiki_links" title="Help:Links">interwiki links</a>.</p>
+<p>Your local MediaWiki extensions are listed here: <a rel="nofollow" class="external free" href="http://localhost/index.php/Special:Version">http://localhost/index.php/Special:Version</a></p>
+<h3><span class="mw-headline" id="SVG_support">SVG support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=11" title="Edit section: SVG support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=11" title="Edit section: SVG support">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Add the following lines to <tt>LocalSettings.php</tt> to allow SVG upload and to enable thumbnail and preview rendering with Inkscape:</p>
+<pre>
+ $wgFileExtensions = array('png', 'gif', 'jpg', 'jpeg', 'svg');
+ $wgSVGConverters = array(
+   'Inkscape' =&gt; '/usr/local/bin/inkscape -z -w $width -f $input -e $output',);
+ $wgSVGConverter = 'Inkscape';
+</pre>
+<p>Obviously, Inkscape must be installed for this to work (<tt>pkg_add -r inkscape</tt>). Wikipedia is still using rsvg for SVG rendering, which produces less accurate results than Inkscape but is faster.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p>MediaWiki 1.17 or later extract meta data from SVG files using the XMLReader PHP extension, so it must be installed:</p>
+<pre>
+ pkg_add -r php5-xmlreader
+ apachectl restart
+</pre>
+<h3><span class="mw-headline" id="TeX_support">TeX support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=12" title="Edit section: TeX support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=12" title="Edit section: TeX support">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Install the necessary packages<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> with</p>
+<pre>
+ pkg_add -r ocaml ImageMagick ghostscript8 teTeX
+</pre>
+<p>Then compile <tt>texvc</tt> with</p>
+<pre>
+ cd /usr/local/www/mediawiki/math/
+ gmake
+</pre>
+<p>For versions of MediaWiki before 1.18, add the lines</p>
+<pre>
+ putenv("PATH=".getenv("PATH").":/usr/local/bin");
+ $wgUseTeX = true;
+</pre>
+<p>to <tt>LocalSettings.php</tt>.</p>
+<p>For version 1.18 of MediaWiki and later, install the <a href="/wiki/Extension:Math" title="Extension:Math">Math</a> extension, add</p>
+<pre>
+require_once("$IP/extensions/Math/Math.php");
+</pre>
+<p>to <tt>LocalSettings.php</tt>, and run the update script:</p>
+<pre>
+php /your/path/to/mediawiki/maintenance/update.php
+</pre>
+<p>(See the documentation for the Math extension for further details.)</p>
+<h3><span class="mw-headline" id="Custom_namespaces">Custom namespaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=13" title="Edit section: Custom namespaces" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=13" title="Edit section: Custom namespaces">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If you import content from Wikipedia, it is useful to set up custom namespaces. This is particular necessary for namespaces like "Portal" where many pages use transclusion of templates from subpages. Set up a custom namespace and enable subpages with:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<pre>
+ $wgExtraNamespaces[100] = "Portal";
+ $wgExtraNamespaces[101] = "Portal_talk";
+ $wgNamespacesWithSubpages[100] = true;
+</pre>
+<h3><span class="mw-headline" id="Job_queue_settings_and_performance">Job queue settings and performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=14" title="Edit section: Job queue settings and performance" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=14" title="Edit section: Job queue settings and performance">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>By default, every request to the server will cause one item from the <a href="/wiki/Manual:Job_queue" title="Manual:Job queue">MediaWiki job queue</a> to be processed. On a low-traffic wiki such as a personal server, the job queue will only get cleared slowly this way and page loading will feel somewhat sluggish, as some jobs may take over a second to complete.</p>
+<p>Performance is improved by processing the job queue in the background by a daily <a href="//en.wikipedia.org/wiki/cron" class="extiw" title="w:cron">cron job</a> when user activity is low: Disable per-request job queue processing in <i>LocalSettings.php</i> by adding</p>
+<pre>
+$wgJobRunRate = 0;
+</pre>
+<p>and schedule a cron job by putting</p>
+<pre>
+0 0 * * * nice /usr/local/bin/php /usr/local/www/mediawiki/maintenance/runJobs.php 2&gt;&amp;1 &gt; /var/log/runJobs.log
+</pre>
+<p>in user <i>www'</i>s crontab. This will run the queue processing job at midnight every day at slightly <a href="//en.wikipedia.org/wiki/nice_(Unix)" class="extiw" title="w:nice (Unix)">lower process priority</a>.</p>
+<p><br /></p>
+<table class="plainlinks ombox ombox-content" role="presentation">
+<tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/3/38/Imbox_content.png" width="40" height="40" /></td>
+<td class="mbox-text"><b>IMPORTANT:</b> All content below this box was written for <b>older versions of FreeBSD</b> (v4 and v6) and may not work on later versions.<br />
+Legacy content that has been updated or verified for FreeBSD v8 and later should be moved <i>above</i> this box.</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Database">Database</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=15" title="Edit section: Database" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=15" title="Edit section: Database">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Install MySQL from ports, databases/mysql40-server.</p>
+<h2><span class="mw-headline" id="Web_server">Web server</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=16" title="Edit section: Web server" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=16" title="Edit section: Web server">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Apache can be installed from ports, www/apache13 or www/apache2.</p>
+<h2><span class="mw-headline" id="TeX_support_2">TeX support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=17" title="Edit section: TeX support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=17" title="Edit section: TeX support">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Install these from ports for math rendering support if you haven't already got them:</p>
+<ul>
+<li>lang/ocaml</li>
+<li>print/latex</li>
+<li>print/dvips</li>
+<li>graphics/ImageMagick</li>
+<li>print/ghostscript-gnu-nox11</li>
+</ul>
+<p>For FreeBSD 4.11 users: please install the following packages instead because dvips is not available in the package list:<br /></p>
+<ul>
+<li>ocaml</li>
+<li>teTeX</li>
+<li>ImageMagick</li>
+<li>gmake</li>
+</ul>
+<p>teTeX already includes latex and dvips. However, it will conflict with latex2e. So please make sure that your system does not have latex2e.</p>
+<p><a href="/wiki/Texvc" title="Texvc">texvc</a>'s Makefile requires GNU make. Once ocaml is installed, go into the math/ subdirectory of the MediaWiki package and run 'gmake'. The texvc executable will be installed by install.php if you use it and have $wgUseTeX set to true, or you can copy it in manually. Put it in 'math' subdirectory under where wiki.phtml is.</p>
+<p>Note that certain versions of FreeBSD (5.3) may require a cvsup of the ports directory to work correctly. If you attempt this installation and run into errors, try cvsup'ing your ports tree and remaking the above ports -- ImageMagick specifically.</p>
+<p>The MediaWiki-1.1.0 and earlier releases use an option for dvips which the ports version doesn't support. The latest CVS version has used a more compatible option; if using an older release, edit render.ml and change "-o -" to "-f" at the end of the first line, then build texvc.</p>
+<p>Note that latex, dvips, and convert must be in the PATH for texvc to shell out to them. If apache is started on system startup it may not have /usr/local/bin in the PATH, and this PATH will be inherited by texvc and image output won't happen. Restart apache after boot, or put this into LocalSettings.php:</p>
+<pre>
+ putenv("PATH=".getenv("PATH").":/usr/local/bin");
+</pre>
+<p>In some installations, dvips seems to have problems with texvc's command line parameters: it doesn't recognize '<tt>ps:-</tt>' as an input filename specifier for <i>stdin</i>. Change this line to use plain '<tt>-</tt>' in file <tt>render.ml</tt> and compile texvc again:</p>
+<pre>
+let cmd_convert finalpath = "/usr/local/bin/convert -quality 100 -density 120 - " ^ finalpath ^ " &gt;/dev/null 2&gt;/dev/null"
+</pre>
+<h3><span class="mw-headline" id="Matrix_Support">Matrix Support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=18" title="Edit section: Matrix Support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=18" title="Edit section: Matrix Support">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The default install of math libraries will not have the asmfonts installed. Asmfonts are used for matrix, bmatrix, and pmatrix math libraries.</p>
+<p>Instructions and fonts can be obtained from the following links:</p>
+<ul>
+<li><a rel="nofollow" class="external free" href="http://www.ams.org/tex/distrib.html#unix">http://www.ams.org/tex/distrib.html#unix</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.ams.org/tex/amsfonts.html">http://www.ams.org/tex/amsfonts.html</a></li>
+</ul>
+<p>Likely, the fonts will need to be installed in /usr/local/share/texmf</p>
+<h4><span class="mw-headline" id="FreeBSD_6.2">FreeBSD 6.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=19" title="Edit section: FreeBSD 6.2" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=19" title="Edit section: FreeBSD 6.2">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>I installed MediaWiki on FreeBSD 6.2 through ports.</p>
+<pre>
+Requirements: <br />Apache; <code> /usr/ports/www/apache22 </code>
+PHP; <code> /usr/ports/lang/php5 </code>
+MySQL; <code> /usr/ports/databases/mysql50-server </code>
+teTeX; <code> /usr/ports/print/teTeX </code>
+</pre>
+<p><code>cd /usr/ports/www/mediawiki<br />
+make install clean rehash</code></p>
+<h4><span class="mw-headline" id="teTeX">teTeX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=20" title="Edit section: teTeX" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=20" title="Edit section: teTeX">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>On FreeBSD 6.2 I had previously installed the LaTeX port. This worked for some math typesetting, but not for matrices, vectors, and things like \mathbb{R}.</p>
+<p>I had to remove the latex port:<br />
+<code>cd /usr/ports/print/latex<br />
+make deinstall<br />
+make clean</code></p>
+<p>Update my ports tree using <a rel="nofollow" class="external text" href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/updating-upgrading-portsnap.html"><code>portsnap</code></a>:<br />
+<code>portsnap fetch<br />
+portsnap extract<br /></code></p>
+<p>Then install the teTex port:<br />
+<code>cd /usr/ports/print/teTeX<br />
+make install clean<br />
+rehash</code></p>
+<p>Then restart the apache web server:<br />
+<code>apachectl graceful</code></p>
+<p>Now I have access to vectors, matrices, \mathbb{}, and all the amsfonts characters. amsfonts is called amspsfnt in the FreeBSD ports tree, and is installed as part of the teTeX port.</p>
+<h2><span class="mw-headline" id="Memcached">Memcached</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=21" title="Edit section: Memcached" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=21" title="Edit section: Memcached">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Install it from databases/memcached. Please note, that it should not be reachable from outside, as that would cause severe security risks for your installation. If you're running on a jail, your localhost address would be mapped to a Net-visible address.</p>
+<h2><span class="mw-headline" id="Some_problems_and_workarounds">Some problems and workarounds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=22" title="Edit section: Some problems and workarounds" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=22" title="Edit section: Some problems and workarounds">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>I have different configurations for standalone php and module-php. install.php database functions don't work in standalone php.</li>
+</ul>
+<dl>
+<dd><i>Workaround - run install.php from commandline to copy files. Then copy it to install2.php and comment out parts which copy files. Also hard-code db root password and delete lines where commandline input is expected. Run install2.php by accessing it from the webserver.</i></dd>
+</dl>
+<ul>
+<li>I've installed MediaWiki with Cs locales and wiki.phtml doesn't work.</li>
+</ul>
+<dl>
+<dd><i>LanguageCs needs LanguageUtf8.php to work. Copy LanguageUtf8.php to the same directory as LanguageCs.php</i></dd>
+</dl>
+<p>wiki.phtml still does not work</p>
+<dl>
+<dd><i>Hard-code including LanguageCs.php after Language.php in Setup.php</i></dd>
+</dl>
+<ul>
+<li>During installation i get this error message:</li>
+</ul>
+<pre>
+"PHP's XML module is missing; the wiki requires functions in 
+this module and won't work in this configuration.
+If you're running Mandrake, install the php-xml package."
+</pre>
+<dl>
+<dd><i>Make sure php extensions port is installed.</i></dd>
+</dl>
+<pre>
+$cd /usr/ports/lang/php(4|5)-extensions
+$make install distclean
+</pre>
+<dl>
+<dd><i>select xml from the menu</i></dd>
+</dl>
+<pre>
+$ldconfig (to link newly installed xml library)
+</pre>
+<dl>
+<dd><i>Restart apache.</i></dd>
+</dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=23" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=23" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Manual:Configuration" title="Manual:Configuration">Manual:Configuration</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit&amp;section=24" title="Edit section: References" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit&amp;section=24" title="Edit section: References">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-fbhb-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-fbhb_1-0">1.0</a></sup> <sup><a href="#cite_ref-fbhb_1-1">1.1</a></sup></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.freebsd.org/doc/handbook/network-apache.html#AEN38849">http://www.freebsd.org/doc/handbook/network-apache.html#AEN38849</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a href="/wiki/Manual:Config_script" title="Manual:Config script">Manual:Config script</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a href="/wiki/MediaWiki_1.17#New_installer" title="MediaWiki 1.17">MediaWiki_1.17#New_installer</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a href="/wiki/Manual:Configuring_file_uploads#Set_maximum_size_for_file_uploads" title="Manual:Configuring file uploads">Manual:Configuring file uploads#Set maximum size for file uploads</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a href="/wiki/Manual:Using_content_from_Wikipedia" title="Manual:Using content from Wikipedia">Manual:Using content from Wikipedia</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a href="/wiki/Manual:Image_Administration#SVG" title="Manual:Image Administration" class="mw-redirect">Manual:Image Administration#SVG</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a href="/wiki/Manual:Enable_TeX" title="Manual:Enable TeX">Manual:Enable TeX</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a href="/wiki/Manual:Using_custom_namespaces" title="Manual:Using custom namespaces">Manual:Using custom namespaces</a></span></li>
+</ol>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ja"><a href="/wiki/Manual:Running_MediaWiki_on_FreeBSD/ja" title="Manual:Running MediaWiki on FreeBSD/ja">日本語</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1175
+CPU time usage: 0.484 seconds
+Real time usage: 0.546 seconds
+Preprocessor visited node count: 2342/1000000
+Preprocessor generated node count: 7369/1500000
+Post‐expand include size: 10176/2048000 bytes
+Template argument size: 15822/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+Lua time usage: 0.019s
+Lua memory usage: 710 KB
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:14057-0!*!0!!en!4!* and timestamp 20140207192006
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;oldid=676806">http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;oldid=676806</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+FreeBSD&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+FreeBSD" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_FreeBSD"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Running_MediaWiki_on_FreeBSD"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_FreeBSD" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3ARunning+MediaWiki+on+FreeBSD">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3ARunning+MediaWiki+on+FreeBSD&amp;oldid=676806&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Running_MediaWiki_on_FreeBSD" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Running_MediaWiki_on_FreeBSD" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;oldid=676806" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_FreeBSD&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3ARunning_MediaWiki_on_FreeBSD&amp;id=676806" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 23 April 2013, at 18:26.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Running_MediaWiki_on_FreeBSD" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1179 in 0.183 secs. -->
+	</body>
+</html>

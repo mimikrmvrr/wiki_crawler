@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Running MediaWiki on Ubuntu - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Ubuntu" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.geshi.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Running_MediaWiki_on_Ubuntu","wgTitle":"Running MediaWiki on Ubuntu","wgCurRevisionId":902518,"wgRevisionId":902518,"wgArticleId":14086,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Running_MediaWiki_on_Ubuntu","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["es-es","es","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":902518,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Running_MediaWiki_on_Ubuntu skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Running MediaWiki on Ubuntu</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>For manual installation, some PC knowledge is required (i.e., installing applications), a bit about <a href="//en.wikipedia.org/wiki/Operating_Systems" class="extiw" title="w:Operating Systems">Operating Systems</a>, and use of a text editor (like gedit, kate, nano, emacs, or vi (see <a rel="nofollow" class="external text" href="http://www.unix-manuals.com/tutorials/vi/vi-in-10-1.html">vi in 10 minutes</a> to get started)).</p>
+<p>To install MediaWiki on an <a href="//en.wikipedia.org/wiki/en:Ubuntu_(Linux_distribution)" class="extiw" title="w:en:Ubuntu (Linux distribution)">Ubuntu Desktop Edition</a> (prior to Ubuntu 11.04) primarily via the <a href="//en.wikipedia.org/wiki/GNOME" class="extiw" title="w:GNOME">Gnome Desktop</a> and <a href="//en.wikipedia.org/wiki/Synaptic_(software)" class="extiw" title="w:Synaptic (software)">Synaptic Package Manager</a>, see <a href="/wiki/Manual:Installing_MediaWiki_on_Ubuntu_via_GUI_and_Synaptic" title="Manual:Installing MediaWiki on Ubuntu via GUI and Synaptic">this page</a>. For Ubuntu 10.04 and later, see <a href="/wiki/Manual:Installing_MediaWiki_on_Ubuntu_10.04" title="Manual:Installing MediaWiki on Ubuntu 10.04">this page</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Step-By-Step"><span class="tocnumber">1</span> <span class="toctext">Step-By-Step</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Configure_MySQL"><span class="tocnumber">1.1</span> <span class="toctext">Configure MySQL</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Configure_PHP"><span class="tocnumber">1.2</span> <span class="toctext">Configure PHP</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Maximum_upload_file_size"><span class="tocnumber">1.2.1</span> <span class="toctext">Maximum upload file size</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Memory_limit"><span class="tocnumber">1.2.2</span> <span class="toctext">Memory limit</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Extensions"><span class="tocnumber">1.2.3</span> <span class="toctext">Extensions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Configure_Apache"><span class="tocnumber">1.3</span> <span class="toctext">Configure Apache</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Configure_MediaWiki"><span class="tocnumber">1.4</span> <span class="toctext">Configure MediaWiki</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#General_information"><span class="tocnumber">1.5</span> <span class="toctext">General information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Additional_wiki_configuration"><span class="tocnumber">2</span> <span class="toctext">Additional wiki configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#File_uploads"><span class="tocnumber">2.1</span> <span class="toctext">File uploads</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Enable_uploads"><span class="tocnumber">2.1.1</span> <span class="toctext">Enable uploads</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Specifying_uploadable_file_types"><span class="tocnumber">2.1.2</span> <span class="toctext">Specifying uploadable file types</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Image_file_uploads"><span class="tocnumber">2.2</span> <span class="toctext">Image file uploads</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Enable_thumbnails"><span class="tocnumber">2.2.1</span> <span class="toctext">Enable thumbnails</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Changing_the_logo"><span class="tocnumber">2.3</span> <span class="toctext">Changing the logo</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#MediaWiki_extensions"><span class="tocnumber">2.4</span> <span class="toctext">MediaWiki extensions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Extensions_from_tarballs"><span class="tocnumber">2.4.1</span> <span class="toctext">Extensions from tarballs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Shorter_URL"><span class="tocnumber">2.5</span> <span class="toctext">Shorter URL</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Step-By-Step">Step-By-Step</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=1" title="Edit section: Step-By-Step" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=1" title="Edit section: Step-By-Step">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="//en.wikipedia.org/wiki/Linux" class="extiw" title="w:Linux">Ubuntu Server Edition</a> makes LAMP (Apache, PHP, and MySQL) available for installation during the install process. During the installation step, make sure you choose to install a LAMP server. Alternately, you can install all of these packages from a normal Ubuntu installation using these commands:</p>
+<pre>
+sudo apt-get install apache2 mysql-server php5 php5-mysql libapache2-mod-php5
+</pre>
+<p>Optional:</p>
+<p>php-apc: Alternative PHP Cache.</p>
+<p>php5-intl: Unicode normalization.</p>
+<p>ImageMagick: Image thumbnailing.</p>
+<p>phpmyadmin: MySQL administration tool.</p>
+<p>vsftpd: FTP Server. (<a rel="nofollow" class="external text" href="http://ubuntuforums.org/showthread.php?t=518293">How To</a>)</p>
+<pre>
+sudo apt-get install php-apc php5-intl imagemagick phpmyadmin vsftpd
+</pre>
+<p>After installing these packages, <b><a href="/wiki/Download" title="Download">download</a></b> the official tarball, and extract in your Web directory (usually /var/www/):</p>
+<pre>
+tar -xvzf /pathtofile/mediawiki-*.tar.gz
+sudo mv mediawiki-* /var/www
+</pre>
+<table cellspacing="0" cellpadding="0" border="0" style="background: transparent; margin-top:0.5em;border:1px #b52 solid;padding:0.5em;background-color: #fef7f5">
+<tr>
+<td nowrap="nowrap" valign="top"><span style="position: relative; top: -2px;"><img alt="Warning" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/18px-Attention_niels_epting.svg.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/27px-Attention_niels_epting.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/36px-Attention_niels_epting.svg.png 2x" /></span> <b>Warning:</b></td>
+<td valign="top" style="padding-left:0.5em;">MediaWiki can also be installed using aptitude. The Ubuntu MediaWiki package is unsupported and usually outdated. We do not recommend you use it.</td>
+</tr>
+</table>
+<p>Also double check that Ubuntu is up-to-date by running:</p>
+<pre>
+sudo apt-get update &amp;&amp; sudo aptitude safe-upgrade &amp;&amp; sudo do-release-upgrade
+</pre>
+<table cellspacing="0" cellpadding="0" border="0" style="background: transparent; margin-top:0.5em;border:1px #b52 solid;padding:0.5em;background-color: #fef7f5">
+<tr>
+<td nowrap="nowrap" valign="top"><span style="position: relative; top: -2px;"><img alt="Warning" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/18px-Attention_niels_epting.svg.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/27px-Attention_niels_epting.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/36px-Attention_niels_epting.svg.png 2x" /></span> <b>Warning:</b></td>
+<td valign="top" style="padding-left:0.5em;">The <a rel="nofollow" class="external text" href="https://help.ubuntu.com/10.04/serverguide/C/installing-upgrading.html">'do-release-upgrade'</a> will upgrade your entire distribution to the next number (9.10-&gt;10.04), replacing hundreds of packages. is not strictly necessary and may cause problems with your system. Google for do-release-upgrade disaster or dist-upgrade fail for examples.</td>
+</tr>
+</table>
+<p>If you want to run PHP commands from the command line, which is useful for debugging and running maintenance scripts, install PHP-cli like this:</p>
+<pre>
+sudo apt-get install php5-cli
+</pre>
+<p>If you want to use the GD library (instead of ImageMagick for image resizing)</p>
+<pre>
+sudo apt-get install libgd2-xpm libgd2-xpm-dev php5-gd
+</pre>
+<h3><span class="mw-headline" id="Configure_MySQL">Configure MySQL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=2" title="Edit section: Configure MySQL" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=2" title="Edit section: Configure MySQL">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: <i>consider running mysql_secure_installation . from man page:</i></p>
+<pre>
+DESCRIPTION
+       This program enables you to improve the security of your MySQL installation in the following ways:
+
+       ·   You can set a password for root accounts.
+
+       ·   You can remove root accounts that are accessible from outside the local host.
+
+       ·   You can remove anonymous-user accounts.
+
+       ·   You can remove the test database (which by default can be accessed by all users, even anonymous users), and
+           privileges that permit anyone to access databases with names that start with test_.
+</pre>
+<pre>
+mysql_secure_installation
+</pre>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: <i>This step is not necessary if you were prompted to create a mysql root password during MySQL installation.</i></p>
+<p>First, set up a mysql root password. Remember not to use same password for system root and mysql root. This will also clear your command history so that other users cannot get to your password.</p>
+<pre>
+mysqladmin -u root password "&lt;enter the new password here&gt;"
+history -c
+</pre>
+<p>Note: Remember this user (root) and password because you will need them when you configure MediaWiki. Note: MySQL being a pain with the passwords, look here how to fix a password trouble. <a rel="nofollow" class="external free" href="http://www.debian-administration.org/articles/442">http://www.debian-administration.org/articles/442</a></p>
+<h3><span class="mw-headline" id="Configure_PHP">Configure PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=3" title="Edit section: Configure PHP" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=3" title="Edit section: Configure PHP">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: <i>These steps are optional. You can skip them entirely (or do them later) and MediaWiki should still work.</i></p>
+<p>Edit your PHP configuration file, <a href="/wiki/Manual:Php.ini" title="Manual:Php.ini">php.ini</a>. It will be located somewhere like <code>/etc/php5/apache2/php.ini</code> or <code>/etc/php5/php.ini</code> or maybe <code>/etc/apache2/php/php.ini</code></p>
+<pre>
+sudo gedit /etc/php5/apache2/php.ini
+</pre>
+<h4><span class="mw-headline" id="Maximum_upload_file_size">Maximum upload file size</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=4" title="Edit section: Maximum upload file size" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=4" title="Edit section: Maximum upload file size">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Assuming that various files are going to be uploaded to the Wiki as content, the limit on the maximum size of an upload has to be adjusted. About one-half way down is the File Uploads section. Change:</p>
+<pre>
+ upload_max_filesize = 2M
+</pre>
+<p>to at least 8M. You may have to adjust this again in the future.</p>
+<pre>
+ upload_max_filesize = 8M
+</pre>
+<h4><span class="mw-headline" id="Memory_limit">Memory limit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=5" title="Edit section: Memory limit" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=5" title="Edit section: Memory limit">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Some PHP scripts require a lot of memory to run. To increase the maximum amount of memory a script can use, page down to about 21%, and change the following entry, if found, from</p>
+<pre>
+memory_limit = 8M
+</pre>
+<p>to</p>
+<pre>
+memory_limit = 32M
+</pre>
+<p>If it is already 32M or more, leave it as is.</p>
+<h4><span class="mw-headline" id="Extensions">Extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=6" title="Edit section: Extensions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=6" title="Edit section: Extensions">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: Under Ubuntu 9.04 and 9.10 this section is unnecessary.</p>
+<p>PHP MySQL support has to be enabled. Scroll down the page down a bit more (about 48%) and make sure the following line is uncommented:</p>
+<pre>
+extension=mysql.so
+</pre>
+<p>If you use the GD graphics library to do image resizing (instead of ImageMagick), also uncomment:</p>
+<pre>
+extension=gd.so
+</pre>
+<p>Save and exit out of the editor and restart Apache:</p>
+<pre>
+sudo apache2ctl restart
+</pre>
+<h3><span class="mw-headline" id="Configure_Apache">Configure Apache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=7" title="Edit section: Configure Apache" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=7" title="Edit section: Configure Apache">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table cellspacing="0" cellpadding="0" border="0" style="background: transparent; margin-top:0.5em;border:1px #b52 solid;padding:0.5em;background-color: #fef7f5">
+<tr>
+<td nowrap="nowrap" valign="top"><span style="position: relative; top: -2px;"><img alt="Warning" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/18px-Attention_niels_epting.svg.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/27px-Attention_niels_epting.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/36px-Attention_niels_epting.svg.png 2x" /></span> <b>Warning:</b></td>
+<td valign="top" style="padding-left:0.5em;">This section only applies if you installed MediaWiki using apt-get or aptitude, which is not recommended.</td>
+</tr>
+</table>
+<p>Edit apache.conf file at /etc/mediawiki/apache.conf</p>
+<pre>
+ sudo nano /etc/mediawiki/apache.conf
+</pre>
+<p>and uncomment this line:</p>
+<pre>
+Alias /mediawiki /var/lib/mediawiki
+</pre>
+<p>Save and exit out of the editor and restart Apache:</p>
+<pre>
+sudo apache2ctl restart
+</pre>
+<h3><span class="mw-headline" id="Configure_MediaWiki">Configure MediaWiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=8" title="Edit section: Configure MediaWiki" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=8" title="Edit section: Configure MediaWiki">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Navigate your browser to <a rel="nofollow" class="external free" href="http://localhost/mediawiki">http://localhost/mediawiki</a>, to <a rel="nofollow" class="external free" href="http://localhost/mediawiki/config">http://localhost/mediawiki/config</a> or to <a rel="nofollow" class="external free" href="http://wiki.hostname.com/config">http://wiki.hostname.com/config</a> and continue with the installation. (Substitute "mediawiki" in the url with the precise folder you previously created, for example <a rel="nofollow" class="external free" href="http://localhost/mediawiki-1.19.2">http://localhost/mediawiki-1.19.2</a>.)</p>
+<p>Pay close attention for <b>"Checking environment..."</b> in MediaWiki installation script. This can solve a lot of problems for your MediaWiki successful installation by specifically identifying the source of any errors. Fill out the configuration form and continue.</p>
+<p>Under <b>Database Config</b>, you <i>may</i> change the database name and DB username to new values, but you <b>must</b> turn on "Use superuser account", name:</p>
+<pre>
+debian-sys-maint
+</pre>
+<p>giving the mysql root password you configured earlier.</p>
+<p>Once configuration is done you'll need to move the created <i>LocalSettings.php</i> to the parent directory. The configuration page will have the exact directory/filename that must be moved:</p>
+<pre>
+ sudo chmod a+rwx /var/lib/mediawiki/config
+ sudo mv /var/lib/mediawiki/config/LocalSettings.php /etc/mediawiki
+</pre>
+<p>For added safety you can then remove the <i>config</i> subdirectory entirely:</p>
+<pre>
+sudo mv config/LocalSettings.php .
+sudo rm -rf config
+</pre>
+<p>And navigate your browser to http://<i>server_ip_address</i>/mediawiki or to http://<i>server_ip_address</i>/mediawiki/index.php to see your new wiki. Possibly server_ip_address = localhost, so <a rel="nofollow" class="external free" href="http://localhost/mediawiki">http://localhost/mediawiki</a> may work.</p>
+<p>Done! You now have a working Wiki</p>
+<h3><span class="mw-headline" id="General_information">General information</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=9" title="Edit section: General information" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=9" title="Edit section: General information">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Under Ubuntu 9.04 and 9.10, MediaWiki is installed at /usr/share/mediawiki. However, configuration/customizations are actually installed in /var/lib/mediawiki.</p>
+<p>Confusingly, links are created in both locations so all files appear to be in both places.</p>
+<h2><span class="mw-headline" id="Additional_wiki_configuration">Additional wiki configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=10" title="Edit section: Additional wiki configuration" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=10" title="Edit section: Additional wiki configuration">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Wiki is configured by the <b>LocalSettings.php</b> file, usually found in /var/www/wiki. <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">Manual:LocalSettings.php</a> has detailed information that may be useful. The following are changes that appear to be universally helpful</p>
+<p>To edit <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">LocalSettings.php</a> use</p>
+<pre>
+sudo gedit /etc/mediawiki/LocalSettings.php
+</pre>
+<h3><span class="mw-headline" id="File_uploads">File uploads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=11" title="Edit section: File uploads" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=11" title="Edit section: File uploads">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Enable_uploads">Enable uploads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=12" title="Edit section: Enable uploads" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=12" title="Edit section: Enable uploads">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>By default, the Wiki will not permit images to be uploaded. To change this find <b>$wgEnableUploads</b> and change it from false to true.</p>
+<h4><span class="mw-headline" id="Specifying_uploadable_file_types">Specifying uploadable file types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=13" title="Edit section: Specifying uploadable file types" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=13" title="Edit section: Specifying uploadable file types">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>You may want to modify the list of accepted extensions, which is stored within the <b>$wgFileExtensions</b> array. By default you will not be able to upload PDF files, for example, without making this change.</p>
+<p>If <a href="/wiki/Manual:$wgFileExtensions" title="Manual:$wgFileExtensions">$wgFileExtensions</a> is not already in LocalSettings.php add it at the end (before the <tt>?&gt;</tt> line, if one exists in your LocalSettings.php file):</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$wgFileExtensions</span> <span class="sy0">=</span> <span class="kw3">array</span><span class="br0">(</span><span class="st_h">'pdf'</span><span class="sy0">,</span><span class="st_h">'png'</span><span class="sy0">,</span><span class="st_h">'jpg'</span><span class="sy0">,</span><span class="st_h">'jpeg'</span><span class="sy0">,</span><span class="st_h">'ogg'</span><span class="sy0">,</span><span class="st_h">'doc'</span><span class="sy0">,</span><span class="st_h">'xls'</span><span class="sy0">,</span><span class="st_h">'ppt'</span><span class="sy0">,</span><span class="st_h">'mp3'</span><span class="sy0">,</span><span class="st_h">'sxc'</span><span class="sy0">,</span><span class="st_h">'nse'</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>In addition to the <b>$wgFileExtensions</b> option, the following settings may cause files to be rejected (even if <b>$wgStrictFileExtensions</b> = <i>false</i>; is set):</p>
+<ul>
+<li><b>$wgFileBlacklist</b>, a list of file extensions that are not uploadable</li>
+<li><b>$wgMimeTypeBlacklist</b>, a list of forbidden MIME types.</li>
+</ul>
+<p>Check <i>includes/DefaultSettings.php</i></p>
+<h3><span class="mw-headline" id="Image_file_uploads">Image file uploads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=14" title="Edit section: Image file uploads" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=14" title="Edit section: Image file uploads">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The images directory must be writeable:</p>
+<pre>
+sudo chmod a+w /var/www/wiki/images
+</pre>
+<p>Note: for Ubuntu 9.04 the command is:</p>
+<pre>
+sudo chmod a+w /var/lib/mediawiki/images
+</pre>
+<dl>
+<dd><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: I just did a clean install into Ubuntu 8.04 LTS, and making the images directory writable was not required in order for image uploading to work. Seems like this step is superfluous and a little dangerous. --<a href="/w/index.php?title=User:Mmoo9154&amp;action=edit&amp;redlink=1" class="new" title="User:Mmoo9154 (page does not exist)">Mark</a> 16:59, 22 September 2009 (UTC)</dd>
+</dl>
+<dl>
+<dd><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: I just did a clean install into Ubuntu 8.04.3 LTS, and making the images directory writeable was required to get SVG graphics to work. I don't see how it is dangerous to allow the WWW user to write to the images folder (?).</dd>
+</dl>
+<dl>
+<dd><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: WWW user, maybe not. Making the entire thing writeable by all, as shown here, is a different matter.</dd>
+</dl>
+<dl>
+<dd><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: if the WWW user could write the image folder, a bug could allow to a malicious user to upload an exploit into the server and execute it through the Web. Always is a good idea restrict the WWW user permissions at the minimum necessary.</dd>
+</dl>
+<h4><span class="mw-headline" id="Enable_thumbnails">Enable thumbnails</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=15" title="Edit section: Enable thumbnails" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=15" title="Edit section: Enable thumbnails">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The <b>|thumb</b> option added to an <b>image:</b> tag will automatically generate a thumbnail version of a picture&#160;— if support has been enabled, as follows:</p>
+<ul>
+<li>The ImageMagick package must be installed:</li>
+</ul>
+<pre>
+sudo apt-get install imagemagick
+</pre>
+<ul>
+<li>In LocalSettings.php, make sure the following settings are in place and not commented out. They are normally about 80 lines down in the file marked "To enable image uploads":</li>
+</ul>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$wgUseImageResize</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span>
+<span class="re0">$wgUseImageMagick</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span>
+<span class="re0">$wgImageMagickConvertCommand</span> <span class="sy0">=</span> <span class="st0">"/usr/bin/convert"</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Changing_the_logo">Changing the logo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=16" title="Edit section: Changing the logo" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=16" title="Edit section: Changing the logo">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <b><a href="/wiki/Manual:$wgLogo" title="Manual:$wgLogo">$wgLogo</a></b> variable specifies the graphical logo that gets displayed on the top left corner by default. The variable <a href="/wiki/Manual:$wgScriptPath" title="Manual:$wgScriptPath">$wgScriptPath</a> contains the top directory of the wiki. There is no standard for the size of the logo image. But 135x135 pixels will fit most skins. If the logo it is oversized for a specific skin it will show the top left corner that fits. (This variable is <i>not present</i> in LocalSettings.php by default; you need to add in manually to the bottom.)</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$wgLogo</span> <span class="sy0">=</span> <span class="st0">"<span class="es4">$wgScriptPath</span>/wiki.jpg"</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p><b>Caution</b>: Do not simply overwrite the default logo installed with MediaWiki (/skins/common/images/wiki.png); this file will be overwritten when you upgrade.</p>
+<h3><span class="mw-headline" id="MediaWiki_extensions">MediaWiki extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=17" title="Edit section: MediaWiki extensions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=17" title="Edit section: MediaWiki extensions">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The new installer for mediawiki comes with a package of 15 or so of the most popular extensions, but there are literally hundreds more. Go to <a class="external free" href="http://www.mediawiki.org/wiki/Category:Extensions">http://www.mediawiki.org/wiki/Category:Extensions</a> for a complete list.</p>
+<p>Extensions are added by following these two steps:</p>
+<ol>
+<li>Extensions are downloaded and stored in /var/lib/mediwiki/extensions</li>
+<li>The /var/lib/mediawiki/LocalSettings.php is edited to add a
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">require_once</span> <span class="br0">(</span><span class="st0">"<span class="es4">$IP</span>/extensions/yourextension/yourextension.php"</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+line.</li>
+</ol>
+<p>Confirm you have installed it properly, by going to the Special pages in your wiki (link on left side) and choosing Version. All installed extensions are listed with versions, authors, and links to their home pages.</p>
+<p>A list of the other "standard" extensions included with Ubuntu can be found by just running this command:</p>
+<pre>
+ ls /etc/mediawiki-extensions/extensions-available
+</pre>
+<p>Let's take the ParserFunctions extension, for example. To install ParserFunctions follow this:</p>
+<pre>
+ sudo apt-get install mediawiki-extensions
+ sudo mwenext ParserFunctions.php
+</pre>
+<p>Once you enable it, it should be listed as a symbolic link in /etc/mediawiki-extensions/extensions-enabled. You should now be able to go to <a rel="nofollow" class="external free" href="http://localhost/mediawiki/index.php/Special:Version">http://localhost/mediawiki/index.php/Special:Version</a> and see ParserFunctions listed there as an installed extension to your mediawiki.</p>
+<h4><span class="mw-headline" id="Extensions_from_tarballs">Extensions from tarballs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=18" title="Edit section: Extensions from tarballs" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=18" title="Edit section: Extensions from tarballs">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Some MediaWiki extensions that are not available in the Ubuntu package system can instead be gotten in tarball (tar.gz) format and installed manually. Basically, you download the tarball, unpack it to the "extensions" directory (on Ubuntu: "/var/lib/mediawiki/extensions"), edit (what line in it?) your "LocalSettings.php" (Ubuntu: /etc/mediawiki/LocalSettings.php), and then go to <a rel="nofollow" class="external free" href="http://localhost/mediawiki/index.php/Special:Version">http://localhost/mediawiki/index.php/Special:Version</a> to verify that it worked.</p>
+<p>A good list of extensions is available here: <b><a href="/wiki/Category:Extensions_in_Wikimedia_version_control" title="Category:Extensions in Wikimedia version control">Category:Extensions in Wikimedia version control</a></b></p>
+<p>For an example, let's take the relatively simple extension called MiniDonation. This extension lets you put a &lt;donationform&gt; tag in your wiki code, and it will display a link to paypal on the page. The site for MiniDonation is here: <a href="/wiki/Extension:MiniDonation" title="Extension:MiniDonation">Extension:MiniDonation</a></p>
+<p>Just follow the instructions on the page: Download the tarball (in Firefox it will probably end up in ~/Desktop), then do the following:</p>
+<pre>
+ cd /var/lib/mediawiki/extensions
+ sudo tar -zxvf ~/Desktop/MiniDonation&lt;tab&gt;
+ sudo gedit /etc/mediawiki/LocalSettings.php
+</pre>
+<p>Then check <a rel="nofollow" class="external free" href="http://localhost/mediawiki/index.php/Special:Version">http://localhost/mediawiki/index.php/Special:Version</a>, it should list MiniDonation there. Now edit a wikipage and add a &lt;donationform&gt; tag to it&#160;... save the page and you should have a nice little paypal button on the screen.</p>
+<dl>
+<dt>Replacing extensions that are in Ubuntu's mediawiki-extensions package with newer versions</dt>
+</dl>
+<p>You can also "upgrade" one of the "standard" Ubuntu MediaWiki extensions (such as Cite.php) to a newer version if you need to. The important part is to remember to run "mwdisext ExtensionName.php" to disable it before you install the new version into /var/lib/mediawiki/extensions.</p>
+<p>The pitfall is that some versions of extension will not work with certain other versions of MediaWiki (or with other versions of other extensions that they depend on). In this case you can get a "fatal error" when you try to pull up certain MediaWiki pages (including even when pulling the "Special:Version" page), or it might just give you a blank page, in which case you can look at /var/log/apache2/errors.log for a hint as to what is wrong.</p>
+<h3><span class="mw-headline" id="Shorter_URL">Shorter URL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=19" title="Edit section: Shorter URL" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=19" title="Edit section: Shorter URL">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If you want /wiki/* instead of /wiki/index.php/* on Ubuntu, follow <a href="/wiki/Manual:Short_URL#Recommended_how-to_guide_.28setup_used_on_Wikipedia.29" title="Manual:Short URL">the recommended short URL guide</a> using <code>'/mediawiki'</code> as your script path instead of <code>'/w'</code> and placing the rewrites in /etc/apache2/conf.d/mediawiki.conf.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit&amp;section=20" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit&amp;section=20" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Canonical maintains a <a rel="nofollow" class="external text" href="https://help.ubuntu.com/community/MediaWiki">MediaWiki page with more information.</a></li>
+<li><a rel="nofollow" class="external text" href="http://ubuntuguide.org/wiki/MediaWiki_tips">Ubuntuguide.org</a> provides detailed instructions for setting up MediaWiki on Ubuntu and Kubuntu, including multiple wikis and nested subwikis.</li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="fr"><a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu/fr" title="Manual:Running MediaWiki on Ubuntu/fr">français</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu/ja" title="Manual:Running MediaWiki on Ubuntu/ja">日本語</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1013
+CPU time usage: 0.956 seconds
+Real time usage: 1.020 seconds
+Preprocessor visited node count: 2247/1000000
+Preprocessor generated node count: 6801/1500000
+Post‐expand include size: 11045/2048000 bytes
+Template argument size: 17136/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:14086-0!*!0!!en!4!* and timestamp 20140215093407
+ -->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:14086-0!*!0!!en!4!* and timestamp 20140215093529
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;oldid=902518">http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;oldid=902518</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+Ubuntu&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+Ubuntu" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Running_MediaWiki_on_Ubuntu"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3ARunning+MediaWiki+on+Ubuntu">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3ARunning+MediaWiki+on+Ubuntu&amp;oldid=902518&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Running_MediaWiki_on_Ubuntu" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Running_MediaWiki_on_Ubuntu" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;oldid=902518" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Ubuntu&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3ARunning_MediaWiki_on_Ubuntu&amp;id=902518" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 February 2014, at 15:40.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Ubuntu" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1080 in 0.270 secs. -->
+	</body>
+</html>

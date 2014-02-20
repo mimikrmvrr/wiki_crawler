@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:SQLite - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:SQLite&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:SQLite&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:SQLite" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:SQLite","wgTitle":"SQLite","wgCurRevisionId":794115,"wgRevisionId":794115,"wgArticleId":26856,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Database","Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:SQLite","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"SQLite","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":794115,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_SQLite skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:SQLite</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub">(Redirected from <a href="/w/index.php?title=SQLite&amp;redirect=no" title="SQLite">SQLite</a>)<br />
+				</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="floatright"><a href="/wiki/File:SQLite370.svg" class="image" title="SQLite logo"><img alt="SQLite logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/200px-SQLite370.svg.png" width="200" height="95" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/300px-SQLite370.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/400px-SQLite370.svg.png 2x" /></a></div>
+<p>SQLite support for MediaWiki is of production quality as of MediaWiki 1.17, for example the <a class="external text" href="https://integration.wikimedia.org/ci/job/MediaWiki-phpunit/">continuous integration server</a> used by our developers runs on SQLite. SQLite support had been part of the main code-base since MediaWiki version 1.13. There are some notes below on installing the SQLite library into your PHP environment.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#About_SQLite"><span class="tocnumber">1</span> <span class="toctext">About SQLite</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#SQLite_installation"><span class="tocnumber">2</span> <span class="toctext">SQLite installation</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Installing_MediaWiki_on_SQLite_backend"><span class="tocnumber">3</span> <span class="toctext">Installing MediaWiki on SQLite backend</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Search_engine"><span class="tocnumber">4</span> <span class="toctext">Search engine</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Backing_up"><span class="tocnumber">5</span> <span class="toctext">Backing up</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Unable_to_access_the_database_on_the_terminal"><span class="tocnumber">6.1</span> <span class="toctext">Unable to access the database on the terminal</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Problems"><span class="tocnumber">6.2</span> <span class="toctext">Problems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="About_SQLite">About SQLite</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=1" title="Edit section: About SQLite" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=1" title="Edit section: About SQLite">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SQLite is an open-source database library released into public domain. Unlike <a href="//en.wikipedia.org/wiki/client-server" class="extiw" title="w:client-server">client-server</a> database management systems, the SQLite <a href="//en.wikipedia.org/wiki/library_(computing)" class="extiw" title="w:library (computing)">library</a> is <a href="//en.wikipedia.org/wiki/Linker" class="extiw" title="w:Linker">linked into</a> PHP and thus becomes an integral part of the server process. MediaWiki uses SQLite's functionality through simple function calls, which reduces <a href="//en.wikipedia.org/wiki/latency_(engineering)" class="extiw" title="w:latency (engineering)">latency</a> in database access as function calls are more efficient than <a href="//en.wikipedia.org/wiki/inter-process_communication" class="extiw" title="w:inter-process communication">inter-process communication</a>.</p>
+<p>Using SQLite as database backend for MediaWiki has its own pros and cons:</p>
+<dl>
+<dt>Pros</dt>
+</dl>
+<ul>
+<li>You don't have to install and maintain a standalone database server such as MySQL, this significantly reduces efforts spent on administration and removes some points of failure.</li>
+<li>The former also means that SQLite is much more suitable for portable MediaWiki installs running from a USB stick.</li>
+<li>You are not restricted by artificial database limitations on shared hosts.</li>
+<li>The entire database is stored as a single cross-platform file, simplifying backups and migration.</li>
+</ul>
+<dl>
+<dt>Cons</dt>
+</dl>
+<ul>
+<li>SQLite is not that scalable, so if you have a large and popular wiki, you should use MySQL.</li>
+<li>Although SQLite has its own search engine, it's not supported by more advanced solutions such as Lucene.</li>
+<li>Some PHP builds (RHEL, older XAMPP) come with outdated SQLite versions that limit the functionality and may contain bugs.</li>
+<li>Several extensions are known to have database update or installation issues with SQLite: AbuseFilter, Echo, Flagged Revisions and LiquidThreads.</li>
+</ul>
+<h2><span class="mw-headline" id="SQLite_installation">SQLite installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=2" title="Edit section: SQLite installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=2" title="Edit section: SQLite installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although all SQLite versions above 3.1.2 (required for ADD COLUMN) are supported, SQLite 3.6 is recommended, as it has some data integrity bugs fixed. Also, in order to use full text search, SQLite must be compiled with FTS3 module enabled (most builds have it out of the box these days). SQLite3 works via PHP's <a rel="nofollow" class="external text" href="http://www.php.net/manual/en/class.pdo.php">PDO functions</a>.</p>
+<ul>
+<li>To install SQLite3 on a Debian based system, use <tt>apt-get install php5-sqlite3</tt>.
+<ul>
+<li>On newer Ubuntu and probably other distributions the package is called <tt>php5-sqlite</tt> (no 3 at the end!), be careful.</li>
+<li>Windows binaries from php.net are OK.</li>
+</ul>
+</li>
+<li>Since PHP 5.1.0, SQLite depends on PDO. You should uncomment the following two lines in your <code>php.ini</code> <i>(note: sometimes you can't even use <code>phpinfo()</code> to check if they are present, because an SQLite-enabled PHP tend to crash or fail when PDO is absent, especially on Windows):</i>
+<ul>
+<li><code>extension=php_pdo_sqlite.so</code> (or <code>extension=php_pdo_sqlite.dll</code> for Windows)</li>
+<li><code>extension=php_pdo.so</code> (or <code>extension=php_pdo.dll</code> for Windows)</li>
+</ul>
+</li>
+<li>Where should you put the SQLite database itself? The default path seems to be $IP/../data/$dbname.sqlite . Anything outside of the webroot should be safe; it's good to keep it nearby. Or, if you feel like it, you could put it in the web root somewhere and make sure to use webserver config to deny access to it.</li>
+</ul>
+<h2><span class="mw-headline" id="Installing_MediaWiki_on_SQLite_backend">Installing MediaWiki on SQLite backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=3" title="Edit section: Installing MediaWiki on SQLite backend" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=3" title="Edit section: Installing MediaWiki on SQLite backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>If SQLite module for PHP is properly installed, MediaWiki installer (<tt>/config/index.php</tt>) should offer you an option to use SQLite. On MediaWiki versions prior to 1.16, you need to enter something into the "DB username" and "DB password" fields for installer to continue even though SQLite does not need them.</li>
+<li>If you enter nothing into the "SQLite data directory" field, your <a href="/wiki/Manual:$wgSQLiteDataDir" title="Manual:$wgSQLiteDataDir">$wgSQLiteDataDir</a> will be left empty, which corresponds to <tt>data</tt> directory in the parent of the document root, however this directory might be different for web scripts and <a href="/wiki/Manual:Maintenance_scripts" title="Manual:Maintenance scripts">maintenance scripts</a> run from command line, so specifying it explicitly is recommended.</li>
+</ul>
+<h2><span class="mw-headline" id="Search_engine">Search engine</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=4" title="Edit section: Search engine" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=4" title="Edit section: Search engine">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table style="border: 1px solid #888888; float: right; font-size: 80%; margin: 0 0 .5em .5em; line-height: 1.2; text-align: right; border-collapse: collapse;">
+<tr>
+<td style="padding: .1em .3em;">MediaWiki version:</td>
+<td title="MediaWiki 1.16 is unsupported version" style="border-color: #FF0000; border-width: 5px; border-style: solid; text-align: center; padding: .1em .3em;"><abbr style="font-weight: bold; font-size: 180%;">1.16</abbr></td>
+</tr>
+</table>
+<p>Search capabilities for SQLite backend was introduced in MediaWiki 1.16. They require SQLite with <a rel="nofollow" class="external text" href="http://sqlite.org/fts3.html">FTS3</a> module compiled-in, which is usually present in most modern builds. If you've recently updated your SQLite support to a version that includes FTS3, <a href="/wiki/Manual:Upgrading#Run_the_update_script" title="Manual:Upgrading">run the updater</a> as if you're upgrading MediaWiki. After the updater script created the search index table, populate it with <a href="/wiki/Manual:Rebuildtextindex.php" title="Manual:Rebuildtextindex.php">rebuildtextindex.php</a>. Same applies to switches back to environments without FTS3: re-running the updater will downgrade the table to avoid SQL errors.</p>
+<h2><span class="mw-headline" id="Backing_up">Backing up</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=5" title="Edit section: Backing up" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=5" title="Edit section: Backing up">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If your wiki is currently offline, its database can be backed up by simply copying the database file. Otherwise, you should use <a href="/wiki/Manual:Sqlite.php" title="Manual:Sqlite.php">a maintenance script</a>: <tt>php maintenance/sqlite.php --backup-to &lt;backup file name&gt;</tt>, which will make sure that operation is atomic and there are no inconsistencies. If your database is not really huge and server is not under heavy load, users editing the wiki will notice nothing but a short lag. Users who are just reading will not notice anything in any case.</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=6" title="Edit section: Troubleshooting" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=6" title="Edit section: Troubleshooting">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Unable_to_access_the_database_on_the_terminal">Unable to access the database on the terminal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=7" title="Edit section: Unable to access the database on the terminal" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=7" title="Edit section: Unable to access the database on the terminal">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>To get command-line access to the database, type on the terminal:</p>
+<pre>
+sqlite3 /var/data/database_name.sqlite
+</pre>
+<p>replacing <code>/var/data</code> with the directory that was set as the "SQLite data directory" during the installation process. Alternatively, look for the <a href="/wiki/$wgSQLiteDataDir" title="$wgSQLiteDataDir" class="mw-redirect">$wgSQLiteDataDir</a> inside <a href="/wiki/LocalSettings.php" title="LocalSettings.php" class="mw-redirect">LocalSettings.php</a>.</p>
+<p>This can be tricky if you are not experienced about SQLite and run <code>sqlite3 database_name</code> - because this will open a completely different database (creating it if it doesn't exist) since SQLite interprets the argument not as a system-wide database name, but instead as the file name that contains the db.</p>
+<h3><span class="mw-headline" id="Problems">Problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=8" title="Edit section: Problems" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=8" title="Edit section: Problems">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Bugs should be reported to <a href="/wiki/Bugzilla" title="Bugzilla">Wikimedia's bug tracker</a>. First check if your problem was already reported - check the dependencies of <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=20257" class="extiw" title="bugzilla:20257">tracking bug 20257</a> and use search. If you can't find your problem, create a new issue. If the problem is directly related to SQLite backend, report it under <b>MediaWiki</b> → <b>Database</b> component. Otherwise (if the problem is related to one very specific aspect, of the software or an extension), select an appropriate product and component. In any case please take some steps to make your bug easy to find and track: mention SQLite is its summary field and make it depend on bug 20257.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=9" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=9" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>SQLite-specific configuration settings:
+<ul>
+<li><a href="/wiki/Manual:$wgSQLiteDataDir" title="Manual:$wgSQLiteDataDir">$wgSQLiteDataDir</a></li>
+<li><a href="/wiki/Manual:$wgCountTotalSearchHits" title="Manual:$wgCountTotalSearchHits">$wgCountTotalSearchHits</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Maintenance script <a href="/wiki/Manual:Sqlite.php" title="Manual:Sqlite.php">sqlite.php</a></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit&amp;section=10" title="Edit section: External links" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit&amp;section=10" title="Edit section: External links">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.sqlite.org/">SQLite home page</a></li>
+<li><a href="//en.wikipedia.org/wiki/SQLite" class="extiw" title="en:SQLite">Wikipedia article on SQLite</a></li>
+<li><a href="http://www.organicdesign.co.nz/MediaWikiLite" class="extiw" title="organicdesign:MediaWikiLite">OrganicDesign:MediaWikiLite</a> <i>- a portable personal wiki based using MediaWiki, SQLite and NanoWeb the webserver written in PHP</i></li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Crystal_Clear_app_database.png/30px-Crystal_Clear_app_database.png" width="30" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Crystal_Clear_app_database.png/45px-Crystal_Clear_app_database.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Crystal_Clear_app_database.png/60px-Crystal_Clear_app_database.png 2x" /> <a href="/wiki/Manual:Database_layout" title="Manual:Database layout">Databases</a></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b>Engines:</b> <a href="/wiki/Manual:MySQL" title="Manual:MySQL">MySQL</a> – <a href="/wiki/Manual:Oracle" title="Manual:Oracle">Oracle</a> – <a href="/wiki/Manual:PostgreSQL" title="Manual:PostgreSQL">PostgreSQL</a> – <strong class="selflink">SQLite</strong><br />
+<b>Technical documentation:</b> <a href="/wiki/Manual:Database_layout" title="Manual:Database layout">Schema</a> (<a href="/wiki/Category:MediaWiki_database_tables" title="Category:MediaWiki database tables">tables</a>) – <a href="/wiki/Database_field_prefixes" title="Database field prefixes">Field prefixes</a> – <a href="/wiki/Manual:Primary_key_storage_in_other_fields" title="Manual:Primary key storage in other fields">Primary key storage in other fields</a> – <a href="/wiki/Manual:Database_access" title="Manual:Database access">Access</a><br />
+<b>Tables:</b> <a href="/wiki/Special:MyLanguage/Manual:archive_table" title="Special:MyLanguage/Manual:archive table">archive</a> – <a href="/wiki/Special:MyLanguage/Manual:category_table" title="Special:MyLanguage/Manual:category table">category</a> – <a href="/wiki/Special:MyLanguage/Manual:categorylinks_table" title="Special:MyLanguage/Manual:categorylinks table">categorylinks</a> – <a href="/wiki/Special:MyLanguage/Manual:change_tag_table" title="Special:MyLanguage/Manual:change tag table">change_tag</a> – <a href="/wiki/Special:MyLanguage/Manual:config_table" title="Special:MyLanguage/Manual:config table">config</a> – <a href="/wiki/Special:MyLanguage/Manual:externallinks_table" title="Special:MyLanguage/Manual:externallinks table">externallinks</a> – <a href="/wiki/Special:MyLanguage/Manual:filearchive_table" title="Special:MyLanguage/Manual:filearchive table">filearchive</a> – <a href="/wiki/Special:MyLanguage/Manual:hitcounter_table" title="Special:MyLanguage/Manual:hitcounter table">hitcounter</a> – <a href="/wiki/Special:MyLanguage/Manual:image_table" title="Special:MyLanguage/Manual:image table">image</a> – <a href="/wiki/Special:MyLanguage/Manual:imagelinks_table" title="Special:MyLanguage/Manual:imagelinks table">imagelinks</a> – <a href="/wiki/Special:MyLanguage/Manual:interwiki_table" title="Special:MyLanguage/Manual:interwiki table">interwiki</a> – <a href="/wiki/Special:MyLanguage/Manual:iwlinks_table" title="Special:MyLanguage/Manual:iwlinks table">iwlinks</a> – <a href="/wiki/Special:MyLanguage/Manual:ipblocks_table" title="Special:MyLanguage/Manual:ipblocks table">ipblocks</a> – <a href="/wiki/Special:MyLanguage/Manual:job_table" title="Special:MyLanguage/Manual:job table">job</a> – <a href="/wiki/Special:MyLanguage/Manual:l10n_cache_table" title="Special:MyLanguage/Manual:l10n cache table">l10n_cache</a> – <a href="/wiki/Special:MyLanguage/Manual:langlinks_table" title="Special:MyLanguage/Manual:langlinks table">langlinks</a> – <a href="/wiki/Special:MyLanguage/Manual:logging_table" title="Special:MyLanguage/Manual:logging table">logging</a> – <a href="/wiki/Special:MyLanguage/Manual:log_search_table" title="Special:MyLanguage/Manual:log search table">log_search</a> – <a href="/wiki/Special:MyLanguage/Manual:msg_resource_table" title="Special:MyLanguage/Manual:msg resource table">msg_resource</a> – <a href="/wiki/Special:MyLanguage/Manual:msg_resource_links_table" title="Special:MyLanguage/Manual:msg resource links table">msg_resource_links</a> – <a href="/wiki/Special:MyLanguage/Manual:module_deps_table" title="Special:MyLanguage/Manual:module deps table">module_deps</a> – <a href="/wiki/Special:MyLanguage/Manual:objectcache_table" title="Special:MyLanguage/Manual:objectcache table">objectcache</a> – <a href="/wiki/Special:MyLanguage/Manual:oldimage_table" title="Special:MyLanguage/Manual:oldimage table">oldimage</a> – <a href="/wiki/Special:MyLanguage/Manual:page_table" title="Special:MyLanguage/Manual:page table">page</a> – <a href="/wiki/Special:MyLanguage/Manual:pagelinks_table" title="Special:MyLanguage/Manual:pagelinks table">pagelinks</a> – <a href="/wiki/Special:MyLanguage/Manual:page_props_table" title="Special:MyLanguage/Manual:page props table">page_props</a> – <a href="/wiki/Special:MyLanguage/Manual:page_restrictions_table" title="Special:MyLanguage/Manual:page restrictions table">page_restrictions</a> – <a href="/wiki/Special:MyLanguage/Manual:protected_titles_table" title="Special:MyLanguage/Manual:protected titles table">protected_titles</a> – <a href="/wiki/Special:MyLanguage/Manual:querycache_table" title="Special:MyLanguage/Manual:querycache table">querycache</a> – <a href="/wiki/Special:MyLanguage/Manual:querycachetwo_table" title="Special:MyLanguage/Manual:querycachetwo table">querycachetwo</a> – <a href="/wiki/Special:MyLanguage/Manual:querycache_info_table" title="Special:MyLanguage/Manual:querycache info table">querycache_info</a> – <a href="/wiki/Special:MyLanguage/Manual:recentchanges_table" title="Special:MyLanguage/Manual:recentchanges table">recentchanges</a> – <a href="/wiki/Special:MyLanguage/Manual:redirect_table" title="Special:MyLanguage/Manual:redirect table">redirect</a> – <a href="/wiki/Special:MyLanguage/Manual:revision_table" title="Special:MyLanguage/Manual:revision table">revision</a> – <a href="/wiki/Special:MyLanguage/Manual:searchindex_table" title="Special:MyLanguage/Manual:searchindex table">searchindex</a> – <a href="/wiki/Special:MyLanguage/Manual:sites_table" title="Special:MyLanguage/Manual:sites table">sites</a> – <a href="/wiki/Special:MyLanguage/Manual:site_stats_table" title="Special:MyLanguage/Manual:site stats table">site_stats</a> – <a href="/wiki/Special:MyLanguage/Manual:tag_summary_table" title="Special:MyLanguage/Manual:tag summary table">tag_summary</a> – <a href="/wiki/Special:MyLanguage/Manual:templatelinks_table" title="Special:MyLanguage/Manual:templatelinks table">templatelinks</a> – <a href="/wiki/Special:MyLanguage/Manual:text_table" title="Special:MyLanguage/Manual:text table">text</a> – <a href="/wiki/Special:MyLanguage/Manual:transcache_table" title="Special:MyLanguage/Manual:transcache table">transcache</a> – <a href="/wiki/Special:MyLanguage/Manual:updatelog_table" title="Special:MyLanguage/Manual:updatelog table">updatelog</a> – <a href="/wiki/Special:MyLanguage/Manual:uploadstash_table" title="Special:MyLanguage/Manual:uploadstash table">uploadstash</a> – <a href="/wiki/Special:MyLanguage/Manual:user_table" title="Special:MyLanguage/Manual:user table">user</a> – <a href="/wiki/Special:MyLanguage/Manual:user_former_groups_table" title="Special:MyLanguage/Manual:user former groups table">user_former_groups</a> – <a href="/wiki/Special:MyLanguage/Manual:user_groups_table" title="Special:MyLanguage/Manual:user groups table">user_groups</a> – <a href="/wiki/Special:MyLanguage/Manual:user_newtalk_table" title="Special:MyLanguage/Manual:user newtalk table">user_newtalk</a> – <a href="/wiki/Special:MyLanguage/Manual:user_properties_table" title="Special:MyLanguage/Manual:user properties table">user_properties</a> – <a href="/wiki/Special:MyLanguage/Manual:valid_tag_table" title="Special:MyLanguage/Manual:valid tag table">valid_tag</a> – <a href="/wiki/Special:MyLanguage/Manual:watchlist_table" title="Special:MyLanguage/Manual:watchlist table">watchlist</a></td>
+</tr>
+</table>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ja"><a href="/wiki/Manual:SQLite/ja" title="Manual:SQLite/ja">日本語</a></bdi>&#160;• <bdi lang="pl"><a href="/wiki/Manual:SQLite/pl" title="Manual:SQLite/pl">polski</a></bdi>&#160;• <bdi lang="zh"><a href="/wiki/Manual:SQLite/zh" title="Manual:SQLite/zh">中文</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1062
+CPU time usage: 0.688 seconds
+Real time usage: 0.767 seconds
+Preprocessor visited node count: 2864/1000000
+Preprocessor generated node count: 7823/1500000
+Post‐expand include size: 18710/2048000 bytes
+Template argument size: 5724/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:26856-0!*!0!!en!4!* and timestamp 20140211014701
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:SQLite&amp;oldid=794115">http://www.mediawiki.org/w/index.php?title=Manual:SQLite&amp;oldid=794115</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Database" title="Category:Database">Database</a></li><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ASQLite&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ASQLite" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:SQLite"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:SQLite"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:SQLite" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:SQLite&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:SQLite&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:SQLite&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3ASQLite">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3ASQLite&amp;oldid=794115&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:SQLite&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:SQLite" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:SQLite" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:SQLite&amp;oldid=794115" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:SQLite&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3ASQLite&amp;id=794115" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 October 2013, at 06:22.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:SQLite" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1104 in 0.225 secs. -->
+	</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual talk:Installation guide - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual_talk:Installation_guide&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual_talk:Installation_guide&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="&quot;Manual talk:Installation guide&quot; Atom feed" href="/w/api.php?action=feedthreads&amp;type=replies%7Cnewthreads&amp;talkpage=Manual+talk%3AInstallation+guide&amp;feedformat=atom" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual_talk:Installation_guide" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual_talk","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":101,"wgPageName":"Manual_talk:Installation_guide","wgTitle":"Installation guide","wgCurRevisionId":449247,"wgRevisionId":449247,"wgArticleId":71440,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual_talk:Installation_guide","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRestrictionNewthread":[],"wgRestrictionReply":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-101 ns-talk page-Manual_talk_Installation_guide skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual talk:Installation guide</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="lqt-talkpage"><p><a href="/wiki/Manual_talk:Installation_guide/Archive" title="Manual talk:Installation guide/Archive">archive of this page</a></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1078
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 2/1000000
+Preprocessor generated node count: 12/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:71440-0!*!0!*!*!*!* and timestamp 20140212191218
+ -->
+<div class="lqt_header_content"><ul class="lqt_header_commands"><li>[<a href="/w/index.php?title=Manual_talk:Installation_guide&amp;action=edit" title="Manual talk:Installation guide">Edit↑</a>]</li>
+<li>[<a href="/w/index.php?title=Manual_talk:Installation_guide&amp;action=history" title="Manual talk:Installation guide">History↑</a>]</li>
+</ul></div></div><div class="lqt-talkpage" lang="en" dir="ltr"><div class="lqt-talkpage-header"><strong class="lqt_start_discussion"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=talkpage_new_thread" title="Manual talk:Installation guide" lqt_talkpage="Manual talk:Installation guide">Start a new discussion</a></strong><div class="lqt-talkpage-search"><form action="/wiki/Manual_talk:Installation_guide" method="get"><label for="lqt-search-box">Search terms:</label>&#160;<input name="lqt_search" size="45" id="lqt-search-box" /> <input type="submit" value="Search" /><input type="hidden" value="Manual talk:Installation guide" name="title" /></form></div><div class="lqt_view_options"><form action="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=talkpage_sort_order" method="get" name="lqt_sort"><label for="lqt_sort_select">Sorting order:</label> <select name="lqt_order" id="lqt_sort_select" class="lqt_sort_select"><option value="nc" selected="">last modified first</option>
+<option value="nt">newest threads first</option>
+<option value="ot">oldest threads first</option></select><input type="submit" value="Sort" class="lqt_go_sort" /><input type="hidden" value="Manual talk:Installation guide" name="title" /></form></div></div><div class="lqt-new-thread lqt-edit-form"></div><div class="lqt-contents-wrapper"><h2>Contents</h2><table class="lqt_toc"><thead><tr><th>Thread title</th><th>Replies</th><th>Last modified</th></tr></thead>
+<tbody><tr><td dir="ltr"><a href="#MessagesEn.php_is_missing_37945">MessagesEn.php is missing</a></td><td>0</td><td>15:03, 13 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Templates_37721">Templates</a></td><td>0</td><td>19:40, 7 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Installation_Problems_10599">Installation Problems</a></td><td>6</td><td>16:14, 20 November 2013</td></tr>
+<tr><td dir="ltr"><a href="#WikiEditor.i18n.php_29084">WikiEditor.i18n.php</a></td><td>1</td><td>11:54, 30 July 2013</td></tr>
+<tr><td dir="ltr"><a href="#MW1.15_to_1.18_Problems_with_Autoload.3F_11546">MW1.15 to 1.18 Problems with Autoload?</a></td><td>0</td><td>11:58, 22 March 2013</td></tr>
+<tr><td dir="ltr"><a href="#Proposal_to_merge_Installation_and_Manual:Installation_guide_9611">Proposal to merge Installation and Manual:Installation guide</a></td><td>2</td><td>18:29, 26 January 2013</td></tr></tbody></table></div><div class="lqt-threads lqt-talkpage-threads"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37945"><a name="MessagesEn.php_is_missing_37945"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37945" dir="ltr"><span class="mw-headline">MessagesEn.php is missing</span><input type="hidden" value="MessagesEn.php is missing" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37945"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/MessagesEn.php_is_missing&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/MessagesEn.php_is_missing&amp;lqt_method=summarize&amp;lqt_operand=37945" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37945" class="lqt-thread-modified" type="hidden" value="20140113150317" name="lqt-thread-modified-37945" /><input id="lqt-thread-sortkey-37945" type="hidden" value="20140113150317" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Manual talk:Installation guide" name="lqt-thread-talkpage-37945" /><input id="lqt-thread-title-37945" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/MessagesEn.php is missing" name="lqt-thread-title-37945" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>I am trying to install a mediawiki on an hosted space by aspnix, it's a Windows Server 2008 R2. I am trying using the installation offered by the hosting platform but also trying to make installation by myself.</p>
+<p>In any case I keep the result the home page says to me "MediaWiki 1.20.3 LocalSettings.php not found. Please set up the wiki first. " I accept the suggest and I click "set up the wiki" pointing to /mw-config/index.php. This page returns an Internal Error: MessagesEn.php is missing.</p>
+<p>Please can you help me to solve this matter?</p>
+<p>Thank in advance, Marco</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1056
+CPU time usage: 0.008 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187548-0!*!*!*!*!*!* and timestamp 20140212151358
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=37945#MessagesEn.php_is_missing_37945" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/MessagesEn.php_is_missing&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=37945#MessagesEn.php_is_missing_37945" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/MessagesEn.php_is_missing" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/w/index.php?title=User:Markino76&amp;action=edit&amp;redlink=1" class="new" title="User:Markino76 (page does not exist)">Markino76</a> (<a href="/w/index.php?title=User_talk:Markino76&amp;action=edit&amp;redlink=1" class="new" title="User talk:Markino76 (page does not exist)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">15:01, 13 January 2014</span></div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37721"><a name="Templates_37721"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37721" dir="ltr"><span class="mw-headline">Templates</span><input type="hidden" value="Templates" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37721"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Templates&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Templates&amp;lqt_method=summarize&amp;lqt_operand=37721" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37721" class="lqt-thread-modified" type="hidden" value="20140107194053" name="lqt-thread-modified-37721" /><input id="lqt-thread-sortkey-37721" type="hidden" value="20140107194053" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Manual talk:Installation guide" name="lqt-thread-talkpage-37721" /><input id="lqt-thread-title-37721" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Templates" name="lqt-thread-title-37721" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Where is the information for a novice to install a base set of templates, e.g. Reflist, Infobox, Navbox, etc?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1179
+CPU time usage: 0.004 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:186542-0!*!*!*!*!*!* and timestamp 20140207020014
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=37721#Templates_37721" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Templates&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=37721#Templates_37721" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Templates" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Rob_Kam" title="User:Rob Kam">Rob Kam</a> (<a href="/wiki/User_talk:Rob_Kam" title="User talk:Rob Kam">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">19:40, 7 January 2014</span></div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_10599"><a name="Installation_Problems_10599"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-10599" dir="ltr"><span class="mw-headline">Installation Problems</span><input type="hidden" value="Installation Problems" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-10599"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems&amp;lqt_method=summarize&amp;lqt_operand=10599" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-10599" class="lqt-thread-modified" type="hidden" value="20131120161454" name="lqt-thread-modified-10599" /><input id="lqt-thread-sortkey-10599" type="hidden" value="20131120161454" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Manual talk:Installation guide" name="lqt-thread-talkpage-10599" /><input id="lqt-thread-title-10599" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems" name="lqt-thread-title-10599" /><div class="lqt-post-wrapper"><div class="lqt-thread-info-panel"><div class="lqt-thread-toolbar-edited-others">Edited by 0 users.<br/>
+Last edit: 01:03, 8 January 2012</div></div><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Okay, I have downloaded, extracted, and uploaded my copy of MediaWiki. When I go to the wiki, it says "LocalSettings.php not found. Please set up the wiki first." So i click set up the wiki. Then no matter what I do, this error is thrown at me: "Error starting session: session_start() [&lt;a href='function.session-start'&gt;function.session-start&lt;/a&gt;]: open(/var/php_sessions/sess_095f5068adbc6b7c45d3fbdfa00113a3, O_RDWR) failed: No such file or directory (2) " I'm not sure what to do, please help! <a href="/w/index.php?title=User:Freeman2001&amp;action=edit&amp;redlink=1" class="new" title="User:Freeman2001 (page does not exist)">Freeman2001</a> 01:03, 8 January 2012 (UTC)</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1215
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:76609-0!*!0!*!*!*!* and timestamp 20140218222458
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=10599#Installation_Problems_10599" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=10599#Installation_Problems_10599" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/w/index.php?title=User:Freeman2001&amp;action=edit&amp;redlink=1" class="new" title="User:Freeman2001 (page does not exist)">Freeman2001</a></span>‎<span class="lqt-thread-toolbar-timestamp">01:03, 8 January 2012</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_10731"><a name="Installation_Problems_10731"> </a><input id="lqt-thread-title-10731" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems/reply" name="lqt-thread-title-10731" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>On the manual, it says to change the directory permission to 777 if such error occurs</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1215
+CPU time usage: 0.004 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:76922-0!*!*!*!*!*!* and timestamp 20140218222458
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=10731#Installation_Problems_10731" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Installation_Problems_10599" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=10731#Installation_Problems_10731" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/68.146.79.199" title="Special:Contributions/68.146.79.199">68.146.79.199</a></span>‎<span class="lqt-thread-toolbar-timestamp">02:35, 11 January 2012</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_18059"><a name="Installation_Problems_18059"> </a><input id="lqt-thread-title-18059" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems/reply (2)" name="lqt-thread-title-18059" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>I had the same problem, but changing permissions around didn't help. It turned out to be an issue with session_save_path in php.ini: <a rel="nofollow" class="external free" href="http://www.php.net/manual/en/function.session-save-path.php">http://www.php.net/manual/en/function.session-save-path.php</a></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1215
+CPU time usage: 0.004 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:95915-0!*!*!*!*!*!* and timestamp 20140218222458
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=18059#Installation_Problems_18059" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Installation_Problems_10731" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=18059#Installation_Problems_18059" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/199.184.30.51" title="Special:Contributions/199.184.30.51">199.184.30.51</a></span>‎<span class="lqt-thread-toolbar-timestamp">17:31, 6 August 2012</span></div></div><div class="lqt-thread-replies lqt-thread-replies-3"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_20913"><a name="Installation_Problems_20913"> </a><input id="lqt-thread-title-20913" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems/reply (3)" name="lqt-thread-title-20913" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>use ssh insert this: chmod -R 777 /var/php_sessions/ Okay~</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.004 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:105520-0!*!*!*!*!*!* and timestamp 20140218222115
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=20913#Installation_Problems_20913" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Installation_Problems_18059" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(3)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=20913#Installation_Problems_20913" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(3)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/110.83.121.48" title="Special:Contributions/110.83.121.48">110.83.121.48</a></span>‎<span class="lqt-thread-toolbar-timestamp">00:50, 2 December 2012</span></div></div><div class="lqt-thread-replies lqt-thread-replies-4"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-5 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_23228"><a name="Installation_Problems_23228"> </a><input id="lqt-thread-title-23228" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems/reply (4)" name="lqt-thread-title-23228" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-5 lqt-thread-odd mw-content-ltr"><p>This problem is php.ini problem:</p>
+<p>&gt;hosting control panel &gt;&gt;PHP Scripting</p>
+<p>edit php.ini and go to this place:</p>
+<pre>
+; where MODE is the octal representation of the mode. Note that this
+; does not overwrite the process's umask.
+; <a rel="nofollow" class="external free" href="http://php.net/session.save-path">http://php.net/session.save-path</a>
+session.save_path = "/var/php_sessions" 
+</pre>
+<p>change this</p>
+<pre>
+session.save_path = " /var/php_sessions "
+</pre>
+<p>to</p>
+<pre>
+session.save_path = " /home/users/web/xxxx/xxxxxx/public_html/phpsessions "
+</pre>
+<p>see <a rel="nofollow" class="external free" href="http://www.netfirms.com/knowledgebase/beta/article.bml?ArticleID=1290&amp;type=How%20To#Nugget_1374">http://www.netfirms.com/knowledgebase/beta/article.bml?ArticleID=1290&amp;type=How%20To#Nugget_1374</a></p>
+<p>you can "autoinstall" Mediawiki using install script site; <a rel="nofollow" class="external free" href="https://secure.installatron.com/apps#cmd=browser&amp;display=mediawiki">https://secure.installatron.com/apps#cmd=browser&amp;display=mediawiki</a></p>
+<p>anyway you have to change your " session.save_path" address</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:111139-0!*!*!*!*!*!* and timestamp 20140218222115
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=23228#Installation_Problems_23228" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Installation_Problems_20913" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(4)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=23228#Installation_Problems_23228" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(4)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/95.56.218.25" title="Special:Contributions/95.56.218.25">95.56.218.25</a></span>‎<span class="lqt-thread-toolbar-timestamp">17:27, 26 January 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-5"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-6 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_35793"><a name="Installation_Problems_35793"> </a><input id="lqt-thread-title-35793" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems/reply (7)" name="lqt-thread-title-35793" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-6 lqt-thread-even mw-content-ltr"><p>Sadly, the install of MediaWiki 1.21.3 did this for me as well. Instead of getting "file not found" after the "MediaWiki 1.21.3 LocalSettings.php not found. Please set up the wiki first." message, it simply forwards me onto "mw-config/index.php" and displays the same info. If I click the 'set up wiki' link again, it forwards me to: "mw-config/mw-config/index.php" and so on.</p>
+<p>Changing the session.save_path did nothing, neither did changing the permissions to 777 for the save_path.</p>
+<p>Any advice?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:164808-0!*!*!*!*!*!* and timestamp 20140218222115
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=35793#Installation_Problems_35793" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Installation_Problems_23228" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(7)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=35793#Installation_Problems_35793" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(7)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/62.232.110.114" title="Special:Contributions/62.232.110.114">62.232.110.114</a></span>‎<span class="lqt-thread-toolbar-timestamp">16:02, 20 November 2013</span></div></div><div class="lqt-post-sep">&#160;</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-6 lqt-thread-even lqt-thread-last lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_35794"><a name="Installation_Problems_35794"> </a><input id="lqt-thread-title-35794" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Installation Problems/reply (8)" name="lqt-thread-title-35794" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-6 lqt-thread-even mw-content-ltr"><p>Sadly, the install of MediaWiki 1.21.3 did this for me as well. Instead of getting "file not found" after the "MediaWiki 1.21.3 LocalSettings.php not found. Please set up the wiki first." message, it simply forwards me onto "mw-config/index.php" and displays the same info. If I click the 'set up wiki' link again, it forwards me to: "mw-config/mw-config/index.php" and so on.</p>
+<p>Changing the session.save_path did nothing, neither did changing the permissions to 777 for the save_path.</p>
+<p>Any advice?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.004 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:164809-0!*!*!*!*!*!* and timestamp 20140218222115
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=35794#Installation_Problems_35794" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Installation_Problems_23228" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(8)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=35794#Installation_Problems_35794" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems/reply_(8)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/62.232.110.114" title="Special:Contributions/62.232.110.114">62.232.110.114</a></span>‎<span class="lqt-thread-toolbar-timestamp">16:02, 20 November 2013</span></div></div><div class="lqt-thread-replies"><a href="/wiki/Thread:Manual_talk:Installation_guide/Installation_Problems#Installation_Problems_35794" title="Thread:Manual talk:Installation guide/Installation Problems" class="lqt-show-replies">Show 1 reply</a></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_29084"><a name="WikiEditor.i18n.php_29084"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-29084" dir="ltr"><span class="mw-headline">WikiEditor.i18n.php</span><input type="hidden" value="WikiEditor.i18n.php" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-29084"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/WikiEditor.i18n.php_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/WikiEditor.i18n.php_(2)&amp;lqt_method=summarize&amp;lqt_operand=29084" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-29084" class="lqt-thread-modified" type="hidden" value="20130730115450" name="lqt-thread-modified-29084" /><input id="lqt-thread-sortkey-29084" type="hidden" value="20130730115450" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Manual talk:Installation guide" name="lqt-thread-talkpage-29084" /><input id="lqt-thread-title-29084" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/WikiEditor.i18n.php (2)" name="lqt-thread-title-29084" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>WikiEditor.i18n.php too long for some servers</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1176
+CPU time usage: 0.004 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:130564-0!*!*!*!*!*!* and timestamp 20140127004312
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=29084#WikiEditor.i18n.php_29084" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/WikiEditor.i18n.php_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=29084#WikiEditor.i18n.php_29084" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/WikiEditor.i18n.php_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/80.25.106.204" title="Special:Contributions/80.25.106.204">80.25.106.204</a></span>‎<span class="lqt-thread-toolbar-timestamp">16:29, 15 June 2013</span></div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_11546"><a name="MW1.15_to_1.18_Problems_with_Autoload.3F_11546"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-11546" dir="ltr"><span class="mw-headline">MW1.15 to 1.18 Problems with Autoload?</span><input type="hidden" value="MW1.15 to 1.18 Problems with Autoload?" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-11546"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/MW1.15_to_1.18_Problems_with_Autoload%3F&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/MW1.15_to_1.18_Problems_with_Autoload%3F&amp;lqt_method=summarize&amp;lqt_operand=11546" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-11546" class="lqt-thread-modified" type="hidden" value="20130322115829" name="lqt-thread-modified-11546" /><input id="lqt-thread-sortkey-11546" type="hidden" value="20130322115829" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Manual talk:Installation guide" name="lqt-thread-talkpage-11546" /><input id="lqt-thread-title-11546" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/MW1.15 to 1.18 Problems with Autoload?" name="lqt-thread-title-11546" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>/config-dir changed... no more problems.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1182
+CPU time usage: 0.004 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:78633-0!*!*!*!*!*!* and timestamp 20140216172452
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=11546#MW1.15_to_1.18_Problems_with_Autoload.3F_11546" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/MW1.15_to_1.18_Problems_with_Autoload%3F&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=11546#MW1.15_to_1.18_Problems_with_Autoload.3F_11546" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/MW1.15_to_1.18_Problems_with_Autoload%3F" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/132.176.113.104" title="Special:Contributions/132.176.113.104">~~Jens</a></span>‎<span class="lqt-thread-toolbar-timestamp">14:29, 31 January 2012</span></div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_9611"><a name="Proposal_to_merge_Installation_and_Manual:Installation_guide_9611"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-9611" dir="ltr"><span class="mw-headline">Proposal to merge Installation and Manual:Installation guide</span><input type="hidden" value="Proposal to merge Installation and Manual:Installation guide" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-9611"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Proposal_to_merge_Installation_and_Manual:Installation_guide&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Proposal_to_merge_Installation_and_Manual:Installation_guide&amp;lqt_method=summarize&amp;lqt_operand=9611" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-9611" class="lqt-thread-modified" type="hidden" value="20130126182924" name="lqt-thread-modified-9611" /><input id="lqt-thread-sortkey-9611" type="hidden" value="20130126182924" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Manual talk:Installation guide" name="lqt-thread-talkpage-9611" /><input id="lqt-thread-title-9611" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Proposal to merge Installation and Manual:Installation guide" name="lqt-thread-title-9611" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>All of the content on <a href="/wiki/Installation" title="Installation" class="mw-redirect">Installation</a> is available, or could easily be made available, within <a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Manual:Installation guide</a>. Having two pages with such similar information seems unnecessarily confusing.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.004 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:74018-0!*!0!*!*!*!* and timestamp 20140124173425
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=9611#Proposal_to_merge_Installation_and_Manual:Installation_guide_9611" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Proposal_to_merge_Installation_and_Manual:Installation_guide&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=9611#Proposal_to_merge_Installation_and_Manual:Installation_guide_9611" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Proposal_to_merge_Installation_and_Manual:Installation_guide" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Varnent" title="User:Varnent">Varnent</a></span>‎<span class="lqt-thread-toolbar-timestamp">00:51, 7 December 2011</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_13557"><a name="Proposal_to_merge_Installation_and_Manual:Installation_guide_13557"> </a><input id="lqt-thread-title-13557" class="lqt-thread-title-metadata" type="hidden" value="Thread:Manual talk:Installation guide/Proposal to merge Installation and Manual:Installation guide/reply" name="lqt-thread-title-13557" /><div class="lqt-post-wrapper"><div class="lqt-thread-info-panel"><div class="lqt-thread-toolbar-edited-others">Edited by another user.<br/>
+Last edit: 18:29, 26 January 2013</div></div><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Please note that the 'Installation' page has been redirected to this very page by <a href="/wiki/User:Varnent" title="User:Varnent">User:Varnent</a> by February 6th, 2012. <a href="/wiki/User:JanEnEm" title="User:JanEnEm">JanEnEm</a> (<a href="/w/index.php?title=User_talk:JanEnEm&amp;action=edit&amp;redlink=1" class="new" title="User talk:JanEnEm (page does not exist)">talk</a>) 18:42, 25 March 2012 (UTC)</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.004 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:83945-0!*!0!*!*!*!* and timestamp 20140124173425
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=reply&amp;lqt_operand=13557#Proposal_to_merge_Installation_and_Manual:Installation_guide_13557" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Proposal_to_merge_Installation_and_Manual:Installation_guide_9611" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Manual_talk:Installation_guide/Proposal_to_merge_Installation_and_Manual:Installation_guide/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=edit&amp;lqt_operand=13557#Proposal_to_merge_Installation_and_Manual:Installation_guide_13557" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Manual_talk:Installation_guide/Proposal_to_merge_Installation_and_Manual:Installation_guide/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:JanEnEm" title="User:JanEnEm">JanEnEm</a> (<a href="/w/index.php?title=User_talk:JanEnEm&amp;action=edit&amp;redlink=1" class="new" title="User talk:JanEnEm (page does not exist)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">18:42, 25 March 2012</span></div></div><div class="lqt-post-sep">&#160;</div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div></div></div><noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual_talk:Installation_guide&amp;oldid=449247#Proposal_to_merge_Installation_and_Manual:Installation_guide_13557">http://www.mediawiki.org/w/index.php?title=Manual_talk:Installation_guide&amp;oldid=449247#Proposal_to_merge_Installation_and_Manual:Installation_guide_13557</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual+talk%3AInstallation+guide&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual+talk%3AInstallation+guide" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual"><span><a href="/wiki/Manual:Installation_guide"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk" class="selected"><span><a href="/wiki/Manual_talk:Installation_guide"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual_talk:Installation_guide" >Read</a></span></li>
+					<li id="ca-addsection" class="collapsible"><span><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;action=edit&amp;section=new"  title="Start a new section [+]" accesskey="+">Add topic</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;lqt_method=talkpage_history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual+talk%3AInstallation+guide">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual+talk%3AInstallation+guide&amp;oldid=449247&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual_talk:Installation_guide" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual_talk:Installation_guide" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="feedlinks"><a href="/w/api.php?action=feedthreads&amp;type=replies%7Cnewthreads&amp;talkpage=Manual+talk%3AInstallation+guide&amp;feedformat=atom" id="feed-atom" rel="alternate" type="application/atom+xml" class="feedlink" title="Atom feed for this page">Atom</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;oldid=449247" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual_talk:Installation_guide&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 30 October 2011, at 18:59.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual_talk:Installation_guide#Proposal_to_merge_Installation_and_Manual:Installation_guide_13557" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.liquidThreads","mediawiki.action.view.postEdit","mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1178 in 0.657 secs. -->
+	</body>
+</html>

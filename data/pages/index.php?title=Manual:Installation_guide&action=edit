@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Editing Manual:Installation guide - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Installation_guide&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Installation_guide&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/w/index.php?title=Manual:Installation_guide&amp;action=edit" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.action.edit.styles%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Installation_guide","wgTitle":"Installation guide","wgCurRevisionId":909005,"wgRevisionId":0,"wgArticleId":16959,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"edit","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Installation_guide","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":909005,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.edit","ext.translate","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Installation_guide skin-vector action-edit vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Editing Manual:Installation guide</span></h1>
+			<div id="bodyContent">
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text"><table class='flaggedrevs_editnotice plainlinks'><tr><td><b>Your changes will be displayed to readers once an authorized user accepts them. (<a href="/wiki/Help:Page_validation" title="Help:Page validation" class="mw-redirect">help</a>)</b></td></tr></table><div id="mw-anon-edit-warning">
+<table class="plainlinks fmbox fmbox-system" style="" role="presentation">
+<tr>
+<td class="mbox-image">
+  <img alt="" src="//upload.wikimedia.org/wikipedia/commons/c/c8/Ambox_notice.png" width="40" height="40" /></td>
+<td class="mbox-text" style=""> <big><b>Warning:</b> You are not logged in.</big><br/>Your IP address will be recorded in this page's edit history. </td>
+</tr>
+</table></div>
+<div id="wikiPreview" class="ontop" style="display: none;"></div><form id="editform" name="editform" method="post" action="/w/index.php?title=Manual:Installation_guide&amp;action=submit" enctype="multipart/form-data"><div id="antispam-container" style="display: none;"><label for="wpAntiSpam">Anti-spam check.
+Do <strong>NOT</strong> fill this in!</label><input type="text" name="wpAntispam" id="wpAntispam" value="" /></div>
+<input type="hidden" name="loadgroup" /><input type="hidden" name="loadtask" />
+
+<input type="hidden" value="909005" name="baseRevId" />
+<input type="hidden" value="0" name="altBaseRevId" />
+<input type="hidden" value="0" name="undidRev" /><input type='hidden' value="" name="wpSection" />
+<input type='hidden' value="20140219161235" name="wpStarttime" />
+<input type='hidden' value="20140218172401" name="wpEdittime" />
+<input type='hidden' value="" name="wpScrolltop" id="wpScrolltop" />
+<input type="hidden" value="d41d8cd98f00b204e9800998ecf8427e" name="wpAutoSummary" /><input type="hidden" value="0" name="oldid" /><input type="hidden" value="text/x-wiki" name="format" /><input type="hidden" value="wikitext" name="model" /><div class="wikiEditor-oldToolbar" style="display:none;"><div id="toolbar"></div></div><textarea tabindex="1" accesskey="," id="wpTextbox1" cols="80" rows="25" style="" lang="en" dir="ltr" name="wpTextbox1">&lt;languages/>
+{{TNT|MediaWiki Introduction}}{{TNT|InstallationNav}}
+
+&lt;translate>
+&lt;!--T:1-->
+Welcome to the '''[[Special:MyLanguage/MediaWiki|MediaWiki]] installation guide''' which provides instructions on how to manually install and configure MediaWiki on a web server. Note that some users may find MediaWiki [[Special:MyLanguage/software bundles|software bundles]] and [[Special:MyLanguage/Hosting_services | hosting services with 1-click installation and wiki farms]] a convenient alternative to manual installation.
+
+&lt;!--T:2-->
+The first part of this guide gives general instructions, while the last section contains a list of appendices that give more detailed installation notes for specific system configurations and other less common uses of the software.
+
+== Upgrade guide == &lt;!--T:3-->
+
+&lt;!--T:4-->
+If you are already running MediaWiki, see the [[Special:MyLanguage/Manual:Upgrading|Upgrade guide]].
+&lt;/translate>
+
+{| class="wikitable" style="margin:.4em .4em .4em .4em; float:right;"
+| style="max-width:375px; text-align:left; padding: .4em .4em .4em 1em; font-size:105%; background-color:#EEEEEE;" | [[File:Gnome-system-software-installer.svg|40px|&lt;translate>&lt;!--T:5-->
+Requirements&lt;/translate>]] &lt;span style="font-size:140%; margin-left:10px;">'''&lt;sub>&lt;translate>&lt;!--T:6-->
+Requirements&lt;/translate>&lt;/sub>'''&lt;/span>
+|-
+| style="padding:0 .4em .24em .4em; font-size:95%; max-width:375px;" |
+&lt;translate>
+&lt;!--T:7-->
+* [[Special:MyLanguage/Download|Download]] MediaWiki (current stable version is {{MW stable release number}})
+
+&lt;!--T:8-->
+* '''Web server''' such as [http://httpd.apache.org Apache] or [http://www.microsoft.com/iis IIS]
+** Local or command line access is needed for running maintenance scripts
+
+&lt;!--T:9-->
+* '''[http://www.php.net PHP]''' version {{MW stable php requirement}} or later, but not [[bugzilla:49975|PHP 5.5]] currently.&lt;br />Due to a security issue with PHP it is strongly advised to use PHP 5.3.5+ ([http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-January/000094.html see here for more details]).
+** with [http://php.net/pcre Perl Compatible Regular Expressions]
+** with [http://php.net/spl Standard PHP Library]
+
+&lt;!--T:10-->
+* '''Database Server'''
+** [http://www.mysql.com MySQL] {{MW stable mysql requirement}} or later (*)
+** or [http://www.postgresql.org PostgreSQL] 8.1 or later 
+*** Requires PL/pgSQL (contained in contribs)
+*** Full-Text searching (Native in >=8.3, requires tsearch2 extension &lt;=8.2)
+** or [[Special:MyLanguage/SQLite|SQLite ]]
+&lt;/translate>
+
+&lt;small>&lt;translate>&lt;!--T:11-->
+For [[Special:MyLanguage/Manual:image thumbnailing|image thumbnailing]] and [[Special:MyLanguage/Texvc|TeX]]-support, additional programs are required.
+ 
+(*) – [[w:MariaDB|MariaDB]], a [[w:GPL|GPL]] fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. [&lt;tvar|debRepos>http://downloads.askmonty.org/mariadb/repositories/&lt;/> Debian/Ubuntu repos].&lt;/translate>&lt;/small>
+|}
+
+&lt;translate>
+== Summarized installation guide == &lt;!--T:12-->
+&lt;/translate>
+
+{| style="background-color: #F5A9A9;" |
+|'''&lt;translate>&lt;!--T:13-->
+Warning about webhost auto-installers&lt;/translate>'''
+|-
+|&lt;translate>&lt;!--T:14-->
+Programs provided by webhosts to automatically install applications such as MediaWiki can, and frequently do, screw up the process, resulting in errors and a failure to install MediaWiki (or another application for that matter). If you encounter this problem, it '''does not''' mean that you cannot install MediaWiki; all it means is that you should do it manually.  This is very easy and there are benefits to doing this, including more control over where on the server and file path you want to install it, the ability to use a shared database, or the ability to control more features of the wiki during the installation.&lt;/translate>
+|}
+
+&lt;translate>
+&lt;!--T:15-->
+For experienced users, here is the quick version of the installation instructions.  Most users will want to read the more detailed version, [[#Main-installation-guide|below]].
+
+&lt;!--T:16-->
+# Check that your system meets the [[Special:MyLanguage/Manual:Installation requirements|minimum requirements]] 
+# [[Special:MyLanguage/Download|Download MediaWiki]] &lt;small>{{MW stable release link|(direct link to latest version)}}&lt;/small> and extract the archive to a web-accessible folder on your server.
+# Point your browser to the directory where MediaWiki was extracted (e.g., &lt;tt>http://[domain]/mediawiki/index.php&lt;/tt>). If installed on a local machine, replace ''[domain]'' with '''localhost'''. If installed on a remote server, replace ''[domain]'' with your server's domain name (eg: www.myserver.com).
+# [[Special:MyLanguage/Manual:Config script|Follow the on-screen instructions]] to complete the process.
+
+&lt;!--T:17-->
+These instructions are deliberately brief.  There is a lot that could go wrong, so if in doubt, you are advised to read the full instructions below!
+&lt;/translate>
+
+{{Anchor|Main-installation-guide}}
+&lt;translate>== Main installation guide == &lt;!--T:18--> 
+
+&lt;!--T:19-->
+* Before installation
+** [[Special:MyLanguage/Manual:What is MediaWiki?|Read what MediaWiki is]]
+** [[Special:MyLanguage/Manual:MediaWiki feature list|Check the MediaWiki feature list]]
+** [[Special:MyLanguage/Manual:Installation requirements|Installation requirements]] - Check these before going any further!
+
+&lt;!--T:20-->
+* [[Special:MyLanguage/Manual:Installing MediaWiki|Installing MediaWiki]]
+
+&lt;!--T:21-->
+* Configuring MediaWiki
+** [[Special:MyLanguage/Manual:Config script|Initial configuration]] (using the configuration script)
+** [[Special:MyLanguage/Manual:Configuring MediaWiki|Further configuration]] 
+** [[Special:MyLanguage/Manual:Extensions|Installing extensions]]
+
+== Alternative to manual installation == &lt;!--T:22-->
+
+&lt;!--T:23-->
+Some users may prefer to skip manual installation by using a pre-integrated MediaWiki [[Special:MyLanguage/Software appliances|software appliance]] or [[Special:MyLanguage/Hosting services|hosting services with 1-click installation and wiki farms]].
+
+&lt;!--T:24-->
+If you are installing only for [[Special:MyLanguage/How to become a MediaWiki hacker|development]] or testing, consider using [[Special:MyLanguage/mediawiki-vagrant|mediawiki-vagrant]].  You must have (and enable) [[:w:hardware virtualization|hardware virtualization]].  Many modern computers have this, and you can check in your BIOS.
+
+== Appendices == &lt;!--T:25-->
+
+=== Advanced uses === &lt;!--T:26-->
+
+&lt;!--T:27-->
+The following pages give instructions about how to install/configure MediaWiki for other, less common purposes.
+* [[Special:MyLanguage/Download from Git|Installing from Git]]
+* [[Special:MyLanguage/Manual:Wiki on a stick|Installing MediaWiki on a memory stick]]
+
+=== Advanced configuration === &lt;!--T:28-->
+
+&lt;!--T:29-->
+The following pages cover some of the more advanced configuration options:
+* [[Special:MyLanguage/Manual:Configuration|Advanced configuration]]
+* [[Special:MyLanguage/Manual:Administrators|Wiki administration]]
+
+=== MediaWiki Help === &lt;!--T:30-->
+
+&lt;!--T:31-->
+The following page explains how to get a copy of the MediaWiki help pages on your own wiki
+* [[Special:MyLanguage/Project:PD help/Copying|Copying help pages]]
+
+==Installation assistance== &lt;!--T:32-->
+
+&lt;!--T:33-->
+*FAQ: [[Special:MyLanguage/FAQ#Installation and configuration|FAQ#Installation and configuration]]
+*[[Special:MyLanguage/MediaWiki on IRC|IRC (#mediawiki)]]
+*'''[&lt;tvar|mailList>https://lists.wikimedia.org/mailman/listinfo/mediawiki-l&lt;/> mediawiki-l]''' (Mailing List) is the high-traffic mailing list to ask for support.
+*'''[&lt;tvar|mwUsers>http://www.mwusers.com&lt;/> MediaWiki Users]''' (Forum) is a user-to-user MediaWiki support forum (offline)
+
+=== System-specific instructions  === &lt;!--T:34-->
+
+&lt;!--T:35-->
+The following pages give more detailed installation instructions aimed at specific systems. However, by and large [[Special:MyLanguage/Manual:Installing MediaWiki|Manual:Installing MediaWiki]] is more up to date, and better written than the per system docs, and as such it is recommended you first consult the [[Special:MyLanguage/Manual:Installing_MediaWiki|main install instructions]] before looking at a per system installation documents.
+
+&lt;!--T:36-->
+* [[&lt;tvar|FreeBSD>Special:MyLanguage/Manual:Running MediaWiki on FreeBSD&lt;/>|FreeBSD]]
+
+&lt;!--T:37-->
+* [[&lt;tvar|GNULinux>Special:MyLanguage/Manual:Running MediaWiki on Linux&lt;/>|GNU/Linux]]
+** [[&lt;tvar|ALTLinux>Special:MyLanguage/Manual:Running MediaWiki on ALT Linux&lt;/>|ALT Linux]]
+** [[&lt;tvar|ArchLinux>Special:MyLanguage/Manual:Running MediaWiki on Arch Linux&lt;/>|Arch Linux]]
+** [[&lt;tvar|Damnsmalllinux>Special:MyLanguage/Manual:Running MediaWiki on Damnsmalllinux&lt;/>|Damnsmalllinux]]
+** [[&lt;tvar|Debian>Special:MyLanguage/Manual:Running MediaWiki on Debian GNU/Linux&lt;/>|Debian]]
+** [[&lt;tvar|Fredora>Special:MyLanguage/Manual:Running MediaWiki on Fedora&lt;/>|Fedora]]
+** [[&lt;tvar|Gentoo>Special:MyLanguage/Manual:Running MediaWiki on Gentoo Linux&lt;/>|Gentoo]]
+** [[&lt;tvar|Mandriva>Special:MyLanguage/Manual:Running MediaWiki on Mandriva&lt;/>|Mandriva]]
+** [[&lt;tvar|RedHat>Special:MyLanguage/Manual:Running MediaWiki on Red Hat Linux&lt;/>|Red Hat Enterprise Linux]]
+** [[&lt;tvar|Slackware>Special:MyLanguage/Manual:Running MediaWiki on Slackware Linux&lt;/>|Slackware]]
+** [[&lt;tvar|SuSE9>Special:MyLanguage/Manual:Running MediaWiki on SuSE Linux 9.3&lt;/>|SuSE 9.3]]
+** [[&lt;tvar|Ubuntu>Special:MyLanguage/Manual:Running MediaWiki on Ubuntu&lt;/>|Ubuntu]]
+
+&lt;!--T:38-->
+* [[&lt;tvar|OSX>Special:MyLanguage/Manual:Running MediaWiki on Mac OS X&lt;/>|Mac OS X]]
+
+&lt;!--T:39-->
+* [[&lt;tvar|NetWare>Special:MyLanguage/Manual:Running MediaWiki on NetWare&lt;/>|NetWare]]
+
+&lt;!--T:40-->
+* [[&lt;tvar|Solaris>Special:MyLanguage/Manual:Running MediaWiki on Solaris&lt;/>|Solaris]]
+** [[&lt;tvar|Solaris10>Special:MyLanguage/Manual:Running MediaWiki on Solaris 10&lt;/>|Solaris 10]]
+** [[&lt;tvar|Solaris9>Special:MyLanguage/Manual:Running MediaWiki on Solaris 9&lt;/>|Solaris 9]]
+
+&lt;!--T:41-->
+* [[&lt;tvar|Win>Special:MyLanguage/Manual:Running MediaWiki on Windows&lt;/>|Windows]]
+** [[&lt;tvar|WinXP>Special:MyLanguage/Manual:Installing MediaWiki on Windows XP&lt;/>|Windows XP]]
+** [[&lt;tvar|WinSer03>Special:MyLanguage/Manual:Installing MediaWiki on Windows Server 2003&lt;/>|Windows Server 2003]]
+** [[&lt;tvar|WinSer08>Special:MyLanguage/Manual:Installing MediaWiki on Windows Server 2008&lt;/>|Windows Server 2008]]
+** [[&lt;tvar|WinSer08R2>Special:MyLanguage/Manual:Installing MediaWiki on Windows Server 2008 R2&lt;/>|Windows Server 2008 R2]]
+** [[&lt;tvar|newcomers>Special:MyLanguage/Manual:Newcomers guide to installing on Windows&lt;/>|Newcomers guide]]
+** [[&lt;tvar|Streamlined>Special:MyLanguage/Manual:Streamlined Windows Install Guide&lt;/>|Streamlined Guide]]
+** [[&lt;tvar|apacheWin>Special:MyLanguage/Manual:Simple Windows Apache Installation&lt;/>|Simple Windows Apache Installation]]
+
+=== Notes === &lt;!--T:42-->
+&lt;/translate>
+
+&lt;div class="plainlinks">
+&lt;translate>
+&lt;!--T:43-->
+* MediaWiki ships with an installation script which allows web-based configuration
+
+&lt;!--T:44-->
+* MediaWiki can share the database of another web-based application, e.g. phpBB etc.
+
+&lt;!--T:45-->
+* Knowledge of PHP is required in order to customize the software
+
+&lt;!--T:46-->
+* PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki {{MW ancient release number}} &lt;small>([&lt;tvar|download>http://download.wikimedia.org/mediawiki/1.6/mediawiki-{{MW ancient release number}}.tar.gz&lt;/> download])&lt;/small>.  Note that this version is ''no longer supported''.
+
+&lt;!--T:47-->
+* MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 &lt;small>([&lt;tvar|download>http://prdownloads.sourceforge.net/wikipedia/mediawiki-1.5.8.tar.gz?download&lt;/> download])&lt;/small>.  Note that this version is ''no longer supported''.
+
+&lt;!--T:48-->
+* MySQL 5 support is required since [[Special:MyLanguage/MediaWiki 1.19|MediaWiki 1.19]] – if you are using an older version of MySQL and cannot upgrade, you should use MediaWiki 1.18.5 &lt;small>([[download:mediawiki/1.18/mediawiki-1.18.5.tar.gz|download]])&lt;/small>. Note that this version is ''no longer supported''.
+
+&lt;!--T:49-->
+* Some users find it helpful to install an additional software package such as [http://www.phpmyadmin.net phpMyAdmin] (MySQL) or [http://phppgadmin.sourceforge.net/ phpPgAdmin] (Postgres) to help administer the database server.
+&lt;/translate>
+&lt;/div>
+
+&lt;translate>
+== See also == &lt;!--T:50-->
+
+&lt;!--T:51-->
+* [[Special:MyLanguage/Software bundles|MediaWiki software bundles]]
+* [[Special:MyLanguage/Hosting_services|MediaWiki hosting services and wiki farms]]
+* [[Special:MyLanguage/Manual:Before installing|Before installing]]
+* [[Special:MyLanguage/Manual:Upgrading|Upgrading]]
+* [[Special:MyLanguage/Manual:Uninstallation|Uninstallation]]
+* [[Special:MyLanguage/Manual:FAQ|FAQ]]
+&lt;/translate>
+
+[[Category:Installation{{langcat|Installation guide}}|{{PAGENAME}}]]
+</textarea><div class='editOptions'>
+<span class="mw-summary" id="wpSummaryLabel"><label for="wpSummary">Summary <sup><small>(<a href="//meta.wikimedia.org/wiki/Help:Edit_summary" class="extiw" title="meta:Help:Edit summary">?</a>)</small></sup>:</label></span> <input class="mw-summary" id="wpSummary" maxlength="200" tabindex="1" size="60" spellcheck="true" title="Enter a short summary [b]" accesskey="b" name="wpSummary" /><div class='editCheckboxes'>
+</div>
+<div id="editpage-copywarn">
+By editing this page, you agree to irrevocably release your contributions under the <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0 License</a>. If you don't want your writing to be edited mercilessly and redistributed at will, then don't submit it here.<p>You are also confirming that you wrote this yourself, or copied it from a public domain or similar free resource. See <a href="/wiki/Project:Copyright" title="Project:Copyright" class="mw-redirect">Project:Copyright</a> for full details of the licenses used on this site.
+<strong>DO NOT SUBMIT COPYRIGHTED WORK WITHOUT PERMISSION!</strong></p>
+</div>
+<div class='editButtons'>
+<input id="wpSave" name="wpSave" type="submit" tabindex="3" value="Submit changes" accesskey="s" title="Submit your changes for review [s]"/>
+<input id="wpPreview" name="wpPreview" type="submit" tabindex="4" value="Show preview" accesskey="p" title="Preview your changes, please use this before saving! [p]" />
+
+<input id="wpDiff" name="wpDiff" type="submit" tabindex="5" value="Show changes" accesskey="v" title="Show which changes you made to the text [v]" />
+	<span class='cancelLink'><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide" id="mw-editform-cancel">Cancel</a><span class="mw-editButtons-pipe-separator"> | </span></span>
+	<span class='editHelp'><a target="helpwindow" href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Editing_pages">Editing help</a> (opens in new window)</span>
+</div><!-- editButtons -->
+<span id="templatesandbox-editform"><input id="wpTemplateSandboxTemplate" type="hidden" value="Manual:Installation guide" name="wpTemplateSandboxTemplate" /><input id="wpTemplateSandboxPage" type="hidden" name="wpTemplateSandboxPage" /></span>
+</div><!-- editOptions -->
+
+<input type="hidden" value="+\" name="wpEditToken" />
+<div class="mw-editTools"><div id="mw-edittools-charinsert" class="mw-charinsert-buttons" title="Click on the wanted special character.">
+<p class="mw-edittools-section" data-section-title="Standard">   
+<a onclick="insertTags(&#39;[&#39;,&#39;]&#39;,&#39;&#39;);return false" href="#">[]</a> ·
+<a onclick="insertTags(&#39;[[&#39;,&#39;]]&#39;,&#39;&#39;);return false" href="#">[[]]</a> ·
+<a onclick="insertTags(&#39;[[&#39;,&#39;|]]&#39;,&#39;&#39;);return false" href="#">[[|]]</a> ·
+<a onclick="insertTags(&#39;{{&#39;,&#39;}}&#39;,&#39;&#39;);return false" href="#">{{}}</a> ·
+<a onclick="insertTags(&#39;–&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">–</a>
+<a onclick="insertTags(&#39;—&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">—</a> ·
+<a onclick="insertTags(&#39;“&#39;,&#39;”&#39;,&#39;&#39;);return false" href="#">“”</a>
+<a onclick="insertTags(&#39;‘&#39;,&#39;’&#39;,&#39;&#39;);return false" href="#">‘’</a>
+<a onclick="insertTags(&#39;«&#39;,&#39;»&#39;,&#39;&#39;);return false" href="#">«»</a>
+<a onclick="insertTags(&#39;‹&#39;,&#39;›&#39;,&#39;&#39;);return false" href="#">‹›</a>
+<a onclick="insertTags(&#39;„&#39;,&#39;“&#39;,&#39;&#39;);return false" href="#">„“</a>
+<a onclick="insertTags(&#39;‚&#39;,&#39;‘&#39;,&#39;&#39;);return false" href="#">‚‘</a> ·
+<a onclick="insertTags(&#39;…&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">…</a>
+<a onclick="insertTags(&#39;~&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">~</a>
+<a onclick="insertTags(&#39;|&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">|</a>
+<a onclick="insertTags(&#39;°&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">°</a>
+<a onclick="insertTags(&#39;&amp;nbsp;&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">&amp;nbsp;</a> ·
+<a onclick="insertTags(&#39;≈&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">≈</a>
+<a onclick="insertTags(&#39;≠&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">≠</a>
+<a onclick="insertTags(&#39;≤&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">≤</a>
+<a onclick="insertTags(&#39;≥&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">≥</a>
+<a onclick="insertTags(&#39;±&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">±</a>
+<a onclick="insertTags(&#39;−&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">−</a>
+<a onclick="insertTags(&#39;×&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">×</a>
+<a onclick="insertTags(&#39;÷&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">÷</a>
+<a onclick="insertTags(&#39;←&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">←</a>
+<a onclick="insertTags(&#39;→&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">→</a>
+<a onclick="insertTags(&#39;²&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">²</a>
+<a onclick="insertTags(&#39;³&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">³</a>
+<a onclick="insertTags(&#39;½&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">½</a>
+<a onclick="insertTags(&#39;·&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">·</a>
+<a onclick="insertTags(&#39;§&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">§</a>
+<br/>    
+<a onclick="insertTags(&#39;[[Category:&#39;,&#39;]]&#39;,&#39;&#39;);return false" href="#">[[Category:]]</a> ·
+<a onclick="insertTags(&#39;[[:File:&#39;,&#39;]]&#39;,&#39;&#39;);return false" href="#">[[:File:]]</a> ·
+<a onclick="insertTags(&#39;&lt;code&gt;&#39;,&#39;&lt;/code&gt;&#39;,&#39;&#39;);return false" href="#">&lt;code&gt;&lt;/code&gt;</a> ·
+<a onclick="insertTags(&#39;&lt;syntaxhighlight&gt;&#39;,&#39;&lt;/syntaxhighlight&gt;&#39;,&#39;&#39;);return false" href="#">&lt;syntaxhighlight&gt;&lt;/syntaxhighlight&gt;</a> ·
+<a onclick="insertTags(&#39;&lt;includeonly&gt;&#39;,&#39;&lt;/includeonly&gt;&#39;,&#39;&#39;);return false" href="#">&lt;includeonly&gt;&lt;/includeonly&gt;</a> ·
+<a onclick="insertTags(&#39;&lt;noinclude&gt;&#39;,&#39;&lt;/noinclude&gt;&#39;,&#39;&#39;);return false" href="#">&lt;noinclude&gt;&lt;/noinclude&gt;</a> ·
+<a onclick="insertTags(&#39;#REDIRECT[[&#39;,&#39;]]&#39;,&#39;&#39;);return false" href="#">#REDIRECT[[]]</a> ·
+<a onclick="insertTags(&#39;&lt;translate&gt;&#39;,&#39;&lt;/translate&gt;&#39;,&#39;&#39;);return false" href="#">&lt;translate&gt;&lt;/translate&gt;</a> ·
+<a onclick="insertTags(&#39;&lt;languages/&gt;&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">&lt;languages/&gt;</a> ·
+<a onclick="insertTags(&#39;{{DEFAULTSORT:&#39;,&#39;}}&#39;,&#39;&#39;);return false" href="#">{{DEFAULTSORT:}}</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Latin" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;Ć&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ć</a>
+<a onclick="insertTags(&#39;ć&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ć</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ś&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ś</a>
+<a onclick="insertTags(&#39;ś&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ś</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ý</a>
+<a onclick="insertTags(&#39;ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ý</a>
+<a onclick="insertTags(&#39;Ǿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǿ</a>
+<a onclick="insertTags(&#39;ǿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǿ</a> ·
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ì</a>
+<a onclick="insertTags(&#39;ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ì</a>
+<a onclick="insertTags(&#39;Ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ò</a>
+<a onclick="insertTags(&#39;ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ò</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a> ·
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Ĉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĉ</a>
+<a onclick="insertTags(&#39;ĉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĉ</a>
+<a onclick="insertTags(&#39;Ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ê</a>
+<a onclick="insertTags(&#39;ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ê</a>
+<a onclick="insertTags(&#39;Ĝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĝ</a>
+<a onclick="insertTags(&#39;ĝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĝ</a>
+<a onclick="insertTags(&#39;Ĥ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĥ</a>
+<a onclick="insertTags(&#39;ĥ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĥ</a>
+<a onclick="insertTags(&#39;Î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Î</a>
+<a onclick="insertTags(&#39;î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">î</a>
+<a onclick="insertTags(&#39;Ĵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĵ</a>
+<a onclick="insertTags(&#39;ĵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĵ</a>
+<a onclick="insertTags(&#39;Ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ô</a>
+<a onclick="insertTags(&#39;ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ô</a>
+<a onclick="insertTags(&#39;ŝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŝ</a>
+<a onclick="insertTags(&#39;Ŝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ŝ</a>
+<a onclick="insertTags(&#39;Û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Û</a>
+<a onclick="insertTags(&#39;û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">û</a> ·
+<a onclick="insertTags(&#39;Ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ä</a>
+<a onclick="insertTags(&#39;ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ä</a>
+<a onclick="insertTags(&#39;Ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ë</a>
+<a onclick="insertTags(&#39;ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ë</a>
+<a onclick="insertTags(&#39;Ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ï</a>
+<a onclick="insertTags(&#39;ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ï</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+<a onclick="insertTags(&#39;ÿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ÿ</a> ·
+<a onclick="insertTags(&#39;Ã&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ã</a>
+<a onclick="insertTags(&#39;ã&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ã</a>
+<a onclick="insertTags(&#39;Ñ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ñ</a>
+<a onclick="insertTags(&#39;ñ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ñ</a>
+<a onclick="insertTags(&#39;Õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Õ</a>
+<a onclick="insertTags(&#39;õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">õ</a> ·
+<a onclick="insertTags(&#39;Å&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Å</a>
+<a onclick="insertTags(&#39;å&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">å</a> ·
+<a onclick="insertTags(&#39;Ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ç</a>
+<a onclick="insertTags(&#39;ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ç</a> ·
+<a onclick="insertTags(&#39;Č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Č</a>
+<a onclick="insertTags(&#39;č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">č</a>
+<a onclick="insertTags(&#39;Š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Š</a>
+<a onclick="insertTags(&#39;š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">š</a>
+<a onclick="insertTags(&#39;ŭ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŭ</a> ·
+<a onclick="insertTags(&#39;Ł&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ł</a>
+<a onclick="insertTags(&#39;ł&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ł</a> ·
+<a onclick="insertTags(&#39;Ő&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ő</a>
+<a onclick="insertTags(&#39;ő&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ő</a>
+<a onclick="insertTags(&#39;Ű&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ű</a>
+<a onclick="insertTags(&#39;ű&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ű</a> ·
+<a onclick="insertTags(&#39;Ø&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ø</a>
+<a onclick="insertTags(&#39;ø&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ø</a> ·
+<a onclick="insertTags(&#39;Ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ā</a>
+<a onclick="insertTags(&#39;ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ā</a>
+<a onclick="insertTags(&#39;Ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ē</a>
+<a onclick="insertTags(&#39;ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ē</a>
+<a onclick="insertTags(&#39;Ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ī</a>
+<a onclick="insertTags(&#39;ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ī</a>
+<a onclick="insertTags(&#39;Ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ō</a>
+<a onclick="insertTags(&#39;ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ō</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a> ·
+<a onclick="insertTags(&#39;ß&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ß</a>
+<a onclick="insertTags(&#39;ẞ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẞ</a> ·
+<a onclick="insertTags(&#39;Æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Æ</a>
+<a onclick="insertTags(&#39;æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">æ</a>
+<a onclick="insertTags(&#39;Œ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Œ</a>
+<a onclick="insertTags(&#39;œ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">œ</a> · 
+<a onclick="insertTags(&#39;Ð&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ð</a>
+<a onclick="insertTags(&#39;ð&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ð</a>
+<a onclick="insertTags(&#39;Þ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Þ</a>
+<a onclick="insertTags(&#39;þ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">þ</a>
+<a onclick="insertTags(&#39;|&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">|</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Greek" style="display: none;">
+<a onclick="insertTags(&#39;Α&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Α</a>
+<a onclick="insertTags(&#39;Ά&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ά</a>
+<a onclick="insertTags(&#39;Β&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Β</a>
+<a onclick="insertTags(&#39;Γ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Γ</a>
+<a onclick="insertTags(&#39;Δ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Δ</a>
+<a onclick="insertTags(&#39;Ε&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ε</a>
+<a onclick="insertTags(&#39;Έ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Έ</a>
+<a onclick="insertTags(&#39;Ζ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ζ</a>
+<a onclick="insertTags(&#39;Η&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Η</a>
+<a onclick="insertTags(&#39;Ή&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ή</a>
+<a onclick="insertTags(&#39;Θ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Θ</a>
+<a onclick="insertTags(&#39;Ι&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ι</a>
+<a onclick="insertTags(&#39;Ί&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ί</a>
+<a onclick="insertTags(&#39;Κ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Κ</a>
+<a onclick="insertTags(&#39;Λ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Λ</a>
+<a onclick="insertTags(&#39;Μ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Μ</a>
+<a onclick="insertTags(&#39;Ν&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ν</a>
+<a onclick="insertTags(&#39;Ξ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ξ</a>
+<a onclick="insertTags(&#39;Ο&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ο</a>
+<a onclick="insertTags(&#39;Ό&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ό</a>
+<a onclick="insertTags(&#39;Π&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Π</a>
+<a onclick="insertTags(&#39;Ρ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ρ</a>
+<a onclick="insertTags(&#39;Σ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Σ</a>
+<a onclick="insertTags(&#39;Τ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Τ</a>
+<a onclick="insertTags(&#39;Υ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Υ</a>
+<a onclick="insertTags(&#39;Ύ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ύ</a>
+<a onclick="insertTags(&#39;Φ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Φ</a>
+<a onclick="insertTags(&#39;Χ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Χ</a>
+<a onclick="insertTags(&#39;Ψ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ψ</a>
+<a onclick="insertTags(&#39;Ω&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ω</a>
+<a onclick="insertTags(&#39;Ώ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ώ</a> · 
+<a onclick="insertTags(&#39;α&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">α</a>
+<a onclick="insertTags(&#39;ά&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ά</a>
+<a onclick="insertTags(&#39;β&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">β</a>
+<a onclick="insertTags(&#39;γ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">γ</a>
+<a onclick="insertTags(&#39;δ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">δ</a>
+<a onclick="insertTags(&#39;ε&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ε</a>
+<a onclick="insertTags(&#39;έ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">έ</a>
+<a onclick="insertTags(&#39;ζ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ζ</a>
+<a onclick="insertTags(&#39;η&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">η</a>
+<a onclick="insertTags(&#39;ή&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ή</a>
+<a onclick="insertTags(&#39;θ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">θ</a>
+<a onclick="insertTags(&#39;ι&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ι</a>
+<a onclick="insertTags(&#39;ί&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ί</a>
+<a onclick="insertTags(&#39;κ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">κ</a>
+<a onclick="insertTags(&#39;λ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">λ</a>
+<a onclick="insertTags(&#39;μ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">μ</a>
+<a onclick="insertTags(&#39;ν&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ν</a>
+<a onclick="insertTags(&#39;ξ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ξ</a>
+<a onclick="insertTags(&#39;ο&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ο</a>
+<a onclick="insertTags(&#39;ό&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ό</a>
+<a onclick="insertTags(&#39;π&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">π</a>
+<a onclick="insertTags(&#39;ρ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ρ</a>
+<a onclick="insertTags(&#39;σ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">σ</a>
+<a onclick="insertTags(&#39;ς&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ς</a>
+<a onclick="insertTags(&#39;τ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">τ</a>
+<a onclick="insertTags(&#39;υ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">υ</a>
+<a onclick="insertTags(&#39;ύ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ύ</a>
+<a onclick="insertTags(&#39;φ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">φ</a>
+<a onclick="insertTags(&#39;χ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">χ</a>
+<a onclick="insertTags(&#39;ψ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ψ</a>
+<a onclick="insertTags(&#39;ω&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ω</a>
+<a onclick="insertTags(&#39;ώ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ώ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Cyrillic" style="display: none;">
+<a onclick="insertTags(&#39;А&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">А</a>
+<a onclick="insertTags(&#39;Б&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Б</a>
+<a onclick="insertTags(&#39;В&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">В</a>
+<a onclick="insertTags(&#39;Г&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Г</a>
+<a onclick="insertTags(&#39;Д&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Д</a>
+<a onclick="insertTags(&#39;Ђ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ђ</a>
+<a onclick="insertTags(&#39;Е&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Е</a>
+<a onclick="insertTags(&#39;Ё&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ё</a>
+<a onclick="insertTags(&#39;Ж&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ж</a>
+<a onclick="insertTags(&#39;З&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">З</a>
+<a onclick="insertTags(&#39;Ѕ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ѕ</a>
+<a onclick="insertTags(&#39;И&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">И</a>
+<a onclick="insertTags(&#39;Й&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Й</a>
+<a onclick="insertTags(&#39;Ј&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ј</a>
+<a onclick="insertTags(&#39;К&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">К</a>
+<a onclick="insertTags(&#39;Л&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Л</a>
+<a onclick="insertTags(&#39;Љ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Љ</a>
+<a onclick="insertTags(&#39;М&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">М</a>
+<a onclick="insertTags(&#39;Н&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Н</a>
+<a onclick="insertTags(&#39;Њ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Њ</a>
+<a onclick="insertTags(&#39;О&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">О</a>
+<a onclick="insertTags(&#39;П&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">П</a>
+<a onclick="insertTags(&#39;Р&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Р</a>
+<a onclick="insertTags(&#39;С&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">С</a>
+<a onclick="insertTags(&#39;Т&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Т</a>
+<a onclick="insertTags(&#39;Ћ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ћ</a>
+<a onclick="insertTags(&#39;У&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">У</a>
+<a onclick="insertTags(&#39;Ф&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ф</a>
+<a onclick="insertTags(&#39;Х&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Х</a>
+<a onclick="insertTags(&#39;Ц&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ц</a>
+<a onclick="insertTags(&#39;Ч&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ч</a>
+<a onclick="insertTags(&#39;Џ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Џ</a>
+<a onclick="insertTags(&#39;Ш&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ш</a>
+<a onclick="insertTags(&#39;Щ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Щ</a>
+<a onclick="insertTags(&#39;Ъ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ъ</a>
+<a onclick="insertTags(&#39;Ы&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ы</a>
+<a onclick="insertTags(&#39;Ь&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ь</a>
+<a onclick="insertTags(&#39;Э&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Э</a>
+<a onclick="insertTags(&#39;Ю&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ю</a>
+<a onclick="insertTags(&#39;Я&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Я</a> · 
+<a onclick="insertTags(&#39;а&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">а</a>
+<a onclick="insertTags(&#39;б&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">б</a>
+<a onclick="insertTags(&#39;в&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">в</a>
+<a onclick="insertTags(&#39;г&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">г</a>
+<a onclick="insertTags(&#39;д&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">д</a>
+<a onclick="insertTags(&#39;ђ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ђ</a>
+<a onclick="insertTags(&#39;е&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">е</a>
+<a onclick="insertTags(&#39;ё&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ё</a>
+<a onclick="insertTags(&#39;ж&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ж</a>
+<a onclick="insertTags(&#39;з&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">з</a>
+<a onclick="insertTags(&#39;ѕ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ѕ</a>
+<a onclick="insertTags(&#39;и&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">и</a>
+<a onclick="insertTags(&#39;й&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">й</a>
+<a onclick="insertTags(&#39;ј&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ј</a>
+<a onclick="insertTags(&#39;к&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">к</a>
+<a onclick="insertTags(&#39;л&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">л</a>
+<a onclick="insertTags(&#39;љ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">љ</a>
+<a onclick="insertTags(&#39;м&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">м</a>
+<a onclick="insertTags(&#39;н&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">н</a>
+<a onclick="insertTags(&#39;њ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">њ</a>
+<a onclick="insertTags(&#39;о&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">о</a>
+<a onclick="insertTags(&#39;п&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">п</a>
+<a onclick="insertTags(&#39;р&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">р</a>
+<a onclick="insertTags(&#39;с&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">с</a>
+<a onclick="insertTags(&#39;т&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">т</a>
+<a onclick="insertTags(&#39;ћ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ћ</a>
+<a onclick="insertTags(&#39;у&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">у</a>
+<a onclick="insertTags(&#39;ф&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ф</a>
+<a onclick="insertTags(&#39;х&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">х</a>
+<a onclick="insertTags(&#39;ц&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ц</a>
+<a onclick="insertTags(&#39;ч&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ч</a>
+<a onclick="insertTags(&#39;џ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">џ</a>
+<a onclick="insertTags(&#39;ш&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ш</a>
+<a onclick="insertTags(&#39;щ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">щ</a>
+<a onclick="insertTags(&#39;ъ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ъ</a>
+<a onclick="insertTags(&#39;ы&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ы</a>
+<a onclick="insertTags(&#39;ь&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ь</a>
+<a onclick="insertTags(&#39;э&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">э</a>
+<a onclick="insertTags(&#39;ю&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ю</a>
+<a onclick="insertTags(&#39;я&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">я</a>
+</p>
+<p class="mw-edittools-section" data-section-title="IPA" style="display: none;">
+<a onclick="insertTags(&#39;ʈ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʈ</a>
+<a onclick="insertTags(&#39;ɖ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɖ</a>
+<a onclick="insertTags(&#39;ɟ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɟ</a>
+<a onclick="insertTags(&#39;ɡ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɡ</a>
+<a onclick="insertTags(&#39;ɢ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɢ</a>
+<a onclick="insertTags(&#39;ʡ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʡ</a>
+<a onclick="insertTags(&#39;ʔ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʔ</a> · 
+<a onclick="insertTags(&#39;ɸ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɸ</a>
+<a onclick="insertTags(&#39;ʃ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʃ</a>
+<a onclick="insertTags(&#39;ʒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʒ</a>
+<a onclick="insertTags(&#39;ɕ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɕ</a>
+<a onclick="insertTags(&#39;ʑ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʑ</a>
+<a onclick="insertTags(&#39;ʂ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʂ</a>
+<a onclick="insertTags(&#39;ʐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʐ</a>
+<a onclick="insertTags(&#39;ʝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʝ</a>
+<a onclick="insertTags(&#39;ɣ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɣ</a>
+<a onclick="insertTags(&#39;ʁ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʁ</a>
+<a onclick="insertTags(&#39;ʕ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʕ</a>
+<a onclick="insertTags(&#39;ʜ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʜ</a>
+<a onclick="insertTags(&#39;ʢ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʢ</a>
+<a onclick="insertTags(&#39;ɦ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɦ</a> · 
+<a onclick="insertTags(&#39;ɱ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɱ</a>
+<a onclick="insertTags(&#39;ɳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɳ</a>
+<a onclick="insertTags(&#39;ɲ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɲ</a>
+<a onclick="insertTags(&#39;ŋ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŋ</a>
+<a onclick="insertTags(&#39;ɴ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɴ</a> · 
+<a onclick="insertTags(&#39;ʋ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʋ</a>
+<a onclick="insertTags(&#39;ɹ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɹ</a>
+<a onclick="insertTags(&#39;ɻ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɻ</a>
+<a onclick="insertTags(&#39;ɰ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɰ</a> · 
+<a onclick="insertTags(&#39;ʙ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʙ</a>
+<a onclick="insertTags(&#39;ʀ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʀ</a>
+<a onclick="insertTags(&#39;ɾ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɾ</a>
+<a onclick="insertTags(&#39;ɽ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɽ</a> · 
+<a onclick="insertTags(&#39;ɫ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɫ</a>
+<a onclick="insertTags(&#39;ɬ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɬ</a>
+<a onclick="insertTags(&#39;ɮ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɮ</a>
+<a onclick="insertTags(&#39;ɺ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɺ</a>
+<a onclick="insertTags(&#39;ɭ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɭ</a>
+<a onclick="insertTags(&#39;ʎ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʎ</a>
+<a onclick="insertTags(&#39;ʟ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʟ</a> · 
+<a onclick="insertTags(&#39;ɥ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɥ</a>
+<a onclick="insertTags(&#39;ʍ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʍ</a>
+<a onclick="insertTags(&#39;ɧ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɧ</a> · 
+<a onclick="insertTags(&#39;ɓ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɓ</a>
+<a onclick="insertTags(&#39;ɗ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɗ</a>
+<a onclick="insertTags(&#39;ʄ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʄ</a>
+<a onclick="insertTags(&#39;ɠ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɠ</a>
+<a onclick="insertTags(&#39;ʛ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʛ</a> · 
+<a onclick="insertTags(&#39;ʘ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʘ</a>
+<a onclick="insertTags(&#39;ǀ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǀ</a>
+<a onclick="insertTags(&#39;ǃ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǃ</a>
+<a onclick="insertTags(&#39;ǂ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǂ</a>
+<a onclick="insertTags(&#39;ǁ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǁ</a> · 
+<a onclick="insertTags(&#39;ɨ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɨ</a>
+<a onclick="insertTags(&#39;ʉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʉ</a>
+<a onclick="insertTags(&#39;ɯ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɯ</a> · 
+<a onclick="insertTags(&#39;ɪ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɪ</a>
+<a onclick="insertTags(&#39;ʏ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʏ</a>
+<a onclick="insertTags(&#39;ʊ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʊ</a> · 
+<a onclick="insertTags(&#39;ɘ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɘ</a>
+<a onclick="insertTags(&#39;ɵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɵ</a>
+<a onclick="insertTags(&#39;ɤ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɤ</a> · 
+<a onclick="insertTags(&#39;ɚ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɚ</a> · 
+<a onclick="insertTags(&#39;ɛ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɛ</a>
+<a onclick="insertTags(&#39;ɜ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɜ</a>
+<a onclick="insertTags(&#39;ɝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɝ</a>
+<a onclick="insertTags(&#39;ɞ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɞ</a>
+<a onclick="insertTags(&#39;ʌ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʌ</a>
+<a onclick="insertTags(&#39;ɔ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɔ</a> · 
+<a onclick="insertTags(&#39;ɐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɐ</a>
+<a onclick="insertTags(&#39;ɶ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɶ</a>
+<a onclick="insertTags(&#39;ɑ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɑ</a>
+<a onclick="insertTags(&#39;ɒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ɒ</a> · 
+<a onclick="insertTags(&#39;ʰ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʰ</a>
+<a onclick="insertTags(&#39;ʷ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʷ</a>
+<a onclick="insertTags(&#39;ʲ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʲ</a>
+<a onclick="insertTags(&#39;ˠ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ˠ</a>
+<a onclick="insertTags(&#39;ˤ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ˤ</a>
+<a onclick="insertTags(&#39;ⁿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ⁿ</a>
+<a onclick="insertTags(&#39;ˡ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ˡ</a> · 
+<a onclick="insertTags(&#39;ˈ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ˈ</a>
+<a onclick="insertTags(&#39;ˌ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ˌ</a>
+<a onclick="insertTags(&#39;ː&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ː</a>
+<a onclick="insertTags(&#39;ˑ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ˑ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Arabic" style="display: none;">
+<span dir="rtl" style="font-size:120%;">
+<a onclick="insertTags(&#39;ا&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ا</a>
+<a onclick="insertTags(&#39;ب&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ب</a>
+<a onclick="insertTags(&#39;ت&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ت</a>
+<a onclick="insertTags(&#39;ث&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ث</a>
+<a onclick="insertTags(&#39;ج&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ج</a>
+<a onclick="insertTags(&#39;ح&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ح</a>
+<a onclick="insertTags(&#39;خ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">خ</a>
+<a onclick="insertTags(&#39;د&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">د</a>
+<a onclick="insertTags(&#39;ذ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ذ</a>
+<a onclick="insertTags(&#39;ر&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ر</a>
+<a onclick="insertTags(&#39;ز&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ز</a>
+<a onclick="insertTags(&#39;س&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">س</a>
+<a onclick="insertTags(&#39;ش&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ش</a>
+<a onclick="insertTags(&#39;ص&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ص</a>
+<a onclick="insertTags(&#39;ض&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ض</a>
+<a onclick="insertTags(&#39;ط&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ط</a>
+<a onclick="insertTags(&#39;ظ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ظ</a>
+<a onclick="insertTags(&#39;ع&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ع</a>
+<a onclick="insertTags(&#39;غ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">غ</a>
+<a onclick="insertTags(&#39;ف&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ف</a>
+<a onclick="insertTags(&#39;ق&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ق</a>
+<a onclick="insertTags(&#39;ك&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ك</a>
+<a onclick="insertTags(&#39;ل&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ل</a>
+<a onclick="insertTags(&#39;م&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">م</a>
+<a onclick="insertTags(&#39;ن&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ن</a>
+<a onclick="insertTags(&#39;ه&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ه</a>
+<a onclick="insertTags(&#39;و&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">و</a>
+<a onclick="insertTags(&#39;ي&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ي</a> · 
+<a onclick="insertTags(&#39;ﺍ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺍ</a>
+<a onclick="insertTags(&#39;ﺑ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺑ</a>
+<a onclick="insertTags(&#39;ﺗ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺗ</a>
+<a onclick="insertTags(&#39;ﺛ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺛ</a>
+<a onclick="insertTags(&#39;ﺟ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺟ</a>
+<a onclick="insertTags(&#39;ﺣ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺣ</a>
+<a onclick="insertTags(&#39;ﺧ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺧ</a>
+<a onclick="insertTags(&#39;ﺩ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺩ</a>
+<a onclick="insertTags(&#39;ﺫ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺫ</a>
+<a onclick="insertTags(&#39;ﺭ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺭ</a>
+<a onclick="insertTags(&#39;ﺯ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺯ</a>
+<a onclick="insertTags(&#39;ﺳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺳ</a>
+<a onclick="insertTags(&#39;ﺷ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺷ</a>
+<a onclick="insertTags(&#39;ﺻ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺻ</a>
+<a onclick="insertTags(&#39;ﺿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺿ</a>
+<a onclick="insertTags(&#39;ﻃ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻃ</a>
+<a onclick="insertTags(&#39;ﻇ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻇ</a>
+<a onclick="insertTags(&#39;ﻋ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻋ</a>
+<a onclick="insertTags(&#39;ﻏ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻏ</a>
+<a onclick="insertTags(&#39;ﻓ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻓ</a>
+<a onclick="insertTags(&#39;ﻗ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻗ</a>
+<a onclick="insertTags(&#39;ﻛ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻛ</a>
+<a onclick="insertTags(&#39;ﻟ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻟ</a>
+<a onclick="insertTags(&#39;ﻣ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻣ</a>
+<a onclick="insertTags(&#39;ﻧ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻧ</a>
+<a onclick="insertTags(&#39;ﻫ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻫ</a>
+<a onclick="insertTags(&#39;ﻭ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻭ</a>
+<a onclick="insertTags(&#39;ﻳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻳ</a> ·
+<a onclick="insertTags(&#39;ﺍ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺍ</a>
+<a onclick="insertTags(&#39;ﺒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺒ</a>
+<a onclick="insertTags(&#39;ﺘ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺘ</a>
+<a onclick="insertTags(&#39;ﺜ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺜ</a>
+<a onclick="insertTags(&#39;ﺠ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺠ</a>
+<a onclick="insertTags(&#39;ﺤ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺤ</a>
+<a onclick="insertTags(&#39;ﺨ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺨ</a>
+<a onclick="insertTags(&#39;ﺪ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺪ</a>
+<a onclick="insertTags(&#39;ﺬ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺬ</a>
+<a onclick="insertTags(&#39;ﺮ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺮ</a>
+<a onclick="insertTags(&#39;ﺰ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺰ</a>
+<a onclick="insertTags(&#39;ﺴ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺴ</a>
+<a onclick="insertTags(&#39;ﺸ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺸ</a>
+<a onclick="insertTags(&#39;ﺼ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺼ</a>
+<a onclick="insertTags(&#39;ﻀ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻀ</a>
+<a onclick="insertTags(&#39;ﻄ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻄ</a>
+<a onclick="insertTags(&#39;ﻈ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻈ</a>
+<a onclick="insertTags(&#39;ﻌ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻌ</a>
+<a onclick="insertTags(&#39;ﻐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻐ</a>
+<a onclick="insertTags(&#39;ﻔ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻔ</a>
+<a onclick="insertTags(&#39;ﻘ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻘ</a>
+<a onclick="insertTags(&#39;ﻜ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻜ</a>
+<a onclick="insertTags(&#39;ﻠ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻠ</a>
+<a onclick="insertTags(&#39;ﻤ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻤ</a>
+<a onclick="insertTags(&#39;ﻨ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻨ</a>
+<a onclick="insertTags(&#39;ﻬ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻬ</a>
+<a onclick="insertTags(&#39;ﻮ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻮ</a>
+<a onclick="insertTags(&#39;ﻴ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻴ</a> ·
+<a onclick="insertTags(&#39;ﺎ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺎ</a>
+<a onclick="insertTags(&#39;ﺐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺐ</a>
+<a onclick="insertTags(&#39;ﺖ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺖ</a>
+<a onclick="insertTags(&#39;ﺚ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺚ</a>
+<a onclick="insertTags(&#39;ﺞ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺞ</a>
+<a onclick="insertTags(&#39;ﺢ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺢ</a>
+<a onclick="insertTags(&#39;ﺦ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺦ</a>
+<a onclick="insertTags(&#39;ﺪ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺪ</a>
+<a onclick="insertTags(&#39;ﺬ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺬ</a>
+<a onclick="insertTags(&#39;ﺮ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺮ</a>
+<a onclick="insertTags(&#39;ﺰ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺰ</a>
+<a onclick="insertTags(&#39;ﺲ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺲ</a>
+<a onclick="insertTags(&#39;ﺶ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺶ</a>
+<a onclick="insertTags(&#39;ﺺ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺺ</a>
+<a onclick="insertTags(&#39;ﺾ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﺾ</a>
+<a onclick="insertTags(&#39;ﻂ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻂ</a>
+<a onclick="insertTags(&#39;ﻆ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻆ</a>
+<a onclick="insertTags(&#39;ﻊ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻊ</a>
+<a onclick="insertTags(&#39;ﻎ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻎ</a>
+<a onclick="insertTags(&#39;ﻒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻒ</a>
+<a onclick="insertTags(&#39;ﻖ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻖ</a>
+<a onclick="insertTags(&#39;ﻚ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻚ</a>
+<a onclick="insertTags(&#39;ﻞ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻞ</a>
+<a onclick="insertTags(&#39;ﻢ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻢ</a>
+<a onclick="insertTags(&#39;ﻦ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻦ</a>
+<a onclick="insertTags(&#39;ﻪ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻪ</a>
+<a onclick="insertTags(&#39;ﻮ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻮ</a>
+<a onclick="insertTags(&#39;ﻲ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﻲ</a> ·
+<a onclick="insertTags(&#39;ء-&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ء-</a>
+<a onclick="insertTags(&#39;ّ-&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ّ-</a>
+<a onclick="insertTags(&#39;ْ-&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ْ-</a>
+<a onclick="insertTags(&#39;ً-&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ً-</a>
+<a onclick="insertTags(&#39;ِ-&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ِ-</a>
+<a onclick="insertTags(&#39;آ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">آ</a>
+<a onclick="insertTags(&#39;أ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">أ</a>
+<a onclick="insertTags(&#39;إ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">إ</a>
+<a onclick="insertTags(&#39;ة&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ة</a>
+<a onclick="insertTags(&#39;ؤ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ؤ</a>
+<a onclick="insertTags(&#39;ئ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ئ</a>
+<a onclick="insertTags(&#39;ى&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ى</a> ·
+<a onclick="insertTags(&#39;پ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">پ</a>
+<a onclick="insertTags(&#39;چ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">چ</a>
+<a onclick="insertTags(&#39;ژ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ژ</a>
+<a onclick="insertTags(&#39;گ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">گ</a>
+<a onclick="insertTags(&#39;ﭪ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ﭪ</a>
+<a onclick="insertTags(&#39;ڠ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ڠ</a>
+<a onclick="insertTags(&#39;۰&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">۰</a>
+<a onclick="insertTags(&#39;۱&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">۱</a>
+<a onclick="insertTags(&#39;۲&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">۲</a>
+<a onclick="insertTags(&#39;۳&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">۳</a>
+<a onclick="insertTags(&#39;٤&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">٤</a>
+<a onclick="insertTags(&#39;٥&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">٥</a>
+<a onclick="insertTags(&#39;٦&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">٦</a>
+<a onclick="insertTags(&#39;٧&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">٧</a>
+<a onclick="insertTags(&#39;۸&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">۸</a>
+<a onclick="insertTags(&#39;۹&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">۹</a>
+</span>
+</p>
+<p class="mw-edittools-section" data-section-title="Catalan" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;Ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ç</a>
+<a onclick="insertTags(&#39;ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ç</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ë</a>
+<a onclick="insertTags(&#39;ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ë</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ï</a>
+<a onclick="insertTags(&#39;ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ï</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ò</a>
+<a onclick="insertTags(&#39;ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ò</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Czech" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;Č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Č</a>
+<a onclick="insertTags(&#39;č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">č</a>
+<a onclick="insertTags(&#39;Ď&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ď</a>
+<a onclick="insertTags(&#39;ď&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ď</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Ě&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ě</a>
+<a onclick="insertTags(&#39;ě&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ě</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ň&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ň</a>
+<a onclick="insertTags(&#39;ň&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ň</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ř&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ř</a>
+<a onclick="insertTags(&#39;ř&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ř</a>
+<a onclick="insertTags(&#39;Š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Š</a>
+<a onclick="insertTags(&#39;š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">š</a>
+<a onclick="insertTags(&#39;Ť&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ť</a>
+<a onclick="insertTags(&#39;ť&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ť</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ů&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ů</a>
+<a onclick="insertTags(&#39;ů&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ů</a>
+<a onclick="insertTags(&#39;Ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ý</a>
+<a onclick="insertTags(&#39;ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ý</a>
+<a onclick="insertTags(&#39;Ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ž</a>
+<a onclick="insertTags(&#39;ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ž</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Devanāgarī" style="display: none;">
+<a onclick="insertTags(&#39;ँ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ँ</a>
+<a onclick="insertTags(&#39;ं&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ं</a>
+<a onclick="insertTags(&#39;ः&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ः</a>
+<a onclick="insertTags(&#39;अ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">अ</a>
+<a onclick="insertTags(&#39;आ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">आ</a>
+<a onclick="insertTags(&#39;इ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">इ</a>
+<a onclick="insertTags(&#39;ई&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ई</a>
+<a onclick="insertTags(&#39;उ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">उ</a>
+<a onclick="insertTags(&#39;ऊ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऊ</a>
+<a onclick="insertTags(&#39;ऋ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऋ</a>
+<a onclick="insertTags(&#39;ऌ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऌ</a>
+<a onclick="insertTags(&#39;ऍ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऍ</a>
+<a onclick="insertTags(&#39;ऎ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऎ</a>
+<a onclick="insertTags(&#39;ए&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ए</a>
+<a onclick="insertTags(&#39;ऐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऐ</a>
+<a onclick="insertTags(&#39;ऑ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऑ</a>
+<a onclick="insertTags(&#39;ऒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऒ</a>
+<a onclick="insertTags(&#39;ओ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ओ</a>
+<a onclick="insertTags(&#39;औ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">औ</a>
+<a onclick="insertTags(&#39;क&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">क</a>
+<a onclick="insertTags(&#39;क़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">क़</a>
+<a onclick="insertTags(&#39;ख&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ख</a>
+<a onclick="insertTags(&#39;ख़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ख़</a>
+<a onclick="insertTags(&#39;ग&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ग</a>
+<a onclick="insertTags(&#39;ग़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ग़</a>
+<a onclick="insertTags(&#39;घ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">घ</a>
+<a onclick="insertTags(&#39;ङ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ङ</a>
+<a onclick="insertTags(&#39;च&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">च</a>
+<a onclick="insertTags(&#39;छ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">छ</a>
+<a onclick="insertTags(&#39;ज&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ज</a>
+<a onclick="insertTags(&#39;ज़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ज़</a>
+<a onclick="insertTags(&#39;झ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">झ</a>
+<a onclick="insertTags(&#39;ञ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ञ</a>
+<a onclick="insertTags(&#39;ट&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ट</a>
+<a onclick="insertTags(&#39;ठ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ठ</a>
+<a onclick="insertTags(&#39;ड&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ड</a>
+<a onclick="insertTags(&#39;ड़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ड़</a>
+<a onclick="insertTags(&#39;द&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">द</a>
+<a onclick="insertTags(&#39;ढ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ढ</a>
+<a onclick="insertTags(&#39;ढ़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ढ़</a>
+<a onclick="insertTags(&#39;ण&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ण</a>
+<a onclick="insertTags(&#39;त&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">त</a>
+<a onclick="insertTags(&#39;थ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">थ</a>
+<a onclick="insertTags(&#39;ध&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ध</a>
+<a onclick="insertTags(&#39;न&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">न</a>
+<a onclick="insertTags(&#39;ऩ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऩ</a>
+<a onclick="insertTags(&#39;प&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">प</a>
+<a onclick="insertTags(&#39;फ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">फ</a>
+<a onclick="insertTags(&#39;फ़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">फ़</a>
+<a onclick="insertTags(&#39;ब&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ब</a>
+<a onclick="insertTags(&#39;भ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">भ</a>
+<a onclick="insertTags(&#39;म&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">म</a>
+<a onclick="insertTags(&#39;य&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">य</a>
+<a onclick="insertTags(&#39;य़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">य़</a>
+<a onclick="insertTags(&#39;र&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">र</a>
+<a onclick="insertTags(&#39;ऱ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऱ</a>
+<a onclick="insertTags(&#39;ल&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ल</a>
+<a onclick="insertTags(&#39;ळ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ळ</a>
+<a onclick="insertTags(&#39;ऴ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऴ</a>
+<a onclick="insertTags(&#39;व&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">व</a>
+<a onclick="insertTags(&#39;श&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">श</a>
+<a onclick="insertTags(&#39;ष&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ष</a>
+<a onclick="insertTags(&#39;स&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">स</a>
+<a onclick="insertTags(&#39;ह&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ह</a>
+<a onclick="insertTags(&#39;़&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">़</a>
+<a onclick="insertTags(&#39;ऽ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ऽ</a>
+<a onclick="insertTags(&#39;ा&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ा</a>
+<a onclick="insertTags(&#39;ि&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ि</a>
+<a onclick="insertTags(&#39;ॊ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॊ</a>
+<a onclick="insertTags(&#39;ो&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ो</a>
+<a onclick="insertTags(&#39;ौ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ौ</a>
+<a onclick="insertTags(&#39;्&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">्</a>
+<a onclick="insertTags(&#39;ी&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ी</a>
+<a onclick="insertTags(&#39;ु&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ु</a>
+<a onclick="insertTags(&#39;ू&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ू</a>
+<a onclick="insertTags(&#39;ृ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ृ</a>
+<a onclick="insertTags(&#39;ॄ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॄ</a>
+<a onclick="insertTags(&#39;ॅ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॅ</a>
+<a onclick="insertTags(&#39;ॆ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॆ</a>
+<a onclick="insertTags(&#39;े&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">े</a>
+<a onclick="insertTags(&#39;ै&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ै</a>
+<a onclick="insertTags(&#39;ॉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॉ</a>
+<a onclick="insertTags(&#39;ॐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॐ</a>
+<a onclick="insertTags(&#39;॑&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">॑</a>
+<a onclick="insertTags(&#39;॒&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">॒</a>
+<a onclick="insertTags(&#39;॓&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">॓</a>
+<a onclick="insertTags(&#39;॔&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">॔</a>
+<a onclick="insertTags(&#39;ॠ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॠ</a>
+<a onclick="insertTags(&#39;ॡ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॡ</a>
+<a onclick="insertTags(&#39;ॢ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॢ</a>
+<a onclick="insertTags(&#39;ॣ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ॣ</a>
+<a onclick="insertTags(&#39;।&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">।</a>
+<a onclick="insertTags(&#39;॥&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">॥</a>
+<a onclick="insertTags(&#39;॰&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">॰</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Esperanto" style="display: none;">
+<a onclick="insertTags(&#39;Ĉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĉ</a>
+<a onclick="insertTags(&#39;ĉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĉ</a>
+<a onclick="insertTags(&#39;Ĝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĝ</a>
+<a onclick="insertTags(&#39;ĝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĝ</a>
+<a onclick="insertTags(&#39;Ĥ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĥ</a>
+<a onclick="insertTags(&#39;ĥ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĥ</a>
+<a onclick="insertTags(&#39;Ĵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĵ</a>
+<a onclick="insertTags(&#39;ĵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĵ</a>
+<a onclick="insertTags(&#39;Ŝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ŝ</a>
+<a onclick="insertTags(&#39;ŝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŝ</a>
+<a onclick="insertTags(&#39;Ŭ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ŭ</a>
+<a onclick="insertTags(&#39;ŭ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŭ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Estonian" style="display: none;">
+<a onclick="insertTags(&#39;Č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Č</a>
+<a onclick="insertTags(&#39;č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">č</a>
+<a onclick="insertTags(&#39;Š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Š</a>
+<a onclick="insertTags(&#39;š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">š</a>
+<a onclick="insertTags(&#39;Ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ž</a>
+<a onclick="insertTags(&#39;ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ž</a>
+<a onclick="insertTags(&#39;Õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Õ</a>
+<a onclick="insertTags(&#39;õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">õ</a>
+<a onclick="insertTags(&#39;Ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ä</a>
+<a onclick="insertTags(&#39;ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ä</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+</p>
+<p class="mw-edittools-section" data-section-title="French" style="display: none;">
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ç</a>
+<a onclick="insertTags(&#39;ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ç</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ê</a>
+<a onclick="insertTags(&#39;ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ê</a>
+<a onclick="insertTags(&#39;Ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ë</a>
+<a onclick="insertTags(&#39;ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ë</a>
+<a onclick="insertTags(&#39;Î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Î</a>
+<a onclick="insertTags(&#39;î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">î</a>
+<a onclick="insertTags(&#39;Ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ï</a>
+<a onclick="insertTags(&#39;ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ï</a>
+<a onclick="insertTags(&#39;Ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ô</a>
+<a onclick="insertTags(&#39;ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ô</a>
+<a onclick="insertTags(&#39;Œ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Œ</a>
+<a onclick="insertTags(&#39;œ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">œ</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a>
+<a onclick="insertTags(&#39;Û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Û</a>
+<a onclick="insertTags(&#39;û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">û</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+<a onclick="insertTags(&#39;Ÿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ÿ</a>
+<a onclick="insertTags(&#39;ÿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ÿ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="German" style="display: none;">
+<a onclick="insertTags(&#39;Ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ä</a>
+<a onclick="insertTags(&#39;ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ä</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+<a onclick="insertTags(&#39;ß&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ß</a>
+<a onclick="insertTags(&#39;ẞ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẞ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Hawaiian" style="display: none;">
+<a onclick="insertTags(&#39;Ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ā</a>
+<a onclick="insertTags(&#39;ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ā</a>
+<a onclick="insertTags(&#39;Ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ē</a>
+<a onclick="insertTags(&#39;ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ē</a>
+<a onclick="insertTags(&#39;Ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ī</a>
+<a onclick="insertTags(&#39;ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ī</a>
+<a onclick="insertTags(&#39;Ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ō</a>
+<a onclick="insertTags(&#39;ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ō</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a>
+<a onclick="insertTags(&#39;ʻ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ʻ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Hebrew" style="display: none;">
+<a onclick="insertTags(&#39;א&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">א</a>
+<a onclick="insertTags(&#39;ב&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ב</a>
+<a onclick="insertTags(&#39;ג&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ג</a>
+<a onclick="insertTags(&#39;ד&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ד</a>
+<a onclick="insertTags(&#39;ה&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ה</a>
+<a onclick="insertTags(&#39;ו&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ו</a>
+<a onclick="insertTags(&#39;ז&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ז</a>
+<a onclick="insertTags(&#39;ח&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ח</a>
+<a onclick="insertTags(&#39;ט&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ט</a>
+<a onclick="insertTags(&#39;י&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">י</a>
+<a onclick="insertTags(&#39;כ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">כ</a>
+<a onclick="insertTags(&#39;ך&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ך</a>
+<a onclick="insertTags(&#39;ל&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ל</a>
+<a onclick="insertTags(&#39;מ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">מ</a>
+<a onclick="insertTags(&#39;ם&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ם</a>
+<a onclick="insertTags(&#39;נ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">נ</a>
+<a onclick="insertTags(&#39;ן&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ן</a>
+<a onclick="insertTags(&#39;ס&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ס</a>
+<a onclick="insertTags(&#39;ע&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ע</a>
+<a onclick="insertTags(&#39;פ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">פ</a>
+<a onclick="insertTags(&#39;ף&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ף</a>
+<a onclick="insertTags(&#39;צ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">צ</a>
+<a onclick="insertTags(&#39;ץ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ץ</a>
+<a onclick="insertTags(&#39;ק&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ק</a>
+<a onclick="insertTags(&#39;ר&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ר</a>
+<a onclick="insertTags(&#39;ש&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ש</a>
+<a onclick="insertTags(&#39;ת&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ת</a>
+<a onclick="insertTags(&#39;־&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">־</a>
+<a onclick="insertTags(&#39;״&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">״</a>
+<a onclick="insertTags(&#39;׳&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">׳</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Hungarian" style="display: none;">
+<a onclick="insertTags(&#39;Ő&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ő</a>
+<a onclick="insertTags(&#39;ő&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ő</a>
+<a onclick="insertTags(&#39;Ű&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ű</a>
+<a onclick="insertTags(&#39;ű&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ű</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Icelandic" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;Ð&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ð</a>
+<a onclick="insertTags(&#39;ð&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ð</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ý</a>
+<a onclick="insertTags(&#39;ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ý</a>
+<a onclick="insertTags(&#39;Þ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Þ</a>
+<a onclick="insertTags(&#39;þ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">þ</a>
+<a onclick="insertTags(&#39;Æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Æ</a>
+<a onclick="insertTags(&#39;æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">æ</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Italian" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ì</a>
+<a onclick="insertTags(&#39;ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ì</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ò</a>
+<a onclick="insertTags(&#39;ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ò</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Latvian" style="display: none;">
+<a onclick="insertTags(&#39;Ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ā</a>
+<a onclick="insertTags(&#39;ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ā</a>
+<a onclick="insertTags(&#39;Č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Č</a>
+<a onclick="insertTags(&#39;č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">č</a>
+<a onclick="insertTags(&#39;Ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ē</a>
+<a onclick="insertTags(&#39;ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ē</a>
+<a onclick="insertTags(&#39;Ģ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ģ</a>
+<a onclick="insertTags(&#39;ģ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ģ</a>
+<a onclick="insertTags(&#39;Ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ī</a>
+<a onclick="insertTags(&#39;ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ī</a>
+<a onclick="insertTags(&#39;Ķ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ķ</a>
+<a onclick="insertTags(&#39;ķ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ķ</a>
+<a onclick="insertTags(&#39;Ļ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ļ</a>
+<a onclick="insertTags(&#39;ļ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ļ</a>
+<a onclick="insertTags(&#39;Ņ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ņ</a>
+<a onclick="insertTags(&#39;ņ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ņ</a>
+<a onclick="insertTags(&#39;Š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Š</a>
+<a onclick="insertTags(&#39;š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">š</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a>
+<a onclick="insertTags(&#39;Ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ž</a>
+<a onclick="insertTags(&#39;ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ž</a> 
+</p>
+<p class="mw-edittools-section" data-section-title="Lithuanian" style="display: none;">
+<a onclick="insertTags(&#39;Ą&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ą</a>
+<a onclick="insertTags(&#39;ą&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ą</a>
+<a onclick="insertTags(&#39;Č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Č</a>
+<a onclick="insertTags(&#39;č&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">č</a>
+<a onclick="insertTags(&#39;Ę&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ę</a>
+<a onclick="insertTags(&#39;ę&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ę</a>
+<a onclick="insertTags(&#39;Ė&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ė</a>
+<a onclick="insertTags(&#39;ė&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ė</a>
+<a onclick="insertTags(&#39;Į&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Į</a>
+<a onclick="insertTags(&#39;į&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">į</a>
+<a onclick="insertTags(&#39;Š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Š</a>
+<a onclick="insertTags(&#39;š&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">š</a>
+<a onclick="insertTags(&#39;Ų&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ų</a>
+<a onclick="insertTags(&#39;ų&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ų</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a>
+<a onclick="insertTags(&#39;Ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ž</a>
+<a onclick="insertTags(&#39;ž&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ž</a> 
+</p>
+<p class="mw-edittools-section" data-section-title="Maltese" style="display: none;">
+<a onclick="insertTags(&#39;Ċ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ċ</a>
+<a onclick="insertTags(&#39;ċ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ċ</a>
+<a onclick="insertTags(&#39;Ġ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ġ</a>
+<a onclick="insertTags(&#39;ġ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ġ</a>
+<a onclick="insertTags(&#39;Ħ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ħ</a>
+<a onclick="insertTags(&#39;ħ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ħ</a>
+<a onclick="insertTags(&#39;Ż&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ż</a>
+<a onclick="insertTags(&#39;ż&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ż</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Old English" style="display: none;">
+<a onclick="insertTags(&#39;Ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ā</a>
+<a onclick="insertTags(&#39;ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ā</a>
+<a onclick="insertTags(&#39;Æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Æ</a>
+<a onclick="insertTags(&#39;æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">æ</a>
+<a onclick="insertTags(&#39;Ǣ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǣ</a>
+<a onclick="insertTags(&#39;ǣ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǣ</a>
+<a onclick="insertTags(&#39;Ǽ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǽ</a>
+<a onclick="insertTags(&#39;ǽ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǽ</a>
+<a onclick="insertTags(&#39;Ċ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ċ</a>
+<a onclick="insertTags(&#39;ċ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ċ</a>
+<a onclick="insertTags(&#39;Ð&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ð</a>
+<a onclick="insertTags(&#39;ð&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ð</a>
+<a onclick="insertTags(&#39;Ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ē</a>
+<a onclick="insertTags(&#39;ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ē</a>
+<a onclick="insertTags(&#39;Ġ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ġ</a>
+<a onclick="insertTags(&#39;ġ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ġ</a>
+<a onclick="insertTags(&#39;Ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ī</a>
+<a onclick="insertTags(&#39;ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ī</a>
+<a onclick="insertTags(&#39;Ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ō</a>
+<a onclick="insertTags(&#39;ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ō</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a>
+<a onclick="insertTags(&#39;Ƿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ƿ</a>
+<a onclick="insertTags(&#39;ƿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ƿ</a>
+<a onclick="insertTags(&#39;Ȳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ȳ</a>
+<a onclick="insertTags(&#39;ȳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ȳ</a>
+<a onclick="insertTags(&#39;Þ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Þ</a>
+<a onclick="insertTags(&#39;þ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">þ</a>
+<a onclick="insertTags(&#39;Ȝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ȝ</a>
+<a onclick="insertTags(&#39;ȝ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ȝ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Pinyin" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;Ǎ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǎ</a>
+<a onclick="insertTags(&#39;ǎ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǎ</a>
+<a onclick="insertTags(&#39;Ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ā</a>
+<a onclick="insertTags(&#39;ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ā</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Ě&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ě</a>
+<a onclick="insertTags(&#39;ě&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ě</a>
+<a onclick="insertTags(&#39;Ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ē</a>
+<a onclick="insertTags(&#39;ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ē</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ì</a>
+<a onclick="insertTags(&#39;ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ì</a>
+<a onclick="insertTags(&#39;Ǐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǐ</a>
+<a onclick="insertTags(&#39;ǐ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǐ</a>
+<a onclick="insertTags(&#39;Ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ī</a>
+<a onclick="insertTags(&#39;ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ī</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ò</a>
+<a onclick="insertTags(&#39;ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ò</a>
+<a onclick="insertTags(&#39;Ǒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǒ</a>
+<a onclick="insertTags(&#39;ǒ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǒ</a>
+<a onclick="insertTags(&#39;Ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ō</a>
+<a onclick="insertTags(&#39;ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ō</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+<a onclick="insertTags(&#39;Ǔ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǔ</a>
+<a onclick="insertTags(&#39;ǔ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǔ</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a>
+<a onclick="insertTags(&#39;Ǘ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǘ</a>
+<a onclick="insertTags(&#39;ǘ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǘ</a>
+<a onclick="insertTags(&#39;Ǜ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǜ</a>
+<a onclick="insertTags(&#39;ǜ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǜ</a>
+<a onclick="insertTags(&#39;Ǚ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǚ</a>
+<a onclick="insertTags(&#39;ǚ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǚ</a>
+<a onclick="insertTags(&#39;Ǖ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ǖ</a>
+<a onclick="insertTags(&#39;ǖ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ǖ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Polish" style="display: none;">
+<a onclick="insertTags(&#39;ą&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ą</a>
+<a onclick="insertTags(&#39;Ą&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ą</a>
+<a onclick="insertTags(&#39;ć&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ć</a>
+<a onclick="insertTags(&#39;Ć&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ć</a>
+<a onclick="insertTags(&#39;ę&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ę</a>
+<a onclick="insertTags(&#39;Ę&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ę</a>
+<a onclick="insertTags(&#39;ł&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ł</a>
+<a onclick="insertTags(&#39;Ł&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ł</a>
+<a onclick="insertTags(&#39;ń&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ń</a>
+<a onclick="insertTags(&#39;Ń&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ń</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ś&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ś</a>
+<a onclick="insertTags(&#39;Ś&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ś</a>
+<a onclick="insertTags(&#39;ź&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ź</a>
+<a onclick="insertTags(&#39;Ź&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ź</a>
+<a onclick="insertTags(&#39;ż&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ż</a>
+<a onclick="insertTags(&#39;Ż&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ż</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Portuguese" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Ã&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ã</a>
+<a onclick="insertTags(&#39;ã&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ã</a>
+<a onclick="insertTags(&#39;Ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ç</a>
+<a onclick="insertTags(&#39;ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ç</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ê</a>
+<a onclick="insertTags(&#39;ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ê</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ô</a>
+<a onclick="insertTags(&#39;ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ô</a>
+<a onclick="insertTags(&#39;Õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Õ</a>
+<a onclick="insertTags(&#39;õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">õ</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Romaji" style="display: none;">
+<a onclick="insertTags(&#39;Ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ā</a>
+<a onclick="insertTags(&#39;ā&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ā</a>
+<a onclick="insertTags(&#39;Ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ē</a>
+<a onclick="insertTags(&#39;ē&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ē</a>
+<a onclick="insertTags(&#39;Ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ī</a>
+<a onclick="insertTags(&#39;ī&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ī</a>
+<a onclick="insertTags(&#39;Ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ō</a>
+<a onclick="insertTags(&#39;ō&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ō</a>
+<a onclick="insertTags(&#39;Ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ū</a>
+<a onclick="insertTags(&#39;ū&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ū</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Romanian" style="display: none;">
+<a onclick="insertTags(&#39;Ă&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ă</a>
+<a onclick="insertTags(&#39;ă&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ă</a>
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Î</a>
+<a onclick="insertTags(&#39;î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">î</a>
+<a onclick="insertTags(&#39;Ş&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ş</a>
+<a onclick="insertTags(&#39;ş&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ş</a>
+<a onclick="insertTags(&#39;Ţ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ţ</a>
+<a onclick="insertTags(&#39;ţ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ţ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Scandinavian" style="display: none;">
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Å&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Å</a>
+<a onclick="insertTags(&#39;å&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">å</a>
+<a onclick="insertTags(&#39;Æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Æ</a>
+<a onclick="insertTags(&#39;æ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">æ</a>
+<a onclick="insertTags(&#39;Ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ä</a>
+<a onclick="insertTags(&#39;ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ä</a>
+<a onclick="insertTags(&#39;Ø&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ø</a>
+<a onclick="insertTags(&#39;ø&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ø</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Serbian" style="display: none;">
+<a onclick="insertTags(&#39;А&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">А</a>
+<a onclick="insertTags(&#39;а&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">а</a>
+<a onclick="insertTags(&#39;Б&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Б</a>
+<a onclick="insertTags(&#39;б&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">б</a>
+<a onclick="insertTags(&#39;В&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">В</a>
+<a onclick="insertTags(&#39;в&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">в</a>
+<a onclick="insertTags(&#39;Г&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Г</a>
+<a onclick="insertTags(&#39;г&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">г</a>
+<a onclick="insertTags(&#39;Д&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Д</a>
+<a onclick="insertTags(&#39;д&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">д</a>
+<a onclick="insertTags(&#39;Ђ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ђ</a>
+<a onclick="insertTags(&#39;ђ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ђ</a>
+<a onclick="insertTags(&#39;Е&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Е</a>
+<a onclick="insertTags(&#39;е&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">е</a>
+<a onclick="insertTags(&#39;Ж&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ж</a>
+<a onclick="insertTags(&#39;ж&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ж</a>
+<a onclick="insertTags(&#39;З&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">З</a>
+<a onclick="insertTags(&#39;з&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">з</a>
+<a onclick="insertTags(&#39;И&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">И</a>
+<a onclick="insertTags(&#39;и&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">и</a>
+<a onclick="insertTags(&#39;Ј&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ј</a>
+<a onclick="insertTags(&#39;ј&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ј</a>
+<a onclick="insertTags(&#39;К&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">К</a>
+<a onclick="insertTags(&#39;к&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">к</a>
+<a onclick="insertTags(&#39;Л&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Л</a>
+<a onclick="insertTags(&#39;л&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">л</a>
+<a onclick="insertTags(&#39;Љ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Љ</a>
+<a onclick="insertTags(&#39;љ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">љ</a>
+<a onclick="insertTags(&#39;М&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">М</a>
+<a onclick="insertTags(&#39;м&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">м</a>
+<a onclick="insertTags(&#39;Н&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Н</a>
+<a onclick="insertTags(&#39;н&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">н</a>
+<a onclick="insertTags(&#39;Њ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Њ</a>
+<a onclick="insertTags(&#39;њ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">њ</a>
+<a onclick="insertTags(&#39;О&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">О</a>
+<a onclick="insertTags(&#39;о&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">о</a>
+<a onclick="insertTags(&#39;П&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">П</a>
+<a onclick="insertTags(&#39;п&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">п</a>
+<a onclick="insertTags(&#39;Р&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Р</a>
+<a onclick="insertTags(&#39;р&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">р</a>
+<a onclick="insertTags(&#39;С&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">С</a>
+<a onclick="insertTags(&#39;с&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">с</a>
+<a onclick="insertTags(&#39;Т&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Т</a>
+<a onclick="insertTags(&#39;т&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">т</a>
+<a onclick="insertTags(&#39;Ћ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ћ</a>
+<a onclick="insertTags(&#39;ћ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ћ</a>
+<a onclick="insertTags(&#39;У&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">У</a>
+<a onclick="insertTags(&#39;у&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">у</a>
+<a onclick="insertTags(&#39;Ф&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ф</a>
+<a onclick="insertTags(&#39;ф&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ф</a>
+<a onclick="insertTags(&#39;Х&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Х</a>
+<a onclick="insertTags(&#39;х&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">х</a>
+<a onclick="insertTags(&#39;Ц&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ц</a>
+<a onclick="insertTags(&#39;ц&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ц</a>
+<a onclick="insertTags(&#39;Ч&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ч</a>
+<a onclick="insertTags(&#39;ч&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ч</a>
+<a onclick="insertTags(&#39;Џ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Џ</a>
+<a onclick="insertTags(&#39;џ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">џ</a>
+<a onclick="insertTags(&#39;Ш&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ш</a>
+<a onclick="insertTags(&#39;ш&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ш</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Spanish" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ñ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ñ</a>
+<a onclick="insertTags(&#39;ñ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ñ</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+<a onclick="insertTags(&#39;¡&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">¡</a>
+<a onclick="insertTags(&#39;¿&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">¿</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Turkish" style="display: none;">
+<a onclick="insertTags(&#39;Ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ç</a>
+<a onclick="insertTags(&#39;ç&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ç</a>
+<a onclick="insertTags(&#39;Ğ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ğ</a>
+<a onclick="insertTags(&#39;ğ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ğ</a>
+<a onclick="insertTags(&#39;İ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">İ</a>
+<a onclick="insertTags(&#39;ı&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ı</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+<a onclick="insertTags(&#39;Ş&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ş</a>
+<a onclick="insertTags(&#39;ş&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ş</a>
+<a onclick="insertTags(&#39;Ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ü</a>
+<a onclick="insertTags(&#39;ü&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ü</a>
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Î</a>
+<a onclick="insertTags(&#39;î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">î</a>
+<a onclick="insertTags(&#39;Û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Û</a>
+<a onclick="insertTags(&#39;û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">û</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Vietnamese" style="display: none;">
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;Ả&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ả</a>
+<a onclick="insertTags(&#39;ả&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ả</a>
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;Ạ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ạ</a>
+<a onclick="insertTags(&#39;ạ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ạ</a>
+<a onclick="insertTags(&#39;Ã&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ã</a>
+<a onclick="insertTags(&#39;ã&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ã</a>
+<a onclick="insertTags(&#39;Ă&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ă</a>
+<a onclick="insertTags(&#39;ă&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ă</a>
+<a onclick="insertTags(&#39;Ằ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ằ</a>
+<a onclick="insertTags(&#39;ằ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ằ</a>
+<a onclick="insertTags(&#39;Ẳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẳ</a>
+<a onclick="insertTags(&#39;ẳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẳ</a>
+<a onclick="insertTags(&#39;Ẵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẵ</a>
+<a onclick="insertTags(&#39;ẵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẵ</a>
+<a onclick="insertTags(&#39;Ắ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ắ</a>
+<a onclick="insertTags(&#39;ắ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ắ</a>
+<a onclick="insertTags(&#39;Ặ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ặ</a>
+<a onclick="insertTags(&#39;ặ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ặ</a>
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Ầ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ầ</a>
+<a onclick="insertTags(&#39;ầ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ầ</a>
+<a onclick="insertTags(&#39;Ẩ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẩ</a>
+<a onclick="insertTags(&#39;ẩ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẩ</a>
+<a onclick="insertTags(&#39;Ẫ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẫ</a>
+<a onclick="insertTags(&#39;ẫ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẫ</a>
+<a onclick="insertTags(&#39;Ấ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ấ</a>
+<a onclick="insertTags(&#39;ấ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ấ</a>
+<a onclick="insertTags(&#39;Ậ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ậ</a>
+<a onclick="insertTags(&#39;ậ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ậ</a>
+<a onclick="insertTags(&#39;Đ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Đ</a>
+<a onclick="insertTags(&#39;đ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">đ</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Ẻ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẻ</a>
+<a onclick="insertTags(&#39;ẻ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẻ</a>
+<a onclick="insertTags(&#39;Ẽ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẽ</a>
+<a onclick="insertTags(&#39;ẽ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẽ</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;Ẹ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẹ</a>
+<a onclick="insertTags(&#39;ẹ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẹ</a>
+<a onclick="insertTags(&#39;Ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ê</a>
+<a onclick="insertTags(&#39;ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ê</a>
+<a onclick="insertTags(&#39;Ề&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ề</a>
+<a onclick="insertTags(&#39;ề&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ề</a>
+<a onclick="insertTags(&#39;Ể&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ể</a>
+<a onclick="insertTags(&#39;ể&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ể</a>
+<a onclick="insertTags(&#39;Ễ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ễ</a>
+<a onclick="insertTags(&#39;ễ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ễ</a>
+<a onclick="insertTags(&#39;Ế&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ế</a>
+<a onclick="insertTags(&#39;ế&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ế</a>
+<a onclick="insertTags(&#39;Ệ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ệ</a>
+<a onclick="insertTags(&#39;ệ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ệ</a>
+<a onclick="insertTags(&#39;Ỉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỉ</a>
+<a onclick="insertTags(&#39;ỉ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỉ</a>
+<a onclick="insertTags(&#39;Ĩ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ĩ</a>
+<a onclick="insertTags(&#39;ĩ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ĩ</a>
+<a onclick="insertTags(&#39;Í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Í</a>
+<a onclick="insertTags(&#39;í&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">í</a>
+<a onclick="insertTags(&#39;Ị&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ị</a>
+<a onclick="insertTags(&#39;ị&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ị</a>
+<a onclick="insertTags(&#39;Ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ì</a>
+<a onclick="insertTags(&#39;ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ì</a>
+<a onclick="insertTags(&#39;Ỏ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỏ</a>
+<a onclick="insertTags(&#39;ỏ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỏ</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ọ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ọ</a>
+<a onclick="insertTags(&#39;ọ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ọ</a>
+<a onclick="insertTags(&#39;Ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ò</a>
+<a onclick="insertTags(&#39;ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ò</a>
+<a onclick="insertTags(&#39;Õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Õ</a>
+<a onclick="insertTags(&#39;õ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">õ</a>
+<a onclick="insertTags(&#39;Ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ô</a>
+<a onclick="insertTags(&#39;ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ô</a>
+<a onclick="insertTags(&#39;Ồ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ồ</a>
+<a onclick="insertTags(&#39;ồ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ồ</a>
+<a onclick="insertTags(&#39;Ổ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ổ</a>
+<a onclick="insertTags(&#39;ổ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ổ</a>
+<a onclick="insertTags(&#39;Ỗ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỗ</a>
+<a onclick="insertTags(&#39;ỗ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỗ</a>
+<a onclick="insertTags(&#39;Ố&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ố</a>
+<a onclick="insertTags(&#39;ố&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ố</a>
+<a onclick="insertTags(&#39;Ộ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ộ</a>
+<a onclick="insertTags(&#39;ộ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ộ</a>
+<a onclick="insertTags(&#39;Ơ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ơ</a>
+<a onclick="insertTags(&#39;ơ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ơ</a>
+<a onclick="insertTags(&#39;Ờ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ờ</a>
+<a onclick="insertTags(&#39;ờ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ờ</a>
+<a onclick="insertTags(&#39;Ở&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ở</a>
+<a onclick="insertTags(&#39;ở&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ở</a>
+<a onclick="insertTags(&#39;Ỡ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỡ</a>
+<a onclick="insertTags(&#39;ỡ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỡ</a>
+<a onclick="insertTags(&#39;Ớ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ớ</a>
+<a onclick="insertTags(&#39;ớ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ớ</a>
+<a onclick="insertTags(&#39;Ợ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ợ</a>
+<a onclick="insertTags(&#39;ợ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ợ</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a>
+<a onclick="insertTags(&#39;Ủ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ủ</a>
+<a onclick="insertTags(&#39;ủ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ủ</a>
+<a onclick="insertTags(&#39;Ũ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ũ</a>
+<a onclick="insertTags(&#39;ũ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ũ</a>
+<a onclick="insertTags(&#39;Ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ú</a>
+<a onclick="insertTags(&#39;ú&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ú</a>
+<a onclick="insertTags(&#39;Ụ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ụ</a>
+<a onclick="insertTags(&#39;ụ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ụ</a>
+<a onclick="insertTags(&#39;Ư&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ư</a>
+<a onclick="insertTags(&#39;ư&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ư</a>
+<a onclick="insertTags(&#39;Ừ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ừ</a>
+<a onclick="insertTags(&#39;ừ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ừ</a>
+<a onclick="insertTags(&#39;Ử&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ử</a>
+<a onclick="insertTags(&#39;ử&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ử</a>
+<a onclick="insertTags(&#39;Ữ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ữ</a>
+<a onclick="insertTags(&#39;ữ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ữ</a>
+<a onclick="insertTags(&#39;Ứ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ứ</a>
+<a onclick="insertTags(&#39;ứ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ứ</a>
+<a onclick="insertTags(&#39;Ự&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ự</a>
+<a onclick="insertTags(&#39;ự&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ự</a>
+<a onclick="insertTags(&#39;Ỳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỳ</a>
+<a onclick="insertTags(&#39;ỳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỳ</a>
+<a onclick="insertTags(&#39;Ỷ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỷ</a>
+<a onclick="insertTags(&#39;ỷ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỷ</a>
+<a onclick="insertTags(&#39;Ỹ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỹ</a>
+<a onclick="insertTags(&#39;ỹ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỹ</a>
+<a onclick="insertTags(&#39;Ỵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỵ</a>
+<a onclick="insertTags(&#39;ỵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỵ</a>
+<a onclick="insertTags(&#39;Ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ý</a>
+<a onclick="insertTags(&#39;ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ý</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Welsh" style="display: none;">
+<a onclick="insertTags(&#39;Á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Á</a>
+<a onclick="insertTags(&#39;á&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">á</a>
+<a onclick="insertTags(&#39;À&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">À</a>
+<a onclick="insertTags(&#39;à&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">à</a>
+<a onclick="insertTags(&#39;Â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Â</a>
+<a onclick="insertTags(&#39;â&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">â</a>
+<a onclick="insertTags(&#39;Ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ä</a>
+<a onclick="insertTags(&#39;ä&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ä</a>
+<a onclick="insertTags(&#39;É&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">É</a>
+<a onclick="insertTags(&#39;é&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">é</a>
+<a onclick="insertTags(&#39;È&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">È</a>
+<a onclick="insertTags(&#39;è&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">è</a>
+<a onclick="insertTags(&#39;Ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ê</a>
+<a onclick="insertTags(&#39;ê&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ê</a>
+<a onclick="insertTags(&#39;Ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ë</a>
+<a onclick="insertTags(&#39;ë&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ë</a>
+<a onclick="insertTags(&#39;Ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ì</a>
+<a onclick="insertTags(&#39;ì&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ì</a>
+<a onclick="insertTags(&#39;Î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Î</a>
+<a onclick="insertTags(&#39;î&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">î</a>
+<a onclick="insertTags(&#39;Ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ï</a>
+<a onclick="insertTags(&#39;ï&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ï</a>
+<a onclick="insertTags(&#39;Ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ó</a>
+<a onclick="insertTags(&#39;ó&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ó</a>
+<a onclick="insertTags(&#39;Ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ò</a>
+<a onclick="insertTags(&#39;ò&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ò</a>
+<a onclick="insertTags(&#39;Ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ô</a>
+<a onclick="insertTags(&#39;ô&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ô</a>
+<a onclick="insertTags(&#39;Ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ö</a>
+<a onclick="insertTags(&#39;ö&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ö</a>
+<a onclick="insertTags(&#39;Ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ù</a>
+<a onclick="insertTags(&#39;ù&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ù</a>
+<a onclick="insertTags(&#39;Û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Û</a>
+<a onclick="insertTags(&#39;û&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">û</a>
+<a onclick="insertTags(&#39;Ẁ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẁ</a>
+<a onclick="insertTags(&#39;ẁ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẁ</a>
+<a onclick="insertTags(&#39;Ŵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ŵ</a>
+<a onclick="insertTags(&#39;ŵ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŵ</a>
+<a onclick="insertTags(&#39;Ẅ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ẅ</a>
+<a onclick="insertTags(&#39;ẅ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ẅ</a>
+<a onclick="insertTags(&#39;Ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ý</a>
+<a onclick="insertTags(&#39;ý&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ý</a>
+<a onclick="insertTags(&#39;Ỳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ỳ</a>
+<a onclick="insertTags(&#39;ỳ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ỳ</a>
+<a onclick="insertTags(&#39;Ŷ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ŷ</a>
+<a onclick="insertTags(&#39;ŷ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ŷ</a>
+<a onclick="insertTags(&#39;Ÿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">Ÿ</a>
+<a onclick="insertTags(&#39;ÿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ÿ</a>
+</p>
+<p class="mw-edittools-section" data-section-title="Yiddish" style="display: none;">
+<a onclick="insertTags(&#39;א&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">א</a>
+<a onclick="insertTags(&#39;אַ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">אַ</a>
+<a onclick="insertTags(&#39;אָ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">אָ</a>
+<a onclick="insertTags(&#39;ב&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ב</a>
+<a onclick="insertTags(&#39;בֿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">בֿ</a>
+<a onclick="insertTags(&#39;ג&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ג</a>
+<a onclick="insertTags(&#39;ד&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ד</a>
+<a onclick="insertTags(&#39;ה&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ה</a>
+<a onclick="insertTags(&#39;ו&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ו</a>
+<a onclick="insertTags(&#39;וּ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">וּ</a>
+<a onclick="insertTags(&#39;װ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">װ</a>
+<a onclick="insertTags(&#39;ױ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ױ</a>
+<a onclick="insertTags(&#39;ז&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ז</a>
+<a onclick="insertTags(&#39;זש&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">זש</a>
+<a onclick="insertTags(&#39;ח&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ח</a>
+<a onclick="insertTags(&#39;ט&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ט</a>
+<a onclick="insertTags(&#39;י&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">י</a>
+<a onclick="insertTags(&#39;יִ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">יִ</a>
+<a onclick="insertTags(&#39;ײ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ײ</a>
+<a onclick="insertTags(&#39;ײַ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ײַ</a>
+<a onclick="insertTags(&#39;כ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">כ</a>
+<a onclick="insertTags(&#39;ך&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ך</a>
+<a onclick="insertTags(&#39;כּ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">כּ</a>
+<a onclick="insertTags(&#39;ל&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ל</a>
+<a onclick="insertTags(&#39;ל&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ל</a>
+<a onclick="insertTags(&#39;מ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">מ</a>
+<a onclick="insertTags(&#39;ם&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ם</a>
+<a onclick="insertTags(&#39;נ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">נ</a>
+<a onclick="insertTags(&#39;ן&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ן</a>
+<a onclick="insertTags(&#39;ס&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ס</a>
+<a onclick="insertTags(&#39;ע&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ע</a>
+<a onclick="insertTags(&#39;ע&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ע</a>
+<a onclick="insertTags(&#39;פ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">פ</a>
+<a onclick="insertTags(&#39;פּ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">פּ</a>
+<a onclick="insertTags(&#39;פֿ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">פֿ</a>
+<a onclick="insertTags(&#39;ף&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ף</a>
+<a onclick="insertTags(&#39;צ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">צ</a>
+<a onclick="insertTags(&#39;ץ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ץ</a>
+<a onclick="insertTags(&#39;ק&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ק</a>
+<a onclick="insertTags(&#39;ר&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ר</a>
+<a onclick="insertTags(&#39;ש&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ש</a>
+<a onclick="insertTags(&#39;שׂ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">שׂ</a>
+<a onclick="insertTags(&#39;תּ&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">תּ</a>
+<a onclick="insertTags(&#39;ת&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">ת</a>
+<a onclick="insertTags(&#39;׳&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">׳</a>
+<a onclick="insertTags(&#39;״&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">״</a>
+<a onclick="insertTags(&#39;־&#39;,&#39;&#39;,&#39;&#39;);return false" href="#">־</a>
+</p>
+</div>
+</div>
+<div class="templatesUsed"><div class="mw-templatesUsedExplanation"><p>Templates used on this page:
+</p></div><ul>
+<li><a href="/wiki/Template:Anchor" title="Template:Anchor">Template:Anchor</a> (<a href="/w/index.php?title=Template:Anchor&amp;action=edit" title="Template:Anchor">edit</a>) </li><li><a href="/wiki/Template:InstallationNav" title="Template:InstallationNav">Template:InstallationNav</a> (<a href="/w/index.php?title=Template:InstallationNav&amp;action=edit" title="Template:InstallationNav">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:InstallationNav/en" title="Template:InstallationNav/en">Template:InstallationNav/en</a> (<a href="/w/index.php?title=Template:InstallationNav/en&amp;action=edit" title="Template:InstallationNav/en">edit</a>) </li><li><a href="/wiki/Template:Langcat" title="Template:Langcat">Template:Langcat</a> (<a href="/w/index.php?title=Template:Langcat&amp;action=edit" title="Template:Langcat">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:MW_ancient_release_number" title="Template:MW ancient release number">Template:MW ancient release number</a> (<a href="/w/index.php?title=Template:MW_ancient_release_number&amp;action=edit" title="Template:MW ancient release number">view source</a>) (protected)</li><li><a href="/wiki/Template:MW_stable_branch_number" title="Template:MW stable branch number">Template:MW stable branch number</a> (<a href="/w/index.php?title=Template:MW_stable_branch_number&amp;action=edit" title="Template:MW stable branch number">view source</a>) (protected)</li><li><a href="/wiki/Template:MW_stable_mysql_requirement" title="Template:MW stable mysql requirement">Template:MW stable mysql requirement</a> (<a href="/w/index.php?title=Template:MW_stable_mysql_requirement&amp;action=edit" title="Template:MW stable mysql requirement">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:MW_stable_php_requirement" title="Template:MW stable php requirement">Template:MW stable php requirement</a> (<a href="/w/index.php?title=Template:MW_stable_php_requirement&amp;action=edit" title="Template:MW stable php requirement">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:MW_stable_release_link" title="Template:MW stable release link">Template:MW stable release link</a> (<a href="/w/index.php?title=Template:MW_stable_release_link&amp;action=edit" title="Template:MW stable release link">view source</a>) (protected)</li><li><a href="/wiki/Template:MW_stable_release_number" title="Template:MW stable release number">Template:MW stable release number</a> (<a href="/w/index.php?title=Template:MW_stable_release_number&amp;action=edit" title="Template:MW stable release number">view source</a>) (protected)</li><li><a href="/wiki/Template:MediaWiki_Introduction" title="Template:MediaWiki Introduction">Template:MediaWiki Introduction</a> (<a href="/w/index.php?title=Template:MediaWiki_Introduction&amp;action=edit" title="Template:MediaWiki Introduction">view source</a>) (protected)</li><li><a href="/wiki/Template:MediaWiki_Introduction/en" title="Template:MediaWiki Introduction/en">Template:MediaWiki Introduction/en</a> (<a href="/w/index.php?title=Template:MediaWiki_Introduction/en&amp;action=edit" title="Template:MediaWiki Introduction/en">edit</a>) </li><li><a href="/wiki/Template:TNT" class="mw-redirect" title="Template:TNT">Template:TNT</a> (<a href="/w/index.php?title=Template:TNT&amp;action=edit" class="mw-redirect" title="Template:TNT">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:Translatable_navigation_template" title="Template:Translatable navigation template">Template:Translatable navigation template</a> (<a href="/w/index.php?title=Template:Translatable_navigation_template&amp;action=edit" title="Template:Translatable navigation template">view source</a>) (semi-protected)</li></ul></div><div class="hiddencats"></div><div class="limitreport"></div>
+</form>
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/wiki/Manual:Installation_guide">http://www.mediawiki.org/wiki/Manual:Installation_guide</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstallation+guide&amp;returntoquery=action%3Dedit&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstallation+guide&amp;returntoquery=action%3Dedit" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Installation_guide"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Installation_guide"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view"><span><a href="/wiki/Manual:Installation_guide" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Installation_guide&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit" class="selected"><span><a href="/w/index.php?title=Manual:Installation_guide&amp;action=edit"  title="You can edit this page. Please use the preview button before saving">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Installation_guide&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Installation_guide" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Installation_guide" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Installation_guide&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/w/index.php?title=Manual:Installation_guide&amp;action=edit" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.wikiEditor.toolbar","ext.wikiEditor.dialogs","ext.wikiEditor.toolbar.hideSig","mediawiki.action.edit.editWarning","mediawiki.action.edit.collapsibleFooter","mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.using("mediawiki.action.edit", function() {mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_bold.png","Bold text","'''","'''","Bold text","mw-editbutton-bold");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_italic.png","Italic text","''","''","Italic text","mw-editbutton-italic");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_link.png","Internal link","[[","]]","Link title","mw-editbutton-link");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_extlink.png","External link (remember http:// prefix)","[","]","http://www.example.com link title","mw-editbutton-extlink");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_headline.png","Level 2 headline","\n== "," ==\n","Headline text","mw-editbutton-headline");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_image.png","Embedded file","[[File:","]]","Example.jpg","mw-editbutton-image");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_media.png","File link","[[Media:","]]","Example.ogg","mw-editbutton-media");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_math.png","Mathematical formula (LaTeX)","\u003Cmath\u003E","\u003C/math\u003E","Insert formula here","mw-editbutton-math");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_nowiki.png","Ignore wiki formatting","\u003Cnowiki\u003E","\u003C/nowiki\u003E","Insert non-formatted text here","mw-editbutton-nowiki");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_sig.png","Your signature with timestamp","--~~~~","","","mw-editbutton-signature");mw.toolbar.addButton("//bits.wikimedia.org/static-1.23wmf14/skins/common/images/button_hr.png","Horizontal line (use sparingly)","\n----\n","","","mw-editbutton-hr");
+// Create button bar
+$(function() { mw.toolbar.init(); } );
+});
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1216 in 0.523 secs. -->
+	</body>
+</html>

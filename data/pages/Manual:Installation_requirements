@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Installation requirements - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Installation_requirements&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Installation_requirements&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Installation_requirements" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Installation_requirements","wgTitle":"Installation requirements","wgCurRevisionId":881609,"wgRevisionId":881609,"wgArticleId":18172,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Installation_requirements","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":["sysop"],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["es-ar","es","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":881609,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Installation_requirements skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Installation requirements</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -2px; left: -5px; position: relative; margin-right: -3px;"><img alt="Mediawiki-logo.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/53px-Mediawiki-logo.png" width="53" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/80px-Mediawiki-logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/106px-Mediawiki-logo.png 2x" /></span> <b><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation Guide</a></b> | <a href="/wiki/Manual:What_is_MediaWiki%3F" title="Manual:What is MediaWiki?">About MediaWiki</a></span></div>
+<div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -8px; position: relative;"><img alt="Help-browser.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/40px-Help-browser.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/60px-Help-browser.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/80px-Help-browser.svg.png 2x" /></span> <a href="/wiki/Manual:MediaWiki_feature_list" title="Manual:MediaWiki feature list">Features</a> | <strong class="selflink">Installation requirements</strong></span></div>
+<div style="white-space: pre; float: left;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa; min-width: 20em;"><span style="top: -8px; position: relative;"><img alt="Preferences-system.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/40px-Preferences-system.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/60px-Preferences-system.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/80px-Preferences-system.svg.png 2x" /></span> <a href="/wiki/Download" title="Download">Downloading</a> | <a href="/wiki/Manual:Installing_MediaWiki" title="Manual:Installing MediaWiki">Installing</a> | <a href="/wiki/Manual:Configuring_MediaWiki" title="Manual:Configuring MediaWiki">Configuring</a></span></div>
+<p><br clear="left" /></p>
+<div style="clear: right; margin-bottom: .5em; float: right; margin-left:2.5em; width: auto;">
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href="#Simple_One-Download_Installation"><span class="tocnumber">1</span> <span class="toctext">Simple One-Download Installation</span></a></li>
+<li class="toclevel-1"><a href="#Web_server"><span class="tocnumber">2</span> <span class="toctext">Web server</span></a></li>
+<li class="toclevel-1"><a href="#PHP"><span class="tocnumber">3</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-1"><a href="#Database_server"><span class="tocnumber">4</span> <span class="toctext">Database server</span></a></li>
+<li class="toclevel-1"><a href="#Hardware_requirements"><span class="tocnumber">5</span> <span class="toctext">Hardware requirements</span></a></li>
+<li class="toclevel-1"><a href="#Optional_dependencies"><span class="tocnumber">6</span> <span class="toctext">Optional dependencies</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+</div>
+<p>In addition to <a href="/wiki/Manual:Downloading_MediaWiki" title="Manual:Downloading MediaWiki" class="mw-redirect">the software</a> itself, a standard MediaWiki installation has the following requirements:</p>
+<ul>
+<li><a href="#Web_server">A web server</a> is required to serve the requested pages to the client browser.</li>
+<li><a href="#PHP">PHP</a> is required to run the software.</li>
+<li><a href="#Database_server">A database server</a> is required to store the pages and site data.</li>
+</ul>
+<p>In addition, there are various <a href="#Optional_dependencies">optional dependencies</a> which are required if you want to use certain advanced features (see below).</p>
+<p>Prerequisites can be installed individually or through the <a href="//en.wikipedia.org/wiki/XAMPP" class="extiw" title="en:XAMPP">XAMPP</a> installer (mind, that the particular version of XAMPP doesn't contain PHP 5.3.2 version). Remember to read the documentation for each individual component before installation. If your website is hosted (i.e. you don't have direct control over it) then contact the server administrators or hosting company to ensure these are installed.</p>
+<p>Note that although MediaWiki ships with an installation script which provides web-based configuration of the most important elements, some knowledge of PHP is required for more detailed customizations.</p>
+<h2><span class="mw-headline" id="Simple_One-Download_Installation">Simple One-Download Installation</span></h2>
+<p>Use <a href="//en.wikipedia.org/wiki/XAMPP" class="extiw" title="en:XAMPP">XAMPP</a> <a rel="nofollow" class="external text" href="http://www.apachefriends.org/">http://www.apachefriends.org</a> to install and configure all of the important packages with only one download. It is available for Linux, Windows, Mac and Solaris. It includes Apache, PHP and MySQL besides other components. Note that the latest version of XAMPP has moved past the PHP 5.3.2 release (5.5.3 at the time of this note) for Windows, so it should be working. For Mac latest release also offers PHP 5.5.3 at the time of this note.</p>
+<h2><span class="mw-headline" id="Web_server">Web server</span></h2>
+<p>In order to serve the generated pages to the client browser, MediaWiki requires some web server software. Often you will not have a choice of which software to use - it will be the one provided by your hosting provider.</p>
+<ul>
+<li>Most installations use the <a rel="nofollow" class="external text" href="http://httpd.apache.org">Apache</a> web server, available at <a rel="nofollow" class="external text" href="http://httpd.apache.org/download.cgi">the official download page</a>.</li>
+<li>MediaWiki has also been tested under <a rel="nofollow" class="external text" href="http://www.microsoft.com/iis">IIS 6.0</a>, <a rel="nofollow" class="external text" href="http://www.cherokee-project.com/">Cherokee</a>, <a rel="nofollow" class="external text" href="http://www.hiawatha-webserver.org/">Hiawatha</a>, <a rel="nofollow" class="external text" href="http://www.litespeedtech.com/litespeed-web-server-downloads.html">Litespeed Standard</a> (need <a href="/wiki/Manual:Enable_TeX#With_litespeed" title="Manual:Enable TeX">a trick</a> for <a href="/wiki/Math" title="Math" class="mw-redirect">math</a>) and <a rel="nofollow" class="external text" href="http://lighttpd.net">lighttpd</a>.</li>
+<li>Sun has some <a rel="nofollow" class="external text" href="http://developers.sun.com/prodtech/webserver/reference/techart/mediawiki.html">installation instructions</a> for running MediaWiki on the <i>Sun Java System Web Server 7.0</i>.</li>
+</ul>
+<h2><span class="mw-headline" id="PHP">PHP</span></h2>
+<p><a href="//en.wikipedia.org/wiki/PHP" class="extiw" title="w:PHP">PHP</a> is the programming language in which MediaWiki is written, and is required in order to run the software.</p>
+<ul>
+<li>For the latest stable version of MediaWiki, <b><a rel="nofollow" class="external text" href="http://www.php.net/downloads.php">PHP version 5.3.2 or later</a></b> is required.</li>
+<li>If you are unable to upgrade to PHP 5.3.2, then you can use MediaWiki 1.19.11, which requires <b><a rel="nofollow" class="external text" href="http://www.php.net/downloads.php">PHP version 5.2.0 or later</a></b></li>
+<li>The following extensions are required: <a rel="nofollow" class="external text" href="http://php.net/pcre">Perl Compatible Regular Expressions</a> (v4.0+), <a rel="nofollow" class="external text" href="http://php.net/session">Session</a>, <a rel="nofollow" class="external text" href="http://php.net/spl">Standard PHP Library</a>, <a rel="nofollow" class="external text" href="http://php.net/json">JSON</a> (since 1.22). Note that all of these are enabled in PHP by default.</li>
+<li>MediaWiki's installer will warn if you don't have the optional <a rel="nofollow" class="external text" href="http://php.net/intl.setup">PHP intl extension</a> "to handle Unicode normalization". In Debian &amp; Ubuntu, this is in the php5-intl package.</li>
+<li>On Ubuntu (at least) the php5-mysql package is required if you want MediaWiki to use MySQL.</li>
+<li>If you are installing MediaWiki on CentOS 5.6, use the <tt>php53</tt> package instead of <tt>php</tt>. The <tt>php</tt> package contains PHP 5.1.x, which is not compatible with the latest version of MediaWiki.</li>
+<li>If you are installing MediaWiki on Red Hat Enterprise Linux 6.4 (CentOS 6.4), you will need to install the <tt>php-xml</tt> package in addition to the normal <tt>php</tt> package.</li>
+</ul>
+<p>If you need to compile PHP from source, then see <a href="/wiki/PHP_configuration" title="PHP configuration">PHP configuration</a> for compilation options that affect MediaWiki.</p>
+<div style="border: 1px solid #cccccc; padding: 0.2em 0.4em;"><b>Notes:</b>
+<ul>
+<li><i>Some servers may also require the equivalent database module and session management module be installed. See individual operating system instructions for more information.</i></li>
+<li><i>When installing on Windows using the Microsoft installer, add the extension for your database of choice (MySQL or Postgres) to the features to be installed.</i></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Database_server">Database server</span></h2>
+<p>MediaWiki stores all the text and data (content pages, user details, system messages, etc.) in a database, which it is capable of sharing with other web-based applications (phpBB, etc.). You will need <i>one</i> of the following database servers to run the latest version of MediaWiki:</p>
+<ul>
+<li><a href="/wiki/Manual:MySQL" title="Manual:MySQL">MySQL</a> <a rel="nofollow" class="external text" href="http://www.mysql.com/">5.0.2 or later</a><sup>*</sup> or <a rel="nofollow" class="external text" href="https://mariadb.org/">MariaDB 5.1+</a></li>
+<li><a href="/wiki/Manual:PostgreSQL" title="Manual:PostgreSQL">PostgreSQL</a> <a rel="nofollow" class="external text" href="http://www.postgresql.org">8.1 or later</a> (supported since MediaWiki 1.8) – also requires <i>plpgsql</i> and <i>tsearch2</i>. These may require a contrib package such as "postgresql-contrib-8.1" to be installed. See <a href="/wiki/Manual:Installing_MediaWiki#Postgres" title="Manual:Installing MediaWiki">Manual:Installing MediaWiki#Postgres</a> for more detail.</li>
+<li><a href="/wiki/Manual:SQLite" title="Manual:SQLite">SQLite 3</a></li>
+<li><a href="/wiki/Manual:Oracle" title="Manual:Oracle">Oracle</a> (note: latest MediaWiki version may not be compatible with Oracle. See <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=43533" class="extiw" title="bugzilla:43533">bug 43533</a>).</li>
+</ul>
+<p>Some users find it helpful to install an additional software package such as <a rel="nofollow" class="external text" href="http://www.phpmyadmin.net">phpMyAdmin</a> (MySQL) or <a rel="nofollow" class="external text" href="http://phppgadmin.sourceforge.net/">phpPgAdmin</a> (Postgres) to help administer the database server.</p>
+<div style="border: 1px solid #cccccc; padding: 0.2em 0.4em;"><sup>*</sup><i>Note: MySQL 5 has been required since <a href="/wiki/MediaWiki_1.19" title="MediaWiki 1.19">MediaWiki 1.19</a>. MySQL 4 support has been required since MediaWiki 1.6. (If you are using an ancient version of MySQL and cannot upgrade then you need to use MediaWiki 1.5.8. Note that this version is no longer supported.)</i></div>
+<h2><span class="mw-headline" id="Hardware_requirements">Hardware requirements</span></h2>
+<p>The recommended minimum requirements are 256MB of RAM for a single-computer website and 85MB of storage, although this will not suffice for a busy public site or a site with uploading enabled. Some users have reported running MediaWiki on computers with as little as 48MB of RAM.</p>
+<p>The install size can be reduced to around 50Mb for a developer install and to around 26Mb for a non-developer, end-user install. See <a href="/wiki/Manual:Reduce_size_of_the_installation" title="Manual:Reduce size of the installation">Manual:Reduce size of the installation</a></p>
+<h2><span class="mw-headline" id="Optional_dependencies">Optional dependencies</span></h2>
+<ul>
+<li><b>ImageMagick</b> or <b>GD</b> is required for <a href="/wiki/Manual:Image_thumbnailing" title="Manual:Image thumbnailing" class="mw-redirect">image thumbnailing</a>.</li>
+<li><b>TeX</b> is required for the in-line display of mathematical formulae. In Ubuntu, this is in the texlive package.</li>
+<li><b>Sendmail</b> is required in order for the system to be able to send e-mails.</li>
+<li><b>Shell access</b> is required to run <a href="/wiki/Manual:Maintenance_scripts" title="Manual:Maintenance scripts">maintenance scripts</a>; upgrading may be more difficult without it.</li>
+</ul>
+<p>For further information about the above items, see <a href="/wiki/Manual:Installing_third-party_tools" title="Manual:Installing third-party tools">Manual:Installing third-party tools</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installation_requirements&amp;veaction=edit&amp;section=1" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installation_requirements&amp;action=edit&amp;section=1" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Manual:OS_specific_help" title="Manual:OS specific help">Manual:OS specific help</a></li>
+<li><a href="/wiki/Hosting_services" title="Hosting services">MediaWiki hosting services and wiki farms</a></li>
+</ul>
+<dl>
+<dt>Software bundles</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Software_bundles" title="Software bundles">MediaWiki software bundles</a>
+<ul>
+<li><a href="/wiki/Installing_MediaWiki_with_BitNami" title="Installing MediaWiki with BitNami">Installing MediaWiki with BitNami</a></li>
+</ul>
+</li>
+<li><a href="//en.wikipedia.org/wiki/XAMPP" class="extiw" title="w:XAMPP">XAMPP</a></li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ca"><a href="/wiki/Manual:Installation_requirements/ca" title="Manual:Installation requirements/ca">català</a></bdi>&#160;• <bdi lang="da"><a href="/wiki/Manual:Installation_requirements/da" title="Manual:Installation requirements/da">dansk</a></bdi>&#160;• <bdi lang="de"><a href="/wiki/Manual:Installation_requirements/de" title="Manual:Installation requirements/de">Deutsch</a></bdi>&#160;• <bdi lang="es"><a href="/wiki/Manual:Installation_requirements/es" title="Manual:Installation requirements/es">español</a></bdi>&#160;• <bdi lang="fr"><a href="/wiki/Manual:Installation_requirements/fr" title="Manual:Installation requirements/fr">français</a></bdi>&#160;• <bdi lang="id"><a href="/wiki/Manual:Installation_requirements/id" title="Manual:Installation requirements/id">Bahasa Indonesia</a></bdi>&#160;• <bdi lang="it"><a href="/wiki/Manual:Installation_requirements/it" title="Manual:Installation requirements/it">italiano</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Manual:Installation_requirements/ja" title="Manual:Installation requirements/ja">日本語</a></bdi>&#160;• <bdi lang="ko"><a href="/wiki/Manual:Installation_requirements/ko" title="Manual:Installation requirements/ko">한국어</a></bdi>&#160;• <bdi lang="pl"><a href="/wiki/Manual:Installation_requirements/pl" title="Manual:Installation requirements/pl">polski</a></bdi>&#160;• <bdi lang="pt"><a href="/wiki/Manual:Installation_requirements/pt" title="Manual:Installation requirements/pt">português</a></bdi>&#160;• <bdi lang="pt-br"><a href="/wiki/Manual:Installation_requirements/pt-br" title="Manual:Installation requirements/pt-br">português do Brasil</a></bdi>&#160;• <bdi lang="ru"><a href="/wiki/Manual:Installation_requirements/ru" title="Manual:Installation requirements/ru">русский</a></bdi>&#160;• <bdi lang="uk"><a href="/wiki/Manual:Installation_requirements/uk" title="Manual:Installation requirements/uk">українська</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1081
+CPU time usage: 0.592 seconds
+Real time usage: 0.729 seconds
+Preprocessor visited node count: 2490/1000000
+Preprocessor generated node count: 6627/1500000
+Post‐expand include size: 21107/2048000 bytes
+Template argument size: 2329/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:18172-0!*!0!!en!4!* and timestamp 20140128213430
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Installation_requirements&amp;oldid=881609">http://www.mediawiki.org/w/index.php?title=Manual:Installation_requirements&amp;oldid=881609</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstallation+requirements&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstallation+requirements" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Installation_requirements"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Installation_requirements"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Installation_requirements" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Installation_requirements&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Installation_requirements&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Installation_requirements&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3AInstallation+requirements">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3AInstallation+requirements&amp;oldid=881609&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Installation_requirements&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Installation_requirements" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Installation_requirements" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Installation_requirements&amp;oldid=881609" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Installation_requirements&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3AInstallation_requirements&amp;id=881609" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 January 2014, at 16:17.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Installation_requirements" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1020 in 0.185 secs. -->
+	</body>
+</html>

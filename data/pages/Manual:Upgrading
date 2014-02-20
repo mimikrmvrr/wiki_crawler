@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Upgrading - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Upgrading&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Upgrading&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Upgrading" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Upgrading","wgTitle":"Upgrading","wgCurRevisionId":909113,"wgRevisionId":909113,"wgArticleId":8407,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["MediaWiki administration","MediaWiki for site admins","MediaWiki Development","Upgrading"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Upgrading","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":909113,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Upgrading skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Upgrading</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="border:1px solid #f3f3ff; padding-left: 0.5em !important; background-color: #f3f3ff; border-width: 0 0 0 1.4em; clear:right; float:right;">
+<div style="background: #f9f9f9; margin-left: 5px; margin-bottom: 3px; padding: 0px; border:1px solid #aaa; width: 17em;">
+<div style="font-size: 105%; line-height: 120%; padding: 0.4em; background-color: #eee; border-bottom: 1px solid #aaa;">
+<div class="floatright"><a href="/wiki/File:Crystal_Clear_action_build.png" class="image" title="Download icon"><img alt="Download icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Crystal_Clear_action_build.png/18px-Crystal_Clear_action_build.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Crystal_Clear_action_build.png/27px-Crystal_Clear_action_build.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Crystal_Clear_action_build.png/36px-Crystal_Clear_action_build.png 2x" /></a></div>
+<b><a href="/wiki/Download" title="Download">Download</a> a package</b></div>
+<div style="background: #fff; padding: 0.4em; font-size: 95%;">
+<dl>
+<dt><a href="/wiki/MediaWiki_1.22" title="MediaWiki 1.22">Stable version</a> (1.22.2)</dt>
+</dl>
+<ul>
+<li><a href="http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz" class="extiw" title="download:mediawiki/1.22/mediawiki-1.22.2.tar.gz">mediawiki-1.22.2.tar.gz</a></li>
+<li>Git branch: REL1_22</li>
+</ul>
+<dl>
+<dt><a href="/wiki/MediaWiki_1.21" title="MediaWiki 1.21">Legacy versions</a> (1.21.5)</dt>
+</dl>
+<ul>
+<li><a href="http://download.wikimedia.org/mediawiki/1.21/mediawiki-1.21.5.tar.gz" class="extiw" title="download:mediawiki/1.21/mediawiki-1.21.5.tar.gz">mediawiki-1.21.5.tar.gz</a></li>
+<li>Git branch: REL1_21</li>
+</ul>
+<dl>
+<dt>Alpha version</dt>
+</dl>
+<ul>
+<li><a class="external text" href="https://tools.wmflabs.org/snapshots/#!/mediawiki-core/master">MediaWiki nightly build</a></li>
+</ul>
+<hr />
+<dl>
+<dt>Read more</dt>
+</dl>
+<ul>
+<li><a href="/wiki/News" title="News">News</a></li>
+<li><a href="/wiki/Download_from_Git" title="Download from Git">Download from Git</a></li>
+<li><strong class="selflink">Upgrading to 1.22.2</strong></li>
+</ul>
+</div>
+</div>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Basic_overview"><span class="tocnumber">1</span> <span class="toctext">Basic overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#File_transfer"><span class="tocnumber">1.1</span> <span class="toctext">File transfer</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Preliminary"><span class="tocnumber">1.2</span> <span class="toctext">Preliminary</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Check_requirements"><span class="tocnumber">2</span> <span class="toctext">Check requirements</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Read_the_release_notes"><span class="tocnumber">3</span> <span class="toctext">Read the release notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Back_up_existing_files_and_the_database"><span class="tocnumber">4</span> <span class="toctext">Back up existing files and the database</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Unpack_the_new_files"><span class="tocnumber">5</span> <span class="toctext">Unpack the new files</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Using_a_tarball_package"><span class="tocnumber">5.1</span> <span class="toctext">Using a tarball package</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#FTP_or_graphical"><span class="tocnumber">5.1.1</span> <span class="toctext">FTP or graphical</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Command_line"><span class="tocnumber">5.1.2</span> <span class="toctext">Command line</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Other_files"><span class="tocnumber">5.2</span> <span class="toctext">Other files</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Using_Git"><span class="tocnumber">5.3</span> <span class="toctext">Using Git</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Using_patch"><span class="tocnumber">5.4</span> <span class="toctext">Using patch</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Files_remaining_that_may_cause_errors"><span class="tocnumber">5.5</span> <span class="toctext">Files remaining that may cause errors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Upgrade_extensions"><span class="tocnumber">6</span> <span class="toctext">Upgrade extensions</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Run_the_update_script"><span class="tocnumber">7</span> <span class="toctext">Run the update script</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Command_line_2"><span class="tocnumber">7.1</span> <span class="toctext">Command line</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#What_to_do_in_case_of_.22No_superuser_credentials.22_error"><span class="tocnumber">7.1.1</span> <span class="toctext">What to do in case of "No superuser credentials" error</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#What_to_do_in_case_of_.22unexpected_T_STRING.22_error"><span class="tocnumber">7.1.2</span> <span class="toctext">What to do in case of "unexpected T_STRING" error</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#What_to_do_in_case_of_.27register_argc_argv_is_set_to_false.27_error"><span class="tocnumber">7.1.3</span> <span class="toctext">What to do in case of 'register_argc_argv is set to false' error</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Web_updater"><span class="tocnumber">7.2</span> <span class="toctext">Web updater</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Test_the_update"><span class="tocnumber">8</span> <span class="toctext">Test the update</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Frequently_asked_questions"><span class="tocnumber">9</span> <span class="toctext">Frequently asked questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#How_hard_is_it_to_upgrade.3F"><span class="tocnumber">9.1</span> <span class="toctext">How hard is it to upgrade?</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#How_do_I_upgrade_from_a_really_old_version.3F_In_one_step.2C_or_in_several_steps.3F"><span class="tocnumber">9.2</span> <span class="toctext">How do I upgrade from a really old version? In one step, or in several steps?</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Should_I_back_up_first.3F"><span class="tocnumber">9.3</span> <span class="toctext">Should I back up first?</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Can_I_keep_my_LocalSettings.php.3F"><span class="tocnumber">9.4</span> <span class="toctext">Can I keep my LocalSettings.php?</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Can_my_wiki_stay_online_while_it_is_upgrading.3F"><span class="tocnumber">9.5</span> <span class="toctext">Can my wiki stay online while it is upgrading?</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Why_upgrade.3F"><span class="tocnumber">9.6</span> <span class="toctext">Why upgrade?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Basic_overview">Basic overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=1" title="Edit section: Basic overview" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=1" title="Edit section: Basic overview">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="File_transfer">File transfer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=2" title="Edit section: File transfer" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=2" title="Edit section: File transfer">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Unless you have direct access to the server hosting the wiki, (and even then) you will have to choose a method for transferring files:</p>
+<ul>
+<li>Secure copy with <a rel="nofollow" class="external text" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">SCP</a> or <a href="//en.wikipedia.org/wiki/WinSCP" class="extiw" title="w:WinSCP">WinSCP</a></li>
+<li><a href="//en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" class="extiw" title="wikipedia:SSH File Transfer Protocol">SSH File Transfer Protocol</a> (SFTP)</li>
+<li>Using a <a href="//en.wikipedia.org/wiki/File_Transfer_Protocol" class="extiw" title="w:File Transfer Protocol">FTP</a> client.</li>
+<li>The hosting company might provide a file manager interface via the web browser; check with your provider.</li>
+<li>Some other method. There is a list of these at <a href="//en.wikipedia.org/wiki/List_of_file_transfer_protocols" class="extiw" title="wikipedia:List of file transfer protocols">Wikipedia:List of file transfer protocols</a></li>
+</ul>
+<h3><span class="mw-headline" id="Preliminary">Preliminary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=3" title="Edit section: Preliminary" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=3" title="Edit section: Preliminary">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Read <a class="external text" href="https://git.wikimedia.org/blob/mediawiki%2Fcore.git/REL1_22/UPGRADE">the UPGRADE text file included in MediaWiki</a>.</p>
+<ol>
+<li><i>Check the requirements</i></li>
+<li><i>Read the release notes</i></li>
+<li><i>Back up existing files and the database</i></li>
+<li><i>Unpack the new files</i></li>
+<li><i>Upgrade extensions</i></li>
+<li><i>Run the update script to check the database</i></li>
+<li><i>Test the update</i></li>
+</ol>
+<h2><span class="mw-headline" id="Check_requirements">Check requirements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=4" title="Edit section: Check requirements" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=4" title="Edit section: Check requirements">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MediaWiki 1.22 requires:</p>
+<ul>
+<li><b>PHP 5.3.2 or later</b></li>
+<li>Either <b>MySQL 5.0.2 or later</b>, <b>PostgreSQL 8.3 or later</b> or <b>SQLite 3</b></li>
+</ul>
+<p>If you are using PostgreSQL, please also read <a href="/wiki/Manual:Upgrading_Postgres" title="Manual:Upgrading Postgres">Upgrading Postgres</a>.</p>
+<p>For more information, please read the <a href="/wiki/Manual:Installation_requirements" title="Manual:Installation requirements">system requirements</a> and <a href="/wiki/Compatibility" title="Compatibility">compatibility</a>.</p>
+<h2><span class="mw-headline" id="Read_the_release_notes">Read the release notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=5" title="Edit section: Read the release notes" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=5" title="Edit section: Read the release notes">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Within the distribution tarball, or within the files checked out/exported from <a href="/wiki/Git" title="Git" class="mw-redirect">Git</a>, there are a number of files with capitalised filenames, one of which contains the <b><a class="external text" href="https://git.wikimedia.org/blob/mediawiki%2Fcore.git/REL1_22/RELEASE-NOTES-1.22">RELEASE-NOTES</a></b> (<a href="/wiki/Release_notes" title="Release notes">wiki</a>). Now's the time to open it up and find out what's been changed in this release.</p>
+<h2><span class="mw-headline" id="Back_up_existing_files_and_the_database">Back up existing files and the database</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=6" title="Edit section: Back up existing files and the database" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=6" title="Edit section: Back up existing files and the database">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl>
+<dd><i>Full instructions: <a href="/wiki/Manual:Backing_up_a_wiki" title="Manual:Backing up a wiki">Manual:Backing up a wiki</a></i></dd>
+</dl>
+<p>While the upgrade scripts are well-maintained and robust, things could still go awry. Before proceeding to update the database schema, <b>make a full <a href="/wiki/Manual:Backing_up_a_wiki" title="Manual:Backing up a wiki">backup</a></b> of the wiki, including both the database and the files:</p>
+<ul>
+<li>the wiki's content, from the database, (make sure you get the character set specified correctly, first check LocalSettings.php). It may be a good idea to create an XML dump in addition to the SQL database dump.
+<ul>
+<li>MySQL:
+<ul>
+<li>SQL dump: <tt>mysqldump --user=xxx --password=xxx &lt;database name&gt; &gt; file.sql</tt></li>
+<li>XML dump: <tt>mysqldump --user=xxx --password=xxx &lt;database name&gt; --xml &gt; file.xml</tt></li>
+</ul>
+</li>
+<li>PostgreSQL:
+<ul>
+<li>output for pg_restore: <tt>pg_dump --create -Fc -i yourwiki &gt; yourwiki.db.dump</tt></li>
+</ul>
+</li>
+<li>SQLite:
+<ul>
+<li><tt>php maintenance/sqlite.php --backup-to filename</tt></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>images and other media files (the contents of the <tt>images</tt> directory, custom logo /skins/common/images/wiki.png)</li>
+<li>configuration files, e.g. <tt>LocalSettings.php</tt> and <tt>AdminSettings.php</tt> (if present)</li>
+<li>MediaWiki's program files, including all skins and extensions, especially if you modified them.</li>
+</ul>
+<h2><span class="mw-headline" id="Unpack_the_new_files">Unpack the new files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=7" title="Edit section: Unpack the new files" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=7" title="Edit section: Unpack the new files">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Using_a_tarball_package">Using a tarball package</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=8" title="Edit section: Using a tarball package" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=8" title="Edit section: Using a tarball package">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="note note-info">If you extract the new version of MediaWiki directly on top of your old version, rather than in a new directory, you should follow <a href="#Back_up_existing_files_and_the_database">#Back up existing files and the database</a>: otherwise, if you've made any customizations you may erase them in a way that leaves you with no reference to re-apply them from. Extracting a tarball over top of your live copy of MediaWiki can leave behind files from the old version of MediaWiki which may interfere with the upgraded code. It's recommended that you unpack the new files into a new directory, and then apply customizations to the new directory (restoring LocalSettings.php, images folder, extensions, and other customizations like custom skins)</div>
+<p>If you are using a <a href="/wiki/Download" title="Download">tarball package</a>, decompress the file on the server, preferably on a new and empty folder.</p>
+<h4><span class="mw-headline" id="FTP_or_graphical">FTP or graphical</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=9" title="Edit section: FTP or graphical" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=9" title="Edit section: FTP or graphical">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Windows users: use <a rel="nofollow" class="external text" href="http://www.7-zip.org/download.html">7zip</a> to extract the tarball.</p>
+<p>FTP users: extract files locally and upload directories and files to server with your favorite FTP software.</p>
+<h4><span class="mw-headline" id="Command_line">Command line</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=10" title="Edit section: Command line" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=10" title="Edit section: Command line">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>You may need to run the command as sudo if you don't have full write permissions to the wiki install directories under your current user. When untarring a tarball package normally a new directory for the new wiki version will be created and you will have to copy the old configuration files and images directory from your old installation directory:</p>
+<pre>
+$ tar xvzf mediawiki-1.22.2.tar.gz -C /path/to/your/new/installation/
+</pre>
+<p>(Open)Solaris users should use gtar, or:</p>
+<pre>
+$ gzip -dc mediawiki-1.22.2.tar.gz | tar xf -
+</pre>
+<h3><span class="mw-headline" id="Other_files">Other files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=11" title="Edit section: Other files" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=11" title="Edit section: Other files">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>After extracting the tarball, you should copy or move some files and folders from the old installation directory to the new one:</p>
+<ul>
+<li><code>LocalSettings.php</code>, which contains your old configuration settings.</li>
+<li>The <code>images</code> (or <code>uploads</code> in older versions) directory, which contains all the uploaded files to the wiki, unless you have chosen a different upload directory, and change the ownership and permissions. <code>chmod -R 755 images</code> and <code>chgrp -R apache images</code> (e.g. if your web user is <i>apache</i>).</li>
+<li>Some extensions in the <code>extension</code> directory. You should always get updated extensions, old extensions aren't guaranteed to work with a newer version of MediaWiki.</li>
+<li>In case you use a <a href="/wiki/Manual:$wgLogo" title="Manual:$wgLogo">custom logo</a> this file also needs to be restored from backup (usually placed in <code>/skins/common/images/</code>).</li>
+<li>Custom skins from within the <code>skins</code> directory.</li>
+<li>Any modifications made to the old installation files.</li>
+<li>Any .htaccess file (if you're using Apache and you've defined any rules in them).</li>
+</ul>
+<p>Once done, make this new folder the published folder on the web server, or rename the old installation directory and then rename the new one to match the old name.</p>
+<h3><span class="mw-headline" id="Using_Git">Using Git</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=12" title="Edit section: Using Git" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=12" title="Edit section: Using Git">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If using <a href="/wiki/Download_from_Git" title="Download from Git">Git</a>, export the files into a clean location, and then copy the old customized files into the new location as described on the previous section.</p>
+<h3><span class="mw-headline" id="Using_patch">Using patch</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=13" title="Edit section: Using patch" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=13" title="Edit section: Using patch">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A small patch file is usually made available for a minor version upgrade. Manually download and extract the patch file from <a class="external text" href="http://dumps.wikimedia.org/mediawiki/">the dumps site</a> or follow the directions with wget below.</p>
+<ol>
+<li>cd to your main MediaWiki directory (the one with LocalSettings.php).</li>
+<li>Download the patch file and gunzip it.</li>
+<li>Use <code>patch -p1 --dry-run</code> to check what will be changed (<i>e.g.</i>, <code>patch -p1 --dry-run &lt; mediawiki-MW stable release number.patch</code> )</li>
+<li>If all is well, run patch again without <code>--dry-run</code>.</li>
+<li>Check your Special:Version and you should see the new version number in place.</li>
+</ol>
+<h3><span class="mw-headline" id="Files_remaining_that_may_cause_errors">Files remaining that may cause errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=14" title="Edit section: Files remaining that may cause errors" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=14" title="Edit section: Files remaining that may cause errors">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If you unpacked over the old installation directory, some old files can cause problems with the new version.</p>
+<p><br /></p>
+<table style="border: 1px solid #888888; float: right; font-size: 80%; margin: 0 0 .5em .5em; line-height: 1.2; text-align: right; border-collapse: collapse;">
+<tr>
+<td style="padding: .1em .3em;">MediaWiki version:</td>
+<td title="The latest stable version is 1.22" style="border-color: #50A050; border-bottom-color: #FF0000; border-width: 5px; border-style: solid; text-align: center; padding: .1em .3em;"><abbr style="font-weight: bold; font-size: 180%;"><small>≥</small> 1.18</abbr></td>
+</tr>
+</table>
+<p>If you are not using <a href="/wiki/Manual:Configuration_settings#Profiling" title="Manual:Configuration settings">profiling</a>, but have a <code>StartProfiler.php</code> file in the MediaWiki root folder, you may receive errors referring to <code>/includes/Profiler.php</code>. Deleting, or renaming, the <code>StartProfiler.php</code> file will resolve this error. The <code>StartProfiler.sample</code> file, also in the MediaWiki root folder, can serve as a template should you enable profiling in the future.</p>
+<h2><span class="mw-headline" id="Upgrade_extensions">Upgrade extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=15" title="Edit section: Upgrade extensions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=15" title="Edit section: Upgrade extensions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Certain extensions have been updated in order to work with the new version of MediaWiki. Be sure to upgrade to the latest versions of such extensions. You might need to perform manual updates to custom extensions.</p>
+<p>Different <a href="/wiki/Tarballs" title="Tarballs">tarballs</a> include some subsets of extensions and have versioning which helps you upgrade choosing the right one for your MediaWiki core release.</p>
+<p><a href="/wiki/Special:ExtensionDistributor" title="Special:ExtensionDistributor">Extension Distributor</a> works well for most people who want a snapshot of extensions that will work with their supported versions of MediaWiki.</p>
+<p>If you want a lot of extensions then <a href="/wiki/Download_from_Git" title="Download from Git">downloading from Git</a> is probably best.</p>
+<p><span id="Run_the_update_script"></span></p>
+<h2><span class="mw-headline" id="Run_the_update_script">Run the update script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=16" title="Edit section: Run the update script" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=16" title="Edit section: Run the update script">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>You can upgrade MediaWiki either from the command line or from the web. If you have shell access to your server, upgrading from the command line is recommended, since this reduces the risk of the upgrade process being interrupted by a timeout or connection reset.</p>
+<h3><span class="mw-headline" id="Command_line_2">Command line</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=17" title="Edit section: Command line" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=17" title="Edit section: Command line">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Access the command line of your server or an SSH shell or similar. You can access the command line by connecting to your server via SSH. If the local PC you are working on runs Microsoft Windows, you will need a tool like <a rel="nofollow" class="external text" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> to use SSH. From the command line or the Shell, change to the <tt><b>maintenance</b></tt> directory and execute the <a href="/wiki/Manual:Update.php" title="Manual:Update.php">update script</a>:</p>
+<pre>
+$ php maintenance/update.php
+</pre>
+<p>On Linux if you get an error try performing same command as root (sudo php maintenance/update.php). Note for simple installations on Windows (e.g. with <a href="/wiki/Manual:Installing_MediaWiki_on_XAMPP" title="Manual:Installing MediaWiki on XAMPP">XAMPP</a>): First make sure that your web server (such as Apache) and your database (such as MySQL) are running. Then run update.php: right-click it, select Open With, and browse to PHP.exe. The resulting command prompt window will likely autoclose when the schema upgrade completes.</p>
+<p>You might see a message that your PHP version is too old and that MediaWiki needs a newer version. After that message the update aborts. Reason for this error is that the commandline can use another PHP version than that one which you have when you execute MediaWiki from the webserver. When you get this message you should check, if you can execute a newer PHP version on the shell by using a different command: That might e.g. be <i>php5</i> or <i>php53</i>. If another version is available and - if so - under which name, depends on the setup of your server. If it does not work, ask your hoster; he will surely know.</p>
+<p>MediaWiki will inspect the existing schema and update it to work with the new code, adding tables and columns as needed.</p>
+<h4><span class="mw-headline" id="What_to_do_in_case_of_.22No_superuser_credentials.22_error">What to do in case of "No superuser credentials" error</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=18" title="Edit section: What to do in case of &quot;No superuser credentials&quot; error" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=18" title="Edit section: What to do in case of &quot;No superuser credentials&quot; error">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In case the scripts abort with a message:</p>
+<pre>
+No superuser credentials could be found. Please provide the details of a user with appropriate
+permissions to update the database. See AdminSettings.sample for more details"
+</pre>
+<p>This means that you should check that you have defined <a href="/wiki/Manual:$wgDBadminuser" title="Manual:$wgDBadminuser">$wgDBadminuser</a> and <a href="/wiki/Manual:$wgDBadminpassword" title="Manual:$wgDBadminpassword">$wgDBadminpassword</a> in your <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">LocalSettings.php</a> file (in the main directory). These are the user and password needed by this script in order to access to the database. (Note: Prior to MediaWiki 1.16, these variables were located in <code><a href="/wiki/Manual:AdminSettings.php" title="Manual:AdminSettings.php">AdminSettings.php</a></code>. This file was removed in 1.16 and the variables were moved to LocalSettings.php.)</p>
+<h4><span class="mw-headline" id="What_to_do_in_case_of_.22unexpected_T_STRING.22_error">What to do in case of "unexpected T_STRING" error</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=19" title="Edit section: What to do in case of &quot;unexpected T STRING&quot; error" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=19" title="Edit section: What to do in case of &quot;unexpected T STRING&quot; error">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Individuals running update.php from the command line may encounter the following error:</p>
+<pre>
+syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' \
+in ~/maintenance/commandLine.inc on line 13
+</pre>
+<p>This error occurs when update.php is run from php4.</p>
+<p>Individuals who have their site hosted by providers who provide both php4 and php5 should take the following steps:</p>
+<ol>
+<li>from the command line, enter the command 'whereis php5'</li>
+<li>once you have discerned the location of the php5 path, list the contents of php5/bin directory</li>
+<li>once you've determined the name of the php executable (either php or php5), type in the entire path to execute update.php</li>
+</ol>
+<p>Below is an example:</p>
+<pre>
+$ whereis php5
+$ ls -la /usr/local/php5/bin
+$ /usr/local/php5/bin/php update.php
+</pre>
+<h4><span class="mw-headline" id="What_to_do_in_case_of_.27register_argc_argv_is_set_to_false.27_error">What to do in case of 'register_argc_argv is set to false' error</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=20" title="Edit section: What to do in case of 'register argc argv is set to false' error" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=20" title="Edit section: What to do in case of 'register argc argv is set to false' error">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>You may encounter the error:</p>
+<pre>
+Cannot get command line arguments, register_argc_argv is set to false
+</pre>
+<ol>
+<li>Go to ~/maintenance. Either edit an existing 'php.ini' file, or create one.</li>
+<li>Add a line as follows:</li>
+</ol>
+<pre>
+register_argc_argv=true
+</pre>
+<ol>
+<li>Re-run php update.php</li>
+</ol>
+<h3><span class="mw-headline" id="Web_updater">Web updater</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=21" title="Edit section: Web updater" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=21" title="Edit section: Web updater">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table style="border: 1px solid #888888; float: right; font-size: 80%; margin: 0 0 .5em .5em; line-height: 1.2; text-align: right; border-collapse: collapse;">
+<tr>
+<td style="padding: .1em .3em;">MediaWiki version:</td>
+<td title="The latest stable version is 1.22" style="border-color: #50A050; border-bottom-color: #FF0000; border-width: 5px; border-style: solid; text-align: center; padding: .1em .3em;"><abbr style="font-weight: bold; font-size: 180%;"><small>≥</small> 1.17</abbr></td>
+</tr>
+</table>
+<dl>
+<dd><i>See also <a href="/wiki/Manual:Update.php" title="Manual:Update.php">update.php</a></i></dd>
+</dl>
+<p>If your database is already big and in high production usage, then you should not be using the Web updater, e.g. because the update process will time out when the <i>maximum_execution_time</i> is reached. In that case you should use <a href="/wiki/Update.php" title="Update.php" class="mw-redirect">update.php</a> from the command-line interface (not from the web). What exactly is "too big" depends on your server (e.g. on its performance, the load and on how long the maximum execution time of PHP allows the script to run). If your wiki is too big for the web updater and your hosting provider does not allow command-line access, then you need to migrate your wiki to another hosting account, preferably to one that does have shell access.</p>
+<ol>
+<li>Always <a href="/wiki/Manual:Backing_up_a_wiki" title="Manual:Backing up a wiki">backup</a> before performing database maintenance.</li>
+<li>Navigate your webbrowser to <tt><b>/mw-config/</b></tt>. For example, if your wiki is at <tt>http://example.org/w/index.php</tt>, then navigate to <tt>http://example.org/w/mw-config/</tt>.</li>
+<li>Select your language and click continue.</li>
+<li>The existing installation should be detected. Follow the instructions on the screen to upgrade it.<br />
+If asked for the "upgrade key", open your <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">LocalSettings.php</a> file and look for the key assigned to <a href="/wiki/Manual:$wgUpgradeKey" title="Manual:$wgUpgradeKey">$wgUpgradeKey</a>.</li>
+</ol>
+<p>It might happen that the web-updater does not seem to work: Instead of seeing the initial language selection screen, you might see an empty wiki page, possibly with some error message. In this case it is most likely that your webserver uses Rewrite Rules (most likely for <a href="/wiki/Manual:Short_URL" title="Manual:Short URL">short URLs</a>), which do not show you the updater at <i>mw-config/</i>, but a wiki page at <i>Mw-config/</i>, with capital "M". In this case, rename the <i>.htaccess</i> file for the time of the update. Then you should be able to access the web-updater.</p>
+<table cellspacing="0" cellpadding="0" border="0" style="background: transparent; margin-top:0.5em;border:1px #b52 solid;padding:0.5em;background-color: #fef7f5">
+<tr>
+<td nowrap="nowrap" valign="top"><span style="position: relative; top: -2px;"><img alt="Warning" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/18px-Attention_niels_epting.svg.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/27px-Attention_niels_epting.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/36px-Attention_niels_epting.svg.png 2x" /></span> <b>Warning:</b></td>
+<td valign="top" style="padding-left:0.5em;">If you use this method, make sure to <b>change the name of the .htaccess file back</b> after running the upgrade script! Otherwise short URLs and possibly other stuff will be broken!</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Test_the_update">Test the update</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=22" title="Edit section: Test the update" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=22" title="Edit section: Test the update">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Once the upgrade has been completed, browse to the wiki and check that the following operations work as expected:</p>
+<ul>
+<li>Viewing pages</li>
+<li>Editing pages</li>
+<li>Uploading a file</li>
+<li>Visit <a href="/wiki/Special:Version" title="Special:Version">Special:Version</a> and check that the version shown is correct and that the extensions are present.</li>
+</ul>
+<h2><span class="mw-headline" id="Frequently_asked_questions">Frequently asked questions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=23" title="Edit section: Frequently asked questions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=23" title="Edit section: Frequently asked questions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="How_hard_is_it_to_upgrade.3F">How hard is it to upgrade?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=24" title="Edit section: How hard is it to upgrade?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=24" title="Edit section: How hard is it to upgrade?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If the only file you have modified is <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">LocalSettings.php</a>, and you are upgrading from 1.5 or later, the process is very simple. The amount of human work involved is only a few minutes. The database schema changes will take an amount of time proportional to the size of your database — potentially hours for wikis with millions of pages, but for a more typical size of a few thousand pages, it is usually done in seconds.</p>
+<p>Minor upgrades, within the same major version, say from 1.13.0 to 1.13.1, do not require any schema changes at all. You can just update the files. The database needs no update, hence it is not necessary to run the installer script.</p>
+<p>Upgrading from 1.4 or earlier is potentially complicated because support for character sets other than UTF-8 was dropped, and the schema for storing bulk text changed. Please read the relevant section in the <tt>UPGRADE</tt> file.</p>
+<p>Upgrading becomes difficult if you have modified our source code, and you don't want your changes to be overwritten. Tools such as <a rel="nofollow" class="external text" href="http://www.gnu.org/software/diffutils/diffutils.html">diff</a>, <a rel="nofollow" class="external text" href="http://www.gnu.org/software/patch/">patch</a>, <a rel="nofollow" class="external text" href="http://meldmerge.org/">Meld</a> or <a rel="nofollow" class="external text" href="http://winmerge.org/">WinMerge</a> may be useful. There is also potential for trouble if you are using unmaintained extensions. Upgrade your extensions at the same time as you upgrade MediaWiki.</p>
+<p>If you have modified the skin or use a custom skin you very likely will have to adjust it to work again with the new version of MediaWiki.</p>
+<dl>
+<dd>Tip: instead of patching your "global" css and js (javascript) files everytime you can simply add the code to your MediaWiki:Common.js and MediaWiki:Common.css pages. As these are part of the database which will be reused when you upgrade, you will not have to patch the MediaWiki core files any more.</dd>
+</dl>
+<h3><span class="mw-headline" id="How_do_I_upgrade_from_a_really_old_version.3F_In_one_step.2C_or_in_several_steps.3F">How do I upgrade from a really old version? In one step, or in several steps?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=25" title="Edit section: How do I upgrade from a really old version? In one step, or in several steps?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=25" title="Edit section: How do I upgrade from a really old version? In one step, or in several steps?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>It depends: If you are upgrading from MediaWiki 1.4 or older, you should upgrade to MediaWiki 1.5 first. If you are upgrading from a Latin-1 wiki, use upgrade1_5.php (found in MediaWiki 1.5) to convert the relevant parts of the database to UTF-8 (<a href="/wiki/Manual:$wgUseLatin1" title="Manual:$wgUseLatin1">$wgUseLatin1</a> needs to be set to true in your <a href="/wiki/LocalSettings.php" title="LocalSettings.php" class="mw-redirect">LocalSettings.php</a> for this to work). Next, run update.php, and then set the <a href="/wiki/Manual:$wgLegacyEncoding" title="Manual:$wgLegacyEncoding">$wgLegacyEncoding</a> option in LocalSettings.php to the encoding previously used by the wiki (e.g. windows-1252). This is basically how Wikipedia and other Wikimedia Foundation sites were upgraded from MediaWiki 1.4 to 1.5 – see the [<a class="external text" href="http://noc.wikimedia.org/conf/highlight.php?file=InitialiseSettings.php">relevant settings file (warning: huge page!)</a> and some <a href="https://wikitech.wikimedia.org/wiki/1.5_upgrade" class="extiw" title="wikitech:1.5 upgrade">related notes at Wikitech</a>. You may need to upgrade to MediaWiki 1.4 before running the upgrade1.5 script.</p>
+<p>If you are upgrading from MediaWiki 1.5 or newer, you can upgrade in one step, from your old version to the latest stable version. The vast majority of reports, as well as automated testing, indicate that doing it in one step works just fine.</p>
+<p>If you have trouble believing this, read <a href="http://lists.wikimedia.org/pipermail/mediawiki-l/2008-October/028975.html" class="extiw" title="mailarchive:mediawiki-l/2008-October/028975.html">this mailing list post</a>.</p>
+<p>If upgrading from a MediaWiki version below 1.19, you may need to add the sha1 field to the <a href="/wiki/Manual:Revision_table" title="Manual:Revision table">revision table</a> manually before running the update script (see <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48820" class="extiw" title="bugzilla:48820">bug 48820</a> and a <a href="/wiki/Thread:Project:Support_desk/upgrade_problems:_1.11_--_1.21" title="Thread:Project:Support desk/upgrade problems: 1.11 -- 1.21">relevant support desk thread</a>).</p>
+<h3><span class="mw-headline" id="Should_I_back_up_first.3F">Should I back up first?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=26" title="Edit section: Should I back up first?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=26" title="Edit section: Should I back up first?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Short answer: Yes.</p>
+<p>Long answer: It depends on a) how much you value your data, b) how hard it is to create a backup and c) how confident you are with MySQL maintenance and administration.</p>
+<p>An upgrade failure may leave your database in an inconsistent state, in between two versions. It may move an important table to a temporary name and then fail before it recreates the table correctly. It may change a field definition to an incorrect data type. It is very rare for an upgrade to cause irreversible data loss. More often, data corruption occurs which can be reversed by a skilled administrator.</p>
+<p>Recovery is often complex. Volunteers on the support forums are unlikely to be impressed if you neglect to make a backup and then need help to recover from upgrade-related corruption. A better outcome is if you can revert to your backup, and then <a class="external text" href="https://bugzilla.wikimedia.org/enter_bug.cgi?product=MediaWiki">report the bug</a> in the upgrade process which caused the corruption.</p>
+<h3><span class="mw-headline" id="Can_I_keep_my_LocalSettings.php.3F">Can I keep my LocalSettings.php?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=27" title="Edit section: Can I keep my LocalSettings.php?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=27" title="Edit section: Can I keep my LocalSettings.php?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Yes, but you may have to make some minor changes. The format of <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">LocalSettings.php</a> is largely backwards compatible. Changes which break LocalSettings.php compatibility will be documented in the "configuration changes" section of the <a href="/wiki/Release_notes" title="Release notes">release notes</a>.</p>
+<h3><span class="mw-headline" id="Can_my_wiki_stay_online_while_it_is_upgrading.3F">Can my wiki stay online while it is upgrading?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=28" title="Edit section: Can my wiki stay online while it is upgrading?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=28" title="Edit section: Can my wiki stay online while it is upgrading?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Generally yes, however Git may temporarily (for a few seconds) break it.</p>
+<p>If you are upgrading between minor releases of MediaWiki, all you need to do is update the source files.</p>
+<p>Note: the following assumes you have command line access. If you are upgrading between major releases of MediaWiki, the preferred procedure is as follows:</p>
+<ol>
+<li>Unpack the new version of MediaWiki into a new directory</li>
+<li>Prepare that new directory: copy your current LocalSettings.php from the old directory, copy any installed extensions and custom skins (if any).</li>
+<li>In the release notes for the new version, see if any changes need to be made to LocalSettings.php.</li>
+<li>Place the database in read-only mode by inserting the following variable into LocalSettings.php in the old directory - users will see this message if they attempt an edit during the upgrade process:<br />
+<code><a href="/wiki/Manual:$wgReadOnly" title="Manual:$wgReadOnly">$wgReadOnly</a> = 'Upgrading to MediaWiki 1.22.2';</code></li>
+<li>Run the <a href="/wiki/Manual:Upgrading#Command_line" title="Manual:Upgrading">update script</a> or the web updater in the new directory.<br /></li>
+<li>Copy the images from the images sub-directory from the old directory to the new directory.</li>
+<li>Swap the old directory and the new directory.</li>
+</ol>
+<h3><span class="mw-headline" id="Why_upgrade.3F">Why upgrade?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=29" title="Edit section: Why upgrade?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=29" title="Edit section: Why upgrade?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl>
+<dd><i>Subscribe to <a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce" class="extiw" title="mail:mediawiki-announce">mediawiki-announce</a> to be notified of new releases.</i></dd>
+</dl>
+<p>Because it's <a href="#How_hard_is_it_to_upgrade.3F">usually easy enough</a>, <a href="#How_do_I_upgrade_from_a_really_old_version.3F_In_one_step.2C_or_in_several_steps.3F">a single step from your version to latest</a> and also <a href="/wiki/Manual:Upgrading#Web_updater" title="Manual:Upgrading">via web</a>.</p>
+<p>Many upgrades solve security issues which help to keep your wiki and possibly even your host system safe from vandals, while old releases are not supported (see <a href="/wiki/Version_lifecycle" title="Version lifecycle">Version lifecycle</a>). New major releases come with new features, which you might want to use. See the release notes for details. In case you need additional arguments to convince your bosses to let you upgrade from a pretty old version:</p>
+<ul>
+<li>Since 1.9, an <a href="/wiki/Release_notes/1.9#Undo_revision" title="Release notes/1.9">undo button</a> is available.</li>
+<li>Since 1.12, <a href="/wiki/Help:Patrolling" title="Help:Patrolling">patrolling</a> on <a href="/wiki/Special:NewPages" title="Special:NewPages">Special:NewPages</a> is much easier.</li>
+<li>Since 1.13, you can <a href="/wiki/Help:Moving_a_page" title="Help:Moving a page">rename</a> (move) files.</li>
+<li>Since 1.14, you can <a href="/wiki/Manual:$wgFixDoubleRedirects" title="Manual:$wgFixDoubleRedirects">fix double redirects</a> automatically.</li>
+<li>Since 1.16, <a href="/wiki/InstantCommons" title="InstantCommons">InstantCommons</a> is available.</li>
+<li>If you have appropriate caching, since 1.17 <a href="/wiki/ResourceLoader" title="ResourceLoader">ResourceLoader</a> optimizes pageload speeds a lot.</li>
+<li>Since 1.17, <a href="/wiki/MediaWiki_1.17/Category_sorting" title="MediaWiki 1.17/Category sorting">category sorting makes sense!</a> (especially for non-English letters).</li>
+<li>In <a href="/wiki/MediaWiki_1.19" title="MediaWiki 1.19">1.19</a> the skinning system was reworked making it easier to reuse parts of existing skins in your own skins.</li>
+<li>Since <a href="/wiki/MediaWiki_1.18" title="MediaWiki 1.18">1.18</a> and <a href="/wiki/MediaWiki_1.19" title="MediaWiki 1.19">1.19</a>, users of all languages and genders are correctly addressed by the interface and <a href="//meta.wikimedia.org/wiki/Help:Special_page#Logs" class="extiw" title="m:Help:Special page">logs</a> (before 1.15, no gender at all).</li>
+<li>Since <a href="/wiki/MediaWiki_1.20" title="MediaWiki 1.20">1.20</a>, <a href="//meta.wikimedia.org/wiki/Help:Diff" class="extiw" title="m:Help:Diff">diffs</a> are better readable.</li>
+</ul>
+<p>See also the <a class="external text" href="https://bugzilla.wikimedia.org/buglist.cgi?cmdtype=dorem&amp;remaction=run&amp;namedcmd=Most%20voted%20fixes&amp;sharer_id=7541">list of the most voted fixed issues</a> on <a href="/wiki/Bugzilla" title="Bugzilla">bugzilla</a>.</p>
+<p>Also, in <a href="/wiki/MediaWiki_1.18" title="MediaWiki 1.18">MediaWiki 1.18</a> we started <a href="/wiki/Suggestions_for_extensions_to_be_integrated" title="Suggestions for extensions to be integrated">bundling some vital extensions</a>, like a better editor and anti-vandalism tools ConfirmEdit and Nuke.</p>
+<p><br /></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit&amp;section=30" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit&amp;section=30" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a> if you need help or something went wrong</li>
+<li><a href="/wiki/Manual:Backing_up_a_wiki" title="Manual:Backing up a wiki">Manual:Backing up a wiki</a></li>
+<li><a href="/wiki/Manual:Restoring_a_wiki_from_backup" title="Manual:Restoring a wiki from backup">Manual:Restoring a wiki from backup</a></li>
+<li><a href="/wiki/Manual:Moving_a_wiki" title="Manual:Moving a wiki">Manual:Moving a wiki</a></li>
+<li><a href="/wiki/Manual:Restoring_wiki_code_from_cached_HTML" title="Manual:Restoring wiki code from cached HTML">Manual:Restoring wiki code from cached HTML</a> (if you don't have a successful backup)</li>
+<li><a href="/wiki/Manual:Installing" title="Manual:Installing" class="mw-redirect">Manual:Installing</a></li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ca"><a href="/wiki/Manual:Upgrading/ca" title="Manual:Upgrading/ca">català</a></bdi>&#160;• <bdi lang="de"><a href="/wiki/Manual:Upgrading/de" title="Manual:Upgrading/de">Deutsch</a></bdi>&#160;• <bdi lang="fr"><a href="/wiki/Manual:Upgrading/fr" title="Manual:Upgrading/fr">français</a></bdi>&#160;• <bdi lang="hu"><a href="/wiki/Manual:Upgrading/hu" title="Manual:Upgrading/hu">magyar</a></bdi>&#160;• <bdi lang="id"><a href="/wiki/Manual:Upgrading/id" title="Manual:Upgrading/id">Bahasa Indonesia</a></bdi>&#160;• <bdi lang="it"><a href="/wiki/Manual:Upgrading/it" title="Manual:Upgrading/it">italiano</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Manual:Upgrading/ja" title="Manual:Upgrading/ja">日本語</a></bdi>&#160;• <bdi lang="ko"><a href="/wiki/Manual:Upgrading/ko" title="Manual:Upgrading/ko">한국어</a></bdi>&#160;• <bdi lang="pl"><a href="/wiki/Manual:Upgrading/pl" title="Manual:Upgrading/pl">polski</a></bdi>&#160;• <bdi lang="pt-br"><a href="/wiki/Manual:Upgrading/pt-br" title="Manual:Upgrading/pt-br">português do Brasil</a></bdi>&#160;• <bdi lang="ru"><a href="/wiki/Manual:Upgrading/ru" title="Manual:Upgrading/ru">русский</a></bdi>&#160;• <bdi lang="zh"><a href="/wiki/Manual:Upgrading/zh" title="Manual:Upgrading/zh" class="mw-redirect">中文</a></bdi>&#160;• <bdi lang="zh-hans"><a href="/wiki/Manual:Upgrading/zh-hans" title="Manual:Upgrading/zh-hans">中文（简体）‎</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1102
+CPU time usage: 1.524 seconds
+Real time usage: 1.626 seconds
+Preprocessor visited node count: 3168/1000000
+Preprocessor generated node count: 9271/1500000
+Post‐expand include size: 20968/2048000 bytes
+Template argument size: 4477/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 69/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:8407-0!*!0!!en!4!* and timestamp 20140218185004
+ -->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:8407-0!*!0!!en!4!* and timestamp 20140218185130
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Upgrading&amp;oldid=909113">http://www.mediawiki.org/w/index.php?title=Manual:Upgrading&amp;oldid=909113</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:MediaWiki_administration" title="Category:MediaWiki administration">MediaWiki administration</a></li><li><a href="/wiki/Category:MediaWiki_for_site_admins" title="Category:MediaWiki for site admins">MediaWiki for site admins</a></li><li><a href="/wiki/Category:MediaWiki_Development" title="Category:MediaWiki Development">MediaWiki Development</a></li><li><a href="/wiki/Category:Upgrading" title="Category:Upgrading">Upgrading</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AUpgrading&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AUpgrading" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Upgrading"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Upgrading"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Upgrading" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Upgrading&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Upgrading&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Upgrading&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3AUpgrading">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3AUpgrading&amp;oldid=909113&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Upgrading&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Upgrading" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Upgrading" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Upgrading&amp;oldid=909113" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Upgrading&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3AUpgrading&amp;id=909113" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 February 2014, at 18:50.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Upgrading" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1072 in 0.241 secs. -->
+	</body>
+</html>

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Running MediaWiki on Windows - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Windows" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.geshi.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Running_MediaWiki_on_Windows","wgTitle":"Running MediaWiki on Windows","wgCurRevisionId":833987,"wgRevisionId":833987,"wgArticleId":14066,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Running_MediaWiki_on_Windows","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":833987,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Running_MediaWiki_on_Windows skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Running MediaWiki on Windows</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="wikitable" style="float:right; margin: 0 0 1em 1em;">
+<tr>
+<th style="background-color:white"><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation guides</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_FreeBSD" title="Manual:Running MediaWiki on FreeBSD">on FreeBSD</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Linux" title="Manual:Running MediaWiki on Linux" class="mw-redirect">on GNU/Linux</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_ALT_Linux" title="Manual:Running MediaWiki on ALT Linux">ALT Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Arch_Linux" title="Manual:Running MediaWiki on Arch Linux">Arch Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Damnsmalllinux" title="Manual:Running MediaWiki on Damnsmalllinux">Damnsmalllinux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux" title="Manual:Running MediaWiki on Debian GNU/Linux">Debian</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Fedora" title="Manual:Running MediaWiki on Fedora">Fedora</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Gentoo_Linux" title="Manual:Running MediaWiki on Gentoo Linux">Gentoo</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Mandriva" title="Manual:Running MediaWiki on Mandriva">Mandriva</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Red_Hat_Linux" title="Manual:Running MediaWiki on Red Hat Linux">Red Hat Enterprise Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Slackware_Linux" title="Manual:Running MediaWiki on Slackware Linux">Slackware</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu" title="Manual:Running MediaWiki on Ubuntu">Ubuntu</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Mac_OS_X" title="Manual:Running MediaWiki on Mac OS X">on Mac OS X</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_NetWare" title="Manual:Running MediaWiki on NetWare">on NetWare</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Solaris" title="Manual:Running MediaWiki on Solaris">on Solaris</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_11_/_opensolaris" title="Manual:Running MediaWiki on Solaris 11 / opensolaris">on Solaris 11 / opensolaris</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_10" title="Manual:Running MediaWiki on Solaris 10">on Solaris 10</a></td>
+</tr>
+<tr>
+<th><strong class="selflink">on Windows</strong></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2008" title="Manual:Installing MediaWiki on Windows Server 2008">Windows Server 2008</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2003" title="Manual:Installing MediaWiki on Windows Server 2003">Windows Server 2003</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Streamlined_Windows_Install_Guide" title="Manual:Streamlined Windows Install Guide">Streamlined Guide</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Simple_Windows_Apache_Installation" title="Manual:Simple Windows Apache Installation">Simple Windows/Apache Guide</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Wiki_on_a_stick" title="Manual:Wiki on a stick">on a stick</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_on_MoWeS_Portable_(Windows)" title="Manual:Installing on MoWeS Portable (Windows)">on MoWeS Portable</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installation_on_Uniform_Server_(Windows)" title="Manual:Installation on Uniform Server (Windows)">on Uniform Server</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_XAMPP" title="Manual:Installing MediaWiki on XAMPP">on XAMPP</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Running_MediaWiki_on_Sourceforge.net" title="Manual:Running MediaWiki on Sourceforge.net" class="mw-redirect">on Sourceforge.net</a></th>
+</tr>
+</table>
+<p>This page will give you information about installing <a href="/wiki/MediaWiki" title="MediaWiki">MediaWiki</a> on a Microsoft Windows system.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Software_requirements_and_options"><span class="tocnumber">2</span> <span class="toctext">Software requirements and options</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Network_Requirements"><span class="tocnumber">2.1</span> <span class="toctext">Network Requirements</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Required_software"><span class="tocnumber">2.2</span> <span class="toctext">Required software</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Optional_utilities"><span class="tocnumber">2.3</span> <span class="toctext">Optional utilities</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Hardware"><span class="tocnumber">2.4</span> <span class="toctext">Hardware</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Choosing_a_software_installation_method"><span class="tocnumber">3</span> <span class="toctext">Choosing a software installation method</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Installing_Apache.2C_PHP_and_MySQL_as_a_Package"><span class="tocnumber">4</span> <span class="toctext">Installing Apache, PHP and MySQL as a Package</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Internet_Information_Services_.28IIS.29_Manager_Installed"><span class="tocnumber">4.1</span> <span class="toctext">Internet Information Services (IIS) Manager Installed</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Installing_EasyPHP"><span class="tocnumber">4.2</span> <span class="toctext">Installing EasyPHP</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Configure_Apache"><span class="tocnumber">4.3</span> <span class="toctext">Configure Apache</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Installing_MediaWiki"><span class="tocnumber">4.4</span> <span class="toctext">Installing MediaWiki</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Prerequisite_software_installation"><span class="tocnumber">5</span> <span class="toctext">Prerequisite software installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Internet_Information_Server_.28IIS.29"><span class="tocnumber">5.1</span> <span class="toctext">Internet Information Server (IIS)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Installation.2FActivation"><span class="tocnumber">5.1.1</span> <span class="toctext">Installation/Activation</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Configuration"><span class="tocnumber">5.1.2</span> <span class="toctext">Configuration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Apache"><span class="tocnumber">5.2</span> <span class="toctext">Apache</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Download_.26_Installation"><span class="tocnumber">5.2.1</span> <span class="toctext">Download &amp; Installation</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Configuration_2"><span class="tocnumber">5.2.2</span> <span class="toctext">Configuration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="#PHP"><span class="tocnumber">5.3</span> <span class="toctext">PHP</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="#Download_.26_Installation_2"><span class="tocnumber">5.3.1</span> <span class="toctext">Download &amp; Installation</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Configuration_3"><span class="tocnumber">5.3.2</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-4 tocsection-23"><a href="#Extension_Directory"><span class="tocnumber">5.3.2.1</span> <span class="toctext">Extension Directory</span></a></li>
+<li class="toclevel-4 tocsection-24"><a href="#MySQL"><span class="tocnumber">5.3.2.2</span> <span class="toctext">MySQL</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="#GD"><span class="tocnumber">5.3.2.3</span> <span class="toctext">GD</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-26"><a href="#MySQL_Installation"><span class="tocnumber">5.4</span> <span class="toctext">MySQL Installation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#MediaWiki"><span class="tocnumber">6</span> <span class="toctext">MediaWiki</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#Stable_release"><span class="tocnumber">6.1</span> <span class="toctext">Stable release</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Latest_release_and_Git_versions"><span class="tocnumber">6.2</span> <span class="toctext">Latest release and Git versions</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Installing"><span class="tocnumber">6.3</span> <span class="toctext">Installing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#Optional_Software"><span class="tocnumber">7</span> <span class="toctext">Optional Software</span></a>
+<ul>
+<li class="toclevel-2 tocsection-32"><a href="#Diffutils"><span class="tocnumber">7.1</span> <span class="toctext">Diffutils</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#ImageMagick"><span class="tocnumber">7.2</span> <span class="toctext">ImageMagick</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#Mathematics_Support"><span class="tocnumber">7.3</span> <span class="toctext">Mathematics Support</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="#Option_A_-_Using_texvc"><span class="tocnumber">7.3.1</span> <span class="toctext">Option A - Using texvc</span></a>
+<ul>
+<li class="toclevel-4 tocsection-36"><a href="#Building_texvc_on_Windows"><span class="tocnumber">7.3.1.1</span> <span class="toctext">Building texvc on Windows</span></a></li>
+<li class="toclevel-4 tocsection-37"><a href="#Configuring_MediaWiki_to_use_texvc"><span class="tocnumber">7.3.1.2</span> <span class="toctext">Configuring MediaWiki to use texvc</span></a></li>
+<li class="toclevel-4 tocsection-38"><a href="#Troubleshooting"><span class="tocnumber">7.3.1.3</span> <span class="toctext">Troubleshooting</span></a></li>
+<li class="toclevel-4 tocsection-39"><a href="#Permissions"><span class="tocnumber">7.3.1.4</span> <span class="toctext">Permissions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-40"><a href="#Option_B_-_Using_LatexRender"><span class="tocnumber">7.3.2</span> <span class="toctext">Option B - Using LatexRender</span></a>
+<ul>
+<li class="toclevel-4 tocsection-41"><a href="#Installation"><span class="tocnumber">7.3.2.1</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-4 tocsection-42"><a href="#Settings"><span class="tocnumber">7.3.2.2</span> <span class="toctext">Settings</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="#Verifications"><span class="tocnumber">7.3.2.3</span> <span class="toctext">Verifications</span></a></li>
+<li class="toclevel-4 tocsection-44"><a href="#How_to_get_the_latex_.22picture.22_package_to_work"><span class="tocnumber">7.3.2.4</span> <span class="toctext">How to get the latex "picture" package to work</span></a></li>
+<li class="toclevel-4 tocsection-45"><a href="#Troubleshooting_2"><span class="tocnumber">7.3.2.5</span> <span class="toctext">Troubleshooting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-46"><a href="#Simplified_solution_with_dvipng"><span class="tocnumber">7.3.3</span> <span class="toctext">Simplified solution with dvipng</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="#Alternative_Solution_with_Texvc_for_experienced_users_.28Mediawiki_1.16.0.29"><span class="tocnumber">7.3.4</span> <span class="toctext">Alternative Solution with Texvc for experienced users (Mediawiki 1.16.0)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=1" title="Edit section: Introduction" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Because MediaWiki is coded in PHP (a cross-platform language) it is quite simple to get running on Windows. If you already have a working internet-development environment which runs PHP, Apache and MySQL you may skip on to the sections about Optional Software.</p>
+<p>While this guide focuses on using the Apache HTTP server, you can see <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2003" title="Manual:Installing MediaWiki on Windows Server 2003">Installing MediaWiki on Windows Server 2003</a> for instructions on how to use IIS to run MediaWiki.</p>
+<p>This guide only supports the most recent versions of MediaWiki (1.18.x and later) to avoid explaining the fixes for bugs in every previous version. If you are new to Apache/PHP or MySQL, note that these applications are only supported by their developers on Windows 2000 and later.</p>
+<h2><span class="mw-headline" id="Software_requirements_and_options">Software requirements and options</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=2" title="Edit section: Software requirements and options" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=2" title="Edit section: Software requirements and options">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Network_Requirements">Network Requirements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=3" title="Edit section: Network Requirements" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=3" title="Edit section: Network Requirements">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For those of you choosing a hosting environment, you don't have much choice. However, if you are self-hosting or hosting on a corporate Intranet, there is one primary rule and it applies equally to Windows, Unix, or Linux; <b><i>Never</i> expose any computer directly to the raw Internet</b>.</p>
+<p>This is because they are <i>ALL</i> vulnerable. The best and simplest Internet access method is via a NAT router behind which you can hide your laptops, workstations, and servers. You can then make your servers available via pinhole-route/port-forwarding techniques. The big benefit is that NAT boxes are too stupid to hack and only do exactly as they are told.</p>
+<p>Putting a computer directly on the internet is asking to get it hacked by viruses, worms, bot herders, or somebody's pet cat. Most zombies are exactly such machines. Instructions beyond this point assume that you have a secure network.</p>
+<h3><span class="mw-headline" id="Required_software">Required software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=4" title="Edit section: Required software" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=4" title="Edit section: Required software">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><b>Supported software</b>
+<ul>
+<li>MySQL.</li>
+<li>Web Server: Apache, Abyss Web Server or IIS.</li>
+<li>PHP 5.x (depending on version).</li>
+<li>Windows 2000/XP/2003/Vista/7. -<br />
+Server operating systems (optional): Windows Server 2003/Windows Server 2008.</li>
+</ul>
+</li>
+<li><b>A local mail transport agent or accessible SMTP server</b></li>
+</ul>
+<dl>
+<dd>if you wish to support user confirmation or email change notifications</dd>
+<dd>note: the MediaWiki 1.12 installer does not determine whether a local MTA is present before installation begins</dd>
+</dl>
+<ul>
+<li><b>MediaWiki</b> – the code itself</li>
+</ul>
+<dl>
+<dd>Notes: While the MediaWiki development teams are familiar with LAMP, under Windows you are much better off with WIMP (Windows, IIS, MySQL, PHP). Apache under Windows is a loser, especially if you are going to do any sort of Active Directory integration. Certainly, running both Apache and IIS is confusing, error prone, and generally more work than it's worth. For this reason, the following stack is recommended (at this time). The guideline is to use the native tools as much as possible. They generally work better and you are more likely to get better support.
+<ul>
+<li>Windows 2000 or later</li>
+<li>PHP 5.x (ISAPI version only, forget CGI)</li>
+<li>MySQL 5.x</li>
+<li>IIS 6 (Windows 2K) or IIS7 (XP, Vista, Server 2003 and Server 2008)</li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dd>For full production sites, one of the Windows server configurations is recommended. But this whole stack can even be implemented on a Vista or XP laptop, for example for use as a development environment.</dd>
+</dl>
+<h3><span class="mw-headline" id="Optional_utilities">Optional utilities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=5" title="Edit section: Optional utilities" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=5" title="Edit section: Optional utilities">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><b>Texvc</b> (needed for rendering Math formulas)</li>
+<li><b>PHP</b> optimizing software (Zend Optimizer). Cleans up compiled PHP code to make it run 50-100% more efficiently.</li>
+<li><b>PHP caching software</b> such as <a rel="nofollow" class="external text" href="http://www.sitebuddy.com/PHP/Accelerators/eAccelerator_windows_binaries_builds">eAccelerator</a>. Saves the compiled PHP for future use, so it doesn't need to be recompiled, speeding up execution by 100x or so.</li>
+<li><b>Image processing software</b> (ImageMagick or GD). Used for format conversion and thumbnails</li>
+<li><b>Web page caching software</b> (Squid). Used to store rendered pages for re-use.</li>
+</ul>
+<h3><span class="mw-headline" id="Hardware">Hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=6" title="Edit section: Hardware" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=6" title="Edit section: Hardware">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>You will also need some serious hardware for a large database, e.g. the full Wikipedia database, depending on how much demand it will require. Meta-wiki has some information on how many clients its clusters support, and their configuration, which can be used to gauge this.</p>
+<p>A minimum of 256MB of RAM is recommended.</p>
+<dl>
+<dd>Updates:
+<ul>
+<li>Under Vista, 2GB of RAM is recommended</li>
+<li>Under the Windows Server versions, 2-4GB is recommended depending if the RDBMS will be implemented on the same box. If the database is going to be on another box, then 2GB should be sufficient.</li>
+<li>Win2KAS needs at least 512MB of RAM.</li>
+</ul>
+<dl>
+<dd>
+<ul>
+<li>The threshold condition is whether or not the server can run without pulling pages from the swapper.</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<h2><span class="mw-headline" id="Choosing_a_software_installation_method">Choosing a software installation method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=7" title="Edit section: Choosing a software installation method" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=7" title="Edit section: Choosing a software installation method">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MediaWiki is developed under a LAMP (Linux+Apache+MySQL+PHP) environment. It is possible to successfully implement in a WAMP (Windows+Apache+MySQL+PHP) or WIMP (Windows+IIS+MySQL+PHP).</p>
+<p>Although these products are not that difficult to configure under Windows, it can be <i>extremely</i> difficult to install (by difficult, it takes 30 minutes for WIMP) and configure Apache+MySQL+PHP one product at a time if completely new to apache/mysql/php. Under such circumstances it is highly recommended to look for a LAMP or WAMP pre-made combination which can just be installed and used. These will save you 99% of the trouble of configuring each package manually. The down-side is that some of these are trimmed down or modified versions which makes it hard to upgrade individual components, and other ones are seriously out of date.</p>
+<p>You can install the support components individually, or all together as a package. A step by step guide to installing MediaWiki with separate packages for Apache 2, MySQL 5 and PHP 5, on Windows, can be found at <a href="/wiki/Manual:Newcomers_guide_to_installing_on_Windows" title="Manual:Newcomers guide to installing on Windows" class="mw-redirect">Manual:Newcomers guide to installing on Windows</a>.</p>
+<p>Currently, there are a few up-to-date "all-in-one" packages for Windows:</p>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.aprelium.com/abyssws/">Abyss</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.devside.net/">DeveloperSide.NET Web-Server Suite</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.easyphp.org/">EasyPHP</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.apachefriends.org/en/xampp.html">XAMPP</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.uniformserver.com/">Uniform Server</a></li>
+</ul>
+<p><i>See also</i>: <a href="//en.wikipedia.org/wiki/Comparison_of_WAMPs" class="extiw" title="w:Comparison of WAMPs">Comparison of WAMPs</a> and <a href="/wiki/Manual:Wiki_on_a_stick" title="Manual:Wiki on a stick">Manual:Wiki on a stick</a>.</p>
+<h2><span class="mw-headline" id="Installing_Apache.2C_PHP_and_MySQL_as_a_Package">Installing Apache, PHP and MySQL as a Package</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=8" title="Edit section: Installing Apache, PHP and MySQL as a Package" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=8" title="Edit section: Installing Apache, PHP and MySQL as a Package">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Choose a package to download from the list above.</p>
+<h3><span class="mw-headline" id="Internet_Information_Services_.28IIS.29_Manager_Installed">Internet Information Services (IIS) Manager Installed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=9" title="Edit section: Internet Information Services (IIS) Manager Installed" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=9" title="Edit section: Internet Information Services (IIS) Manager Installed">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If IIS is installed then there are some considerations. By default IIS and Apache both use port 80, so IIS will need to be uninstalled, disabled or moved to another port.</p>
+<p><b>NOTE:</b> Saint WAMP allows the default port for apache to be changed during the install. If you plan to keep IIS on port 80 and run Apache on a different port then IIS can be left as is.</p>
+<p>To change the port IIS runs on:</p>
+<ol>
+<li>Open IIS Manager [Start -&gt; Administrative Tools -&gt; Internet Information Services (IIS) Manager]</li>
+<li>Expand <b>Web Sites</b>, right-click on <b>Default Web Site</b> and select Properties</li>
+<li>On the <b>Web Site Tab</b> change the <b>Port</b> field (example: 8080)</li>
+<li>Click OK</li>
+<li>Stop then start IIS to make the change come into effect</li>
+</ol>
+<p><br /></p>
+<h3><span class="mw-headline" id="Installing_EasyPHP">Installing EasyPHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=10" title="Edit section: Installing EasyPHP" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=10" title="Edit section: Installing EasyPHP">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ol>
+<li>Run the downloaded EasyPHP installation package</li>
+<li>Use the default install directory or change as required</li>
+<li>When the install finishes wait, two dialogue boxes should appear on top of the final install screen</li>
+<li>Click OK on the 'Mise a jour' box.</li>
+<li>The EasyPHP Dialogue box should show Apache and SQL already started</li>
+<li>Go to <tt><a rel="nofollow" class="external free" href="http://localhost/">http://localhost/</a></tt> to test it</li>
+</ol>
+<p>Tasks after installation:</p>
+<ul>
+<li>Go to <tt><a rel="nofollow" class="external free" href="http://localhost/mysql/">http://localhost/mysql/</a></tt> to set root password for MySQL. Note that entering the trailing "/" matters! Select "Show MySQL system variables", "Privileges", then click icon at end of line starting with "root". Scroll down to password entry box and enter.</li>
+</ul>
+<p><br /></p>
+<h3><span class="mw-headline" id="Configure_Apache">Configure Apache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=11" title="Edit section: Configure Apache" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=11" title="Edit section: Configure Apache">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Document Root for Apache should be changed to point somewhere else, preferably on a separate volume. Create a new folder (i.e. D:\www) and then edit the Apache configuration file as follows:</p>
+<ul>
+<li>First, open the <b>httpd.conf</b> file in the .\apache\conf directory where Saint or PHP is installed</li>
+</ul>
+<ul>
+<li>Then search for <b>DocumentRoot</b> and edit it</li>
+</ul>
+<pre>
+DocumentRoot "D:\www"
+</pre>
+<ul>
+<li>Finally, scroll down and change the '&lt;Directory&gt;' directive (NOT the &lt;Directory /&gt; directive or the &lt;/Directory&gt; directive!) to be the same as DocumentRoot (if you installed the Saint WAMP distribution, change the '&lt;Directory htdocs&gt;' directive)</li>
+</ul>
+<pre>
+&lt;Directory "D:\www"&gt;
+</pre>
+<p>You need to restart TSW-Contentserver for the changes to take effect.</p>
+<p>You may want to install Memcache if not already included in your WAMP, and ImageMagick or some other graphical manipulation package. Instructions, and links to some Windows builds, are also given in <a href="/wiki/Manual:Newcomers_guide_to_installing_on_Windows" title="Manual:Newcomers guide to installing on Windows" class="mw-redirect">Manual:Newcomers guide to installing on Windows</a>, and the php settings needed are shown in the sample php.ini.</p>
+<h3><span class="mw-headline" id="Installing_MediaWiki">Installing MediaWiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=12" title="Edit section: Installing MediaWiki" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=12" title="Edit section: Installing MediaWiki">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>After successfully installing the underlying software, you can install MediaWiki.</p>
+<ol>
+<li>Download MediaWiki from <a rel="nofollow" class="external text" href="http://sourceforge.net/project/showfiles.php?group_id=34373">sourceforge file list (not updated to last release)</a> or latest release from <a rel="nofollow" class="external text" href="http://wikipedia.sourceforge.net/">portal page</a></li>
+<li>Uncompress the MediaWiki source tree under the Apache Document Root (Example. D:\www\mediawiki)</li>
+<li>Access <tt><a rel="nofollow" class="external free" href="http://localhost/mediawiki">http://localhost/mediawiki</a></tt> and configure MediaWiki as instructed by the page.
+<dl>
+<dd>In case you have difficulty accessing the database, you might need to do this in mysql:
+<dl>
+<dd><i>set password for 'root'@'localhost' = password ('new-password');</i></dd>
+</dl>
+</dd>
+<dd>If you get a blank page at this point, and it has not created the "LocalSettings.php" file, please contact someone for assistance (either on one of the <a href="/wiki/MediaWiki_on_IRC" title="MediaWiki on IRC">IRC channels</a> or <a href="/wiki/Communication#Mailing_lists" title="Communication">mailing lists</a>). Sometimes, just hitting Reload in your browser may solve the problem.</dd>
+</dl>
+</li>
+<li>Put the downloaded LocalSettings.php into <tt>.\mediawiki\</tt>, i.e. move it into MediaWiki root.</li>
+<li>Enjoy your MediaWiki under Windows now: <a rel="nofollow" class="external free" href="http://localhost/mediawiki">http://localhost/mediawiki</a></li>
+</ol>
+<h2><span class="mw-headline" id="Prerequisite_software_installation">Prerequisite software installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=13" title="Edit section: Prerequisite software installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=13" title="Edit section: Prerequisite software installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Choose IIS or choose Apache. Do not choose both, unless you have special needs, such as a tendency towards masochism.</p>
+<h3><span class="mw-headline" id="Internet_Information_Server_.28IIS.29">Internet Information Server (IIS)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=14" title="Edit section: Internet Information Server (IIS)" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=14" title="Edit section: Internet Information Server (IIS)">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Installation.2FActivation">Installation/Activation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=15" title="Edit section: Installation/Activation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=15" title="Edit section: Installation/Activation">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Under Windows, IIS comes shipped with the system (Even IIS7 on Vista) and only needs to be activated.</p>
+<ul>
+<li>Under Vista, this is Start-&gt;Control Panel-&gt;Programs and Features-&gt;Windows Features. You will want the IIS Web Management Console and all of the World Wide Web Services.</li>
+<li>Under Win2Kx, this is found under Start-&gt;Settings-&gt;Control Panel-&gt;Add/Remove Programs-&gt;Add/Remove Windows Components. Again, You will want the IIS Web Management Console and all of the World Wide Web Services.</li>
+</ul>
+<h4><span class="mw-headline" id="Configuration">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=16" title="Edit section: Configuration" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=16" title="Edit section: Configuration">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>All management and configuration is performed through the Management Console. You can even control and configure IIS remotely. The only thing that you have to be logged into the same machine for is to create a new site and that can be done via Terminal Services. If it is a completely remote site, you might have to access Terminal Server via a VPN. For these instructions, we will assume that you are not on the same LAN. Oh yes, you will have to have Administrator access.</p>
+<p>Note: As shipped, IIS creates a default directory tree under c:/InetPub/WWWRoot</p>
+<h3><span class="mw-headline" id="Apache">Apache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=17" title="Edit section: Apache" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=17" title="Edit section: Apache">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Download_.26_Installation">Download &amp; Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=18" title="Edit section: Download &amp; Installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=18" title="Edit section: Download &amp; Installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Download the Apache Web Server MSI installation package from <a rel="nofollow" class="external text" href="http://httpd.apache.org/download.cgi">here</a> using the latest 2.0.x binaries (2.2.x is fairly new at the time of writing and is not well supported by binary files for PHP). Currently the latest version of Apache is version 2.0.59 (July 2007)</p>
+<p>The installation is fairly simple, however if you do not have Administration privileges on your server you will need to select Port 8080 manual-start installation, as installation of services requires admin privileges.</p>
+<h4><span class="mw-headline" id="Configuration_2">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=19" title="Edit section: Configuration" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=19" title="Edit section: Configuration">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>You need to alter the httpd.conf file for apache. It should be located at "C:\Program Files\Apache Group\Apache2\conf" if you used the default installation:</p>
+<ul>
+<li>Add these lines at the end of the block of LoadModule lines:</li>
+</ul>
+<pre>
+    LoadModule php5_module c:/php/php5apache2.dll
+    AddType application/x-httpd-php .php .php5 .phtml
+    AddType application/x-httpd-php-source .phps
+    #configure the path to php.ini
+    PHPIniDir c:/php
+</pre>
+<ul>
+<li>You must alter c:/php/ to the location of your php5apache2.dll file (which will be downloaded and configured in the next section). It is recommended not to use a directory with a space.</li>
+<li>Note: if you are installing Apache 2.2. replace "php5apache2.dll" with "php5apache2_2.dll".</li>
+</ul>
+<h3><span class="mw-headline" id="PHP">PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=20" title="Edit section: PHP" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=20" title="Edit section: PHP">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Download_.26_Installation_2">Download &amp; Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=21" title="Edit section: Download &amp; Installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=21" title="Edit section: Download &amp; Installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Download the Windows Binaries of PHP from <a rel="nofollow" class="external text" href="http://www.php.net/downloads.php">here.</a> Once you have downloaded the files you simply need to extract the files to the directory you specified in the Apache configuration file. It may also be necessary to place the PHP directory in your PATH if you receive DLL not found errors.</p>
+<p>Rename the file php.ini-recommended to php.ini.</p>
+<h4><span class="mw-headline" id="Configuration_3">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=22" title="Edit section: Configuration" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=22" title="Edit section: Configuration">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Make the following modifications to the php.ini file you renamed above.</p>
+<h5><span class="mw-headline" id="Extension_Directory">Extension Directory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=23" title="Edit section: Extension Directory" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=23" title="Edit section: Extension Directory">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ul>
+<li>Set extension_dir to "./ext"</li>
+</ul>
+<h5><span class="mw-headline" id="MySQL">MySQL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=24" title="Edit section: MySQL" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=24" title="Edit section: MySQL">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ul>
+<li>Uncomment "extension=php_mysql.dll" (i.e. remove the ';')</li>
+</ul>
+<h5><span class="mw-headline" id="GD">GD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=25" title="Edit section: GD" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=25" title="Edit section: GD">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>You will need to enable the GD library to use thumbnailing. The GD library is contained as an extension in the default download package.</p>
+<ul>
+<li>Uncomment "extension=php_gd2.dll"</li>
+</ul>
+<p>You may now use the services control panel or Apache2 Monitor to restart the Apache 2 server and make sure everything is working.</p>
+<h3><span class="mw-headline" id="MySQL_Installation">MySQL Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=26" title="Edit section: MySQL Installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=26" title="Edit section: MySQL Installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The download link below points to a page with all available versions of MySQL. You will more than likely want to download "Current Release (Recommended)" (which is 5.0 at the time of writing), followed by "Windows Essentials"</p>
+<p>While downloading, read the <i>Install Guide</i> using the second link below.</p>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.mysql.com/downloads/index.html">Download</a></li>
+<li><a rel="nofollow" class="external text" href="http://dev.mysql.com/doc/refman/5.1/en/windows-installation.html">Install Guide</a></li>
+</ul>
+<p>Once you've got MySQL set up correctly you can proceed to the installation of MediaWiki.</p>
+<blockquote>
+<p><i><b>Make sure libmysql.dll is in the PATH, either by adding c:\php or the MySQL install directory to the PATH or by copying libmysql.dll to someplace in the PATH (like C:\Windows).</b></i></p>
+</blockquote>
+<h2><span class="mw-headline" id="MediaWiki">MediaWiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=27" title="Edit section: MediaWiki" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=27" title="Edit section: MediaWiki">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are two options</p>
+<ul>
+<li>Last stable release of the MediaWiki software</li>
+<li>Latest development version.</li>
+</ul>
+<h3><span class="mw-headline" id="Stable_release">Stable release</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=28" title="Edit section: Stable release" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=28" title="Edit section: Stable release">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Go to <a href="/wiki/Download" title="Download">Download</a></li>
+<li>Press Download on the left of "MediaWiki stable release"</li>
+<li>Save on your disk and extract it to c:\easyphp\www\mediawiki\</li>
+</ul>
+<h3><span class="mw-headline" id="Latest_release_and_Git_versions">Latest release and Git versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=29" title="Edit section: Latest release and Git versions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=29" title="Edit section: Latest release and Git versions">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Often as well as the stable version, there will be a beta of the next version. There may also be an "up to the minute" latest in Git, not yet released.</p>
+<p>These are development versions of MediaWiki and include the latest changes made by the developers. They may work well, or may have serious problems (of any kind, trivial through to major data corruption), so be careful about using a beta or Git version. Generally use the stable version unless you need the development version to work around a bug you can't avoid, or to gain some key feature or compatibility with latest software, or resolve other issues. Always check the release notes if unsure. If you aren't familiar with computing and don't like to test the latest software, get the stable release.</p>
+<p>You can download all versions (stable and development) from Git, GitHub, or following links in this wiki. If you want to grab a Git version ("up to the minute" software) and do not already have a Git client, you will have to get one and install it. Get MediaWiki from the Git archives. see also:</p>
+<ul>
+<li><a href="/wiki/Download_from_Git" title="Download from Git">Download from Git</a></li>
+<li><a href="/wiki/Git" title="Git" class="mw-redirect">Git</a></li>
+</ul>
+<h3><span class="mw-headline" id="Installing">Installing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=30" title="Edit section: Installing" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=30" title="Edit section: Installing">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Believe it or not, after all that work, it's fairly simple to install MediaWiki. Head to wherever you extracted your wiki in your browser (for example, if you extracted it to \htdocs\wiki head to <a rel="nofollow" class="external free" href="http://localhost/wiki">http://localhost/wiki</a>) and click the link to begin set up. You should know all the details you need to fill in here, however note that it is wise to disable all forms of email communication if you did not configure PHP's outgoing SMTP.</p>
+<p>Hint: if you encounter spurious latencies on Windows Server 2008 or 20012R2, like e.g. waiting 5 seconds for a response, you can dramatically increase the performance by changing the SQL server settings in LocalSettings.php:</p>
+<pre>
+#$wgDBserver         = "localhost";
+$wgDBserver         = "127.0.0.1";
+</pre>
+<h2><span class="mw-headline" id="Optional_Software">Optional Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=31" title="Edit section: Optional Software" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=31" title="Edit section: Optional Software">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Diffutils">Diffutils</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=32" title="Edit section: Diffutils" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=32" title="Edit section: Diffutils">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Diffutils (which contains diff3) can be downloaded from <a rel="nofollow" class="external text" href="http://gnuwin32.sourceforge.net/packages/diffutils.htm">here</a>, and File (file type checker) from <a rel="nofollow" class="external text" href="http://gnuwin32.sourceforge.net/packages/file.htm">here</a>.</p>
+<p>To activate the use of diffutils within MediaWiki, you have to ignore the fact that they won't be found during installation (they may actually be found if you install diff into your path) and open up LocalSettings.php to make the following changes:</p>
+<pre>
+$wgDiff3 = "/usr/bin/diff3";
+</pre>
+<p>becomes</p>
+<pre>
+$wgDiff3 = "C:/Program Files/GnuWin32/bin/diff3.exe";
+</pre>
+<p>and replace:</p>
+<pre>
+$wgMimeDetectorCommand = "file.exe -bi"; #use external mime detector (linux)
+</pre>
+<p>with</p>
+<pre>
+$wgMimeDetectorCommand = "C:/Program Files/GnuWin32/bin/file.exe -bi"; #use external mime detector
+</pre>
+<p>Please note that you have to replace "C:/Progra..." with the actual location where you installed the tools to.</p>
+<h3><span class="mw-headline" id="ImageMagick">ImageMagick</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=33" title="Edit section: ImageMagick" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=33" title="Edit section: ImageMagick">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl>
+<dd><b>Note</b>: PHP now comes with GD enabled by default. This will work for thumbnailing, and will not require any configuration or modification. Therefore it's highly recommended to <b>not</b> install ImageMagick, since it is known to be unstable. In fact the $wgImageMagickConvertCommand and Image.php mentioned below does not exist in MW1.15.1</dd>
+</dl>
+<dl>
+<dd><b>Note</b>: <a href="/wiki/Manual_talk:Image_Administration#Success.21.21.21_Image_Thumbnailing_in_XAMPP_1.7.7" title="Manual talk:Image Administration" class="mw-redirect">Settings for XAMPP v1.7.7 VC9 and MediaWiki v1.18.1</a></dd>
+</dl>
+<p>The "Q8" ImageMagick releases use 8 bits per channel, while the "Q16" releases use 16 bits per channel. To make image thumbnailing work, you will need to open includes/Image.php, locate the line that starts with <code>$cmd = $wgImageMagickConvertCommand .</code>, and remove the escapeshellarg() function, then do the same to the next line, so that the command variable builds like this:</p>
+<pre>
+<code>$cmd  =  $wgImageMagickConvertCommand .
+      " -quality 85 -background white -geometry {$width} ".
+      ($this-&gt;imagePath) . " " .
+      ($thumbPath);
+</code>
+</pre>
+<p>In addition, check to be sure that the <code>$wgImageMagickConvertCommand</code> in localsettings.php points to<br />
+(your imagemagick folder path)<b>/</b>convert.exe</p>
+<dl>
+<dd><b>Note</b>:
+<ul>
+<li>use the <b>.exe</b> extension! It won't work, if omitted.</li>
+<li>use a path <b>without spaces</b> as install path for ImageMagick or use the short name of the path.</li>
+</ul>
+</dd>
+</dl>
+<p>Another way to make this work is to add the ImageMagick path to your Windows PATH variable, and simply setting the <code>$wgImageMagickConvertCommand</code> in LocalSettings.php as follows (note that you must still modify Image.php as shown above):</p>
+<pre>
+$wgImageMagickConvertCommand = "convert.exe";
+</pre>
+<p>Make sure that the Internet Guest Account (Usually IUSR_MACHINENAME) has Read &amp; Execute rights to the ImageMagick bin directory. Without this you might see an PHP shell execution error similar to what happens when it can't find the convert.exe file.</p>
+<h3><span class="mw-headline" id="Mathematics_Support">Mathematics Support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=34" title="Edit section: Mathematics Support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=34" title="Edit section: Mathematics Support">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MediaWiki uses a program called <b><tt>texvc</tt></b> to render math expressions into nice looking PNG.</p>
+<p>Getting it up and running on Windows can be somewhat troublesome, as it was developed on and for linux, so it is recommended to use one of the other options found below. The first alternative solution has the highest success rate, assuming you have the correct software installed.</p>
+<dl>
+<dd><b>Note</b>: Maths support is strictly optional. Your wiki will run fine without it, although you'll need it if you want to enter formulae which are more complicated than a simple subscript.</dd>
+</dl>
+<p>What you'll need for all solutions:</p>
+<ul>
+<li>Latex and dvips (using the <a rel="nofollow" class="external text" href="http://www.miktex.org/Setup.aspx">Miktex package</a> for Windows)</li>
+<li><a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/ghostscript/">GhostScript</a> for its Postscript libraries (<a rel="nofollow" class="external autonumber" href="http://www.ghostscript.com/">[1]</a>) (Caution! in newer versions the gswin32c.exe has to be renamed or linked to gs.exe)</li>
+<li><a rel="nofollow" class="external text" href="http://www.imagemagick.org/script/binary-releases.php#windows">ImageMagick binaries</a> for windows</li>
+</ul>
+<p>Install these packages to a short directory, preferably one which does not contain spaces. C:\texmf seems to be the most common. You may have to manually add these packages to the path.</p>
+<p>Once you have these programs installed, check if the commands <tt>gs</tt>, <tt>latex</tt>, <tt>dvips</tt> and <tt>convert</tt> (not the built-in windows-tool!) are working by typing them at the cmd prompt. (Note that you may have to use ctrl-c to quit them as they take input from the console if no arguments are supplied). If they're not found you'll have to modify your PATH variable and restart your operating system. (For some reason Apache or PHP doesn't update its PATH until reboot, a service stop-start does not work)</p>
+<h4><span class="mw-headline" id="Option_A_-_Using_texvc">Option A - Using texvc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=35" title="Edit section: Option A - Using texvc" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=35" title="Edit section: Option A - Using texvc">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><tt>texvc</tt> is the tool that is included with MediaWiki, but it is written for Linux / Unix. Getting this to work in Windows can be challenging.</p>
+<h5><span class="mw-headline" id="Building_texvc_on_Windows">Building texvc on Windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=36" title="Edit section: Building texvc on Windows" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=36" title="Edit section: Building texvc on Windows">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>This is a quick and dirty hack to make texvc work under Windows.</p>
+<p>What you'll need:</p>
+<ul>
+<li>the <tt>texvc</tt> sources (included in the math directory of the MediaWiki distribution)</li>
+<li>a Make utility (for example mingw32-make, included in <a rel="nofollow" class="external text" href="http://www.mingw.org/download.shtml">MinGW</a>)</li>
+<li>an <a rel="nofollow" class="external text" href="http://caml.inria.fr/download.en.html">OCaml compiler</a></li>
+</ul>
+<p>If you use a pre-compiled binary you can skip this section, however you will still have to make the edits to Math.php and LocalSettings.php as described below.</p>
+<p>Before we compile texvc, we need to modify some of the files to reflect certain differences between Windows and Unix/Linux (mainly filesystem differences).</p>
+<p><b>Modify</b> <tt>math\render.ml</tt> so it looks like the file found <a href="/wiki/MWWRender.ml" title="MWWRender.ml">here</a> (updated).</p>
+<p>If you have Visual C++ and MASM installed, make the optimized <tt>texvc.exe</tt> by running the make utility in the math directory. If you do not have Visual C++ and MASM, make the bytecode version <tt>texvc.bc</tt> (by typing for example <tt>mingw32-make texvc.bc</tt> in the math directory) and rename it to <tt>texvc.exe</tt>. If an error occurs by do it via command line, restart your machine and try it again.</p>
+<h5><span class="mw-headline" id="Configuring_MediaWiki_to_use_texvc">Configuring MediaWiki to use texvc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=37" title="Edit section: Configuring MediaWiki to use texvc" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=37" title="Edit section: Configuring MediaWiki to use texvc">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>In <tt>LocalSettings.php</tt>, uncomment or insert:</p>
+<pre>
+$wgUseTeX = true;
+</pre>
+<p>to activate texvc functionality.</p>
+<p><br />
+If you are using MediaWiki with IIS then you should replace "REQUEST_URI" with "SCRIPT_NAME" in all files.</p>
+<p><br />
+And finally, set the <tt>texvc</tt> executable path to the root path of Wiki, by inserting this line in <tt>LocalSettings.php</tt>:</p>
+<pre>
+$wgTexvc = "texvc.exe"; # Location of the texvc binary
+</pre>
+<p>Let me know how this works for you in the discussion page.</p>
+<h5><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=38" title="Edit section: Troubleshooting" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=38" title="Edit section: Troubleshooting">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>I have experienced several problems with this method in connection with math.php as of MediaWiki version 1.10.0 (I have no experience with earlier versions) and the above texvc executable (1.4.7) by Fernando. I chose the latter one because it required neither cygwin nor ocaml runtimes. Here's what I figured out:</p>
+<ol>
+<li>only the directory "$wgTmpDirectory" is passed to both the temp and the math directory that texvc expects on its command line. This somehow seems to cause unwanted deletion of the generated image.</li>
+<li>the math.php relies on the cygwin shell "sh" to be installed on the system, which is not the case on my system.</li>
+<li>"$wgTmpDirectory" and "$wgMathDirectory" contain some slashes instead of backslashes as is common for windows. This seems to mess something up for the texvc executable so the image file does not get generated. Surprisingly, if I copy the very same command-line from the MediaWiki debug logfile to a shell window, the file gets generated.</li>
+<li>after execution of texvc, the math.php looks for the image file in "$wgTmpDirectory" which is consistent with the call of texvc</li>
+</ol>
+<p>The following steps to change math.php were necessary for me to get it working.</p>
+<p>The constructor:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw2">function</span> __construct<span class="br0">(</span> <span class="re0">$tex</span><span class="sy0">,</span> <span class="re0">$params</span><span class="sy0">=</span><span class="kw3">array</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span> wfIsWindows<span class="br0">(</span><span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+        <span class="re0">$tex</span> <span class="sy0">=</span> <span class="kw3">str_replace</span><span class="br0">(</span> <span class="st0">"<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="st_h">' '</span><span class="sy0">,</span> <span class="re0">$tex</span> <span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">tex</span> <span class="sy0">=</span> <span class="re0">$tex</span><span class="sy0">;</span>
+    <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">params</span> <span class="sy0">=</span> <span class="re0">$params</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>In "<tt>function render()</tt>";</p>
+<p>Make "$wgMathDirectory" accessible by changing</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw2">function</span> render<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw2">global</span> <span class="re0">$wgTmpDirectory</span><span class="sy0">,</span> <span class="re0">$wgInputEncoding</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>into</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw2">function</span> render<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw2">global</span> <span class="re0">$wgTmpDirectory</span><span class="sy0">,</span><span class="re0">$wgMathDirectory</span><span class="sy0">,</span> <span class="re0">$wgInputEncoding</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Then change the target directory for the texvc call into wgMathDirectory by replacing</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$cmd</span> <span class="sy0">=</span> <span class="re0">$wgTexvc</span> <span class="sy0">.</span> <span class="st_h">' '</span> <span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$wgTmpDirectory</span> <span class="br0">)</span><span class="sy0">.</span><span class="st_h">' '</span><span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$wgTmpDirectory</span> <span class="br0">)</span><span class="sy0">.</span><span class="st_h">' '</span><span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">tex</span> <span class="br0">)</span><span class="sy0">.</span><span class="st_h">' '</span><span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$wgInputEncoding</span> <span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>with</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$cmd</span> <span class="sy0">=</span> <span class="re0">$wgTexvc</span> <span class="sy0">.</span> <span class="st_h">' '</span> <span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$wgTmpDirectory</span> <span class="br0">)</span><span class="sy0">.</span><span class="st_h">' '</span><span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$wgMathDirectory</span> <span class="br0">)</span><span class="sy0">.</span><span class="st_h">' '</span><span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">tex</span> <span class="br0">)</span><span class="sy0">.</span><span class="st_h">' '</span><span class="sy0">.</span>
+    <span class="kw3">escapeshellarg</span><span class="br0">(</span> <span class="re0">$wgInputEncoding</span> <span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Now comment out the lines that try to use cygwin shell, if your system happens to be devoid of cygwin. Cmd.exe seems to be perfect for this anyway.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="coMULTI">/*if ( wfIsWindows() ) {
+    # Invoke it within cygwin sh, because texvc expects sh features in its default shell
+    $cmd = 'sh -c ' . wfEscapeShellArg( $cmd );
+}*/</span>
+</pre></div>
+</div>
+<p>To solve the slash problem (if not already done) replace the line</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+wfDebug<span class="br0">(</span> <span class="st0">"TeX: <span class="es4">$cmd</span><span class="es1">\n</span>"</span> <span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>with the lines</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+ <span class="re0">$cmd</span><span class="sy0">=</span><span class="kw3">str_replace</span><span class="br0">(</span><span class="st0">"'"</span><span class="sy0">,</span><span class="st0">"<span class="es1">\"</span>"</span><span class="sy0">,</span><span class="re0">$cmd</span><span class="br0">)</span><span class="sy0">;</span> <span class="co2"># replace single quotes by double quotes
+</span> <span class="re0">$cmd</span><span class="sy0">=</span><span class="kw3">str_replace</span><span class="br0">(</span><span class="st0">"/"</span><span class="sy0">,</span><span class="st0">"<span class="es1">\\</span>"</span><span class="sy0">,</span><span class="re0">$cmd</span><span class="br0">)</span><span class="sy0">;</span> <span class="co2"># replace slash by backslash for windows so texvc can work with it
+</span> wfDebug<span class="br0">(</span> <span class="st0">"TeX: <span class="es4">$cmd</span><span class="es1">\n</span>"</span> <span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Finally replace</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">if</span><span class="br0">(</span> <span class="sy0">!</span><span class="kw3">file_exists</span><span class="br0">(</span> <span class="st0">"<span class="es4">$wgTmpDirectory</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span> <span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+</pre></div>
+</div>
+<p>by</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">if</span><span class="br0">(</span> <span class="sy0">!</span><span class="kw3">file_exists</span><span class="br0">(</span> <span class="st0">"<span class="es4">$wgMathDirectory</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span> <span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+</pre></div>
+</div>
+<p>and</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">if</span><span class="br0">(</span> <span class="kw3">filesize</span><span class="br0">(</span> <span class="st0">"<span class="es4">$wgTmpDirectory</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span> <span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span> <span class="br0">)</span> <span class="br0">{</span>
+</pre></div>
+</div>
+<p>by</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">if</span><span class="br0">(</span> <span class="kw3">filesize</span><span class="br0">(</span> <span class="st0">"<span class="es4">$wgMathDirectory</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span> <span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span> <span class="br0">)</span> <span class="br0">{</span>
+</pre></div>
+</div>
+<p>and</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">if</span><span class="br0">(</span> <span class="sy0">!</span><span class="kw3">rename</span><span class="br0">(</span> <span class="st0">"<span class="es4">$wgTmpDirectory</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span><span class="sy0">,</span> <span class="st0">"<span class="es4">$hashpath</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span> <span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> <span class="re0">$this</span><span class="sy0">-&gt;</span>_error<span class="br0">(</span> <span class="st_h">'math_output_error'</span> <span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>by</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span><span class="kw3">file_exists</span><span class="br0">(</span><span class="st0">"<span class="es4">$hashpath</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span><span class="br0">(</span> <span class="sy0">!</span><span class="kw3">rename</span><span class="br0">(</span> <span class="st0">"<span class="es4">$wgMathDirectory</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span><span class="sy0">,</span> <span class="st0">"<span class="es4">$hashpath</span>/<span class="es4">{$this-&gt;hash}</span>.png"</span> <span class="br0">)</span> <span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">return</span> <span class="re0">$this</span><span class="sy0">-&gt;</span>_error<span class="br0">(</span> <span class="st_h">'math_output_error'</span> <span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>so the generated file will be found where it has been saved. And if the image already exists at the final destination don't error when calling <tt>rename()</tt>.</p>
+<p>The suggested solution is obviously a workaround for problems located in the specific texvc executable (with the exception of the probably missing cygwin shell). Perhaps it would be a cleaner solution to compile a texvc that does not have these problems, but personally I did not want to delve into the rather involved procedure of fixing and building texvc.</p>
+<h5><span class="mw-headline" id="Permissions">Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=39" title="Edit section: Permissions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=39" title="Edit section: Permissions">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>If the math still is not working, turn on the debug log and find the command string that calls <tt>texvc</tt>. For example:</p>
+<pre>
+TeX: C:\inetpub\wwwroot\w\math\texvc "C:\inetpub\wwwroot\w\images\tmp" "C:\inetpub\wwwroot\w\images\math" "\begin{align} y = &amp; \frac{1}{2} + \frac{1}{3}x^2 + \\ &amp; \frac{1}{4}x^3\end{align}" "utf-8"
+</pre>
+<p>Try the command in the console. If it works, you may have a permission problem. Try:</p>
+<ol>
+<li>Setting the images directory to Everyone; and</li>
+<li>Setting the internet user to a local profile (Application pools in IIS).</li>
+<li>Run <a rel="nofollow" class="external text" href="http://technet.microsoft.com/en-nz/sysinternals/bb896645(en-us).aspx">Process Monitor</a> on the server, look for "ACCESS DENIED" status errors. The path and user of the event will show which user needs permissions and what directories they need permission on.</li>
+</ol>
+<h4><span class="mw-headline" id="Option_B_-_Using_LatexRender">Option B - Using LatexRender</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=40" title="Edit section: Option B - Using LatexRender" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=40" title="Edit section: Option B - Using LatexRender">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>You may find compiling texvc to be very complicated or simply not working. Here is another solution (Using LatexRender, thanks to Benjamin Zeiss, completed by <a rel="nofollow" class="external text" href="http://www.metasharp.net/">MetaSharp</a>). The directories given here are examples, use your owns. This method has been successfully tested up to MediaWiki 1.10.0, 1.13.1 and on MediaWiki 1.15.1.</p>
+<h5><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=41" title="Edit section: Installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=41" title="Edit section: Installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ol>
+<li>install the complete <a rel="nofollow" class="external text" href="http://www.miktex.org/Setup.aspx">MikTeX</a> (not the basic one, use the network installer) in <font color="green">D:\wikitex\miktex</font></li>
+<li>install the static (to be sure dependencies are embed) binary of <a rel="nofollow" class="external text" href="http://www.imagemagick.org/script/binary-releases.php#windows">ImageMagick</a> in <font color="green">D:\wikitex\imagick</font> (ensure there are no spaces in the path you choose)</li>
+<li>install <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/ghostscript/">AFPL GhostScript</a> in <font color="green">D:\wikitex\ghostscript</font></li>
+<li>copy <font color="green">D:\wikitex\ghostscript\gs8.54\bin\gswin32c.exe</font> to <font color="green">D:\wikitex\ghostscript\gs8.54\bin\gs.exe</font>
+<dl>
+<dd>(8.54 can be different depending on version you install)</dd>
+</dl>
+</li>
+<li>add to the windows PATH environment variable this path: <font color="green">D:\wikitex\ghostscript\gs8.54\bin</font>
+<dl>
+<dd>(again, 8.54 can be different depending on version you install)</dd>
+</dl>
+</li>
+<li>If you installed MiKTeX for all users and are running IIS, you may also need to create MiKTeX folders under "C:\Documents and Settings\Default User\Application Data" and "C:\Documents and Settings\Default User\Local Settings\Application Data". Make sure the IIS working process account running PHP (IUSR_[whoever]) has both read <i>and write</i> permissions to these directories!</li>
+<li>open a command line (start -&gt; execute -&gt; cmd.exe)</li>
+<li>verify that the following commands are working:</li>
+</ol>
+<pre>
+latex
+dvips
+convert (not the Microsoft convert)
+gs
+</pre>
+<h5><span class="mw-headline" id="Settings">Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=42" title="Edit section: Settings" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=42" title="Edit section: Settings">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>(your wiki directory = $)</p>
+<ul>
+<li>replace the file <font color="green">$/includes/Math.php</font> with <b><a href="/wiki/Manual:Running_MediaWiki_on_Windows/math.php" title="Manual:Running MediaWiki on Windows/math.php">this one</a></b>. Later, if you see error message <i><b>Strict standards:</b> Non-static method MathRenderer::renderMath() should not be called statically</i> on the wiki page then change this line:</li>
+</ul>
+<pre>
+<code>function renderMath($latex_formula) {</code>
+</pre>
+<p>To this</p>
+<pre>
+<code>static function renderMath($latex_formula) {</code>
+</pre>
+<ul>
+<li>uncomment or insert in <font color="green">$/LocalSettings.php</font>:</li>
+</ul>
+<pre>
+$wgUseTeX= true;
+</pre>
+<ul>
+<li>insert in <font color="green">$/LocalSettings.php</font>:</li>
+</ul>
+<pre>
+#ImageMagick
+$wgImageMagickConvertCommand    = 'D:\wikitex\imagick\convert.exe';
+$wgImageMagickIdentifyCommand   = 'D:\wikitex\imagick\identify.exe';
+#Tex
+$wgLaTexCommand                 = 'D:\wikitex\miktex\miktex\bin\latex.exe';
+$wgDvipsCommand                 = 'D:\wikitex\miktex\miktex\bin\dvips.exe';
+</pre>
+<ul>
+<li>reboot if needed so that paths variables are updated for your services too</li>
+</ul>
+<h5><span class="mw-headline" id="Verifications">Verifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=43" title="Edit section: Verifications" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=43" title="Edit section: Verifications">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ul>
+<li>and voilà&#160;;) Now you can try in the sandbox to see whether it works. Enter something like this and hit preview to see if it works:</li>
+</ul>
+<pre>
+&lt;math&gt;\sqrt{2}&lt;/math&gt;
+</pre>
+<ul>
+<li>the folders "math" and "tmp" should have been created in the "images" folder automatically.</li>
+</ul>
+<p><br /></p>
+<p><br /></p>
+<h5><span class="mw-headline" id="How_to_get_the_latex_.22picture.22_package_to_work">How to get the latex "picture" package to work</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=44" title="Edit section: How to get the latex &quot;picture&quot; package to work" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=44" title="Edit section: How to get the latex &quot;picture&quot; package to work">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Just put something like this into your wiki page:</p>
+<pre>
+&lt;math&gt;\setlength{\unitlength}{1cm}
+ \begin{picture}(4,2)
+ \put(1,1){\circle{3}}
+ \put(3,1){\circle*{5}}
+ \end{picture}
+ &lt;/math&gt;
+ 
+</pre>
+<p><a rel="nofollow" class="external text" href="http://www.semibyte.de/dokuwiki/informatik:latex:picture_umgebung#kreise">Here</a> is the result (modified orders of magnitude!).</p>
+<h5><span class="mw-headline" id="Troubleshooting_2">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=45" title="Edit section: Troubleshooting" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=45" title="Edit section: Troubleshooting">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>You might experience some problems with formulas not being displayed if you are not logged in. In such a case comment out the 3 following lines in <font color="green">$/LocalSettings.php</font>:</p>
+<pre>
+$wgMathPath         = "{$wgUploadPath}/math";
+$wgMathDirectory    = "{$wgUploadDirectory}/math";
+$wgTmpDirectory     = "{$wgUploadDirectory}/tmp";
+</pre>
+<p>like this:</p>
+<pre>
+#$wgMathPath         = "{$wgUploadPath}/math";
+#$wgMathDirectory    = "{$wgUploadDirectory}/math";
+#$wgTmpDirectory     = "{$wgUploadDirectory}/tmp";
+</pre>
+<p>or just suppress them. Everything should be working fine now.</p>
+<p>You have to give permissions to the webserver to all the folders that need to access. Not just the ones in the wiki image and temporary folders, but also where you installed latex and the other software.</p>
+<h4><span class="mw-headline" id="Simplified_solution_with_dvipng">Simplified solution with dvipng</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=46" title="Edit section: Simplified solution with dvipng" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=46" title="Edit section: Simplified solution with dvipng">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a rel="nofollow" class="external free" href="https://bitbucket.org/FrigoCoder/script/src/tip/MediaWiki">https://bitbucket.org/FrigoCoder/script/src/tip/MediaWiki</a></p>
+<p>This is a greatly simplified solution of the above, removing all code and comments unrelated to MediaWiki. It uses only LaTeX and dvipng compiled with FreeType, it does not require GhostScript or ImageMagick. MikTeX 2.9 contains these, 2.8 lacks FreeType to my knowledge. Since dvipng wraps the formulas, it does not check for correct image dimensions, though it could be implemented, dvipng can return the image dimensions somehow. It uses \displaystyle for all inline math. You can escape the inline math, but are still subject to the blacklist, so it is not recommended to write entire LaTeX books in it. Very, very verbose error messages revealing your paths and latex version, modify the last return line if you don't like them; I might make a $debug setting, though at the moment I don't see any possibility of exploits. It does not change the current directory, and does not clean up temporary files if some error occurred during rendering, so you can check whether someone tried to feed it something suspicious. <a href="/wiki/User:Frigo" title="User:Frigo">Frigo</a> 18:29, 11 April 2011 (UTC)</p>
+<p>0) Make sure you have LaTeX and dvipng with FreeType support (e.g. MikTeX 2.9)</p>
+<p>1) Copy the file to includes/Math.php</p>
+<p>2) Add the following to LocalSettings.php (executable names will suffice if you have them in PATH)</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$wgUseTeX</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span>
+<span class="re0">$wgLaTexCommand</span> <span class="sy0">=</span> <span class="st0">"insert\path\here\latex.exe"</span><span class="sy0">;</span>
+<span class="re0">$wgDvipngCommand</span> <span class="sy0">=</span> <span class="st0">"insert\path\here\dvipng.exe"</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>3) Try it. My test is usually &lt;math&gt;E=mc^2&lt;/math&gt;&#160;:)</p>
+<p>Comments for the <a href="//meta.wikimedia.org/wiki/Help:Running_MediaWiki_on_Windows/math-dvipng.php" class="extiw" title="meta:Help:Running MediaWiki on Windows/math-dvipng.php">previous, messy version</a>:</p>
+<dl>
+<dd>Comment: This works for me in MediaWiki 1.11.0 except \begin{align}...\end{align} causes the image not to be rendered at all. This causes LaTeX to generate a blank DVI file and complain, "Package amsmath Error: \begin{align} allowed only in paragraph mode". If you comment out the usepackage{ams...} lines in Benjamin Zeiss's Math.php (function wrap_formula), the problem goes away. <a href="/wiki/User:Maiden_taiwan" title="User:Maiden taiwan">Maiden taiwan</a> 20:21, 26 October 2007 (UTC)</dd>
+</dl>
+<dl>
+<dd>Comment: This works for right out of the box for MediaWiki 1.10.0. The MikTeX installer sets everything up and the basic MikTeK package was enough. Only thing I needed to do, was a reboot after the install was finished. Good stuff. <a href="/w/index.php?title=User:Florihupf&amp;action=edit&amp;redlink=1" class="new" title="User:Florihupf (page does not exist)">User:florihupf</a> 16:30, 7/July/2007</dd>
+</dl>
+<dl>
+<dd>Comment: Very easy and works great for MediaWiki 1.10.0. Why is there no MediaWiki Package with this for Installing Mediawiki with TeX on Windows?, 18.11.2007</dd>
+</dl>
+<dl>
+<dd>Comment: This works with MediaWiki 1.11.0. I used texvc 1.4.7, MiKTeX 2.7 (full package), ImageMagick and Ghostscript 8.60. My only gripe is the size of MiKTeX when installed... more than 1 Gigabyte!!!</dd>
+</dl>
+<h4><span class="mw-headline" id="Alternative_Solution_with_Texvc_for_experienced_users_.28Mediawiki_1.16.0.29">Alternative Solution with Texvc for experienced users (Mediawiki 1.16.0)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit&amp;section=47" title="Edit section: Alternative Solution with Texvc for experienced users (Mediawiki 1.16.0)" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit&amp;section=47" title="Edit section: Alternative Solution with Texvc for experienced users (Mediawiki 1.16.0)">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><b>install this</b></p>
+<ul>
+<li>wamp (included apache, php5, mysql)</li>
+<li>a Make utility (for example mingw32-make, included in <a rel="nofollow" class="external text" href="http://www.mingw.org/download.shtml">MinGW</a>)</li>
+<li>an <a rel="nofollow" class="external text" href="http://caml.inria.fr/download.en.html">OCaml compiler</a></li>
+<li>Latex and dvips (using the <a rel="nofollow" class="external text" href="http://www.miktex.org/Setup.aspx">Miktex package</a> for Windows)</li>
+<li><a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/ghostscript/">GhostScript</a> for its Postscript libraries (<a rel="nofollow" class="external autonumber" href="http://www.ghostscript.com/">[2]</a>) (Caution! in newer versions the gswin32c.exe has to be renamed or linked to gs.exe)</li>
+<li><a rel="nofollow" class="external text" href="http://www.imagemagick.org/script/binary-releases.php#windows">ImageMagick binaries</a> for windows</li>
+<li><strike>maybe cygwin <i>i got it</i></strike></li>
+</ul>
+<p><i>in upper manual is written how to install this</i></p>
+<p><b>try somehow build texvc</b> <i>Attention!!!!!!! not needed edit render.ml</i></p>
+<ul>
+<li>the <tt>texvc</tt> sources (included in the math directory of the MediaWiki distribution)</li>
+<li>C:\wamp\www\wiki\math&gt; mingw32-make texvc.bc &amp; mv texvc.bc to texvc.exe</li>
+</ul>
+<p><i>in upper manual is written how to build this</i></p>
+<p><br />
+<b>Edit localconfig</b></p>
+<pre>
+$wgUseTeX           = true;
+$wgTexvc = "c:/wamp/www/wiki/math/texvc.exe";
+</pre>
+<p><br />
+<b>Edit include/math.php</b> This must be commented /* ... */</p>
+<pre>
+/*                      if ( wfIsWindows() ) {
+                                # Invoke it within cygwin sh, because texvc expects sh features in its default shell
+                                $cmd = 'sh -c ' . wfEscapeShellArg( $cmd );
+                        }
+*/
+</pre>
+<p><b>debug</b></p>
+<pre>
+c:/wamp/www/wiki/math/texvc.exe "C:\wamp\www\wiki/images/tmp" "C:\wamp\www\wiki/images/tmp" "B^{X^{c + v}}_Y + 121\!\," "UTF-8" "transparent"
+or
+c:\wamp\www\wiki\math\texvc.exe "C:\wamp\www\wiki\images\tmp" "C:\wamp\www\wiki\images\tmp" "B^{X^{c + v}}_Y + 121\!\," "UTF-8" "transparent"
+</pre>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ja"><a href="/wiki/Manual:Running_MediaWiki_on_Windows/ja" title="Manual:Running MediaWiki on Windows/ja">日本語</a></bdi>&#160;• <bdi lang="ru"><a href="/wiki/Manual:Running_MediaWiki_on_Windows/ru" title="Manual:Running MediaWiki on Windows/ru">русский</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1038
+CPU time usage: 1.804 seconds
+Real time usage: 1.865 seconds
+Preprocessor visited node count: 2369/1000000
+Preprocessor generated node count: 6897/1500000
+Post‐expand include size: 9539/2048000 bytes
+Template argument size: 15804/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:14066-0!*!0!!en!*!* and timestamp 20140124172156
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;oldid=833987">http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;oldid=833987</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+Windows&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+Windows" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_Windows"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Running_MediaWiki_on_Windows"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_Windows" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3ARunning+MediaWiki+on+Windows">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3ARunning+MediaWiki+on+Windows&amp;oldid=833987&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Running_MediaWiki_on_Windows" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Running_MediaWiki_on_Windows" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;oldid=833987" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Windows&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3ARunning_MediaWiki_on_Windows&amp;id=833987" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 December 2013, at 04:48.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Windows" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1060 in 0.311 secs. -->
+	</body>
+</html>

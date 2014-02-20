@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:What is MediaWiki? - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:What_is_MediaWiki%3F" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:What_is_MediaWiki?","wgTitle":"What is MediaWiki?","wgCurRevisionId":893294,"wgRevisionId":893294,"wgArticleId":16974,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["MediaWiki Introduction"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:What_is_MediaWiki?","wgIsProbablyEditable":false,"wgRestrictionEdit":["autoconfirmed"],"wgRestrictionMove":["autoconfirmed"],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["pt-br","pt","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":893294,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.translate","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_What_is_MediaWiki skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:What is MediaWiki?</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-pt-languages noprint" lang="en" dir="ltr" xml:lang="en">
+<table>
+<tbody>
+<tr valign="top">
+<td class="mw-pt-languages-label">Other languages:</td>
+<td class="mw-pt-languages-list autonym"><a href="/wiki/Manual:What_is_MediaWiki%3F/ast" title="Manual:What is MediaWiki?/ast">asturianu</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-1.png" alt="10%" title="10%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/bg" title="Manual:What is MediaWiki?/bg">български</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-2.png" alt="23%" title="23%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/ca" title="Manual:What is MediaWiki?/ca">català</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="94%" title="94%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/cs" title="Manual:What is MediaWiki?/cs">čeština</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-4.png" alt="77%" title="77%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/da" title="Manual:What is MediaWiki?/da">dansk</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="97%" title="97%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/de" title="Manual:What is MediaWiki?/de">Deutsch</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="100%" title="100%" width="9" height="9" />&#160;• ‎<span class="mw-pt-languages-ui mw-pt-languages-selected">English</span>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="100%" title="100%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/en-gb" title="Manual:What is MediaWiki?/en-gb">British English</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-1.png" alt="6%" title="6%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/es" title="Manual:What is MediaWiki?/es">español</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-1.png" alt="19%" title="19%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/fr" title="Manual:What is MediaWiki?/fr">français</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="97%" title="97%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/id" title="Manual:What is MediaWiki?/id">Bahasa Indonesia</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-3.png" alt="58%" title="58%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/it" title="Manual:What is MediaWiki?/it">italiano</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="100%" title="100%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/ja" title="Manual:What is MediaWiki?/ja">日本語</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="97%" title="97%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/ko" title="Manual:What is MediaWiki?/ko">한국어</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="84%" title="84%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/pl" title="Manual:What is MediaWiki?/pl">polski</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="90%" title="90%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/pt" title="Manual:What is MediaWiki?/pt">português</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-2.png" alt="29%" title="29%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/pt-br" title="Manual:What is MediaWiki?/pt-br">português do Brasil</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="100%" title="100%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/ru" title="Manual:What is MediaWiki?/ru">русский</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="97%" title="97%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/uk" title="Manual:What is MediaWiki?/uk">українська</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="100%" title="100%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/yue" title="Manual:What is MediaWiki?/yue">粵語</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-5.png" alt="97%" title="97%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/zh" title="Manual:What is MediaWiki?/zh">中文</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-3.png" alt="55%" title="55%" width="9" height="9" />&#160;• ‎<a href="/wiki/Manual:What_is_MediaWiki%3F/zh-tw" title="Manual:What is MediaWiki?/zh-tw">中文（台灣）‎</a>&#160;<img src="//bits.wikimedia.org/static-1.23wmf14/extensions/Translate/resources/images/prog-3.png" alt="57%" title="57%" width="9" height="9" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="float:right; background:#f9f9f9; margin-left:5px; margin-bottom:3px; padding:0px; border:1px solid #aaaaaa; width:17em;">
+<div style="font-size:105%; line-height:120%; padding:0.4em; background-color:#eeeeee; border-bottom:1px solid #aaaaaa;">
+<div class="floatright"><img alt="MediaWiki Flower" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tournesol.png/32px-Tournesol.png" width="32" height="32" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tournesol.png/48px-Tournesol.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tournesol.png/64px-Tournesol.png 2x" /></div>
+<b>Fundamental Introduction to <a href="/wiki/Special:MyLanguage/MediaWiki" title="Special:MyLanguage/MediaWiki">MediaWiki</a></b></div>
+<div style="background:#ffffff; padding:0.4em; font-size: 95%;">
+<p><b>Contents</b></p>
+<ul>
+<li><a href="/wiki/Special:MyLanguage/Manual:What_is_MediaWiki%3F" title="Special:MyLanguage/Manual:What is MediaWiki?">What is MediaWiki?</a></li>
+<li><a href="/wiki/Special:MyLanguage/Documentation" title="Special:MyLanguage/Documentation">Documentation</a></li>
+<li><a href="/wiki/Special:MyLanguage/Customization" title="Special:MyLanguage/Customization">Customization</a></li>
+<li><a href="/wiki/Special:MyLanguage/Download" title="Special:MyLanguage/Download">Versions &amp; Download</a></li>
+<li><a href="/wiki/Special:MyLanguage/Manual:Installation_guide" title="Special:MyLanguage/Manual:Installation guide">Installation</a></li>
+<li><a href="/wiki/Special:MyLanguage/Communication" title="Special:MyLanguage/Communication">Support &amp; Contact</a></li>
+<li><a href="/wiki/Special:MyLanguage/Development" title="Special:MyLanguage/Development">Development</a></li>
+</ul>
+<hr />
+<p><b>All other topics</b></p>
+<ul>
+<li>See navigation on the left</li>
+</ul>
+</div>
+</div>
+<div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -2px; left: -5px; position: relative; margin-right: -3px;"><img alt="Mediawiki-logo.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/53px-Mediawiki-logo.png" width="53" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/80px-Mediawiki-logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/106px-Mediawiki-logo.png 2x" /></span> <b><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation Guide</a></b> | <strong class="selflink">About MediaWiki</strong></span></div>
+<div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -8px; position: relative;"><img alt="Help-browser.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/40px-Help-browser.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/60px-Help-browser.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/80px-Help-browser.svg.png 2x" /></span> <a href="/wiki/Manual:MediaWiki_feature_list" title="Manual:MediaWiki feature list">Features</a> | <a href="/wiki/Manual:Installation_requirements" title="Manual:Installation requirements">Installation requirements</a></span></div>
+<div style="white-space: pre; float: left;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa; min-width: 20em;"><span style="top: -8px; position: relative;"><img alt="Preferences-system.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/40px-Preferences-system.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/60px-Preferences-system.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/80px-Preferences-system.svg.png 2x" /></span> <a href="/wiki/Download" title="Download">Downloading</a> | <a href="/wiki/Manual:Installing_MediaWiki" title="Manual:Installing MediaWiki">Installing</a> | <a href="/wiki/Manual:Configuring_MediaWiki" title="Manual:Configuring MediaWiki">Configuring</a></span></div>
+<p><br clear="left" /></p>
+<div class="floatleft"><a href="/wiki/File:Wikipedia-logo-v2.svg" class="image" title="Wikipedia logo"><img alt="Wikipedia logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/80px-Wikipedia-logo-v2.svg.png" width="80" height="73" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/120px-Wikipedia-logo-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/160px-Wikipedia-logo-v2.svg.png 2x" /></a></div>
+<p>You probably know <a href="//en.wikipedia.org/wiki/Wikipedia" class="extiw" title="en:Wikipedia">Wikipedia</a>, the free encyclopedia, and may possibly be a little bit confused by similar, but different, words such as Wiki, Wikimedia or <b>MediaWiki</b>.</p>
+<p>To avoid a possible confusion between the words you may first want to read the <a href="/wiki/Wikipmediawiki" title="Wikipmediawiki" class="mw-redirect">article about the names</a> where the differences are explained.</p>
+<p><br style="clear:left;" /></p>
+<h2><span class="mw-headline" id="General_Overview">General Overview</span></h2>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Wikimedia_Servers.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wikimedia_Servers.svg/220px-Wikimedia_Servers.svg.png" width="220" height="102" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wikimedia_Servers.svg/330px-Wikimedia_Servers.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wikimedia_Servers.svg/440px-Wikimedia_Servers.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Wikimedia_Servers.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+MediaWiki can be used in large enterprise server farms as in the Wikimedia Foundation cluster.</div>
+</div>
+</div>
+<p>MediaWiki is <a href="//en.wikipedia.org/wiki/Free_software" class="extiw" title="en:Free software">free</a> server-based software which is licensed under the <a href="//en.wikipedia.org/wiki/GNU_General_Public_License" class="extiw" title="en:GNU General Public License">GNU General Public License</a> (GPL). It's designed to be run on a large server farm for a website that gets millions of hits per day.</p>
+<p>MediaWiki is an extremely powerful, scalable software and a feature-rich wiki implementation that uses <a href="//en.wikipedia.org/wiki/PHP" class="extiw" title="en:PHP">PHP</a> to process and display data stored in a database, such as <a href="//en.wikipedia.org/wiki/MySQL" class="extiw" title="en:MySQL">MySQL</a>.</p>
+<p>Pages use MediaWiki's <a href="//en.wikipedia.org/wiki/Wikitext" class="extiw" title="en:Wikitext">wikitext format</a>, so that users without knowledge of <a href="//en.wikipedia.org/wiki/XHTML" class="extiw" title="en:XHTML">XHTML</a> or <a href="//en.wikipedia.org/wiki/Cascading_Style_Sheets" class="extiw" title="en:Cascading Style Sheets">CSS</a> can edit them easily.</p>
+<p>When a user submits an edit to a page, MediaWiki writes it to the database, but without deleting the previous versions of the page, thus allowing easy reverts in case of vandalism or spamming. MediaWiki can manage image and multimedia files, too, which are stored in the filesystem. For large wikis with lots of users, MediaWiki supports caching and can be easily coupled with Squid proxy server software.</p>
+<p><br style="clear:left;" /></p>
+<h2><span class="mw-headline" id="What_MediaWiki_is...">What MediaWiki is...</span></h2>
+<dl>
+<dt>MediaWiki is wiki software.</dt>
+</dl>
+<dl>
+<dd>If you don't know what a wiki is, then please read <a href="//en.wikipedia.org/wiki/Wiki" class="extiw" title="w:Wiki">this Wikipedia article</a> before going any further!</dd>
+</dl>
+<dl>
+<dt>MediaWiki is server software.</dt>
+</dl>
+<dl>
+<dd>As with any software that you expose to the internet, there may be bugs or security problems. Do not install MediaWiki unless you intend to keep up with <a class="external text" href="http://mail.wikipedia.org/mailman/listinfo/mediawiki-announce">security upgrades</a> (please subscribe to receive announcements of security updates).</dd>
+</dl>
+<dl>
+<dt>MediaWiki is geared towards the needs of the Wikimedia Foundation.</dt>
+</dl>
+<dl>
+<dd>The program is primarily developed to run on a <a href="//meta.wikimedia.org/wiki/Wikimedia_servers" class="extiw" title="m:Wikimedia servers">large server farm</a> for Wikipedia and its sister projects. Features, performance, configurability, ease-of-use, etc are designed in this light; if your needs are radically different the software might not be appropriate for you.</dd>
+</dl>
+<dl>
+<dt>MediaWiki is <a href="//en.wikipedia.org/wiki/free_software" class="extiw" title="en:free software">free software</a>.</dt>
+</dl>
+<dl>
+<dd>No guarantee or warranty of any kind is provided.</dd>
+</dl>
+<h2><span class="mw-headline" id="Try_out_Wikitext">Try out Wikitext</span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Wikitext-wiki_markup-wikipedia.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wikitext-wiki_markup-wikipedia.png/220px-Wikitext-wiki_markup-wikipedia.png" width="220" height="148" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wikitext-wiki_markup-wikipedia.png/330px-Wikitext-wiki_markup-wikipedia.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wikitext-wiki_markup-wikipedia.png/440px-Wikitext-wiki_markup-wikipedia.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Wikitext-wiki_markup-wikipedia.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Basic wikitext (wiki markup)</div>
+</div>
+</div>
+<p>Yes, you can easily modify pages and you can (temporarily) publish dummy sentences, and you can even (temporarily) completely destroy a page in a wiki. You don't need to have any programming skills to do this.</p>
+<p>We suggest you exercise yourself within our <a href="/wiki/Sandbox" title="Sandbox" class="mw-redirect">sandbox</a>. Please isolate your testing there, though: the <a href="/wiki/Project:Administrator" title="Project:Administrator" class="mw-redirect">admins</a> might not take too kindly to your mischief otherwise.</p>
+<p>You can also look up the <a href="//commons.wikimedia.org/wiki/Image:Cheatsheet-en.png" class="extiw" title="commons:Image:Cheatsheet-en.png">cheat sheet</a> which contains basic formatting commands.</p>
+<h2><span class="mw-headline" id="Some_things_MediaWiki_doesn.27t_do_so_well...">Some things MediaWiki doesn't do so well...</span></h2>
+<ul>
+<li>Because MediaWiki was designed for open-content, it is often not suitable for situations where you want to restrict access to part of the wiki.</li>
+</ul>
+<ul>
+<li>MediaWiki has been designed to serve very high-traffic websites such as <a href="//en.wikipedia.org/wiki/Main_Page" class="extiw" title="w:Main Page">Wikipedia</a>. It has been optimized for this use and may not be so suitable for smaller sites, where disk space or memory are bigger restrictions than bandwidth.</li>
+</ul>
+<ul>
+<li>MediaWiki is not normally a suitable replacement for dedicated forum/blogging software if that is what you are after.</li>
+</ul>
+<p>In the above cases there may be other wiki software (or non-wiki software) which better serves your needs.</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul>
+<li><a href="/wiki/Manual:Deciding_whether_to_use_a_wiki_as_your_website_type" title="Manual:Deciding whether to use a wiki as your website type">Manual:Deciding whether to use a wiki as your website type</a></li>
+<li><a href="/wiki/Manual:Deciding_which_wiki_software_to_use" title="Manual:Deciding which wiki software to use">Manual:Deciding which wiki software to use</a></li>
+<li><a href="/wiki/Manual:MediaWiki_feature_list" title="Manual:MediaWiki feature list">Full list of MediaWiki features</a></li>
+<li><a href="//en.wikipedia.org/wiki/Comparison_of_wiki_software" class="extiw" title="wikipedia:Comparison of wiki software">wikipedia:Comparison of wiki software</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.wikimatrix.org/">www.wikimatrix.org</a> — side-by-side comparison of various wiki engines.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1039
+CPU time usage: 0.520 seconds
+Real time usage: 0.593 seconds
+Preprocessor visited node count: 110/1000000
+Preprocessor generated node count: 533/1500000
+Post‐expand include size: 12878/2048000 bytes
+Template argument size: 129/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 4/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:16974-0!*!0!!en!4!* and timestamp 20140217165431
+ -->
+<div class="mw-pt-translate-header noprint nomobile"><a href="/w/index.php?title=Special:Translate&amp;group=page-Manual%3AWhat+is+MediaWiki%3F&amp;language=en&amp;action=page&amp;filter=" title="Special:Translate">Translate this page</a></div><hr /><noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;oldid=893294">http://www.mediawiki.org/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;oldid=893294</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:MediaWiki_Introduction" title="Category:MediaWiki Introduction">MediaWiki Introduction</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AWhat+is+MediaWiki%3F&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AWhat+is+MediaWiki%3F" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:What_is_MediaWiki%3F"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:What_is_MediaWiki%3F"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:What_is_MediaWiki%3F" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3AWhat+is+MediaWiki%3F">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3AWhat+is+MediaWiki%3F&amp;oldid=893294&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:What_is_MediaWiki%3F" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:What_is_MediaWiki%3F" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;oldid=893294" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:What_is_MediaWiki%3F&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3AWhat_is_MediaWiki%3F&amp;id=893294" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 January 2014, at 21:35.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:What_is_MediaWiki%3F" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1164 in 0.153 secs. -->
+	</body>
+</html>

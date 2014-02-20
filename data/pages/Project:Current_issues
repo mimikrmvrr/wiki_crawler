@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Project:Current issues - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Project:Current_issues&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Project:Current_issues&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="&quot;Project:Current issues&quot; Atom feed" href="/w/api.php?action=feedthreads&amp;type=replies%7Cnewthreads&amp;talkpage=Project%3ACurrent+issues&amp;feedformat=atom" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Project:Current_issues" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.geshi.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Project","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":4,"wgPageName":"Project:Current_issues","wgTitle":"Current issues","wgCurRevisionId":827267,"wgRevisionId":827267,"wgArticleId":55749,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["MediaWiki.org website"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Project:Current_issues","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRestrictionNewthread":[],"wgRestrictionReply":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-css {line-height: normal;}
+.source-css li, .source-css pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for css
+ * CSS class: source-css, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.css.source-css .de1, .css.source-css .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.css.source-css  {font-family:monospace;}
+.css.source-css .imp {font-weight: bold; color: red;}
+.css.source-css li, .css.source-css .li1 {font-weight: normal; vertical-align:top;}
+.css.source-css .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.css.source-css .li2 {font-weight: bold; vertical-align:top;}
+.css.source-css .kw1 {color: #000000; font-weight: bold;}
+.css.source-css .kw2 {color: #993333;}
+.css.source-css .co1 {color: #a1a100;}
+.css.source-css .co2 {color: #ff0000; font-style: italic;}
+.css.source-css .coMULTI {color: #808080; font-style: italic;}
+.css.source-css .es0 {color: #000099; font-weight: bold;}
+.css.source-css .es2 {color: #000099; font-weight: bold;}
+.css.source-css .br0 {color: #00AA00;}
+.css.source-css .sy0 {color: #00AA00;}
+.css.source-css .st0 {color: #ff0000;}
+.css.source-css .nu0 {color: #cc66cc;}
+.css.source-css .re0 {color: #cc00cc;}
+.css.source-css .re1 {color: #6666ff;}
+.css.source-css .re2 {color: #3333ff;}
+.css.source-css .re3 {color: #933;}
+.css.source-css .ln-xtra, .css.source-css li.ln-xtra, .css.source-css div.ln-xtra {background-color: #ffc;}
+.css.source-css span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-4 ns-subject page-Project_Current_issues skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Project:Current issues</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="lqt-talkpage"><div style="border:1px solid #444455; padding-left:3px">
+<div style="font-size:130%; padding:0.5em 0.2em 0.5em 0.2em; margin:2px 2px 2px 0; background:#444455; color:#ffffff">This page is for discussing issues related to MediaWiki.org site. To get help with MediaWiki <u>software</u>, ask on <a href="/wiki/Project:Support_desk" title="Project:Support desk"><span style="color: white">Project:Support desk</span></a>.</div>
+<table class="wikitable" style="margin:.4em .4em .4em .4em; float:right;">
+<tr>
+<td style="max-width:300px; text-align:center; padding:.4em .4em 4.em .4em; font-size:105%;"><a href="/wiki/File:File-manager.png" class="image" title="An archive box"><img alt="An archive box" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/File-manager.png/30px-File-manager.png" width="30" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/File-manager.png/45px-File-manager.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/File-manager.png/60px-File-manager.png 2x" /></a> <b>Archives</b>&#160;</td>
+</tr>
+<tr>
+<td style="padding:0 .4em .24em .4em; font-size:95%;">
+<p><a href="/wiki/Project:Current_issues/Archive" title="Project:Current issues/Archive">Current issues archive overview</a></p>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1094
+CPU time usage: 0.032 seconds
+Real time usage: 0.043 seconds
+Preprocessor visited node count: 12/1000000
+Preprocessor generated node count: 66/1500000
+Post‐expand include size: 361/2048000 bytes
+Template argument size: 66/2048000 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:55749-0!*!0!*!*!4!* and timestamp 20140219090248
+ -->
+<div class="lqt_header_content"><ul class="lqt_header_commands"><li>[<a href="/w/index.php?title=Project:Current_issues&amp;action=edit" title="Project:Current issues">Edit↑</a>]</li>
+<li>[<a href="/w/index.php?title=Project:Current_issues&amp;action=history" title="Project:Current issues">History↑</a>]</li>
+</ul></div></div><div class="lqt-talkpage" lang="en" dir="ltr"><div class="lqt-talkpage-header"><strong class="lqt_start_discussion"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=talkpage_new_thread" title="Project:Current issues" lqt_talkpage="Project:Current issues">Start a new discussion</a></strong><div class="lqt-talkpage-search"><form action="/wiki/Project:Current_issues" method="get"><label for="lqt-search-box">Search terms:</label>&#160;<input name="lqt_search" size="45" id="lqt-search-box" /> <input type="submit" value="Search" /><input type="hidden" value="Project:Current issues" name="title" /></form></div><div class="lqt_view_options"><form action="/w/index.php?title=Project:Current_issues&amp;lqt_method=talkpage_sort_order" method="get" name="lqt_sort"><label for="lqt_sort_select">Sorting order:</label> <select name="lqt_order" id="lqt_sort_select" class="lqt_sort_select"><option value="nc" selected="">last modified first</option>
+<option value="nt">newest threads first</option>
+<option value="ot">oldest threads first</option></select><input type="submit" value="Sort" class="lqt_go_sort" /><input type="hidden" value="Project:Current issues" name="title" /></form></div></div><div class="lqt-new-thread lqt-edit-form"></div><div class="lqt-contents-wrapper"><h2>Contents</h2><table class="lqt_toc"><thead><tr><th>Thread title</th><th>Replies</th><th>Last modified</th></tr></thead>
+<tbody><tr><td dir="ltr"><a href="#Company_intranet_wikisite_39713">Company intranet wikisite</a></td><td>0</td><td>08:55, 19 February 2014</td></tr>
+<tr><td dir="ltr"><a href="#Default_for_.24wgMaxShellMemory_too_low_39018">Default for $wgMaxShellMemory too low</a></td><td>0</td><td>21:40, 4 February 2014</td></tr>
+<tr><td dir="ltr"><a href="#SUL_not_working.3F_37834">SUL not working?</a></td><td>7</td><td>19:22, 25 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35494">[CLOSED] Extension matrix is not being updated</a></td><td>4</td><td>19:22, 25 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#x.5BDONE.5D_Request_of_translation_admin_rights_35645">[DONE] Request of translation admin rights</a></td><td>3</td><td>19:22, 25 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#x.5BDONE.5D_Changes_pending_review_37595">[DONE] Changes pending review</a></td><td>1</td><td>16:08, 14 February 2014</td></tr>
+<tr><td dir="ltr"><a href="#All_embedded_SVG_images_are_broken_37535">All embedded SVG images are broken</a></td><td>1</td><td>19:22, 25 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Filter_translations_in_recent_changes_doesn.27t_work_37346">Filter translations in recent changes doesn&#039;t work</a></td><td>5</td><td>19:22, 25 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37080">Bug management/Bugzilla etiquette: last call</a></td><td>3</td><td>19:22, 25 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Greetings_from_Russian.2C_Pindostana.3F_38270">Greetings from Russian, Pindostana?</a></td><td>2</td><td>22:07, 21 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#json_format_of_search_query_api_for_text_search_38304">json format of search query api for text search</a></td><td>0</td><td>21:27, 21 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Flow_is_down.3F_37700">Flow is down?</a></td><td>2</td><td>11:01, 8 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Copy_paste_images_with_clipboard_37515">Copy paste images with clipboard</a></td><td>0</td><td>15:08, 2 January 2014</td></tr>
+<tr><td dir="ltr"><a href="#Sighting-Settings.3F_37104">Sighting-Settings?</a></td><td>0</td><td>14:24, 20 December 2013</td></tr>
+<tr><td dir="ltr"><a href="#Quicker_edit_approval_37061">Quicker edit approval</a></td><td>1</td><td>13:56, 19 December 2013</td></tr>
+<tr><td dir="ltr"><a href="#Update_extension:ConfirmAccount_36471">Update extension:ConfirmAccount</a></td><td>1</td><td>23:36, 13 December 2013</td></tr>
+<tr><td dir="ltr"><a href="#How_do_I_get_a_complete_git_checkout_of_all_the_files_needed_for_MW_to_work.3F_36807">How do I get a complete git checkout of all the files needed for MW to work?</a></td><td>0</td><td>23:30, 13 December 2013</td></tr>
+<tr><td dir="ltr"><a href="#Downloads_on_front_page_36462">Downloads on front page</a></td><td>1</td><td>17:49, 7 December 2013</td></tr>
+<tr><td dir="ltr"><a href="#Forbidden_error_when_making_donation_36362">Forbidden error when making donation</a></td><td>1</td><td>06:03, 5 December 2013</td></tr>
+<tr><td dir="ltr"><a href="#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267">[FIXED] Fix MWDeprecationWarning in a global gadget</a></td><td>0</td><td>20:32, 3 December 2013</td></tr></tbody></table></div><table class="TalkpagePager_nav" align="center" cellpadding="3"><tr>
+<td valign="top" align="center" width="25%"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_disabled_first_25.png" alt="First page"/><br />First page</td>
+<td valign="top" align="center" width="25%"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_disabled_left_25.png" alt="Previous page"/><br />Previous page</td>
+<td valign="top" align="center" width="25%"><a href="/w/index.php?title=Project:Current_issues&amp;offset=20131203203246&amp;limit=20" title="Project:Current issues" rel="next" class="mw-nextlink"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_right_25.png" alt="Next page"/><br />Next page</a></td>
+<td valign="top" align="center" width="25%"><a href="/w/index.php?title=Project:Current_issues&amp;dir=prev&amp;limit=20" title="Project:Current issues" rel="last" class="mw-lastlink"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_last_25.png" alt="Last page"/><br />Last page</a></td>
+</tr></table>
+<div class="lqt-threads lqt-talkpage-threads"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_39713"><a name="Company_intranet_wikisite_39713"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-39713" dir="ltr"><span class="mw-headline">Company intranet wikisite</span><input type="hidden" value="Company intranet wikisite" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-39713"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Company_intranet_wikisite_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Company_intranet_wikisite_(2)&amp;lqt_method=summarize&amp;lqt_operand=39713" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-39713" class="lqt-thread-modified" type="hidden" value="20140219085518" name="lqt-thread-modified-39713" /><input id="lqt-thread-sortkey-39713" type="hidden" value="20140219085513" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-39713" /><input id="lqt-thread-title-39713" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Company intranet wikisite (2)" name="lqt-thread-title-39713" /><div class="lqt-post-wrapper">A thread, <a href="/wiki/Thread:Project:Current_issues/Company_intranet_wikisite" title="Thread:Project:Current issues/Company intranet wikisite">Thread:Project:Current issues/Company intranet wikisite</a>, was moved from here to <a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a>.
+This move was made by <a href="/wiki/User:Jasper_Deng" title="User:Jasper Deng" class="mw-userlink">Jasper Deng</a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Jasper_Deng" title="User talk:Jasper Deng">talk</a> | <a href="/wiki/Special:Contributions/Jasper_Deng" title="Special:Contributions/Jasper Deng">contribs</a>)</span> on 19 February 2014 at 08:55.</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_39018"><a name="Default_for_.24wgMaxShellMemory_too_low_39018"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-39018" dir="ltr"><span class="mw-headline">Default for $wgMaxShellMemory too low</span><input type="hidden" value="Default for $wgMaxShellMemory too low" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-39018"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Default_for_$wgMaxShellMemory_too_low_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Default_for_$wgMaxShellMemory_too_low_(2)&amp;lqt_method=summarize&amp;lqt_operand=39018" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-39018" class="lqt-thread-modified" type="hidden" value="20140204214052" name="lqt-thread-modified-39018" /><input id="lqt-thread-sortkey-39018" type="hidden" value="20140204214049" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-39018" /><input id="lqt-thread-title-39018" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Default for $wgMaxShellMemory too low (2)" name="lqt-thread-title-39018" /><div class="lqt-post-wrapper">A thread, <a href="/wiki/Thread:Project:Current_issues/Default_for_$wgMaxShellMemory_too_low" title="Thread:Project:Current issues/Default for $wgMaxShellMemory too low">Thread:Project:Current issues/Default for $wgMaxShellMemory too low</a>, was moved from here to <a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a>.
+This move was made by <a href="/wiki/User:Nemo_bis" title="User:Nemo bis" class="mw-userlink">Nemo bis</a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Nemo_bis" title="User talk:Nemo bis">talk</a> | <a href="/wiki/Special:Contributions/Nemo_bis" title="Special:Contributions/Nemo bis">contribs</a>)</span> on 4 February 2014 at 21:40.</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37834"><a name="SUL_not_working.3F_37834"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37834" dir="ltr"><span class="mw-headline">SUL not working?</span><input type="hidden" value="SUL not working?" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37834"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F&amp;lqt_method=summarize&amp;lqt_operand=37834" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37834" class="lqt-thread-modified" type="hidden" value="20140125192246" name="lqt-thread-modified-37834" /><input id="lqt-thread-sortkey-37834" type="hidden" value="20140125192246" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37834" /><input id="lqt-thread-title-37834" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?" name="lqt-thread-title-37834" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Until very recently, when I came here from enwiki, I was automatically logged in here. Today, this doesn't seem to work. Is this restricted to me or a general problem?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.004 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187082-0!*!*!*!*!*!* and timestamp 20140125193103
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37834#SUL_not_working.3F_37834" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37834#SUL_not_working.3F_37834" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">07:57, 10 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37845"><a name="SUL_not_working.3F_37845"> </a><input id="lqt-thread-title-37845" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply" name="lqt-thread-title-37845" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>CentralAuth issues are often hard to describe, since the implementation of SUL2. If you can reproduce the issue reliably, please report a bug with clear steps to reproduce.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187114-0!*!*!*!*!*!* and timestamp 20140125193103
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37845#SUL_not_working.3F_37845" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37834" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37845#SUL_not_working.3F_37845" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">15:40, 10 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37848"><a name="SUL_not_working.3F_37848"> </a><input id="lqt-thread-title-37848" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply (2)" name="lqt-thread-title-37848" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>Um, I don't think there is anything more to add wrt "clear steps": start a browser session, open enwiki with your useraccount there, then go from some enwiki page to a mediawiki page (I started from <a class="external free" href="https://en.wikipedia.org/wiki/Wikipedia:VisualEditor">https://en.wikipedia.org/wiki/Wikipedia:VisualEditor</a> and used the "(or at Mediawiki)" link in the infobox on the right), and notice that you are not logged in at MediaWiki... At least, that's what happens to me!</p>
+<p>And I can't file a bug at Bugzilla, as I am indefinitely blocked there. Which saves me a lot of trouble&#160;:-)</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187119-0!*!*!*!*!*!* and timestamp 20140125193103
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37848#SUL_not_working.3F_37848" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37845" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37848#SUL_not_working.3F_37848" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">16:25, 10 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-3"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37849"><a name="SUL_not_working.3F_37849"> </a><input id="lqt-thread-title-37849" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply (3)" name="lqt-thread-title-37849" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>Could you check to see if you have any browser plugins that mangle cookies? I have a cookie self-destruct add-on, for example, that could cause problems like this. Otherwise, check the <a href="/w/index.php?title=WP:VPT&amp;action=edit&amp;redlink=1" class="new" title="WP:VPT (page does not exist)">village pump</a> to see if anyone else has reported any issues.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187129-0!*!0!*!*!*!* and timestamp 20140125193103
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37849#SUL_not_working.3F_37849" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37848" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply_(3)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37849#SUL_not_working.3F_37849" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply_(3)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><span style="color:#d30000">☠</span><a href="/wiki/User:MarkAHershberger" title="User:MarkAHershberger">MarkAHershberger</a><span style="color:#d30000">☢</span>(<a href="/wiki/User_talk:MarkAHershberger" title="User talk:MarkAHershberger">talk</a>)<span style="color:#d30000">☣</span></span>‎<span class="lqt-thread-toolbar-timestamp">16:32, 10 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-4 lqt-thread-replies-interruption"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-5 lqt-thread-odd lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37850"><a name="SUL_not_working.3F_37850"> </a><input id="lqt-thread-title-37850" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply (4)" name="lqt-thread-title-37850" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-5 lqt-thread-odd mw-content-ltr"><p>Standard FF26 without any add-ons. I don't have this problem when going from enwiki to e.g. frwiki or to Commons, only (as far as I have seen) when going to Mediawiki.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1107
+CPU time usage: 0.004 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187131-0!*!*!*!*!*!* and timestamp 20140209164609
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37850#SUL_not_working.3F_37850" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37849" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply_(4)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37850#SUL_not_working.3F_37850" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply_(4)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">16:38, 10 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-last lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37857"><a name="SUL_not_working.3F_37857"> </a><input id="lqt-thread-title-37857" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply (5)" name="lqt-thread-title-37857" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>I've had occasional problems with logging in at en.wp and then discovering that I was logged out at Meta or Mediawiki, also in Firefox. However, the reverse doesn't seem to happen, and it's not common. Does this happen to you every time you come to Mediawiki?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187156-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37857#SUL_not_working.3F_37857" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37848" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply_(5)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37857#SUL_not_working.3F_37857" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply_(5)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Whatamidoing_(WMF)" title="User:Whatamidoing (WMF)">Whatamidoing (WMF)</a> (<a href="/wiki/User_talk:Whatamidoing_(WMF)" title="User talk:Whatamidoing (WMF)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">18:40, 10 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-4"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-5 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37858"><a name="SUL_not_working.3F_37858"> </a><input id="lqt-thread-title-37858" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply (6)" name="lqt-thread-title-37858" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-5 lqt-thread-odd mw-content-ltr"><p>Today, every time I tried it, even after restarting my computer. Before today, not that I recall.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187157-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37858#SUL_not_working.3F_37858" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37857" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply_(6)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37858#SUL_not_working.3F_37858" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply_(6)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">18:51, 10 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-5"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-6 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_38011"><a name="SUL_not_working.3F_38011"> </a><input id="lqt-thread-title-38011" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/SUL not working?/reply (7)" name="lqt-thread-title-38011" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-6 lqt-thread-even mw-content-ltr"><p>For the first time in a week, I was automatically logged in when coming here from enwiki. No idea if this fixed, or if it is simply unpredictable.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.015 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:187861-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=38011#SUL_not_working.3F_38011" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#SUL_not_working.3F_37858" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/SUL_not_working%3F/reply_(7)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=38011#SUL_not_working.3F_38011" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/SUL_not_working%3F/reply_(7)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">08:22, 15 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_35494"><a name="x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35494"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-35494" dir="ltr"><span class="mw-headline">[CLOSED] Extension matrix is not being updated</span><input type="hidden" value="[CLOSED] Extension matrix is not being updated" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-35494"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated&amp;lqt_method=summarize&amp;lqt_operand=35494" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-35494" class="lqt-thread-modified" type="hidden" value="20140125192240" name="lqt-thread-modified-35494" /><input id="lqt-thread-sortkey-35494" type="hidden" value="20140125192240" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-35494" /><input id="lqt-thread-title-35494" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Extension matrix is not being updated" name="lqt-thread-title-35494" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>No update since the fourth of October,</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:163538-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35494#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35494" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35494#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35494" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Extension_matrix_is_not_being_updated" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/w/index.php?title=User:Levreauj&amp;action=edit&amp;redlink=1" class="new" title="User:Levreauj (page does not exist)">Levreauj</a> (<a href="/wiki/User_talk:Levreauj" title="User talk:Levreauj">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">05:49, 12 November 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_35495"><a name="x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35495"> </a><input id="lqt-thread-title-35495" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Extension matrix is not being updated/reply" name="lqt-thread-title-35495" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Have you told the maintainer?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1071
+CPU time usage: 0.008 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:163541-0!*!*!*!*!*!* and timestamp 20140211081746
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35495#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35495" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35494" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35495#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35495" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">08:07, 12 November 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2 lqt-thread-replies-interruption"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_35512"><a name="x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35512"> </a><input id="lqt-thread-title-35512" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Extension matrix is not being updated/reply (2)" name="lqt-thread-title-35512" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>Well I'm trying too&#160;;-)</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1071
+CPU time usage: 0.004 seconds
+Real time usage: 0.006 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:163667-0!*!*!*!*!*!* and timestamp 20140211081746
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35512#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35512" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35495" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35512#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35512" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/w/index.php?title=User:Levreauj&amp;action=edit&amp;redlink=1" class="new" title="User:Levreauj (page does not exist)">Levreauj</a> (<a href="/wiki/User_talk:Levreauj" title="User talk:Levreauj">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">00:36, 13 November 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-3"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_35519"><a name="x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35519"> </a><input id="lqt-thread-title-35519" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Extension matrix is not being updated/reply (3)" name="lqt-thread-title-35519" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>Someone else already did.<a class="external autonumber" href="https://www.mediawiki.org/w/index.php?title=User_talk%3AAlterego&amp;diff=805523&amp;oldid=710507">[1]</a></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1071
+CPU time usage: 0.008 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:163710-0!*!*!*!*!*!* and timestamp 20140211081746
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35519#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35519" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35512" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply_(3)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35519#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35519" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply_(3)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">08:04, 13 November 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-last lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37598"><a name="x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_37598"> </a><input id="lqt-thread-title-37598" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Extension matrix is not being updated/reply (4)" name="lqt-thread-title-37598" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Marking it closed as nothing changed since November 13.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1028
+CPU time usage: 0.004 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:184113-0!*!*!*!*!*!* and timestamp 20140203010247
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37598#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_37598" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_35494" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply_(4)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37598#x.5BCLOSED.5D_Extension_matrix_is_not_being_updated_37598" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Extension_matrix_is_not_being_updated/reply_(4)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:SVG" title="User:SVG"><span title="User SVG" style="color: #007"><b>Tim</b> <small>(SVG)</small></span></a></span>‎<span class="lqt-thread-toolbar-timestamp">00:55, 4 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_35645"><a name="x.5BDONE.5D_Request_of_translation_admin_rights_35645"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-35645" dir="ltr"><span class="mw-headline">[DONE] Request of translation admin rights</span><input type="hidden" value="[DONE] Request of translation admin rights" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-35645"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Request_of_translation_admin_rights&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Request_of_translation_admin_rights&amp;lqt_method=summarize&amp;lqt_operand=35645" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-35645" class="lqt-thread-modified" type="hidden" value="20140125192238" name="lqt-thread-modified-35645" /><input id="lqt-thread-sortkey-35645" type="hidden" value="20140125192238" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-35645" /><input id="lqt-thread-title-35645" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Request of translation admin rights" name="lqt-thread-title-35645" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Hi, I would like to become translation admin; I regularly translate pages here (and on Meta also) and I frequently view desynchronized pages between the source language and the translations because of corrections of typos (and it generally don’t worth asking specifically an update), so it’s mainly for this type of tasks I’m requesting. I already played with translation admin rights on a test wiki.</p>
+<p>Thanks,</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.015 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:164149-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35645#x.5BDONE.5D_Request_of_translation_admin_rights_35645" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Request_of_translation_admin_rights&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35645#x.5BDONE.5D_Request_of_translation_admin_rights_35645" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Request_of_translation_admin_rights" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature">~ <a href="/wiki/User:Seb35" title="User:Seb35">Seb35</a></span>‎<span class="lqt-thread-toolbar-timestamp">18:22, 16 November 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_35647"><a name="x.5BDONE.5D_Request_of_translation_admin_rights_35647"> </a><input id="lqt-thread-title-35647" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Request of translation admin rights/reply" name="lqt-thread-title-35647" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Please file your request at <a href="/wiki/Project:Requests" title="Project:Requests">Project:Requests</a>.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1065
+CPU time usage: 0.008 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:164165-0!*!0!*!*!*!* and timestamp 20140201011649
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35647#x.5BDONE.5D_Request_of_translation_admin_rights_35647" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BDONE.5D_Request_of_translation_admin_rights_35645" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Request_of_translation_admin_rights/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35647#x.5BDONE.5D_Request_of_translation_admin_rights_35647" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Request_of_translation_admin_rights/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Jasper_Deng" title="User:Jasper Deng">Jasper Deng</a> (<a href="/wiki/User_talk:Jasper_Deng" title="User talk:Jasper Deng">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">22:10, 16 November 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_35672"><a name="x.5BDONE.5D_Request_of_translation_admin_rights_35672"> </a><input id="lqt-thread-title-35672" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Request of translation admin rights/reply (2)" name="lqt-thread-title-35672" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>Done. Thanks.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1065
+CPU time usage: 0.004 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:164285-0!*!*!*!*!*!* and timestamp 20140201011649
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35672#x.5BDONE.5D_Request_of_translation_admin_rights_35672" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BDONE.5D_Request_of_translation_admin_rights_35647" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Request_of_translation_admin_rights/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35672#x.5BDONE.5D_Request_of_translation_admin_rights_35672" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Request_of_translation_admin_rights/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature">~ <a href="/wiki/User:Seb35" title="User:Seb35">Seb35</a> <a href="/wiki/User_talk:Seb35" title="User talk:Seb35"><small>[^_^]</small></a></span>‎<span class="lqt-thread-toolbar-timestamp">00:08, 18 November 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-3"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_35675"><a name="x.5BDONE.5D_Request_of_translation_admin_rights_35675"> </a><input id="lqt-thread-title-35675" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Request of translation admin rights/reply (3)" name="lqt-thread-title-35675" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>Granted.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1101
+CPU time usage: 0.004 seconds
+Real time usage: 0.008 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:164289-0!*!*!*!*!*!* and timestamp 20140216023655
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=35675#x.5BDONE.5D_Request_of_translation_admin_rights_35675" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BDONE.5D_Request_of_translation_admin_rights_35672" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Request_of_translation_admin_rights/reply_(3)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=35675#x.5BDONE.5D_Request_of_translation_admin_rights_35675" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Request_of_translation_admin_rights/reply_(3)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Jasper_Deng" title="User:Jasper Deng">Jasper Deng</a> (<a href="/wiki/User_talk:Jasper_Deng" title="User talk:Jasper Deng">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">01:32, 18 November 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37595"><a name="x.5BDONE.5D_Changes_pending_review_37595"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37595" dir="ltr"><span class="mw-headline">[DONE] Changes pending review</span><input type="hidden" value="[DONE] Changes pending review" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37595"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Changes_pending_review&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Changes_pending_review&amp;lqt_method=summarize&amp;lqt_operand=37595" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37595" class="lqt-thread-modified" type="hidden" value="20140214160802" name="lqt-thread-modified-37595" /><input id="lqt-thread-sortkey-37595" type="hidden" value="20140125192235" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37595" /><input id="lqt-thread-title-37595" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Changes pending review" name="lqt-thread-title-37595" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Someone please review these edits - <a class="external autonumber" href="https://www.mediawiki.org/w/index.php?title=Extension:Multi-Category_Search&amp;oldid=824950&amp;diff=cur">[1]</a> &amp; <a class="external autonumber" href="https://www.mediawiki.org/w/index.php?title=Extension:News_Channel&amp;oldid=713172&amp;diff=cur">[2]</a>, they are quite important, the download links have been changed. Thanks in advance.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1027
+CPU time usage: 0.008 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:184101-0!*!*!*!*!*!* and timestamp 20140214160803
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37595#x.5BDONE.5D_Changes_pending_review_37595" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Changes_pending_review&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37595#x.5BDONE.5D_Changes_pending_review_37595" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Changes_pending_review" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:CodeMonk" title="User:CodeMonk">CodeMonk</a> (<a href="/wiki/User_talk:CodeMonk" title="User talk:CodeMonk">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">00:10, 4 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37597"><a name="x.5BDONE.5D_Changes_pending_review_37597"> </a><input id="lqt-thread-title-37597" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Changes pending review/reply" name="lqt-thread-title-37597" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Done.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.012 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:184112-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37597#x.5BDONE.5D_Changes_pending_review_37597" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5BDONE.5D_Changes_pending_review_37595" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Changes_pending_review/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37597#x.5BDONE.5D_Changes_pending_review_37597" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Changes_pending_review/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:CodeMonk" title="User:CodeMonk">CodeMonk</a> (<a href="/wiki/User_talk:CodeMonk" title="User talk:CodeMonk">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">00:52, 4 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37535"><a name="All_embedded_SVG_images_are_broken_37535"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37535" dir="ltr"><span class="mw-headline">All embedded SVG images are broken</span><input type="hidden" value="All embedded SVG images are broken" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37535"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/All_embedded_SVG_images_are_broken&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/All_embedded_SVG_images_are_broken&amp;lqt_method=summarize&amp;lqt_operand=37535" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37535" class="lqt-thread-modified" type="hidden" value="20140125192232" name="lqt-thread-modified-37535" /><input id="lqt-thread-sortkey-37535" type="hidden" value="20140125192232" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37535" /><input id="lqt-thread-title-37535" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/All embedded SVG images are broken" name="lqt-thread-title-37535" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>The wiki is trying to embed SVG images as application/xml instead of image/svg+xml and thus, they're all broken.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="css source-css">
+<pre class="de1">
+<span class="re1">.mw-icon-arrow-collapsed</span><span class="sy0">,</span><span class="re1">.mw-collapsible-arrow</span>.mw-collapsible-toggle-collapsed<span class="br0">{</span>
+    <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">(</span><span class="co2">//bits.wikimedia.org/static-1.23wmf9/resources/mediawiki/images/arrow-collapsed-ltr.png?2014-01-02T16:45:00Z</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">background-image</span><span class="re2">:-webkit-linear-</span>gradient<span class="br0">(</span><span class="kw2">transparent</span><span class="sy0">,</span><span class="kw2">transparent</span><span class="br0">)</span><span class="sy0">,</span><span class="kw2">url</span><span class="br0">(</span><span class="co2">//bits.wikimedia.org/static-1.23wmf9/resources/mediawiki/images/arrow-collapsed-ltr.svg?2014-01-02T16:45:00Z</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">background-image</span><span class="re2">:linear-</span>gradient<span class="br0">(</span><span class="kw2">transparent</span><span class="sy0">,</span><span class="kw2">transparent</span><span class="br0">)</span><span class="sy0">,</span><span class="kw2">url</span><span class="br0">(</span>data<span class="sy0">:</span>application/xml<span class="sy0">;</span>base64<span class="sy0">,</span>PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiPjxwYXRoIGQ9Ik00IDEuNTMzdjkuNjcxbDQuNzUyLTQuODcxeiIgZmlsbD0iIzc5Nzk3OSIvPjwvc3ZnPg<span class="sy0">==</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">background-image</span><span class="re2">:linear-</span>gradient<span class="br0">(</span><span class="kw2">transparent</span><span class="sy0">,</span><span class="kw2">transparent</span><span class="br0">)</span><span class="sy0">,</span><span class="kw2">url</span><span class="br0">(</span><span class="co2">//bits.wikimedia.org/static-1.23wmf9/resources/mediawiki/images/arrow-collapsed-ltr.svg?2014-01-02T16:45:00Z</span><span class="br0">)</span>!ie<span class="sy0">;</span>
+    <span class="kw1">background-repeat</span><span class="sy0">:</span><span class="kw2">no-repeat</span><span class="sy0">;</span>
+    <span class="kw1">background-position</span><span class="sy0">:</span><span class="kw1">left</span> <span class="kw1">bottom</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.056 seconds
+Real time usage: 0.064 seconds
+Preprocessor visited node count: 4/1000000
+Preprocessor generated node count: 24/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:183066-0!*!*!*!*!*!* and timestamp 20140125193104
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37535#All_embedded_SVG_images_are_broken_37535" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/All_embedded_SVG_images_are_broken&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37535#All_embedded_SVG_images_are_broken_37535" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/All_embedded_SVG_images_are_broken" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/101.160.15.107" title="Special:Contributions/101.160.15.107">101.160.15.107</a></span>‎<span class="lqt-thread-toolbar-timestamp">04:51, 3 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37561"><a name="All_embedded_SVG_images_are_broken_37561"> </a><input id="lqt-thread-title-37561" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/All embedded SVG images are broken/reply" name="lqt-thread-title-37561" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>See <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=59234" class="extiw" title="bugzilla:59234">bugzilla:59234</a>.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1068
+CPU time usage: 0.008 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:183440-0!*!*!*!*!*!* and timestamp 20140202150223
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37561#All_embedded_SVG_images_are_broken_37561" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#All_embedded_SVG_images_are_broken_37535" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/All_embedded_SVG_images_are_broken/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37561#All_embedded_SVG_images_are_broken_37561" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/All_embedded_SVG_images_are_broken/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Krinkle" title="User:Krinkle">Krinkle</a> (<a href="/wiki/User_talk:Krinkle" title="User talk:Krinkle">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">14:34, 3 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37346"><a name="Filter_translations_in_recent_changes_doesn.27t_work_37346"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37346" dir="ltr"><span class="mw-headline">Filter translations in recent changes doesn&#039;t work</span><input type="hidden" value="Filter translations in recent changes doesn't work" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37346"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work&amp;lqt_method=summarize&amp;lqt_operand=37346" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37346" class="lqt-thread-modified" type="hidden" value="20140125192229" name="lqt-thread-modified-37346" /><input id="lqt-thread-sortkey-37346" type="hidden" value="20140125192229" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37346" /><input id="lqt-thread-title-37346" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Filter translations in recent changes doesn't work" name="lqt-thread-title-37346" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>This makes the recent changes almost unusable due to the massive about of translation edits.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:174194-0!*!*!*!*!*!* and timestamp 20140125193105
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37346#Filter_translations_in_recent_changes_doesn.27t_work_37346" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37346#Filter_translations_in_recent_changes_doesn.27t_work_37346" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/101.160.15.107" title="Special:Contributions/101.160.15.107">101.160.15.107</a></span>‎<span class="lqt-thread-toolbar-timestamp">09:05, 28 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37348"><a name="Filter_translations_in_recent_changes_doesn.27t_work_37348"> </a><input id="lqt-thread-title-37348" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Filter translations in recent changes doesn't work/reply" name="lqt-thread-title-37348" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Works for me, also logged out, when accessing just <a href="/wiki/Special:RecentChanges" title="Special:RecentChanges">Special:RecentChanges</a> (defaults). Can you clarify what URL you're opening and what you're seeing that you don't expect, exactly? <a href="/wiki/Help:Extension:Translate/Statistics_and_reporting#Recent_changes.2C_feeds_and_logging" title="Help:Extension:Translate/Statistics and reporting">Help:Extension:Translate/Statistics_and_reporting#Recent_changes.2C_feeds_and_logging</a> may also help.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1063
+CPU time usage: 0.008 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:174198-0!*!0!*!*!*!* and timestamp 20140129013030
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37348#Filter_translations_in_recent_changes_doesn.27t_work_37348" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Filter_translations_in_recent_changes_doesn.27t_work_37346" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37348#Filter_translations_in_recent_changes_doesn.27t_work_37348" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">10:00, 28 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37381"><a name="Filter_translations_in_recent_changes_doesn.27t_work_37381"> </a><input id="lqt-thread-title-37381" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Filter translations in recent changes doesn't work/reply (3)" name="lqt-thread-title-37381" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>Default recent changes url. Still translation edits everywhere. <a rel="nofollow" class="external free" href="http://i.imgur.com/00j9zax.png">http://i.imgur.com/00j9zax.png</a></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1063
+CPU time usage: 0.008 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:175616-0!*!*!*!*!*!* and timestamp 20140129013030
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37381#Filter_translations_in_recent_changes_doesn.27t_work_37381" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Filter_translations_in_recent_changes_doesn.27t_work_37348" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(3)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37381#Filter_translations_in_recent_changes_doesn.27t_work_37381" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(3)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/101.160.15.107" title="Special:Contributions/101.160.15.107">101.160.15.107</a></span>‎<span class="lqt-thread-toolbar-timestamp">04:40, 29 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-3"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37383"><a name="Filter_translations_in_recent_changes_doesn.27t_work_37383"> </a><input id="lqt-thread-title-37383" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Filter translations in recent changes doesn't work/reply (4)" name="lqt-thread-title-37383" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>I see. Those are main namespace edits, so they won't be hidden. You obviously need enhanced RC&#160;:), append&#160;?enhanced=1 to the URL.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1063
+CPU time usage: 0.004 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:175674-0!*!*!*!*!*!* and timestamp 20140129013030
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37383#Filter_translations_in_recent_changes_doesn.27t_work_37383" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Filter_translations_in_recent_changes_doesn.27t_work_37381" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(4)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37383#Filter_translations_in_recent_changes_doesn.27t_work_37383" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(4)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">09:04, 29 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-4"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-5 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37390"><a name="Filter_translations_in_recent_changes_doesn.27t_work_37390"> </a><input id="lqt-thread-title-37390" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Filter translations in recent changes doesn't work/reply (5)" name="lqt-thread-title-37390" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-5 lqt-thread-odd mw-content-ltr"><p>I don't see why the namespace should matter. And besides, I see translation edits in other namespaces as well, like help. If it's not meant to hide translation edits, then that feature is quite poorly named.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1063
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:175706-0!*!*!*!*!*!* and timestamp 20140129013030
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37390#Filter_translations_in_recent_changes_doesn.27t_work_37390" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Filter_translations_in_recent_changes_doesn.27t_work_37383" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(5)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37390#Filter_translations_in_recent_changes_doesn.27t_work_37390" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(5)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/101.160.15.107" title="Special:Contributions/101.160.15.107">101.160.15.107</a></span>‎<span class="lqt-thread-toolbar-timestamp">12:07, 29 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-5"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-6 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37391"><a name="Filter_translations_in_recent_changes_doesn.27t_work_37391"> </a><input id="lqt-thread-title-37391" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Filter translations in recent changes doesn't work/reply (6)" name="lqt-thread-title-37391" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-6 lqt-thread-even mw-content-ltr"><p>The hidden translations are in the <a class="external text" href="//www.mediawiki.org/w/index.php?title=Special:RecentChanges&amp;hidebots=0&amp;hideminor=0&amp;namespace=1198&amp;translations=noaction&amp;enhanced=0">Translations: namespace</a> and there are effectively hidden in your view (“Filter out translations”). When someone translates something, her/his edits are duplicated in the Translations: namespace and in the actual translated page (in the main namespace or elsewhere).</p>
+<p>If you want not to see the multiple lines, you should use the tip given by Nemo. Alternatively you can register for an account (top right of the screen) where you can set this behaviour as your default preference.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1063
+CPU time usage: 0.004 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 3/1000000
+Preprocessor generated node count: 24/1500000
+Post‐expand include size: 130/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:175714-0!*!*!*!*!*!* and timestamp 20140129013030
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37391#Filter_translations_in_recent_changes_doesn.27t_work_37391" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Filter_translations_in_recent_changes_doesn.27t_work_37390" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(6)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37391#Filter_translations_in_recent_changes_doesn.27t_work_37391" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work/reply_(6)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature">~ <a href="/wiki/User:Seb35" title="User:Seb35">Seb35</a> <a href="/wiki/User_talk:Seb35" title="User talk:Seb35"><small>[^_^]</small></a></span>‎<span class="lqt-thread-toolbar-timestamp">12:58, 29 December 2013</span></div></div><div class="lqt-thread-replies"><a href="/wiki/Thread:Project:Current_issues/Filter_translations_in_recent_changes_doesn%27t_work#Filter_translations_in_recent_changes_doesn.27t_work_37391" title="Thread:Project:Current issues/Filter translations in recent changes doesn't work" class="lqt-show-replies">Show 1 reply</a></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37080"><a name="x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37080"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37080" dir="ltr"><span class="mw-headline"><a href="/wiki/Bug_management/Bugzilla_etiquette" title="Bug management/Bugzilla etiquette">Bug management/Bugzilla etiquette</a>: last call</span><input type="hidden" value="[[Bug management/Bugzilla etiquette]]: last call" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37080"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call&amp;lqt_method=summarize&amp;lqt_operand=37080" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37080" class="lqt-thread-modified" type="hidden" value="20140125192221" name="lqt-thread-modified-37080" /><input id="lqt-thread-sortkey-37080" type="hidden" value="20140125192221" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37080" /><input id="lqt-thread-title-37080" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Bug management/Bugzilla etiquette: last call" name="lqt-thread-title-37080" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Comment now or never (well, sort of).</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:172280-0!*!*!*!*!*!* and timestamp 20140125193105
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37080#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37080" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37080#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37080" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">08:45, 20 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37087"><a name="x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37087"> </a><input id="lqt-thread-title-37087" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Bug management/Bugzilla etiquette: last call/reply" name="lqt-thread-title-37087" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>I only see "don'ts" for the reporters, and nothing for the devs. A discussion about whether a fix is wanted or needed, or whether something is truly resolved-fixed or whether a wont-fix is the correct solution, needs a place as well.</p>
+<p>The discussion about voting (and whether commenting isn't better to show the importance of some bugs) also seems not to have been reflected in the near-final text.</p>
+<p>I'm not a Bugzilla member anymore, but I don't think this etiquette page is the way to go.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.000 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:172287-0!*!*!*!*!*!* and timestamp 20140125193105
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37087#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37087" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37080" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37087#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37087" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">09:49, 20 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37105"><a name="x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37105"> </a><input id="lqt-thread-title-37105" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Bug management/Bugzilla etiquette: last call/reply (2)" name="lqt-thread-title-37105" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>I think at least some things can be tweaked easily enough in the draft, see <a class="external autonumber" href="https://www.mediawiki.org/w/index.php?title=Talk:Bug_management/Bugzilla_etiquette&amp;diff=846526&amp;oldid=846516">[1]</a>. I think you should just edit it.&#160;:)</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.004 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:172327-0!*!*!*!*!*!* and timestamp 20140125193105
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37105#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37105" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37087" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37105#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37105" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">14:46, 20 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-3"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-4 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37109"><a name="x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37109"> </a><input id="lqt-thread-title-37109" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Bug management/Bugzilla etiquette: last call/reply (3)" name="lqt-thread-title-37109" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-4 lqt-thread-even mw-content-ltr"><p>Thanks, but I have interest in being blocked again because I tread on some toes and get on the territory of the Powers at MediaWiki. One block here and empty threat with a topic ban is enough for me.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1107
+CPU time usage: 0.012 seconds
+Real time usage: 0.015 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:172333-0!*!*!*!*!*!* and timestamp 20140218154112
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37109#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37109" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37105" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call/reply_(3)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37109#x.5B.5BBug_management.2FBugzilla_etiquette.5D.5D:_last_call_37109" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Bug_management/Bugzilla_etiquette:_last_call/reply_(3)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">15:31, 20 December 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_38270"><a name="Greetings_from_Russian.2C_Pindostana.3F_38270"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-38270" dir="ltr"><span class="mw-headline">Greetings from Russian, Pindostana?</span><input type="hidden" value="Greetings from Russian, Pindostana?" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-38270"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F&amp;lqt_method=summarize&amp;lqt_operand=38270" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-38270" class="lqt-thread-modified" type="hidden" value="20140121220735" name="lqt-thread-modified-38270" /><input id="lqt-thread-sortkey-38270" type="hidden" value="20140121220735" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-38270" /><input id="lqt-thread-title-38270" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Greetings from Russian, Pindostana?" name="lqt-thread-title-38270" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Hi, for no apparent reason the www.mediawiki.org homepage is now a blank white screen with the words:</p>
+<p>Привет от Русских, пиндостан.</p>
+<p>Greetings from Russian, Pindostana.</p>
+<p>I am baffled, especially since the rest of the site works fine.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1146
+CPU time usage: 0.008 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:188889-0!*!*!*!*!*!* and timestamp 20140121220735
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=38270#Greetings_from_Russian.2C_Pindostana.3F_38270" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=38270#Greetings_from_Russian.2C_Pindostana.3F_38270" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/w/index.php?title=User:Hadashi&amp;action=edit&amp;redlink=1" class="new" title="User:Hadashi (page does not exist)">Hadashi</a> (<a href="/w/index.php?title=User_talk:Hadashi&amp;action=edit&amp;redlink=1" class="new" title="User talk:Hadashi (page does not exist)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">13:35, 21 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_38300"><a name="Greetings_from_Russian.2C_Pindostana.3F_38300"> </a><input id="lqt-thread-title-38300" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Greetings from Russian, Pindostana?/reply" name="lqt-thread-title-38300" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Works for me now...</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1209
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:188948-0!*!*!*!*!*!* and timestamp 20140121220720
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=38300#Greetings_from_Russian.2C_Pindostana.3F_38300" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Greetings_from_Russian.2C_Pindostana.3F_38270" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=38300#Greetings_from_Russian.2C_Pindostana.3F_38300" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Qgil" title="User:Qgil">Qgil</a> (<a href="/wiki/User_talk:Qgil" title="User talk:Qgil">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">20:19, 21 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_38308"><a name="Greetings_from_Russian.2C_Pindostana.3F_38308"> </a><input id="lqt-thread-title-38308" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Greetings from Russian, Pindostana?/reply (2)" name="lqt-thread-title-38308" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>And now it has changed back and works for me as well. Hu.....</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1200
+CPU time usage: 0.004 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:188963-0!*!*!*!*!*!* and timestamp 20140121220735
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=38308#Greetings_from_Russian.2C_Pindostana.3F_38308" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Greetings_from_Russian.2C_Pindostana.3F_38300" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=38308#Greetings_from_Russian.2C_Pindostana.3F_38308" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Greetings_from_Russian,_Pindostana%3F/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/w/index.php?title=User:Hadashi&amp;action=edit&amp;redlink=1" class="new" title="User:Hadashi (page does not exist)">Hadashi</a> (<a href="/w/index.php?title=User_talk:Hadashi&amp;action=edit&amp;redlink=1" class="new" title="User talk:Hadashi (page does not exist)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">22:07, 21 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_38304"><a name="json_format_of_search_query_api_for_text_search_38304"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-38304" dir="ltr"><span class="mw-headline">json format of search query api for text search</span><input type="hidden" value="json format of search query api for text search" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-38304"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/json_format_of_search_query_api_for_text_search_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/json_format_of_search_query_api_for_text_search_(2)&amp;lqt_method=summarize&amp;lqt_operand=38304" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-38304" class="lqt-thread-modified" type="hidden" value="20140121212715" name="lqt-thread-modified-38304" /><input id="lqt-thread-sortkey-38304" type="hidden" value="20140121212712" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-38304" /><input id="lqt-thread-title-38304" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/json format of search query api for text search (2)" name="lqt-thread-title-38304" /><div class="lqt-post-wrapper">A thread, <a href="/wiki/Thread:Project:Current_issues/json_format_of_search_query_api_for_text_search" title="Thread:Project:Current issues/json format of search query api for text search">Thread:Project:Current issues/json format of search query api for text search</a>, was moved from here to <a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a>.
+This move was made by <a href="/wiki/User:Nemo_bis" title="User:Nemo bis" class="mw-userlink">Nemo bis</a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Nemo_bis" title="User talk:Nemo bis">talk</a> | <a href="/wiki/Special:Contributions/Nemo_bis" title="Special:Contributions/Nemo bis">contribs</a>)</span> on 21 January 2014 at 21:27.</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37700"><a name="Flow_is_down.3F_37700"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37700" dir="ltr"><span class="mw-headline">Flow is down?</span><input type="hidden" value="Flow is down?" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37700"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Flow_is_down%3F&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Flow_is_down%3F&amp;lqt_method=summarize&amp;lqt_operand=37700" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37700" class="lqt-thread-modified" type="hidden" value="20140108110150" name="lqt-thread-modified-37700" /><input id="lqt-thread-sortkey-37700" type="hidden" value="20140108110150" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37700" /><input id="lqt-thread-title-37700" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Flow is down?" name="lqt-thread-title-37700" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>When I want to post to a Flow page, or see the history of a Flow enabled page, I get a nice pink box saying "An error occurred. The error message received was: An unexpected error occurred." or the generi WMF error page.</p>
+<p>I don't get these when using mediaWiki otherwise, so it seems to be purely Flow-related.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1105
+CPU time usage: 0.008 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:186462-0!*!*!*!*!*!* and timestamp 20140207110156
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37700#Flow_is_down.3F_37700" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Flow_is_down%3F&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37700#Flow_is_down.3F_37700" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Flow_is_down%3F" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">10:54, 7 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37717"><a name="Flow_is_down.3F_37717"> </a><input id="lqt-thread-title-37717" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Flow is down?/reply" name="lqt-thread-title-37717" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Flow is currently in read-only mode due to a bug that was discovered last night. It should be fixed later today.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1105
+CPU time usage: 0.004 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:186535-0!*!*!*!*!*!* and timestamp 20140207110156
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37717#Flow_is_down.3F_37717" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Flow_is_down.3F_37700" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Flow_is_down%3F/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37717#Flow_is_down.3F_37717" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Flow_is_down%3F/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Jorm_(WMF)" title="User:Jorm (WMF)">Jorm (WMF)</a> (<a href="/wiki/User_talk:Jorm_(WMF)" title="User talk:Jorm (WMF)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">16:51, 7 January 2014</span></div></div><div class="lqt-thread-replies lqt-thread-replies-2"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-3 lqt-thread-odd lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37750"><a name="Flow_is_down.3F_37750"> </a><input id="lqt-thread-title-37750" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Flow is down?/reply (2)" name="lqt-thread-title-37750" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-3 lqt-thread-odd mw-content-ltr"><p>Thanks. Any reason why "read-only mode" would disbale the possibility to look at the history? Seems to be unwanted behaviour. Not really urgent, as read-only should be the exception of course, but still...</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1105
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:186632-0!*!*!*!*!*!* and timestamp 20140207110157
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37750#Flow_is_down.3F_37750" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Flow_is_down.3F_37717" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Flow_is_down%3F/reply_(2)&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37750#Flow_is_down.3F_37750" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Flow_is_down%3F/reply_(2)" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Fram" title="User:Fram">Fram</a> (<a href="/wiki/User_talk:Fram" title="User talk:Fram">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">11:01, 8 January 2014</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37515"><a name="Copy_paste_images_with_clipboard_37515"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37515" dir="ltr"><span class="mw-headline">Copy paste images with clipboard</span><input type="hidden" value="Copy paste images with clipboard" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37515"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Copy_paste_images_with_clipboard_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Copy_paste_images_with_clipboard_(2)&amp;lqt_method=summarize&amp;lqt_operand=37515" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37515" class="lqt-thread-modified" type="hidden" value="20140102150842" name="lqt-thread-modified-37515" /><input id="lqt-thread-sortkey-37515" type="hidden" value="20140102150839" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37515" /><input id="lqt-thread-title-37515" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Copy paste images with clipboard (2)" name="lqt-thread-title-37515" /><div class="lqt-post-wrapper">A thread, <a href="/wiki/Thread:Project:Current_issues/Copy_paste_images_with_clipboard" title="Thread:Project:Current issues/Copy paste images with clipboard">Thread:Project:Current issues/Copy paste images with clipboard</a>, was moved from here to <a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a>.
+This move was made by <a href="/wiki/User:Nemo_bis" title="User:Nemo bis" class="mw-userlink">Nemo bis</a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Nemo_bis" title="User talk:Nemo bis">talk</a> | <a href="/wiki/Special:Contributions/Nemo_bis" title="Special:Contributions/Nemo bis">contribs</a>)</span> on 2 January 2014 at 15:08.</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37104"><a name="Sighting-Settings.3F_37104"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37104" dir="ltr"><span class="mw-headline">Sighting-Settings?</span><input type="hidden" value="Sighting-Settings?" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37104"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Sighting-Settings%3F_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Sighting-Settings%3F_(2)&amp;lqt_method=summarize&amp;lqt_operand=37104" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37104" class="lqt-thread-modified" type="hidden" value="20131220142427" name="lqt-thread-modified-37104" /><input id="lqt-thread-sortkey-37104" type="hidden" value="20131220142425" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37104" /><input id="lqt-thread-title-37104" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Sighting-Settings? (2)" name="lqt-thread-title-37104" /><div class="lqt-post-wrapper">A thread, <a href="/wiki/Thread:Project:Current_issues/Sighting-Settings%3F" title="Thread:Project:Current issues/Sighting-Settings?">Thread:Project:Current issues/Sighting-Settings?</a>, was moved from here to <a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a>.
+This move was made by <a href="/wiki/User:Nemo_bis" title="User:Nemo bis" class="mw-userlink">Nemo bis</a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Nemo_bis" title="User talk:Nemo bis">talk</a> | <a href="/wiki/Special:Contributions/Nemo_bis" title="Special:Contributions/Nemo bis">contribs</a>)</span> on 20 December 2013 at 14:24.</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_37061"><a name="Quicker_edit_approval_37061"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-37061" dir="ltr"><span class="mw-headline">Quicker edit approval</span><input type="hidden" value="Quicker edit approval" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-37061"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Quicker_edit_approval&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Quicker_edit_approval&amp;lqt_method=summarize&amp;lqt_operand=37061" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-37061" class="lqt-thread-modified" type="hidden" value="20131219135644" name="lqt-thread-modified-37061" /><input id="lqt-thread-sortkey-37061" type="hidden" value="20131219135644" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-37061" /><input id="lqt-thread-title-37061" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Quicker edit approval" name="lqt-thread-title-37061" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Hi ,</p>
+<p>Why are edits not approved quickly? I had 4 main edits and only 1 had been approved(the other 2 stay in the queue - the 4th one is very minor). (Sorry if I made a mistake)</p>
+<p>Or is it that only important edits get approved?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1031
+CPU time usage: 0.008 seconds
+Real time usage: 0.015 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:172150-0!*!*!*!*!*!* and timestamp 20140217140747
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37061#Quicker_edit_approval_37061" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Quicker_edit_approval&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37061#Quicker_edit_approval_37061" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Quicker_edit_approval" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Leaderboard" title="User:Leaderboard">Leaderboard</a> (<a href="/w/index.php?title=User_talk:Leaderboard&amp;action=edit&amp;redlink=1" class="new" title="User talk:Leaderboard (page does not exist)">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">13:22, 19 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_37062"><a name="Quicker_edit_approval_37062"> </a><input id="lqt-thread-title-37062" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Quicker edit approval/reply" name="lqt-thread-title-37062" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>No, but some pages are not as watched as they should. The edits of yours that I see were reviewed; if a review takes more than a couple weeks, ask on talk page to review edits or remove flaggedrevision from the page.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1031
+CPU time usage: 0.008 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:172157-0!*!*!*!*!*!* and timestamp 20140217140747
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=37062#Quicker_edit_approval_37062" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Quicker_edit_approval_37061" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Quicker_edit_approval/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=37062#Quicker_edit_approval_37062" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Quicker_edit_approval/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Nemo_bis" title="User:Nemo bis">Nemo</a></span>‎<span class="lqt-thread-toolbar-timestamp">13:56, 19 December 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_36471"><a name="Update_extension:ConfirmAccount_36471"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-36471" dir="ltr"><span class="mw-headline">Update extension:ConfirmAccount</span><input type="hidden" value="Update extension:ConfirmAccount" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-36471"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Update_extension:ConfirmAccount&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Update_extension:ConfirmAccount&amp;lqt_method=summarize&amp;lqt_operand=36471" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-36471" class="lqt-thread-modified" type="hidden" value="20131213233646" name="lqt-thread-modified-36471" /><input id="lqt-thread-sortkey-36471" type="hidden" value="20131213233646" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-36471" /><input id="lqt-thread-title-36471" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Update extension:ConfirmAccount" name="lqt-thread-title-36471" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Hi could someone please update Extension:ConfirmAccount because it last was updated with some new features when 1.20 was released and in 1.21 the longin and create account button was seperated and in ConfirmAccount it isent it is still together please update it with a new look. I have also ask on the mainteners talk page and they still have not replayed.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1073
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:169549-0!*!*!*!*!*!* and timestamp 20140212001843
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36471#Update_extension:ConfirmAccount_36471" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Update_extension:ConfirmAccount&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36471#Update_extension:ConfirmAccount_36471" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Update_extension:ConfirmAccount" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/90.215.111.103" title="Special:Contributions/90.215.111.103">90.215.111.103</a></span>‎<span class="lqt-thread-toolbar-timestamp">14:51, 7 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_36809"><a name="Update_extension:ConfirmAccount_36809"> </a><input id="lqt-thread-title-36809" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Update extension:ConfirmAccount/reply" name="lqt-thread-title-36809" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Well, this reflects the actual situation of that extension: nobody seems to be maintaining it at the moment.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1073
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:171002-0!*!*!*!*!*!* and timestamp 20140212001843
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36809#Update_extension:ConfirmAccount_36809" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Update_extension:ConfirmAccount_36471" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Update_extension:ConfirmAccount/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36809#Update_extension:ConfirmAccount_36809" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Update_extension:ConfirmAccount/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Qgil" title="User:Qgil">Qgil</a> (<a href="/wiki/User_talk:Qgil" title="User talk:Qgil">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">23:36, 13 December 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_36807"><a name="How_do_I_get_a_complete_git_checkout_of_all_the_files_needed_for_MW_to_work.3F_36807"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-36807" dir="ltr"><span class="mw-headline">How do I get a complete git checkout of all the files needed for MW to work?</span><input type="hidden" value="How do I get a complete git checkout of all the files needed for MW to work?" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-36807"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/How_do_I_get_a_complete_git_checkout_of_all_the_files_needed_for_MW_to_work%3F_(2)&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/How_do_I_get_a_complete_git_checkout_of_all_the_files_needed_for_MW_to_work%3F_(2)&amp;lqt_method=summarize&amp;lqt_operand=36807" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-36807" class="lqt-thread-modified" type="hidden" value="20131213233027" name="lqt-thread-modified-36807" /><input id="lqt-thread-sortkey-36807" type="hidden" value="20131213233024" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-36807" /><input id="lqt-thread-title-36807" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/How do I get a complete git checkout of all the files needed for MW to work? (2)" name="lqt-thread-title-36807" /><div class="lqt-post-wrapper">A thread, <a href="/wiki/Thread:Project:Current_issues/How_do_I_get_a_complete_git_checkout_of_all_the_files_needed_for_MW_to_work%3F" title="Thread:Project:Current issues/How do I get a complete git checkout of all the files needed for MW to work?">Thread:Project:Current issues/How do I get a complete git checkout of all the files needed for MW to work?</a>, was moved from here to <a href="/wiki/Project:Support_desk" title="Project:Support desk">Project:Support desk</a>.
+This move was made by <a href="/wiki/User:Qgil" title="User:Qgil" class="mw-userlink">Qgil</a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Qgil" title="User talk:Qgil">talk</a> | <a href="/wiki/Special:Contributions/Qgil" title="Special:Contributions/Qgil">contribs</a>)</span> on 13 December 2013 at 23:30.</div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_36462"><a name="Downloads_on_front_page_36462"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-36462" dir="ltr"><span class="mw-headline">Downloads on front page</span><input type="hidden" value="Downloads on front page" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-36462"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Support_desk/Downloads_on_front_page&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Support_desk/Downloads_on_front_page&amp;lqt_method=summarize&amp;lqt_operand=36462" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-36462" class="lqt-thread-modified" type="hidden" value="20131207174916" name="lqt-thread-modified-36462" /><input id="lqt-thread-sortkey-36462" type="hidden" value="20131207174916" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-36462" /><input id="lqt-thread-title-36462" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Support desk/Downloads on front page" name="lqt-thread-title-36462" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>Hi I thought that 1.20 is not supported as of last month but it is still showing for download on the front page. Please can you replace it with 1.21 so for example it will show</p>
+<p>1.22 1.21 1.19</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.008 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:169441-0!*!*!*!*!*!* and timestamp 20140205180757
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36462#Downloads_on_front_page_36462" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Support_desk/Downloads_on_front_page&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36462#Downloads_on_front_page_36462" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Support_desk/Downloads_on_front_page" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/90.215.1.14" title="Special:Contributions/90.215.1.14">90.215.1.14</a></span>‎<span class="lqt-thread-toolbar-timestamp">10:25, 7 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_36479"><a name="Downloads_on_front_page_36479"> </a><input id="lqt-thread-title-36479" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Support desk/Downloads on front page/reply" name="lqt-thread-title-36479" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Yes_check.svg/18px-Yes_check.svg.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Yes_check.svg/27px-Yes_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Yes_check.svg/36px-Yes_check.svg.png 2x" /><span style="display:none">Y</span> <b>Done</b></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.028 seconds
+Real time usage: 0.036 seconds
+Preprocessor visited node count: 16/1000000
+Preprocessor generated node count: 102/1500000
+Post‐expand include size: 169/2048000 bytes
+Template argument size: 4/2048000 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:169558-0!*!*!*!*!4!* and timestamp 20140205180757
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36479#Downloads_on_front_page_36479" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Downloads_on_front_page_36462" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Support_desk/Downloads_on_front_page/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36479#Downloads_on_front_page_36479" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Support_desk/Downloads_on_front_page/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:Wargo" title="User:Wargo">wargo</a> (<a href="/wiki/User_talk:Wargo" title="User talk:Wargo">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">17:49, 7 December 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-with-subthreads lqt-thread-wrapper" id="lqt_thread_id_36362"><a name="Forbidden_error_when_making_donation_36362"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-36362" dir="ltr"><span class="mw-headline">Forbidden error when making donation</span><input type="hidden" value="Forbidden error when making donation" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-36362"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Forbidden_error_when_making_donation&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Forbidden_error_when_making_donation&amp;lqt_method=summarize&amp;lqt_operand=36362" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-36362" class="lqt-thread-modified" type="hidden" value="20131205060315" name="lqt-thread-modified-36362" /><input id="lqt-thread-sortkey-36362" type="hidden" value="20131205060315" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-36362" /><input id="lqt-thread-title-36362" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Forbidden error when making donation" name="lqt-thread-title-36362" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>I received this error when attempting to make a donation with a MasterCard credit card: <a rel="nofollow" class="external free" href="http://i.imgur.com/reqPzIf.png">http://i.imgur.com/reqPzIf.png</a> . I have no idea if my payment went through or not, and I don't know where else to ask for help. Can anyone help me?</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1213
+CPU time usage: 0.004 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:168945-0!*!*!*!*!*!* and timestamp 20140203060701
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36362#Forbidden_error_when_making_donation_36362" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Forbidden_error_when_making_donation&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36362#Forbidden_error_when_making_donation_36362" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Forbidden_error_when_making_donation" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/Special:Contributions/24.15.135.146" title="Special:Contributions/24.15.135.146">24.15.135.146</a></span>‎<span class="lqt-thread-toolbar-timestamp">02:36, 5 December 2013</span></div></div><div class="lqt-thread-replies lqt-thread-replies-1"><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-2 lqt-thread-even lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_36366"><a name="Forbidden_error_when_making_donation_36366"> </a><input id="lqt-thread-title-36366" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Forbidden error when making donation/reply" name="lqt-thread-title-36366" /><div class="lqt-post-wrapper"><div class="lqt_post lqt-thread-nest-2 lqt-thread-even mw-content-ltr"><p>Hi. Thanks for the note. As noted at <a href="//wikimediafoundation.org/wiki/problems_donating" class="extiw" title="wmf:problems donating">wmf:problems donating</a>, you want to e-mail <a rel="nofollow" class="external text" href="mailto:donate@wikimedia.org">donate@wikimedia.org</a>. You can CC <a rel="nofollow" class="external text" href="mailto:fr-tech@wikimedia.org">fr-tech@wikimedia.org</a>, if you'd like.</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1213
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:168951-0!*!*!*!*!*!* and timestamp 20140203060701
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36366#Forbidden_error_when_making_donation_36366" title="Reply">Reply</a></li> <li class="lqt-command lqt-command-parent"><a href="#Forbidden_error_when_making_donation_36362" title="">Parent</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Forbidden_error_when_making_donation/reply&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36366#Forbidden_error_when_making_donation_36366" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Forbidden_error_when_making_donation/reply" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="/wiki/User:MZMcBride" title="User:MZMcBride">MZMcBride</a> (<a href="/wiki/User_talk:MZMcBride" title="User talk:MZMcBride">talk</a>)</span>‎<span class="lqt-thread-toolbar-timestamp">06:03, 5 December 2013</span></div></div></div><div class="lqt-reply-form lqt-edit-form" style="display: none;"></div><div class="lqt-replies-finish">&#160;</div></div></div><div class="wikiEditor-oldToolbar" style="display:none;"></div><div class="lqt_thread lqt-thread-nest-1 lqt-thread-odd lqt-thread-topmost lqt-thread-first lqt-thread-no-subthreads lqt-thread-wrapper" id="lqt_thread_id_36267"><a name="x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267"> </a><div class="lqt_thread_heading"><h2 class="lqt_header" id="lqt-header-36267" dir="ltr"><span class="mw-headline">[FIXED] Fix MWDeprecationWarning in a global gadget</span><input type="hidden" value="[FIXED] Fix MWDeprecationWarning in a global gadget" name="raw-header" /></h2><ul class="lqt_threadlevel_commands" id="lqt-threadlevel-commands-36267"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Fix_MWDeprecationWarning_in_a_global_gadget&amp;lqt_method=thread_history" title="">History</a></li> <li class="lqt-command lqt-command-summarize"><a href="/w/index.php?title=Thread:Project:Current_issues/Fix_MWDeprecationWarning_in_a_global_gadget&amp;lqt_method=summarize&amp;lqt_operand=36267" title="">Summarize</a></li></ul></div><input id="lqt-thread-modified-36267" class="lqt-thread-modified" type="hidden" value="20131203203246" name="lqt-thread-modified-36267" /><input id="lqt-thread-sortkey-36267" type="hidden" value="20131203203246" name="lqt-thread-sortkey" /><input class="lqt-thread-talkpage-metadata" type="hidden" value="Project:Current issues" name="lqt-thread-talkpage-36267" /><input id="lqt-thread-title-36267" class="lqt-thread-title-metadata" type="hidden" value="Thread:Project:Current issues/Fix MWDeprecationWarning in a global gadget" name="lqt-thread-title-36267" /><div class="lqt-post-wrapper"><div class="lqt-thread-info-panel"><div class="lqt-thread-toolbar-edited-others">Edited by 0 users.<br/>
+Last edit: 13:17, 3 December 2013</div></div><div class="lqt_post lqt-thread-nest-1 lqt-thread-odd mw-content-ltr"><p>See <a href="/wiki/MediaWiki_talk:Gadget-UTCLiveClock.js#MWDeprecationWarning:_Use_of_.22appendCSS.22_property_is_deprecated." title="MediaWiki talk:Gadget-UTCLiveClock.js">MediaWiki talk:Gadget-UTCLiveClock.js#MWDeprecationWarning: Use of "appendCSS" property is deprecated.</a></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1112
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1500000
+Post‐expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:168406-0!*!0!*!*!*!* and timestamp 20140201203735
+ -->
+</div><div class="lqt-thread-toolbar"><ul class="lqt-thread-toolbar-commands"><li class="lqt-command lqt-command-reply"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=reply&amp;lqt_operand=36267#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267" title="Reply">Reply</a></li> <li class="lqt-thread-toolbar-menu"><div class="lqt-thread-actions-trigger lqt-command-icon" style="display: none;"><a class="lqt-thread-actions-icon" href="#">More</a></div></li></ul></div><ul class="lqt-thread-toolbar-command-list"><li class="lqt-command lqt-command-history"><a href="/w/index.php?title=Thread:Project:Current_issues/Fix_MWDeprecationWarning_in_a_global_gadget&amp;action=history" title="">History</a></li> <li class="lqt-command lqt-command-edit"><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=edit&amp;lqt_operand=36267#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267" title="">Edit</a></li> <li class="lqt-command lqt-command-link"><a href="/wiki/Thread:Project:Current_issues/Fix_MWDeprecationWarning_in_a_global_gadget" title="Link to">Link to</a></li></ul><div class="lqt-thread-signature"><span class="lqt-thread-user-signature"><a href="//en.wikibooks.org/wiki/pt:User:Helder.wiki" class="extiw" title="b:pt:User:Helder.wiki">Helder</a></span>‎<span class="lqt-thread-toolbar-timestamp">13:17, 3 December 2013</span></div></div></div></div><table class="TalkpagePager_nav" align="center" cellpadding="3"><tr>
+<td valign="top" align="center" width="25%"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_disabled_first_25.png" alt="First page"/><br />First page</td>
+<td valign="top" align="center" width="25%"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_disabled_left_25.png" alt="Previous page"/><br />Previous page</td>
+<td valign="top" align="center" width="25%"><a href="/w/index.php?title=Project:Current_issues&amp;offset=20131203203246&amp;limit=20#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267" title="Project:Current issues" rel="next" class="mw-nextlink"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_right_25.png" alt="Next page"/><br />Next page</a></td>
+<td valign="top" align="center" width="25%"><a href="/w/index.php?title=Project:Current_issues&amp;dir=prev&amp;limit=20#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267" title="Project:Current issues" rel="last" class="mw-lastlink"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/arrow_last_25.png" alt="Last page"/><br />Last page</a></td>
+</tr></table>
+</div><noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Project:Current_issues&amp;oldid=827267#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267">http://www.mediawiki.org/w/index.php?title=Project:Current_issues&amp;oldid=827267#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:MediaWiki.org_website" title="Category:MediaWiki.org website">MediaWiki.org website</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Project%3ACurrent+issues&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Project%3ACurrent+issues" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-project" class="selected"><span><a href="/wiki/Project:Current_issues"  title="View the project page [a]" accesskey="a">MediaWiki.org</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Project_talk:Current_issues"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Project:Current_issues" >Read</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Project:Current_issues&amp;lqt_method=talkpage_history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Project%3ACurrent+issues">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Project%3ACurrent+issues&amp;oldid=827267&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Project:Current_issues&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Project:Current_issues" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Project:Current_issues" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="feedlinks"><a href="/w/api.php?action=feedthreads&amp;type=replies%7Cnewthreads&amp;talkpage=Project%3ACurrent+issues&amp;feedformat=atom" id="feed-atom" rel="alternate" type="application/atom+xml" class="feedlink" title="Atom feed for this page">Atom</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Project:Current_issues&amp;oldid=827267" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Project:Current_issues&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 November 2013, at 09:26.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Project:Current_issues#x.5BFIXED.5D_Fix_MWDeprecationWarning_in_a_global_gadget_36267" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.liquidThreads","mediawiki.action.view.postEdit","mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1027 in 2.376 secs. -->
+	</body>
+</html>

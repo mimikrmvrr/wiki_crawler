@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:MediaWiki feature list - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:MediaWiki_feature_list" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:MediaWiki_feature_list","wgTitle":"MediaWiki feature list","wgCurRevisionId":795394,"wgRevisionId":795394,"wgArticleId":17075,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Outdated pages","MediaWiki Introduction"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:MediaWiki_feature_list","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":795394,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_MediaWiki_feature_list skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:MediaWiki feature list</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/f/f4/Ambox_content.png" width="40" height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span"><b>IMPORTANT:</b> The content of this page is outdated. If you have checked or updated this page and found the content to be suitable, please remove this notice.</span></td>
+</tr>
+</table>
+<div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -2px; left: -5px; position: relative; margin-right: -3px;"><img alt="Mediawiki-logo.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/53px-Mediawiki-logo.png" width="53" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/80px-Mediawiki-logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/106px-Mediawiki-logo.png 2x" /></span> <b><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation Guide</a></b> | <a href="/wiki/Manual:What_is_MediaWiki%3F" title="Manual:What is MediaWiki?">About MediaWiki</a></span></div>
+<div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -8px; position: relative;"><img alt="Help-browser.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/40px-Help-browser.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/60px-Help-browser.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/80px-Help-browser.svg.png 2x" /></span> <strong class="selflink">Features</strong> | <a href="/wiki/Manual:Installation_requirements" title="Manual:Installation requirements">Installation requirements</a></span></div>
+<div style="white-space: pre; float: left;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa; min-width: 20em;"><span style="top: -8px; position: relative;"><img alt="Preferences-system.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/40px-Preferences-system.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/60px-Preferences-system.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/80px-Preferences-system.svg.png 2x" /></span> <a href="/wiki/Download" title="Download">Downloading</a> | <a href="/wiki/Manual:Installing_MediaWiki" title="Manual:Installing MediaWiki">Installing</a> | <a href="/wiki/Manual:Configuring_MediaWiki" title="Manual:Configuring MediaWiki">Configuring</a></span></div>
+<p><br clear="left" /></p>
+<p>This page contains a list of features that are built into the MediaWiki software. Whether you should use MediaWiki for your own wiki depends on what kind of website you want to run with it. Wikipedia's software has many useful features that grew out of the needs of the users and the ideas of the developers -- but features also mean complexity.</p>
+<p>Before you decide to use <b>MediaWiki</b>, please take a look at other Wiki engines (see <a rel="nofollow" class="external text" href="http://c2.com/cgi/wiki?WikiEngines">this list</a> or <a rel="nofollow" class="external text" href="http://www.wikimatrix.org/">this comparison</a>) and see if one of them might meet your requirements better.</p>
+<p>Requests for new features should be submitted to <a href="/wiki/Bugzilla" title="Bugzilla">Bugzilla</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Look_and_feel"><span class="tocnumber">1</span> <span class="toctext">Look and feel</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Multimedia_and_extensions"><span class="tocnumber">2</span> <span class="toctext">Multimedia and extensions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Keeping_track_of_edits"><span class="tocnumber">3</span> <span class="toctext">Keeping track of edits</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Structures_and_syntax"><span class="tocnumber">4</span> <span class="toctext">Structures and syntax</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Editing"><span class="tocnumber">5</span> <span class="toctext">Editing</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Spam_and_Vandalism"><span class="tocnumber">6</span> <span class="toctext">Spam and Vandalism</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Discussions"><span class="tocnumber">7</span> <span class="toctext">Discussions</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Multilanguage_support"><span class="tocnumber">8</span> <span class="toctext">Multilanguage support</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Backend"><span class="tocnumber">9</span> <span class="toctext">Backend</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Permissions"><span class="tocnumber">10</span> <span class="toctext">Permissions</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Search_and_Queries"><span class="tocnumber">11</span> <span class="toctext">Search and Queries</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Misc."><span class="tocnumber">12</span> <span class="toctext">Misc.</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Empty_set_of_help_pages"><span class="tocnumber">13</span> <span class="toctext">Empty set of help pages</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Coming_soon"><span class="tocnumber">14</span> <span class="toctext">Coming soon</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Look_and_feel">Look and feel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=1" title="Edit section: Look and feel" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=1" title="Edit section: Look and feel">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Links with shortcuts</b>, arrangement depends on skin.</li>
+<li><b><a href="/wiki/Manual:Skins" title="Manual:Skins">Skins</a></b>: Different ways to present the site.
+<ul>
+<li><b>Monobook</b>, a modern skin with accesskeys and tooltips.</li>
+<li><b>Vector</b>, an even more modern skin with easier to read text, large amount of content space, and has an extension of the same name that adds drop down fucntionality to the menus.</li>
+</ul>
+</li>
+<li><b><a href="//meta.wikimedia.org/wiki/Help:User_style" class="extiw" title="meta:Help:User style">User styles</a></b>: Users can adapt the look and feel of the site through custom CSS on their user pages.</li>
+<li><b>"Stub" threshold</b>: Users can see links to articles below a certain size rendered in a different color.</li>
+<li><b>Printable versions</b> of articles can be generated.</li>
+<li><b>Auto-number headings</b> in an article (optional).</li>
+<li><b>Intra-page Anchors</b> (automatically generated for headings, and also with &lt;div id="tagname"&gt;...&lt;/div&gt;).</li>
+<li><span id="TOC"></span><b>Automatically generate a table of contents</b> for long articles (optional).</li>
+<li>Automatically turn <b>ISBN numbers</b> into links to an editable list of booksellers.</li>
+<li><b>XHTML</b>- or <b>HTML5</b>-compatible output (or darn close to it), tidy integration.</li>
+</ul>
+<h2><span class="mw-headline" id="Multimedia_and_extensions">Multimedia and extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=2" title="Edit section: Multimedia and extensions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=2" title="Edit section: Multimedia and extensions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>File upload feature</b> allows to upload graphics or sound files, see <a href="/wiki/Special:Upload" title="Special:Upload">Special:Upload</a> to see in operation, and <a href="//meta.wikimedia.org/wiki/Uploading_files" class="extiw" title="meta:Uploading files">Uploading files</a> for description. Uploaded files are listed on <a href="/wiki/Special:RecentChanges" title="Special:RecentChanges">Recent Changes</a> and they are also logged on <a href="/wiki/Special:Log/upload" title="Special:Log/upload">Special:Log/upload</a>.</li>
+<li><b>Mathematical formulas using LaTeX syntax</b>: see <a href="/wiki/Texvc" title="Texvc">texvc</a></li>
+<li><b>Automatic resizing</b> of images using ImageMagick or libgd, simple syntax for image captions and image alignment</li>
+<li><b><a href="/wiki/Extension:WikiHiero" title="Extension:WikiHiero">WikiHiero</a></b> for Egyptian hieroglyphs (needs separate installed components)</li>
+<li><b><a href="/wiki/Extension:EasyTimeline" title="Extension:EasyTimeline">EasyTimeline</a></b> for time charts (needs separate installed components)</li>
+</ul>
+<h2><span class="mw-headline" id="Keeping_track_of_edits">Keeping track of edits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=3" title="Edit section: Keeping track of edits" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=3" title="Edit section: Keeping track of edits">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Watchlist</b> Every page has a link "Watch this article for me". Use <a href="/wiki/Special:Watchlist" title="Special:Watchlist">Special:Watchlist</a> to track changes on the articles you declared as interesting; watched articles are also bolded in the <a href="/wiki/Special:RecentChanges" title="Special:RecentChanges">Recent changes</a> list .</li>
+<li><b>User contributions</b> in the sidebar of each user page list all articles the user has worked on, according to the database.</li>
+<li><b>Extended recent changes</b> with dynamic collapsing of edits to the same article and quick links to diff the edit, show the article history, show the user page, show the user talk page, or block the user (for sysops)</li>
+<li><b>"Related changes":</b> View a filtered version of Recent Changes to the pages linked from the current page.</li>
+<li><b>Side-by-side diffs</b> - the diffs are shown side-by-side, and changed portions of lines are highlighted, making it much easier to see what's what. Additionally, a diff is shown during an edit conflict so you can see exactly what you need to reintegrate.</li>
+<li><b><a href="//meta.wikimedia.org/wiki/Real_names" class="extiw" title="meta:Real names">Real names</a></b>. Users can (optionally) specify a "real name" they want to use for author credits.</li>
+<li><b>On-page credits</b>. Administrators can enable an on-page paragraph giving credit to editors who've worked on a page.</li>
+</ul>
+<h2><span class="mw-headline" id="Structures_and_syntax">Structures and syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=4" title="Edit section: Structures and syntax" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=4" title="Edit section: Structures and syntax">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>By default, only <a href="/wiki/HTML_restriction" title="HTML restriction">restricted</a> use of <a href="//en.wikipedia.org/wiki/HTML" class="extiw" title="wikipedia:HTML">HTML</a> is allowed. There is an option to allow full use of HTML.</li>
+<li><b>Editing syntax based on UseMod</b>, with support for mixing wiki-syntax and HTML. Only free links are supported for linking, not <a href="//en.wikipedia.org/wiki/CamelCase" class="extiw" title="w:CamelCase">CamelCase</a> (deliberate design decision).</li>
+<li><b>Namespaces</b> allow content separation (to address the namespace, use the [[Namespace:Page title]] syntax).
+<ul>
+<li>Discussion (Talk:) pages are separate from article pages, "meta" project pages can be separated from content pages, image pages are used for image descriptions.</li>
+<li><a href="/wiki/Manual:System_message" title="Manual:System message" class="mw-redirect">MediaWiki: namespace</a> contains all user interface texts, so that they can be edited like any other wiki page</li>
+<li>Template: namespace for custom messages. Templates may contain string variables which are replaced with certain values passed to the template from the calling page.</li>
+</ul>
+</li>
+<li><b><a href="//en.wikipedia.org/wiki/Transclusion" class="extiw" title="w:Transclusion">Transclusion</a></b> of arbitrary pages in any namespace: {{:Page Name}}. See <a href="//meta.wikimedia.org/wiki/Help:Template" class="extiw" title="meta:Help:Template">Templates</a></li>
+<li><b>Word-extension linking</b>: If you include a link of the form [[war]]s, or [[war]]time, the system will automatically display it as if you had typed [[war|wars]] or [[war|wartime]], respectively, saving some typing.</li>
+<li><b>Parenthetical hiding</b> ("<a href="/wiki/Pipe_tricks" title="Pipe tricks" class="mw-redirect">pipe tricks</a>") If you include a link of the form [[kernel (mathematics)|]], the parenthetical portion will be hidden in the link: <a href="/w/index.php?title=Kernel_(mathematics)&amp;action=edit&amp;redlink=1" class="new" title="Kernel (mathematics) (page does not exist)">kernel</a>. This is useful for disambiguating different meanings of a word without making linking too difficult or cluttering up the text of articles. This also works with cropping out namespaces when you want a cleaner-looking link: [[Wikipedia:Copyrights|]] becomes <a href="//en.wikipedia.org/wiki/Copyrights" class="extiw" title="wikipedia:Copyrights">Copyrights</a></li>
+<li><b>Link to individual sections</b> of an article, e.g. <a href="/wiki/Manual:MediaWiki_feature_list#Editing" title="Manual:MediaWiki feature list">Manual:MediaWiki feature list#Editing</a> (these links may become invalid if sections are retitled or removed.)</li>
+<li>Support for <b>subpages</b> (link to "Foo/Bar" from "Foo" by just typing "/Bar", "Foo/Bar" contains a backlink to "Foo"), these can be enabled or disabled by namespace (e.g., Wikipedia currently supports subpages on discussion pages, to make archiving easy, and on user pages, to give users space for personal pages)</li>
+<li><a href="/wiki/Help:Magic_words" title="Help:Magic words">Special keywords</a> for inserting <b>dynamic data</b> such as the name of the current page, the current date, the number of articles, etc.</li>
+<li>Multiple <b>Categories</b> can be assigned to any page, including categories themselves, creating a hierarchy of categories. Category pages automatically list all pages assigned to them, including sub-categories. Categories allow classification and hierarchical browsing of the content.</li>
+</ul>
+<h2><span class="mw-headline" id="Editing">Editing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=5" title="Edit section: Editing" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=5" title="Edit section: Editing">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b><a href="//meta.wikimedia.org/wiki/Help:Section" class="extiw" title="meta:Help:Section">Section editing</a>.</b> Users can enable an option that allows them to edit individual sections of an article (separated by headlines) instead of loading the entire article.</li>
+<li><b>Edit toolbar</b> (JavaScript-based) for formatting text as <b>bold</b>, <i>italic</i> etc. (fully works in Mozilla and IE, other browsers use it to show the syntax, but cannot format text inside the text area because their JavaScript implementation does not support it). If JavaScript is disabled, the toolbar is not shown.</li>
+<li><b>Edit summary</b> which is shown in "Recent changes". Will be prefilled with section title when section editing.</li>
+<li><b>Double click editing</b>: Users can enable an option that allows them to edit articles by double clicking them.</li>
+<li><b>Edit preview</b> (can be shown before or after edit box)</li>
+<li>Handle <b>edit conflicts</b> (page being saved by a user while still being edited by another one, then saved again). MediaWiki will merge changes automatically if possible and otherwise require the user to do a manual merge.</li>
+<li>Mark edits as <b>minor</b>; users can decide to hide such edits from the Recent Changes list. Only signed in users can mark edits as minor.</li>
+</ul>
+<h2><span class="mw-headline" id="Spam_and_Vandalism">Spam and Vandalism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=6" title="Edit section: Spam and Vandalism" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=6" title="Edit section: Spam and Vandalism">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Anti-spam_features" title="Anti-spam features" class="mw-redirect">Anti-spam features</a>: Prevent link spamming, and other forms of abusive editing.
+<ul>
+<li><a href="//meta.wikimedia.org/wiki/Spam_blacklist" class="extiw" title="meta:Spam blacklist">meta:Spam blacklist</a>: List of spammer's domain names which users are not allowed to link to.</li>
+</ul>
+</li>
+<li><a href="/wiki/Manual:Combating_vandalism" title="Manual:Combating vandalism">Manual:Combating vandalism</a>: Helpful hints and links to some extensions for dealing with vandalism</li>
+</ul>
+<h2><span class="mw-headline" id="Discussions">Discussions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=7" title="Edit section: Discussions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=7" title="Edit section: Discussions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Talk pages</b>: Each user (including every anonymous user) and every article has an associated page where messages can be left. These are separate namespaces (see above), "Talk:" and "User talk:".</li>
+<li><b>Message notification</b> (user gets a "You have new messages" notice if someone else has edited their user discussion page); this also works for anonymous users, but not for <i>shared</i> IP users</li>
+<li><b>Automatic signature</b>: Just type three tildes (~) when you edit, and on saving the page, it will be replaced with your user name and a link to your user page. If you use four tildes, the current date will be added as well. Mainly intended for Talk pages.</li>
+<li>Support for <b>emailing users</b> through the wiki (email address not shown to the user)</li>
+</ul>
+<h2><span class="mw-headline" id="Multilanguage_support">Multilanguage support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=8" title="Edit section: Multilanguage support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=8" title="Edit section: Multilanguage support">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Translated into <b>many languages</b> (see <a href="//en.wikipedia.org/wiki/Wikipedia:Multilingual_coordination" class="extiw" title="en:Wikipedia:Multilingual coordination">en:Wikipedia:Multilingual coordination</a> for details)</li>
+<li><b><a href="//en.wikipedia.org/wiki/Help:Interlanguage_links" class="extiw" title="en:Help:Interlanguage links">Interlanguage links</a></b>: handy method for linking articles between wikis in different languages (each language requires its own database)</li>
+<li><b>UTF-8</b> support</li>
+</ul>
+<h2><span class="mw-headline" id="Backend">Backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=9" title="Edit section: Backend" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=9" title="Edit section: Backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Database-driven</b> (MySQL/MariaDB, PostgreSQL, and SQlite are supported)</li>
+<li><b>Parser caching</b>: rendered pages are cached to reduce redundant processing</li>
+<li><b>Output caching</b>: complete page output can be optionally saved as static HTML files for serving to other clients; support for Squid proxies</li>
+<li><b>Cookie-based</b> account and login system, but anonymous users can also edit pages</li>
+<li><b>All revisions</b> of an article are stored (optionally compressed)</li>
+<li><b><a href="//meta.wikimedia.org/wiki/Syndication_feeds" class="extiw" title="meta:Syndication feeds">RSS</a></b> syndication available for many special pages, such as <a href="/wiki/Special:NewPages" title="Special:NewPages">Special:Newpages</a> and <a href="/wiki/Special:RecentChanges" title="Special:RecentChanges">Special:Recentchanges</a></li>
+<li><b><a href="//meta.wikimedia.org/wiki/RDF_metadata" class="extiw" title="meta:RDF metadata">RDF metadata</a></b></li>
+</ul>
+<h2><span class="mw-headline" id="Permissions">Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=10" title="Edit section: Permissions" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=10" title="Edit section: Permissions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Different rights</b> for anonymous users, signed in users, sysops, bureaucrats and developers.</li>
+<li><b>Signed in users</b> can:
+<ul>
+<li>move and rename pages</li>
+<li>upload files</li>
+<li>have and use a watchlist</li>
+<li>mark edits as <i>minor edits</i> (eg. typo correction)</li>
+</ul>
+</li>
+<li><b>Admins/Sysops</b> can:
+<ul>
+<li>protect pages from editing</li>
+<li>delete and undelete pages</li>
+<li>edit protected pages</li>
+<li>ban users by IP address</li>
+<li>ban users by username, if this option is enabled</li>
+<li>run SQL queries on the database, if this option is enabled (see <a href="/wiki/Extension:Asksql" title="Extension:Asksql">Extension:Asksql</a>)</li>
+</ul>
+</li>
+<li><b>Bureaucrats</b> can:
+<ul>
+<li>create sysops</li>
+<li>rename users</li>
+<li>flag bots</li>
+</ul>
+</li>
+<li><b>Developers</b> can:
+<ul>
+<li>lock the database</li>
+<li>run various maintenance tasks</li>
+</ul>
+</li>
+<li><b>Other permission schemes</b> (e.g. only signed in users can edit pages) <a href="/wiki/Manual:$wgGroupPermissions" title="Manual:$wgGroupPermissions">can be configured</a>.</li>
+</ul>
+<h2><span class="mw-headline" id="Search_and_Queries">Search and Queries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=11" title="Edit section: Search and Queries" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=11" title="Edit section: Search and Queries">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Full text search</b></li>
+<li><b>"Go" button</b> allows direct viewing of a specified article's contents (tries near match if no exact hit)</li>
+<li><b>"What links here":</b> View pages that link to the current page (backlinks)</li>
+<li><b>Special report pages:</b>
+<ul>
+<li>New pages: List of newly created articles</li>
+<li>Ancient pages: Articles sorted by timestamp, ascending</li>
+<li>List of images</li>
+<li>List of users</li>
+<li>Site statistics</li>
+<li>Orphaned articles (articles that have no links pointing to them)</li>
+<li>Orphaned images</li>
+<li>Popular articles (articles by number of visits, works only if counters are enabled)</li>
+<li>Most wanted articles (non-existent articles sorted by number of links pointing to them)</li>
+<li>Short articles</li>
+<li>Long articles</li>
+<li>List of all pages by title</li>
+</ul>
+</li>
+<li><b><a href="/wiki/API:Query" title="API:Query">Query</a> API</b> - allows scripted access to various metadata</li>
+</ul>
+<h2><span class="mw-headline" id="Misc.">Misc.</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=12" title="Edit section: Misc." class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=12" title="Edit section: Misc.">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><b>Random article</b> display function</li>
+<li>Users can configure their <b>timezone</b>, which is used on all report timestamps</li>
+<li>The attributes of many report pages (<b>number of results</b> etc.) can be set in the user preferences</li>
+</ul>
+<h2><span class="mw-headline" id="Empty_set_of_help_pages">Empty set of help pages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=13" title="Edit section: Empty set of help pages" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=13" title="Edit section: Empty set of help pages">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Note that the files in the installation contain many links pointing to documents that are not included in the download. Most important is the empty set of help files, which will be needed by any new user of the site. To remedy these broken links, you must either a) <a href="/wiki/Project:PD_help/Copying" title="Project:PD help/Copying">export from this site</a> or manually copy and modify help pages to your installation or b) modify the installation's parameters to change the help link targets to this site, either of which may require a substantial time investment.</p>
+<h2><span class="mw-headline" id="Coming_soon">Coming soon</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit&amp;section=14" title="Edit section: Coming soon" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit&amp;section=14" title="Edit section: Coming soon">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><i><b>See <a href="/wiki/MediaWiki_roadmap" title="MediaWiki roadmap" class="mw-redirect">MediaWiki roadmap</a>.</b></i></li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="da"><a href="/wiki/Manual:MediaWiki_feature_list/da" title="Manual:MediaWiki feature list/da">dansk</a></bdi>&#160;• <bdi lang="de"><a href="/wiki/Manual:MediaWiki_feature_list/de" title="Manual:MediaWiki feature list/de">Deutsch</a></bdi>&#160;• <bdi lang="fr"><a href="/wiki/Manual:MediaWiki_feature_list/fr" title="Manual:MediaWiki feature list/fr">français</a></bdi>&#160;• <bdi lang="id"><a href="/wiki/Manual:MediaWiki_feature_list/id" title="Manual:MediaWiki feature list/id">Bahasa Indonesia</a></bdi>&#160;• <bdi lang="it"><a href="/wiki/Manual:MediaWiki_feature_list/it" title="Manual:MediaWiki feature list/it">italiano</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Manual:MediaWiki_feature_list/ja" title="Manual:MediaWiki feature list/ja">日本語</a></bdi>&#160;• <bdi lang="ko"><a href="/wiki/Manual:MediaWiki_feature_list/ko" title="Manual:MediaWiki feature list/ko">한국어</a></bdi>&#160;• <bdi lang="zh"><a href="/wiki/Manual:MediaWiki_feature_list/zh" title="Manual:MediaWiki feature list/zh">中文</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1047
+CPU time usage: 0.428 seconds
+Real time usage: 0.491 seconds
+Preprocessor visited node count: 2298/1000000
+Preprocessor generated node count: 7015/1500000
+Post‐expand include size: 12783/2048000 bytes
+Template argument size: 14422/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+Lua time usage: 0.022s
+Lua memory usage: 636 KB
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:17075-0!*!0!!en!4!* and timestamp 20140207190951
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:MediaWiki_feature_list&amp;oldid=795394">http://www.mediawiki.org/w/index.php?title=Manual:MediaWiki_feature_list&amp;oldid=795394</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Outdated_pages" title="Category:Outdated pages">Outdated pages</a></li><li><a href="/wiki/Category:MediaWiki_Introduction" title="Category:MediaWiki Introduction">MediaWiki Introduction</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AMediaWiki+feature+list&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AMediaWiki+feature+list" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:MediaWiki_feature_list"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:MediaWiki_feature_list"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:MediaWiki_feature_list" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3AMediaWiki+feature+list">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3AMediaWiki+feature+list&amp;oldid=795394&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:MediaWiki_feature_list" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:MediaWiki_feature_list" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;oldid=795394" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:MediaWiki_feature_list&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3AMediaWiki_feature_list&amp;id=795394" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 3 October 2013, at 12:28.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:MediaWiki_feature_list" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1093 in 0.227 secs. -->
+	</body>
+</html>

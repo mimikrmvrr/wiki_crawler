@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>MediaWiki-Vagrant - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/MediaWiki-Vagrant" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.geshi.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MediaWiki-Vagrant","wgTitle":"MediaWiki-Vagrant","wgCurRevisionId":908779,"wgRevisionId":908779,"wgArticleId":116892,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["MediaWiki-Vagrant"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"MediaWiki-Vagrant","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Mediawiki-vagrant","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-ruby {line-height: normal;}
+.source-ruby li, .source-ruby pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for ruby
+ * CSS class: source-ruby, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.ruby.source-ruby .de1, .ruby.source-ruby .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.ruby.source-ruby  {font-family:monospace;}
+.ruby.source-ruby .imp {font-weight: bold; color: red;}
+.ruby.source-ruby li, .ruby.source-ruby .li1 {font-weight: normal; vertical-align:top;}
+.ruby.source-ruby .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.ruby.source-ruby .li2 {font-weight: bold; vertical-align:top;}
+.ruby.source-ruby .kw1 {color:#9966CC; font-weight:bold;}
+.ruby.source-ruby .kw2 {color:#0000FF; font-weight:bold;}
+.ruby.source-ruby .kw3 {color:#CC0066; font-weight:bold;}
+.ruby.source-ruby .kw4 {color:#CC00FF; font-weight:bold;}
+.ruby.source-ruby .co1 {color:#008000; font-style:italic;}
+.ruby.source-ruby .co4 {color: #cc0000; font-style: italic;}
+.ruby.source-ruby .coMULTI {color:#000080; font-style:italic;}
+.ruby.source-ruby .es0 {color:#000099;}
+.ruby.source-ruby .br0 {color:#006600; font-weight:bold;}
+.ruby.source-ruby .sy0 {color:#006600; font-weight:bold;}
+.ruby.source-ruby .st0 {color:#996600;}
+.ruby.source-ruby .nu0 {color:#006666;}
+.ruby.source-ruby .me1 {color:#9900CC;}
+.ruby.source-ruby .re0 {color:#ff6633; font-weight:bold;}
+.ruby.source-ruby .re1 {color:#0066ff; font-weight:bold;}
+.ruby.source-ruby .re2 {color:#6666ff; font-weight:bold;}
+.ruby.source-ruby .re3 {color:#ff3333; font-weight:bold;}
+.ruby.source-ruby .ln-xtra, .ruby.source-ruby li.ln-xtra, .ruby.source-ruby div.ln-xtra {background-color: #ffc;}
+.ruby.source-ruby span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-MediaWiki-Vagrant skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">MediaWiki-Vagrant</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub">(Redirected from <a href="/w/index.php?title=Mediawiki-vagrant&amp;redirect=no" title="Mediawiki-vagrant">Mediawiki-vagrant</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="floatright"><a href="/wiki/File:MediaWiki_Vagrant.svg" class="image" title="MediaWiki Vagrant logo"><img alt="MediaWiki Vagrant logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/MediaWiki_Vagrant.svg/120px-MediaWiki_Vagrant.svg.png" width="120" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/MediaWiki_Vagrant.svg/180px-MediaWiki_Vagrant.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/MediaWiki_Vagrant.svg/240px-MediaWiki_Vagrant.svg.png 2x" /></a></div>
+<p><b>MediaWiki-Vagrant</b> is a portable MediaWiki development environment. It consists of a set of configuration scripts for <a href="//en.wikipedia.org/wiki/en:Vagrant_(software)" class="extiw" title="w:en:Vagrant (software)">Vagrant</a> and <a href="//en.wikipedia.org/wiki/en:VirtualBox" class="extiw" title="w:en:VirtualBox">VirtualBox</a> that automate the creation of a virtual machine that runs MediaWiki.</p>
+<p>The virtual machine that MediaWiki-Vagrant creates makes it easy to learn about, modify, and improve MediaWiki's code: useful debugging information is displayed by default, and various developer tools are set up specifically for inspecting and interacting with MediaWiki code, including a powerful debugger and an interactive interpreter. Best of all, because the configuration is automated and contained in a virtual environment, mistakes are easy to undo.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Quick_start"><span class="tocnumber">1</span> <span class="toctext">Quick start</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Troubleshooting_startup"><span class="tocnumber">1.1</span> <span class="toctext">Troubleshooting startup</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Basic_usage"><span class="tocnumber">2</span> <span class="toctext">Basic usage</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Using_roles"><span class="tocnumber">3</span> <span class="toctext">Using roles</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Debugging"><span class="tocnumber">4</span> <span class="toctext">Debugging</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#How_do_I....3F"><span class="tocnumber">5</span> <span class="toctext">How do I...?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Advanced_usage"><span class="tocnumber">6</span> <span class="toctext">Advanced usage</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Authoring_roles"><span class="tocnumber">7</span> <span class="toctext">Authoring roles</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Setting_up_labs_instances"><span class="tocnumber">8</span> <span class="toctext">Setting up labs instances</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Bugs"><span class="tocnumber">9</span> <span class="toctext">Bugs</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Links"><span class="tocnumber">10</span> <span class="toctext">Links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Quick_start">Quick start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=1" title="Edit section: Quick start" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=1" title="Edit section: Quick start">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol style="font-size: 1.2em; margin-left: 2em;">
+<li><span class="plainlinks"><a rel="nofollow" class="external text" href="http://git-scm.com/">Get Git</a></span></li>
+<li><span class="plainlinks"><a rel="nofollow" class="external text" href="https://www.virtualbox.org/wiki/Downloads">Get the <b>latest</b> VirtualBox</a></span></li>
+<li><span class="plainlinks"><a rel="nofollow" class="external text" href="http://www.vagrantup.com/downloads.html">Get the <b>latest</b> Vagrant</a></span></li>
+<li>Get the code and create your machine:<br />
+<pre style="background-color: #efefef; border: 0; display: inline-block; font-family: Consolas, monaco, monospace; margin: 0.4em 0 1em; padding: 0.2em 0.6em;">
+$ git clone https://gerrit.wikimedia.org/r/mediawiki/vagrant
+$ cd vagrant
+$ vagrant up
+</pre>
+<p style="font-size: 0.8em; line-height: 1em; margin: -0.5em 0 0; padding: 0;" class="plainlinks"><b>Running Windows?</b> Get <a rel="nofollow" class="external text" href="http://git-scm.com/download/win">Git</a> and run these commands in a <i>Git Bash</i> shell.</p>
+</li>
+</ol>
+<p style="font-size: 1.2em; margin-top: 1.2em;">When Vagrant is done configuring your machine, browse to <span class="plainlinks"><a rel="nofollow" class="external free" href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></span> to find your MediaWiki instance. The admin password is <code>vagrant</code>.</p>
+<h3><span class="mw-headline" id="Troubleshooting_startup">Troubleshooting startup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=2" title="Edit section: Troubleshooting startup" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=2" title="Edit section: Troubleshooting startup">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Be sure to use the most recent versions of VirtualBox and Vagrant if you get errors with <code>vagrant up</code>. Linux repositories may provide older versions that are not compatible with MediaWiki-Vagrant.</li>
+<li>You might want to compare the output of the initial run of <code>vagrant up</code> in your terminal with this <a href="/wiki/MediaWiki-Vagrant/Initial_run" title="MediaWiki-Vagrant/Initial run">sample</a>. The initial setup may take a long time; if it seems to hang somewhere but there are no errors, just give it a while.</li>
+<li>If you get "guest machine entered an invalid state" - "poweroff", make sure you enable Hardware Virtualization Technology (VT-x) in BIOS.</li>
+</ul>
+<h2><span class="mw-headline" id="Basic_usage">Basic usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=3" title="Edit section: Basic usage" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=3" title="Edit section: Basic usage">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Mediawiki-vagrant-screenshot.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/mediawiki/thumb/0/06/Mediawiki-vagrant-screenshot.png/220px-Mediawiki-vagrant-screenshot.png" width="220" height="146" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/mediawiki/thumb/0/06/Mediawiki-vagrant-screenshot.png/330px-Mediawiki-vagrant-screenshot.png 1.5x, //upload.wikimedia.org/wikipedia/mediawiki/thumb/0/06/Mediawiki-vagrant-screenshot.png/440px-Mediawiki-vagrant-screenshot.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Mediawiki-vagrant-screenshot.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Screenshot</div>
+</div>
+</div>
+<p>The <code>vagrant</code> command-line tool on the host machine provides several subcommands for controlling your virtual machine. You've already used one: <code>vagrant up</code>, which turns on the virtual machine. Like most <code>vagrant</code> subcommands, you need to run it from the MediaWiki-Vagrant directory or one of its children. When you first run it, Vagrant will fetch a system image and the requisite software for running MediaWiki. This takes around 10-15 minutes on a broadband connection, but it only needs to happen once. When you run <code>vagrant up</code> in the future, it'll simply boot up the machine.</p>
+<p><code>vagrant ssh</code> starts an interactive login shell on the virtual machine. It'll log you in as the user <code>vagrant</code>; root access is available to via <code>sudo</code>, which is passwordless. Because the virtual machine is entirely sandboxed within your computer, it is configured for convenience, not security. As a rule, whenever you encounter a password prompt, the password is <code>vagrant</code>.</p>
+<p>When you log in, you should see a colorful MediaWiki banner, and you may be prompted to update the version of VirtualBox Guest Additions. Updating will improve the performance and reliability of your machine, so go ahead and do it, by running <code>update-guest-additions</code>.</p>
+<p>The command <code>phpsh</code> will start an interactive PHP interpreter with MediaWiki's codebase already loaded. You can type in some code, hit 'enter', and the code will be evaluated immediately. If you start a line with '=', its computed value will be pretty-printed.</p>
+<p>The <code>/vagrant</code> folder corresponds to the MediaWiki-Vagrant folder on your host machine, and its contents is shared. MediaWiki's code is installed in <code>/vagrant/mediawiki</code>. This allows you to use your normal editor environment on your host machine to edit the MediaWiki code that runs on your virtual machine.</p>
+<p>Log out of your virtual machine by typing <code>logout</code> or by pressing <code>CTRL + D</code>. Now that you're back in a standard command prompt, you can run <code>vagrant halt</code> to shut down the virtual machine and <code>vagrant up</code> to bring it back up. <code>vagrant destroy</code> will delete the virtual machine's files; this command is useful if you want to return your instance to a pristine state. (You'll need to follow up with <code>vagrant up</code> to provision a fresh instance.)</p>
+<h2><span class="mw-headline" id="Using_roles">Using roles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=4" title="Edit section: Using roles" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=4" title="Edit section: Using roles">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MediaWiki-Vagrant sets up a basic MediaWiki instance by default, but it also knows how to configure a range of complementary software, including some popular MediaWiki extensions and their dependencies. These optional software stacks are collectively known as 'roles', and MediaWiki-Vagrant offers an easy and powerful command-line interface for managing them.</p>
+<div style="width: 375px; font-family: Consolas, monaco, monospace; font-size: 13px; background-color: #333; color: #fff; padding: 1px 12px; margin:auto;">
+<p>$ vagrant list-roles<br />
+<span style="color: #ccc;"># Display a list of available roles.</span></p>
+</div>
+<div style="font-family: Consolas, monaco, monospace; font-size: 13px; background-color: #333; color: #fff; padding: 1px 12px; width: 375px;margin: auto;">
+<p>$ vagrant enable-role <i>role</i><br />
+<span style="color: #ccc;"># Turn on <i>role</i> for this machine.</span></p>
+</div>
+<div style="font-family: Consolas, monaco, monospace; font-size: 13px; background-color: #333; color: #fff; padding: 1px 12px; width: 375px;margin: auto;">
+<p>$ vagrant disable-role <i>role</i><br />
+<span style="color: #ccc;"># Turn off <i>role</i> for this machine.</span></p>
+</div>
+<p>Watch a short <a rel="nofollow" class="external text" href="http://ascii.io/a/4428"><b>screencast</b></a> demonstrating how to use roles. <a href="/wiki/MediaWiki-Vagrant/Roles" title="MediaWiki-Vagrant/Roles">/Roles</a> has more information about some roles. If you add many roles, you may need to increase memory available to the Vagrant VM. In particular, setting up the "browsertests" role involves compiling the <code>ffi</code> <a href="//en.wikipedia.org/wiki/RubyGems" class="extiw" title="w:RubyGems">ruby Gem</a> which is a memory-hungry task; if it fails try freeing some memory in the VM or increasing its memory allocation (<span><a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=53864" class="extiw" title="bugzilla:53864">bug&#160;53864</a></span>).</p>
+<p>See the section <i>Authoring roles</i> below if you're interested in adding roles to MediaWiki-Vagrant.</p>
+<h2><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=5" title="Edit section: Debugging" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=5" title="Edit section: Debugging">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Debugging in PHP is different from other client-side debugging: Your IDE listens for incoming connections, and when you access the server with a browser, a special header instructs PHP to connect to your IDE.</p>
+<ul>
+<li>For Chrome users, you should get <a rel="nofollow" class="external text" href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc">XDebug Helper</a>, and optionally <a rel="nofollow" class="external text" href="https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn">Clear Cache</a>, <a rel="nofollow" class="external text" href="https://chrome.google.com/webstore/detail/http-headers/mhbpoeinkhpajikalhfpjjafpfgjnmgk">HTTP headers</a>, and <a rel="nofollow" class="external text" href="https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj">Mod Headers</a>. Configure clear cache to automatically reload after clearing, and set up keyboard shortcuts (e.g. Ctrl+R for clear&amp;reload, Ctrl+Shift+D to switch XDebugger on/off)</li>
+<li>Enable debug role with <kbd>vagrant enable-role remote_debug</kbd> followed by <kbd>vagrant provision</kbd>.</li>
+<li>Install and configure an <a rel="nofollow" class="external text" href="http://xdebug.org/docs/remote">xdebug-compatible</a> IDE on your machine (Eclipse, PhpStorm, etc)</li>
+<li>In IDE, start listening for the incomming debug connection</li>
+<li>In IDE, set break point at the spot that interests you</li>
+<li>Enable XDebug in the browser and navigate to your vagrant installation ( http://127.0.0.1:8080/... )</li>
+</ul>
+<h2><span class="mw-headline" id="How_do_I....3F">How do I...?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=6" title="Edit section: How do I...?" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=6" title="Edit section: How do I...?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl>
+<dt>Edit LocalSettings.php?</dt>
+<dd>First, check that there is no role (<kbd>vagrant list-roles</kbd>) that already does what you need. If not, create a file in <code>settings.d/</code> directory. See README and 00-debug.php-example file.</dd>
+</dl>
+<dl>
+<dt>Update MediaWiki code?</dt>
+<dd>The easiest is to use <kbd>vagrant git-update</kbd> from the host, or use regular <a href="/wiki/Git" title="Git" class="mw-redirect">git</a> <kbd>fetch</kbd>, <kbd>pull</kbd>, etc. commands in <code>vagrant/mediawiki</code> and <code>vagrant/mediawiki/extensions/<i>SomeExtension</i></code> directories. You can run these commands on the virtual machine, but the file access will be faster on the host machine. MediaWiki-Vagrant pulls code from git master when you initially set up and/or add a role, but doesn't automatically update code after that.</dd>
+</dl>
+<dl>
+<dt>Update system software?</dt>
+<dd><kbd>vagrant provision</kbd> does not update system packages in the VM. When you connect with vagrant ssh the login message will inform you<br />
+<tt><i>NN</i> packages can be updated.<br />
+<i>NN</i> updates are security updates.</tt><br />
+In vagrant ssh:
+<ul>
+<li>to update all packages, enter <kbd>sudo apt-get update &amp;&amp; apt-get upgrade</kbd></li>
+<li>for "automatic installation of security (and other) upgrades", similar to labs instances, enter <kbd>sudo unattended-upgrade</kbd></li>
+<li>to update to the same packages that are on production WMF servers... <i>TODO</i></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Add custom Puppet code?</dt>
+<dd>Place your custom Puppet manifests in <code>puppet/manifests/manifests.d</code>. Puppet will automatically apply any .pp files that it finds in that directory.</dd>
+</dl>
+<dl>
+<dt>Customize <i>Vagrantfile</i>, but still be able to pull changes from upstream?</dt>
+<dd>Rather than override the values defined in Vagrantfile, simply create a file called <i>Vagrantfile-extra.rb</i> and place it in the same folder as Vagrantfile, and it will be automatically loaded. In case of conflict, values in the 'extra' file will supersede values in this file.</dd>
+</dl>
+<dl>
+<dt>Run GUI applications on the virtual machine?</dt>
+<dd>If you have an X server installed, SSH into the virtual machine using <code>ssh -- -X</code> to enable X forwarding. (Mac users should <a rel="nofollow" class="external text" href="http://xquartz.macosforge.org/landing/">update to the latest version of XQuartz</a>.)</dd>
+</dl>
+<dl>
+<dd>As an alternative, you can run the virtual machine in GUI mode, which allows you to interact with the VM as though it had a physical display. To enable GUI mode, create a file called <code>Vagrantfile-extra.rb</code> in the root repository folder, with this as its content:</dd>
+</dl>
+<div style="display: inline-block; margin: 0 1.2em;">
+<div style="border: 0;" dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="ruby source-ruby">
+<pre class="de1">
+Vagrant.<span class="me1">configure</span><span class="br0">(</span><span class="st0">'2'</span><span class="br0">)</span> <span class="kw1">do</span> <span class="sy0">|</span>config<span class="sy0">|</span>
+    config.<span class="me1">vm</span>.<span class="me1">provider</span> <span class="re3">:virtualbox</span> <span class="kw1">do</span> <span class="sy0">|</span>vb<span class="sy0">|</span>
+        vb.<span class="me1">gui</span> = <span class="kw2">true</span>
+    <span class="kw1">end</span>
+<span class="kw1">end</span>
+</pre></div>
+</div>
+</div>
+<dl>
+<dd>Save the file and run <code>vagrant halt</code> followed by <code>vagrant up</code>. The virtual machine's display will appear in a window on your desktop.</dd>
+</dl>
+<dl>
+<dt>Adjust the resources allocated to the VM?</dt>
+<dd>If you'd like to allocate more or less CPU / RAM to the VM, create a <code>Vagrantfile-extra.rb</code>, patterned after this example:</dd>
+</dl>
+<div style="display: inline-block; margin: 0 1.2em;">
+<div style="border: 0;" dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="ruby source-ruby">
+<pre class="de1">
+Vagrant.<span class="me1">configure</span><span class="br0">(</span><span class="st0">'2'</span><span class="br0">)</span> <span class="kw1">do</span> <span class="sy0">|</span>config<span class="sy0">|</span>
+    config.<span class="me1">vm</span>.<span class="me1">provider</span> <span class="re3">:virtualbox</span> <span class="kw1">do</span> <span class="sy0">|</span>vb<span class="sy0">|</span>
+        <span class="co1"># See http://www.virtualbox.org/manual/ch08.html for additional options.</span>
+        vb.<span class="me1">customize</span> <span class="br0">[</span><span class="st0">'modifyvm'</span>, <span class="re3">:id</span>, <span class="st0">'--memory'</span>, <span class="st0">'768'</span><span class="br0">]</span>
+        vb.<span class="me1">customize</span> <span class="br0">[</span><span class="st0">'modifyvm'</span>, <span class="re3">:id</span>, <span class="st0">'--cpus'</span>, <span class="st0">'2'</span><span class="br0">]</span>
+    <span class="kw1">end</span>
+<span class="kw1">end</span>
+</pre></div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Advanced_usage">Advanced usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=7" title="Edit section: Advanced usage" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=7" title="Edit section: Advanced usage">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As an alternative to managing all MediaWiki settings in a single, large <a href="/wiki/Manual:LocalSettings.php" title="Manual:LocalSettings.php">LocalSettings.php</a> file, consider grouping your configurations by component or theme, and creating a separate PHP file in <code>settings.d/</code> for each group. This makes it quite easy to keep your settings organized, to temporarily disable specific configurations, and to share settings with others.</p>
+<p>MediaWiki will automatically load any PHP files in <code>settings.d/</code> in lexical order. You can control the order in which your configurations are set by adopting the habit of adding a two-digit prefix to each file name.</p>
+<p>For example:</p>
+<pre style="background-color: #efefef; border: 0; display: inline-block; font-family: Consolas, monaco, monospace; margin: 0.4em 0 1em; padding: 0.2em 0.6em;">
+    settings.d/
+    ├── 10-RunFirst.php
+    ├── 20-SomeExtension.php
+    └── 99-RunLast.php
+</pre>
+<p>Note that the settings files in <code>settings.d/puppet-managed</code> are automatically created and destroyed in response to your <a href="//en.wikipedia.org/wiki/Puppet_(software)" class="extiw" title="en:Puppet (software)">Puppet</a> configuration. Don't put your custom settings there, because Puppet will erase or override them. Keep your custom settings files in <code>settings.d/</code> instead.</p>
+<h2><span class="mw-headline" id="Authoring_roles">Authoring roles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=8" title="Edit section: Authoring roles" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=8" title="Edit section: Authoring roles">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MediaWiki-Vagrant uses <a href="//en.wikipedia.org/wiki/Puppet_(software)" class="extiw" title="en:Puppet (software)">Puppet</a> to configure MediaWiki on the virtual machine. Puppet is a configuration management tool that works by providing a domain-specific language for expressing software configurations in a declarative fashion. Files containing Puppet code are called 'manifests'. When Puppet runs, it interprets the manifests you feed it and configures the machine accordingly. MediaWiki-Vagrant's Puppet code is located in the <code>puppet/</code> subdirectory.</p>
+<p>MediaWiki-Vagrant's Puppet codebase contains abstractions that make it easy to automate the configuration of MediaWiki extensions and related software. If you are a developer working on a software project that relates to MediaWiki, you are encouraged to submit a patch with a Puppet role for your project. Adding a Vagrant role for your project makes it easy for other developers to check out your work. Using a managed virtual machine as a development sandbox for your project reduces the chance of "works-on-my-machine" errors that often result from geographically remote developers working in incompatible environments.</p>
+<p>The virtual machine provisioned by MediaWiki-Vagrant resembles Wikimedia's production environment in key respects, and it uses the same tool—Puppet—that Wikimedia's technical operations team uses to manage production servers and <a href="/wiki/Wikimedia_Labs" title="Wikimedia Labs">Wikimedia Labs</a> instances. This can help you write software that will meet the technical requirements for deployment on Wikimedia's production cluster.</p>
+<p>The easiest way to get started with custom roles is to look at how existing roles are implemented in <code>puppet/manifests/roles.pp</code>. These roles depend on Puppet modules in <code>puppet/modules</code>. The Puppet code is generally well-documented and contains examples that demonstrate its proper usage.</p>
+<h2><span class="mw-headline" id="Setting_up_labs_instances">Setting up labs instances</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=9" title="Edit section: Setting up labs instances" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=9" title="Edit section: Setting up labs instances">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>You can use <a href="https://wikitech.wikimedia.org/wiki/Labsvagrant" class="extiw" title="wikitech:Labsvagrant">wikitech:Labsvagrant</a> to configure Wikimedia Labs machines with a given MediaWiki-Vagrant role.</p>
+<h2><span class="mw-headline" id="Bugs">Bugs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=10" title="Edit section: Bugs" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=10" title="Edit section: Bugs">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If you spot a bug in MediaWiki-Vagrant, please report it. First, make sure the bug is not a known Vagrant or VirtualBox bug by searching the <a rel="nofollow" class="external text" href="https://github.com/mitchellh/vagrant/issues">Vagrant issue tracker on GitHub</a> and the <a rel="nofollow" class="external text" href="https://www.virtualbox.org/wiki/Bugtracker">VirtualBox Bugtracker</a>. If it is not, go ahead and <a class="external text" href="https://bugzilla.wikimedia.org/enter_bug.cgi?product=MediaWiki-Vagrant">submit the bug to Wikimedia Bugzilla</a>. Clearly describe the issue and include steps to reproduce, whenever possible.</p>
+<h2><span class="mw-headline" id="Links">Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit&amp;section=11" title="Edit section: Links" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit&amp;section=11" title="Edit section: Links">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://www.ohloh.net/p/mediawiki-vagrant">Project page on Ohloh</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/wikimedia/mediawiki-vagrant">MediaWiki-Vagrant on GitHub</a></li>
+<li><a href="https://wikitech.wikimedia.org/wiki/Labsvagrant" class="extiw" title="wikitech:Labsvagrant">wikitech:Labsvagrant</a> configure Wikimedia Labs instances based on MediaWiki-Vagrant roles</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1144
+CPU time usage: 0.200 seconds
+Real time usage: 0.242 seconds
+Preprocessor visited node count: 144/1000000
+Preprocessor generated node count: 311/1500000
+Post‐expand include size: 52/2048000 bytes
+Template argument size: 10/2048000 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:116892-0!*!0!!en!4!* and timestamp 20140218111604
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=MediaWiki-Vagrant&amp;oldid=908779">http://www.mediawiki.org/w/index.php?title=MediaWiki-Vagrant&amp;oldid=908779</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:MediaWiki-Vagrant" title="Category:MediaWiki-Vagrant">MediaWiki-Vagrant</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=MediaWiki-Vagrant&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=MediaWiki-Vagrant" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/MediaWiki-Vagrant"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:MediaWiki-Vagrant"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/MediaWiki-Vagrant" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=MediaWiki-Vagrant">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=MediaWiki-Vagrant&amp;oldid=908779&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=MediaWiki-Vagrant&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/MediaWiki-Vagrant" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/MediaWiki-Vagrant" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=MediaWiki-Vagrant&amp;oldid=908779" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=MediaWiki-Vagrant&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=MediaWiki-Vagrant&amp;id=908779" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 February 2014, at 11:16.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/MediaWiki-Vagrant" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1044 in 0.156 secs. -->
+	</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Information for "Manual:Installation guide" - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Installation_guide&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Installation_guide&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/w/index.php?title=Manual:Installation_guide&amp;action=info" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Installation_guide","wgTitle":"Installation guide","wgCurRevisionId":909005,"wgRevisionId":0,"wgArticleId":16959,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"info","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Installation_guide","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":909005,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Installation_guide skin-vector action-info vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Information for "Manual:Installation guide"</span></h1>
+			<div id="bodyContent">
+								<div id="contentSub"><br />
+				</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text"><style>.mw-hiddenCategoriesExplanation { display: none; }</style>
+<style>.mw-templatesUsedExplanation { display: none; }</style>
+<h2><span class="mw-headline" id="Basic_information">Basic information</span></h2>
+<table class="wikitable mw-page-info">
+<tr id="mw-pageinfo-display-title"><td style="vertical-align: top;">Display title</td><td>Manual:Installation guide</td></tr>
+<tr id="mw-pageinfo-default-sort"><td style="vertical-align: top;">Default sort key</td><td>Installation guide</td></tr>
+<tr id="mw-pageinfo-length"><td style="vertical-align: top;">Page length (in bytes)</td><td>13,001</td></tr>
+<tr id="mw-pageinfo-article-id"><td style="vertical-align: top;">Page ID</td><td>16959</td></tr>
+<tr id="mw-pageinfo-language"><td style="vertical-align: top;">Page content language</td><td>English (en)</td></tr>
+<tr id="mw-pageinfo-content-model"><td style="vertical-align: top;">Page content model</td><td>wikitext</td></tr>
+<tr id="mw-pageinfo-robot-policy"><td style="vertical-align: top;">Indexing by robots</td><td>Allowed</td></tr>
+<tr id="mw-pageinfo-watchers"><td style="vertical-align: top;">Number of page watchers</td><td>79</td></tr>
+<tr><td style="vertical-align: top;"><a href="/w/index.php?title=Special:WhatLinksHere/Manual:Installation_guide&amp;hidelinks=1&amp;hidetrans=1" title="Special:WhatLinksHere/Manual:Installation guide">Number of redirects to this page</a></td><td>7</td></tr>
+<tr id="mw-pageinfo-contentpage"><td style="vertical-align: top;">Counted as a content page</td><td>Yes</td></tr>
+<tr><td style="vertical-align: top;"><a href="/wiki/Special:PrefixIndex/Manual:Installation_guide/" title="Special:PrefixIndex/Manual:Installation guide/">Number of subpages of this page</a></td><td>26 (0 redirects; 26 non-redirects)</td></tr>
+</table>
+<h2><span class="mw-headline" id="Page_protection">Page protection</span></h2>
+<table class="wikitable mw-page-info">
+<tr id="mw-restriction-edit"><td style="vertical-align: top;">Edit</td><td>Allow all users</td></tr>
+<tr id="mw-restriction-move"><td style="vertical-align: top;">Move</td><td>Allow all users</td></tr>
+</table>
+<h2><span class="mw-headline" id="Edit_history">Edit history</span></h2>
+<table class="wikitable mw-page-info">
+<tr id="mw-pageinfo-firstuser"><td style="vertical-align: top;">Page creator</td><td><a href="/wiki/User:HappyDog" title="User:HappyDog" class="mw-userlink">HappyDog</a>  <span class="mw-usertoollinks">(<a href="/wiki/User_talk:HappyDog" title="User talk:HappyDog">talk</a> | <a href="/wiki/Special:Contributions/HappyDog" title="Special:Contributions/HappyDog">contribs</a>)</span></td></tr>
+<tr id="mw-pageinfo-firsttime"><td style="vertical-align: top;">Date of page creation</td><td><a href="/w/index.php?title=Manual:Installation_guide&amp;oldid=116639" title="Manual:Installation guide">17:17, 24 July 2007</a></td></tr>
+<tr id="mw-pageinfo-lastuser"><td style="vertical-align: top;">Latest editor</td><td><a href="/wiki/User:LlamaAl" title="User:LlamaAl" class="mw-userlink">LlamaAl</a>  <span class="mw-usertoollinks">(<a href="/wiki/User_talk:LlamaAl" title="User talk:LlamaAl">talk</a> | <a href="/wiki/Special:Contributions/LlamaAl" title="Special:Contributions/LlamaAl">contribs</a>)</span></td></tr>
+<tr id="mw-pageinfo-lasttime"><td style="vertical-align: top;">Date of latest edit</td><td><a href="/w/index.php?title=Manual:Installation_guide&amp;oldid=909005" title="Manual:Installation guide">17:24, 18 February 2014</a></td></tr>
+<tr id="mw-pageinfo-edits"><td style="vertical-align: top;">Total number of edits</td><td>413</td></tr>
+<tr id="mw-pageinfo-authors"><td style="vertical-align: top;">Total number of distinct authors</td><td>235</td></tr>
+<tr id="mw-pageinfo-recent-edits"><td style="vertical-align: top;">Recent number of edits (within past 30 days)</td><td>9</td></tr>
+<tr id="mw-pageinfo-recent-authors"><td style="vertical-align: top;">Recent number of distinct authors</td><td>7</td></tr>
+</table>
+<h2><span class="mw-headline" id="Page_properties">Page properties</span></h2>
+<table class="wikitable mw-page-info">
+<tr id="mw-pageinfo-templates"><td style="vertical-align: top;">Transcluded templates (14)</td><td><div class="mw-templatesUsedExplanation"><p>Templates used on this page:
+</p></div><ul>
+<li><a href="/wiki/Template:Anchor" title="Template:Anchor">Template:Anchor</a> (<a href="/w/index.php?title=Template:Anchor&amp;action=edit" title="Template:Anchor">edit</a>) </li><li><a href="/wiki/Template:InstallationNav" title="Template:InstallationNav">Template:InstallationNav</a> (<a href="/w/index.php?title=Template:InstallationNav&amp;action=edit" title="Template:InstallationNav">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:InstallationNav/en" title="Template:InstallationNav/en">Template:InstallationNav/en</a> (<a href="/w/index.php?title=Template:InstallationNav/en&amp;action=edit" title="Template:InstallationNav/en">edit</a>) </li><li><a href="/wiki/Template:Langcat" title="Template:Langcat">Template:Langcat</a> (<a href="/w/index.php?title=Template:Langcat&amp;action=edit" title="Template:Langcat">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:MW_ancient_release_number" title="Template:MW ancient release number">Template:MW ancient release number</a> (<a href="/w/index.php?title=Template:MW_ancient_release_number&amp;action=edit" title="Template:MW ancient release number">view source</a>) (protected)</li><li><a href="/wiki/Template:MW_stable_branch_number" title="Template:MW stable branch number">Template:MW stable branch number</a> (<a href="/w/index.php?title=Template:MW_stable_branch_number&amp;action=edit" title="Template:MW stable branch number">view source</a>) (protected)</li><li><a href="/wiki/Template:MW_stable_mysql_requirement" title="Template:MW stable mysql requirement">Template:MW stable mysql requirement</a> (<a href="/w/index.php?title=Template:MW_stable_mysql_requirement&amp;action=edit" title="Template:MW stable mysql requirement">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:MW_stable_php_requirement" title="Template:MW stable php requirement">Template:MW stable php requirement</a> (<a href="/w/index.php?title=Template:MW_stable_php_requirement&amp;action=edit" title="Template:MW stable php requirement">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:MW_stable_release_link" title="Template:MW stable release link">Template:MW stable release link</a> (<a href="/w/index.php?title=Template:MW_stable_release_link&amp;action=edit" title="Template:MW stable release link">view source</a>) (protected)</li><li><a href="/wiki/Template:MW_stable_release_number" title="Template:MW stable release number">Template:MW stable release number</a> (<a href="/w/index.php?title=Template:MW_stable_release_number&amp;action=edit" title="Template:MW stable release number">view source</a>) (protected)</li><li><a href="/wiki/Template:MediaWiki_Introduction" title="Template:MediaWiki Introduction">Template:MediaWiki Introduction</a> (<a href="/w/index.php?title=Template:MediaWiki_Introduction&amp;action=edit" title="Template:MediaWiki Introduction">view source</a>) (protected)</li><li><a href="/wiki/Template:MediaWiki_Introduction/en" title="Template:MediaWiki Introduction/en">Template:MediaWiki Introduction/en</a> (<a href="/w/index.php?title=Template:MediaWiki_Introduction/en&amp;action=edit" title="Template:MediaWiki Introduction/en">edit</a>) </li><li><a href="/wiki/Template:TNT" class="mw-redirect" title="Template:TNT">Template:TNT</a> (<a href="/w/index.php?title=Template:TNT&amp;action=edit" class="mw-redirect" title="Template:TNT">view source</a>) (semi-protected)</li><li><a href="/wiki/Template:Translatable_navigation_template" title="Template:Translatable navigation template">Template:Translatable navigation template</a> (<a href="/w/index.php?title=Template:Translatable_navigation_template&amp;action=edit" title="Template:Translatable navigation template">view source</a>) (semi-protected)</li></ul></td></tr>
+</table>
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/wiki/Manual:Installation_guide">http://www.mediawiki.org/wiki/Manual:Installation_guide</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstallation+guide&amp;returntoquery=action%3Dinfo&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstallation+guide&amp;returntoquery=action%3Dinfo" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Installation_guide"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Installation_guide"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view"><span><a href="/wiki/Manual:Installation_guide" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Installation_guide&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Installation_guide&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Installation_guide&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Installation_guide" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Installation_guide" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Installation_guide&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/w/index.php?title=Manual:Installation_guide&amp;action=info" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1083 in 0.372 secs. -->
+	</body>
+</html>

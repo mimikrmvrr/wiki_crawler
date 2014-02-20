@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Categories - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Special:Categories" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"Categories","wgNamespaceNumber":-1,"wgPageName":"Special:Categories","wgTitle":"Categories","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:Categories","wgIsProbablyEditable":false,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns--1 ns-special mw-special-Categories page-Special_Categories skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Categories</span></h1>
+			<div id="bodyContent">
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text"><div class="mw-spcontent"><p>The following categories contain pages or media.
+<a href="/wiki/Special:UnusedCategories" title="Special:UnusedCategories">Unused categories</a> are not shown here.
+Also see <a href="/wiki/Special:WantedCategories" title="Special:WantedCategories">wanted categories</a>.
+</p><form method="get" action="/w/index.php"><input type="hidden" value="Special:Categories" name="title" /><fieldset>
+<legend>Categories</legend>
+<label for="from">Display categories starting at:</label>&#160;<input name="from" size="20" value="" id="from" /> <input type="submit" value="Go" />
+</fieldset>
+</form>(first | <a href="/w/index.php?title=Special:Categories&amp;dir=prev" title="Special:Categories" rel="last" class="mw-lastlink">last</a>) View (previous 50  |  <a href="/w/index.php?title=Special:Categories&amp;offset=API_templates%2Fja" title="Special:Categories" rel="next" class="mw-nextlink">next 50</a>) (<a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=20" title="Special:Categories" class="mw-numlink">20</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=50" title="Special:Categories" class="mw-numlink">50</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=100" title="Special:Categories" class="mw-numlink">100</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=250" title="Special:Categories" class="mw-numlink">250</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=500" title="Special:Categories" class="mw-numlink">500</a>)<ul><li><a href="/wiki/Category:2012_Q1_Extension_Page_Review_Drive" title="Category:2012 Q1 Extension Page Review Drive">2012 Q1 Extension Page Review Drive</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:2012_Q1_Extension_Page_Review_Drive/ja" title="Category:2012 Q1 Extension Page Review Drive/ja">2012 Q1 Extension Page Review Drive/ja</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:2012_Q1_Extension_Page_Review_Drive_-_completed" title="Category:2012 Q1 Extension Page Review Drive - completed">2012 Q1 Extension Page Review Drive - completed</a>‏‎ (257 members)</li>
+<li><a href="/wiki/Category:2012_Q1_Extension_Page_Review_Drive_-_completed/ja" title="Category:2012 Q1 Extension Page Review Drive - completed/ja">2012 Q1 Extension Page Review Drive - completed/ja</a>‏‎ (5 members)</li>
+<li><a href="/wiki/Category:AGPL_licensed_extensions" title="Category:AGPL licensed extensions">AGPL licensed extensions</a>‏‎ (10 members)</li>
+<li><a href="/wiki/Category:APIAfterExecute_extensions" title="Category:APIAfterExecute extensions">APIAfterExecute extensions</a>‏‎ (2 members)</li>
+<li><a href="/wiki/Category:APIEditBeforeSave_extensions" title="Category:APIEditBeforeSave extensions">APIEditBeforeSave extensions</a>‏‎ (8 members)</li>
+<li><a href="/wiki/Category:APIEditBeforeSave_extensions/de" title="Category:APIEditBeforeSave extensions/de">APIEditBeforeSave extensions/de</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIEditBeforeSave_extensions/ja" title="Category:APIEditBeforeSave extensions/ja">APIEditBeforeSave extensions/ja</a>‏‎ (3 members)</li>
+<li><a href="/wiki/Category:APIEditBeforeSave_extensions/ko" title="Category:APIEditBeforeSave extensions/ko">APIEditBeforeSave extensions/ko</a>‏‎ (2 members)</li>
+<li><a href="/wiki/Category:APIEditBeforeSave_extensions/ru" title="Category:APIEditBeforeSave extensions/ru">APIEditBeforeSave extensions/ru</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIGetAllowedParams_extensions" title="Category:APIGetAllowedParams extensions">APIGetAllowedParams extensions</a>‏‎ (4 members)</li>
+<li><a href="/wiki/Category:APIGetAllowedParams_extensions/de" title="Category:APIGetAllowedParams extensions/de">APIGetAllowedParams extensions/de</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIGetAllowedParams_extensions/ja" title="Category:APIGetAllowedParams extensions/ja">APIGetAllowedParams extensions/ja</a>‏‎ (2 members)</li>
+<li><a href="/wiki/Category:APIGetAllowedParams_extensions/ru" title="Category:APIGetAllowedParams extensions/ru">APIGetAllowedParams extensions/ru</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIGetDescription_extensions" title="Category:APIGetDescription extensions">APIGetDescription extensions</a>‏‎ (2 members)</li>
+<li><a href="/wiki/Category:APIGetParamDescription_extensions" title="Category:APIGetParamDescription extensions">APIGetParamDescription extensions</a>‏‎ (3 members)</li>
+<li><a href="/wiki/Category:APIGetParamDescription_extensions/ja" title="Category:APIGetParamDescription extensions/ja">APIGetParamDescription extensions/ja</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIGetParamDescription_extensions/ru" title="Category:APIGetParamDescription extensions/ru">APIGetParamDescription extensions/ru</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIQueryAfterExecute_extensions" title="Category:APIQueryAfterExecute extensions">APIQueryAfterExecute extensions</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIQueryAfterExecute_extensions/de" title="Category:APIQueryAfterExecute extensions/de">APIQueryAfterExecute extensions/de</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIQueryAfterExecute_extensions/ja" title="Category:APIQueryAfterExecute extensions/ja">APIQueryAfterExecute extensions/ja</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIQuerySiteInfoGeneralInfo_extensions" title="Category:APIQuerySiteInfoGeneralInfo extensions">APIQuerySiteInfoGeneralInfo extensions</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIQuerySiteInfoStatisticsInfo_extensions" title="Category:APIQuerySiteInfoStatisticsInfo extensions">APIQuerySiteInfoStatisticsInfo extensions</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:APIQuerySiteInfoStatisticsInfo_extensions/ja" title="Category:APIQuerySiteInfoStatisticsInfo extensions/ja">APIQuerySiteInfoStatisticsInfo extensions/ja</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions" title="Category:API extensions">API extensions</a>‏‎ (74 members)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/ca&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/ca (page does not exist)">API extensions/ca</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions/de" title="Category:API extensions/de">API extensions/de</a>‏‎ (3 members)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/en&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/en (page does not exist)">API extensions/en</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions/en-gb" title="Category:API extensions/en-gb">API extensions/en-gb</a>‏‎ (1 member)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/eo&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/eo (page does not exist)">API extensions/eo</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions/fr" title="Category:API extensions/fr">API extensions/fr</a>‏‎ (3 members)</li>
+<li><a href="/wiki/Category:API_extensions/ja" title="Category:API extensions/ja">API extensions/ja</a>‏‎ (9 members)</li>
+<li><a href="/wiki/Category:API_extensions/ko" title="Category:API extensions/ko">API extensions/ko</a>‏‎ (2 members)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/lb&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/lb (page does not exist)">API extensions/lb</a>‏‎ (1 member)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/mr&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/mr (page does not exist)">API extensions/mr</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions/nl" title="Category:API extensions/nl">API extensions/nl</a>‏‎ (2 members)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/pl&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/pl (page does not exist)">API extensions/pl</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions/pt-br" title="Category:API extensions/pt-br">API extensions/pt-br</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_extensions/ru" title="Category:API extensions/ru">API extensions/ru</a>‏‎ (2 members)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/tr&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/tr (page does not exist)">API extensions/tr</a>‏‎ (1 member)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/uk&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/uk (page does not exist)">API extensions/uk</a>‏‎ (1 member)</li>
+<li><a href="/w/index.php?title=Category:API_extensions/zh&amp;action=edit&amp;redlink=1" class="new" title="Category:API extensions/zh (page does not exist)">API extensions/zh</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_templates" title="Category:API templates">API templates</a>‏‎ (11 members)</li>
+<li><a href="/wiki/Category:API_templates/de" title="Category:API templates/de">API templates/de</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_templates/es" title="Category:API templates/es">API templates/es</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_templates/fr" title="Category:API templates/fr">API templates/fr</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_templates/id" title="Category:API templates/id">API templates/id</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_templates/it" title="Category:API templates/it">API templates/it</a>‏‎ (1 member)</li>
+<li><a href="/wiki/Category:API_templates/ja" title="Category:API templates/ja">API templates/ja</a>‏‎ (5 members)</li>
+</ul>(first | <a href="/w/index.php?title=Special:Categories&amp;dir=prev" title="Special:Categories" rel="last" class="mw-lastlink">last</a>) View (previous 50  |  <a href="/w/index.php?title=Special:Categories&amp;offset=API_templates%2Fja" title="Special:Categories" rel="next" class="mw-nextlink">next 50</a>) (<a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=20" title="Special:Categories" class="mw-numlink">20</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=50" title="Special:Categories" class="mw-numlink">50</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=100" title="Special:Categories" class="mw-numlink">100</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=250" title="Special:Categories" class="mw-numlink">250</a> | <a href="/w/index.php?title=Special:Categories&amp;offset=&amp;limit=500" title="Special:Categories" class="mw-numlink">500</a>)</div><noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/wiki/Special:Categories">http://www.mediawiki.org/wiki/Special:Categories</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Special%3ACategories&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Special%3ACategories" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-special" class="selected"><span><a href="/wiki/Special:Categories"  title="This is a special page, you cannot edit the page itself">Special page</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs emptyPortlet" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Special:Categories&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1104 in 0.253 secs. -->
+	</body>
+</html>

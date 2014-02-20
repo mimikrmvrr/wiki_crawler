@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Running MediaWiki on Debian GNU/Linux - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.geshi.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Running_MediaWiki_on_Debian_GNU/Linux","wgTitle":"Running MediaWiki on Debian GNU/Linux","wgCurRevisionId":896526,"wgRevisionId":896526,"wgArticleId":14042,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages that need checking","Pages recently transferred from Meta","Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Running_MediaWiki_on_Debian_GNU/Linux","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":896526,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Running_MediaWiki_on_Debian_GNU_Linux skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Running MediaWiki on Debian GNU/Linux</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="plainlinks ombox ombox-content" role="presentation">
+<tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/3/38/Imbox_content.png" width="40" height="40" /></td>
+<td class="mbox-text"><b>The content of this page has not been verified.</b><br />
+Instructions written in this page have not been verified to be correct.<br />
+If there are any inaccuracies, please drop a note at the <a href="/wiki/Project:Support_desk" title="Project:Support desk">support desk</a>.</td>
+</tr>
+</table>
+<table class="wikitable" style="float:right; margin: 0 0 1em 1em;">
+<tr>
+<th style="background-color:white"><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation guides</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_FreeBSD" title="Manual:Running MediaWiki on FreeBSD">on FreeBSD</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Linux" title="Manual:Running MediaWiki on Linux" class="mw-redirect">on GNU/Linux</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_ALT_Linux" title="Manual:Running MediaWiki on ALT Linux">ALT Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Arch_Linux" title="Manual:Running MediaWiki on Arch Linux">Arch Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Damnsmalllinux" title="Manual:Running MediaWiki on Damnsmalllinux">Damnsmalllinux</a></td>
+</tr>
+<tr>
+<td>- <strong class="selflink">Debian</strong></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Fedora" title="Manual:Running MediaWiki on Fedora">Fedora</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Gentoo_Linux" title="Manual:Running MediaWiki on Gentoo Linux">Gentoo</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Mandriva" title="Manual:Running MediaWiki on Mandriva">Mandriva</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Red_Hat_Linux" title="Manual:Running MediaWiki on Red Hat Linux">Red Hat Enterprise Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Slackware_Linux" title="Manual:Running MediaWiki on Slackware Linux">Slackware</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu" title="Manual:Running MediaWiki on Ubuntu">Ubuntu</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Mac_OS_X" title="Manual:Running MediaWiki on Mac OS X">on Mac OS X</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_NetWare" title="Manual:Running MediaWiki on NetWare">on NetWare</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Solaris" title="Manual:Running MediaWiki on Solaris">on Solaris</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_11_/_opensolaris" title="Manual:Running MediaWiki on Solaris 11 / opensolaris">on Solaris 11 / opensolaris</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_10" title="Manual:Running MediaWiki on Solaris 10">on Solaris 10</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Windows" title="Manual:Running MediaWiki on Windows">on Windows</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2008" title="Manual:Installing MediaWiki on Windows Server 2008">Windows Server 2008</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2003" title="Manual:Installing MediaWiki on Windows Server 2003">Windows Server 2003</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Streamlined_Windows_Install_Guide" title="Manual:Streamlined Windows Install Guide">Streamlined Guide</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Simple_Windows_Apache_Installation" title="Manual:Simple Windows Apache Installation">Simple Windows/Apache Guide</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Wiki_on_a_stick" title="Manual:Wiki on a stick">on a stick</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_on_MoWeS_Portable_(Windows)" title="Manual:Installing on MoWeS Portable (Windows)">on MoWeS Portable</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installation_on_Uniform_Server_(Windows)" title="Manual:Installation on Uniform Server (Windows)">on Uniform Server</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_XAMPP" title="Manual:Installing MediaWiki on XAMPP">on XAMPP</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Running_MediaWiki_on_Sourceforge.net" title="Manual:Running MediaWiki on Sourceforge.net" class="mw-redirect">on Sourceforge.net</a></th>
+</tr>
+</table>
+<div style="border: 2px solid #AEA; padding: 0.4em; border-bottom: none; border-right: none; background: HoneyDew">
+<div class="floatright"><a href="/wiki/File:Wikimedia-logo-meta.png" class="image"><img alt="Wikimedia-logo-meta.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wikimedia-logo-meta.png/40px-Wikimedia-logo-meta.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wikimedia-logo-meta.png/60px-Wikimedia-logo-meta.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wikimedia-logo-meta.png/80px-Wikimedia-logo-meta.png 2x" /></a></div>
+<p><b>This page <a href="//meta.wikimedia.org/wiki/meta:MetaProject_to_transfer_content_to_MediaWiki.org" class="extiw" title="meta:meta:MetaProject to transfer content to MediaWiki.org">was moved</a> from <a href="//meta.wikimedia.org/wiki/" class="extiw" title="m:">MetaWiki</a></b>.<br />
+<small style="line-height:1.1em;">It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.</small></p>
+</div>
+<div style="border-left: 2px dashed #AEA; padding-left: 1em;">
+<p><br />
+This page describes <b>how to install MediaWiki on Debian Squeeze</b> using the latest official MediaWiki code.</p>
+<p>Quick install mediawiki version 1.15.5-2</p>
+<p>Debian will automatically add any required packages to the install.</p>
+<pre>
+# apt-get install mediawiki mediawiki-extensions
+</pre>
+<p>You will be asked to set a root MySQL password during the installation.</p>
+<pre>
+# ln -s /var/lib/mediawiki /var/www
+# mv /var/www/mediawiki /var/www/wiki
+$ firefox localhost/wiki/config/index.php
+</pre>
+<p>Edit Local Settings to change <a href="/wiki/$wgLogo" title="$wgLogo" class="mw-redirect">$wgLogo</a>:</p>
+<pre>
+# vi  /etc/mediawiki/LocalSettings.php
+</pre>
+<p>Possibly, set <a href="/wiki/Manual:Short_URL" title="Manual:Short URL">short URL</a>.</p>
+
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Using_the_Debian_packages"><span class="tocnumber">1</span> <span class="toctext">Using the Debian packages</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Configure_Apache"><span class="tocnumber">2</span> <span class="toctext">Configure Apache</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Configure_PHP"><span class="tocnumber">3</span> <span class="toctext">Configure PHP</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Get_latest_MediaWiki"><span class="tocnumber">4</span> <span class="toctext">Get latest MediaWiki</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Installation_with_Debian-package"><span class="tocnumber">5</span> <span class="toctext">Installation with Debian-package</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#TeX_Support"><span class="tocnumber">6</span> <span class="toctext">TeX Support</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Ocaml-fix"><span class="tocnumber">6.1</span> <span class="toctext">Ocaml-fix</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#This_worked_on_etch_and_mediawiki_1.11"><span class="tocnumber">6.2</span> <span class="toctext">This worked on etch and mediawiki 1.11</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#The_following_LocalSetting.php_settings_works_on_Hardy_and_mediawiki_1.15"><span class="tocnumber">6.3</span> <span class="toctext">The following LocalSetting.php settings works on Hardy and mediawiki 1.15</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Sufficient_package_combination_for_Etch_and_Mediawiki_1.12"><span class="tocnumber">6.4</span> <span class="toctext">Sufficient package combination for Etch and Mediawiki 1.12</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Links"><span class="tocnumber">8</span> <span class="toctext">Links</span></a></li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="Using_the_Debian_packages">Using the Debian packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=1" title="Edit section: Using the Debian packages" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=1" title="Edit section: Using the Debian packages">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table cellspacing="0" cellpadding="0" border="0" style="background: transparent; margin-top:0.5em;border:1px #b52 solid;padding:0.5em;background-color: #fef7f5">
+<tr>
+<td nowrap="nowrap" valign="top"><span style="position: relative; top: -2px;"><img alt="Warning" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/18px-Attention_niels_epting.svg.png" width="18" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/27px-Attention_niels_epting.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Attention_niels_epting.svg/36px-Attention_niels_epting.svg.png 2x" /></span> <b>Warning:</b></td>
+<td valign="top" style="padding-left:0.5em;">The packages created by linux distro's (including debian) are unofficial. It is recommended you read through the information on <a href="/wiki/Software_bundles" title="Software bundles">Software bundles</a> before installing via a package.</td>
+</tr>
+</table>
+<p>MediaWiki is now in Debian's main archive. The main packages are <i>mediawiki</i> (which provides the latest packaged version of mediawiki) and <i>mediawiki 1.15.5</i> (which provides mediawiki version 1.15.5). This guide is mainly concerned with an installation without those packages. Debian is a stable and secure linux distribution because of the package system. Using it will allow you to receive upgrades and security fixes. It is easy to learn and will give you years of safe and trouble-free use.</p>
+<p>To install MediaWiki using Debian's packages, just type as <a href="//en.wikipedia.org/wiki/superuser" class="extiw" title="w:superuser">root</a>:</p>
+<pre>
+ # apt-get install mediawiki
+</pre>
+<p>You may also want to install the package <i>mediawiki-extensions</i>: NOTE: mediawiki-extensions is a large meta package containing mediawiki-extensions-base (Base package), mediawiki-extensions-collection (Collection extension), mediawiki-extensions-confirmedit (ConfirmEdit), mediawiki-extensions-fckeditor (FCKeditor), mediawiki-extensions-geshi (SyntaxHighlight_GeSHi extension), mediawiki-extensions-graphviz (GraphViz extension), mediawiki-extensions-ldapauth (LdapAuthentication extension), and mediawiki-extensions-openid (OpenID extension). Any of these extensions can be installed individually.</p>
+<pre>
+ # apt-get install mediawiki-extensions
+</pre>
+<p>For further information on using the Debian packages, see the section <a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux#Installation_with_Debian-package" title="Manual:Running MediaWiki on Debian GNU/Linux">Installation with Debian-package</a> below.</p>
+<h2><span class="mw-headline" id="Configure_Apache">Configure Apache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=2" title="Edit section: Configure Apache" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=2" title="Edit section: Configure Apache">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If you want to have MediaWiki run on a virtual host, you'll want to add a file in the /etc/apache2/sites_available directory. See the Debian documentation for more information.</p>
+<p>Also be aware that if you have PHP configured in anything like a safe mode such that open_basedir is very restrictive then you'll need to add, in an appropriate place such as a &lt;Location /mediawiki&gt; section, something like:</p>
+<pre>
+php_admin_value open_basedir ".:/var/lib/mediawiki1.7:/usr/share/mediawiki1.7:/etc/mediawiki1.7"
+</pre>
+<p><br /></p>
+<h2><span class="mw-headline" id="Configure_PHP">Configure PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=3" title="Edit section: Configure PHP" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=3" title="Edit section: Configure PHP">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Make sure your PHP configuration file (/etc/php4/apache/php.ini or /etc/php4/apache2/php.ini or the equivalent line if you have PHP5 which the MediaWiki 1.7 installation will have) has this line:</p>
+<pre>
+memory_limit = 20M
+</pre>
+<p>and the following lines uncommented:</p>
+<pre>
+extension=mysql.so
+extension=gd.so
+</pre>
+<p>Modify the open_basedir config variable to allow access to GNU diff3 and git binaries. Add <code>:/usr/bin/</code> to the end:</p>
+<pre>
+open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/var/www/:/usr/bin/
+</pre>
+<p>restart Apache / Apache2</p>
+<pre>
+apachectl restart  OR  apachectl graceful
+</pre>
+<pre>
+apache2ctl restart  OR  apache2ctl graceful
+</pre>
+<h2><span class="mw-headline" id="Get_latest_MediaWiki">Get latest MediaWiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=4" title="Edit section: Get latest MediaWiki" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=4" title="Edit section: Get latest MediaWiki">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Get the latest MediaWiki from <a href="/wiki/Download" title="Download">Download page</a>:</p>
+<pre>
+<a href="//en.wikipedia.org/wiki/wget" class="extiw" title="w:wget">wget</a> <a class="external free" href="http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz">http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz</a>
+</pre>
+<p>Copy it and extract in apache root directory:</p>
+<pre>
+sudo mv mediawiki-1.22.2.tar.gz /var/www
+cd /var/www
+sudo tar vxfz mediawiki-1.22.2.tar.gz
+</pre>
+<p>rename the extracted directory name to wiki</p>
+<pre>
+sudo mv mediawiki-1.22.2 wiki
+</pre>
+<p>Pay good attention for <b>"Checking environment..."</b> in MediaWiki installation script. This can solve a lot of problems for your MediaWiki successful installation. Fill out the configuration form and continue.</p>
+<p>Once configuration is done you'll need to download the LocalSettings.php file and put it in your wiki directory.</p>
+<p>For added safety you can then remove the config subdirectory entirely.</p>
+<pre>
+rm -r config
+</pre>
+<p>And navigate your browser to <a rel="nofollow" class="external free" href="http://localhost/wiki">http://localhost/wiki</a> to see your new wiki. Done!</p>
+<p>If you want to setup a master Source of wiki, and multi-slave for different wiki sites. You can ...</p>
+<p>get a auto. generate wiki slave script from <a rel="nofollow" class="external text" href="http://202.94.233.75/cgi-bin/viewcvs.cgi/open_data/apps/content_management/MediaWiki/create_slave_wiki?rev=1.1&amp;view=log">create_slave_wiki</a></p>
+<p>run the wiki init. install on web, then create the LocalSettings.php.</p>
+<p>create a user, then change him/her to sysop.</p>
+<h2><span class="mw-headline" id="Installation_with_Debian-package">Installation with Debian-package</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=5" title="Edit section: Installation with Debian-package" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=5" title="Edit section: Installation with Debian-package">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>
+Note: this description is still referring to the older mediawiki1.5.
+</pre>
+<p>I just got it all working. What I did was to install a Debian-package with mediawiki1.5. After installation I pointed my browser to: <a rel="nofollow" class="external free" href="http://localhost/mediawiki/setup">http://localhost/mediawiki/setup</a> and filled in the form there. After that I moved my LocalSettings.php from the folder where it was, to the suggested folder. I did a chmod 444 on all files in that folder. After that i did a "chmod 700 on the folder /etc/mediawiki1.5". Now I clicked on the URL in the installation results, and whamo, there it was, my wiki&#160;:) Did this twice on two different Debian installs today, so the procedure should work.</p>
+<p><b>Warning</b>: The Ubuntu packages are several versions behind. As of 02:41, 13 October 2006 (UTC), it was on version 1.4.12.</p>
+<p>--- update for mediawiki1.7</p>
+<p><b>Did the install of the Mediawiki 1.7 on Debian Etch (apache2, mysql, php5) by "apt-get install mediawiki" and everything works right on without a glitch. Way to go Debian!</b></p>
+<h2><span class="mw-headline" id="TeX_Support">TeX Support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=6" title="Edit section: TeX Support" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=6" title="Edit section: TeX Support">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>You need these packages installed:</p>
+<ul>
+<li>ocaml</li>
+<li>imagemagick</li>
+<li>gs</li>
+<li>cjk-latex (now called latex-cjk-all)</li>
+<li>tetex-extra (now in texlive-base, is installed by latex-cjk-all)</li>
+<li>php4-imagick</li>
+<li>binutils ("/usr/bin/as" is needed by make job)</li>
+<li>gcc</li>
+</ul>
+<pre>
+apt-get install ocaml imagemagick gs cjk-latex tetex-extra php4-imagick binutils gcc
+</pre>
+<p>or you can just use the <i>mediawiki-math</i> package. There is all packages needed include its.:</p>
+<pre>
+apt-get install mediawiki-math
+</pre>
+<p>After installation, enable inline LaTeX equations by uncommenting:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="re0">$wgUseTeX</span>           <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>in LocalSettings.php file.(by default in /etc/mediawiki)</p>
+<p>It is not necessary to <b>make texvc</b> if you install the mediawiki-math package. However, /var/www/wiki/math/README does not specify what permissions are necessary for the math directory. I get this error under Ubuntu Breezy after installing the mediawiki-math package. <i>Failed to parse (Can't write to or create math output directory):</i></p>
+<p>If you get the above error, make sure that the '$wgUploadPath' and '$wgUploadDirectory' in LocalSettings.php point to an existing directory which is writable by the webserver. For the mediawiki1.5 1.5.8-1 package, you may have to edit LocalSettings.php to change the directory name from 'images' to 'upload' (check your /var/lib/mediawiki1.5 directory for this).</p>
+<p><s>Make sure your php.ini contains the following row: extension=imagick.so Next compile <b>texvc</b> in your math directory: cd /var/www/wiki/math make You may have to manually create the directories for math temp and output directories: cd /var/www/wiki/images mkdir -m777 math tmp</s></p>
+<h3><span class="mw-headline" id="Ocaml-fix">Ocaml-fix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=7" title="Edit section: Ocaml-fix" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=7" title="Edit section: Ocaml-fix">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>NOTE: This problem is only about missing gcc.</b></p>
+<p>(Added 18/05/05)<br />
+Using make I got some errors using Debian stable (Sarge) (unfortunately they are not in my console any more, so i cant show them) but installing additional packages worked. The Error Messages are similar to those (reproduced on ubuntu)&#160;:</p>
+<pre>
+ocamlopt -c util.ml
+ocamlc -c render_info.mli
+ocamlc -c tex.mli
+ocamlyacc parser.mly
+ocamlc -c parser.mli
+ocamlopt -c parser.ml
+ocamlc -c html.mli
+ocamlopt -c html.ml
+ocamlc -c mathml.mli
+ocamlopt -c mathml.ml
+ocamlc -c texutil.mli
+ocamlopt -c texutil.ml
+ocamlopt -c render.ml
+ocamllex lexer.mll
+188 states, 3222 transitions, table size 14016 bytes
+ocamlopt -c lexer.ml
+ocamlopt -c texvc.ml
+ocamlopt -o texvc unix.cmxa util.cmx parser.cmx html.cmx mathml.cmx texutil.cmx render.cmx lexer.cmx texvc.cmx
+sh: gcc: command not found
+Error during linking
+make: *** [texvc] Error 2
+rm parser.ml lexer.ml
+</pre>
+<p>In order to fix the problems do the following install:</p>
+<pre>
+apt-get install ocaml-core gcc
+</pre>
+<p>NOTE: If you have run ocaml -i thinking this would help (as I did) the script may have removed some files. If you can, copy the contents of a backup /images/math directory to your new one after having deleted the old files and run <b>make</b> again.</p>
+<p>Note that you have to change the LaTeX code to see if it works (purge the page.)</p>
+<h3><span class="mw-headline" id="This_worked_on_etch_and_mediawiki_1.11">This worked on etch and mediawiki 1.11</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=8" title="Edit section: This worked on etch and mediawiki 1.11" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=8" title="Edit section: This worked on etch and mediawiki 1.11">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ol>
+<li>go to /wiki/math/</li>
+<li>apt-get install ocaml texlive imagemagick build-essential ocaml-core gcc</li>
+<li>add new folder math in wiki/images</li>
+<li>chmod 777 math</li>
+<li>chown www-data math</li>
+<li>in localsettings.php insert $wgTmpDirectory = "$IP/images/math";</li>
+<li>in localsettings.php change to $wgUseTeX = true;</li>
+<li>test if it works - enter "* \int_a^x f(\alpha\,)\,dx" on a page and save it</li>
+</ol>
+<p>If you do "sudo chmod -R 0777 images"(losing safety), the following setting works well:</p>
+<h3><span class="mw-headline" id="The_following_LocalSetting.php_settings_works_on_Hardy_and_mediawiki_1.15">The following LocalSetting.php settings works on Hardy and mediawiki 1.15</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=9" title="Edit section: The following LocalSetting.php settings works on Hardy and mediawiki 1.15" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=9" title="Edit section: The following LocalSetting.php settings works on Hardy and mediawiki 1.15">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ol>
+<li>$wgTexvc ="/usr/bin/texvc";</li>
+<li>$wgUseTeX = true;</li>
+<li>$wgUploadPath = "images";</li>
+<li>$wgUploadDirectory = "images";</li>
+<li>$wgMathPath = "$wgScriptPath/images";</li>
+<li>$wgMathPath = "$wgScriptPath/images";</li>
+<li>$wgTmpDirectory = "$wgScriptPath/images";</li>
+</ol>
+<h3><span class="mw-headline" id="Sufficient_package_combination_for_Etch_and_Mediawiki_1.12">Sufficient package combination for Etch and Mediawiki 1.12</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=10" title="Edit section: Sufficient package combination for Etch and Mediawiki 1.12" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=10" title="Edit section: Sufficient package combination for Etch and Mediawiki 1.12">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>If you do not have <b>texvc</b>:</li>
+</ul>
+<pre>
+apt-get install  <b>texlive imagemagick gs make ocaml</b>
+</pre>
+<dl>
+<dd>After build of <b>texvc</b>, you may remove every packages installed with "ocaml".</dd>
+</dl>
+<ul>
+<li>If you have <b>texvc</b> (you can build it on another Etch):</li>
+</ul>
+<pre>
+apt-get install  <b>texlive imagemagick gs</b>
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=11" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=11" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu" title="Manual:Running MediaWiki on Ubuntu">Manual:Running MediaWiki on Ubuntu</a></li>
+<li><a href="/wiki/Manual:Running_MediaWiki_on_Linux" title="Manual:Running MediaWiki on Linux" class="mw-redirect">Manual:Running MediaWiki on Linux</a></li>
+<li><a href="//meta.wikimedia.org/wiki/Documentation:Security" class="extiw" title="m:Documentation:Security">MediaWiki and Security</a></li>
+<li><a href="//meta.wikimedia.org/wiki/MediaWiki_development" class="extiw" title="m:MediaWiki development">m:MediaWiki development</a></li>
+</ul>
+<h2><span class="mw-headline" id="Links">Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit&amp;section=12" title="Edit section: Links" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit&amp;section=12" title="Edit section: Links">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://synarcher.sourceforge.net/#install_linux">MediaWiki installation in Debian and Windows XP</a> (as part of Synarcher installation)</li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ja"><a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux/ja" title="Manual:Running MediaWiki on Debian GNU/Linux/ja">日本語</a></bdi></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1214
+CPU time usage: 0.560 seconds
+Real time usage: 0.624 seconds
+Preprocessor visited node count: 2207/1000000
+Preprocessor generated node count: 6936/1500000
+Post‐expand include size: 13507/2048000 bytes
+Template argument size: 19720/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+Lua time usage: 0.021/10.000 seconds
+Lua memory usage: 699 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:14042-0!*!0!!en!4!* and timestamp 20140215095801
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;oldid=896526">http://www.mediawiki.org/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;oldid=896526</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Pages_that_need_checking" title="Category:Pages that need checking">Pages that need checking</a></li><li><a href="/wiki/Category:Pages_recently_transferred_from_Meta" title="Category:Pages recently transferred from Meta">Pages recently transferred from Meta</a></li><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+Debian+GNU%2FLinux&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ARunning+MediaWiki+on+Debian+GNU%2FLinux" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Running_MediaWiki_on_Debian_GNU/Linux"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3ARunning+MediaWiki+on+Debian+GNU%2FLinux">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3ARunning+MediaWiki+on+Debian+GNU%2FLinux&amp;oldid=896526&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Running_MediaWiki_on_Debian_GNU/Linux" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Running_MediaWiki_on_Debian_GNU/Linux" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;oldid=896526" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Running_MediaWiki_on_Debian_GNU/Linux&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3ARunning_MediaWiki_on_Debian_GNU%2FLinux&amp;id=896526" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 February 2014, at 00:54.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1051 in 0.227 secs. -->
+	</body>
+</html>

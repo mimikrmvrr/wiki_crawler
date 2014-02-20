@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Administrators - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Administrators&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Administrators&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Administrators" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Administrators","wgTitle":"Administrators","wgCurRevisionId":836565,"wgRevisionId":836565,"wgArticleId":28404,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Permission"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Administrators","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us","en","fr","it","de"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":836565,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Administrators skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Administrators</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>Administrators</b> are wiki users who are members of the "<i>sysop</i>" user group. The wiki software has few features which are only accessible to these users, but they are quite important.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Administrator_tools"><span class="tocnumber">1</span> <span class="toctext">Administrator tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Protection"><span class="tocnumber">1.1</span> <span class="toctext">Protection</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Deletion"><span class="tocnumber">1.2</span> <span class="toctext">Deletion</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Rollback"><span class="tocnumber">1.3</span> <span class="toctext">Rollback</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Block_and_unblock"><span class="tocnumber">1.4</span> <span class="toctext">Block and unblock</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Making_sysops"><span class="tocnumber">2</span> <span class="toctext">Making sysops</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Signed-in_privileges"><span class="tocnumber">3</span> <span class="toctext">Signed-in privileges</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Administrator_tools">Administrator tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=1" title="Edit section: Administrator tools" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=1" title="Edit section: Administrator tools">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Protection">Protection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=2" title="Edit section: Protection" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=2" title="Edit section: Protection">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Administrators can edit protected pages and have the ability to protect and unprotect pages from editing and moving.</p>
+<p>Versions of edit protection are:</p>
+<ul>
+<li><b>Semi-protection</b>: protection of a page against editing by an unregistered user.</li>
+<li><b>Full protection</b>: protection of a page against editing by a non-admin.</li>
+<li><b>Cascading protection</b> (<a href="//meta.wikimedia.org/wiki/Help:Cascading_protection_demo" class="extiw" title="meta:Help:Cascading protection demo">→ see demo</a>):
+<ul>
+<li>in combination with full protection: protecting a page against editing by a non-admin, but also protecting images embedded on the page, provided that they are on the same site (not on Commons), and also applying the same protection to transcluded pages for as long as they remain transcluded in the page (thus it works recursively).
+<ul>
+<li>Cascade protection does not apply to the targets of file redirects, if the redirect is listed on the protected page (<a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23542" class="extiw" title="bugzilla:23542">bugzilla:23542</a>).</li>
+</ul>
+</li>
+<li>Cascading protection in combination with semi-protection does not make sense and should be avoided (see <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=8796" class="extiw" title="bugzilla:8796">bugzilla:8796</a>); applies full protection to transcluded pages for as long as they remain transcluded in the page (again recursively).</li>
+</ul>
+</li>
+<li><b>Move protection</b> is protection of a page against moving by a non-admin.</li>
+</ul>
+<p><b>Procedure</b></p>
+<ul>
+<li>To <b>protect</b> a page, click the <i>protect</i> tab. In the monobook skin, the shortcut alt+= can alternatively be used. This will lead to a confirmation screen with two menus and a checkbox. In the menu, the administrator can choose to protect the page from editing by <i>unregistered users</i> or <i>all users</i>. Similarly, the page can be protected from moves by either <i>unregistered users</i> (although this seems standard anyway) or <i>all users</i> (the system automatically adds the same level of protection to moves as it does to edits, but the protection level can be changed by checking the "Unlock move permissions" checkbox). Cascading protection is enabled by checking a separate checkbox. Enter the reason for page protection in the box and press "confirm." This will be <a href="/wiki/Special:Log/protect" title="Special:Log/protect">logged</a>.</li>
+<li>To <b>unprotect</b> a page, click the <i>unprotect</i> tab. This will bring up the exact page as above, only this time the two menus will already be selected. Unprotection only involves selecting "(default)" under the "Edits" menu and pressing confirm. A reason for unprotection should be given as well. This action will likewise be <a href="/wiki/Special:Log/protect" title="Special:Log/protect">logged</a>.</li>
+</ul>
+<p><b>Notes</b></p>
+<ul>
+<li><b>MediaWiki namespace</b>: full protection applies automatically in the <a href="//meta.wikimedia.org/wiki/Help:System_message" class="extiw" title="meta:Help:System message">MediaWiki namespace</a>, which contains deviations from the default interface messages (such as the <a href="/wiki/MediaWiki:Blockedtext" title="MediaWiki:Blockedtext">blocked text</a>, tab text, et cetera).</li>
+<li><b>Edit</b> or <b>view source</b>: Depending on the status of the user and the status of the page, a user is provided an edit link or a link to just view the wikitext. After pressing edit on a fully protected page, an administrator is presented a warning at the top of the page informing about this page status. Also, the <i>view source</i> link may sometimes replace an <i>edit</i> link when the user is blocked.</li>
+<li><b>Images</b>: Protecting an image is mostly the same as protecting a page (see above). When the <i>protect</i> tab is clicked on the image description page, both the page and the image are protected. The image description page will be protected, and non-sysops will not be able to revert the image to an earlier version, or upload a new version over it.</li>
+<li>Cascading protection of an important page is a crude measure, mainly for emergencies. If a template has to be protected just because it is transcluded in an important page, while it is also used elsewhere, it is better to make a copy for the transclusion in the important page, and use the other copy elsewhere. When this care is taken it makes little difference whether we use the automatic cascading protection or "manual cascading protection", i.e., protect the special copy of the template in the ordinary way. Initially, the main application of cascading protection is therefore the protection against creation, by transcluding non-existing pages on a page specially prepared for this purpose, like <a href="//meta.wikimedia.org/wiki/Protected_against_recreation" class="extiw" title="meta:Protected against recreation">Meta:Protected against recreation</a>. Protection of a non-existing page was not possible directly (an attempt would have given the {{msg|badarticleerror}}), but as of MediaWiki 1.13 this is now possible.</li>
+<li><b>Abuse filters</b>: Additionally, if the <a href="/wiki/Extension:AbuseFilter" title="Extension:AbuseFilter">AbuseFilter</a> extension has been enabled, access to or viewing certain parts of the interface as well as modification of the interface is restricted to administrators.</li>
+</ul>
+<p><b>Configuration</b></p>
+<ul>
+<li>which actions can be restricted via the protection interface is determined by the <a href="/wiki/Manual:$wgRestrictionTypes" title="Manual:$wgRestrictionTypes">$wgRestrictionTypes</a> setting.</li>
+<li>which permissions can be required via the protection interface is determined by the <a href="/wiki/Manual:$wgRestrictionLevels" title="Manual:$wgRestrictionLevels">$wgRestrictionLevels</a> setting.</li>
+</ul>
+<h3><span class="mw-headline" id="Deletion">Deletion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=3" title="Edit section: Deletion" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=3" title="Edit section: Deletion">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl>
+<dd><i>See also: <a href="/wiki/Help:Sysop_deleting_and_undeleting" title="Help:Sysop deleting and undeleting">Help:Sysop deleting and undeleting</a></i></dd>
+</dl>
+<p>Administrators can delete pages and their history, and can view and restore deleted pages and their history. They can also delete images, which can be undeleted as normal.</p>
+<p><b>Procedure</b></p>
+<ul>
+<li>To <b>delete</b> a page, click the <i>delete</i> link on the page that is to be deleted. If an administrator is using the monobook skin, the shortcut alt+d can alternatively be used. This will bring up a new page asking for a confirmation that the page should be deleted, as well as an explanation of the deletion. A message should be typed into the input box to explain the deletion to other users. After the page has been deleted, it might have an existing talk page which should be deleted as well. Any links that point to the deleted page should be removed or corrected—whichever is the most appropriate action.</li>
+<li>
+<p>Pages can be <b>undeleted</b> for as long as they are in the archive. This archive is occasionally lost in database crashes. If a page has not been recreated since it was deleted, there will be a message on the page indicating how many deleted revisions there are. Clicking on this (or the <i>undelete</i> tab) will bring up a page displaying all the deleted revisions which can each be looked at separately. To undelete a page, click the <i>restore</i> button which appears on the confirmation page; this will restore all deleted revisions by default. Undeletion occurs as soon as the button is clicked, and will be logged just like deletions; if some revisions are not restored, the log will record how many were restored.</p>
+<p>If a page already exists but an administrator wants to restore previous revisions, the administrator must go to the page history. There will be a link to undelete as described above.</p>
+</li>
+</ul>
+<p><b>Notes</b></p>
+<ul>
+<li><b>Delete revisions</b>
+<ul>
+<li><b>Delete article revisions</b>
+<ul>
+<li><b>Delete article revisions for the first time:</b> To delete/keep just one or more revisions from the history, delete the article normally, then begin the undeletion procedure. Before clicking the "Restore" button, check the revisions you want to restore—all others will remain deleted.</li>
+<li><b>Delete article revisions not for the first time:</b> if the article already contains previously deleted revisions, be sure to follow <a href="//en.wikipedia.org/wiki/WP:Selective_deletion" class="extiw" title="wikipedia:WP:Selective deletion">Wikipedia:WP:Selective deletion</a>.</li>
+</ul>
+</li>
+<li><b>Delete image revisions:</b> To delete one version of an image, click the <i>(del)</i> link beside that version under the "File history" heading. The most recent version <i>cannot</i> be deleted without deleting all previous versions.</li>
+</ul>
+</li>
+<li><b>Merge edit histories:</b> the edit histories of two articles may be merged into one. To merge histories, delete the page where all the histories are supposed to be restored. Move the other page to the page just deleted, and then restore all the deleted revisions. This cannot be manually undone, and it is very difficult to split edit histories.</li>
+<li><b>Split an edit history:</b> To split an edit history, manually delete all revisions, then restore those belonging to one article (which may be difficult to recognize). Move the undeleted page to a new title to split off those revisions. Restore the revisions belonging to the deleted page (now a redirect), then revert to a the penultimate revision (before the redirect).</li>
+</ul>
+<h3><span class="mw-headline" id="Rollback">Rollback</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=4" title="Edit section: Rollback" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=4" title="Edit section: Rollback">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Any user can <a href="//meta.wikimedia.org/wiki/Help:Reverting" class="extiw" title="meta:Help:Reverting">revert</a> a page by going back through the page's history. Administrators have a <i>rollback</i> button to expedite the process. To revert the edits of one user to the last version by the previous editor, click <i>rollback</i> on the page history, the user contribution list, or on the diff page. The reversion will be marked as a minor edit and given an automatic edit summary based on the contents of <a href="/wiki/MediaWiki:Revertpage" title="MediaWiki:Revertpage">MediaWiki:Revertpage</a>.</p>
+<p>Sysops (and other users with right " <a href="/wiki/MediaWiki:Right-markbotedits" title="MediaWiki:Right-markbotedits">markbotedits</a>") can hide edits (typically, vandalism) from the <a href="//meta.wikimedia.org/wiki/Help:Recent_changes" class="extiw" title="meta:Help:Recent changes">Recent Changes</a> page. To do this, add <tt>&amp;bot=1</tt> to the end of the url used to access a user's contributions. For example, <tt>...index.php?title=Special:Contributions&amp;target=Username&amp;bot=1</tt>. When the rollback links on the contributions list are clicked, both the revert and the original edit that you are reverting will be hidden from the default Recentchanges display. This mechanism uses the marker originally added to keep massive bot edits from flooding recentchanges, hence the "bot". These changes will be hidden from recent changes unless you click the "bots" link to set <tt>hidebots=0</tt>. The edits are not hidden from contribs, history, watchlist, etc. The edits remain in the database and are not removed, but they no longer flood Recentchanges. The aim of this feature is to reduce the annoyance factor of a flood vandal with relatively little effort.</p>
+<h3><span class="mw-headline" id="Block_and_unblock">Block and unblock</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=5" title="Edit section: Block and unblock" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=5" title="Edit section: Block and unblock">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl>
+<dd><i>See <a href="/wiki/Manual:Block_and_unblock" title="Manual:Block and unblock">Manual:Block and unblock</a>.</i></dd>
+</dl>
+<h2><span class="mw-headline" id="Making_sysops">Making sysops</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=6" title="Edit section: Making sysops" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=6" title="Edit section: Making sysops">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table style="border: 1px solid #888888; float: right; font-size: 80%; margin: 0 0 .5em .5em; line-height: 1.2; text-align: right; border-collapse: collapse;">
+<tr>
+<td style="padding: .1em .3em;">MediaWiki version:</td>
+<td title="The latest stable version is 1.22" style="border-color: #50A050; border-bottom-color: #FF0000; border-width: 5px; border-style: solid; text-align: center; padding: .1em .3em;"><abbr style="font-weight: bold; font-size: 180%;"><small>≥</small> 1.11</abbr></td>
+</tr>
+</table>
+<p>There is a simple <b>interface</b> (<a href="/wiki/Special:UserRights" title="Special:UserRights">Special:Userrights</a>) for granting a specific username 'sysop' status or (in MediaWiki 1.11) granting and revoking membership to groups with all associated user rights - a user with 'Bureaucrat' status has the rights to do to this. The initial user created by the installer should have 'Bureaucrat' rights.</p>
+<p>Older versions of Mediawiki before 1.11 required you to <a href="/wiki/Manual:Setting_user_rights_in_MediaWiki" title="Manual:Setting user rights in MediaWiki" class="mw-redirect">manipulate the database records within MySQL</a> in order to grant users certain rights.</p>
+<div style="clear:both;"></div>
+<h2><span class="mw-headline" id="Signed-in_privileges">Signed-in privileges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=7" title="Edit section: Signed-in privileges" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=7" title="Edit section: Signed-in privileges">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Users with ordinary access, including visitors who haven't "signed in", can still do many things, including the most important: editing pages and helping with maintenance tasks. But only signed-up users can <a href="//meta.wikimedia.org/wiki/Help:Images_and_other_uploaded_files" class="extiw" title="meta:Help:Images and other uploaded files">upload files</a> or <a href="//meta.wikimedia.org/wiki/Help:Renaming_(moving)_a_page" class="extiw" title="meta:Help:Renaming (moving) a page">rename pages</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit&amp;section=8" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit&amp;section=8" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Manual:Setting_user_rights_in_MediaWiki" title="Manual:Setting user rights in MediaWiki" class="mw-redirect">Setting user rights in MediaWiki</a></li>
+<li><a href="//en.wikibooks.org/wiki/MediaWiki_Administrator%27s_Handbook" class="extiw" title="b:MediaWiki Administrator's Handbook">MediaWiki Administrator's Handbook</a></li>
+<li><a href="//meta.wikimedia.org/wiki/Administrators_of_Wikimedia_projects" class="extiw" title="meta:Administrators of Wikimedia projects">Administrators of Wikimedia projects</a></li>
+<li><a href="/wiki/Manual:CreateAndPromote.php" title="Manual:CreateAndPromote.php">Manual:createAndPromote.php</a> createAndPromote.php is a MediaWiki script that creates a new user and auto-promotes them to sysop status. (To create the first admin after mediawiki installation)</li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="de"><a href="/wiki/Manual:Administrators/de" title="Manual:Administrators/de">Deutsch</a></bdi>&#160;• <bdi lang="fr"><a href="/wiki/Manual:Administrators/fr" title="Manual:Administrators/fr">français</a></bdi>&#160;• <bdi lang="id"><a href="/wiki/Manual:Administrators/id" title="Manual:Administrators/id">Bahasa Indonesia</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Manual:Administrators/ja" title="Manual:Administrators/ja">日本語</a></bdi>&#160;• <bdi lang="pt"><a href="/wiki/Manual:Administrators/pt" title="Manual:Administrators/pt">português</a></bdi>&#160;• <bdi lang="pt-br"><a href="/wiki/Manual:Administrators/pt-br" title="Manual:Administrators/pt-br">português do Brasil</a></bdi>&#160;• <bdi lang="ru"><a href="/wiki/Manual:Administrators/ru" title="Manual:Administrators/ru">русский</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1180
+CPU time usage: 0.432 seconds
+Real time usage: 0.489 seconds
+Preprocessor visited node count: 2502/1000000
+Preprocessor generated node count: 7329/1500000
+Post‐expand include size: 12861/2048000 bytes
+Template argument size: 1567/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:28404-0!*!0!!en!*!* and timestamp 20140202134529
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Administrators&amp;oldid=836565">http://www.mediawiki.org/w/index.php?title=Manual:Administrators&amp;oldid=836565</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Permission" title="Category:Permission">Permission</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AAdministrators&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AAdministrators" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Administrators"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Administrators"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Administrators" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Administrators&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Administrators&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Administrators&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3AAdministrators">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3AAdministrators&amp;oldid=836565&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Administrators&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Administrators" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Administrators" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Administrators&amp;oldid=836565" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Administrators&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3AAdministrators&amp;id=836565" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 December 2013, at 20:33.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Administrators" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1182 in 0.176 secs. -->
+	</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Help:Contents - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Help:Contents" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Help","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":12,"wgPageName":"Help:Contents","wgTitle":"Contents","wgCurRevisionId":761207,"wgRevisionId":761207,"wgArticleId":1738,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Help"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Help:Contents","wgIsProbablyEditable":false,"wgRestrictionEdit":["autoconfirmed"],"wgRestrictionMove":["autoconfirmed"],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":761207,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-12 ns-subject page-Help_Contents skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Help:Contents</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="pd-help-page-notice">
+<table style="color:#000000; border:solid 1px #A8A8A8; padding:0.5em; margin:0.5em 0; background-color:#FFFFFF;font-size:95%; vertical-align:middle;">
+<tr>
+<td style="padding:1em;width: 30px"><img alt="PD" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/30px-PD-icon.svg.png" width="30" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/45px-PD-icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/60px-PD-icon.svg.png 2x" /></td>
+<td><b>Note:</b> When you edit this page, you agree to release your contribution under the <a rel="nofollow" class="external text" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. See <a href="/wiki/Project:PD_help" title="Project:PD help">Public Domain Help Pages</a> for more info.</td>
+<td style="padding:1em;width: 30px"><img alt="PD" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/30px-PD-icon.svg.png" width="30" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/45px-PD-icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/60px-PD-icon.svg.png 2x" /></td>
+</tr>
+</table>
+</div>
+<h2><span class="mw-headline" id="Reading">Reading</span></h2>
+<ul>
+<li><a href="/wiki/Help:Navigation" title="Help:Navigation">Navigation</a></li>
+<li><a href="/wiki/Help:Searching" title="Help:Searching">Searching</a></li>
+<li><a href="/wiki/Help:Tracking_changes" title="Help:Tracking changes">Tracking changes</a></li>
+<li><a href="/wiki/Help:Watchlist" title="Help:Watchlist">Watchlist</a></li>
+</ul>
+<h2><span class="mw-headline" id="Editing">Editing</span></h2>
+<ul>
+<li><a href="/wiki/Help:Editing_pages" title="Help:Editing pages">Editing pages</a></li>
+<li><a href="/wiki/Help:Starting_a_new_page" title="Help:Starting a new page">Starting a new page</a></li>
+<li><a href="/wiki/Help:Formatting" title="Help:Formatting">Formatting</a></li>
+<li><a href="/wiki/Help:Links" title="Help:Links">Links</a></li>
+<li><a href="/wiki/Help:User_page" title="Help:User page">User pages</a></li>
+<li><a href="/wiki/Help:Talk_pages" title="Help:Talk pages">Talk pages</a></li>
+<li><a href="/wiki/Help:Signatures" title="Help:Signatures">Signatures</a></li>
+</ul>
+<h3><span class="mw-headline" id="Advanced_editing">Advanced editing</span></h3>
+<ul>
+<li><a href="/wiki/Help:Images" title="Help:Images">Images</a></li>
+<li><a href="/wiki/Help:Lists" title="Help:Lists">Lists</a></li>
+<li><a href="/wiki/Help:Tables" title="Help:Tables">Tables</a></li>
+<li><a href="/wiki/Help:Categories" title="Help:Categories">Categories</a></li>
+<li><a href="/wiki/Help:Subpages" title="Help:Subpages">Subpages</a></li>
+<li><a href="/wiki/Help:Managing_files" title="Help:Managing files">Managing files</a></li>
+<li><a href="/wiki/Help:Moving_a_page" title="Help:Moving a page">Moving (renaming) a page</a></li>
+<li><a href="/wiki/Help:Redirects" title="Help:Redirects">Redirects</a></li>
+<li><a href="/wiki/Help:Deleting_a_page" title="Help:Deleting a page" class="mw-redirect">Deleting a page</a></li>
+<li><a href="/wiki/Help:Protected_pages" title="Help:Protected pages">Protected pages</a></li>
+<li><a href="/wiki/Help:Templates" title="Help:Templates">Templates</a></li>
+<li><a href="/wiki/Help:Magic_words" title="Help:Magic words">Magic words</a></li>
+<li><a href="/wiki/Help:Namespaces" title="Help:Namespaces">Namespaces</a></li>
+<li><a href="/wiki/Help:Extension:Cite" title="Help:Extension:Cite">References</a></li>
+<li><a href="/wiki/Help:Special_pages" title="Help:Special pages">Special pages</a></li>
+<li><a href="/wiki/Help:External_searches" title="Help:External searches">External searches</a></li>
+<li><a href="/wiki/Help:Bots" title="Help:Bots">Bots</a></li>
+</ul>
+<h2><span class="mw-headline" id="Personal_customization">Personal customization</span></h2>
+<ul>
+<li><a href="/wiki/Help:Preferences" title="Help:Preferences">Preferences</a></li>
+<li><a href="/wiki/Help:Skins" title="Help:Skins">Skins</a></li>
+</ul>
+<h2><span class="mw-headline" id="Wiki_administration">Wiki administration</span></h2>
+<ul>
+<li><a href="/wiki/Help:Sysops_and_permissions" title="Help:Sysops and permissions">Sysops and permissions</a></li>
+</ul>
+<p>The following features require extra permissions that are not normally granted to all wiki users.</p>
+<ul>
+<li><a href="/wiki/Help:Protecting_and_unprotecting_pages" title="Help:Protecting and unprotecting pages">Protecting and unprotecting pages</a></li>
+<li><a href="/wiki/Help:Sysop_deleting_and_undeleting" title="Help:Sysop deleting and undeleting">Sysop deleting and undeleting</a></li>
+<li><a href="/wiki/Help:Patrolled_edits" title="Help:Patrolled edits">Patrolled edits</a></li>
+<li><a href="/wiki/Help:Blocking_users" title="Help:Blocking users">Blocking users</a></li>
+<li><a href="/wiki/Help:Range_blocks" title="Help:Range blocks">Range IP address blocks</a></li>
+<li><a href="/wiki/Help:Assigning_permissions" title="Help:Assigning permissions">Assigning permissions</a></li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ar"><a href="/wiki/Help:Contents/ar" title="Help:Contents/ar">العربية</a></bdi>&#160;• <bdi lang="bg"><a href="/wiki/Help:Contents/bg" title="Help:Contents/bg">български</a></bdi>&#160;• <bdi lang="cs"><a href="/wiki/Help:Contents/cs" title="Help:Contents/cs">čeština</a></bdi>&#160;• <bdi lang="da"><a href="/wiki/Help:Contents/da" title="Help:Contents/da">dansk</a></bdi>&#160;• <bdi lang="de"><a href="/wiki/Help:Contents/de" title="Help:Contents/de">Deutsch</a></bdi>&#160;• <bdi lang="diq"><a href="/wiki/Help:Contents/diq" title="Help:Contents/diq">Zazaki</a></bdi>&#160;• <bdi lang="es"><a href="/wiki/Help:Contents/es" title="Help:Contents/es">español</a></bdi>&#160;• <bdi lang="fa"><a href="/wiki/Help:Contents/fa" title="Help:Contents/fa">فارسی</a></bdi>&#160;• <bdi lang="fi"><a href="/wiki/Help:Contents/fi" title="Help:Contents/fi">suomi</a></bdi>&#160;• <bdi lang="fr"><a href="/wiki/Help:Contents/fr" title="Help:Contents/fr">français</a></bdi>&#160;• <bdi lang="hu"><a href="/wiki/Help:Contents/hu" title="Help:Contents/hu">magyar</a></bdi>&#160;• <bdi lang="id"><a href="/wiki/Help:Contents/id" title="Help:Contents/id">Bahasa Indonesia</a></bdi>&#160;• <bdi lang="it"><a href="/wiki/Help:Contents/it" title="Help:Contents/it">italiano</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Help:Contents/ja" title="Help:Contents/ja">日本語</a></bdi>&#160;• <bdi lang="ko"><a href="/wiki/Help:Contents/ko" title="Help:Contents/ko">한국어</a></bdi>&#160;• <bdi lang="ksh"><a href="/wiki/Help:Contents/ksh" title="Help:Contents/ksh">Ripoarisch</a></bdi>&#160;• <bdi lang="mk"><a href="/wiki/Help:Contents/mk" title="Help:Contents/mk">македонски</a></bdi>&#160;• <bdi lang="nl"><a href="/wiki/Help:Contents/nl" title="Help:Contents/nl">Nederlands</a></bdi>&#160;• <bdi lang="no"><a href="/wiki/Help:Contents/no" title="Help:Contents/no">norsk bokmål</a></bdi>&#160;• <bdi lang="pl"><a href="/wiki/Help:Contents/pl" title="Help:Contents/pl">polski</a></bdi>&#160;• <bdi lang="pt"><a href="/wiki/Help:Contents/pt" title="Help:Contents/pt">português</a></bdi>&#160;• <bdi lang="pt-br"><a href="/wiki/Help:Contents/pt-br" title="Help:Contents/pt-br">português do Brasil</a></bdi>&#160;• <bdi lang="ro"><a href="/wiki/Help:Contents/ro" title="Help:Contents/ro">română</a></bdi>&#160;• <bdi lang="ru"><a href="/wiki/Help:Contents/ru" title="Help:Contents/ru">русский</a></bdi>&#160;• <bdi lang="sk"><a href="/wiki/Help:Contents/sk" title="Help:Contents/sk">slovenčina</a></bdi>&#160;• <bdi lang="sl"><a href="/wiki/Help:Contents/sl" title="Help:Contents/sl">slovenščina</a></bdi>&#160;• <bdi lang="tr"><a href="/wiki/Help:Contents/tr" title="Help:Contents/tr">Türkçe</a></bdi>&#160;• <bdi lang="uk"><a href="/wiki/Help:Contents/uk" title="Help:Contents/uk">українська</a></bdi>&#160;• <bdi lang="vi"><a href="/wiki/Help:Contents/vi" title="Help:Contents/vi">Tiếng Việt</a></bdi>&#160;• <bdi lang="zh"><a href="/wiki/Help:Contents/zh" title="Help:Contents/zh">中文</a></bdi>&#160;• <bdi lang="zh-hans"><a href="/wiki/Help:Contents/zh-hans" title="Help:Contents/zh-hans">中文（简体）‎</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1109
+CPU time usage: 0.668 seconds
+Real time usage: 0.717 seconds
+Preprocessor visited node count: 2581/1000000
+Preprocessor generated node count: 6449/1500000
+Post‐expand include size: 18960/2048000 bytes
+Template argument size: 10076/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 69/500
+Lua time usage: 0.017s
+Lua memory usage: 505 KB
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:1738-0!*!0!!*!4!* and timestamp 20140124170853
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Help:Contents&amp;oldid=761207">http://www.mediawiki.org/w/index.php?title=Help:Contents&amp;oldid=761207</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Help" title="Category:Help">Help</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Help%3AContents&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Help%3AContents" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-help" class="selected"><span><a href="/wiki/Help:Contents"  title="View the help page [c]" accesskey="c">Help</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Help_talk:Contents"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Help:Contents" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/w/index.php?title=Help:Contents&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Help:Contents&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Help%3AContents">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Help%3AContents&amp;oldid=761207&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Help:Contents&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Help:Contents" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Help:Contents" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Help:Contents&amp;oldid=761207" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Help:Contents&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 August 2013, at 20:08.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Help:Contents" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mobile.desktop","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1086 in 0.187 secs. -->
+	</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Simple Windows Apache Installation - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Simple_Windows_Apache_Installation" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Simple_Windows_Apache_Installation","wgTitle":"Simple Windows Apache Installation","wgCurRevisionId":582953,"wgRevisionId":582953,"wgArticleId":14070,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages that need checking","Pages recently transferred from Meta","Installation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Simple_Windows_Apache_Installation","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["nl-nl","nl","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":0,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Simple_Windows_Apache_Installation skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Simple Windows Apache Installation</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"><div id="mw-fr-revisiontag" class="flaggedrevs_short plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf14/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Pending changes are displayed on this page" title="Pending changes are displayed on this page" /><b><a href="/wiki/Help:Page_validation" title="Help:Page validation" class="mw-redirect">Unchecked</a></b></div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="plainlinks ombox ombox-content" role="presentation">
+<tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/3/38/Imbox_content.png" width="40" height="40" /></td>
+<td class="mbox-text"><b>The content of this page has not been verified.</b><br />
+Instructions written in this page have not been verified to be correct.<br />
+If there are any inaccuracies, please drop a note at the <a href="/wiki/Project:Support_desk" title="Project:Support desk">support desk</a>.</td>
+</tr>
+</table>
+<table class="wikitable" style="float:right; margin: 0 0 1em 1em;">
+<tr>
+<th style="background-color:white"><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation guides</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_FreeBSD" title="Manual:Running MediaWiki on FreeBSD">on FreeBSD</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Linux" title="Manual:Running MediaWiki on Linux" class="mw-redirect">on GNU/Linux</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_ALT_Linux" title="Manual:Running MediaWiki on ALT Linux">ALT Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Arch_Linux" title="Manual:Running MediaWiki on Arch Linux">Arch Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Damnsmalllinux" title="Manual:Running MediaWiki on Damnsmalllinux">Damnsmalllinux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Debian_GNU/Linux" title="Manual:Running MediaWiki on Debian GNU/Linux">Debian</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Fedora" title="Manual:Running MediaWiki on Fedora">Fedora</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Gentoo_Linux" title="Manual:Running MediaWiki on Gentoo Linux">Gentoo</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Mandriva" title="Manual:Running MediaWiki on Mandriva">Mandriva</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Red_Hat_Linux" title="Manual:Running MediaWiki on Red Hat Linux">Red Hat Enterprise Linux</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Slackware_Linux" title="Manual:Running MediaWiki on Slackware Linux">Slackware</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Ubuntu" title="Manual:Running MediaWiki on Ubuntu">Ubuntu</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Mac_OS_X" title="Manual:Running MediaWiki on Mac OS X">on Mac OS X</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_NetWare" title="Manual:Running MediaWiki on NetWare">on NetWare</a></th>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Solaris" title="Manual:Running MediaWiki on Solaris">on Solaris</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_11_/_opensolaris" title="Manual:Running MediaWiki on Solaris 11 / opensolaris">on Solaris 11 / opensolaris</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Running_MediaWiki_on_Solaris_10" title="Manual:Running MediaWiki on Solaris 10">on Solaris 10</a></td>
+</tr>
+<tr>
+<th><a href="/wiki/Manual:Running_MediaWiki_on_Windows" title="Manual:Running MediaWiki on Windows">on Windows</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2008" title="Manual:Installing MediaWiki on Windows Server 2008">Windows Server 2008</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_Windows_Server_2003" title="Manual:Installing MediaWiki on Windows Server 2003">Windows Server 2003</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Streamlined_Windows_Install_Guide" title="Manual:Streamlined Windows Install Guide">Streamlined Guide</a></td>
+</tr>
+<tr>
+<td>- <strong class="selflink">Simple Windows/Apache Guide</strong></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Wiki_on_a_stick" title="Manual:Wiki on a stick">on a stick</a></th>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_on_MoWeS_Portable_(Windows)" title="Manual:Installing on MoWeS Portable (Windows)">on MoWeS Portable</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installation_on_Uniform_Server_(Windows)" title="Manual:Installation on Uniform Server (Windows)">on Uniform Server</a></td>
+</tr>
+<tr>
+<td>- <a href="/wiki/Manual:Installing_MediaWiki_on_XAMPP" title="Manual:Installing MediaWiki on XAMPP">on XAMPP</a></td>
+</tr>
+<tr>
+<th>- <a href="/wiki/Manual:Running_MediaWiki_on_Sourceforge.net" title="Manual:Running MediaWiki on Sourceforge.net" class="mw-redirect">on Sourceforge.net</a></th>
+</tr>
+</table>
+<div style="border: 2px solid #AEA; padding: 0.4em; border-bottom: none; border-right: none; background: HoneyDew">
+<div class="floatright"><a href="/wiki/File:Wikimedia-logo-meta.png" class="image"><img alt="Wikimedia-logo-meta.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wikimedia-logo-meta.png/40px-Wikimedia-logo-meta.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wikimedia-logo-meta.png/60px-Wikimedia-logo-meta.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wikimedia-logo-meta.png/80px-Wikimedia-logo-meta.png 2x" /></a></div>
+<p><b>This page <a href="//meta.wikimedia.org/wiki/meta:MetaProject_to_transfer_content_to_MediaWiki.org" class="extiw" title="meta:meta:MetaProject to transfer content to MediaWiki.org">was moved</a> from <a href="//meta.wikimedia.org/wiki/" class="extiw" title="m:">MetaWiki</a></b>.<br />
+<small style="line-height:1.1em;">It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.</small></p>
+</div>
+<div style="border-left: 2px dashed #AEA; padding-left: 1em;">
+<p><br />
+<b>Note: this page seems obsolete and should be wiped. If looking for installation instructions of Apache, MySQL, and MediaWiki, please refer to <a href="/wiki/Manual:Streamlined_Windows_Install_Guide" title="Manual:Streamlined Windows Install Guide">Manual:Streamlined_Windows_Install_Guide</a>.</b></p>
+<hr />
+<p>This rough but complete installation guide is based on Windows XP SP2.</p>
+
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Download_the_required_software:"><span class="tocnumber">1</span> <span class="toctext">Download the required software:</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Install_PHP"><span class="tocnumber">2</span> <span class="toctext">Install PHP</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Install_Apache"><span class="tocnumber">3</span> <span class="toctext">Install Apache</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Install_MySQL"><span class="tocnumber">4</span> <span class="toctext">Install MySQL</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Create_a_Wiki_User_with_old-style_password"><span class="tocnumber">5</span> <span class="toctext">Create a Wiki User with old-style password</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Install_MediaWiki_1.22.2"><span class="tocnumber">6</span> <span class="toctext">Install MediaWiki 1.22.2</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Download_the_required_software:">Download the required software:</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit&amp;section=1" title="Edit section: Download the required software:" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit&amp;section=1" title="Edit section: Download the required software:">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The first thing you should do is to download the software the server will require. For ease of use, this page will assume you downloaded the binary releases, but if you want to customize your installation, you should download the source code of each program and compile it yourself.</p>
+<table class="wikitable">
+<tr>
+<th>Software</th>
+<th>Version</th>
+<th>Download link</th>
+</tr>
+<tr>
+<td>Apache</td>
+<td>1.3+ / 2.0+ / 2.2+</td>
+<td><a rel="nofollow" class="external free" href="http://httpd.apache.org/download.cgi">http://httpd.apache.org/download.cgi</a></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>5.1+<sup id="cite_ref-PHP5_1-0" class="reference"><a href="#cite_note-PHP5-1">[1]</a></sup></td>
+<td><a rel="nofollow" class="external free" href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a></td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>4.0+</td>
+<td><a rel="nofollow" class="external free" href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a></td>
+</tr>
+<tr>
+<td>MediaWiki</td>
+<td>1.22.2<sup id="cite_ref-PHP5_1-1" class="reference"><a href="#cite_note-PHP5-1">[1]</a></sup></td>
+<td><a href="/wiki/Download" title="Download">download</a></td>
+</tr>
+</table>
+<div style="font-size: 85%;">
+<ol class="references">
+<li id="cite_note-PHP5-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-PHP5_1-0">1.0</a></sup> <sup><a href="#cite_ref-PHP5_1-1">1.1</a></sup></span> <span class="reference-text">MediaWiki 1.7, and all subsequent versions, require PHP 5. Older versions will run on PHP 4, but may lack some functionality added in newer releases.</span></li>
+</ol>
+</div>
+<p>An easier alternative to downloading and installing individually the required packages is to use WAMP <a rel="nofollow" class="external autonumber" href="http://www.wampserver.com/en/">[1]</a>. If you do so, you can skip to the <a href="#Install_MediaWiki">Install MediaWiki</a> step. There is one caveat: instead of unzipping MediaWiki into the Apache directory (the default option), unpack MediaWiki into the <tt>C:\WAMP\WWW folder</tt> (or the default <tt>www</tt> folder in your WAMP installation).</p>
+<h2><span class="mw-headline" id="Install_PHP">Install PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit&amp;section=2" title="Edit section: Install PHP" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit&amp;section=2" title="Edit section: Install PHP">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Make sure you download the version compatible with Apache. Run the PHP binary installer to <tt>C:\php</tt>. Ensure that the <tt>php.ini-dist</tt> file is in the <tt>C:\php</tt> directory. Copy <tt>C:\php\php.ini-dist</tt> to <tt>C:\php\php.ini</tt>. Use Windows Explorer to copy all files in the 'dlls' and 'sapi' subdirectories to <tt>C:\php</tt>.</p>
+<h2><span class="mw-headline" id="Install_Apache">Install Apache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit&amp;section=3" title="Edit section: Install Apache" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit&amp;section=3" title="Edit section: Install Apache">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol>
+<li>Run the apache installer (it has a .msi extension) and use the default options. This will set Apache2 up as a Windows Service.</li>
+<li>Locate <tt>C:\Program Files\Apache Group\Apache2\conf\httpd.conf</tt> and edit it using Wordpad (Notepad introduces a <a href="//en.wikipedia.org/wiki/Byte-order_mark" class="extiw" title="w:Byte-order mark">Byte-order mark</a> character, so avoid using it if possible).</li>
+<li>Insert the following three lines after the line '### Section 1: Global Environment'
+<dl>
+<dd><tt><i>LoadModule php5_module "c:/php/php5apache2.dll"<br />
+AddType application/x-httpd-php .php<br />
+PHPIniDir "C:/php/"</i><br /></tt></dd>
+</dl>
+</li>
+<li>Now launch Control Panel/Administrative Tools/Services and restart the Apache2 service.</li>
+<li>Create a new file called <tt>phptest.php</tt> in <tt>C:\Program Files\Apache Group\Apache2\htdocs</tt>. In it, type the following line:
+<dl>
+<dd><tt>&lt;?php phpinfo();</tt></dd>
+</dl>
+</li>
+<li>Open your browser and navigate to <a rel="nofollow" class="external free" href="http://localhost/phptest.php">http://localhost/phptest.php</a>. You should see some php configuration settings.</li>
+</ol>
+<h2><span class="mw-headline" id="Install_MySQL">Install MySQL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit&amp;section=4" title="Edit section: Install MySQL" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit&amp;section=4" title="Edit section: Install MySQL">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Run the .msi installer program, using defaults during setup. Enter a password for root and remember it.</p>
+<h2><span class="mw-headline" id="Create_a_Wiki_User_with_old-style_password">Create a Wiki User with old-style password</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit&amp;section=5" title="Edit section: Create a Wiki User with old-style password" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit&amp;section=5" title="Edit section: Create a Wiki User with old-style password">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>(For more info on this issue see <a rel="nofollow" class="external autonumber" href="http://dev.mysql.com/doc/refman/5.0/en/old-client.html">[2]</a>)</p>
+<p>Launch Start Menu\MySQL\MySQL &lt;version number&gt;\Command Line Client. Enter the password you created earlier. Enter the following commands:</p>
+<p><i>Enter password: ********</i> Welcome to the MySQL monitor. Commands end with&#160;; or \g. Your MySQL connection id is 1 Server version: 5.1.33-community MySQL Community Server (GPL)</p>
+<p>Type 'help;' or '\h' for help. Type '\c' to clear the buffer. mysql&gt; <b>CREATE DATABASE wikidb;</b> Query OK, 1 row affected (0.01 sec)</p>
+<p>mysql&gt; <b>GRANT ALL ON wikidb.* to wikiuser@localhost IDENTIFIED BY 'password';</b> Query OK, 1 row affected (0.01 sec)</p>
+<p>mysql&gt; <b>SET PASSWORD FOR wikiuser@localhost = OLD_PASSWORD('password');</b> Query OK, 1 row affected (0.01 sec)</p>
+<p>mysql&gt; <b>quit;</b></p>
+<h2><span class="mw-headline" id="Install_MediaWiki_1.22.2">Install MediaWiki 1.22.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit&amp;section=6" title="Edit section: Install MediaWiki 1.22.2" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit&amp;section=6" title="Edit section: Install MediaWiki 1.22.2">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Unzip <code>mediawiki-1.22.2.tar.gz</code> to <code>C:\Program Files\Apache Group\Apache2\htdocs\w</code>. (Ensure that <code>index.php</code> is directly underneath the mediawiki directory.</p>
+<p>Now navigate your browser to: <a rel="nofollow" class="external free" href="http://localhost/w/config/index.php">http://localhost/w/config/index.php</a></p>
+<p>You should see the MediaWiki installer.</p>
+<p>Enter a name for your wiki site, a password for the WikiSysop user and the password you entered in MySQL for wikiuser. You should not need to enter the root password.</p>
+<p>Press the "InstallMediaWiki!" button. Hopefully you will see the <i>Installation successful!</i> message.</p>
+<p>NOTE if you see an error message regarding "there is no database driver!". you will need to edit your php.ini.</p>
+<ol>
+<li>Install the mysql extension.</li>
+<li>Make sure "<code>;</code>" (semicolon) in front of <code>extension=php_mysql.dll</code> has been removed.</li>
+<li>Above that add <code>extension_dir="C:\php\ext"</code>.<br />
+This must be added above the "<code>extension=php_mysql.dll</code>".<br />
+This will set the php to look in the correct directory for the extensions.</li>
+<li>Restart PC. (or restart the apache service)</li>
+</ol>
+<p><br /></p>
+<p>Finally follow the instructions and copy <code>C:\Program Files\Apache Group\Apache2\htdocs\w\config\LocalSettings.php</code> to <code>C:\Program Files\Apache Group\Apache2\htdocs\w\LocalSettings.php</code>.</p>
+<p>Now click the link <a rel="nofollow" class="external free" href="http://localhost/w/index.php/Main_Page">http://localhost/w/index.php/Main_Page</a> and you should see the magic words <i>Wiki software successfully installed.</i>.</p>
+<p>You may want to <a href="/wiki/Manual:Configuration" title="Manual:Configuration">configure your wiki further</a>, for example to <a href="/wiki/Manual:Short_URL" title="Manual:Short URL">use pretty URLs</a>.</p>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ja"><a href="/wiki/Manual:Simple_Windows_Apache_Installation/ja" title="Manual:Simple Windows Apache Installation/ja">日本語</a></bdi></td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1210
+CPU time usage: 0.464 seconds
+Real time usage: 0.516 seconds
+Preprocessor visited node count: 2139/1000000
+Preprocessor generated node count: 6827/1500000
+Post‐expand include size: 12345/2048000 bytes
+Template argument size: 18396/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+Lua time usage: 0.020s
+Lua memory usage: 710 KB
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:14070-0!*!0!!en!4!* and timestamp 20140207222524
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;oldid=582953">http://www.mediawiki.org/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;oldid=582953</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Pages_that_need_checking" title="Category:Pages that need checking">Pages that need checking</a></li><li><a href="/wiki/Category:Pages_recently_transferred_from_Meta" title="Category:Pages recently transferred from Meta">Pages recently transferred from Meta</a></li><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ASimple+Windows+Apache+Installation&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3ASimple+Windows+Apache+Installation" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Simple_Windows_Apache_Installation"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Simple_Windows_Apache_Installation"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Simple_Windows_Apache_Installation" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3ASimple+Windows+Apache+Installation">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3ASimple+Windows+Apache+Installation&amp;oldid=582953&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Simple_Windows_Apache_Installation" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Simple_Windows_Apache_Installation" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;oldid=582953" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Simple_Windows_Apache_Installation&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3ASimple_Windows_Apache_Installation&amp;id=582953" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 September 2012, at 15:44.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Simple_Windows_Apache_Installation" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1086 in 0.208 secs. -->
+	</body>
+</html>

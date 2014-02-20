@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Manual:Installing MediaWiki - MediaWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf14" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/mediawiki.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/mediawiki.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="MediaWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MediaWiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://www.mediawiki.org/wiki/Manual:Installing_MediaWiki" />
+<link rel="stylesheet" href="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.Edittools%2CWmfProjectStatusHelper%2CcollapsibleTables%2Csite%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mediawikiwiki:resourceloader:filter:minify-css:7:7bd1359907426500f5c6b3d58173fbf3 */</style>
+
+<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Manual","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Manual:Installing_MediaWiki","wgTitle":"Installing MediaWiki","wgCurRevisionId":898966,"wgRevisionId":898966,"wgArticleId":18173,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation","MediaWiki administration"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual:Installing_MediaWiki","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf14/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["de-de","de","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":2,"quality":2,"pristine":4}}},"wgStableRevisionId":898966,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikimedia"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,
+"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"lqtnotifytalk":false,"lqtdisplaydepth":5,"lqtdisplaycount":25,"lqtcustomsignatures":true,"lqt-watch-threads":true,"visualeditor-enable":1,"visualeditor-enable-experimental":1,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"translate":0,"translate-editlangs":"default","translate-recent-groups":"","translate-sandbox":"","translationnotifications-lang-1":"","translationnotifications-lang-2":"","translationnotifications-lang-3":"","echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":true,"searchNs13":false,"searchNs14":
+false,"searchNs15":false,"searchNs90":false,"searchNs91":false,"searchNs92":false,"searchNs93":false,"searchNs100":true,"searchNs101":false,"searchNs102":true,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs828":false,"searchNs829":false,"searchNs1198":false,"searchNs1199":false,"searchNs2500":false,"searchNs2501":false,"gadget-site":1,"gadget-collapsibleTables":1,"gadget-Edittools":1,"gadget-WmfProjectStatusHelper":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: mediawikiwiki:resourceloader:filter:minify-js:7:79b099562621e47c1cc6faff7c515c26 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.gadget.site","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf14/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-100 ns-subject page-Manual_Installing_MediaWiki skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003C/p\u003E\n\u003C/div\u003E");</script></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual:Installing MediaWiki</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From MediaWiki.org</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -2px; left: -5px; position: relative; margin-right: -3px;"><img alt="Mediawiki-logo.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/53px-Mediawiki-logo.png" width="53" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/80px-Mediawiki-logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediawiki-logo.png/106px-Mediawiki-logo.png 2x" /></span> <b><a href="/wiki/Manual:Installation_guide" title="Manual:Installation guide">Installation Guide</a></b> | <a href="/wiki/Manual:What_is_MediaWiki%3F" title="Manual:What is MediaWiki?">About MediaWiki</a></span></div>
+<div style="white-space: pre; float: left; margin-right: 0.5em;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa;"><span style="top: -8px; position: relative;"><img alt="Help-browser.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/40px-Help-browser.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/60px-Help-browser.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/80px-Help-browser.svg.png 2x" /></span> <a href="/wiki/Manual:MediaWiki_feature_list" title="Manual:MediaWiki feature list">Features</a> | <a href="/wiki/Manual:Installation_requirements" title="Manual:Installation requirements">Installation requirements</a></span></div>
+<div style="white-space: pre; float: left;"><span style="padding: 0.5em; background-color: #f9f9ff; border: 1px solid #9999aa; min-width: 20em;"><span style="top: -8px; position: relative;"><img alt="Preferences-system.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/40px-Preferences-system.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/60px-Preferences-system.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Preferences-system.svg/80px-Preferences-system.svg.png 2x" /></span> <a href="/wiki/Download" title="Download">Downloading</a> | <strong class="selflink">Installing</strong> | <a href="/wiki/Manual:Configuring_MediaWiki" title="Manual:Configuring MediaWiki">Configuring</a></span></div>
+<p><br clear="left" /></p>
+<p>MediaWiki installs itself using an interactive, web-based installation script. Before you can run this script, you need to do a couple of things. First, ensure that you have installed <a href="/wiki/Manual:Installation_requirements" title="Manual:Installation requirements">prerequisites</a> (Apache/IIS, MySQL5 or later (4 or later for versions below and <a href="/wiki/MediaWiki_1.18" title="MediaWiki 1.18">version 1.18</a>) and PHP 5.3.2). Then you must acquire the MediaWiki software package and upload the MediaWiki software to your server. You may also have to create a new database for your wiki. If necessary, create an account on your web server by following the instructions at <a href="/wiki/Manual:Installation/Creating_system_accounts" title="Manual:Installation/Creating system accounts">Manual:Installation/Creating system accounts</a>.</p>
+<p>MediaWiki can be difficult to install for the average computer user who does not have experience with Apache, PHP and MySQL. Most users who wish to use wiki software may benefit from using a free wiki host (see a <a href="//en.wikibooks.org/wiki/Starting_and_Running_a_Wiki_Website/Hosted_Wikis" class="extiw" title="wikibooks:Starting and Running a Wiki Website/Hosted Wikis">list of wiki hosts</a> on Wikibooks) or via a <a href="/wiki/Software_appliances" title="Software appliances" class="mw-redirect">software appliance</a>.</p>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: For troubleshooting information, see <a href="/wiki/Manual:Errors_and_Symptoms#Installation_Errors" title="Manual:Errors and Symptoms" class="mw-redirect">Manual:Errors and Symptoms#Installation Errors</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Download_MediaWiki_software"><span class="tocnumber">1</span> <span class="toctext">Download MediaWiki software</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Uploaded_files"><span class="tocnumber">2</span> <span class="toctext">Uploaded files</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Prepare_the_directories"><span class="tocnumber">3</span> <span class="toctext">Prepare the directories</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Create_a_database"><span class="tocnumber">4</span> <span class="toctext">Create a database</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#SQLite"><span class="tocnumber">4.1</span> <span class="toctext">SQLite</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#MySQL"><span class="tocnumber">4.2</span> <span class="toctext">MySQL</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Unix.2FLinux_installation"><span class="tocnumber">4.2.1</span> <span class="toctext">Unix/Linux installation</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Windows_installation"><span class="tocnumber">4.2.2</span> <span class="toctext">Windows installation</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Installation_continued"><span class="tocnumber">4.2.3</span> <span class="toctext">Installation continued</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Postgres"><span class="tocnumber">4.3</span> <span class="toctext">Postgres</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Adding_tsearch2"><span class="tocnumber">4.3.1</span> <span class="toctext">Adding tsearch2</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Granting_select_rights"><span class="tocnumber">4.3.2</span> <span class="toctext">Granting select rights</span></a>
+<ul>
+<li class="toclevel-4 tocsection-13"><a href="#PostgreSQL_8.2_or_earlier"><span class="tocnumber">4.3.2.1</span> <span class="toctext">PostgreSQL 8.2 or earlier</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#PostgreSQL_8.3_or_later"><span class="tocnumber">4.3.2.2</span> <span class="toctext">PostgreSQL 8.3 or later</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Run_the_installation_script"><span class="tocnumber">5</span> <span class="toctext">Run the installation script</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Keep_up_to_date.21"><span class="tocnumber">6</span> <span class="toctext">Keep up to date!</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Installation_assistance"><span class="tocnumber">7</span> <span class="toctext">Installation assistance</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Download_MediaWiki_software">Download MediaWiki software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=1" title="Edit section: Download MediaWiki software" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=1" title="Edit section: Download MediaWiki software">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>You can download a release version of MediaWiki from the <a href="/wiki/Download" title="Download">official download page</a>: generally, if you're using a production environment, you want to be running the stable release.</p>
+<p>Developers on the other hand should probably <a href="/wiki/Download_from_Git" title="Download from Git">Download from Git</a> to set up a local repository with the latest code in development.</p>
+<p>For example, to download MediaWiki 1.22.2, which is the latest stable release version, to a *nix machine you can use the following command:</p>
+<pre>
+<a href="//en.wikipedia.org/wiki/wget" class="extiw" title="w:wget">wget</a> <a class="external free" href="http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz">http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz</a>
+</pre>
+<p>Alternatively, using <a href="//en.wikipedia.org/wiki/cURL" class="extiw" title="w:cURL">cURL</a>:</p>
+<pre>
+curl -O <a class="external free" href="http://dumps.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz">http://dumps.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz</a>
+</pre>
+<p>The downloaded files are in <code>.tar.gz</code> format, so will need to be uncompressed before use. This can be done locally (and then uploaded via FTP) or directly on your server. This is usually done with software such as <a rel="nofollow" class="external text" href="http://www.7-zip.org/">7-Zip</a> (free), <a rel="nofollow" class="external text" href="http://www.winzip.com/">WinZip</a>, <a rel="nofollow" class="external text" href="http://www.rarlabs.com/">WinRAR</a> or <a rel="nofollow" class="external text" href="http://www.izarc.org/">IZArc</a> (free) on Windows. On Linux and Mac OS X, you can untar the file using this command:</p>
+<pre>
+tar xvzf mediawiki-*.tar.<b>gz</b>
+</pre>
+<p><b>NOTE:</b> If you untar the archive as root, you should probably change the ownership afterwards with <tt>chown,</tt> otherwise the files will end up owned as user # 1000, which may or may not be what you want.</p>
+<h2><span class="mw-headline" id="Uploaded_files">Uploaded files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=2" title="Edit section: Uploaded files" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=2" title="Edit section: Uploaded files">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If you have not already uploaded the files to your web server, do so now.</p>
+<p><b>Make sure the "Change file names to lowercase" option for upload is disabled.</b></p>
+<p>Upload the files to your web server's web directory either by:</p>
+<ol>
+<li>directly copying the unzipped folder or</li>
+<li>by using an FTP client such as <a rel="nofollow" class="external text" href="http://filezilla.sourceforge.net/">FileZilla</a> (Open Source Software, Windows, OSX and Linux) or <a rel="nofollow" class="external text" href="http://cyberduck.ch/">Cyberduck</a> (OSX).</li>
+</ol>
+<p>If you installed Apache, the correct directory is specified in your <code>httpd.conf</code> file (it's typically <code>&lt;apache-folder&gt;/htdocs</code>).</p>
+<p>If you are using a Linux or Unix server you can instead copy the files to any directory on your server and then make a <a href="//en.wikipedia.org/wiki/Symbolic_link" class="extiw" title="wikipedia:Symbolic link">symbolic link</a> to that folder from your web server's web directory.</p>
+<p>Rename the uploaded folder to whatever you would like to have in the URL. If your web server is running as <code><a rel="nofollow" class="external free" href="http://localhost">http://localhost</a></code> for example, renaming to <code>/w/</code> directory would mean you would access your wiki at <code><a rel="nofollow" class="external free" href="http://localhost/w/index.php">http://localhost/w/index.php</a></code>. <i><b>Do not use <code>/wiki/</code> if you want to use it as a <a href="/wiki/Manual:Short_URL" title="Manual:Short URL">Short URL</a>.</b></i> (And don't set up short URLs until you have run the installation script.)</p>
+<p>This (renamed) folder will now be <b>referred</b> as <code>&lt;MediaWiki-folder&gt;</code>.</p>
+<h2><span class="mw-headline" id="Prepare_the_directories">Prepare the directories</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=3" title="Edit section: Prepare the directories" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=3" title="Edit section: Prepare the directories">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>This step is very important, without preparing the directories, MediaWiki will not function properly.</b></p>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>:MediaWiki 1.16 and earlier needed to be able to write to the <code>&lt;MediaWiki-folder&gt;/config</code> directory when it ran its installation script. <b>This is no longer required</b>.</p>
+<p>Depending on the server configuration, in some cases you have to check all boxes (777) in FileZilla, to be able to run the installer. On Unix or Linux, if you have admin rights, you can run the command <code><a href="/wiki/Chmod" title="Chmod" class="mw-redirect">chmod</a> 777 mw-config</code> in your <code>wiki</code> directory.</p>
+<p>If you are running nginx webserver + spawn-fcgi and get the following error:</p>
+<p><i>Error starting session: session_start(): open(/var/lib/php/session/sess_xxxxxxxxxxxx, O_RDWR) failed: Permission denied (13)</i></p>
+<p>You will need to do the following:</p>
+<p><code>chmod 777 /var/lib/php/session</code></p>
+<p>If that doesn't work run:</p>
+<p><code>chmod 777 /var/lib/php</code></p>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: If you are getting HTTP 403 errors even after you have the permissions set, you may need to adjust your SELinux settings for the wiki directory.</p>
+<p><code>[root@host wiki]# restorecon -r .</code></p>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: MediaWiki should be installed into a <i>subdirectory</i> of your document root, not in the document root itself. That is, if your domain <code>my.domain.org</code> is for instance mapped to the document root <code>/home/mysqld/public_html</code>, then MediaWiki should be installed into <code>/home/mysqld/public_html/w</code> or similar. MediaWiki will then become available under <code>http://my.domain.org/w</code>. This is particularly important if you are going to use <a href="/wiki/Manual:Short_URLs" title="Manual:Short URLs" class="mw-redirect">short URLs</a>.</p>
+<h2><span class="mw-headline" id="Create_a_database">Create a database</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=4" title="Edit section: Create a database" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=4" title="Edit section: Create a database">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If you already have a database server and know the root password for it, the MediaWiki installation script can create a new database for you. If this is the case, you can skip to the <a href="#Run_the_installation_script">Run the installation script</a> section below. If you don't know the root password, for example if you are on a hosted server, you will have to create a new database now. Currently, you must use SQLite, MySQL or Postgres to store the actual contents of your wiki.</p>
+<h3><span class="mw-headline" id="SQLite">SQLite</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=5" title="Edit section: SQLite" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=5" title="Edit section: SQLite">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MediaWiki supports SQLite since version 1.13, however at least 1.16 is highly recommended. SQLite is a stand-alone database library that stores the database contents in a single file. If PHP has the <tt>pdo-sqlite</tt> module, no further setup is required.</p>
+<p>On the installation page, you will need to choose a database name (which can be anything) and the SQLite database directory. For the database directory, the installer will attempt to use a subdirectory outside of the document root and create it if needed. If this directory is not safe (for example, web-readable), change it manually to avoid making it accessible to everyone on the web.</p>
+<h3><span class="mw-headline" id="MySQL">MySQL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=6" title="Edit section: MySQL" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=6" title="Edit section: MySQL">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MediaWiki will ask you for database and user name and will attempt to create them if they don't already exist. If doing so from MediaWiki is impossible, you can do this using various control panels such as <a href="//en.wikipedia.org/wiki/PhpMyAdmin" class="extiw" title="wikipedia:PhpMyAdmin">PhpMyAdmin</a>, which are often available from shared hosts, or you may be able to use <a href="//en.wikipedia.org/wiki/Secure_Shell" class="extiw" title="wikipedia:Secure Shell">ssh</a> to login to your host and type the commands into a MySQL prompt. See the corresponding documentation. Alternatively, contact your host provider to have them create an account for you.</p>
+<h4><span class="mw-headline" id="Unix.2FLinux_installation">Unix/Linux installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=7" title="Edit section: Unix/Linux installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=7" title="Edit section: Unix/Linux installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li>
+<ol>
+<li>Download and install <a rel="nofollow" class="external text" href="http://dev.mysql.com/downloads/mysql">MySQL</a> - MediaWiki supports version 5.0.2 or later. MySQL typically installs in /usr/local/mysql. (If you use your Linux distribution's package manager to install MySQL, the following commands may be in some other directory; try typing them without the path prefix /usr/local/mysql/bin/ .)</li>
+<li>Check and see if the database server is running; for example, run <kbd>/usr/local/mysql/bin/mysqladmin status</kbd>. If it is not, run mysqld_safe to start it: <kbd>sudo /usr/local/mysql/bin/mysqld_safe &amp;</kbd>.
+<ul>
+<li>Another way to initially start the MySQL server is to run the <i>configure</i> script available at the root of the installation. It creates the initial tables and automatically starts the mysql daemon</li>
+</ul>
+</li>
+<li>Set a password for the "root" account on your database server. <kbd>/usr/local/mysql/bin/mysqladmin -u root password <i>yourpassword</i></kbd></li>
+<li>Run the MySQL command-line client: <kbd>/usr/local/mysql/bin/mysql -u root -p</kbd></li>
+<li>This will prompt for the "root" database password you just set, then connect to the MySQL server. Now, continue with the SQL commands below.</li>
+</ol>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Windows_installation">Windows installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=8" title="Edit section: Windows installation" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=8" title="Edit section: Windows installation">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li>
+<ol>
+<li>Download MySQL msi (mysql-5.5.22-winx64.msi for example)</li>
+<li>Run msi file and accept all defaults. When creating the root account, use a password that you will remember.</li>
+<li>Run Start-&gt;All Programs-&gt;MySQL-&gt;MySQL Server-&gt;MySQL Command Line Client</li>
+<li>Enter the root password you just created</li>
+<li>Now continue with the instructions below</li>
+</ol>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Installation_continued">Installation continued</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=9" title="Edit section: Installation continued" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=9" title="Edit section: Installation continued">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>
+ create database wikidb;
+ grant index, create, select, insert, update, delete, alter, lock tables on wikidb.* to 'wikiuser'@'localhost' identified by 'password';
+</pre>
+<p>If your database is not running on the same server as your web server, you need to give the appropriate web server hostname -- mediawiki.example.com in my example -- as follows:</p>
+<pre>
+ grant index, create, select, insert, update, delete, alter, lock tables on wikidb.* to
+ 'wikiuser'@'mediawiki.example.com' identified by 'password';
+</pre>
+<h3><span class="mw-headline" id="Postgres">Postgres</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=10" title="Edit section: Postgres" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=10" title="Edit section: Postgres">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If you are using Postgres, you will need to either have a database and user created for you, or simply supply the name of a Postgres user with "superuser" privileges to the configuration form. Often, this is the database user named <b>postgres</b>.</p>
+<p>The database that MediaWiki will use needs to have both plpgsql and tsearch2 installed. The installer script will try to install plpgsql, but you may need to install tsearch2 yourself. (tsearch2 is used for searching the text of your wiki). Here's one way to do most of the setup. This is for a Unix-like system, and assumes that you have already installed the plpgsql and tsearch2 modules. In this example, we'll create a database named <b>wikidb</b>, owned by a user named <b>wikiuser</b>. From the command-line, as the postgres user, perform the following steps.</p>
+<pre>
+ createuser -S -D -R -P -E wikiuser (then enter the password)
+ createdb -O wikiuser wikidb
+</pre>
+<p>or as superuser (default postgres) execute the following commands at the database prompt:</p>
+<pre>
+CREATE USER wikiuser WITH NOCREATEDB NOCREATEROLE NOSUPERUSER ENCRYPTED PASSWORD 'password';
+CREATE DATABASE wikidb WITH OWNER wikiuser;
+</pre>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: If you're using PostgreSQL 9.0 and above, you don't need to add pl/pgsql as it is installed by default.</p>
+<pre>
+ createlang plpgsql wikidb
+</pre>
+<h4><span class="mw-headline" id="Adding_tsearch2">Adding tsearch2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=11" title="Edit section: Adding tsearch2" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=11" title="Edit section: Adding tsearch2">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><img alt="Note" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/18px-Bulbgraph.png" width="18" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/27px-Bulbgraph.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bulbgraph.png/36px-Bulbgraph.png 2x" />&#160;<b>Note</b>: If you're using PostgreSQL 8.3.x, you don't need to perform the following steps to install tsearch2 since it has been integrated into the core.</p>
+<p>Adding tsearch2 to the database is not a simple step, but hopefully it will already be done for you by whatever packaging process installed the tsearch2 module. In any case, the installer will let you know right away if it cannot find tsearch2.</p>
+<p>The above steps are not all necessary, as the installer will try and do some of them for you if supplied with a superuser name and password.</p>
+<p>For installing tsearch2 to the wikidb database under Windows, do the following steps:</p>
+<ol>
+<li>Find tsearch2.sql (probably under .\PostgreSQL\8.x\share\contrib) and copy it to the postgresql\8.x\bin directory.</li>
+<li>From a command prompt at the postgresql\8.x\bin directory, type "psql wikidb &lt; tsearch2.sql -U wikiuser".</li>
+<li>It will prompt you for the password for wikiuser.</li>
+</ol>
+<p>That's it!</p>
+<p>Point (2) seems only to work on windows, cause on debian linux 4.0 (etch) only user postgres is allowed to use language c. so there it must be called by:</p>
+<pre>
+su - postgres -c psql wikidb &lt; tsearch2.sql
+</pre>
+<h4><span class="mw-headline" id="Granting_select_rights">Granting select rights</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=12" title="Edit section: Granting select rights" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=12" title="Edit section: Granting select rights">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Afterwards you must grant select rights to wikiuser(s) to the tsearch tables and insert the correct locale.</p>
+<h5><span class="mw-headline" id="PostgreSQL_8.2_or_earlier">PostgreSQL 8.2 or earlier</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=13" title="Edit section: PostgreSQL 8.2 or earlier" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=13" title="Edit section: PostgreSQL 8.2 or earlier">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<pre>
+su - postgres
+psql -d wikidb -c "grant select on pg_ts_cfg to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_cfgmap to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_dict to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_parser to wikiuser;"
+psql -d wikidb -c "update pg_ts_cfg set locale = current_setting('lc_collate') where ts_name = 'default' and prs_name='default';"
+</pre>
+<p>If you receive an error similar to "ERROR: relation "pg_ts_cfg" does not exist" when executing the above statements, try installing tsearch2 to the wikidb database again, but instead use these two separate steps (and then try the grant statements again):</p>
+<pre>
+1) su - postgres
+2) psql wikidb -f tsearch2.sql
+</pre>
+<h5><span class="mw-headline" id="PostgreSQL_8.3_or_later">PostgreSQL 8.3 or later</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=14" title="Edit section: PostgreSQL 8.3 or later" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=14" title="Edit section: PostgreSQL 8.3 or later">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<pre>
+su - postgres
+psql -d wikidb -c "grant select on pg_ts_config to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_config_map to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_dict to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_parser to wikiuser;"
+</pre>
+<h2><span class="mw-headline" id="Run_the_installation_script">Run the installation script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=15" title="Edit section: Run the installation script" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=15" title="Edit section: Run the installation script">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Once all of the above steps are complete, you can complete the installation through a web browser by going to the index.php URI in your browser -- check the instructions mentioned in <a href="/wiki/Manual:Config_script" title="Manual:Config script">Manual:Config script</a>.</p>
+<p>If needed, you can run the command-line installer or CLI: <code>php maintenance/install.php</code>.</p>
+<h2><span class="mw-headline" id="Keep_up_to_date.21">Keep up to date!</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=16" title="Edit section: Keep up to date!" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=16" title="Edit section: Keep up to date!">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div style="font-size: 150%"><a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce" class="extiw" title="mail:mediawiki-announce">Subscribe to our release announcements mailing list.</a></div>
+<p>Once installed, make sure you stay up to date with releases, and keep your server secure!</p>
+<h2><span class="mw-headline" id="Installation_assistance">Installation assistance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=17" title="Edit section: Installation assistance" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=17" title="Edit section: Installation assistance">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>FAQ: <a href="/wiki/FAQ#Installation_and_configuration" title="FAQ" class="mw-redirect">FAQ#Installation and configuration</a></li>
+<li><b><a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-l" class="extiw" title="mail:mediawiki-l">mediawiki-l</a></b> (Mailing List) is the high-traffic mailing list to ask for support</li>
+<li><b><a rel="nofollow" class="external text" href="http://www.mwusers.com">MediaWiki Users</a></b> (Forum) is a user to user MediaWiki support forum</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit&amp;section=18" title="Edit section: See also" class="mw-editsection-visualeditor">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit&amp;section=18" title="Edit section: See also">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Manual:$wgEnableUploads" title="Manual:$wgEnableUploads">Manual:$wgEnableUploads</a> to enable image/files upload.</li>
+<li><a href="/wiki/Manual:Page_customizations" title="Manual:Page customizations">Manual:Page customizations</a> lists wiki pages that MediaWiki messages link to, you need to create these pages or edit the messages.</li>
+<li><a href="/wiki/Manual:Timezone" title="Manual:Timezone">Manual:Timezone</a> to set default timezone of your wiki from UTC/GMT to your timezone. This reflects in History tab and other places.</li>
+<li><a href="/wiki/Extension:Cite/Cite.php" title="Extension:Cite/Cite.php">Extension:Cite/Cite.php</a>, install this extension so that <code>&lt;ref&gt;</code> and <code>&lt;/ref&gt;</code> tags work as expected.</li>
+<li><a href="/wiki/Manual:Configuring_MediaWiki" title="Manual:Configuring MediaWiki">Manual:Configuring MediaWiki</a> for links to more advanced configuration.</li>
+<li><a href="/wiki/Manual:Short_URL" title="Manual:Short URL">Manual:Short URL</a> for having more user-friendly URL to article pages.</li>
+<li><a href="/wiki/Manual:Wiki_family" title="Manual:Wiki family">Manual:Wiki family</a> to setup multiple instances of MediaWiki with single set of MediaWiki files.</li>
+</ul>
+<p>and</p>
+<ul>
+<li><a href="/wiki/Manual:Backing_up_a_wiki" title="Manual:Backing up a wiki">Manual:Backing up a wiki</a></li>
+<li><a href="/wiki/Manual:Moving_a_wiki" title="Manual:Moving a wiki">Manual:Moving a wiki</a></li>
+<li><a href="/wiki/Manual:Restoring_a_wiki_from_backup" title="Manual:Restoring a wiki from backup">Manual:Restoring a wiki from backup</a></li>
+<li><a href="/wiki/Manual:Upgrading" title="Manual:Upgrading">Manual:Upgrading</a></li>
+</ul>
+<table class="nmbox" style="border:1px solid #AAAAAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0;">
+<tr style="background: #EEF3E2">
+<th class="mbox-image" style="white-space: nowrap; padding: 4px 1em; border-right: 1px solid #aaaaaa;"><b><a href="/wiki/Project:Language_policy" title="Project:Language policy">Language:</a></b></th>
+<td class="mbox-text" style="background: #F6F9ED;"><b><strong class="selflink">English</strong></b> &#160;• <bdi lang="ca"><a href="/wiki/Manual:Installing_MediaWiki/ca" title="Manual:Installing MediaWiki/ca">català</a></bdi>&#160;• <bdi lang="da"><a href="/wiki/Manual:Installing_MediaWiki/da" title="Manual:Installing MediaWiki/da">dansk</a></bdi>&#160;• <bdi lang="de"><a href="/wiki/Manual:Installing_MediaWiki/de" title="Manual:Installing MediaWiki/de">Deutsch</a></bdi>&#160;• <bdi lang="es"><a href="/wiki/Manual:Installing_MediaWiki/es" title="Manual:Installing MediaWiki/es">español</a></bdi>&#160;• <bdi lang="fr"><a href="/wiki/Manual:Installing_MediaWiki/fr" title="Manual:Installing MediaWiki/fr">français</a></bdi>&#160;• <bdi lang="id"><a href="/wiki/Manual:Installing_MediaWiki/id" title="Manual:Installing MediaWiki/id">Bahasa Indonesia</a></bdi>&#160;• <bdi lang="it"><a href="/wiki/Manual:Installing_MediaWiki/it" title="Manual:Installing MediaWiki/it">italiano</a></bdi>&#160;• <bdi lang="ja"><a href="/wiki/Manual:Installing_MediaWiki/ja" title="Manual:Installing MediaWiki/ja">日本語</a></bdi>&#160;• <bdi lang="ko"><a href="/wiki/Manual:Installing_MediaWiki/ko" title="Manual:Installing MediaWiki/ko">한국어</a></bdi>&#160;• <bdi lang="pt-br"><a href="/wiki/Manual:Installing_MediaWiki/pt-br" title="Manual:Installing MediaWiki/pt-br">português do Brasil</a></bdi>&#160;• <bdi lang="ru"><a href="/wiki/Manual:Installing_MediaWiki/ru" title="Manual:Installing MediaWiki/ru">русский</a></bdi>&#160;• <bdi lang="yue"><a href="/wiki/Manual:Installing_MediaWiki/yue" title="Manual:Installing MediaWiki/yue">粵語</a></bdi>&#160;• <bdi lang="zh"><a href="/wiki/Manual:Installing_MediaWiki/zh" title="Manual:Installing MediaWiki/zh">中文</a></bdi>&#160;• <bdi lang="zh-hans"><a href="/wiki/Manual:Installing_MediaWiki/zh-hans" title="Manual:Installing MediaWiki/zh-hans" class="mw-redirect">中文（简体）‎</a></bdi>&#160;• <bdi lang="zh-hant"><a href="/wiki/Manual:Installing_MediaWiki/zh-hant" title="Manual:Installing MediaWiki/zh-hant" class="mw-redirect">中文（繁體）‎</a></bdi>&#160;• <bdi lang="zh-tw"><a href="/wiki/Manual:Installing_MediaWiki/zh-tw" title="Manual:Installing MediaWiki/zh-tw">中文（台灣）‎</a></bdi></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1091
+CPU time usage: 0.628 seconds
+Real time usage: 0.687 seconds
+Preprocessor visited node count: 2567/1000000
+Preprocessor generated node count: 6584/1500000
+Post‐expand include size: 20748/2048000 bytes
+Template argument size: 2464/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 68/500
+-->
+
+<!-- Saved in parser cache with key mediawikiwiki:stable-pcache:idhash:18173-0!*!0!!en!4!* and timestamp 20140210145050
+ -->
+<noscript><img src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.mediawiki.org/w/index.php?title=Manual:Installing_MediaWiki&amp;oldid=898966">http://www.mediawiki.org/w/index.php?title=Manual:Installing_MediaWiki&amp;oldid=898966</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Installation" title="Category:Installation">Installation</a></li><li><a href="/wiki/Category:MediaWiki_administration" title="Category:MediaWiki administration">MediaWiki administration</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-uls" class="active"><a href="#" class="uls-trigger autonym">English</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstalling+MediaWiki&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Manual%3AInstalling+MediaWiki" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-manual" class="selected"><span><a href="/wiki/Manual:Installing_MediaWiki"  title="[c]" accesskey="c">Manual</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Manual_talk:Installing_MediaWiki"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Manual:Installing_MediaWiki" >Read</a></span></li>
+					<li id="ca-ve-edit"><span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;veaction=edit"  title="Edit this page with VisualEditor [v]" accesskey="v">Edit</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MediaWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png);" href="/wiki/MediaWiki"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/MediaWiki" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-mw-download"><a href="/wiki/Download">Get MediaWiki</a></li>
+			<li id="n-mw-extensions"><a href="/wiki/Category:Extensions">Get extensions</a></li>
+			<li id="n-mw-communication"><a href="/wiki/Special:MyLanguage/Communication">Communication</a></li>
+			<li id="n-blog-text"><a href="//blog.wikimedia.org/c/technology/">Tech blog</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-support' aria-labelledby='p-support-label'>
+	<h3 id='p-support-label'>Support</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">User help</a></li>
+			<li id="n-mw-faq"><a href="/wiki/Manual:FAQ">FAQ</a></li>
+			<li id="n-mw-manual"><a href="/wiki/Manual:Contents">Technical manual</a></li>
+			<li id="n-mw-supportdesk"><a href="/wiki/Project:Support_desk">Support desk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-development' aria-labelledby='p-development-label'>
+	<h3 id='p-development-label'>Development</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mw-bugtracker"><a href="/wiki/Bugzilla">Bug tracker</a></li>
+			<li id="n-mw-repo-browse"><a href="https://git.wikimedia.org/">Browse repository</a></li>
+			<li id="n-mw-repo-codereview"><a href="https://gerrit.wikimedia.org/r/#/q/project:mediawiki/core+branch:master+status:open,n,z">Code review</a></li>
+			<li id="n-phpdoc"><a href="//doc.wikimedia.org/mediawiki-core/master/php/html/">Code docs</a></li>
+			<li id="n-svn-statistics"><a href="/wiki/Development_statistics">Statistics</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-MediaWiki.org' aria-labelledby='p-MediaWiki.org-label'>
+	<h3 id='p-MediaWiki.org-label'>MediaWiki.org</h3>
+	<div class="body">
+		<ul>
+			<li id="n-cat-browser"><a href="/wiki/Category:Top_level">Browse categories</a></li>
+			<li id="n-portal"><a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-mw-discussion"><a href="/wiki/Project:Current_issues">Current issues</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Manual%3AInstalling+MediaWiki">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Manual%3AInstalling+MediaWiki&amp;oldid=898966&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Manual:Installing_MediaWiki" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Manual:Installing_MediaWiki" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;oldid=898966" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Manual:Installing_MediaWiki&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Manual%3AInstalling_MediaWiki&amp;id=898966" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 February 2014, at 00:28.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>;
+additional terms may apply.
+See <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//m.mediawiki.org/wiki/Manual:Installing_MediaWiki" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf14/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.WmfProjectStatusHelper","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.pt","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served by mw1052 in 0.190 secs. -->
+	</body>
+</html>
