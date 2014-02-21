@@ -1,0 +1,118 @@
+Manual:Installing MediaWiki on Windows Server 2008 R2The goal of this guide is to give some a quick and easy way to install MediaWiki on a Windows Server 2008 R2 environment.
+
+
+
+Requirements
+The following items will be required:
+Administrative access to the Windows Server 2008 R2 server
+PHP installer (The file php-[version]-nts-Win32-VC9-x86.msi should be available here.)
+MySQL installer (The file mysql-[version]-winx64.msi should be available here.)
+MediaWiki archive (The file mediawiki-[version].tar.gz should be available here.)
+7-Zip or your favorite decompression utility to extract MediaWiki
+Step-by-Step Instructions
+Internet Information Services (IIS)
+To install IIS follow the steps below:
+Open Server Manager, select Roles.
+Add the Web Server role, include Common HTTP Features -> HTTP Redirection and Application Development -> CGI.
+Open Internet Explorer and access http://localhost, it should bring up the IIS7 splash page.
+Set Default Document (Optional)
+Set default document to index.php.
+Open the Internet Information Services (IIS) Manager, select the server name from the list.
+Select the Default Document, highlight index.php and choose Move Up from the Actions side panel until index.php is at the top.
+PHP
+To install PHP follow the steps below:
+Launch the installer, click next through the default install.
+Open your C:\Program Files (x86)\PHP\php.ini file in Notepad and uncomment the values below by removing the heading pound symbol. The following recommendations are from [php.net].
+Edit permissions on the images directory of the MediaWiki installation and add IUSR with modify privledges.
+Create a file called C:\inetpub\wwwroot\phpinfo.php, include the lines below.
+Open Internet Explorer and access http://localhost/phpinfo.php, it should bring up a PHP information page.
+Modifications to PHP.ini
+
+cgi.fix_pathinfo = 1
+
+Contents of file PHPInfo.php
+
+<?php date_default_timezone_set('Europe/Berlin'); ?>
+
+
+Current Identity : <?php echo get_current_user();?>
+<?php phpinfo(); ?>
+
+ Note: For more information on what user is running PHP and the differences between IIS 7 and IIS 7.5, see this [blog].
+Enable PHP Caching (Optional)
+Install a PHP caching plugin.
+Navigate to WinCache.
+Download the file wincache-[version]-[php version]-nts-vc9-x86.exe.
+Launch the installer, type in a temporary directory like C:\Temp.
+Move the php_wincache.dll file into your PHP extensions directory C:\Program Files (x86)\PHP\ext.
+Open the php.ini file, located in the PHP directory C:\Program Files (x86)\PHP.
+Add the lines below, then save and close the file.
+Start and stop IIS.
+Open Internet Explorer and access http://localhost/phpinfo.php, it should bring up a PHP information page.
+Confirm that the wincache section exists.
+
+[PHP_WINCACHE]
+extension=php_wincache.dll
+
+MySQL
+To install MySQL follow the steps below:
+Launch the installer, select Typical settings.
+After installation you will be prompted to run the MySQL Server Instance Configuration Wizard.
+Select Detailed Configuration, then click Next.
+Select Server Machine, then click Next.
+Select Multifunctional Database, then click Next.
+Select the database path, then click Next.
+Select Decision Support (DSS)/OLAP, then click Next.
+Confirm Enable TCP/IP Networking, Add firewall exception for this port and Enable Strict Mode are checked, then click Next.
+Select Standard Character Set, then click Next.
+Confirm Install as Windows Service is checked, then click Next.
+Enter in root password, then click Next.
+
+MediaWiki
+To install MediaWiki follow the steps below:
+Extract the media wiki archive into C:\inetpub\wwwroot\mediawiki directory.
+If you have just one .tar file, extract that file into the C:\inetpub\wwwroot\mediawiki directory.
+If you want MediaWiki to be the default website follow the optional instructions below.
+Configure MediaWiki by accessing the configuration URL (http://[server name]/mediawiki/mw-config/index.php).
+Follow guide for using the configuration script. Ignore the GNU diff3 not found error.
+Create specific IIS website for MediaWiki (Optional)
+Configure MediaWiki as the default website for a host name or an IP address.
+Select a name for the web site.
+Rename the C:\inetpub\wwwroot\mediawiki folder to C:\inetpub\wwwroot\[web site name].
+Open the Internet Information Services (IIS) Manager, open the server name from the list.
+Right click on Sites and choose Add Web Site....
+Enter the web site name in the Site Name field.
+Change the physical directory to C:\inetpub\wwwroot\[web site name].
+Add a host name for your website or select an IP address.
+
+Click OK to create the web site.
+GNU diff3 Installation (Optional)
+Install GNU diff3 files.
+Create directory GnuWin in C:\Program Files (x86).
+Navigate to DiffUtils website.
+Download the file diffutils-2.8.7-1-bin.zip.
+Extract to the C:\Temp directory.
+Copy the bin directory to C:\Program Files (x86)\GnuWin.
+Navigate to File website.
+Download the file file-5.03-bin.zip.
+Extract to the C:\Temp directory.
+Copy the bin directory to C:\Program Files (x86)\GnuWin.
+Update the LocalSettings.php located in C:\inetpub\wwwroot\[media wiki name].
+Original LocalSettings.php
+
+# Path to the GNU diff3 utility. Used for conflict resolution.
+$wgDiff3 = "";
+
+Updated LocalSettings.php
+
+# Path to the GNU diff3 utility. Used for conflict resolution.
+$wgDiff3 = "C:/Program Files (x86)/GnuWin/bin/diff3.exe";
+# Use external mime detector
+$wgMimeDetectorCommand = "C:/Program Files (x86)/GnuWin/bin/file.exe -bi"; 
+
+Notes
+This installation was tested with versions:
+IIS 7.5
+PHP 5.3.21
+MySQL 5.5.29
+MediaWiki 1.20.2

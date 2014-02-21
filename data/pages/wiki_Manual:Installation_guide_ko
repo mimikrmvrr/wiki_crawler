@@ -1,0 +1,145 @@
+Manual:Installation guide/koThis page is a translated version of a page Manual:Installation guide and the translation is 12% complete.
+
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+미디어위키의 기본 소개
+
+내용
+미디어위키는 무엇입니까?
+설명문서
+사용자 지정
+버전 및 다운로드
+설치
+지원 및 연락처
+개발
+모든 다른 주제
+왼쪽의 둘러보기를 보십시오
+
+
+ 설치 안내 | 미디어위키에 대해
+ 특징 | 설치 필요조건
+ 다운로드 | 설치 | 설정
+
+Welcome to the MediaWiki installation guide which provides instructions on how to manually install and configure MediaWiki on a web server. Note that some users may find MediaWiki software bundles and hosting services with 1-click installation and wiki farms a convenient alternative to manual installation.
+The first part of this guide gives broad general instructions, while the last section contains a list of appendices that give more detailed installation notes for specific system configurations and other less common uses of the software.
+
+
+
+Upgrade guide
+If you are already running MediaWiki, see the Upgrade guide.
+ Requirements
+
+Download MediaWiki (current stable version is 1.22.2)
+Web server such as Apache or IIS
+Local or command line access is needed for running maintenance scripts
+
+PHP version 5.3.2 or later, but not PHP 5.5 currently.
+Due to a security issue with PHP it is strongly advised to use PHP 5.3.5+ (see here for more details).
+with Perl Compatible Regular Expressions
+with Standard PHP Library
+
+Database Server
+MySQL 5.0.2 or later (*)
+or PostgreSQL 8.1 or later
+Requires PL/pgSQL (contained in contribs)
+Full-Text searching (Native in >=8.3, requires tsearch2 extension <=8.2)
+
+or SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+빠른 설치 안내
+Warning about webhost auto-installers
+Programs provided by webhosts to automatically install applications such as MediaWiki can, and frequently do, screw up the process, resulting in errors and a failure to install MediaWiki (or another application for that matter). If you encounter this problem, it does not mean that you cannot install MediaWiki; all it means is that you should do it manually. This is very easy and there are benefits to doing this, including more control over where on the server and file path you want to install it, the ability to use a shared database, or the ability to control more features of the wiki during the installation.
+For experienced users, here is the quick version of the installation instructions. Most users will want to read the more detailed version, below.
+먼저 설치하려는 서버가 최소 사양을 넘는지 확인합니다.
+미디어위키를 다운로드합니다(최신 버전 받기). 그리고 설치하려는 서버에 압축을 풉니다.
+압축을 푼 곳의 config 디렉토리를 웹을 통해 접속합니다.
+접속한 페이지의 설명대로 나머지 과정을 진행합니다(영어).
+These instructions are deliberately brief. There is a lot that could go wrong, so if in doubt, you are advised to read the full instructions below!
+
+기본 설치 안내
+설치하기 전에
+미디어위키에 대해
+미디어위키에서 지원하는 기능
+설치 요구 사양 - 설치를 진행하기 전에 확인해주세요.
+
+미디어위키 설치하기
+미디어위키 설정하기
+첫 설정(Initial configuration) (영어) (환경 설정 스크립트 사용(using the configuration script))
+Further configuration
+확장 설치(Installing extensions) (영어)
+
+Alternative to manual installation
+Some users may prefer to skip manual installation by using a pre-integrated MediaWiki software appliance or hosting services with 1-click installation and wiki farms.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+Appendices
+Advanced uses
+The following pages give instructions about how to install/configure MediaWiki for other, less common purposes.
+Installing from Git
+Installing MediaWiki on a memory stick
+Advanced configuration
+The following pages cover some of the more advanced configuration options:
+Advanced configuration
+Wiki administration
+MediaWiki Help
+The following page explains how to get a copy of the MediaWiki help pages on your own wiki
+Copying help pages
+Installation assistance
+FAQ: FAQ#Installation and configuration
+IRC (#mediawiki)
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support.
+MediaWiki Users (Forum) is a user-to-user MediaWiki support forum (offline)
+System-specific instructions
+The following pages give more detailed installation instructions aimed at specific systems. However, by and large Manual:Installing MediaWiki is more up to date, and better written than the per system docs, and as such it is recommended you first consult the main install instructions before looking at a per system installation documents.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Newcomers guide
+Streamlined Guide
+Simple Windows Apache Installation
+
+Notes
+
+MediaWiki ships with an installation script which allows web-based configuration
+MediaWiki can share the database of another web-based application, e.g. phpBB etc.
+Knowledge of PHP is required in order to customize the software
+PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 (download). Note that this version is no longer supported.
+MySQL 5 support is required since MediaWiki 1.19 – if you are using an older version of MySQL and cannot upgrade, you should use MediaWiki 1.18.5 (download). Note that this version is no longer supported.
+Some users find it helpful to install an additional software package such as phpMyAdmin (MySQL) or phpPgAdmin (Postgres) to help administer the database server.
+
+See also
+MediaWiki software bundles
+MediaWiki hosting services and wiki farms
+Before installing
+Upgrading
+Uninstallation
+FAQ

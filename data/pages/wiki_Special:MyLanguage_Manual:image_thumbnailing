@@ -1,0 +1,151 @@
+Manual:Image administrationThis article describes how MediaWiki handles and stores files, and gives some information on configuring.
+This applies to images as well as to any other type of file that can be uploaded. All files are stored with a corresponding article in the namespace "File:". MediaWiki prior to 1.14 used the "Image:" namespace instead of "File:", "Image:" is still retained as an alias for backward compatibility.
+
+
+
+Upload and usage of images
+See: Help:Images
+Enable upload of images
+To upload files, three conditions have to be met:
+MediaWiki must have uploads enabled. Set $wgEnableUploads to true.
+The file type must be allowed. More information: $wgFileExtensions.
+The user must be in a group with the "upload" right. By default this is given to all logged-in users.
+Uploads are done using Special:Upload.
+See Manual:Configuring file uploads, Manual:Mime type detection
+Relevant parameters for file handling
+These parameters are relevant:
+Image configuration
+Path configuration
+Upload configuration
+Image thumbnailing
+MediaWiki's extended image syntax allows images to be automatically thumbnailed (see Manual:Configuring file uploads for general help on file uploads).
+Image thumbnailing requires either ImageMagick or GD library. ImageMagick is recommended since it produces better quality thumbnails; it can be downloaded from imagemagick.org. GD can be downloaded from libgd.bitbucket.org. Neither of these are part of the default MediaWiki installation, although PHP can come with GD.
+ Caution:
+MediaWiki 1.17 requires at least version 6.5.6-2 of ImageMagick.
+For older versions of MediaWiki (prior to 1.10.0) set $wgUseImageResize to true to enable thumbnailing. In newer versions this is not required.
+If you use ImageMagick, set $wgUseImageMagick to true in LocalSettings.php. Make sure the $wgImageMagickConvertCommand variable points to the (absolute) location of the convert command of your installation and that the command is executable by the web server process. For example, Windows users will want to change the default to "C:\ImageMagick\convert.exe" (or similar).
+To re-create old thumbnail files before you used ImageMagick you can use $wgThumbnailEpoch.
+If rendering fails silently, check and increase $wgMaxShellMemory.
+See the help page on Image Thumbnails not working for troubleshooting.
+GraphicsMagick can now also be used as an alternative to ImageMagick. You will need to set $wgImageMagickConvertCommand to the (absolute) location of the 'gm' command. E.g.:
+
+$wgImageMagickConvertCommand = "/usr/bin/gm";
+
+GIF
+For thumbnailing GIF-Animations under windows, you need to install ImageMagick as described above.
+SVG
+MediaWiki supports SVG image rendering: if enabled, SVG images can be used like other image files — they will automatically be rendered as a PNG file and thumbnailed as needed on the fly. If you're on a shared host and no SVG renderer is pre-installed, you should probably ask your provider to install it for you.
+To enable SVG support:
+Allow upload of SVG files in the LocalSettings.php file: $wgFileExtensions[] = 'svg'; Note that MediaWiki will refuse SVG files containing JavaScript, for security reasons.
+To avoid a false positive, add $wgAllowTitlesInSVG = true; to the LocalSettings.php file.
+If you get an error saying the file is corrupt, make sure mime type detection is working properly.
+
+Add $wgSVGConverter to LocalSettings.php and set the renderer you want to use.
+Available options are ImageMagick, ImagickExt, sodipodi, inkscape, batik, rsvg, and imgserv.
+For example: $wgSVGConverter = 'ImageMagick';
+ Note: If the converter program is not in the system path, you have to specify the directory that contains the program using $wgSVGConverterPath.
+librsvg is fast but not very accurate. It has a ridiculously large chain of dependencies, so you may not want to bother unless you have a repository that includes it and resolves the dependencies for you. The Wikimedia projects use rsvg. Note: As of version 2.22.3, there is a bug in locale handling (see Wikimedia bug report and GNOME bug report). A patch is available for the rsvg-convert tool.
+Batik is the most accurate SVG renderer available, although its anti-aliasing is sometimes suboptimal. Its SVG parsing is more strict, causing it to reject "almost valid" SVG files that other renderers accept (e.g. commons:File:UbuntuCoF.svg). Batik relies on Java, and is much slower than rsvg, though this may not be a huge issue unless you're constantly adding SVG files. See SVG benchmarks. Requires a lot of work to get running, if not included in your distribution.
+Inkscape also does an accurate job of SVGs, half the speed of rsvg, but was designed for interactive graphical use; however, it comes with inkview which is a viewer/converter program - it requires a writable home directory for the user it's run as. Since it will be running as user www or something similar, it will try to create .inkscape/ and .gnome2/ directories in the corresponding home directory, and will fail silently if it is not able to. Inkscape is preferable to rsvg (a) on Windows (it comes as a standalone package) or (b) if you have important SVGs drawn in Inkscape that do not render correctly in rsvg. Inkscape has as complicated a dependency chain as librsvg — use only if it's in your distribution or available as a complete standalone package.
+Sodipodi is the program Inkscape was forked from. The same considerations apply. Sodipod is no longer under active development.
+Since version 6.x.x ImageMagick renders SVGs, but imperfectly. This is the default, but avoid it if possible. However, it does work. On Windows, $wgConvertPath must be set to avoid a conflict with Windows' own convert.exe. One simple alternative in this scenario is to add to LocalSettings.php the line $wgSVGConverters['ImageMagick'] = '"' . $wgImageMagickConvertCommand . '" -background white -thumbnail $widthx$height^! $input PNG:$output';, which also allows for spaces in the path.
+The PHP Imagick extension supports SVG rendering, however the same considerations as for the regular ImageMagick apply.
+The GD library is not capable of converting SVG images to the PNG format, at least according to Joen Asmussen's June 2008 NoScope blog.
+Most current web browsers except Internet Explorer (until version 9) can display SVGs directly. Using librsvg to render SVGs to a PNG will give much more accurate results, as well as less bandwidth consumption. Direct SVG display is not supported in MediaWiki by default (Bug 3593), unless you install NativeSvgHandler extension.
+
+Set $wgSVGConverter = false if SVG rendering is not needed and you wish to make your users download the svg file in order to view it.
+JPEG (using GD)
+Simply add the following line to LocalSetting.php, this will cause auto fall back to GD library.
+$wgUseImageMagick = false;
+For errors with JPEG thumbnails, see JPEG (using GD).
+TIFF
+Generating thumbnails of TIFF files requires MediaWiki 1.15.0 or newer.
+Allow upload of TIFF files in the LocalSettings.php file: $wgFileExtensions[] = 'tif';
+Add $wgTiffThumbnailType to LocalSettings.php and set to either jpg or png to specify which type of thumbnail you wish to have generated.
+Making thumbnails of TIFF files may require system resources beyond those needed for thumbnailing JPEG, GIF, or PNG files. Consider appropriate settings for $wgMaxImageArea and $wgMaxShellMemory
+DjVu
+See also: Manual:How to use DjVu with MediaWiki
+Deletion of images
+Files, like wiki pages, can only be deleted by users with the "Delete pages (delete)" permission (administrators by default). Deletion of files is done by deleting the associated description page (or by clicking the "delete all" link in the "File history" table).
+Deletion of individual revision
+If a file has been altered, there is a revision history of the files which is displayed on the file article page. Each revision has a "delete" link. If this is clicked, the revision and the file are deleted.
+ Note: The versions of files are separate from the page history of the file description page.
+Information about old revisions of files are stored in the oldimage table.
+Undeleting files
+ Warning: Before MediaWiki version 1.8, deleted images/files can not be undeleted (only the associated description page can be restored).
+From MediaWiki version 1.8 up to 1.10, archiving deleted images/files (and thus undeleting them) is disabled per default, but can be enabled by setting $wgSaveDeletedFiles = true.
+Since MediaWiki version 1.11, this is enabled per default, and $wgSaveDeletedFiles is deprecated. Instead, the behavior is controlled by $wgFileStore.
+Information about deleted images are stored in the filearchive table.
+Deletion of Archived Files
+Since MediaWiki version 1.11, deleted images are still stored on the server by default. If you want to delete them completely, you can do it with the deleteArchivedFiles.php script. If you delete the archived files, you can not undelete those files anymore.
+Reasons for Deleting a File
+When choosing to delete a file, as described above, users will be asked to provide a reason for deletion. The available reasons can be edited on the MediaWiki:Filedelete-reason-dropdown of your wiki.
+Data storage
+Whenever an image is uploaded, several things are created:
+An article in the file namespace with the name of the file, e.g. File:MyPicture.png. This page is stored and can be edited like any other page.
+The file itself is stored in a folder on the file system.
+If necessary and thumbnailing is available, thumbnailed versions of the file will be created when necessary (such as for the usage on the file description page. These are stored in the thumb directory of the image directory, in a separate directory for each main file.
+If $wgHashedUploadDirectory is enabled (by default), MediaWiki creates several subdirectories in the images directory.
+The directory names are from the first two characters of the md5 hash of the final filename.
+Folders
+All image files are stored in a folder determined by $wgUploadPath (images/, by default).
+Description of named image subfolders:
+archive
+This is the storage place for files that have been replaced by newer versions.
+temp
+used for temporary storage of files during image uploading. (Due to bug 9018, these files may not always be automatically deleted)
+thumb
+Thumbnails (automatically generated) for the files. If these are deleted, they are automatically regenerated when needed.
+Depending on the configuration, there may be additional image subfolders:
+math
+Folder to store your rendered TeX input, see also Manual:Enable TeX or Math.
+x/xy
+If $wgHashedUploadDirectory is set to true (which is the default), images will be stored in subfolders of the images, thus making file paths look like images/a/ab/filename.jpg. See Manual:$wgHashedUploadDirectory for more details on why this might be desired and how this system works.
+Database tables
+The file description page is stored as any page in the page, text, revision etc. tables
+image table: Holds some metadata such as the size of the file and the upload date.
+oldimage table: This is stores information for files that have been replaced with newer versions.
+filearchive table: holds the information on the deleted files.
+imagelinks table: Records what pages use a file.
+Space usage
+Files need considerably more space than articles. The following calculations assume a block size of 4KB with Linux/Unix servers.
+The default setting is $wgHashedUploadDirectory = true.
+Space requirements for all directories:
+image directories: 0-f/x0-f: max. 16*16 = 256 directories = 256*4 KB = 1024 KB
+archive directories: 0-f/x0-f: max. 16*16 = 256 directories = 256*4 KB = 1024 KB
+thumb directories: 0-f/x0-f: max. 16*16 = 256 directories = 256*4 KB = 1024 KB
+temp directories: 0-f/x0-f: max. 16*16 = 256 directories = 256*4 KB = 1024 KB
+Therefore, the basic amount of space needed without any images uploaded is 4 MB in theory (although the directories are created only when needed).
+For each file we need:
+size of the original image file + 2 KB average overhead
+For files that need to be thumbnailed:
+size of the created thumbnail(s) + 2 KB average overhead (each)
+directory for thumbnail (4KB) (each image has its own thumbnail directory)
+Examples:
+image 20778 Byte png (small size, no thumb): 24 KB for the image: Total 24 KB
+image 123.000 Byte jpeg (big size, auto thumb): 124 KB for the image, 4KB for the thumb directory, 64 KB for the thumb: Total: 192 KB
+File Access
+Uploaded files are generally served directly by the web server, not through MediaWiki. While there may be a minimal level of security through obscurity with path encryption (eg. /c/c4/...) if $wgHashedUploadDirectory is set, the path can be calculated easily from the file name and does not provide true protection.
+For limiting access to authorized users, see Image Authorization
+Licensing
+A feature of MediaWiki allows the Special:Upload Page to streamline licensing of images. Wikipedia's Upload Page has a Licensing drop down box below image summary. This feature is turned off in default MediaWiki. To turn this feature on a sysop needs to edit Licenses in the MediaWiki namespace (example: MediaWiki:Licenses). S/he can do this by going to the MediaWiki:Licenses page of their wiki and clicking 'create' or 'edit'.
+The page MediaWiki:Licenses expects a certain format in a wiki list.
+*subst:license 1|license 2|License text
+* Header 1:
+** cc-by-sa-2.5|Attribution ShareAlike 2.5
+Line 1 will produce "License text" and substitute the license 1 template in the image page and transclude license 2.
+Line 2 will show a greyed out header with text "Header 1:"
+Line 3 will produce "Attribution ShareAlike 2.5" and transclude template cc-by-sa-2.5 on the image page.
+For detailed real world example, see Wikipedia:MediaWiki:Licenses or Commons:MediaWiki:Licenses.
+Foreign Repositories
+It is possible to access files stored in foreign repositories, without needing to upload them to the wiki, by setting the $wgForeignFileRepos array. This feature offers several possibilities:
+ForeignAPIRepo accesses files from a remote MediaWiki installation, such as Wikimedia Commons, through its API
+ForeignDBRepo accesses files through a database, and is useful for creating wiki families
+FSRepo accesses files from a local folder
+In all cases, one would be able to embed files into a page using ordinary image syntax and specifying the name of the file in the foreign repository. Note that some of the above implementations are still experimental, and might not be suitable for production sites.
+MediaWiki Version
+This applies to:
+MediaWiki 1.9.x and above
+other versions not verified
+Language:
+English  • Deutsch • Bahasa Indonesia • 日本語 • 한국어 • português • português do Brasil • русский

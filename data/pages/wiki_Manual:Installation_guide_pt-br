@@ -1,0 +1,74 @@
+Manual:Guia de instalação Guia de instalação | Sobre o MediaWiki
+ Destaques | Requisitos para a instalação
+ Carregando | Instalando | Configurando
+
+
+Bem-vindos ao guia de instalação MediaWiki. A primeira parte deste guia dá grandes instruções gerais sobre como instalar e configurar o MediaWiki em um servidor de web. A última seção contém uma lista do apêndice que dão anotações de instalação e configurações mais detalhadas de sistemas específicos e outro menos - dos usos comuns do software.
+
+
+
+Guia de instalação rápida
+Só para usuários experientes, aqui está a versão rápida das instruções de instalação. A maior parte de usuários quererão ler a versão mais detalhada, abaixo.
+Verificar que o seu sistema se encontra com as exigências mínimas (PHP5, MySQL4 e um servidor de web).
+Download MediaWiki (link para a mais recente versão) e extraia o arquivo em uma pasta acessível de web no seu servidor.
+Apontar o seu browser o diretório config .
+siga as instruções da tela para concluir o processo.
+Essas instruções são deliberadamente breves.Muita coisa pode dar errada, assim se tiverem alguma dúvida, os aconselhamos a ler as instruções completas abaixo!
+Guia principal de instalação
+Antes da instalação
+O que é MediaWiki?
+Lista de destaques do MediaWiki
+Requerimentos de instalação - Verifique isto antes de prosseguir!
+
+Instalando MediaWiki
+Fazendo Download do MediaWiki
+Instalando o MediaWiki
+
+Configurando o MediaWiki:
+Configuração inicial (Usando o script de configuração)
+Configurações adicionais
+
+Apêndice
+Para usuários avançados
+As seguintes páginas dão instruções sobre como instalar/configurar o MediaWiki para outros propósitos menos comuns.
+Instalando de uma subversão
+Instalando o MediaWiki de um memory stick
+Configurações avançadas
+As seguntes páginas falam a respeito das seguintes configurações avançadas:
+Configuração avançada
+Administração do Wiki
+Instruções específicas sobre o sistema
+As seguintes páginas dão mais detalhadamente instruções de uso nos seguintes sistemas operacionais:
+FreeBSD
+GNU/Linux
+Debian
+Fedora Core
+Gentoo
+Mandrake
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+Damnsmalllinux
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Newcomers guide
+Streamlined Guide
+Instação Simples do Apache no Windows
+
+Ver também
+Antes da instalação
+Atualização
+Desinstalação
+
+Língua:
+English  • català • čeština • dansk • Deutsch • español • français • עברית • Bahasa Indonesia • italiano • 日本語 • 한국어 • polski • português • português do Brasil • română • русский • українська • 粵語 • 中文 • 中文（简体）‎ • 中文（繁體）‎ • 中文（台灣）‎
+This page is a translated version of a page Manual:Installation guide and the translation is 50% complete.

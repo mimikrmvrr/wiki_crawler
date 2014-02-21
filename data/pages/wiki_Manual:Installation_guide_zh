@@ -1,0 +1,144 @@
+Manual:Installation guideThis page is a translated version of a page Manual:Installation guide and the translation is 87% complete.
+
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+MediaWiki 简介
+
+内容
+MediaWiki是如何工作的?
+文档
+用户定制
+版本与下载
+安装
+支持与联系
+开发
+全部内容
+见左面的导航列
+
+
+ 安装向导 | 关于 MediaWiki
+ 功能列表 | 安装要求
+ 下载 | 安装 | 配置
+
+欢迎阅读 Mediawiki 的安裝指南。本文描述如何在WEB服务器上手动安裝及配置MediaWiki。注意有些用户会使用 MediaWiki的 软件包和带有一键安装和wiki空间的托管服务以代替手工安装。
+本文第一部分是一个宽泛的一般介绍。而最后章节包括一个附录列表，包括在具体的操作系统上更详细的安装说明以及这个软件的不太常用的用途。
+
+
+
+升级指南
+如果你已经在使用 MediaWiki，请参阅升级指南。
+ 条件
+
+下载 MediaWiki（当前稳定版本：1.22.2）
+Web服务器软件，像是 Apache、IIS
+日常维护需要本地或命令行权限
+
+PHP 5.3.2 或更高版本，但不是 PHP 5.5 的当前版本。
+因为 PHP 的一个安全问题而强烈推荐使用 PHP 5.3.5+（点击此处以查看详细信息）。
+需要 Perl 兼容正则表达式
+需要 标准 PHP 库
+
+数据库服务器软件
+MySQL 5.0.2 或更高版本（*）
+或 PostgreSQL 8.1+
+需要 PL/pgSQL (contained in contribs)
+全文检索（内置 >=8.3，需要 tsearch2 扩展 <=8.2）
+
+或 SQLite
+
+缩略图和 TeX 文本需要扩展程序支持
+(*) – MariaDB，是采用 GPL 授权发布的 MySQL 分支，由 MySQL 创始人 Monty Widenius 发起，同样适用于 MediaWiki。Debian/Ubuntu Debian/Ubuntu 存储库。
+
+快速安装指南
+通过主机服务商自动安装时的问题
+通过主机服务商提供的程序可以自动安装像 MediaWiki 这样的应用，并且运行得很频繁，影响安装进度，导致 MediaWiki 安装失败（或影响到其他应用）。如果你遇到这个问题，并不意味着你不能安装 MediaWiki，你需要手动安装。这是一个简单而且有益的做法，包含了更多指定服务器和路径的操作、使用共享数据库的条件，或者在安装过程中定制 wiki 的更多功能。
+对于有经验的用户，这里是安装说明的快速版。但是大多数用户仍然需要阅读详细的安装说明。
+檢查你的系統是否符合最低系統要求。
+下载 MediaWiki （直接下载最新稳定版），然后解压缩到你服务器的网络存储文件夹。
+指向你的浏览器到安装目录（例如：http://[domain]/mediawiki/index.php）。如果你安装在本地设备上，请把 [domain] 改成 localhost。如果你安装在远程服务器上，请把 [domain] 你的主机域名，比如 www.myserver.com。
+跟着屏幕的安装提示直到完成。
+上述安装提示只是一个简要说明，也许会出错，所以，如果有任何不确定的地方，建议你还是阅读下面的完整安装说明。
+
+详细安裝指南
+安裝前
+了解Mediawiki是甚麼
+查看MediaWiki功能清单
+系統需求 - 在向下进行前务必查看！
+
+安裝MediaWiki
+配置MediaWiki:
+初始配置（使用配置脚本）
+更多的配置
+安裝額外插件
+
+替代手工安装
+某些用户可能倾向于使用一个预集成的MediaWiki软件包 or 含一键安装及维基农场的托管服务跳过手工安装.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+附录
+高级用法
+这些页面介绍了如何用不常见的方法来安装和配置 MediaWiki
+从 Git 版本库下载安装 MediaWiki
+在存储卡上安装 Mediawiki
+高级配置
+这些页面介绍了更多更高级配置选项：
+高级配置
+Wiki 管理实践
+MediaWiki帮助
+下列页面解释如何在你自己的Wiki中获得MediaWiki帮助页的副本
+帮助页面副本
+安装助理
+FAQ: FAQ#安装及配置
+IRC (#mediawiki)
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support.
+MediaWiki Users (Forum) is a user-to-user MediaWiki support forum (offline)
+系统相关指南
+The following pages give more detailed installation instructions aimed at specific systems. However, by and large Manual:Installing MediaWiki is more up to date, and better written than the per system docs, and as such it is recommended you first consult the main install instructions before looking at a per system installation documents.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+新用户指导
+Streamlined Guide
+Windows上安装Apache
+
+注释
+
+MediaWiki 附带安装工具，以方便您通过浏览器来完成安装
+MediaWiki 可以和其它程序共用一个数据库，例如 phpBB 等
+如果您想自定义 MediaWiki 的话，您需要懂 PHP 编程
+PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 (download). Note that this version is no longer supported.
+MySQL 5 support is required since MediaWiki 1.19 – if you are using an older version of MySQL and cannot upgrade, you should use MediaWiki 1.18.5 (download). Note that this version is no longer supported.
+Some users find it helpful to install an additional software package such as phpMyAdmin (MySQL) or phpPgAdmin (Postgres) to help administer the database server.
+
+其它参考资料
+MediaWiki 一键安装包
+MediaWiki hosting services and wiki farms
+安装前注意事项
+卸载指南
+常见问题解答

@@ -1,0 +1,312 @@
+Manual:Running MediaWiki on Red Hat Linux
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+
+Introduction
+This article gives detailed instructions for people who want to run MediaWiki on a Red Hat Linux platform.
+Important note: you should consider moving to Fedora Core, as Red Hat Linux is now only supported by the Fedora Legacy project. If you run Red Hat Linux on a public-facing server, you SHOULD NOT use anything other than version 7.3 or version 9, and enable Fedora Legacy on your box if you are using one of those two versions.
+For information on running MediaWiki on Fedora Core, see Manual:Running MediaWiki on Fedora Core.
+Prerequisites: Quick Installation of Apache, MySQL and PHP
+The major difficulties to installing Mediawiki lie in the correct installation of Apache, MySQL and PHP. The official way to do it in RHEL v4 is to subscribe to the Red Hat Web Application Stack 1.0 Beta subchannel in the Red Hat Network. If this is not available, this can be obviated by using the xampp which contains all three of these, properly configured for use by MediaWiki.
+This can be found at: http://www.apachefriends.org/en/xampp.html
+Alternatively you can install the three packages separately from your Red Hat or via any third party compilation and packaging effort. In that case you'll want to read a good tutorial on setting up a so-called LAMP environment.
+One such tutorial, for Redhat 9, using yum, can be found at:
+http://users.tkk.fi/~tkarvine/lamp-linux-apache-mysql-php.html
+Red Hat Enterprise Linux 6 or CentOS 6.4
+Almost everything must be done as superuser.
+First grab what we need
+
+yum install httpd php php-mysql php-gd mysql-server php-xml mysql
+
+Start MySQL and secure it
+
+service mysqld start
+mysql_secure_installation
+
+Create a new database and wiki user to avoid using the root user:
+
+ mysql -u root -p
+
+
+ CREATE DATABASE database name;
+
+For example only:
+
+ CREATE DATABASE wikidatabase;  
+
+To view if it was created:
+
+ SHOW DATABASES;
+
+Grant privileges:
+
+ GRANT ALL PRIVILEGES ON *.* TO 'wiki'@'localhost' IDENTIFIED BY 'THISpasswordSHOULDbeCHANGED' WITH GRANT OPTION;
+ exit
+
+For example only:
+
+ GRANT ALL PRIVILEGES ON wikidatabase.* TO 'wikiuser'@'localhost' IDENTIFIED BY 'Pippo123456?' WITH GRANT OPTION;
+ exit
+
+Remember the 'wiki' password for MySQL that you create here. You will need it when setting up the wiki database. You can test it with:
+
+ mysql -u wiki -p
+ 
+ SHOW GRANTS;
+
+Make sure Apache and MySQL starts on boot
+
+chkconfig httpd on
+chkconfig mysqld on
+
+You can install mediawiki directly from the mediawiki web site or you can install pre-built packages from the Fedora Project Extra Packages for Enterprise Linux (EPEL) repository. Many RHEL and CentOS users find EPEL is a good source for packages not included in the base system.
+Download mediawiki directly (the current version as of this writing, may have changed since) in some directory of your choice. Here I put it in /root.
+
+cd /root
+wget http://download.wikimedia.org/mediawiki/1.21/mediawiki-1.21.2.tar.gz
+
+Also it works with:
+
+wget http://dumps.wikimedia.org/mediawiki/1.21/mediawiki-1.21.2.tar.gz
+
+Install. Use a symlink for easy upgrades.
+
+cd /var/www
+tar -zxf /root/mediawiki-1.21.2.tar.gz
+ln -s mediawiki-1.21.2/ mediawiki
+
+Instead of downloading and installing, you can use EPEL. If you haven't done so, add the EPEL repository as a source for your package manager. Then see what mediawiki packages are available
+
+yum list 'mediawiki*'
+
+or, if you want descriptions of each package
+
+yum info 'mediawiki*'
+
+Then install those that you choose with a command like
+
+yum install 'mediawiki121'
+
+Setting up Apache can be done in numerous ways according to your preferences. In this example I simply change Apache to look at /var/www by default, so the link to the wiki will be http://server/mediawiki. This is convenient for running more than one site on the server. If you only need mediawiki running on the server, change instances of /var/www below to /var/www/mediawiki (Also it works with: /var/www/mediawiki-1.21.1). Open /etc/httpd/conf/httpd.conf and search for and change these three lines:
+
+DocumentRoot "/var/www"
+<Directory "/var/www">     <-- this is the SECOND "<Directory" entry, not the 'root' one
+DirectoryIndex index.html index.html.var index.php
+
+Changing the /var/www to /var/www/mediawiki assumes you did the following:
+
+cd /var/www
+ln -s mediawiki121/ mediawiki
+chown -R apache:apache /var/www/mediawiki-1.21.1 
+
+Also it works with:
+
+chown -R apache:apache /var/www/mediawiki
+
+Restart Apache
+
+service httpd restart
+
+You also want to open ports in your firewall using
+
+ system-config-firewall-tui
+
+Enable both the https and http services (follow the instructions of the configuration interface). Finally, you can do some magic with selinux to change the context of the directories you installed, but I recommend you just go to /etc/selinux and modify conf making it either "permissive" or "disabled." I also had to create a link to /usr/share/mediawiki121/load.php in my /var/www/mediawiki directory and change the ownership on the /usr/share/mediawiki121 directory to apache.apache.
+And you're good to go. Point a browser at http://yourserver/mediawiki and follow the instructions.
+RHEL 5.4 + Nginx + Mediawiki With HTTPS
+RHEL 5.4 + Nginx + Mediawiki With HTTPS
+Red Hat Linux 9.0
+Though this version of Red Hat Linux is somewhat obsolete, we consider it useful to provide these instructions. The process will be similar on all other Red Hat and Fedora Core versions, as well as their various derivaties (such as CentOS, the "Community Enterprise OS" rebuild of the Red Hat Enterprise Linux, RHEL, sources).
+Most operations require root permission. Be sure to su to the root account before you encounter permissions issues.
+Preparation
+There are graphic rpm package management tools in this Linux distribution.
+
+ type 'redhat-' followed by 'Tab' key to see what are available in your system
+ [root@localhost root]# redhat-
+ redhat-cdinstall-helper            redhat-config-rootpassword
+ redhat-config-date                 redhat-config-securitylevel
+ redhat-config-keyboard             redhat-config-services
+ redhat-config-language             redhat-config-soundcard
+ redhat-config-mouse                redhat-config-time
+ redhat-config-network              redhat-config-users
+ redhat-config-network-cmd          redhat-config-xfree86
+ redhat-config-network-druid        redhat-control-network
+ redhat-config-packages             redhat-install-packages
+ redhat-config-printer              redhat-logviewer
+ redhat-config-printer-gui          redhat-update-gnome-font-install
+ redhat-config-printer-tui          redhat-update-gnome-font-install2
+ redhat-config-proc
+
+We need to update all software packages used by MediaWiki in this system. 'redhat-config-packages ' is a good GUI tool for us to uninstall them first. But if you are an expert in rpm, ignore this part.
+If you cannot find this tool, using the following command to install it
+
+  rpm -ivh redhat-config-packages 
+
+Uninstall httpd,mysql, and php
+Using text console
+
+  [root@localhost root]# rpm -e httpd
+
+Install mysql
+make sure there is no previous version of mysql installed in your system by
+
+ rpm -q mysql
+
+If there is none, proceed to install phase, otherwise uninstall it by
+
+ rpm -e mysql
+
+uninstall any rpms dependent on mysql using the same method too.
+Download rpm packages for mysql's server, client and dynamic shared libraries. You can easily search 'mysql' in http://www.google.com for latest rpm packages.
+For example:
+MySQL-server-4.0.20-0.i386.rpm
+MySQL-client-4.0.20-0.i386.rpm
+MySQL-shared-4.0.20-0.i386.rpm
+Then install them one by one, using
+
+  rpm -ivh MySQL-server-4.0.20-0.i386.rpm
+  rpm -ivh MySQL-client-4.0.20-0.i386.rpm
+  rpm -ivh MySQL-shared-4.0.20-0.i386.rpm
+
+Initialize mysql database after installation by typing
+
+ mysql_install_db
+
+Following other instructions from mysql doc to change the default empty password for mysql users to what you like
+Don't forget to set the mysqlclient.so path into search path /etc/ld.so.conf file. For example, we have:
+
+ /usr/lib/libmysqlclient.so
+ Make sure /etc/ld.so.conf contains:
+                                                                               
+     /usr/lib
+                                                                               
+
+Then run
+
+/sbin/ldconfig
+
+Install apache web server (httpd)
+google apache to find the latest source ball. In my case, I used httpd-2.0.50.tar.gz
+Untar it
+
+cd httpd-2.0.50
+./configure --enable-so
+make
+make install
+
+Now you have Apache 2.0.50 available under /usr/local/apache2, configured with loadable module support and the standard MPM prefork.
+To test the installation use your normal procedure for starting the Apache server, e.g.:
+
+   /usr/local/apache2/bin/apachectl start
+
+In your web browser, access your own machine by address:
+
+  http://localhost
+
+And I am sure you will be proud of what you see now!
+and stop the server to go on with the configuration for PHP:
+
+   /usr/local/apache2/bin/apachectl stop.
+
+Install PHP
+google php to find the latest php source package. In my case, I used php 4.3.8
+php-4.3.8.tar.gz
+untar it
+
+./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-mysql
+make
+make install
+
+There is some warning about using built-in sql support from PHP, I will figure it out later. But this time, let it be as a quick solution.
+We need to configure the apache web server after the installation by editing httpd.conf
+
+cd /usr/local/apache2/conf
+vi httpd.conf
+
+Make sure you see the following line without # in front of it.
+
+LoadModule php4_module        modules/libphp4.so
+
+Tell Apache to parse certain extensions as PHP by adding lines into httpd.conf, you may search the file by /AddType first to find the proper place.
+
+     AddType application/x-httpd-php .php .phtml     
+     AddType application/x-httpd-php-source .phps
+
+Install MediaWiki
+We are almost done! download MediaWiki package , I am using mediawiki-1.3.2.tar.gz
+
+tar xzvf mediawiki-1.3.2.tar.gz
+cp mediawiki /var/www/wiki
+
+You may change the name and directory as your wish.
+Change apache www root to wiki directory by editing
+
+vi /usr/local/apache2/conf/httpd.conf
+
+ #DocumentRoot "/usr/local/apache2/htdocs"
+ DocumentRoot "/var/www/wiki"
+
+And adding wikipedia's index.php into web server's default first page list by expanding the following line
+
+DirectoryIndex index.html index.html.var index.php
+
+Save and quit, Start apache server by
+
+ /usr/local/apache2/bin/apachectl restart
+
+Test what you have achieved by accessing
+
+http://localhost
+
+WOW!!!
+Fedora Core 3
+This may also be applicable for older versions of Fedora Core. For Fedora Core 4 and later, see Manual:Running MediaWiki on Fedora Core.
+Problems Upgrading from PHP4 to PHP5
+I used similar steps as outlined for Red Hat Linux 9.0, but found that the PHP installer did not sense that I had php4 pre-installed with the stock installation. Find the line:
+
+LoadModule php5_module /usr/lib/httpd/modules/libphp5.so
+
+inside the /etc/httpd/conf/httpd.conf file, which is correct for PHP5, but will interact badly with another line:
+
+LoadModule php4_module modules/libphp4.so
+
+in the /etc/httpd/conf.d/php.conf file. The libphp5.so line was put there by PHP's build environment (the make install step) when I built PHP5 from source. If you have both lines when running the httpd daemon, then a symptom is that when you navigate to http://localhost, you will get a blank web page with no errors. You will also see segmentation violation error messages when you look in the error logs at /var/log/httpd/error_log, as the two Apache modules will not coexist (which is to be expected). Note that is using the Apache2 installation that comes with Fedora Core 3, not one built from source.
+The solution is to comment out the LoadModule php4_module ... line in the /etc/httpd/conf.d/php.conf file and restart the httpd daemon with the service httpd restart command.
+References
+http://www.php.net/manual/en/install.apache2.php
+
+
+
+
+

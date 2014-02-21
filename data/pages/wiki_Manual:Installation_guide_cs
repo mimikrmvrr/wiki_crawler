@@ -1,0 +1,145 @@
+Manual:Installation guide/csThis page is a translated version of a page Manual:Installation guide and the translation is 77% complete.
+
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+Základní úvod do MediaWiki
+
+Obsah
+Jak MediaWiki funguje?
+Dokumentace
+Uživatelské úpravy
+Verze a download
+Instalace
+Podpora a kontakt
+Vývoj
+Ostatní témata
+Vizte možnosti vlevo
+
+
+ Instalační příručka | O MediaWiki
+ Funkce | Instalační požadavky
+ Download | Instalace | Konfigurace
+
+Vítejte v instalační příručce Special:MyLanguage/MediaWiki, kde se dočtete instrukce o ruční instalaci a konfiguraci MediaWiki na webovém serveru. Někteří uživatelé možná budou považovat za jednodušší využít automatizované instalační balíčky nebo některý hosting se zjednodušenou instalací a wikifarmy.
+První část této příručky popisuje základní obecné instrukce, zatímco závěrečná sekce obsahuje seznam příloh s podrobnými instalačními pokyny pro některé specifické systémy a další méně časté způsoby využití MediaWiki.
+
+
+
+Příručka pro upgrade
+Pokud již MediaWiki provozujete, vizte Příručku pro upgrade.
+ Požadavky
+
+Stáhněte si MediaWiki (aktuální stabilní verze je 1.22.2)
+Webový server jako Apache nebo IIS
+Kvůli spouštění údržbových skriptů je vyžadován přístup k příkazové řádce
+
+PHP verze 5.3.2 nebo novější.
+Kvůli bezpečnostním problémům v PHP se silně doporučuje používat PHP 5.3.5+ (podrobnosti).
+s Perl Compatible Regular Expressions
+s Standard PHP Library
+
+Databázový server
+MySQL 5.0.2 nebo novější (*)
+nebo PostgreSQL 8.1 nebo novější
+Vyžaduje PL/pgSQL (součástí contribs)
+Plnotextové vyhledávání (nativně od verze 8.3, dříve vyžadovalo rozšíření tsearch2)
+
+nebo SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+Rychlá instalační příručka
+Warning about webhost auto-installers
+Programs provided by webhosts to automatically install applications such as MediaWiki can, and frequently do, screw up the process, resulting in errors and a failure to install MediaWiki (or another application for that matter). If you encounter this problem, it does not mean that you cannot install MediaWiki; all it means is that you should do it manually. This is very easy and there are benefits to doing this, including more control over where on the server and file path you want to install it, the ability to use a shared database, or the ability to control more features of the wiki during the installation.
+For experienced users, here is the quick version of the installation instructions. Most users will want to read the more detailed version, below.
+Zkontrolujte, zda váš systém splňuje minimální požadavky.
+Stáhněte si MediaWiki (přímý odkaz na aktuální verzi) a rozbalte archiv do adresáře na vašem serveru, který je přístupný z webu.
+Nasměrujte svůj prohlížeč na adresář, kam jste rozbalili MediaWiki (např. http://[doména]/mediawiki/index.php). Pokud instalujete na lokální stroj, nahraďte [doména] za localhost. Pokud instalujete na vzdálený server, nahraďte [doména] za doménové jméno vašeho serveru (např. www.example.com).
+Pro dokončení procesu následujte pokyny na obrazovce.
+Tyto instrukce jsou úmyslně velmi stručné. Může se pokazit spousta věcí, takže v případě pochyb vám doporučujeme přečíst si podrobnější pokyny níže!
+
+Podrobná instalační příručka
+Před instalací
+Přečtěte si, co je MediaWiki
+Projděte si vlastnosti MediaWiki
+Instalační požadavky – Před pokračováním si je zkontrolujte!
+
+Instalace MediaWiki
+Konfigurace MediaWiki
+Prvotní konfigurace (pomocí konfiguračního skriptu)
+Další konfigurace
+Instalace rozšíření
+
+Alternativy k ruční instalaci
+Někteří uživatelé možná budou považovat za jednodušší využít automatizované instalační balíčky nebo některý hosting se zjednodušenou instalací a wikifarmy.
+Pokud si MediaWiki instalujete jen kvůli jejímu vývoji či testování, zvažte použití mediawiki-vagrant. Musíte k tomu mít počítač s (povolenou) podporou hardwarové virtualizace. Většina moderních počítačů ji má, můžete si to zkontrolovat v BIOSu.
+Přílohy
+Pokročilá užití
+Následující stránky popisují instalaci/konfiguraci MediaWiki pro jiné, méně běžné účely.
+Instalace z Gitu
+Instalace MediaWiki na přenosný disk
+Pokročilá konfigurace
+Následující stránky popisují některé pokročilejší konfigurační možnosti:
+Pokročilá konfigurace
+Správa wiki
+Nápověda k wiki
+Následující stránka popisuje, jak dostat kopii nápovědy k MediaWiki na vaši vlastní wiki:
+Kopírování stránek nápovědy
+Pomoc s instalací
+FAQ: FAQ#Installation and configuration
+IRC (#mediawiki)
+mediawiki-l je e-mailová konference s velkým provozem, na které můžete požádat o pomoc
+MediaWiki Users je diskusní fórum vzájemné podpory podpory uživatelů MediaWiki
+Instrukce pro konkrétní systémy
+Následující stránky poskytují podrobnější instalační pokyny pro konkrétní systémy. Avšak obecný návod na Special:MyLanguage/Manual:Installing MediaWiki je typicky aktuálnější a podrobnější než dokumentace ke specifickým systémům, takže vám doporučujeme nejprve prostudovat hlavní pokyny, než budete číst dokumentaci pro specifické systémy.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Návod pro nováčky
+Jednoduchý návod
+Jednoduchá instalace Apache na Windows
+
+Poznámky
+
+MediaWiki se dodává s instalačním skriptem, který umožňuje konfiguraci přes web.
+MediaWiki dokáže sdílet databázi s jinou webovou aplikací, např. phpBB apod.
+Pro úpravy softwaru musíte ovládat PHP.
+PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 (download). Note that this version is no longer supported.
+Počínaje od MediaWiki 1.19 je vyžadováno MySQL verze 5 – pokud používáte starší verzi MySQL a nejste schopni přejít na novější, použijte MediaWiki 1.18.5 (download).. Uvědomte si však, že tato verze už není podporována.
+Někteří uživatelé si instalují další software pro pomoc se správou databázového serveru, jako jsou phpMyAdmin (MySQL) nebo phpPgAdmin (Postgres).
+
+Související stránky
+Automatizované instalační balíčky s MediaWiki
+Služby nabízející hostování MediaWiki a wikifarmy
+Před instalací
+Upgrade
+Odinstalace
+FAQ

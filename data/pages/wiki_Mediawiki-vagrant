@@ -1,0 +1,129 @@
+MediaWiki-Vagrant
+MediaWiki-Vagrant is a portable MediaWiki development environment. It consists of a set of configuration scripts for Vagrant and VirtualBox that automate the creation of a virtual machine that runs MediaWiki.
+The virtual machine that MediaWiki-Vagrant creates makes it easy to learn about, modify, and improve MediaWiki's code: useful debugging information is displayed by default, and various developer tools are set up specifically for inspecting and interacting with MediaWiki code, including a powerful debugger and an interactive interpreter. Best of all, because the configuration is automated and contained in a virtual environment, mistakes are easy to undo.
+
+
+
+Quick start
+Get Git
+Get the latest VirtualBox
+Get the latest Vagrant
+Get the code and create your machine:
+$ git clone https://gerrit.wikimedia.org/r/mediawiki/vagrant
+$ cd vagrant
+$ vagrant up
+
+Running Windows? Get Git and run these commands in a Git Bash shell.
+
+When Vagrant is done configuring your machine, browse to http://127.0.0.1:8080/ to find your MediaWiki instance. The admin password is vagrant.
+Troubleshooting startup
+Be sure to use the most recent versions of VirtualBox and Vagrant if you get errors with vagrant up. Linux repositories may provide older versions that are not compatible with MediaWiki-Vagrant.
+You might want to compare the output of the initial run of vagrant up in your terminal with this sample. The initial setup may take a long time; if it seems to hang somewhere but there are no errors, just give it a while.
+If you get "guest machine entered an invalid state" - "poweroff", make sure you enable Hardware Virtualization Technology (VT-x) in BIOS.
+Basic usage
+
+
+
+
+Screenshot
+
+
+The vagrant command-line tool on the host machine provides several subcommands for controlling your virtual machine. You've already used one: vagrant up, which turns on the virtual machine. Like most vagrant subcommands, you need to run it from the MediaWiki-Vagrant directory or one of its children. When you first run it, Vagrant will fetch a system image and the requisite software for running MediaWiki. This takes around 10-15 minutes on a broadband connection, but it only needs to happen once. When you run vagrant up in the future, it'll simply boot up the machine.
+vagrant ssh starts an interactive login shell on the virtual machine. It'll log you in as the user vagrant; root access is available to via sudo, which is passwordless. Because the virtual machine is entirely sandboxed within your computer, it is configured for convenience, not security. As a rule, whenever you encounter a password prompt, the password is vagrant.
+When you log in, you should see a colorful MediaWiki banner, and you may be prompted to update the version of VirtualBox Guest Additions. Updating will improve the performance and reliability of your machine, so go ahead and do it, by running update-guest-additions.
+The command phpsh will start an interactive PHP interpreter with MediaWiki's codebase already loaded. You can type in some code, hit 'enter', and the code will be evaluated immediately. If you start a line with '=', its computed value will be pretty-printed.
+The /vagrant folder corresponds to the MediaWiki-Vagrant folder on your host machine, and its contents is shared. MediaWiki's code is installed in /vagrant/mediawiki. This allows you to use your normal editor environment on your host machine to edit the MediaWiki code that runs on your virtual machine.
+Log out of your virtual machine by typing logout or by pressing CTRL + D. Now that you're back in a standard command prompt, you can run vagrant halt to shut down the virtual machine and vagrant up to bring it back up. vagrant destroy will delete the virtual machine's files; this command is useful if you want to return your instance to a pristine state. (You'll need to follow up with vagrant up to provision a fresh instance.)
+Using roles
+MediaWiki-Vagrant sets up a basic MediaWiki instance by default, but it also knows how to configure a range of complementary software, including some popular MediaWiki extensions and their dependencies. These optional software stacks are collectively known as 'roles', and MediaWiki-Vagrant offers an easy and powerful command-line interface for managing them.
+
+$ vagrant list-roles# Display a list of available roles.
+
+
+$ vagrant enable-role role# Turn on role for this machine.
+
+
+$ vagrant disable-role role# Turn off role for this machine.
+
+Watch a short screencast demonstrating how to use roles. /Roles has more information about some roles. If you add many roles, you may need to increase memory available to the Vagrant VM. In particular, setting up the "browsertests" role involves compiling the ffi ruby Gem which is a memory-hungry task; if it fails try freeing some memory in the VM or increasing its memory allocation (bug 53864).
+See the section Authoring roles below if you're interested in adding roles to MediaWiki-Vagrant.
+Debugging
+Debugging in PHP is different from other client-side debugging: Your IDE listens for incoming connections, and when you access the server with a browser, a special header instructs PHP to connect to your IDE.
+For Chrome users, you should get XDebug Helper, and optionally Clear Cache, HTTP headers, and Mod Headers. Configure clear cache to automatically reload after clearing, and set up keyboard shortcuts (e.g. Ctrl+R for clear&reload, Ctrl+Shift+D to switch XDebugger on/off)
+Enable debug role with vagrant enable-role remote_debug followed by vagrant provision.
+Install and configure an xdebug-compatible IDE on your machine (Eclipse, PhpStorm, etc)
+In IDE, start listening for the incomming debug connection
+In IDE, set break point at the spot that interests you
+Enable XDebug in the browser and navigate to your vagrant installation ( http://127.0.0.1:8080/... )
+How do I...?
+Edit LocalSettings.php?
+First, check that there is no role (vagrant list-roles) that already does what you need. If not, create a file in settings.d/ directory. See README and 00-debug.php-example file.
+Update MediaWiki code?
+The easiest is to use vagrant git-update from the host, or use regular git fetch, pull, etc. commands in vagrant/mediawiki and vagrant/mediawiki/extensions/SomeExtension directories. You can run these commands on the virtual machine, but the file access will be faster on the host machine. MediaWiki-Vagrant pulls code from git master when you initially set up and/or add a role, but doesn't automatically update code after that.
+Update system software?
+vagrant provision does not update system packages in the VM. When you connect with vagrant ssh the login message will inform youNN packages can be updated.NN updates are security updates.
+In vagrant ssh:
+to update all packages, enter sudo apt-get update && apt-get upgrade
+for "automatic installation of security (and other) upgrades", similar to labs instances, enter sudo unattended-upgrade
+to update to the same packages that are on production WMF servers... TODO
+
+Add custom Puppet code?
+Place your custom Puppet manifests in puppet/manifests/manifests.d. Puppet will automatically apply any .pp files that it finds in that directory.
+Customize Vagrantfile, but still be able to pull changes from upstream?
+Rather than override the values defined in Vagrantfile, simply create a file called Vagrantfile-extra.rb and place it in the same folder as Vagrantfile, and it will be automatically loaded. In case of conflict, values in the 'extra' file will supersede values in this file.
+Run GUI applications on the virtual machine?
+If you have an X server installed, SSH into the virtual machine using ssh -- -X to enable X forwarding. (Mac users should update to the latest version of XQuartz.)
+As an alternative, you can run the virtual machine in GUI mode, which allows you to interact with the VM as though it had a physical display. To enable GUI mode, create a file called Vagrantfile-extra.rb in the root repository folder, with this as its content:
+
+
+
+
+Vagrant.configure('2') do |config|
+    config.vm.provider :virtualbox do |vb|
+        vb.gui = true
+    end
+end
+
+
+
+Save the file and run vagrant halt followed by vagrant up. The virtual machine's display will appear in a window on your desktop.
+Adjust the resources allocated to the VM?
+If you'd like to allocate more or less CPU / RAM to the VM, create a Vagrantfile-extra.rb, patterned after this example:
+
+
+
+
+Vagrant.configure('2') do |config|
+    config.vm.provider :virtualbox do |vb|
+        # See http://www.virtualbox.org/manual/ch08.html for additional options.
+        vb.customize ['modifyvm', :id, '--memory', '768']
+        vb.customize ['modifyvm', :id, '--cpus', '2']
+    end
+end
+
+
+
+Advanced usage
+As an alternative to managing all MediaWiki settings in a single, large LocalSettings.php file, consider grouping your configurations by component or theme, and creating a separate PHP file in settings.d/ for each group. This makes it quite easy to keep your settings organized, to temporarily disable specific configurations, and to share settings with others.
+MediaWiki will automatically load any PHP files in settings.d/ in lexical order. You can control the order in which your configurations are set by adopting the habit of adding a two-digit prefix to each file name.
+For example:
+
+    settings.d/
+    ├── 10-RunFirst.php
+    ├── 20-SomeExtension.php
+    └── 99-RunLast.php
+
+Note that the settings files in settings.d/puppet-managed are automatically created and destroyed in response to your Puppet configuration. Don't put your custom settings there, because Puppet will erase or override them. Keep your custom settings files in settings.d/ instead.
+Authoring roles
+MediaWiki-Vagrant uses Puppet to configure MediaWiki on the virtual machine. Puppet is a configuration management tool that works by providing a domain-specific language for expressing software configurations in a declarative fashion. Files containing Puppet code are called 'manifests'. When Puppet runs, it interprets the manifests you feed it and configures the machine accordingly. MediaWiki-Vagrant's Puppet code is located in the puppet/ subdirectory.
+MediaWiki-Vagrant's Puppet codebase contains abstractions that make it easy to automate the configuration of MediaWiki extensions and related software. If you are a developer working on a software project that relates to MediaWiki, you are encouraged to submit a patch with a Puppet role for your project. Adding a Vagrant role for your project makes it easy for other developers to check out your work. Using a managed virtual machine as a development sandbox for your project reduces the chance of "works-on-my-machine" errors that often result from geographically remote developers working in incompatible environments.
+The virtual machine provisioned by MediaWiki-Vagrant resembles Wikimedia's production environment in key respects, and it uses the same tool—Puppet—that Wikimedia's technical operations team uses to manage production servers and Wikimedia Labs instances. This can help you write software that will meet the technical requirements for deployment on Wikimedia's production cluster.
+The easiest way to get started with custom roles is to look at how existing roles are implemented in puppet/manifests/roles.pp. These roles depend on Puppet modules in puppet/modules. The Puppet code is generally well-documented and contains examples that demonstrate its proper usage.
+Setting up labs instances
+You can use wikitech:Labsvagrant to configure Wikimedia Labs machines with a given MediaWiki-Vagrant role.
+Bugs
+If you spot a bug in MediaWiki-Vagrant, please report it. First, make sure the bug is not a known Vagrant or VirtualBox bug by searching the Vagrant issue tracker on GitHub and the VirtualBox Bugtracker. If it is not, go ahead and submit the bug to Wikimedia Bugzilla. Clearly describe the issue and include steps to reproduce, whenever possible.
+Links
+Project page on Ohloh
+MediaWiki-Vagrant on GitHub
+wikitech:Labsvagrant configure Wikimedia Labs instances based on MediaWiki-Vagrant roles

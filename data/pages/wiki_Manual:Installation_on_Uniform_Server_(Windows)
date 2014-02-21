@@ -1,0 +1,532 @@
+Manual:Installation on Uniform Server (Windows)
+
+
+IMPORTANT: The content of this page is outdated. If you have checked or updated this page and found the content to be suitable, please remove this notice.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+Uniform Server is one of several WAMP systems. It allows a wiki and required web and database servers to be installed, configured and running under various versions of Windows in 10 minutes (with practice and on a good day) after downloading 2 files totaling 7MB in size and following the procedure below.
+Because the software and databases use less than 21MB of storage, it can allow you to set up MediaWiki as a Wiki on a stick. For an alternate, possibly simpler, way to do this on a Windows system, see Manual:Installing on WOS Portable (Windows).
+
+
+
+Procedure
+This procedure installs the main components needed to run MediaWiki on Windows. See #Requirements before starting, and if you have problems see #Troubleshooting & support.
+Download
+1.
+Uniform Server
+v3.5
+ca. 7 Mb (compressed)
+Download
+2.
+MediaWiki
+currently 1.22.2
+ca. 4 Mb (compressed)
+Download
+Alternate Approach
+You can use WOS Portable from CH Software instead of Uniform Server. WOS Portable does not need an extra drive letter and it is ready to run instantly after unzipping. It is published under the GNU GPL. You can get it from MoWeS Mixer - CH Software (See Manual:Wiki on a stick with WOS (Webserver on Stick) for instructions.)
+Install the servers
+Run UniServer3_5.exe. This is a self-extracting compressed file that contains the Apache and MySQL server files for the wiki. During the extraction you will be asked for a destination folder. Click the browse button and find the storage device you want to use for the wiki.
+The extraction creates a folder called "Uniform Server". This folder contains a sub-folder called "udrive", which is the top of the folder tree that will become a drive letter. You can rename "Uniform Server" if the name offends you. Do not rename "udrive" unless you want to spend a lot of time changing the references to that directory.
+Edit two text files to configure the servers
+Edit the config file for the Apache server by following these steps:
+If it is not already there, create a sub-folder under udrive called "tmp".
+Open the file udrive\usr\local\Apache2\conf\httpd.conf* in a text editor (such as WordPad).
+Search for "ThreadsPerChild" and change 250 to 16. The lower number of threads is better for testing.
+Search for "Listen 80" and change it to "Listen 127.0.0.1:80" - this restricts access to the local computer. You will also see the local computer called the "localhost" in some of these instructions.
+Save and close this file
+*Note: In previous versions of Uniform Server the udrive folder was named diskw.
+Edit the config file for the MySQL server by following these steps:
+Open a text editor, such as Notepad, and set the file type to show all files. Open udrive\usr\local\mysql\bin\my-small.cnf. If you try to find the file the usual way to double-click and open it, Windows Explorer shows this file as a shortcut named SpeedDial and will not open it in the text editor. If you have problems opening this file, try dragging the my-small icon into an open text editor window.
+Search for "[mysqld]". Insert one line under "[mysqld]" and type this text onto that line: bind-address=127.0.0.1
+Save and close this file
+Install the MediaWiki software
+Mediawiki is a compressed file that can be uncompressed by most "Zip" utilities. One free Windows tool to uncompress zip files is 7-zip. There exists a command line version for linux called p7zip.
+If you use WinZip, you must turn off the "TAR file smart CR/LF conversion" (look under Options|Configuration|Miscellaneous), to prevent corruption of the configuration file. Also be sure that the "Use Folder Names" option is selected.
+Depending on the decompression tool, you may need to do a second decompression for the .tar file that is inside the .gz file. Look in the folder after the first decompression: if all you see is the .tar file, uncompress it.
+Uncompress the MediaWiki zip file into the sub-folder udrive\www.
+Unpacking creates a sub-folder called "mediawiki-x.y.z", where "x.y.z" is the version number of the wiki software. This folder will contain your wiki. The folder name is part of the URL for the wiki.
+These instructions use the folder name "wi". It is easier to follow the instructions if you rename "mediawiki-x.y.z" to "wi" until you have the wiki working. Then you can rename the folder to whatever you want.
+Configure the wiki
+The installation at this point is 39 MB. How do you reduce the size of the installation? One option is to check the MediaWiki languages subdirectory, which is about 4.25Mb. You can get it down to 150Kb by deleting all of the Language??.php and Messages??.php files you're not using (but don't delete LanguageUtf8.php). This still only gets the installation down to 35 MB. It is not explained sufficiently in the article how to get it down to the 21 MB.
+Assigning a drive letter
+Windows uses drive letters, not names. Most systems will have a C: drive, and may have a D: and E: or even more. Any hard drives, CD/DVD drives and USB storage devices will have their drive letter automatically assigned. The Wiki "server-start.bat" file sends a command to Windows that makes Windows act as if the Wiki directories on the memory stick are on a hard drive of their own.
+These instructions use "w" as the drive letter. To make sure this is a valid drive letter, look at "My Computer" and see which letters have been assigned to local and network hard drives. In the example below, a typical Windows installation, drives C, D, and E are assigned.
+
+NB: If the drive letter is changed from "w", the Uniform Server administration configuration file (diskw/home/admin/www/includes/config.inc.php) must also be updated, or the Admin Panel won't be accessible. Search for "$drive = "W:";" and specify the correct drive letter.
+Editing the Uniform Server start-up script (optional)
+The script used to start the Uniform Server has the following syntax:
+Server_Start.bat {drive letter} {mysql} {console}
+Comments:
+If no drive letter is specified, "w" is used by default.
+Specifying "mysql" as the second argument will make MySQL start automatically.
+Specifying "console" as the third argument will leave the console window open after the servers have been started.
+In order to remove the need for supplying command line arguments to the start-up script, it can be modified as follows:
+Open Server_Start.bat in a text editor
+Find this line: IF "%Disk%"=="" set Disk=w
+Replace Disk=w with Disk=k to set "k" as the default drive.
+Creating shortcuts for starting and stopping the servers
+Right-click on Server_Start.bat and drag it to your desktop. Select "Create Shortcuts Here". Label the shortcut "Start Wiki Servers"
+Right-click on stop.bat and drag it to your desktop. Select "Create Shortcuts Here". Label the shortcut "Stop Wiki Servers"
+Starting the Wiki Servers
+
+Doubleclick the "Start Wiki Servers" shortcut icon to start the servers.
+
+
+This starts the servers' admin page in your web browser. You may get an error the first time due to timing. Click OK on any error messages. A refresh should confirm the server is running.
+If you see a blue screen that resembles this, the Apache server is working.
+Successful server start.
+
+Click "Run MySQL" on the left side of the Uniform Server window
+Configuring the Wiki Variables
+
+With your browser, open this file by typing or pasting this URL: http://localhost/wi/mw-config/index.php
+
+
+Fill in the variables on that page.
+
+
+
+The warning about register_globals can be ignored. You will fix it in the next step.
+
+
+If you use lower case for the first letter of the site name, it will be capitalised on most of the wiki pages.
+
+
+Leave "MySQL server" as localhost
+
+
+Set "DB root password" to root (Yes, it's BAD from a security standpoint, but it won't work with a proper password) the name has also to be set to root
+
+
+
+
+Click the Install button at the bottom of the page.
+This writes the file LocalSettings.php and creates the wikidb database, with one initial user (WikiSysop). An empty page is displayed.
+Problems probably MySQL is not running. run \Uniform Server\diskw\usr\local\mysql\mysqlrun.bat
+Something wrong here - error message MySQL server localhost "Couldn't connect to database". on the apachel panel page (localhost\apanel) click Start MySQL on the left hand of "Uniform Server" table of contents.
+
+
+Configuring PHP Variables
+As instructed in the web page, move the file named LocalSettings.php from diskw\www\wi\config\ up one level to diskw\www\wi\
+Optional wiki features
+These can also be configured later.
+Before editing configuration files:
+Stop the servers: in the Uniserver folder, click stop.bat
+Make backup copies of the configuration files
+Uploads
+Uploads are disabled by default. To enable them:
+Open diskw\www\wi\LocalSettings.php in any text editor (e.g. notepad)
+Find "$wgEnableUploads", and remove the "# " in front of it (you may need to change "false" to "true")
+Save and close the file
+Uploads will then go into the directory diskw\www\wi\images by default.
+Problems: Try uncommenting $wgDisableUploads (Line 66)
+Email
+If you do not have a SMTP server running on the local computer, pages that generate email will display an error. To use another SMTP server:
+Get the name or IP address of the SMTP server on your LAN or at your ISP
+Open diskw\usr\local\Php\php.ini in any text editor (e.g. notepad)
+Change the line "SMTP = localhost" to use the actual SMTP server instead of "localhost".
+Optionally change the line "sendmail_from = me@localhost.com" to use an actual email address instead of "me@localhost.com" for receiving bounces from inter-user email
+Save and close the file
+Default skin
+To set a different default skin:
+Open diskw\www\wi\LocalSettings.php in any text editor (e.g. notepad)
+Find "$wgDefaultSkin", and remove the "# " in front of it, and change "monobook" to "standard" (or "cologneblue" or "nostalgia") — see #Software limitations
+Save and close the file
+Other default user settings
+Other default user settings can be changed in:
+diskw\www\wi\LocalSettings.php
+if using English and you wish to allow users to choose their date preferences, add the line $wgUseDynamicDates = true;
+
+diskw\www\wi\languages\Language.php
+search for the array $wgDefaultUserOptionsEn which can be modified (for other option names that can be added to the array, see the array $wgUserTogglesEn)
+
+Performance
+Performance can be improved and memory stick life extended by adding some of these lines to diskw\www\wi\LocalSettings.php:
+$wgDisableCounters = true; # prevents page statistics being stored and displayed
+$wgDisableTextSearch = true; # prevents text search
+$wgDisableSearchUpdate = true; # prevents search tables being updated, requiring them to be rebuilt if you ever re-enable text search
+If a hard disk drive is being used for the storage instead of a memory stick, also add:
+$wgEnableParserCache = true; # uses php zlib
+Tidy up
+Start the servers again: start.bat w mysql
+(Everything should now be working, but the following steps can be done immediately.)
+
+In your webbrowser, open localhost/wi/index.php?title=Special:Userlogin [1]
+Login as WikiSysop
+
+In your webbrowser, open localhost/wi/index.php?title=MediaWiki:Sitesubtitle&action=edit [2]
+Edit the sub-title (keep it short)
+Press the "Save" button. (The sub-title is shown in the Cologne Blue skin, but not in the Classic or Nostalgia skins.)
+
+In your webbrowser, open localhost/wi/index.php?title=Help:Editing&action=edit [3]
+Type (or copy & paste): #REDIRECT [[MetaWikiPedia:Help:Editing]]
+Press the "Save" button
+
+In your webbrowser, open localhost/wi/index.php?title=Help:Contents&action=edit [4]
+Type (or copy & paste): #REDIRECT [[MetaWikiPedia:Help:Contents]]
+Press the "Save" button
+
+If you didn't choose GFDL as the license during wiki configuration, open localhost/wi/index.php?title=MediaWiki:Copyrightwarning&action=edit [5]
+Edit the page to match the license
+Press the "Save" button
+
+Other pages to edit soon
+These empty pages are already linked to from other pages in various skins, so you should edit them soon.
+Pages in the default namespace:
+localhost/wi/index.php?title=Main_Page&action=edit [6]
+localhost/wi/index.php?title=Current_events&action=edit [7]
+
+Pages in your site's namespace (these are listed in Special:Allmessages where you see {{ns:4}}: ):
+localhost/wi/index.php?title=sitename:About&action=edit
+localhost/wi/index.php?title=sitename:Administrators&action=edit (linked from Special:Statistics)
+localhost/wi/index.php?title=sitename:Bug_reports&action=edit
+localhost/wi/index.php?title=sitename:Community_Portal&action=edit
+localhost/wi/index.php?title=sitename:Copyrights&action=edit
+localhost/wi/index.php?title=sitename:FAQ&action=edit
+localhost/wi/index.php?title=sitename:General_disclaimer&action=edit
+localhost/wi/index.php?title=sitename:Links_to_disambiguating_pages&action=edit
+localhost/wi/index.php?title=sitename:Site_support&action=edit
+localhost/wi/index.php?title=sitename:User_preferences_help&action=edit (linked from Special:Preferences) — could redirect to m:Help:Preferences
+
+You may also want to add a "sitename:Sandbox" to assist new users.
+Components
+See also: #Licensing
+Uniform Server v3.2a
+Uniform Server v3.2a is a quick, easy and small installation containing the servers and platform software for MediaWiki. It includes:
+web-server Apache 2 (v2.0.54)
+scripting engine PHP 5 (v5.0.4) with libraries (inc. zlib, libxml2, iconv) and extensions (sockets, mysql, GD2)
+database administration phpMyAdmin (v2.6.3-rc1)
+databaser server MySQL 4 (v4.1.12a)
+command scripting ActiveState Perl 5 (v5.8.7.813)
+Uniform Server v3.3
+Released 2005-12-26, Uniform Server v3.3 "includes the latest versions of Apache2, Perl5, PHP5, MySQL5, phpMyAdmin and ..." and for protected servers (schools, work, ETC>) this download will not work.
+MediaWiki v1.3.7
+MediaWiki v1.3.7 is the same wiki software seen here, and consists of PHP web scripts and libraries (including PHPTAL "non-PEAR-users" v0.7.0 and optional memcached v1.0.10 support), and a database schema, data, and interfaces.
+Requirements
+These are the requirements and related work-arounds for this procedure.
+Windows
+This procedure may work on any 32-bit/64-bit Windows, but initial testing of this procedure has only been done on Windows 2000 SP4. This procedure has also been tested with success on both Windows XP (Professional Edition) and Windows 98. Testing on Windows XP pro 64-bit edition shows no problems.
+Exceptions and any work-arounds are:
+Windows 95 
+Ensure that the latest TCP/IP update (winsock2) has been applied.
+If you are using USB removable media, Windows 95 needs to be the OSR2 edition, and may need extra drivers.
+Windows 98 
+If you are using USB removable media, extra media drivers may be needed.
+You may need to comment out the eighth line of the START.BAT file to allow this script to work, especially if you have any instance of the Apache web server installed anywhere on your hard drive(s).
+Windows NT 4 
+Possible server-control problem [8].
+For non-Windows operating systems, see Manual:Installation.
+Disk space
+7MB for the downloads
+21MB for the initial installation and configuration
+Additional space as the wiki database grows with edits and uploads
+Drive letter
+This procedure assumes that the drive letter w: is unused. Otherwise use a different unused letter where you see the italicised letter w.
+HTTP TCP port
+This procedure assume that the HTTP TCP port (80) is unused. To check, run: netstat.exe -p TCP -n -a|find.exe ":80 "|find.exe "LISTEN"
+If the output shows 0.0.0.0:80 or 127.0.0.1:80, you need to either stop the current web server or use a different TCP port in this procedure. See #How to access the wiki from other computers.
+No other Apache.exe
+If another Apache is installed and running on the same computer, with the exact name "Apache.exe", then:
+Rename Apache.exe in the folder diskw\usr\local\Apache2\bin\ to ApacheW.exe
+Change "Apache.exe" to "ApacheW.exe" inside these files: start.bat (2×), stop.bat (1×), diskw\home\admin\CGI\shutdown.cgi (1×; old version) , diskw\home\admin\www\cgi-bin\{language code}\sserver.cgi (1×; new version)
+Troubleshooting & support
+Troubleshooting & support resources
+These log files may contain clues if errors seem to be happening:
+diskw\usr\local\Apache2\logs\error.log
+diskw\usr\local\mysql\data\%COMPUTERNAME%.err
+diskw\usr\local\Apache2\logs\access.log
+
+PHP can be configured to log errors to the Application event log (but not under Windows 95). Edit diskw\usr\local\Phpp\php.ini:
+set "log_errors = On"
+set "error_log = syslog"
+to include "notice"-level logging, set "error_reporting = E_ALL"
+
+MediaWiki can be configured to log errors, by adding lines to diskw\www\wi\LocalSettings.php.
+$wgDBerrorLog = '...'; ...
+
+MediaWiki can be configured to profile/trace, by adding lines to diskw\www\wi\LocalSettings.php.
+$wgProfiling = true;
+$wgDebugLogFile = '/tmp/mediawiki-profile.log';
+
+There is a formal user guide
+There are MediaWiki mailing lists with archives
+irc.freenode.net has an IRC channel called #mediawiki and #uniserver.
+Skype will keep Wiki on a stick from starting! Just shutdown Skype.
+Uniform Server's Support Forum
+How to throw away the wiki and start again
+In your webbrowser, open localhost/a/phpMyAdmin-2.6.3-rc1/db_details_structure.php?lang=en-iso-8859-1&server=1&db=wikidb [9]
+Click the "Drop" tab to remove the selected wikidb database
+Click the "<= Uniform Server" link
+Stop the servers by clicking the "Shutdown the server" link
+Delete LocalSettings.php from the diskw\www\wi sub-folder
+Follow the instructions again from #Configure the wiki
+How to throw it all away and start again
+Stop the servers using localhost/a/stop.html [10]
+Delete the top folder
+Follow the instructions again from #Install UniformServer
+Limitations
+Software limitations
+No monobook skin, as MediaWiki automatically disables it due to its included PHPTAL library being incompatible with Uniform Server's included PHP v5 PHPTal is no longer used.
+No maths markup, due to lack of texvc, LaTeX, dvips, and ImageMagick software
+Avoid texvc. Look at the alternative method of using math without texvc. You can use LaTeX, dvips from a Miktex distribution (be sure to copy the dlls into the folder /usr/bin)
+Image resizing may not support certain formats, due to lack of ImageMagick software (but PNG, GIF, JPG, XBM and WBMP formats should be okay).
+Image resizing may result in ugliness, due to lack of ImageMagick software
+Download ImageMagick from http://www.imagemagick.org/download/binaries/ImageMagick-6.2.8-0-Q16-windows-dll.exe and install it. From C:\Program Files\ImageMagick-6.2.8-Q16\ copy the following files to your /usr/bin (i.e. diskw/usr/bin/). Also set the correct path to convert.exe in LocalSettings.php
+
+  CORE_RL_Magick++_.dll
+  CORE_RL_bzlib_.dll
+  CORE_RL_jbig_.dll
+  CORE_RL_jpeg_.dll 
+  CORE_RL_lcms_.dll
+  CORE_RL_libxml_.dll
+  CORE_RL_magick_.dll
+  CORE_RL_png_.dll
+  CORE_RL_tiff_.dll
+  CORE_RL_ttf_.dll
+  CORE_RL_wand_.dll
+  CORE_RL_xlib_.dll
+  CORE_RL_zlib_.dll
+  X11.dll
+  convert.exe
+
+Edit conflicts do not automatically merge, due to lack of diff3 software (available from inside [11] )
+The diskw\tmp folder may gain small "sess_*" files, which can be deleted when the servers are stopped
+Procedure limitations
+The servers only run while you are logged-in
+Other limitations
+Running the wiki from portable writable media, while convenient, is slow.
+Perhaps this limitation can be overcome by running a copy of w:Wikiwyg.org instead.
+
+Security considerations
+The procedure only allows access to the web-server from the local machine. Once this changes, other aspects need to be considered for security.
+Wiki security model
+... overview & links ...
+Types of users
+Anonymous 
+...
+Registered 
+... The initial WikiSysop user has the user rights sysop and bureaucrat. For more information on user rights, see Manual:User rights.
+Wiki access
+Connecting to the wiki 
+...
+Reading the wiki 
+...
+Becoming a registered user 
+...
+Editing the wiki 
+...
+Special privileges (e.g. deletion) 
+...
+Wiki access models
+Combining the types of user and types of access gives a security policy or access model. Common examples are:
+"Anything goes" e.g. most sites operated by Wikimedia
+Permissions:
+Read
+Edit
+Delete
+Register
+Ban addresses
+Ban users
+Grant sysop-right
+Anonymous users:
+All
+Yes
+Never
+Yes
+Never
+Never
+Never
+Registered users:
+All
+Yes
+Sysop right:
+Always
+Yes
+Yes
+Yes
+Bureaucrat right:
+Always
+Public with restricted editors
+Permissions:
+Read
+Edit
+Delete
+Register
+Ban addresses
+Ban users
+Grant sysop-right
+Anonymous users:
+All
+No
+Never
+No
+Never
+Never
+Never
+Registered users:
+All
+Yes
+Sysop right:
+Always
+Yes
+Yes
+Yes
+Bureaucrat right:
+Always
+Private
+Permissions:
+Read
+Edit
+Delete
+Register
+Ban addresses
+Ban users
+Grant sysop-right
+Anonymous users:
+Explanatory
+pages only
+No
+Never
+No
+Never
+Never
+Never
+Registered users:
+All
+Yes
+Sysop right:
+Always
+Yes
+Yes
+Yes
+Bureaucrat right:
+Always
+Privacy
+Internet 
+... server certificates, caches ...
+Web browser 
+... cookies, cache, history, auto-completion, passwords ...
+Servers
+Uniform Server, like all WAMP packages, gets fixed slowly compared to its individual components. This makes these packages a security risk. Do not even think about making these servers accessible from the Internet without extra front-end authentication (e.g. by using a VPN).
+... httpd IP address and port, mysql IP address ...
+See also: MySQL Manual: 5.4 General Security Issues
+General
+... mention firewalls/NAT/packet-filters, passwords, config folder, test database ...
+How to access the wiki from other computers
+edit these files:
+UniServer3_2a\diskw\usr\local\Apache2\conf\httpd.conf:
+Listen on the appropriate interfaces:
+to accept connections from all networks:
+
+Listen 80
+
+or to accept connections from localhost and for example 192.168.100.0:
+
+Listen 127.0.0.1:80
+Listen 192.168.100.0:80
+
+to make self references to your apache work you will have to edit the ServerName entry: put your DNS name there or your IP
+
+ServerName 192.168.11.100:80
+
+Give the appropriate rights in your .htaccess files:
+UniServer3_2a\diskw\www\.htaccess
+
+Order Deny,Allow
+Deny from all
+Allow from 127.0.0.1
+Allow from 192.168.11.0
+
+if there is already a webserver active on port 80 you can switch to another port, for example 81. Then exchange :80 for :81 in Listen and ServerName. additionally you will have to edit the setup of phpmyadmin:
+UniServer3_2a\diskw\home\admin\WWW\phpMyAdmin-2.6.3-rc1\config.inc.php
+
+$cfg['PmaAbsoluteUri'] = 'http://localhost:81/a/phpMyAdmin-2.6.3-rc1/'; 
+
+If you want to have access to phpmyadmin from the network you will also have to give access to this directory in the corosponding .htacces file:
+UniServer3_2a\diskw\home\admin\WWW\.htaccess
+
+Order Deny,Allow
+Deny from all
+Allow from 127.0.0.1
+Allow from 192.168.11.0
+
+Multiple wikis
+Since the mysql-database for the wiki on a stick wiki runs locally, there is no limit on the number of databases which can be stored. To have several independent wikis on the same apache and mysql, just put them in distinct directories below UniServer3_2a\diskw\www and let each run it's install.php routine. Give different database names in the install.php routine. you can share the mysql-wiki user amongst different wikis, but it might be good to give each wiki its own mysql-user.
+directory layout (example)
+
+UniServer3_2a\diskw\www\TestWiki
+UniServer3_2a\diskw\www\Wikim\mediawiki-1.4rc1 (for testing)
+UniServer3_2a\diskw\www\Wikim\Wiki (stable for production)
+
+Installing multiple wikis on a single server, using the same database
+Here is how to install the Mediawiki software just once, but use it to power more than one wiki, keeping the tables for all the wikis in a single database-- including step-by-step instructions for a Unix-type of installation. This solution should work for most shared-hosting servers, too. Level of difficulty: Novice. See the instructions on this site.
+Internationalisation
+... phpAdmin, multiple wikis ...
+Licensing
+Despite the variety of licenses, all components can be copied, modified, installed and run for free for private, public or corporate use. Source code is freely available for all binary components. Restrictions may apply if you wish to claim ownership of, sell, or relicense the components. Read the licenses for the actual terms.
+Uniform Server v3.2a: BSD-revised-style license
+ActiveState Perl 5.8.7.813: ActiveState Community License
+Perl 5: choose one of the Artistic License or the GNU General Public License (GPL v2)
+
+Apache v2.0.54: Apache License v2.0.
+MySQL 4.1.12a: GPL v2
+PHP 5 v5.0.4: PHP License v3.0
+Zend Engine 2: Zend Engine License v2.00
+
+phpAdmin v2.6.3-rc1: GPL v2
+FPDF v1.51: "freeware" (public domain)
+PHPFM v0.2.3 (plugin): GPL v2
+go-pear v1.57 (plugin): choose one version of these PHP Licenses: v2.0 or v3.0
+blowfish (library): GNU Library General Public License
+profiling (library): Mozilla Public License (MPL) (the version does not seem to be specified, and could be v1.0 or v1.1)
+
+
+MediaWiki v1.3.7: GPL v2
+PHPTAL-NP-0.7.0: GNU Lesser General Public License v2.1 (GLGPL or LGPL)
+pear v1.1: PHP License v2.0
+
+Also, some documentation files may be covered by the GNU Free Documentation License (GFDL) v1.1 or v1.2. Some software library files may be covered by a GLPL: GNU Library General Public License or GNU Lesser General Public License. Some library files do not contain license information, some of which do contain copyright notices and/or attributions.
+See also
+Manual:Wiki on a stick
+Manual:Installation
+Running MediaWiki on Windows
+OrganicDesign:MediaWikiLite - A portable way of running MediaWiki without changing the host OS or requiring it to have any existing LAMP components
+Training On A Stick
+Language:
+English  • 日本語 • 粵語
+
+
+
+
+
+

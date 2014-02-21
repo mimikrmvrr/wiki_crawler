@@ -1,0 +1,184 @@
+Manual:Streamlined Windows Install GuideInstallation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+This guide provides both a relatively easy way to install MediaWiki on a Windows PC using the XAMPP stack, and step-by-step instructions for installing each of the separate programs first. Both methods have been tested on Windows XP SP 2, but only the XAMPP method has been tested on Windows Vista.
+
+
+
+Easy simple setup (using XAMPP)
+Please note that MediaWiki does not work with XAMPP 1.7.3, as it uses PHP 5.3.1, which has a bug, making it incompatible with MediaWiki. Please use XAMPP 1.7.4 or newer.
+(This method has been verified to work on Windows Vista, using xampp-win32-1.6.6a-installer and MediaWiki 1.11.2, and on Windows 7 x64, using xampp-win32-1.7.7-VC9-installer and MediaWiki 1.18.1.)
+XAMPP includes Apache, MySQL, and PHP all in one integrated package. Just download and run the XAMPP installer and the database and server should be installed and running.
+XAMPP requires port 80 and 443 to be free. Even if you have no special server software running, Skype may be using these ports. Before installing XAMPP, quit Skype for the time of installation. Once Apache is running, Skype can be used without problems again.
+XAMPP provides instructions how to secure the installation. It is a good idea to secure it now, especially with a root password for mysql, since this password will be used in the MediaWiki setup. Point your browser to http://localhost, click on Security, and follow instructions.
+
+Download MediaWiki and extract it.
+Find the web root folder e.g. C:\xampp\htdocs, and add the extracted MediaWiki folder to it. You might want to rename the directory from "mediawiki-n.n.n" to "mywiki" or something else easy to type. Then open a browser to http://localhost/mywiki and run the web-based installation script.
+You do not have to create a MySQL database or MediaWiki DB user manually, the MediaWiki installation script will do everything for you.
+See the Manual:Installation guide and Manual:MySQL for more information on setting up the database during the installation.
+Note that if the install doesn't accept the password for "root" and shows DB error message, it's possible to leave the field empty for the first time, but be sure to create the password later on. Blank password compromises the wiki.
+
+Once the configuration is completed, follow the instructions on the page to move LocalSettings.php to the wiki directory, e.g. C:\xampp\htdocs\mywiki.
+ Note: If you want to have short/pretty URL like Wikipedia see Short URL for details.
+Note that the following is already done in the latest version of XAMPP and needs not be done. Also, xampp\apache\bin\php.ini needs to be modified for this to work. Comment out the line "extension=php_domxml.dll" by prefixing it with a ';'. The line should look like ";extension=php_domxml.dll". Stop the Apache service and then restart it.
+See also Manual:Installing MediaWiki on XAMPP
+External links
+Run Your Personal Wikipedia from a USB Stick, uses XAMPP
+NetBeans Guide to Configuring PHP Development Environment in Windows using XAMPP
+How to set up MediaWiki within XAMPP
+Step-by-step setup
+Requirements
+Apache Version 2.2.16
+MySQL Community Edition Version 5.1.49
+PHP Version 5.3.3
+MediaWiki Version 1.16.0 or later
+While not necessary, phpMyAdmin Version 3.3.5 is an extremely useful utility for management of the database created for your wiki.
+Apache
+Here we assume you don't want to compile the sources yourself, so just go to any Apache download mirror (e.g. this one), select the appropriate platform and then the file you want (see version number etc). Version 2.2.16 without SSL was used here. It is 4.2 MB in size.
+Download the file and execute it. Use the following settings in the installation wizard:
+installed as a service,
+any domain in the domain field, any server name in servername and an appropriate email-address in the email field.
+Select "typical installation", for all users, as a service,
+install to e.g. C:\Program Files\apache\apache2.2\ (from here on, we will refer to this folder as <apache-folder>).
+ Note: A few users have had installation issues with filepaths that contain spaces, but others have not, so it is a good idea to not use spaces in the file directories. You will have to change several paths in the httpd.conf file.
+You also have to uncomment the line in httpd.conf that says #ServerName localhost:80 (or something similar), and add an additional #ServerName <host>:80 for each way you want to access it (where <host> is the local IP for access from your local net, DNS name or IP address for access from the Internet).
+
+MySQL
+Use the MySQL 5.1 Community Edition — the installer file for Windows is 16.4 MB, and it was the version used in this installer.
+Make sure to turn off any firewalls or anti-virus software. These will make your life impossible and not let you install things correctly.
+Run the installer, and make sure you use the typical installation to e.g. D:\programme\MySQL\MySQLServer5.0.
+Immediately after the installation finishes, the wizard offers you the opportunity to configure. Use it, and use the following settings:
+Standard configuration (no other MySQL on this computer)
+Run as a service
+don't check bin paths,
+ Note:
+Other guides (e.g. http://oss.segetech.com/wamp.html) suggest that it is absolutely necessary to check bin paths. My setup was not working (I got the "Could not find a suitable database driver!" error) and reconfigured MySQL to check bin paths; after a restart it worked. Unfortunately I had changed other settings so I can't be sure this was the problem.
+
+Enter a root password
+ Note:
+The root user must retain the name "root", as otherwise MediaWiki's installation script has problems during the initial installation.
+
+no anonymous account
+At the end, let MySQL's do its processing of the configuration.
+ Note:
+Port 3306 has to be open for the current subnet, as otherwise the configuration can't be done. The wizard can remain open while opening the port and the processing started again afterwards. MySQL then uses about 57 MB of disk space.
+
+
+Test your installation by opening the Windows command prompt (cmd.exe, not command.com or MySQL's!), starting and stopping the MySQL server service by typing NET START MYSQL, followed by NET STOP MYSQL.
+PHP
+Make a manual installation using the zipped version (9 MB, 20 MB unzipped). While the CGI script can work, the zipped version contains all the necessary files, and does not require any additional downloads, so it is recommended.
+Just unzip to a local folder—e.g. D:/programme/php (from here on called <php-folder>)
+Rename the file php.ini-recommended in <php-folder> to php.ini
+ Note:
+My experience installing under Windows XP was that the following needed to be performed also:
+Copy php.ini-recommended to [Apache installation path]\conf\php.ini
+--Myscha (novawoman@hotmail.com)
+
+Open the php.ini file:
+Near the middle of the file, change the extension_dir directive line, so it reads extension_dir = "./ext/" (or a different value if you installed your extensions in a different folder)
+Uncomment the php_mysql.dll and php_mysqli.dll extensions by removing the semicolons that begin their respective lines (quite far at the back, under the heading "Windows extensions")
+
+In order to connect PHP to the Apache server as a module, you have to change the httpd.conf (in <apache>/conf) by adding the following text to the end of the file:
+# Connect PHP Module
+LoadModule php5_module "<php-folder>/php5apache2_2.dll"
+AddType application/x-httpd-php .php
+#configure the path to php.ini
+PHPIniDir "<php-folder>"
+Don't forget to change both instances of <php-folder> to the actual path of your PHP folder
+
+In httpd.conf file,the entry DirectoryIndex index.html needs to be expanded to: DirectoryIndex index.html index.php index.php3 index.php4 index.php5
+Expand the system variable PATH by the adding a semicolon, followed by the PHP directory <php-folder> To do this, you can right-click on "My Computer" and select 'Properties' menu, which will bring up the System Control Panel dialog box, if you do this, you can directly go to substep three below:
+Open the Start Menu, and point to Settings/Control Panel.
+Select "System" from the Classic view.
+Select the "Advanced" tab.
+Click on "Environmental variables"
+On the "System" section, look for the PATH variable.
+Click on "edit"
+Add the PHP entry to the variable, by entering ;<php-folder>, as described above.
+
+Restart the computer, as it is necessary at this point.
+phpMyAdmin
+While not necessary, phpMyAdmin is an extremely useful utility for management of the database created for your wiki.
+Download the installation file.
+Unzip to <apache-folder>/htdocs (or whatever folder you configured as the Apache server's document root)(henceforth <apache data directory>).
+Rename the new directory to something easier to remember, such as e.g. /phpmyadmin (hereinafter called <phpMyAdmin-folder>). The zip has 3.7MB, 12.5 MB unzipped
+For using phpMyAdmin, open a browser of your choice and type the phpMyAdmin URL. For example, if your apache server is running as http://localhost, and you renamed your <phpMyAdmin-folder> to phpmyadmin then type http://localhost/phpmyadmin.
+ Note: phyMyAdmin tries to login to user 'root' without any password, so if a password is given for "root" user during the MySQL installation, go to <phpMyAdmin-folder> and rename "config.sample.inc.php" file to "config.inc.php" file. Open it and change "blowfish_secret" from blank to any non-blank string, and then browse the url; now it will ask for a username and password.
+Do not change "blowfish_secret", but the string value it equates to, e.g. $cfg['blowfish_secret'] = 'Test';
+
+MediaWiki
+Download a release of MediaWiki. If you're looking to provide patches and help in development, use the version from SVN; if you are going to be an end user, and are not very concerned with having the latest features, download a stable release.
+Unzip your downloaded copy into a folder and then copy the folder to <apache-folder>/htdocs (one can also directly unzip to <apache-folder>/htdocs). Unzipping is usually done with software such as 7-Zip (free), WinZip, WinRAR or IZArc (free).
+Rename the new directory created under <apache-folder>/htdocs to whatever you would like to have in the URL. If your apache server is running as http://localhost for example, unzipping/installing MediaWiki to /testwiki/ directory would mean you would access your wiki at http://localhost/testwiki which will lead to http://localhost/testwiki/index.php/Main_Page or http://localhost/testwiki/index.php?title=Main_Page (PHP running as a CGI module) kind of URL. Note: If you want to have short/pretty URL like Wikipedia see Short URL for details.
+Now setup needs to be done to do that open a browser of your choice and type in the URL from above, a page will appear that tells you to Please set up the wiki first as a link.
+Clicking the link will open a page having a form. Fill the form and then click Install MediaWiki! button at the bottom of the form. The rest is done automatically (see Manual:Config script for details on filling up the form).
+After setup is done, you are told to move the configuration file LocalSettings.php to the wiki's folder.
+The Wiki is now installed. Timespan: if everything goes well, 30 minutes, including download (on a good connection ;-))
+Troubleshooting
+If you receive the error "Could not find a suitable database driver! * For MySQL, compile PHP using --with-mysql, or install the mysql.so module" then make sure that the php_mysql.dll and libmysql.dll files are accessible to Apache. One way to do this is to place them in the directory <apache-folder>\bin, and restart Apache.
+No, this does not work - neither of proposed solutions.
+
+If Apache cannot find php.ini, it may be because it was placed in the Windows folder in your hard drive and not in the Apache bin directory.
+If you are using Windows XP, you may need to add the directory in which you installed PHP to the Path environment variable, as described on the PHP section of this page.
+Are the necessary ports open? (80 for Apache, 3306 for MySQL)
+Is Apache installed to a path that doesn't include any whitespace?
+Did you empty your browser cache and refresh the wiki page?
+You can avoid many problems if you can install in folders without spaces, such as "C:\Apache", "C:\PHP", "C:\MySQL", and test PHP in a command line window with a "C:\PHP\php -version" command. If you have oci.dll errors, open php.ini and comment the [PHP_OCI8], [PHP_OCI8_11G], and [PHP_PDO_OCI] references.
+Backing up and moving wikis
+This works for me. As always, please be bold in adding\modifying steps:
+Back-up
+In SQL admin, go to the wiki database (typically wikidb), and click Export. Check the first box under "structure" (DROP TABLES), and check the "save as file" checkbox near the bottom. Click Go and save the file to the back-up drive.
+Save the wiki folder from htdocs to the back-up drive. This is "Mediawiki x.x.x" by default but typically it is renamed to "wiki"
+Transferring to new server
+Install XAMPP on the new server.
+In SQL admin:
+(optional but important for security) Give root a password (from the privileges tab). This password will need to be reflected in your config.inc.php file in xampp\phpmyadmin:
+
+
+
+
+$cfg['Servers'][$i]['password']             = 'myPass';
+$cfg['Servers'][$i]['AllowNoPassword']      = false;
+
+
+
+Create a new blank database (e.g. wikidb) with the default options and a name of your choice.
+Import the database file you backed-up.
+Change the SQL password of the root for that db (in privileges tab)
+
+Copy the wiki folder from back-up into the htdocs folder.
+Change localsettings.php to reflect the new db username and password.
+See also
+Manual:$wgEnableUploads to enable image/files upload.
+Manual:Timezone to set default timezone of your wiki from UTC/GMT to your timezone. This reflects in History tab and other places.
+Extension:Cite/Cite.php, install this extension so that <ref> and </ref> tags work as expected.
+Manual:Short URL for having more user friendly url to article pages.
+Manual:Configuring MediaWiki for links to more advanced configuration.
+Manual:Wiki family to setup multiple instances of MediaWiki with single set of MediaWiki files.
+Language:
+English  • 日本語

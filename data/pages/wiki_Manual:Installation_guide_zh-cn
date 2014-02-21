@@ -1,0 +1,145 @@
+Manual:Installation guide/zh-cnThis page is a translated version of a page Manual:Installation guide and the translation is 29% complete.
+
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+Fundamental Introduction to MediaWiki
+
+Contents
+What is MediaWiki?
+Documentation
+Customization
+Versions & Download
+Installation
+Support & Contact
+Development
+All other topics
+See navigation on the left
+
+
+ Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+Welcome to the MediaWiki installation guide which provides instructions on how to manually install and configure MediaWiki on a web server. Note that some users may find MediaWiki software bundles and hosting services with 1-click installation and wiki farms a convenient alternative to manual installation.
+此文章的第一部分给出了关于如何在伺服器上安裝MediaWiki的广泛的一般指示。后面的章节包括一个给出了更多安装细节说明的附录的列表，其中包括了具体的系统设置和其它这个软件的不太常用的用途。
+
+
+
+Upgrade guide
+If you are already running MediaWiki, see the Upgrade guide.
+ Requirements
+
+Download MediaWiki (current stable version is 1.22.2)
+Web server such as Apache or IIS
+Local or command line access is needed for running maintenance scripts
+
+PHP version 5.3.2 or later, but not PHP 5.5 currently.
+Due to a security issue with PHP it is strongly advised to use PHP 5.3.5+ (see here for more details).
+with Perl Compatible Regular Expressions
+with Standard PHP Library
+
+Database Server
+MySQL 5.0.2 or later (*)
+or PostgreSQL 8.1 or later
+Requires PL/pgSQL (contained in contribs)
+Full-Text searching (Native in >=8.3, requires tsearch2 extension <=8.2)
+
+or SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+快速安裝指南
+Warning about webhost auto-installers
+Programs provided by webhosts to automatically install applications such as MediaWiki can, and frequently do, screw up the process, resulting in errors and a failure to install MediaWiki (or another application for that matter). If you encounter this problem, it does not mean that you cannot install MediaWiki; all it means is that you should do it manually. This is very easy and there are benefits to doing this, including more control over where on the server and file path you want to install it, the ability to use a shared database, or the ability to control more features of the wiki during the installation.
+For experienced users, here is the quick version of the installation instructions. Most users will want to read the more detailed version, below.
+檢查你的系統是否符合最低系統要求 (web server, PHP5, and either MySQL4 or Postgres 8.0).
+下载 MediaWiki (direct link to latest version) 然后解压缩到你服务器的网络存储文件夹。
+指向你的浏览器到 config 目录.
+跟着屏幕的安装提示直到完成.
+上述安装提示是故意写得如此简短的，也许会有错误发生，所以，如果有任何不确定的地方，建议你还是阅读下面的完整安装说明。
+
+详细安裝教學
+安裝前
+了解Mediawiki是甚麼
+查看MediaWiki功能清单
+系統需求 - 在向下进行前务必查看!
+
+安裝MediaWiki
+配置MediaWiki:
+初始配置 (使用配置脚本)
+更多的配置
+共同的设置
+安裝額外插件
+
+Alternative to manual installation
+Some users may prefer to skip manual installation by using a pre-integrated MediaWiki software appliance or hosting services with 1-click installation and wiki farms.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+附录
+高级的用途
+这些页面中包括了在其它的、少见的用途中如何安装/配置 mediawiki。
+颠覆的安装（Installing from Git）
+在记忆棒上安裝Mediwiki
+高级配置
+这些页面涵盖了更多更高级的配置选项:
+高级配置
+Wiki系統管理員
+MediaWiki Help
+The following page explains how to get a copy of the MediaWiki help pages on your own wiki
+Copying help pages
+Installation assistance
+FAQ: FAQ#Installation and configuration
+IRC (#mediawiki)
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support.
+MediaWiki Users (Forum) is a user-to-user MediaWiki support forum (offline)
+System-specific instructions
+The following pages give more detailed installation instructions aimed at specific systems. However, by and large Manual:Installing MediaWiki is more up to date, and better written than the per system docs, and as such it is recommended you first consult the main install instructions before looking at a per system installation documents.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Newcomers guide
+Streamlined Guide
+Simple Windows Apache Installation
+
+Notes
+
+MediaWiki ships with an installation script which allows web-based configuration
+MediaWiki can share the database of another web-based application, e.g. phpBB etc.
+Knowledge of PHP is required in order to customize the software
+PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 (download). Note that this version is no longer supported.
+MySQL 5 support is required since MediaWiki 1.19 – if you are using an older version of MySQL and cannot upgrade, you should use MediaWiki 1.18.5 (download). Note that this version is no longer supported.
+Some users find it helpful to install an additional software package such as phpMyAdmin (MySQL) or phpPgAdmin (Postgres) to help administer the database server.
+
+參見
+MediaWiki software bundles * MediaWiki hosting services and wiki farms
+安裝前需要注意
+更新版本
+反安裝
+FAQ

@@ -1,0 +1,74 @@
+Manual:What is MediaWiki?This page is a translated version of a page Manual:What is MediaWiki? and the translation is 58% complete.
+
+
+asturianu  • ‎български  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（台灣）‎ 
+
+
+
+
+Pengantar Dasar MediaWiki
+
+Cara kerja MediaWiki
+Dokumentasi
+Kustomisasi
+Versi & Unduhan
+Instalasi
+Dukungan & Kontak
+Pengembangan
+Bantuan
+Manual teknis
+FAQ
+
+
+ Panduan Instalasi | Tentang MediaWiki
+ Fitur | Persyaratan instalasi
+ Mengunduh | Menginstal | Mengonfigurasi
+
+
+Anda mungkin tahu tentang Wikipedia, ensiklopedia bebas, dan mungkin agak bingung dengan kata-kata yang mirip tapi berbeda seperti Wiki, Wikimedia, atau MediaWiki.
+Untuk memupus kebingungan antara berbagai kata tersebut, Anda mungkin perlu membaca artikel tentang nama yang menjelaskan perbedaan tersebut.
+
+Tinjuan umum
+
+
+
+
+MediaWiki dapat digunakan pada kebun server perusahaan besar seperti gugus milik Wikimedia Foundation.
+
+
+MediaWiki adalah perangkat lunak bebas berbasis server yang dilisensikan di bawah GNU General Public License (GPL). MediaWiki dirancang untuk berjalan pada kebun server besar yang mendapat jutaan kunjungan per hari.
+MediaWiki merupakan perangkat lunak implementasi wiki yang sangat andal, terskalakan, dan kaya fitur, yang menggunakan PHP untuk memproses dan menampilkan data yang disimpan dalam basis data MySQL.
+Laman-laman MediaWiki menggunakan format tekswiki sehingga pengguna yang tidak memiliki pengetahuan tentang XHTML atau CSS dapat menyunting dengan mudah.
+Sewaktu pengguna mengirimkan suntingan terhadap suatu laman, MediaWiki menuliskannya ke basis data, tetapi tanpa menghapus versi terdahulu laman sehingga memungkinkan untuk dikembalikan dengan mudah jika terjadi vandalisme atau spam. MediaWiki juga dapat mengelola berkas gambar dan multimedia, yang disimpan dalam sistem berkas. Untuk wiki besar dengan banya pengguna, MediaWiki mendukung penyinggahan dan dapat dengan mudah dikombinasikan dengan perangkat lunak server proksi Squid.
+
+MediaWiki adalah ...
+MediaWiki is wiki software.
+If you don't know what a wiki is, then please read this Wikipedia article before going any further!
+MediaWiki is server software.
+As with any software that you expose to the internet, there may be bugs or security problems. Do not install MediaWiki unless you intend to keep up with security upgrades (please subscribe to receive announcements of security updates).
+MediaWiki is geared towards the needs of the Wikimedia Foundation.
+The program is primarily developed to run on a large server farm for Wikipedia and its sister projects. Features, performance, configurability, ease-of-use, etc are designed in this light; if your needs are radically different the software might not be appropriate for you.
+MediaWiki is free software.
+No guarantee or warranty of any kind is provided.
+Mencoba Tekswiki
+
+
+
+
+Tekswiki dasar (markah wiki)
+
+
+Ya, Anda dapat dengan mudah mengubah laman dan dapat (sementara) menerbitkan kalimat rekaan, dan Anda bahkan dapat (sementara) mengosongkan suatu laman dalam suatu wiki. Anda tidak harus memiliki pengetahuan pemrograman untuk melakukan itu.
+Kami sarankan Anda untuk berlatih menggunakan bak pasir kami. Gunakan saja tempat itu untuk melakukan uji coba para admin mungkin tidak terlalu menolerir tindakan uji coba di tempat lain.
+Anda juga dapat melihat lembar sontekan dengan perintah pemformatan dasar.
+Beberapa hal yang tidak tidak bagus dilakukan MediaWiki ...
+Because MediaWiki was designed for open-content, it is often not suitable for situations where you want to restrict access to part of the wiki.
+MediaWiki has been designed to serve very high-traffic websites such as Wikipedia. It has been optimized for this use and may not be so suitable for smaller sites, where disk space or memory are bigger restrictions than bandwidth.
+MediaWiki is not normally a suitable replacement for dedicated forum/blogging software if that is what you are after.
+In the above cases there may be other wiki software (or non-wiki software) which better serves your needs.
+Lihat pula
+Manual:Deciding whether to use a wiki as your website type
+Manual:Deciding which wiki software to use
+Daftar lengkap fitur MediaWiki
+wikipedia:Comparison of wiki software
+www.wikimatrix.org - perbandingan bersisian berbagai mesin wiki.

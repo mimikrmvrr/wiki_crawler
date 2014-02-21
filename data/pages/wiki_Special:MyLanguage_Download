@@ -1,0 +1,92 @@
+DownloadTranslate this page; This page contains changes which are not marked for translation.
+Other languages:
+العربية  • ‎brezhoneg  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎Zazaki  • ‎English  • ‎español  • ‎suomi  • ‎français  • ‎עברית  • ‎Հայերեն  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎ქართული  • ‎한국어  • ‎Lëtzebuergesch  • ‎മലയാളം  • ‎Bahasa Melayu  • ‎Nederlands  • ‎occitan  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎svenska  • ‎ไทย  • ‎ئۇيغۇرچە / Uyghurche  • ‎українська  • ‎Tiếng Việt  • ‎吴语  • ‎粵語  • ‎中文  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+Latest release
+
+
+
+Fundamental Introduction to MediaWiki
+
+Contents
+What is MediaWiki?
+Documentation
+Customization
+Versions & Download
+Installation
+Support & Contact
+Development
+All other topics
+See navigation on the left
+
+
+
+
+ Download MediaWiki 1.22.2
+
+
+This is a .tar.gz file. If you are on Windows, you can use 7-Zip to decompress it.
+Release notes
+Installing / Upgrading / Configuration
+Note: the last stable release doesn't contain all bug fixes to the stable branch: you can try its last snapshot, but almost surely not all the fixes for the known bugs in the stable release have yet been included in such snapshot.
+
+License
+MediaWiki is free software licensed under version 2 of the GNU General Public License. Because MediaWiki is licensed free of charge, there is no warranty, to the extent permitted by applicable law. Read the full text of the GNU GPL version 2 for details.
+System Requirements
+MediaWiki requires PHP 5.3.2+ and either MySQL 5.0.2+, PostgreSQL, or SQLite. For more information, please read the system requirements and compatibility.
+Note: To get a suitable version of PHP on CentOS 5.6, install the php53 package instead of php.
+
+
+
+To MediaWiki ≤ 1.18.x and 1.20.x users: Support of these branches was discontinued. Please update to a newer version of MediaWiki:
+MediaWiki 1.22.2 (download) - stable
+MediaWiki 1.21.5 (download) - legacy
+MediaWiki 1.19.11 (download) - legacy lts
+
+
+Other downloads
+MediaWiki 1.22.2 GPG security signature to verify your download with GNU Privacy Guard
+GPG keys
+MediaWiki 1.22.2 changes not including i18n (unified diff)
+Download from Git instead
+Active MediaWiki developers should instead download from Git to get the latest version of the MediaWiki software. The git repository has earlier versions of the software, so it is possible to switch to ("check out") a particular release.
+Notes
+PHP 5 support has been required since MediaWiki 1.7 – if you are using PHP 4, you should upgrade now! PHP 4 is no longer supported by the PHP group and has many bugs and vulnerabilities. Many shared hosting providers offer both PHP 4 and PHP 5, running simultaneously. If you cannot upgrade, you can use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 5 support is required since MediaWiki 1.19 – if you are using an older version of MySQL and cannot upgrade, you can use MediaWiki 1.18.6 (download). Note that this version is no longer supported.
+Alternatives to manual installation
+Some users may prefer to skip manual installation by using a pre-integrated MediaWiki software appliance or hosting services; repositories of some distros also increasingly offer packages for MediaWiki, with different degrees of frequency and extensions coverage (e.g. Debian, Ubuntu, Fedora, Gentoo).
+What next?
+Subscribe to our release announcements mailing list
+Stay up to date with releases, and keep your server secure!
+Legacy releases
+If your MediaWiki installation is heavily modified, it may be difficult to incorporate the latest official changes/updates to MediaWiki. To support such users, we maintain old branches of our code for up to a year for the legacy release (1.21.5) and up to three years for the legacy long term support release (1.19.11).
+Download legacy release MediaWiki (1.21.5)
+Download legacy lts release MediaWiki (1.19.11)
+Development releases
+If you want to run on the latest development (i.e. alpha) version, you either download Nightlies, or download from Git.
+From Git you can either download the complete repository (about 465 MB)
+
+
+
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git
+
+
+or the latest revision only (about 85 MB; this is often called a shallow clone: less time and smaller downloads).[1]
+
+
+
+git clone --depth 1 https://gerrit.wikimedia.org/r/p/mediawiki/core.git
+
+
+You can also view the latest source code in your browser.
+Old releases
+You can find tar balls (*.tar.gz) of all versions of MediaWiki back to March 2005 (the earliest being MediaWiki 1.3.11) in the MediaWiki download archives.
+To browse, including even older versions, see the tags of the Git repository.
+Installation assistance
+FAQ: Installation and configuration
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support.
+References
+↑ This could cause reference problems when you later use "git pull" to upgrade your shallow clone and the newer revision refers to older revisions which are not yet downloaded to your system. In such a case you can simply download more - increase the depth value - or all revisions later, or make a fresh shallow clone.
+See also
+Version lifecycle
+Version history

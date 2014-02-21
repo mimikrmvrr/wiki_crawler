@@ -1,0 +1,142 @@
+Manual:MediaWiki feature list
+
+
+IMPORTANT: The content of this page is outdated. If you have checked or updated this page and found the content to be suitable, please remove this notice.
+ Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+This page contains a list of features that are built into the MediaWiki software. Whether you should use MediaWiki for your own wiki depends on what kind of website you want to run with it. Wikipedia's software has many useful features that grew out of the needs of the users and the ideas of the developers -- but features also mean complexity.
+Before you decide to use MediaWiki, please take a look at other Wiki engines (see this list or this comparison) and see if one of them might meet your requirements better.
+Requests for new features should be submitted to Bugzilla.
+
+
+
+Look and feel
+Links with shortcuts, arrangement depends on skin.
+Skins: Different ways to present the site.
+Monobook, a modern skin with accesskeys and tooltips.
+Vector, an even more modern skin with easier to read text, large amount of content space, and has an extension of the same name that adds drop down fucntionality to the menus.
+
+User styles: Users can adapt the look and feel of the site through custom CSS on their user pages.
+"Stub" threshold: Users can see links to articles below a certain size rendered in a different color.
+Printable versions of articles can be generated.
+Auto-number headings in an article (optional).
+Intra-page Anchors (automatically generated for headings, and also with <div id="tagname">...</div>).
+Automatically generate a table of contents for long articles (optional).
+Automatically turn ISBN numbers into links to an editable list of booksellers.
+XHTML- or HTML5-compatible output (or darn close to it), tidy integration.
+Multimedia and extensions
+File upload feature allows to upload graphics or sound files, see Special:Upload to see in operation, and Uploading files for description. Uploaded files are listed on Recent Changes and they are also logged on Special:Log/upload.
+Mathematical formulas using LaTeX syntax: see texvc
+Automatic resizing of images using ImageMagick or libgd, simple syntax for image captions and image alignment
+WikiHiero for Egyptian hieroglyphs (needs separate installed components)
+EasyTimeline for time charts (needs separate installed components)
+Keeping track of edits
+Watchlist Every page has a link "Watch this article for me". Use Special:Watchlist to track changes on the articles you declared as interesting; watched articles are also bolded in the Recent changes list .
+User contributions in the sidebar of each user page list all articles the user has worked on, according to the database.
+Extended recent changes with dynamic collapsing of edits to the same article and quick links to diff the edit, show the article history, show the user page, show the user talk page, or block the user (for sysops)
+"Related changes": View a filtered version of Recent Changes to the pages linked from the current page.
+Side-by-side diffs - the diffs are shown side-by-side, and changed portions of lines are highlighted, making it much easier to see what's what. Additionally, a diff is shown during an edit conflict so you can see exactly what you need to reintegrate.
+Real names. Users can (optionally) specify a "real name" they want to use for author credits.
+On-page credits. Administrators can enable an on-page paragraph giving credit to editors who've worked on a page.
+Structures and syntax
+By default, only restricted use of HTML is allowed. There is an option to allow full use of HTML.
+Editing syntax based on UseMod, with support for mixing wiki-syntax and HTML. Only free links are supported for linking, not CamelCase (deliberate design decision).
+Namespaces allow content separation (to address the namespace, use the [[Namespace:Page title]] syntax).
+Discussion (Talk:) pages are separate from article pages, "meta" project pages can be separated from content pages, image pages are used for image descriptions.
+MediaWiki: namespace contains all user interface texts, so that they can be edited like any other wiki page
+Template: namespace for custom messages. Templates may contain string variables which are replaced with certain values passed to the template from the calling page.
+
+Transclusion of arbitrary pages in any namespace: {{:Page Name}}. See Templates
+Word-extension linking: If you include a link of the form [[war]]s, or [[war]]time, the system will automatically display it as if you had typed [[war|wars]] or [[war|wartime]], respectively, saving some typing.
+Parenthetical hiding ("pipe tricks") If you include a link of the form [[kernel (mathematics)|]], the parenthetical portion will be hidden in the link: kernel. This is useful for disambiguating different meanings of a word without making linking too difficult or cluttering up the text of articles. This also works with cropping out namespaces when you want a cleaner-looking link: [[Wikipedia:Copyrights|]] becomes Copyrights
+Link to individual sections of an article, e.g. Manual:MediaWiki feature list#Editing (these links may become invalid if sections are retitled or removed.)
+Support for subpages (link to "Foo/Bar" from "Foo" by just typing "/Bar", "Foo/Bar" contains a backlink to "Foo"), these can be enabled or disabled by namespace (e.g., Wikipedia currently supports subpages on discussion pages, to make archiving easy, and on user pages, to give users space for personal pages)
+Special keywords for inserting dynamic data such as the name of the current page, the current date, the number of articles, etc.
+Multiple Categories can be assigned to any page, including categories themselves, creating a hierarchy of categories. Category pages automatically list all pages assigned to them, including sub-categories. Categories allow classification and hierarchical browsing of the content.
+Editing
+Section editing. Users can enable an option that allows them to edit individual sections of an article (separated by headlines) instead of loading the entire article.
+Edit toolbar (JavaScript-based) for formatting text as bold, italic etc. (fully works in Mozilla and IE, other browsers use it to show the syntax, but cannot format text inside the text area because their JavaScript implementation does not support it). If JavaScript is disabled, the toolbar is not shown.
+Edit summary which is shown in "Recent changes". Will be prefilled with section title when section editing.
+Double click editing: Users can enable an option that allows them to edit articles by double clicking them.
+Edit preview (can be shown before or after edit box)
+Handle edit conflicts (page being saved by a user while still being edited by another one, then saved again). MediaWiki will merge changes automatically if possible and otherwise require the user to do a manual merge.
+Mark edits as minor; users can decide to hide such edits from the Recent Changes list. Only signed in users can mark edits as minor.
+Spam and Vandalism
+Anti-spam features: Prevent link spamming, and other forms of abusive editing.
+meta:Spam blacklist: List of spammer's domain names which users are not allowed to link to.
+
+Manual:Combating vandalism: Helpful hints and links to some extensions for dealing with vandalism
+Discussions
+Talk pages: Each user (including every anonymous user) and every article has an associated page where messages can be left. These are separate namespaces (see above), "Talk:" and "User talk:".
+Message notification (user gets a "You have new messages" notice if someone else has edited their user discussion page); this also works for anonymous users, but not for shared IP users
+Automatic signature: Just type three tildes (~) when you edit, and on saving the page, it will be replaced with your user name and a link to your user page. If you use four tildes, the current date will be added as well. Mainly intended for Talk pages.
+Support for emailing users through the wiki (email address not shown to the user)
+Multilanguage support
+Translated into many languages (see en:Wikipedia:Multilingual coordination for details)
+Interlanguage links: handy method for linking articles between wikis in different languages (each language requires its own database)
+UTF-8 support
+Backend
+Database-driven (MySQL/MariaDB, PostgreSQL, and SQlite are supported)
+Parser caching: rendered pages are cached to reduce redundant processing
+Output caching: complete page output can be optionally saved as static HTML files for serving to other clients; support for Squid proxies
+Cookie-based account and login system, but anonymous users can also edit pages
+All revisions of an article are stored (optionally compressed)
+RSS syndication available for many special pages, such as Special:Newpages and Special:Recentchanges
+RDF metadata
+Permissions
+Different rights for anonymous users, signed in users, sysops, bureaucrats and developers.
+Signed in users can:
+move and rename pages
+upload files
+have and use a watchlist
+mark edits as minor edits (eg. typo correction)
+
+Admins/Sysops can:
+protect pages from editing
+delete and undelete pages
+edit protected pages
+ban users by IP address
+ban users by username, if this option is enabled
+run SQL queries on the database, if this option is enabled (see Extension:Asksql)
+
+Bureaucrats can:
+create sysops
+rename users
+flag bots
+
+Developers can:
+lock the database
+run various maintenance tasks
+
+Other permission schemes (e.g. only signed in users can edit pages) can be configured.
+Search and Queries
+Full text search
+"Go" button allows direct viewing of a specified article's contents (tries near match if no exact hit)
+"What links here": View pages that link to the current page (backlinks)
+Special report pages:
+New pages: List of newly created articles
+Ancient pages: Articles sorted by timestamp, ascending
+List of images
+List of users
+Site statistics
+Orphaned articles (articles that have no links pointing to them)
+Orphaned images
+Popular articles (articles by number of visits, works only if counters are enabled)
+Most wanted articles (non-existent articles sorted by number of links pointing to them)
+Short articles
+Long articles
+List of all pages by title
+
+Query API - allows scripted access to various metadata
+Misc.
+Random article display function
+Users can configure their timezone, which is used on all report timestamps
+The attributes of many report pages (number of results etc.) can be set in the user preferences
+Empty set of help pages
+Note that the files in the installation contain many links pointing to documents that are not included in the download. Most important is the empty set of help files, which will be needed by any new user of the site. To remedy these broken links, you must either a) export from this site or manually copy and modify help pages to your installation or b) modify the installation's parameters to change the help link targets to this site, either of which may require a substantial time investment.
+Coming soon
+See MediaWiki roadmap.
+Language:
+English  • dansk • Deutsch • français • Bahasa Indonesia • italiano • 日本語 • 한국어 • 中文

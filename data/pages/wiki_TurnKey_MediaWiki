@@ -1,0 +1,98 @@
+TurnKey MediaWiki
+TurnKey MediaWiki is an installable bootable computer operating system (live CD). It can run on real hardware in addition to most types of virtual machines.
+TurnKey MediaWiki is part of TurnKey Linux, a third-party opensource project.
+Features
+includes a collection of 12 popular extensions (e.g., WYSIWYG editor)
+auto-updated daily with the latest security patches
+supports SSL out of the box
+includes phpMyAdmin
+easy to use configuration console and web management interface
+minimal footprint - includes only minimum components needed
+packaged as installable Live CD that runs on real machines and most types of virtual machines (e.g., VMWare, VirtualBox)
+based on Ubuntu 10.04 LTS
+External links
+MediaWiki appliance
+TurnKey Linux
+Screenshots
+
+
+
+
+
+
+Live CD boot loader
+
+
+
+
+
+
+
+
+
+Configuration console
+
+
+
+
+
+
+
+
+
+Configuration console - advanced menu
+
+
+
+
+
+
+
+
+
+Web management interface - Login
+
+
+
+
+
+
+
+
+
+Web management interface - system overview
+
+
+
+
+
+
+
+
+
+Web management interface - Apache configuration
+
+
+
+
+
+
+
+
+
+Web management interface - MySQL configuration
+
+
+
+
+
+
+
+
+
+TurnKey MediaWiki - MediaWiki admin interface
+
+
+
+Language:
+English

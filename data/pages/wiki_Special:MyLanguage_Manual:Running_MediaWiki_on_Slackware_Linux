@@ -1,0 +1,99 @@
+Manual:Running MediaWiki on Slackware Linux
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+Warning: no promises of security are made in this guide. It was intended to be run on an offline workstation.
+
+
+
+System
+Slackware Linux full install: [1]
+Apache: [2]
+MySQL: [3]
+MediaWiki: [4]
+Cur dump of the database (20031231_cur_table.sql.bz2): [5]
+
+Slackware's full installation includes Apache, MySQL, and PHP, though some administrative work is still needed to get them up and running.
+There is a more complete LAMP on Slackware HowTo here
+Settings
+For this guide, I will make the following assumptions about names, directories, and the like, but you will want to make some of them different:
+name - The wiki needs a name; this example is called vicuna.
+database - It also needs a database, which will also be called vicuna in this example.
+passwords - There are several passwords involved, most importantly the password for the wiki database, and the initial administrator account you'll create when running the configuration page.
+directory - The directory where the wiki will be installed. In this example, it's /var/wiki.
+Configuration of Apache
+At a minimum, the webserver must access your wiki on demand. There are better and more complex ways of setting it up, but this will suffice. In /etc/httpd/httpd.conf, in the section:IfModule mod_alias.c, add the following line:
+
+Alias /wiki/ /var/wiki
+
+Replace /var/wiki with the directory you've chosen.
+Apache will not be configured to use PHP by default, so you may need to do the following.
+Edit /etc/httpd/httpd.conf by uncommenting the line: #Include /etc/httpd/mod_php.conf
+Edit /etc/httpd/httpd.conf by adding: index.php to the line DirectoryIndex index.html
+Edit /etc/httpd/mod_php.conf by adding: .phtml to the line <FilesMatch \.(php|phtml)$>
+Make sure Apache is set to run at startup: chmod +x /etc/rc.d/rc.httpd
+Test your httpd.conf syntax: apachectl -t
+Restart/Start Apache: /etc/rc.d/rc.httpd restart.
+Configuration of MySQL
+Perform the following commands as root.
+Copy one of the MySQL configuration files in /etc to my.cnf:cp /etc/my-medium.cnf /etc/my.cnf
+Initialize the MySQL databases (only necessary once per system, but harmless):su mysql -c mysql_install_db
+Set the Mysql server to start at boot:chmod +x /etc/rc.d/rc.mysqld
+Set ownership of the files in /var/lib/mysql/:chown -R mysql:mysql /var/lib/mysql
+Start the MySQL daemon:/etc/rc.d/rc.mysqld start
+Secure your Installation with the script provided:mysql_secure_installation
+You'll be prompted for a root mysql password. (This and all other mysql user passwords are completely independent from the system passwords so don't confuse them!)
+Follow the prompts and choose the most secure options that suit your situation.
+Configuration of MediaWiki
+Go to the directory where you will install Mediawiki, such as /var, and unpack the package:cd /vartar xzvf ~/mediawiki-1.x.x.tar.gz
+Rename the directory to something manageable:mv mediawiki-1.x.x wiki
+Make the config directory world-writable:chmod o+w wiki/config
+Load the configurating page in your web browser and use it. Go to http://my.host/wiki/config/.
+Once the configuration has completed successfully, shut off the config directory:chmod 700 wiki/config
+And get your LocalSettings.php file installed:mv wiki/config/LocalSettings.php wiki
+Edit LocalSettings.php as desired.
+Loading the dump
+Unzip the dump by typing: bunzip2 20031231_cur_table.sql.bz2 (this will take a while depending on the size of the dump and the speed of your workstation).
+Import the dump in your database by starting a mysql session as above, if you have not done so, loading the wiki database (the name as you gave above), by typing: use <wiki db> and then importing the data by typing: source /path/20031231_cur_table.sql. This will also take a long time.
+At this point you should have a working install with some data in it. Other things will also need to be set up (classic TODO here).
+See also
+Manual:Running MediaWiki on Linux
+
+
+
+
+
+

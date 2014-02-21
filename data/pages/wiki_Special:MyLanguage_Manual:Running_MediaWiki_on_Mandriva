@@ -1,0 +1,144 @@
+Manual:Running MediaWiki on MandrivaUsing packages from Mandriva contrib (2006.0 or later)Manual Installation
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+Quick Installation on Mandrake 10 Official (note : It works as well for Mandriva 2006.)
+
+
+
+Using packages from Mandriva contrib (2006.0 or later)
+MediaWiki was added to the contrib section of Mandriva in April 2005, or somewhere before the release of 2006.0.
+Installing mediawiki should be a matter of adding a contrib medium and running:
+
+> urpmi mediawiki
+
+This will pull in all the requirements for running the frontend. If you will be running the database server on the same host, install MySQL as well:
+
+> urpmi MySQL
+
+You should be able to access the configuration page at http://localhost/mediawiki or similar.
+Note that packages in contrib don't get security updates via the official updates medium, you are advised to add a community contrib medium, and be aware that security updates for contrib may be a bit slower than official packages, and you may want to notify the maintainer if a security update is required.
+Manual Installation
+This is a short description and protocol of my installation.
+Installed Packages
+apache2-2.0.48-6.2.100
+apache2-mod_php-2.0.48_4.3.4-1
+php-mysql-4.3.4-1
+php-iconv-4.3.4-1
+php-apc-4.3.4_2.0
+php-xml-4.3.4-1
+MySQL 4.0.18-1.1.100
+ImageMagick 5.5.7.15-6plf
+zlib should be already installed
+Download mediawiki-1.x.x.tar.gz and extract to /var/www/html and rename the base directory :
+
+>mv mediawiki-1.x.x wiki
+
+A Mandriva package « mediawiki » exists; install it with # urpmi mediawiki ; then just do # cd /var/www/html/ and # mv mediawiki wiki
+MySQL
+If you haven't yet configured the mysql database, you should at least set the passwords.
+New installation
+Setting password for default accounts.
+
+>mysql -u root
+
+
+SET PASSWORD FOR ''@'localhost' = PASSWORD('xxx');
+SET PASSWORD FOR ''@'hostname' = PASSWORD('xxx');
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('xxx');
+SET PASSWORD FOR 'root'@'hostname' = PASSWORD('xxx');
+
+
+Replace hostname with your REAL name and xxx with your password.
+For information on accounts, type:
+
+SELECT host, user from mysql.user;
+
+Create Database
+
+CREATE DATABASE wikidb;
+USE mysql;
+GRANT ALL PRIVILEGES ON wikidb.* to 'wikiuser'@'localhost' IDENTIFIED BY 'your_password' WITH GRANT OPTION;
+
+Replace your_password with your own password. Maybe less privileges can be granted, but I didn't find any documentation concerning this.
+For a list of databases
+
+SHOW DATABASES;
+
+LocalSettings.php will be created in this directory and therefore write rights are necessary.
+
+chmod ugo+w /var/www/html/wiki/config
+
+Browse to http://localhost/wiki/config/index.php and fill in all necessary information. Copy the result.
+
+cp /var/www/html/wiki/config/LocalSettings.php /var/www/html/wiki
+
+Remove all right from config directory.
+
+chmod 000 /var/www/html/wiki/config
+
+Browse to your wiki http://localhost/wiki/index.php. Create your own user. Afterwards grant admin rights to your user with Replace "own_user" with your username created on the wiki site:
+
+UPDATE user set user_rights='sysop' where user_name='own_user'
+
+Enable Upload
+Add write right to the images directory:
+
+chmod ugo+w /var/www/html/wiki/images
+
+In /var/www/html/wiki/LocalSettings.php uncomment
+
+$wgDisableUploads= false;
+
+I updated recently to version 1.3.1. No problems.
+Steps:
+make backup of database and files
+remove all files, except the images directory
+extract the new version
+go to web-installer (use the same encoding, otherwise your umlaute are lost)
+copy LocalSettings.php and change settings like above.
+READY! Mikegr 22:25, 20 Aug 2004 (UTC)
+Update and fix for "No XML" message
+I'm using Mandrake 10 community and all the versions listed above match what I have. I followed these instructions but hit a stumbling block when loading the initial config page (http://localhost/wiki/config/index.php) the page loaded but said I had no XML installed. I fired up urpmi and got php-xml but got the same message, even after restarting Apache and going as far as rebooting. I tracked things down and finally had to:
+rm the /etc/php dir (which was empty), and
+make a symlink to the /etc/php.d dir (which had the extension modules in it)
+I then restarted Apache and everything worked fine from there.
+
+
+
+
+
+

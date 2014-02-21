@@ -1,0 +1,192 @@
+MediaWiki Language Extension Bundleshortcut: MLEB
+The MediaWiki language extension bundle provides easy way to bring ultimate language support to your MediaWiki. The bundle is a collection of selected few MediaWiki extensions needed by any wiki which desires to be multilingual.
+Introduction
+
+
+
+The Universal Language Selector is a must have, because it provides an essential functionality for any user regardless of the number of languages they speak: language selection, font support for displaying scripts badly supported by operating systems and input methods for typing languages that don't use the Latin alphabet. It includes freely-licensed fonts, which cover most of the major languages of America, Europe, Middle East, India and South East Asia.
+Maintaining multilingual content in a wiki is a mess without the Translate extension, which is used by Wikimedia, KDE, translatewiki.net and other sites, where hundreds of interface translations are updated every day. With Localisation Update your users will always have the latest translations freshly out of the oven. The Clean Changes extension keeps your recent changes page uncluttered from translation activity and other clutter.
+Don't miss the chance to practice your rusty language skills, use the Babel extension to mark the languages you speak and find other speakers of the same language in your wiki. And finally the cldr extension is a database of language and country translations.
+MLEB has a monthly release schedule, so that you can easily stay on the cutting edge with the constantly improving language support. The bundle comes with clear installation and upgrade instructions (see below). The bundle is tested against MediaWiki release versions, so you can avoid most of the temporary breaks that would happen if you were using the latest development versions instead.
+Download
+Latest release
+2014.01: https://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2014.01.tar.bz2
+sha256sum: 2dc673ba0bbc43a3d69237c15600171e85d3c56d9ff520e5bdb3eda0f2fdc74a [1]
+Announcement and Release Notes
+Compatible with MediaWiki: 1.21.5 and 1.22.2.
+Refactoring and performance improvements in ULS.
+Regression fixes introduced in previous MLEB release in Translate.
+Initial plural support for Android file format.
+Previous releases
+2013.12: https://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.12.tar.bz2
+sha256sum: 2ef19e31d685dd0d6e50088ec8bbb1cd3e74c694096dfa333efb61dcfee9c3c0 [1]
+Announcement and Release Notes
+Compatible with MediaWiki: 1.21.3 and 1.22.0.
+Refactoring and performance improvements in Translate Sandbox and TUX.
+Added support to MediaWiki localisation format from PHP files to JSON files.
+Language selector now opens an order of magnitude faster.
+Initial support for webfonts in MobileFrontend.
+2013.11: https://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.11.tar.bz2
+sha256sum: 926bdcb6aa9cc405dc54275a60fd1d13836ee0f36a1e9c1329f4f7eed94354ce [1]
+Announcement and Release Notes
+Compatible with MediaWiki: 1.20.7 and 1.21.2.
+Lots of cleanup, refactoring and performance improvements:
+The ResourceLoader modules for ULS were redone. They are now lazy-loaded to improve the initial page loading time. To use features provided by ULS, such as styles, ULS data utils functions, and others, you must load the features separately in your extensions. See https://www.mediawiki.org/wiki/Universal_Language_Selector/Developing_with_ULS for more details.
+Cleanup, refactoring and performance improvements in Translate extension.
+2013.10: https://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.10.tar.bz2
+sha256sum: 04b1a1db293439553c225765a41add5f0bcd3ad4dce7f89e1f098276470e96c4 [1]
+Announcement and Release Notes
+Compatible with MediaWiki: 1.20.7 and 1.21.2.
+Use the Autonym font for language autonyms in the Language Search box and Interlanguage links.
+Introducing of the TranslationStash feature. It's the place where sandboxed users can store their translations before they are given full translator rights.
+2013.09: https://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.09.tar.bz2
+sha256sum: 2ac55639aeb43a6f3d198a87e10111f673eae1115225de072be73a1fa2052ab2 [1]
+Announcement and Release Notes
+The latest development efforts are about fixing known bugs and improving performance.
+Added initial support for insertables. This will be helpful in typing and copy-paste of syntax like $1 and plural especially on tablets (bug 38350). More about this feature at: http://laxstrom.name/blag/2013/09/18/insertables-in-translate-extension-make-translating-easier/
+CLDR is updated to version 24.
+2013.08: https://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.08.tar.bz2
+sha256sum: 21b3abf3a8e19d0c746d41d246e4bc8883d0f5e179d894e1720500031c621f2c [1]
+Announcement and Release Notes
+The latest development efforts are about fixing known bugs, improving performance and adding fonts.
+EventLogging support has been added to ULS.
+Several bugs were fixed in the Translate extension.
+2013.07: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.07.tar.bz2
+sha256sum: ca381ea1bc1f10c56df28353f91a25129c604ff11938b424833925e8716e2ff3 [1]
+Announcement and Release Notes
+The ULS is stabilizing. The latest development efforts are about fixing known bugs, improving performance, and adding fonts.
+Several bugs were fixed in the Translate extension.
+Support for Yandex Translate API v1.5 was added to Translate.
+
+2013.06: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.06.tar.bz2
+sha256sum: 6df32382ddec91ab61e3e74f2ede6c043220d5c1252ee3baf8efd1d6403b4d82 [1]
+Announcement and Release Notes
+The "interlanguage" mode in ULS, which shows the ULS trigger as a cog icon in the interlanguage links area, is now considered stable. It can be enabled by setting $wgULSPosition to 'interlanguage'.
+Several bugs were fixed in the Translate extension.
+Support for currency was added to the CLDR extension.
+
+2013.05: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.05.tar.bz2
+sha256sum: 9aea5b1dac2b38e44284373c849241fc694c78caff1d3ca3b4e6e72d66f2ab12 [2]
+Announcement and Release Notes
+The new translation interface, known as Translate UX, is considered stable. Several bugs were fixed.
+Some design changes were introduced to the Universal Language Selector. Work continued on the "interlanguage" mode, which shows the ULS trigger as a cog icon in the interlanguage links area. It can be enabled, but is still experimental. A known issue is bug 48898 - the "Apply settings" button doesn't close the Input settings panel after enabling or disabling the settings. The settings are saved, but the button doesn't work correctly.
+CLDR was updated to version 23.1.
+
+2013.04: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.04.tar.bz2
+sha256sum: bd6aca60101308f429d90d421e35093328e7a05ea74d35c05a98474ab648dec4 [3]
+Announcement and Release Notes
+The new translation interface, known as Translate UX, is being improved. In particular, several bugs affecting Microsoft Internet Explorer users were fixed.
+The UniversalLanguageSelector extension is compatible with MediaWiki 1.20.4. It is not compatible with previous versions of MediaWiki.
+
+2013.03: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.03.tar.bz2
+sha256sum: be4c6b5f80e27396555dc09cef0cec92c78cca9eeef796a230da281734738810 [4]
+Announcement and Release Notes
+The new translation interface, known as Translate UX, is now the default. It can be disabled by setting $wgTranslateUseTux to false in LocalSettings.php.
+The diff feature on all old outdated translations is temporarily broken until all such old "fuzzy" messages are updated.
+The UniversalLanguageSelector extension is updated to the latest version. It is compatible with MediaWiki 1.20.3. It is not compatible with previous versions of MediaWiki.
+
+2013.02: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.02.tar.bz2
+sha256sum: 7fece850483e2b74539f69b461501d26487290293ae93b40cd31d6e96f90d112 [5]
+Announcement and Release Notes
+UniversalLanguageSelector is rolled back to the 2012.12 version for compatibility with MediaWiki 1.20 because of a known issue where, with UniversalLanguageSelector enabled, preferences are not saved for logged-in users. Wait for 1.20.3 or use only with the last revision of the 1.20 branch.
+
+2013.01: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2013.01.tar.bz2
+sha256sum: 55adb8b1a5197570fe76501454a66d2f1581bd6854e4091e2b56545a6d072d0b [6]
+Announcement and Release Notes
+Compatible only with MediaWiki 1.21alpha. 1.20.2 has a known issue where, with UniversalLanguageSelector enabled, preferences are not saved for logged-in users; wait for 1.20.3 or use only with the last revision of the 1.20 branch.
+
+2012.12: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2012.12.tar.bz2
+sha256sum: d27fdbbcdd73795914c6f6a8bdddedc3cea06c1ce968b9420f28028fda191a92 [7]
+Announcement and Release Notes
+Compatible with MediaWiki 1.20 and 1.21alpha
+
+2012.11: http://translatewiki.net/mleb/MediaWikiLanguageExtensionBundle-2012.11.tar.bz2
+sha256sum: 924e95b8d5b1c9cef17f72ffe141b06df310ca2cbe013816b5fb69b09732763a [8]
+Announcement and Release Notes
+Compatible with MediaWiki 1.20 and 1.21alpha
+
+Via Git
+In your extensions directory do the following to get or update to the latest release and follow configuration instructions below.
+
+
+
+ for ext in Babel cldr CleanChanges LocalisationUpdate Translate UniversalLanguageSelector
+ do
+   if [ ! -d "$ext" ]
+   then
+     git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/$ext.git
+   fi
+   cd $ext; git fetch --tags; git checkout 2014.01; cd ..
+ done
+
+
+Installation
+Layout: ./mediawiki/extensions/{A,B,C}
+Go to mediawiki directory and extract the release file:
+
+tar xjf MediaWikiLanguageExtensionBundle-2014.01.tar.bz2
+
+The variable you have to add to your LocalSettings.php before the configuration below is:
+
+$EXT = "$IP/extensions";
+
+Layout: ./mediawiki/ ./extensions/{A,B,C}
+Go to common parent directory and extract the release file:
+
+tar xjf MediaWikiLanguageExtensionBundle-2014.01.tar.bz2
+
+The variables you have to add to your LocalSettings.php before the configuration below is:
+
+$EXT = "$IP/../extensions";
+$wgExtensionAssetsPath = "{$wgScriptPath}/../extensions";
+
+Add/update your LocalSettings.php
+Near the end, you have to place the configuration lines given above (pick from one of the two sections) followed by this:
+
+
+
+require_once( "$EXT/Babel/Babel.php" );
+ 
+require_once( "$EXT/cldr/cldr.php" );
+ 
+require_once( "$EXT/CleanChanges/CleanChanges.php" );
+$wgCCTrailerFilter = true;
+$wgCCUserFilter = false;
+$wgDefaultUserOptions['usenewrc'] = 1;
+ 
+require_once( "$EXT/LocalisationUpdate/LocalisationUpdate.php" );
+$wgLocalisationUpdateDirectory = "$IP/cache";
+ 
+require_once( "$EXT/Translate/Translate.php" );
+$wgGroupPermissions['user']['translate'] = true;
+$wgGroupPermissions['user']['translate-messagereview'] = true;
+$wgGroupPermissions['user']['translate-groupreview'] = true;
+$wgGroupPermissions['user']['translate-import'] = true;
+$wgGroupPermissions['sysop']['pagetranslation'] = true;
+$wgGroupPermissions['sysop']['translate-manage'] = true;
+$wgTranslateDocumentationLanguageCode = 'qqq';
+$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
+
+require_once( "$EXT/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+
+
+If you have existing babel categories, you need to check that the configuration matches your wiki's format. See Extension:Babel.
+Update database tables
+Commandline
+In the directory where your LocalSettings.php is located, run the following command:
+
+php maintenance/update.php
+
+Webbrowser
+Go to example.com/mediawiki/mw-config/ by using your domain and path and rerun install.
+Configuring LocalisationUpdate
+If you are on unix like system, you should add LocalisationUpdate to crontab:
+
+crontab -e
+# Add the following line
+@daily php /path/to/your/wiki/extensions/LocalisationUpdate/update.php --quiet
+
+
+
+
+

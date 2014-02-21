@@ -1,0 +1,63 @@
+Manual:Installation requirements Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+
+
+
+In addition to the software itself, a standard MediaWiki installation has the following requirements:
+A web server is required to serve the requested pages to the client browser.
+PHP is required to run the software.
+A database server is required to store the pages and site data.
+In addition, there are various optional dependencies which are required if you want to use certain advanced features (see below).
+Prerequisites can be installed individually or through the XAMPP installer (mind, that the particular version of XAMPP doesn't contain PHP 5.3.2 version). Remember to read the documentation for each individual component before installation. If your website is hosted (i.e. you don't have direct control over it) then contact the server administrators or hosting company to ensure these are installed.
+Note that although MediaWiki ships with an installation script which provides web-based configuration of the most important elements, some knowledge of PHP is required for more detailed customizations.
+Simple One-Download Installation
+Use XAMPP http://www.apachefriends.org to install and configure all of the important packages with only one download. It is available for Linux, Windows, Mac and Solaris. It includes Apache, PHP and MySQL besides other components. Note that the latest version of XAMPP has moved past the PHP 5.3.2 release (5.5.3 at the time of this note) for Windows, so it should be working. For Mac latest release also offers PHP 5.5.3 at the time of this note.
+Web server
+In order to serve the generated pages to the client browser, MediaWiki requires some web server software. Often you will not have a choice of which software to use - it will be the one provided by your hosting provider.
+Most installations use the Apache web server, available at the official download page.
+MediaWiki has also been tested under IIS 6.0, Cherokee, Hiawatha, Litespeed Standard (need a trick for math), nginx, and lighttpd.
+The nginx wiki has a configuration example for MediaWiki.
+Sun has some installation instructions for running MediaWiki on the Sun Java System Web Server 7.0.
+PHP
+PHP is the programming language in which MediaWiki is written, and is required in order to run the software.
+For the latest stable version of MediaWiki, PHP version 5.3.2 or later is required.
+If you are unable to upgrade to PHP 5.3.2, then you can use MediaWiki 1.19.11, which requires PHP version 5.2.0 or later
+The following extensions are required: Perl Compatible Regular Expressions (v4.0+), Session, Standard PHP Library, JSON (since 1.22). Note that all of these are enabled in PHP by default.
+MediaWiki's installer will warn if you don't have the optional PHP intl extension "to handle Unicode normalization". In most Debian/Ubuntu-based distros, this is in the php5-intl package.
+On most Debian/Ubuntu-based distros, either the php5-mysql or php5-mysqlnd package is required if you want MediaWiki to use MySQL.
+If you are installing MediaWiki on CentOS 5.6, use the php53 package instead of php. The php package contains PHP 5.1.x, which is not compatible with the latest version of MediaWiki.
+If you are installing MediaWiki on Red Hat Enterprise Linux 6.4 (CentOS 6.4), you will need to install the php-xml package in addition to the normal php package.
+If you need to compile PHP from source, then see PHP configuration for compilation options that affect MediaWiki.
+Notes:
+Some servers may also require the equivalent database module and session management module be installed. See individual operating system instructions for more information.
+When installing on Windows using the Microsoft installer, add the extension for your database of choice (MySQL or Postgres) to the features to be installed.
+
+Database server
+MediaWiki stores all the text and data (content pages, user details, system messages, etc.) in a database, which it is capable of sharing with other web-based applications (phpBB, etc.). You will need one of the following database servers to run the latest version of MediaWiki:
+MySQL 5.0.2 or later* or MariaDB 5.1+
+PostgreSQL 8.1 or later (supported since MediaWiki 1.8) – also requires plpgsql and tsearch2. These may require a contrib package such as "postgresql-contrib-8.1" to be installed. See Manual:Installing MediaWiki#Postgres for more detail.
+SQLite 3
+Oracle (note: latest MediaWiki version may not be compatible with Oracle. See bug 43533).
+Some users find it helpful to install an additional software package such as phpMyAdmin (MySQL) or phpPgAdmin (Postgres) to help administer the database server.
+*Note: MySQL 5 has been required since MediaWiki 1.19. MySQL 4 support has been required since MediaWiki 1.6. (If you are using an ancient version of MySQL and cannot upgrade then you need to use MediaWiki 1.5.8. Note that this version is no longer supported.)
+Hardware requirements
+The recommended minimum requirements are 256MB of RAM for a single-computer website and 85MB of storage, although this will not suffice for a busy public site or a site with uploading enabled. Some users have reported running MediaWiki on computers with as little as 48MB of RAM.
+The install size can be reduced to around 50Mb for a developer install and to around 26Mb for a non-developer, end-user install. See Manual:Reduce size of the installation
+Optional dependencies
+ImageMagick or GD is required for image thumbnailing.
+TeX is required for the in-line display of mathematical formulae. In most Debian/Ubuntu-based distros, this is in the texlive package.
+Sendmail is required in order for the system to be able to send e-mails.
+Shell access is required to run maintenance scripts; upgrading may be more difficult without it.
+For further information about the above items, see Manual:Installing third-party tools.
+See also
+Manual:OS specific help
+MediaWiki hosting services and wiki farms
+Software bundles
+MediaWiki software bundles
+Installing MediaWiki with BitNami
+
+XAMPP
+Language:
+English  • català • dansk • Deutsch • español • français • Bahasa Indonesia • italiano • 日本語 • 한국어 • polski • português • português do Brasil • русский • українська

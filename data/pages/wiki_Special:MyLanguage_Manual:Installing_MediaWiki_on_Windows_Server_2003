@@ -1,0 +1,344 @@
+Manual:Installing MediaWiki on Windows Server 2003
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+A step step by step guide/log of installing Mediawiki 1.12 on a (64-bit) Windows Server 2003/IIS 6.0 is here, in my sandbox. I haven't had time to format it properly... If anyone wants to use that content to rewrite this page please do.
+This guide shows how to install MediaWiki on a computer running Windows Server 2003 SP2. This should also work on Windows XP Professional if Internet Information Services (IIS) is installed (see Control Panel, Add/Remove Programs, Add/Remove Windows Components).
+The WIMP stack used for this installation:
+Windows Server 2003
+IIS 6
+MySQL 5.0.24 (There are problems with MySQL 5.0.26 and higher as of Nov. 22, 2006)
+
+
+I have MySQL5 and PHP5 running under Win2K Advanced Server SP4, no problem. I also have SMF 1.1RC3 working fine. - Slamlander 23:04, 25 November 2006 (UTC)
+
+
+PHP 5.2.3
+MediaWiki 1.10
+
+
+Ingredients:
+MediaWiki (latest stable version)
+The latest stable release can be downloaded from the Download page.
+PHP 5.3.2+
+Latest version: PHP For Windows
+To install PHP on IIS you need to firstly install the Microsoft FastCGI Extention 1.5 for IIS6 and 5.1.
+You are also going to need Microsoft Visual C++ 2005 Redistributable Package (x86) prior to 'installing' wiki.
+MySQL 5.0.24
+MySQL 5.0.24
+DBTools 3.03 (optional)
+DBTools 3.03
+MySQL db Administration
+Preparation:
+Install MySQL 5.0.24
+Install MySQL to the default directory using the default options:
+Complete the installation by pressing "Next" all the way thru
+Select “Detailed Configuration”
+Choose “Developer Machine”
+Choose “MultiFunctional Database”
+Select path for Data, this configuration used the default location.
+Choose “Decision Support (DSS)/OLAP
+Enable TCP/IP Networking on 3306 and Enable Strict Mode
+Enable standard character set
+Install as a Windows Service and set to launch automatically, check “Include Bin Directory in Windows PATH”
+Enter a Root Password
+Create the setup
+You may need to edit the Windows Firewall settings to allow for TCP port 3306 to be opened for the installation to complete.
+Install PHP 5.3.2x [Recommended]
+Change the install folder to C:\PHP (do this by clicking Browse when the tree list of items to install is shown)
+Select IIS CGI from the list of WebServers
+Expand Extensions and select “MySQL” to install, but note other extensions may be useful but can be added later. Hint: If you plan on using Active Directory authentication later on, be sure to select “LDAP”, “OpenSSL” and “MCrypt” now. If you add them later, not all necessary files are copied. You can get these files by performing a reinstall, but this will mess up your php.ini file. (Note: installing oci8 and sysbase extensions may cause errors.)
+Install all extras (PHP Manual and PEAR)
+In explorer create folders C:\PHP\sessiondata and C:\PHP\uploadtemp
+Select both folders, right click, and choose properties. On the Security tab grant user IUSR_<servername> or IIS_WPG (<name>) “Modify” rights to both folders. (On Windows XP the Security tab is hidden by default. From any Explorer window, click Tools, Folder Options, View tab, then uncheck the last option, Use simple file sharing. This unhides the tab.)
+In Notepad open C:\PHP\php.ini
+Find the line “;cgi.force_redirect = 1” and uncomment it, change the value of “1” to “0”
+Find the line “upload_tmp_dir="C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\php\upload"” and change to “upload_tmp_dir="C:\PHP\uploadtemp"”
+Change the next line to read: “session.save_path="C:\php\sessiondata"”
+NOTE:
+Search PHP.INI for other instances of session.save_path and upload_tmp_dir. Comment them out, if found.
+Save PHP.INI
+Verify that users have write access to the 2 folder created above. This is where cookie information is stored among other data. Matt 18:35, 7 April 2008 (UTC)
+That's it, you're done. No reboot is necessary.
+Install Pear
+
+Current consensus is that go-pear.bat is obsolete, and that pear should be installed by using a .phar (http://pear.php.net/bugs/bug.php?id=18217 for the discussion). Location of .phar is here : http://pear.php.net/go-pear.phar ** The instructions below didn't work for me on Windows server 2008, but the .phar worked fine.
+
+If you want your wiki to be able to email you, after you've installed PHP then you'll also have install pear and download the pear modules mail and net_smtp.
+From Internet Explorer goto: http://pear.php.net/go-pear
+Copy entire webpage, and paste into file: c:\php\pear\go-pear.bat
+From Command Line, do the following:
+
+c:
+cd \php
+.\php pear\go-pear.bat
+pear install mail
+pear install net_smtp
+
+Alternate PEAR Installation Method: Try running the php script using the php engine instead of using .bat files. Follow the steps above but save the contents of the website as c:\php\pear\go-pear.php
+Now from the command line, do the following:
+
+c:
+cd \php\pear
+php go-pear.php
+
+Now run the new file PEAR_ENV.reg by double-clicking it and then do the following from the same command line:
+
+(*) pear config-set http_proxy "http://LOGIN:PASSWORD@PROXYSERVEUR:PORT"
+pear install mail
+pear install net_smtp
+
+[(*) if required]
+Install MediaWiki in IIS
+Extract MediaWiki from its downloaded file and place the entire folder in C:\Inetpub\wwwroot\mediawiki
+Right click on this folder. Add IUSR_<servername> to the permissions list with "Read & Execute" permissions
+Open IIS Manager
+Stop the Default Website
+Right click on “Web Sites” and choose New, Website
+Call it “MediaWiki”
+Select the path “C:\Inetpub\wwwroot\mediawiki”
+Allow the permissions Read and Execute
+Right click on MediaWiki and choose Properties
+On the Documents tab add “index.php” as the default content page and move to the top of the list
+Save settings and exit IIS Manager
+Enable write permissions on the C:\Inetpub\wwwroot\mediawiki\config folder (at least during the setup process).
+Run “iisreset”
+From ANOTHER MACHINE navigate to http://<servername>/mediawiki Note: My machine was a virtual Windows 2000 Professional SP4 installation with the machine joined to the domain and logged on using a domain user account.
+Configure MediaWiki as to your needs
+Copy LocalSettings.php from C:\Inetpub\wwwroot\mediawiki\config to C:\Inetpub\wwwroot\mediawiki
+Navigate back to http://<servername>/
+You are good to go…
+Note: This is as far as my work took me, nothing else was necessary on my installation in order to complete a working MediaWiki install on Windows 2003 SP2. I have left the other steps in the file in case they are useful to others.
+Verification
+See http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/5adfcce1-030d-45b8-997c-bdbfa08ea459.mspx?mfr=true for IIS v6, see http://support.microsoft.com/kb/172138 for earlier IIS versions.
+Ensure that the virtual directory has the .php extension enabled. (Note: The PHP installation should have already configured this.) To do this, select, right click on the web site with the virdir, select Properties. In the resulting dialog, select the "Virtual Directory" tab, and finally click the "Configuration..." button. In the "Application extensions" window, scroll down to verify .php is listed and the path to php-cgi.exe is correct.
+Ensure the default document is set to index.php. To do this, select, right click the virdir and select Properties/ In the Properties window, select the "Documents" tab, and in the "Enable default content page" verify index.php is at the top of the list.
+Note that the menus mentioned in this section are not present on Windows XP Professional SP2. In that case, you may safely skip this step, as the restriction you would otherwise need to disable for PHP isn't present in the first place. In XP Pro SP2, there is no "Web Service Extensions" folder.
+Within the "Internet Information Services (IIS) Manager"
+Expand
+(+) Internet Information Services
+(+) Hostname <-- The name of your server
+(+) Web Service Extensions
+
+
+
+Right-click and choose "Add a new Web service extension..."
+In the new window entitled "New Web Service Extension":
+In the "Extension name:" field, enter, "cgi" (without the quotation marks)
+Then click "Add..."
+"In the new window entitled "Add file" and in the field "Path to file:", type in "C:\PHP\php-cgi.exe" (without the quotation marks)
+Click "OK"
+
+Tick "Set extension status to Allowed"
+Click "OK"
+
+The system should allow you to have 2 extensions referencing the same Required Files (C:\PHP\php-cgi.exe), but in some cases people have reported this as something that doesn't work for them. There is no definitive fix for this at the time of this writing...other than to tell you that it works for me... Possible workaround is to copy php-cgi.exe to php-cgi2.exe and use php-cgi2.exe instead.
+
+
+Install MySQL 4.1
+Use the setup file. Perform a "Complete" installation with defaults.
+Check the 'configure now' box and select 'detailed configuration'
+Options to choose: Server, multifunction, OLTP, Latin1 collation, Enable TCP/IP Networking, Disable 'strict mode', add BIN to PATH variable, do not change accounts (mediawiki installation will gack) [NB this probably means mySQL will install with blank root password], start as a service
+ensure the installation worked:
+
+  C:\>mysqlshow -u root -p
+
+Enter password: ***********
+
+  +-----------+
+  | Databases |
+  +-----------+
+  | mysql     |
+  | test      |
+  +-----------+
+
+force MySQL to use 16-byte password encryption
+open the file C:\Program Files\MySQL\MySQL Server 4.1\my.ini
+add the following in the [mysqld] section:
+
+  #Use old password encryption method
+  old-passwords
+
+restart the MySQL service! (enter NET STOP mysql, then NET START mysql)
+NB: the reasons for this are detailed at http://dev.mysql.com/doc/mysql/en/old-client.html
+Also need to run the following commands:
+
+C:\>mysql -u root -p
+Enter password: *****
+
+-> UPDATE mysql.user SET Password = OLD_PASSWORD('new_password') [set this to whatever you want your root password to be]
+-> WHERE Host = 'localhost' AND User = 'root';
+-> FLUSH PRIVILEGES;
+
+Install MediaWiki by visiting the virdir previously created
+NB: if your website cannot be addressed as localhost, then go to IIS setting, select the vroot and right click on it and select browse.
+visit the virdir in a browser
+sitename: demowiki
+contact email: root@wikihost [whatever you want your contact email to be]
+sysop: WikiSysop
+pwd: S3cur3Passw0rD
+no caching
+MySQL SERVER: wikihost [or 'localhost']
+dbname: wikidb
+wikiuser S3cur3Passw0rD2
+root pwd: S3cur3Passw0rD3 (just use whatever you set the root mySQL password to in step 6 above)
+Create LocalSettings.php in root directory of mediawiki
+After you visit http://<server name>/config/index.php the following will be displayed on your browser. Copy everything between <?php ?> to a file in a root directory of your wiki called: LocalSettings.php
+Below is the start of that section:
+
+Warning: fopen(LocalSettings.php): failed to open stream: Permission denied in C:\Inetpub\wwwroot\wmobilewiki\mediawiki-1.5.4\config\index.php on line 687
+Couldn't write out LocalSettings.php. Check that the directory permissions are correct and that there isn't already a file of that name here...
+Here's the file that would have been written, try to paste it into place manually:
+<?php
+# This file was automatically generated by the MediaWiki installer.
+# If you make manual changes, please keep track in case you need to
+# recreate them later.
+
+
+To enable image uploads, make sure the 'images' directory is writable, then uncomment this:
+
+$wgEnableUploads           = true;
+
+Also, to enable thumbnails, follow instructions above for php, then set this to true:
+
+$wgUseImageResize          = true;
+
+change the root password of the MySQL instance!
+Use the command line or DBTools.
+Fix the script error
+If you are getting "Undefined index REQUEST_URI" error messages try this: This problem is a PHP for Windows problem. You should replace all references to the REQUEST_URI member of the _SERVER array with SCRIPT_NAME. The name of the same variable is different between the Windows and UNIX versions of PHP.
+Thus:
+
+ Old:  $_SERVER['REQUEST_URI']
+
+Change to:
+
+ New:  $_SERVER['SCRIPT_NAME']
+
+I have seen this within:
+"includes/Setup.php", lines 90, 96, 97
+"includes/WebRequest.php", line 284
+"includes/Skin.php" line 574
+"includes/GlobalFunctions.php", line 232
+"includes/wiki.php", line 388
+"index.php", line 228
+"includes/HttpFunctions.php", line 33 (MediaWiki 1.7.1)
+Remark: You can also add $_SERVER['REQUEST_URI'] = $_SERVER['SCRIPT_NAME']; to LocalSettings.php
+However, $_SERVER['SCRIPT_NAME'] isn't always equal to $_SERVER['REQUEST_URI'], especially when a rewrite module is employed and/or directory names are used instead of default file names. The only way to get 100% Apache-compliant $_SERVER['REQUEST_URI'] is to use the ISAPI Filter and steps listed here.
+Troubleshooting
+a. Fix Access to page when hosted on a Windows 2003 Domain Controller
+If you host MediaWiki on a Windows 2003 server acting as a Domain Controller, you may receive an error message when trying to open the page. This is because the default domain controller security policy will prevent running of CGI scripts.
+Try the solutions on Microsoft KB904056.
+WARNING: Use a domain controller as a IIS host at your own risk. Any security breach could potentially lead to the attacker having access to your entire Active Directory database.
+Note: First attempt Method 1: Set the CreateProcessAsUser metabase setting to false. This has been used successfully in multiple installations.
+b. Fix Email problem when using IIS SMTP Relay / Exchange
+If you are having problems getting email notifications working and receive an error message of Invalid Address 5.5.4 (when using MediaWiki 1.6.5) then you can edit includes/UserMailer.php around line 45:
+Before:
+
+class MailAddress {
+        /**
+         * @param mixed $address String with an email address, or a User object
+         * @param string $name Human-readable name if a string address is given
+         */
+        function MailAddress( $address, $name=null ) {
+                if( is_object( $address ) && is_a( $address, 'User' ) ) {
+                        $this->address = $address->getEmail();
+                        $this->name = $address->getName();
+                } else {
+                        $this->address = strval( $address );
+                        $this->name = strval( $name );
+                }
+        }
+
+After:
+
+class MailAddress {
+        /**
+         * @param mixed $address String with an email address, or a User object
+         * @param string $name Human-readable name if a string address is given
+         */
+        function MailAddress( $address, $name=null ) {
+
+        #To get round IIS SMTP Invalid Address Problem
+        $this->name = "";
+                if( is_object( $address ) && is_a( $address, 'User' ) ) {
+                        $this->address = $address->getEmail();
+                } else {
+                        $this->address = strval( $address );
+                }
+        }
+
+c. Permission Denied issue on IIS (Windows XP)
+Follow the steps of this article: http://www.ekhoury.com/2007/01/15/permission-denied-php-on-iis/
+d. Error in my_thread_global_end(): 1 threads didn't exit
+Using PHP 5.2.3 and MYSQL 5.0.24, ran into the issue where the http page request for each wiki page would hang for about 5 seconds before closing the connection, then finally display a message at the bottom of the page "Error in my_thread_global_end(): 1 threads didn't exit".
+The fix for this was
+Download the PHP 5.2.1 Windows binary
+Rename your c:\php\libmysql.dll to c:\php\libmysql.dll_old
+Unzip and copy libmysql.dll from the 5.2.1 version to c:\php\libmysql.dll
+Disclaimer: This fixes the issue for me with the limited wiki usage I do, but is not fully regression tested etc..
+e. Error "There is a problem with this Windows Installer package. A script required .." when installing PHP from msi package
+( Taken from [1] ) If you are on non-English version of Windows 2003 server, change decimal separator from ',' (comma) to '.' (dot) in regional settings.
+f. PHP 5.2.9 Lockup in IIS
+On some Windows Server 2003 systems the PHP 5.2.9 calls exec() and shell_exec() can cause the system process to hang. This causes the IIS worker process to hang, along with any applications pooled within that process. Such a process cannot be killed unless the entire system is restarted. This is related to PHP Bug #44994 (http://bugs.php.net/bug.php?id=44994). It is recommended to fallback to a older version of PHP.
+g. Impossible to upload images with non standard characters
+On the windows platform it is impossible, due to a php bug, to upload images with non-ascii filenames: an image "Ángel.jpg" cannot be seen by mediawiki after uploading it with the upload form.
+h. IIS returns a 404 error page instead of MediaWiki default error page
+Description of the issue: a 404 error page is displayed when you try to reach an unexisting page (for example, the community portal page just after the installation) instead of the error message "There is currently no text in this page. You can search for this page title in other pages, search the related logs, or edit this page."
+Solution: you have to go to the IIS Management console and edit the properties of the site in which your MediaWiki is hosted. Into the "custom error" table, click on the 404 error and set it to default. {Note: for IIS 7.5, bring up IIS Manager, highlight the wiki directory and double click on the "Error Pages" icon. Under Actions (on the right column), click "Edit Feature Settings..." and select "Detailed errors".}
+i. Other Problems?
+(taken from Brion Vibber's post to the MediaWiki Listserv)
+Confirmed that the installation was correct? Confirmed that the GRANTs on the database are correct? Confirmed that the username and password given to the installer are correct? Tried digging into the code to add more output checks? Checked the MySQL error logs?
+If you are still having problems, ensure that you have done the following:
+Tried fresh install? Tried different settings? Tried a different server? Tried different ports? Any difference between the multiple servers?
+If you're having trouble with blank pages on IIS and can't switch, try the workaround suggested in this bug report:bugzilla:1763 TODO: fix for --
+Turck MMCache not installed, can't use object caching functions
+
+
+ documented by
+ [ian] 12:57, 24 May 2005 (Mountain Daylight Time)
+ [laurent] 08:31, 07 November 2005
+ [joshcoady] 11:54, 24 December 2005
+
+Language:
+English  • 日本語
+
+
+
+
+
+

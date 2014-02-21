@@ -1,0 +1,311 @@
+Manual:Running MediaWiki on FreeBSDInstallation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+This installation guide assumes you are installing on the local machine (localhost) and that you are logged in as the superuser (root). Also, these instructions have been tested to work with FreeBSD 8.0+, PHP 5.2/5.3, MySQL 5.0/5.1, Apache 2.2, and MediaWiki 1.13 (or later). Other software versions might require slightly different steps. Instructions for older versions of FreeBSD are below.
+
+
+
+Install Apache, PHP, MySQL, and MediaWiki
+These can either be installed from binaries (using pkg_add) or from source via the ports tree under /usr/ports.
+To install from binaries (faster option):
+
+ pkg_add -r apache22 mysql-server php5 php5-mysql mediawiki
+
+NOTE: If you are using FreeBSD 8.2, replace the mysql-server with mysql50-server or mysql51-server (the latter matching mysql51-client that may already have been installed on 8.2 by other packages).
+Unfortunately, the binary installation of php5 does not include mod_php, which is needed by Apache to execute PHP code in pages. Therefore (taken from the FreeBSD handbook, section 29.7.6.4):[1]
+
+ cd /usr/ports/lang/php5
+ make config
+ make
+ make deinstall
+ make reinstall
+
+During the make config step above, enable the "APACHE" option in the menu.
+Set up MySQL
+The easiest method is to only set a root password and then let the MediaWiki installer script do the rest:
+
+ mysqladmin -u root password password
+ history -c
+
+Use
+
+ /usr/local/etc/rc.d/mysql-server onestart
+
+to start MySQL. (Later we will edit rc.conf so MySQL gets started automatically during boot.)
+Edit /usr/local/etc/apache22/httpd.conf
+Make sure the following sections have been added to /usr/local/etc/apache22/httpd.conf:[1]
+
+ LoadModule php5_module        libexec/apache/libphp5.so
+
+
+   <IfModule php5_module>
+       DirectoryIndex index.php index.html
+       AddType application/x-httpd-php .php
+       AddType application/x-httpd-php-source .phps
+   </IfModule>
+
+If you want to serve MediaWiki content exclusively, you can simply change the Apache document root to the MediaWiki installation directory:
+
+ DocumentRoot "/usr/local/www/mediawiki"
+
+Also add an entry for the MediaWiki directory to httpd.conf:
+
+ <Directory "/usr/local/www/mediawiki">
+   Options Indexes FollowSymLinks
+   DirectoryIndex index.php index.html
+   AllowOverride None
+   Order allow,deny
+   Allow from all
+ </Directory>
+
+Use
+
+ apachectl restart
+
+to launch (or relaunch) Apache. Open http://localhost in your browser to see if Apache works.
+Edit /etc/rc.conf
+Make sure your hostname in rc.conf contains a domain name, and that Apache and MySQL are set to start automatically during boot:
+
+ hostname="mycomputer.example.com"
+ apache22_enable="YES"
+ mysql_enable="YES"
+
+Run the MediaWiki web installer
+The directory for creating configuration files is mw-config (called config prior to MediaWiki 1.17).[2] For versions of MediaWiki earlier than 1.17, you need to make that directory writable for the installer:
+
+ cd /usr/local/www
+ chmod 777 mediawiki/config
+
+Since MediaWiki 1.17 this is no longer necessary because the LocalSettings.php file will be downloaded by the browser from the installer web page instead of written directly to the configuration directory.[3]
+Create the images directory for storing uploads if it does not exist yet:
+
+ mkdir mediawiki/images
+
+Make sure all MediaWiki files belong to user www:
+
+ chown -R www mediawiki
+
+Now open http://localhost/mediawiki/mw-config/index.php in your browser to start installation. Enter root and your MySQL root password in the superuser name and password fields. See Manual:Config script for more information on using the web installer.
+After the installer has finished successfully, copy the resulting LocalSettings.php file to the MediaWiki root directory. For MediaWiki versions earlier than 1.17 this means:
+
+ cd /usr/local/www/mediawiki
+ cp config/LocalSettings.php .
+ chmod 700 config
+
+Under MediaWiki 1.17 or later, just copy LocalSettings.php from where it was saved by your web browser to /usr/local/www/mediawiki.
+Edit /usr/local/www/mediawiki/LocalSettings.php
+This is the main configuration file for your MediaWiki installation. You will probably want to enable uploads and change the logo. The logo image should be 135 pixels square:
+
+ $wgEnableUploads = true;
+ $wgLogo = "http://mycomputer.example.com/my_logo.png";
+
+If you would like to use php maintenance/update.php to upgrade MediaWiki to the latest version, you should also add the database root password to LocalSettings.php:
+
+ $wgDBadminuser = "root";
+ $wgDBadminpassword  = "password";
+
+You're done!
+Further configuration of FreeBSD
+Please note that your Apache server will also serve pages to everyone else on the local network. You may want to check your firewall settings if you do not want to make your MediaWiki content available to other machines.
+Further configuration of PHP
+Some parameters of the wiki such as maximum upload size must be set in PHP itself. Edit (or create) the file /usr/local/etc/php.ini if you need support for larger upload file sizes or if MediaWiki reports problems with session data ("Loss of session data. Please try again."). Also, large XML imports may require increasing maximum PHP execution time (set to 10 minutes below):
+
+ upload_max_filesize  = 50M
+ post_max_size        = 50M
+ session.save_path    = "/var/lib/phpsess"
+ max_execution_time   = 600
+
+The temporary directory for PHP sessions, /var/lib/phpsess in this sample setup, should be owned by user www and have permissions 733. When you make changes to php.ini, you have to restart Apache with apachectl restart for the changes to take effect.[4]
+MediaWiki extensions
+Extensions are installed by extracting the ".tar.gz" archive to /usr/local/www/mediawiki/extensions/, registering the extension in LocalSettings.php, and restarting Apache.
+An important extension to get is ParserFunctions, necessary for template logic. (Import MediaWiki:Common.css from Wikipedia into your wiki if you want e.g. navbox colors to be the same as on Wikipedia. Import MediaWiki:Common.js for collapsible tables.) This extension also requires ctype to be installed for PHP:
+
+ pkg_add -r php5-ctype
+
+If you see garbage HTML tags on your wiki pages (sometimes found in templates due to incorrect mixing of wiki markup and HTML), this can be fixed by installing HTML Tidy (pkg_add -r tidy) and enabling it with
+
+ $wgUseTidy = true;
+
+in LocalSettings.php.[5]
+Another useful extension for Wikipedia-style articles is Cite which handles references. Also, SpecialInterwiki or InterWiki can be used for easier maintenance of interwiki links.
+Your local MediaWiki extensions are listed here: http://localhost/index.php/Special:Version
+SVG support
+Add the following lines to LocalSettings.php to allow SVG upload and to enable thumbnail and preview rendering with Inkscape:
+
+ $wgFileExtensions = array('png', 'gif', 'jpg', 'jpeg', 'svg');
+ $wgSVGConverters = array(
+   'Inkscape' => '/usr/local/bin/inkscape -z -w $width -f $input -e $output',);
+ $wgSVGConverter = 'Inkscape';
+
+Obviously, Inkscape must be installed for this to work (pkg_add -r inkscape). Wikipedia is still using rsvg for SVG rendering, which produces less accurate results than Inkscape but is faster.[6]
+MediaWiki 1.17 or later extract meta data from SVG files using the XMLReader PHP extension, so it must be installed:
+
+ pkg_add -r php5-xmlreader
+ apachectl restart
+
+TeX support
+Install the necessary packages[7] with
+
+ pkg_add -r ocaml ImageMagick ghostscript8 teTeX
+
+Then compile texvc with
+
+ cd /usr/local/www/mediawiki/math/
+ gmake
+
+For versions of MediaWiki before 1.18, add the lines
+
+ putenv("PATH=".getenv("PATH").":/usr/local/bin");
+ $wgUseTeX = true;
+
+to LocalSettings.php.
+For version 1.18 of MediaWiki and later, install the Math extension, add
+
+require_once("$IP/extensions/Math/Math.php");
+
+to LocalSettings.php, and run the update script:
+
+php /your/path/to/mediawiki/maintenance/update.php
+
+(See the documentation for the Math extension for further details.)
+Custom namespaces
+If you import content from Wikipedia, it is useful to set up custom namespaces. This is particular necessary for namespaces like "Portal" where many pages use transclusion of templates from subpages. Set up a custom namespace and enable subpages with:[8]
+
+ $wgExtraNamespaces[100] = "Portal";
+ $wgExtraNamespaces[101] = "Portal_talk";
+ $wgNamespacesWithSubpages[100] = true;
+
+Job queue settings and performance
+By default, every request to the server will cause one item from the MediaWiki job queue to be processed. On a low-traffic wiki such as a personal server, the job queue will only get cleared slowly this way and page loading will feel somewhat sluggish, as some jobs may take over a second to complete.
+Performance is improved by processing the job queue in the background by a daily cron job when user activity is low: Disable per-request job queue processing in LocalSettings.php by adding
+
+$wgJobRunRate = 0;
+
+and schedule a cron job by putting
+
+0 0 * * * nice /usr/local/bin/php /usr/local/www/mediawiki/maintenance/runJobs.php 2>&1 > /var/log/runJobs.log
+
+in user www's crontab. This will run the queue processing job at midnight every day at slightly lower process priority.
+
+
+IMPORTANT: All content below this box was written for older versions of FreeBSD (v4 and v6) and may not work on later versions.
+Legacy content that has been updated or verified for FreeBSD v8 and later should be moved above this box.
+Database
+Install MySQL from ports, databases/mysql40-server.
+Web server
+Apache can be installed from ports, www/apache13 or www/apache2.
+TeX support
+Install these from ports for math rendering support if you haven't already got them:
+lang/ocaml
+print/latex
+print/dvips
+graphics/ImageMagick
+print/ghostscript-gnu-nox11
+For FreeBSD 4.11 users: please install the following packages instead because dvips is not available in the package list:
+ocaml
+teTeX
+ImageMagick
+gmake
+teTeX already includes latex and dvips. However, it will conflict with latex2e. So please make sure that your system does not have latex2e.
+texvc's Makefile requires GNU make. Once ocaml is installed, go into the math/ subdirectory of the MediaWiki package and run 'gmake'. The texvc executable will be installed by install.php if you use it and have $wgUseTeX set to true, or you can copy it in manually. Put it in 'math' subdirectory under where wiki.phtml is.
+Note that certain versions of FreeBSD (5.3) may require a cvsup of the ports directory to work correctly. If you attempt this installation and run into errors, try cvsup'ing your ports tree and remaking the above ports -- ImageMagick specifically.
+The MediaWiki-1.1.0 and earlier releases use an option for dvips which the ports version doesn't support. The latest CVS version has used a more compatible option; if using an older release, edit render.ml and change "-o -" to "-f" at the end of the first line, then build texvc.
+Note that latex, dvips, and convert must be in the PATH for texvc to shell out to them. If apache is started on system startup it may not have /usr/local/bin in the PATH, and this PATH will be inherited by texvc and image output won't happen. Restart apache after boot, or put this into LocalSettings.php:
+
+ putenv("PATH=".getenv("PATH").":/usr/local/bin");
+
+In some installations, dvips seems to have problems with texvc's command line parameters: it doesn't recognize 'ps:-' as an input filename specifier for stdin. Change this line to use plain '-' in file render.ml and compile texvc again:
+
+let cmd_convert finalpath = "/usr/local/bin/convert -quality 100 -density 120 - " ^ finalpath ^ " >/dev/null 2>/dev/null"
+
+Matrix Support
+The default install of math libraries will not have the asmfonts installed. Asmfonts are used for matrix, bmatrix, and pmatrix math libraries.
+Instructions and fonts can be obtained from the following links:
+http://www.ams.org/tex/distrib.html#unix
+http://www.ams.org/tex/amsfonts.html
+Likely, the fonts will need to be installed in /usr/local/share/texmf
+FreeBSD 6.2
+I installed MediaWiki on FreeBSD 6.2 through ports.
+
+Requirements: Apache;  /usr/ports/www/apache22 
+PHP;  /usr/ports/lang/php5 
+MySQL;  /usr/ports/databases/mysql50-server 
+teTeX;  /usr/ports/print/teTeX 
+
+cd /usr/ports/www/mediawiki
+make install clean rehash
+teTeX
+On FreeBSD 6.2 I had previously installed the LaTeX port. This worked for some math typesetting, but not for matrices, vectors, and things like \mathbb{R}.
+I had to remove the latex port:cd /usr/ports/print/latex
+make deinstall
+make clean
+Update my ports tree using portsnap:portsnap fetch
+portsnap extract
+Then install the teTex port:cd /usr/ports/print/teTeX
+make install clean
+rehash
+Then restart the apache web server:apachectl graceful
+Now I have access to vectors, matrices, \mathbb{}, and all the amsfonts characters. amsfonts is called amspsfnt in the FreeBSD ports tree, and is installed as part of the teTeX port.
+Memcached
+Install it from databases/memcached. Please note, that it should not be reachable from outside, as that would cause severe security risks for your installation. If you're running on a jail, your localhost address would be mapped to a Net-visible address.
+Some problems and workarounds
+I have different configurations for standalone php and module-php. install.php database functions don't work in standalone php.
+Workaround - run install.php from commandline to copy files. Then copy it to install2.php and comment out parts which copy files. Also hard-code db root password and delete lines where commandline input is expected. Run install2.php by accessing it from the webserver.
+I've installed MediaWiki with Cs locales and wiki.phtml doesn't work.
+LanguageCs needs LanguageUtf8.php to work. Copy LanguageUtf8.php to the same directory as LanguageCs.php
+wiki.phtml still does not work
+Hard-code including LanguageCs.php after Language.php in Setup.php
+During installation i get this error message:
+
+"PHP's XML module is missing; the wiki requires functions in 
+this module and won't work in this configuration.
+If you're running Mandrake, install the php-xml package."
+
+Make sure php extensions port is installed.
+
+$cd /usr/ports/lang/php(4|5)-extensions
+$make install distclean
+
+select xml from the menu
+
+$ldconfig (to link newly installed xml library)
+
+Restart apache.
+See also
+Manual:Configuration
+References
+↑ 1.01.1 http://www.freebsd.org/doc/handbook/network-apache.html#AEN38849
+↑ Manual:Config script
+↑ MediaWiki_1.17#New_installer
+↑ Manual:Configuring file uploads#Set maximum size for file uploads
+↑ Manual:Using content from Wikipedia
+↑ Manual:Image Administration#SVG
+↑ Manual:Enable TeX
+↑ Manual:Using custom namespaces
+Language:
+English  • 日本語

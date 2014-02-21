@@ -1,0 +1,37 @@
+MediaWiki on IRCIRC redirects here. For IRC extensions, see Category:IRC extensions. For IRC based recent changes bots, see Manual:IRC RC Bot.
+The #mediawiki IRC (Internet Relay Chat) channel (on freenode.net) is the best form of real-time communication for discussion of or questions about the MediaWiki software. You will often find developers or other knowledgeable users who will be happy to answer any technical questions you may have. You can use this web page to connect.
+It's okay to "lurk" (hang around and listen without talking), and sometimes you won't get an answer immediately. This explanation tells you a little more about how to use IRC channels to talk about open source.
+
+
+
+#mediawiki
+Before use
+Before using #mediawiki for technical help:
+Make sure you have read the FAQ and have looked at Project:Help.
+Check that this is the best method of communication for your particular problem.
+Search MediaWiki.org, Meta-Wiki and Google for a solution to your problem.
+Make sure you are familiar with IRC etiquette
+Don't ask if you can ask a question - just ask it!
+Links
+#mediawikiconnect
+#mediawiki-itconnect in italian
+#mediawiki-esconnect in spanish
+freenode.net (network that hosts #mediawiki)
+Channel logs
+2007–2009 channel logs archive
+
+Channel log search
+#wikimedia-dev
+#wikimedia-devconnect
+This channel is used by developers for day-to-day work. It's very similar in scope to #mediawiki, with the main difference being that it's typically where developers go to talk discuss about changes in the MediaWiki software (and Wikimedia repositories), whereas #mediawiki is more targeted at the users of the software.
+Updates from many of the repositories are posted (and usually discussed) here, thanks to the grrrit-wm bot.
+The bug triage meetings also take place here.
+Other channels
+See IRC/Channels on Meta-Wiki for other channels used by the community and developers.
+Connecting to IRC
+In order to connect to an IRC channel, you need to install an IRC client. If you already have one installed, and your browser is correctly configured, then clicking the above direct links should automatically take you straight to the appropriate channel. If you need help finding, installing or configuring an IRC client, then here are some links that might help:
+Comparison of IRC clients - If you do not have an IRC client installed, then this list should help you find one.
+List of IRC commands - An overview of available IRC commands.
+
+Language:
+English  • Deutsch • español • français • italiano • 日本語 • polski • português • português do Brasil • русский

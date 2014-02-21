@@ -1,0 +1,119 @@
+Download from GitTranslate this page; This page contains changes which are not marked for translation.
+Other languages:
+العربية  • ‎български  • ‎dansk  • ‎Deutsch  • ‎Ελληνικά  • ‎English  • ‎español  • ‎euskara  • ‎français  • ‎עברית  • ‎italiano  • ‎日本語  • ‎Lëtzebuergesch  • ‎lietuvių  • ‎Nederlands  • ‎polski  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎ייִדיש  • ‎中文 
+
+Since MediaWiki 1.19beta2, 1.18.2, 1.17.3, MediaWiki core and extensions use Git for version control. For older versions, see Subversion
+Git is distributed version control software that allows users to download the very latest version of a branch, without having to wait for someone to get around to packaging it. MediaWiki will release faster, and it'll be easier for you to update your installation, roll back an upgrade, or submit patches. (Of course always remember official stable releases are less risky.)
+See Git for more details, particularly for making contributions. Below are some quick directions for a couple common tasks.
+
+
+
+Prerequisites
+You must have Git installed before you can use it. There are many different ways to acquire Git, depending on your operating system. For source and official binaries, check out http://git-scm.com. For alternative ways to install Git, use your favorite search engine to find instructions for your operating system.
+Using Git to download MediaWiki
+Download
+You can currently download MediaWiki core (phase3 on SVN) using Git, as well as any extension currently installed on the Wikimedia Foundation server cluster. By July 2013, all extensions will either be available using Git or move to alternate version control hosts.
+The first step is to clone the MediaWiki repository. This may take awhile.
+Enter in the following on your command line:
+
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git
+
+In the case that you see "The requested URL returned error: 403" or "error: The requested URL returned error: 403 while accessing https://gerrit.wikimedia.org/r/p/mediawiki/core.git" you need to check your git client version
+
+git --version
+
+and upgrade to at least git 1.7, versions 1:1.7.2.3-2.2~bpo50+1, 1.7.9.2 and 1.7.9.6 are known to work.[1]
+This clones the entire MediaWiki core repository. The default 'branch' will be the cutting-edge, developer version of MediaWiki. Once the repository is cloned, you can easily switch to different branches or tags (see below), including those tracking stable versions of MediaWiki.
+If you have Developer access (which is easy to request):
+
+git clone ssh://<USERNAME>@gerrit.wikimedia.org:29418/mediawiki/core.git
+
+View latest source code
+Specific MediaWiki versions
+WMF branches
+Remote branches are used to track the MediaWiki versions used on the Wikimedia Foundation server cluster. The latest may not be entirely stable, but they receive very quick bug fixes and are generally stable enough - after all, these are what major projects such as Wikipedia are using. Once a REL* branch is considered 'stable', we 'tag' it and turn it into a tarball release.
+To see what branches are available, you switch into your MediaWiki clone and issue the following command:
+
+git branch -r | sort -V
+
+Major releases are denoted by "origin/REL<release number>", e.g. "origin/REL1_22". To switch to a particular release branch:
+
+git checkout -b REL<release number> origin/REL<release number>
+
+For example, to switch to the current stable version, 1.22.2, enter:
+
+git checkout -b REL1_22 origin/REL1_22
+
+MediaWiki tags (stable version)
+Alternatively, specific stable versions of MediaWiki are tracked using 'tags'. These are analogous to the tarball releases. You can see the versions available with:
+
+git tag -l | sort -V
+
+Using non GNU sort command, such as on Mac OS X, you have to rely on the good old separators:
+
+git tag -l | sort -n -t. -k1 -k2 -k3
+
+To use a specific tag:
+
+git checkout <tag name>
+
+Latest development version of MediaWiki
+The latest development version of MediaWiki is tracked in the 'master' branch. This is what is locally checked out by default when you first clone the MediaWiki repository. If you have switched to another branch but would like to switch back to using bleeding-edge MediaWiki, do:
+
+git checkout master
+
+Keeping up to date
+If you're using a particular branch or the development version of MediaWiki, picking up the latest changes is really easy. Change into your MediaWiki clone directory and issue the pull command:
+
+git pull
+
+All of the latest changes for the branch you are using will be applied.
+Also, after updating/upgrading you should run the MediaWiki Update script from the command line:
+
+php maintenance/update.php
+
+Switching to a different version
+Switching to a different version of MediaWiki is far simpler with Git than with SVN. Each of our versions are tracked as branches or tags. In order to switch to one of these, all you have to do is 'checkout' the particular branch or tag you want from within your MediaWiki clone directory:
+
+git checkout <branchname>
+
+or
+
+git checkout <tag name>
+
+The changes will be applied automatically and you will be all set to go.
+Using Git to download MediaWiki extensions
+Download
+List of extensions in git
+<EXT> should be replaced with the name of the extension you want to download, without spaces. For Extension:TitleKey, it would be TitleKey. (case sensitive!)
+Download and clone an extension from Git:
+
+cd /path/to/extensions
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/<EXT>.git
+
+Developers clone with:
+
+git clone ssh://<USERNAME>@gerrit.wikimedia.org:29418/mediawiki/extensions/<EXT>.git
+
+Source code can be inspected with:
+
+https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/<EXT>.git;a=tree;h=refs/heads/master;hb=master
+
+Download all extensions
+If you prefer to have all MediaWiki extensions that are at gerrit.wikimedia.org checked out to your machine, do the following:
+
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions.git
+cd extensions
+git submodule update --init --recursive
+
+To update the extensions to their latest versions, just do this:
+
+cd /path/to/extensions
+git pull
+git submodule update --init --recursive 
+
+See also
+Migrating from SVN to Git
+Nightlies, an alternate to downloading from Git
+References
+↑ http://grokbase.com/t/gg/android-building/123wxqjxmq/the-requested-url-returned-error-403

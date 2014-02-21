@@ -1,0 +1,25 @@
+CustomizationTranslate this page
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎suomi  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎Nederlands  • ‎ଓଡ଼ିଆ  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎Tiếng Việt  • ‎粵語  • ‎中文  • ‎中文（繁體）‎ 
+
+MediaWiki can be customized in several ways. It is distributed as GPL. You may thus contribute your own skins, extensions and patches.
+Configuration
+Configuration parameters may be easily defined in a LocalSettings.php file.
+Interface messages can be modified in the wiki.
+Extensions and patches are provided by the community, some of which are available here. They generally fall into one of these categories:
+Extensions defining a new wiki tag (see also: Write your own MediaWiki extension)
+Extensions defining a new special page (see also: Writing a new special page)
+
+MediaWiki is multilingual, and fully so with the Translate extension.
+The FAQ contains a lot of useful customization info.
+Skins
+
+
+
+
+Just one example of an original skin
+
+
+Look and feel can be modified by using different skins. There is a gallery of user styles which gives examples of the kind of skin customization that is possible.
+Language:
+English  • català • čeština • dansk • Deutsch • español • suomi • français • Bahasa Indonesia • italiano • 日本語 • 한국어 • Nederlands • ଓଡ଼ିଆ • polski • português • português do Brasil • русский • українська • Tiếng Việt • 粵語 • 中文 • 中文（繁體）‎

@@ -1,0 +1,267 @@
+Manual:Running MediaWiki on Gentoo Linux
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+
+Gentoo basics
+Gentoo Linux uses the Portage package management system, invoked by the emerge command, to download, compile, and install software.
+To minimize the chances of having connection problems when you emerge something, add multiple mirror sites to the file /etc/make.conf, as in the following example:
+
+GENTOO_MIRRORS="ftp://ftp.heanet.ie/pub/gentoo/ http://ftp.easynet.nl/mirror/gentoo/" 
+
+The main website of the Gentoo distribution, Gentoo.org, maintains a list of possible mirrors (the ones used above are only for illustration purposes). You can also install the mirrorselect utility to assist in finding and enabling different mirror sites, so you don't have to edit /etc/make.conf yourself:
+
+emerge mirrorselect
+
+Note that every emerge command can be invoked with the --pretend and --verbose options (or -pv for short), so you can see what version of the software will be installed, which version if any is already installed, and what USE flags[1] are recognized by the package. For example:
+
+emerge -pv portage
+
+To ensure you have the latest list of available packages, you can update your local copy of the software tree by issuing the command:
+
+emerge --sync
+
+In addition, when "emerging" a package, the options --update and --deep (-uD for short) can be used to install any updates for all the packages upon which the given package depends.
+See the Portage documentation at Gentoo.org for more information on all of these aspects of using emerge, especially if you encounter an error when trying any of these commands.
+You might also be interested in the functionality provided by ufed (the Gentoo Linux USE flags editor) or profuse (a more GUI-oriented USE flags editor), and gentoolkit (which contains equery and the essential Gentoo utility revdep-rebuild).
+
+emerge ufed
+emerge profuse
+
+(You only need one of the above.)
+
+emerge gentoolkit
+
+(Not MediaWiki specific, but essential for maintaining your Gentoo Linux distribution in good working order.)[2]
+USE flags and optional packages
+As of MediaWiki 1.8.5, the following USE flags are supported:[3]
+imagemagick 
+Enables support for Imagemagick (image converter)
+math  
+Adds math rendering support
+mysql  
+Adds mySQL Database support
+postgres  
+Adds support for the postgresql database
+restrict  
+Initial setup will only allow sysop user to create new accounts, read and edit any pages
+vhosts  
+Adds support for installing web-based applications into a virtual-hosting environment
+Use the imagemagick flag to enable thumbnail creation if you do not want to include support for the gd graphics library in php (see below). Enabling this USE flag will pull in the imagemagick package as a dynamic dependency when you install MediaWiki, but if you want to install it beforehand, use:
+
+emerge -pv imagemagick
+emerge imagemagick
+
+(Remember that the -pv option lists package version numbers and USE flags. This "preview" step will not be listed in the following instructions, but is always a good idea to do before emerging a package.)
+If you want "math support" — i.e., proper interpretation and display of TeX/LaTeX code enclosed in <math> tags — use the math USE flag. This will pull in the teTeX,[4] Ghostscript, and ImageMagick packages automatically when you emerge the MediaWiki package. Otherwise, you can install them separately, using:
+
+emerge tetex
+emerge ghostscript
+emerge imagemagick
+
+Finally do:
+
+USE="ocamlopt" emerge dev-lang/ocaml
+
+Required packages
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+Required packages are mysql, apache, and php:
+
+emerge -uD mysql apache php
+
+This is not relevant anymore on new systems, but some people still might need this: By default, some (if not all) php ebuilds disable sessions, which will break logins. Add sessions by appending 'session' to the mod_php USE line in /etc/portage/package.use (probably required):
+
+USE="session" emerge -uD mod_php
+
+Configure Apache
+Start web server by
+
+/etc/init.d/apache2 start
+
+Stop it by
+
+/etc/init.d/apache2 stop
+
+After making changes to the Apache configuration files, you can quickly restart Apache by
+
+/etc/init.d/apache2 restart
+
+To start Apache on the startup.
+
+rc-update add apache2 default
+
+Add PHP Support
+apache2 uses modules to dynamically load and unload extra functionalities. php support is one of them. There is no mod_php module in apache server after the default installation. We need to add mod_php into apache. Edit the configuration file of apache2
+adding php support (step 1)
+
+vi /etc/conf.d/apache2
+
+
+#APACHE2_OPTS="-D SSL"
+APACHE2_OPTS="-D SSL -D PHP5"
+
+
+ /etc/init.d/apache2 restart
+
+Gentoo automatically installs /etc/apache2/modules.d/70_mod_php.conf which contains the directives to load the module, as described in step 2. The -D PHP5 is necessary to pass the IfDefine PHP5 which wraps 70_mod_php.conf.
+(This is with net-www/apache-2.0.58-r2.)
+adding php support (step 2)
+
+vi /etc/apache2/conf/apache2.conf  or  vi /etc/apache2/httpd.conf
+
+You will see module list in apache2.conf
+
+LoadModule access_module                 modules/mod_access.so
+LoadModule auth_module                   modules/mod_auth.so
+LoadModule auth_anon_module              modules/mod_auth_anon.so
+LoadModule auth_dbm_module               modules/mod_auth_dbm.so
+
+or you can edit /etc/apache2/modules.d/*.conf, where *.conf is the name of the module ( ex: 70_mod_php5.conf )
+Add mod_php into it by one more line:
+
+ LoadModule php5_module    modules/libphp5.so
+
+Consequently add .php file name handling capability by adding
+
+        AddType application/x-httpd-php .php 
+        AddType application/x-httpd-php .phtml
+        AddType application/x-httpd-php .php3
+        AddType application/x-httpd-php .php4
+        AddType application/x-httpd-php .php5
+        AddType application/x-httpd-php-source .phps
+
+save apache2.conf and restart apache server
+
+ apache2ctl restart
+
+or
+
+/etc/init.d/apache2 restart
+
+We now have an apache server with php support.
+Configure MySQL
+Refer to m:MySQL config for details
+Initialize the mysql database
+
+ebuild /var/db/pkg/dev-db/mysql-VERSION/mysql-VERSION.ebuild config
+
+Start the server
+
+/etc/init.d/mysql start
+
+Choose a password:
+
+/usr/bin/mysqladmin -u root password 'PASSWORD'
+
+Test it
+
+mysqlshow -p
+
+Let it run automatically each time your machine is powered up
+
+rc-update add mysql default
+
+Get Mediawiki
+Run the following command to install mediawiki, being sure to install an Gentoo mediawiki ebuild which is as close as possible to current mediawiki :
+
+emerge mediawiki
+
+
+Unpack
+This step is only necessary if you are installing a new version, and you are sure that emerge hasn't already copied the files into place. In the case of a first time install, this should not be necessary.
+
+diff -r /var/www/localhost/htdocs/mediawiki/ # see if there are any differences.
+cp -rvfp /var/www/localhost/htdocs/mediawiki/ /var/www/localhost/htdocs/mediawiki.dist # back up the dist mediawiki www root
+cp -rfv /usr/share/webapps/mediawiki/{version...}/htdocs /var/www/localhost/htdocs/mediawiki # copy files from the mediawiki distro as an overlay onto the dist mediawiki www root (unsafe?)
+
+Set permissions
+user should be apache, group should be apache.
+
+chown -R apache:apache <PATH_TO_MEDIAWIKI_DIRECTORY>
+
+You should not give anybody access to this directory.. or at least LocalSettings.conf as it contains passwords! Just let user apache do it.
+Mediawiki 1.3.2 needs to write config directory during initialization. Now, we use /var/www/localhost/htdocs/mediawiki
+
+cd /var/www/localhost/htdocs/mediawiki
+chmod a+w config
+
+Alias directory
+edit your /etc/apache2/conf/commonapache2.conf file or /etc/apache2/httpd.conf
+
+You do NOT want mediawiki in a world readable directory, when php isn't running, so this is useful: (this is using apache2, so the php4 module is called sapi_apache2.c )
+
+<IfModule sapi_apache2.c>
+    Alias /mediawiki/ /var/www/localhost/mediawiki-1.3.3/
+    Alias /mediawiki /var/www/localhost/mediawiki-1.3.3
+    Alias /wiki_persistant/ /var/www/localhost/wiki_persistant/
+    Alias /wiki_persistant /var/www/localhost/wiki_persistant
+
+    <Directory /var/www/localhost/wiki_persistant/>
+        Order deny,allow
+        Allow from all
+    </Directory>
+
+   <Directory /var/www/localhost/mediawiki-1.3.3/>
+        Options +includes
+        Order deny,allow
+        Allow from all
+ #      AllowOverride All
+   </Directory>
+</IfModule>
+
+Setup RewriteRules
+I have no idea how to do these, see Manual:Short URL
+This is what I used:
+RewriteRule ^/mediawiki/ - [L]
+References
+↑ USE flags are keywords that affect how the software is compiled and which capabilities are enabled or disabled at compile time; see the Gentoo.org documentation on USE flags for more information.
+↑ See the Portage documentation.
+↑ http://gentoo-portage.com/www-apps/mediawiki/USE#ptabs
+↑ Until teTeX is deprecated in favor of another TeX distribution; see the teTeX homepage.
+http://www.doctaur.com/dtdocs/databases/mysql-manual/table-of-contents.html
+http://dev.mysql.com/doc/mysql/en/index.html
+See also
+http://wiki.gentoo.org/wiki/MediaWiki official Gentoo wiki
+http://gentoo-wiki.com/HOWTO_Wiki
+m:Mimetex alternative
+
+
+
+
+
+

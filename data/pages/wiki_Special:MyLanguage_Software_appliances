@@ -1,0 +1,47 @@
+Software bundles
+
+
+Manual installation of MediaWiki can be painful and time consuming, especially for users lacking technical proficiency. Some users find it easier to get up and running with MediaWiki using a software bundle. These software bundles include some combination of operational system, AMP package, Mediawiki software, extension package and/or template package.
+
+Be warned that third-party packages often introduce unexpected or potentially damaging changes enforcing Filesystem Hierarchy Standard or other vendor-specific requirements. These patches are not reviewed by core developers and tend to break the wiki in a number of subtle (or even not so subtle) ways. Also, packages may contain older versions of MediaWiki, so pay close attention to compatibility information for directions and extensions. The MediaWiki development team refers you to your operational system distributor and the individual communities and companies who maintain these packages for assistance with installing, configuring or using these software bundles.
+Automatic installation
+The following website provides a free service that enables MediaWiki to be installed, configured, and maintained using a website's FTP information. For increased security, a separate FTP account and MySQL database should be created for use with this service.
+Installatron.com
+Softaculous.com
+Source(s): Software solutions
+Mediawiki software appliances
+A MediaWiki software appliance is a MediaWiki and AMP software preintegrated in a just-enough operational system. It allows users to altogether skip manual installation of MediaWiki and its dependencies, and instead deploy a self-contained, ready-to-use system that requires little to no setup, especially in combination with virtual machine software such as VirtualBox or VMware.
+Several third-party MediaWiki software appliances exist. These are LAMP software bundles (Linux+AMP) including a MediaWiki server:
+TurnKey MediaWiki, based on Ubuntu, includes a pre-integrated collection of popular extensions.
+rPath MediaWiki, based on rPath Linux. (No extensions included.)
+Webuzo MediaWiki, based on CentOS Linux. Runs on VMware
+Bitnami virtual machine Linux image with MediaWiki Stack. (No extensions included.) Requires VMWare or VirtualBox. See MediaWiki with BitNami for a step by step guide with screenshots.
+mediawiki-vagrant: A skeleton Vagrant configuration for the Wikimedia Foundation's server config.
+Mediawiki pre-integrated with AMP packages
+AMP stands for (Apache, MySQL, Perl/PHP/Python).
+AMP packages that include a MediaWiki server, but require an operating system:
+Bitnami MediaWiki Stack. Available for Windows, Linux and OS X. See Installing MediaWiki with BitNami for a step by step guide with screenshots.
+AMPPS MediaWiki. Available for Windows and OS X.
+Mediawiki4Intranet:
+Available for Linux as a MediaWiki bundle - includes vanilla MediaWiki with extensions and patches. Does not include third-party tools and converters as most of the Linux users usually 'apt-get' them.
+Available for Windows as a standalone bundle, including XAMPP and all required third-party tools and media converters (even LaTeX).
+
+Extension packages
+These are packages of several MediaWiki extensions, requiring Mediawiki software, AMP and an operational system:
+Debian package Mediawiki-extensions
+Ubuntu package Mediawiki-extensions
+Unofficial bundles of the extensions in the Wikimedia SVN repository can sometimes be found on the toolserver. These bundles are arbitrary snapshots, so keep in mind they might contain a broken version of the extension (just as if you load them from the developer's repository directly).
+The Semantic Bundle
+The MediaWiki Language Extension Bundle
+MediaWiki enterprise solutions
+These are MediaWiki distributions customized and prepackaged for the use of the enterprise.
+BlueSpice - a free and open-source MediaWiki distribution for corporate use by Hallo Welt!, which is constantly expanded and improved. Paid-level service available as well.
+semantic::apps by gesinn.it - Semantic enterprise wikis and tools for business intelligence and data integration. Turnkey Semantic MediaWiki applications for business process, project and contact management, SMW appliances (on-premise, secure cloud, public hosting), SMW data integration.
+referata.com will soon (autumn 2013) release its two main extensions: Site Settings and Wiki Garden
+AMP packages without Mediawiki
+There are also AMP packages available that are not bundled with Mediawiki. If you go this route, you have to install Mediawiki and extensions as a separate step. Depending on your operating system, you would want a LAMP (for Linux), a WAMP (for Windows), a SAMP (for Solaris), or a FAMP (for FreeBSD).
+One AMP package that has worked well is XAMPP. See Manual:Installing MediaWiki on XAMPP. The current version of XAMPP uses PHP 5.4.7.
+Another AMP package is BitNami LAMPStack. For downloads and a step-by-step tutorial, see MediaWiki with BitNami.
+Another WAMP package is Uniform Server. See Manual:Installation on Uniform Server (Windows).
+External links
+WikiProject Transwiki - With the aim to produce a template "pack" and a Mediawiki "pack" including common css and js files, etc.

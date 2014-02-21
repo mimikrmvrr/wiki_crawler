@@ -1,0 +1,28 @@
+Manual:Deciding which wiki software to useAfter considering the factors involved in deciding whether to use a wiki as your website type and concluding that you do indeed want to establish a wiki, the next step is to decide which wiki software to use. MediaWiki, as one of the more popular wiki software applications, is one of the more obvious options to consider.
+
+
+
+Advantages and disadvantages of MediaWiki
+Advantages of MediaWiki
+Long-term maintenance and support: MediaWiki development is backed by an organization with an annual budget in excess of $27 million. One need not worry that in the foreseeable future the codebase will be completely abandoned by its developers and become unmaintained.
+Suitability for huge, highly active wikis: MediaWiki is used by the English Wikipedia, the largest wiki in the world, with more than 4 million pages, 600 million edits since the project's inception,[1] and 470 million unique visitors monthly.[2] MediaWiki has been designed with scalability in mind for high-usage, high-profile sites that are prone to vandalism, spam, and other attacks.
+Lots of content to borrow: Whatever sorts of articles or templates (e.g. infoboxes) you are used to seeing on Wikipedia and think would be useful on your site, you can import. Often the starting place for a new wiki is to borrow content from Wikipedia. If you use wiki software other than MediaWiki, the Wikipedia content might have to be reformatted or you might have to start from scratch.
+Disadvantages of MediaWiki
+Complexity: MediaWiki is complex to set up and maintain. You have to install and configure MediaWiki (including installing and configuring whatever extensions you want), which can be a major task, especially for the inexperienced. There may be quite a lot of content you need to either import from other wikis or design yourself, such as the content of your MediaWiki: namespaces (e.g. MediaWiki:Common.css and MediaWiki:Common.js), and so on. At least twice a year, a new MediaWiki version comes out. If you want to continue borrowing new content from Wikipedia, you will sometimes have to upgrade MediaWiki and its extensions and/or install new extensions that Wikimedia has introduced. Installing, configuring, and upgrading MediaWiki and its extensions is not always a simple one-click affair.
+Inconsistent quality of documentation: MediaWiki's documentation is still a work in progress that depends primarily on volunteer efforts; it arguably is not in a very good state yet.
+Badly designed legacy code: According to Jeroen De Dauw, "MediaWiki is not a shining beacon of good architecture. I'd argue it should mostly be considered as a big blob of generally badly designed legacy code."[3] This may be a problem for you if you seek to participate in development of the MediaWiki core or extensions.
+See also
+Manual:MediaWiki feature list
+wikipedia:Comparison of wiki software
+www.wikimatrix.org - side-by-side comparison of various wiki engines.
+References
+
+↑ wikipedia:Special:Statistics
+↑ wikipedia:Wikipedia:About
+↑ Dauw, Jeroen De (6 November 2013). Re: Architectural leadership in Wikimedia's technical community. Wikitech-l.
+
+
+
+
+
+

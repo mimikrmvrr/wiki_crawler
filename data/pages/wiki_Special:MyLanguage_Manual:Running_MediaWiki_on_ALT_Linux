@@ -1,0 +1,64 @@
+Manual:Running MediaWiki on ALT LinuxInstallation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+
+Introduction
+This article gives instructions for people who want to run MediaWiki on a ALT Linux system.
+Prerequisites: Apache, MySQL and PHP
+Versions of packages in ALT Linux branch/4.0 are ok for MediaWiki.
+Just do a
+
+ apt-get install MySQL-server MySQL-client
+ apt-get install httpd
+ apt-get install apache-mod_php5 php5-dom
+
+ImageMagic and librsvg are also available:
+
+ apt-get install ImageMagick librsvg
+
+You can use GraphicsMagick instead of ImageMagick - former has less dependencies (in particular, X11 is not required):
+
+ apt-get install GraphicsMagick-ImageMagick-compat
+
+PHP security configuration
+PHP in ALT Linux has quite secure defaults, so change the following settings in /etc/php/<version>/apache-mod_php/php.ini:
+safe_mode - turn it off
+memory_limit - raise to 20M
+suhosin.executor.func.blacklist, suhosin.executor.eval.blacklist, disable_functions - remove 'system', 'chdir', 'popen' and 'passthru' from those blacklists.
+remove 'exec', 'shell_exec', 'chdir' from blacklists
+Page editing will break on very long pages unless you change the limit in /etc/php/<version>/apache-mod_php/php.d/suhosin.ini:
+suhosin.post.max_value_length - increase it to 650000
+Installation
+After relaxing PHP security settings just use generic installation instructions.
+
+
+
+
+

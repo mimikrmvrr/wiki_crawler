@@ -1,0 +1,122 @@
+Manual:Extensions Extensions:
+Development
+Tag Extensions
+Parser Functions
+Hooks
+Special Pages
+Skins
+Magic Words
+API
+
+What are extensions?
+
+Extensions let you customize how MediaWiki looks and works.
+Wiki users can browse through existing extensions or request a new extension. System administrators can install (or remove) extensions on the MediaWiki installations that they manage. Developers can write new extensions or improve or maintain existing extensions.
+
+
+Search the extensions by keyword(s):
+
+
+
+
+
+
+
+
+
+
+Depending on your goals you can use extensions to:
+extend the wiki markup used to write articles - see Category:Parser function extensions and Category:Parser extensions for examples.
+add new reporting and administrative capabilities - see Category:Special page extensions for examples.
+change the look and feel of MediaWiki - see Gallery of user styles and Category:User interface extensions for examples.
+enhance security via custom authentication mechanisms - see Category:Authentication and Authorization Extensions for examples.
+While some extensions are maintained by MediaWiki's developers, others were written by third-party developers. As a result, many have bugs, and they are not all guaranteed to be compatible with each other. Some are unmaintained; not all extensions work on all versions of MediaWiki. Use any extension, especially those tagged as insecure, at your own risk. When using an extension requiring patches to the core MediaWiki code or entries in your database(s), be sure to create a back-up of your database and/or the core MediaWiki code, to avoid the risk of permanently breaking your wiki.
+Browsing extensions
+You can browse Category:Extensions by category or the Extension Matrix to see the full range of extensions that have already been written. For information on installing these extensions or writing your own, see below.
+Checking installed extensions
+Only someone with administration access to the filesystem (and often the database too) on a server can install extensions for MediaWiki, but anyone can check which extensions are active on an instance of MediaWiki by accessing the Special:Version page. For example, these extensions are active in the English Wikipedia.
+Installing an extension
+MediaWiki is ready to accept extensions just after installation is finished. To add an extension follow these steps:
+Before you start
+A few extensions require the installation of a patch. Many of them also provide instructions designed for installation using unix commands. You require shell access (SSH) to enter these commands listed on the extension help pages.
+
+Download your extension.
+Extension Distributor helps you to select and download most of the popular extensions.
+Extensions are usually distributed as modular packages. They generally go in their own subdirectory of $IP/extensions/. A list of extensions documented on MediaWiki.org is available on the extension matrix, and a list of extensions stored in the Wikimedia Git repository is located at git:mediawiki/extensions. Some extensions are available as source code within this wiki. You may want to automate copying them.
+Unofficial bundles of the extensions in the Wikimedia Git repository can be found on the toolserver. These bundles are arbitrary snapshots, so keep in mind they might contain a broken version of the extension (just as if you load them from the developer's repository directly).
+
+Install your extension.
+Generally, at the end of the LocalSettings.php file (but above the PHP end-of-code delimiter, "?>", if present), the following line should be added:
+
+
+
+
+require_once "$IP/extensions/extension_name/extension_name.php";
+
+
+
+This line forces the PHP interpreter to read the extension file, and thereby make it accessible to MediaWiki.
+Some extensions can conflict with maintenance scripts, for example if they directly access $_SERVER (not recommended).
+In this case they can be wrapped in the conditional so maintenance scripts can still run.
+
+
+
+
+if (!$wgCommandLineMode) {
+   require_once "$IP/extensions/extension_name/extension_name.php";
+}
+
+
+
+The maintenance script importDump.php will fail for any extension which requires customized namespaces which is included inside the conditional above such as Extension:Semantic MediaWiki, Extension:Semantic Forms.
+
+Ensure that required permissions are set for extensions!
+
+
+While this installation procedure is sufficient for most extensions, some require a different installation procedure. Check your extension's documentation for details.
+
+
+If you want to alter configuration variables in LocalSettings.php, you have to do this typically after including the extension. Otherwise defaults defined in the extension will overwrite your settings.
+
+
+ Caution:
+While extension declaration can be placed in other places within the LocalSettings.php file, never place extensions before the require_once "includes/DefaultSettings.php"; line for MediaWiki versions below 1.17 . Doing so will blank the extension setup function arrays, causing no extensions to be installed, and probably will make your wiki inaccessible until you fix it!
+
+Upgrading an extension
+Some extensions require to be updated whenever you update MediaWiki, while others work with multiple versions. To upgrade to a new version of an extension:
+Download the new version of the extension
+Replace all the extension files in the extension/ExtensionName directory with the new files. Do not remove the extension configuration present in LocalSettings.php
+Depending on the extension, you may have to run the Update.php maintenance script. Most extensions will mention if this script needs to be run or not. (Running the update.php script when its unnecessary will not hurt anything, so if you're unsure don't be afraid to run it). If you don't have command line access, you can also use the web updater.
+That's all you need to do. In most cases any extension configuration you have in LocalSettings.php will also work with the newer version of the extension.
+These instructions cover 99% of extensions. If the specific extension you are upgrading has instructions that differ from these, you should probably follow the specific extension's instructions
+Uninstalling an extension
+Extensions are added by adding a line to LocalSettings.php, which basically looks like this:
+
+
+
+require_once 'extensions/extension_name/extension_name.php';
+
+
+Depending on the extension you want to uninstall additionally other stuff might be done on installation, which you want to undo now. For details see the section on installing an extension.
+Remove this line and the extension is uninstalled. If you want to, you can (and if you do not want to use this extension in the future you should) remove the files of this extension inside the folder "extensions/".
+Maybe you also have some other lines in LocalSettings.php, which have to do with the extension you want to remove. Most likely this will be lines, which give certain users the right to access pages, which are provided by the extension. These lines contain the variable "$wgGroupPermissions" and make some settings there. As far as they have to do with rights, which come from the removed extension, you can remove these lines as well.
+Maybe your extension also has added columns to your database. The updater maintenance/update.php removes them, when you run it, after you have uninstalled the extension.
+Developing extensions
+This complex topic is handled on under the developing extensions manual page.
+See also
+Extension Matrix
+Category:Extensions
+Category:Extensions in need of a new maintainer
+
+Template:Extension
+Manual:Developing extensions
+Manual:Parser functions
+Manual:Special pages
+Manual:Tag extensions
+Project:Extension requests
+Manual:Translating extensions - Information about translating extensions.
+m:Category:MediaWiki extensions - in the process of being moved to MediaWiki.org.
+Extensions:
+Category • All • Requests • Tag extensions • Extension Matrix • Extensions FAQ • Extension hook registry • Extension namespace registry
+Language:
+English  • dansk • Deutsch • Ελληνικά • español • français • Bahasa Indonesia • 日本語 • 한국어 • polski • português do Brasil • русский • 中文

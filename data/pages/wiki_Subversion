@@ -1,0 +1,355 @@
+Subversion
+
+
+This MediaWiki page is inactive and kept for historical interest. It may document extensions or features that are obsolete and/or no longer supported. Do not rely on the information here being up-to-date. MediaWiki used the Subversion version control system, but has since migrated MediaWiki core and nearly all extensions to Git.
+Subversion
+Intro · Code review (guide · tags) · auto-props · Branching guide · Branches · Statistics     more.. »
+shortcut: SVN
+To use SVN you have to download the official command line Subversion client. You can also use alternative clients, such as the graphical TortoiseSVN for Windows.
+Subversion's command-line interface is similar to Concurrent Versions System (CVS). This is a basic and partial guide of the most useful commands. For an interactive tutorial, try this training mission. For a complete guide, use the book Version Control with Subversion. If you have write access to the server, it's recommended that you read this book and learn the advanced features of Subversion.
+
+
+
+The repository
+The MediaWiki repository is hosted by the Wikimedia Foundation and is reachable from http://svn.wikimedia.org/svnroot/mediawiki/. The project uses a more or less standard hierarchy for Subversion repositories, described below as of november 2011:
+USERINFO
+branches
+tags
+trunk
+wikimedia-web
+Pre-production work is made in the trunk tree. Wikimedia servers used to run the code in this tree for production usage, as of November 2011, it is not the case but we expect nonetheless a clean trunk. This mean that patches made in this tree must not break the code. You should also avoid rewriting extensive portions of the trunk as well. MediaWiki itself is in the phase3 subdirectory of the trunk.
+branches is used for major coding work, testing huge patches, and testing unstable patches. Some developers have their own branch of the code here. It is also used to prepare new stable releases (through the well-known beta → release candidate → security & maintenance fix cycle). Each major stable series gets its own directory as REL<major_version>_<minor_version>. For example, MediaWiki 1.18 work is being done in REL1_18. Wikimedia servers runs from a branch in /branches/wmf. Patches made to a release branch (ex: REL1_18) are back ported to the current running wmf branch by staff.
+tags is a special hierarchy used to save the state of the software at a given point in the time. You should NEVER make any change to it as this is only useful when releasing new versions. That task is handled solely by the current MediaWiki release manager (Tim Starling, Sam Reed).
+There is an additional subproject named wikimedia-web, which hosts the Wikimedia portal files located at http://www.wikimedia.org/. You usually don't want to modify anything there without referring to the Wikimedia Foundation and/or the Wikimedia system administrators.
+Finally the USERINFO project host informations about almost all developers having commit access.
+Check out
+First, you have to check out the code of MediaWiki. Use the following syntax:
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/folders_to_download sub_folder_name
+
+You can browse the code structure using the web interface (ViewVC). Use the three folders there for different purposes:
+Trunk is the main development branch.
+The branches are used for stable versions of the core and for versions of extensions that work with those stable versions; and for the development of complex features.
+The tags are used to track the released versions.
+The URL structure is:
+transport 
+http://svn.wikimedia.org
+repository 
+/svnroot/mediawiki
+branch/tag 
+/trunk, or /branches/REL1_17, or /tags/REL1_16_2
+files 
+/phase3
+Unlike the old CVS, the URL is used to specify the branch or the tag.
+Don't leave off the files part (eg. "phase3") or branch part (eg. "trunk")! If you leave that off you check out every revision of every file in the repo, which is insane.
+To check out MediaWiki development trunk into the folder "wiki":
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/phase3 wiki
+
+To check out Extension:TitleKey set into the folder "TitleKey":
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/TitleKey TitleKey
+
+To check out all extensions set into the folder "extensions":
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions extensions
+
+To check out the latest bits in some particular release branch:
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/branches/REL1_16/phase3 REL1_16
+
+To check out a specific version of the software:
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/tags/REL1_16_2/phase3 REL1_16_2
+
+To check out a specific development revision number ##### of the software: (for example the one used there: 1.23wmf15 (6d674b5))
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/phase3@##### wiki
+
+or
+
+svn checkout -r ##### http://svn.wikimedia.org/svnroot/mediawiki/trunk/phase3 wiki
+
+or, if you want to switch to that revision #####, use update command:
+
+svn update -r #####
+
+Unlike the old CVS, anonymous access is completely up to date, so you can grab fixes immediately after they get committed.
+Updating the working copy
+To update your working copy and get the latest files, use the following command:
+
+svn update #or just: "svn up"
+
+Note that SVN, unlike CVS, doesn't need to be told to prune removed files or create new directories. This is automagic.
+For a simple way to keep abreast of changes, one could use e.g.,
+
+cp RELEASE-NOTES /tmp && svn up && diff /tmp RELEASE-NOTES
+
+What happens if I change some file, then do "svn up" and it was changed upstream too?
+
+Don't worry. You will see
+
+
+Conflict discovered in 'includes/NeurdBall.php'.
+Select: (p) postpone, (df) diff-full, (e) edit, (h) help for more options:
+
+Making a diff
+Diffs, or patches, are text files which include all the changes done in the working copy. If you suggest a new feature in Bugzilla and like to suggest a change which fixes it, upload a patch.
+To create a diff from the current repository, use the following command:
+
+svn diff
+
+Normally, unlike CVS, you don't have to tell SVN which files you changed; however, you may like to diff only a part of the repository. To do that, specify the files to diff:
+
+svn diff includes/SpecialMyAwesomePage.php
+
+Note that SVN defaults to the "unified" diff format, so the "-u" option doesn't have to be passed.
+You can see the changes that were made since your last checkout:
+
+svn diff -rBASE:HEAD
+
+or make a forward comparison between your working copy and the latest:
+
+svn diff -rHEAD
+
+Applying a diff
+Subversion does not contain a built-in command to apply diffs to the current working copy (for example, to review or commit diffs published in Bugzilla); instead, you can use the regular patch unix utility:
+
+patch -p0 < patch_file
+
+TortoiseSVN has built-in support for applying a diff.
+Changing file structure
+You can add files or folders to the working copy, to be included in the next diff or commit, using the command:
+
+svn add file.name
+
+If you add a folder, all the files included in the folder are added, except for files in the ignored list.
+Make sure the eol-style is set on this new file (see also Subversion/auto-props). You may need to set this manually when the file has no or an unusual extension which is not listed in your auto-props setup.
+
+svn propset svn:eol-style native file.name
+
+You can delete files or folders from the working copy, to be deleted in the next commit or marked as such in the next diff, using the command (which will automatically delete the files from the working copy, but won't delete folders in such way):
+
+svn delete file.name
+
+Make sure the file or folder do not have local modifications, else they won't be deleted unless you force the deletion.
+Reverting your changes in your local copy
+If you are developer see section Undoing changes below. This is most likely the command you want, and not "svn revert" as explained below.
+If your changes in the working copy are not useful in your opinion, you can revert them using the following command:
+
+svn revert
+
+You must use parameters for this command. To revert all your changes in the working copy, use:
+
+svn revert -R .
+
+To revert the changes in a specific file, use:
+
+svn revert file.name
+
+Reverting can also remove added files (they won't be deleted, just removed and considered "unknown files", just like you didn't use svn add at first), and restore deleted files (both deleted by hand and deleted by svn delete).
+Checking the status of the working copy
+You can check the status of your working copy using the following command:
+
+svn status
+
+These are several important letters in the first column of the item, which show the status:
+M = the item was modified by you
+A = the item was added by you (using svn add)
+D = the item was deleted by you (using svn delete)
+ ? = the item is not under the version control, but exists
+ ! = the item is missing (under the version control, but does not exist - probably deleted without using svn delete) or incomplete
+Developer use
+You can request access at the commit access requests page. If you have a write access for the server, you can use an SSH access instead of HTTP access.[1]
+Note that in order for check and commit as developer you must have added your identity to the ssh authentication agent.For example, if your secret private key is presently located at /home/tux/.ssh/tux.privatekey, you must add it using:
+
+ssh-add /home/tux/.ssh/tux.privatekey
+
+If ssh-add says "Could not open a connection to your authentication agent.", then your shell does not run under ssh-agent. Type
+
+ssh-agent bash[2]
+ssh-add /home/tux/.ssh/tux.privatekey
+
+to run ssh-add again. (Source)
+For Windows users, Pagent is one of the tool which can authenticate yourself by your private key to connect using SSH. The example usage of the Pagent is shown here.
+URLs
+Replace the protocol http:// with svn+ssh:// in all the commands (e.g. svn checkout) for a developer checkout.
+For example, to check out the latest trunk as an anonymous, you use:
+
+svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/phase3 wiki
+
+To check it out as a developer, use:
+
+svn checkout svn+ssh://username@svn.wikimedia.org/svnroot/mediawiki/trunk/phase3 wiki
+
+
+Passphrase prompts may trigger for authentication -- if you haven't set up a SSH agent to help you with this (many operating systems do this as a standard component) you may wish to consult your system documentation.
+If your SVN username does not match your local computer username, you can usually set this once in your SSH config file for the host 'svn.wikimedia.org' and will never have to worry about specifying it ever again. You can also embed your username into the URL, like 'svn+ssh://username@svn.wikimedia.org' however this tends to be inconvenient.
+SSH will prompt you to verify the SSH key fingerprint for svn.wikimedia.org . The correct fingerprint is 4d:76:a4:a2:47:c1:bc:a8:d5:d7:51:ec:15:71:77:9a .
+Example checkout configuration
+When developing, you will probably use some extensions but will not be willing to actually checkout all extensions. That could slow down your workflow when issuing svn commands at the root of your working copy. The scheme below is the recommended way to set up your local copy:
+
+# Fetch MediaWiki in the 'mw-trunk' directory
+$ svn co svn+ssh://USERNAME@svn.wikimedia.org/svnroot/mediawiki/trunk/phase3 mw-trunk
+
+# We will now delete the stub directory for extensions:
+$ cd mw-trunk
+mw-trunk$ rm -fR extensions 
+
+# Check out an empty root of the extensions directory of the repository:
+mw-trunk$ svn co svn+ssh://USERNAME@svn.wikimedia.org/svnroot/mediawiki/trunk/extensions --depth empty
+  U   extensions
+  Checked out revision 123456. 
+mw-trunk$
+
+This way you have not checked out any extension and any subversion command at the root of your repository will not have to look at all extensions:
+
+mw-trunk$ svn status
+  S   extensions
+mw-trunk/wiki$
+
+To actually fetch (for example) the WikiLove extension:
+
+mw-trunk$ cd extensions
+mw-trunk/extensions$ svn update WikiLove
+  A    WikiLove
+  # ...
+  Updated to revision 123456.
+mw-trunk/extensions$
+
+Notice we used the 'update' command to fetch the extension. The checkout has already been initialized but with --depth empty. Thus you will not receive any information about extensions you did not request.
+"Commit failed" ? Convert your anonymous checkout for developer's use !
+If you sent an svn commit ... and your system annoys you with a message like
+
+svn: Commit failed (details follow):
+svn: Server sent unexpected return value (403 Forbidden) in response to MKACTIVITY request 
+for '/svnroot/mediawiki/!svn/act/cf44a626-c784-11e0-b670-c722664463a3'
+
+you have most likely tried to commit your updated local working copy based on a previous anonymous check-out via http://.
+You are lucky: this can be healed. For example, if you accidentially checked out your phase3 using http:// instead of the developer checkout svn+ssh://
+
+cd /your/local/working/copy/directory
+svn switch --relocate \
+           http://svn.wikimedia.org/svnroot/mediawiki/ \
+           svn+ssh://username@svn.wikimedia.org/svnroot/mediawiki/
+
+Windows users
+Windows users of subversion client may need to follow the instructions mentioned here to make the tool use their SSH public key (or if you are using TortoiseSVN, checkout this how-to guide).
+Or it can be loaded into Pageant, and will automatically be used from there. With TortoiseSVN 1.7, make sure to use a current version of pageant (0.61+).
+Auto properties
+See Subversion/auto-props for how to enable automatic line-ending conversion for files you add. Every developer should use it.
+Commits
+Commits, or check ins, are the action of applying your changes from the working copy to the web repository. Use the following command to do that:
+
+svn commit
+
+Using the command without the parameters will fail, unless you've configured an editor, because you have to enter a comment for the file logs. You can use one of the following forms:
+
+svn commit --message="This is the log comment for revision r1234 . It fixes bug12345 and introduces \$wgNewVariable."
+svn commit -m "This is the log comment for revision r1234 . It fixes bug12345 and introduces \$wgNewVariable."
+svn commit --file=file_with_log_commen 
+
+If you need shell-reserved characters like '$' in your comment, escape them with a backslash as shown.
+To cause an extension to show up under the correct version in Special:ExtensionDistributor, add your extension to the corresponding extensions branch in /branches/, for example /branches/REL1_15/extensions/ParserFunctions/.
+Magic linking
+Syntax like
+bug 12345
+r12345
+follow up patch to r12345
+in a commit message or code comment automatically creates a link to the specific bug or revision, or set a follow-up indication at the specific revision it follows up. When used in a commit message specifically, this syntax also creates links between revisions (to note follow-up revisions, for example).
+Undoing changes
+If you commit a change, and it turns out to be completely broken, then you can revert it by doing something like this (undoing changes explained in detail).
+ Warning:
+Before performing a merge, you should aways use it with option --dry-run as in the example
+
+svn merge -c -89151 --dry-run .
+
+to preview changes and potential conflicts; no changes are applied to the working copy or the repository.[3]
+
+svn up
+svn merge -r REVISION_NUM_YOU_WANT_TO_UNDO:REVISION_NUM_TO_REVERT_TO .
+svn status
+svn diff
+svn commit --message="Self-revert accidental breakage" includes/file-you-changed.php includes/another-file-you-changed.php
+
+For reverting a single version, you can use the changeset notation (take note of the - sign before the revision number to apply the reverse difference)
+
+svn up
+svn merge -c -REVISION_YOU_WANT_TO_UNDO .
+svn status
+svn diff
+svn commit --message="Self-revert accidental breakage" includes/file-you-changed.php includes/another-file-you-changed.php
+
+Using the GitHub mirror
+There's a mirror of the MediaWiki SVN repository at GitHub. To use it:
+First clone the repository:
+
+git svn clone git://github.com/mediawiki/mediawiki-svn.git
+
+This will take a while. The repository is around 1.15 GiB (as of November 5, 2011).
+Commiting back from this mirror is currently unsupported. See this thread on the Git mailing list for why. The gist of it is that it's hard to reconstruct the SVN metadata needed to push back to the original SVN.
+What you can do instead is this:
+Check out a limited part of the repository instead of the whole thing, right now there are trunk/phase3 and trunk/extensions mirrors:
+
+git clone git://github.com/mediawiki/mediawiki-trunk-phase3.git
+
+or:
+
+git clone git://github.com/mediawiki/mediawiki-trunk-extensions.git
+
+Hack there on your own branch and keep syncing with upstream. Then when you're ready to push back create your own mirror (or ask avar for an up to date copy):
+
+git svn clone svn+ssh://svn.wikimedia.org/svnroot/mediawiki/trunk/phase3
+
+Then just move your commits between the two repositories. E.g. with git format-patch in the original followed by git am in the other.
+Converting a CVS checkout to SVN
+Assuming you don't want to keep any local changes to files in the repository, it's easy to just overwrite everything with a fresh checkout. This will keep your local files, such as LocalSettings.php and custom skins.
+
+svn co http://svn.wikimedia.org/svnroot/mediawiki/trunk/phase3 temp-checkout
+rsync -a temp-checkout/ /path/to/phase3/
+
+The following works if you didn't delete any directories:
+
+svn revert -R /path/to/phase3
+
+And if you want to get rid of the old CVS dirs:
+
+find . -type d -name CVS -print0 | xargs -0r rm -rf
+
+Be careful with that one. ;)
+See also
+Commit access requests
+Development policy
+Download from SVN
+Git - Using MediaWiki's repository with Git's git-svn gateway
+Git conversion - Notes on the proposed plan to convert MediaWiki's SVN repository to Git
+Making Subversion faster - Includes instructions for checking out with svnsync and SVK
+Subversion/branches - Active branches
+History of MediaWiki version control
+External links
+Subversion Web access
+Useful SVN commands - a longer and more detailed overview (Greenstone wiki)
+Version Control with Subversion book (SVN version 1.4)
+OrganicDesign:MediaWiki SVN Statistics - statistics about the number of committers and commits to the MediaWiki SVN repository (updated 2010-06-15)
+References
+↑ This might change later.
+↑ If you use PuTTY for connecting to your server, you can configure PuTTY so that it switches to a directory of your choice and starts such a shell automatically:
+PuTTY → Connection → SSH → Data to send to the server → Remote command
+
+ cd /work/your-mediawiki-working-directory && ssh-agent bash -login
+
+
+↑ If you see from a my_projectfolder# svn merge -c -89151 --dry-run .
+
+--- Reverse-merging r89151 into '.':
+ C    UserMerge.php
+ Summary of conflicts:
+ Text conflicts: 1
+
+
+or similar messages you can not blindy revert this specific revision because further changes in intermediate revisions have been applied to a text line, so that more things in this line need to be reverted or fixed.
+
+Subversion
+Intro · Code review (guide · tags) · auto-props · Branching guide · Branches · Statistics     more.. »
+Language:
+English  • 日本語

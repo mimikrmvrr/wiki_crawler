@@ -1,0 +1,129 @@
+Project:PD help/Copying
+
+Note: When you edit this page, you agree to release your contribution under the CC0. See Public Domain Help Pages for more info.
+
+
+You can obtain copies of the help system in this wiki for local use in your own wiki following these steps:
+In a separate browser window, navigate to Special:Export (on this wiki). You will see an open textbox asking you for a list of pages to export.
+Copy the list below and paste it into that textbox. This is a generally useful set, making the resulting help structure in your wiki look almost identical to the one here.
+Check the following boxes:
+"Include only the current revision, not the full history" (Important!)
+"Include templates"
+"Save as file"
+
+Click the 'Export' button.
+Save the file to your desktop or other convenient location you'll remember.
+Navigate to Special:Import on your wiki. Note that you must be logged in as an Admin/Sysop (or another user with the import right) to do this.
+Browse for the file you saved, and click 'Upload file'.
+Navigate to Special:Imagelist (on this wiki).
+For each image referenced below, click on the (file) link and save the image to the same location as before.
+Navigate to Special:Upload in your wiki and upload each of the images.
+You will probably have to edit some of the pages to fix links, but at least this will provide a starting point.
+You will also need Extension:ParserFunctions and Extension:Scribunto to allow most of the included templates to work.
+Also keep in mind that most default wiki installations do not support SVG images. Information about SVG support can be found in the Manual:Image Administration#SVG page.
+
+
+
+File list
+
+Help:Assigning permissions
+ Help:Blocking users
+ Help:Bots
+ Help:Categories
+ Help:Contents
+ Help:Deleting a page
+ Help:Editing
+ Help:Editing pages
+ Help:External searches
+ Help:Formatting
+ Help:Images
+Help:List
+Help:Linked images
+ Manual:Linked_images
+ Help:Links
+ Help:Links/example
+ Help:Magic words
+ Help:Managing files
+ Help:Merge history
+ Help:Moving a page
+ Help:Namespaces
+ Extension:Cite/Cite.php
+ Help:Navigation
+ Help:New images
+ Help:New pages
+ Help:Patrolled edits
+ Help:Preferences
+ Help:Protected pages
+ Help:Protecting and unprotecting pages
+ Help:Random page
+ Help:Range blocks
+ Help:Recent changes
+ Help:Redirects
+ Help:Searching
+ Help:Signatures
+ Help:Skins
+ Help:Special pages
+ Help:Starting a new page
+ Help:Subpages
+ Help:Subpages/subpage
+ Help:Subpages/subpage/sub-subpage
+ Help:Sysop deleting and undeleting
+ Help:Sysops and permissions
+ Help:Tables
+ Help:Talk pages
+ Help:Templates
+ Help:Tracking changes
+ Help:Transclusion
+ Help:Undelete
+ Help:User page
+ Help:Variables
+ Help:Watchlist
+ Help:Parser functions in templates
+ Template:Meta
+ Template:Anchor
+ Template:Thankyou
+ Module:Template translation
+ Category:Help
+ File:Arr r.png
+ File:Attention niels epting.svg
+ File:Bulbgraph.png
+ File:Example.jpg
+ File:Example-white-bg.jpg
+ File:Geographylogo.png
+ File:Heckert GNU white.svg
+ File:MediaWiki Skin Vector.png
+ File:M-en-pagetabs.png
+ File:M-en-recentchanges.png
+ File:M-en-sidebar.png
+ File:M-en-userlinks.png
+ File:PD-Help icon.png
+ File:PD-icon.svg
+ File:Tools.svg
+ File:Wiki.png
+
+Currently red links
+Move to the above list when these non-orphan help pages get written:
+Missing files in distribution
+Not including Help namespace pages yet.
+File:Button sig.png
+File:Example.pdf
+File:Transclusion-multiple-foo.png
+File:Transclusion-multiple-twit.png
+File:Transclusion-simple.png
+Template:Fmbox
+Template:Help/En pagename
+Template:Main other
+Template:Purge
+Template:Documentation
+Template:En pagename ** it seem to break the PD help guidelines**
+Template:Categories categories
+Template:Help/Categories
+Template:Help/Category
+Template:Help/If en
+Template:Tlx
+Automated copying
+If you use pywikipediabot, there is a script to automate the copying at User:Sanbeg/mirrorhelp.py, which copies all pages in the help namespace along with templates and images directly referenced by those.
+See also
+Manual:Page customizations lists wiki pages that MediaWiki messages link to, you may wish to copy mediawiki.org or some other wiki's versions of these pages.
+Language:
+English  • dansk • Deutsch • español • suomi • français • Bahasa Indonesia • italiano • 日本語 • 한국어 • polski • português • português do Brasil • română • русский • slovenčina

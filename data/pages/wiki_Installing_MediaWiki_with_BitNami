@@ -1,0 +1,50 @@
+Installing MediaWiki with BitNamiOption 2: BitNami LAMPStack and MediaWiki
+
+
+Option 1: MediaWiki stack (Recommended)
+What is MediaWiki Stack?
+BitNami MediaWiki Stack is an all-in-one installer that makes easy to install MediaWiki on your computer. It is free, easy to use and self-contained. That means that it bundles and automatically configures every piece of software (dependency) necessary to run MediaWiki for development or production purposes, including Apache, MySQL and PHP. You can download the latest version of BitNami MediaWiki stack for Windows, Linux and OS X at http://bitnami.org/stack/mediawiki
+BitNami Mediawiki allows you install and configure easily Mediawiki not only in your own machine, but also in a Virtual Machine framework (VMware or Virtual Box) or deploy Mediawiki directly in the Cloud (Windows Azure or AWS). You can find more info about this at http://bitnami.org/stack/mediawiki
+Installing MediaWiki Stack
+Regardless of which operating system you are running (Windows / Linux / Mac), the install process is the same.
+Download the latest version of MediaWiki Stack from the BitNami website.
+Find the installer you just downloaded (the filename will be similar to bitnami-MediaWiki-VERSION-linux-installer.run. Double click on the icon to launch the installer.
+
+Click "Forward".
+
+Select the components you want to install. If you are not sure, leave the default components checked. Click "Forward" when you are done.
+
+Now it will ask where do you want to install the program. Provide the location where you want to install the BitNami MediaWiki stack and click "Forward" when you are done.
+
+The user and password you provide here will be used to create the admin account in MediaWiki. Click "Forward" when you are done.
+
+Type in the name you want to use for your MediaWiki site, and click "Forward".
+
+The installer is now ready to begin the installation process. Click "Forward".
+
+Wait a minute while the installer copies the files and configures your MediaWiki installation.
+
+MediaWiki is now set up and ready to be used. Click "Finish" to launch the application.
+
+Option 2: BitNami LAMPStack and MediaWiki
+What is BitNami LAMPStack?
+BitNami LAMPStack is a free, easy to install package that bundles every piece of software (dependency) necessary to setup a LAMP (Apache, MySQL and PHP for Linux) environment up and running for development or production purposes. It is self-contained, it makes no modifications to your system and can be uninstalled easily. You can download the latest version of BitNami LAMPStack for Linux at http://bitnami.org/stack/lampstack. A Windows version and a OS X version are also available.
+Regardless of which operating system you are running (Windows / Linux / Mac), the install process is the same.
+Installing BitNami LAMPStack
+Find the installer you just downloaded from the BitNami website (the filename will be similar to bitnami-lampstack-VERSION-linux-installer.run). Double click the icon to launch the installer.
+
+Click "Forward".
+
+Now it will ask where you want to install the program. Select the location on your machine and click "Forward" when you are done.
+
+Type your MySQL root password. This will be the password for the "root" user for the database.
+
+The installer is now ready to begin the installation process. Click "Forward".
+
+Wait a minute while the installer copies the files and configures your Joomla! installation.
+
+BitNami LAMPStack is now set up and ready to be used. Click "Finish" to launch the application.
+Alternative: Installing MediaWiki manually
+To install MediaWiki manually, follow the instructions outlined here.
+See also
+Manual:Importing XML dumps – Importing wiki-content, such as Wikipedia data dumps.

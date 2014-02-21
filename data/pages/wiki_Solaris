@@ -1,0 +1,7 @@
+Manual:Running MediaWiki on SolarisMediaWiki runs well on Solaris, but you'll need some GNU packages, which you can get:
+from the Solaris install disks;
+from http://www.sunfreeware.com/ (one package at a time);
+via http://blastwave.org/ (a package management system, in the manner of apt or yum on Linux).
+See:
+Manual:Running MediaWiki on Solaris 11 / opensolaris
+Manual:Running MediaWiki on Solaris 10

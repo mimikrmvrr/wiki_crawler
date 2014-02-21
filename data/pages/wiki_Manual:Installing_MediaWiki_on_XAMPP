@@ -1,0 +1,55 @@
+Manual:Installing MediaWiki on XAMPPXAMPP can be used to get an environment for your Mediawiki installation up and running pretty quickly. On your local machine or for a portable version on a USB drive if you use XAMPP Portable Light.
+
+
+
+Getting Apache and MySQL running
+Download the latest version for your platform (Linux, Windows, Mac OS X, or Solaris) from apachefriends.
+Run the executable to extract it (you can extract it straight to C:\ if you want; it'll create an XAMPP subfolder and put all the files there) and answer the questions setup will ask you. Rename the folder to XAMPP.
+At the end, setup will give you an option to start the XAMPP control panel; select that option and it should pop up.
+Check the checkboxes for Apache and MySql and click on their respective Start buttons to start those.
+Creating your database
+Direct your browser to http://localhost/xampp/
+Go to phpMyAdmin (on the left sidebar)
+Sign in
+Click Databases at the top of the page
+Choose a name e.g. wikidb, select a collation e.g. if your wiki is using utf8 for its default charset then choose utf8_unicode_ci, and click Create)
+Go into the new database and click on Privileges on the top sidebar.
+Click Add a new user
+Enter a name for the user (e.g., wikiuser) and a password. You can leave all the rest blank. You may want to write down your database name, user name, and password, because you'll need those to install Mediawiki.
+Click All global privileges and click the radio button for "Grant all privleges on database "xxx"
+Click Go.
+Editing PHP.ini
+To make sure that the Apache HTTP server doesn't time out during the creation of the databases, modify the php.ini config file:
+Open the php.ini file using your favorite text editor and find the following section and change to max_execution_time = 600
+Save the file and restart Apache
+Setting up Mediawiki
+Extract all your Mediawiki files and folders into a subfolder e.g. mywiki\ of the htdocs folder, wherever that is e.g. c:\xampp\htdocs\.
+Direct your browser to the appropriate page, e.g. http://localhost/mywiki
+Follow the Mediawiki installer's instructions, entering the database name, user name, and password you wrote down during the "creating your database" step above.
+If you enabled the "security" option, then you need to Use superuser account. This means the MySQL root account and its password.
+After Mediawiki tells you that everything went smoothly, save your LocalSettings.php file to your wiki's root folder, e.g. c:\xampp\htdocs\mywiki.
+Direct your browser once again to the appropriate page, e.g. http://localhost/mywiki. It should take you to the Main Page of your new wiki. Congratulations! You're done.
+Backing-up
+Main article: Manual:Backing up a wiki
+In SQL admin, go to the wiki database (typically wikidb), and click Export. Check the first box under "structure" (DROP TABLES), and check the "save as file" checkbox near the bottom. Click Go and save the file to the backup location.
+Save a copy of the wiki folder, e.g. mywiki from c:\xampp\htdocs\mywiki to the backup location.
+Restoring
+Main article: Manual:Restoring a wiki from backup
+Install XAMPP on the new server.
+In SQL admin:
+Create a new blank database with the default options and a name of your choice.
+Import the database file you backed-up.
+Change the SQL password of the root for that db (in privileges tab)
+
+Copy the wiki folder from back-up into the new htdocs folder.
+Change localsettings.php to reflect the new db username and password.
+See also
+Manual:Streamlined Windows Install Guide
+Software bundles for AMPs with Mediawiki built in.
+Manual:Backing up a wiki
+Manual:Restoring a wiki from backup
+Manual:Performance tuning
+External links
+Run Your Personal Wikipedia from a USB Stick, uses XAMPP
+NetBeans Guide to Installing and Configuring the XAMPP Package
+How to set up MediaWiki within XAMPP

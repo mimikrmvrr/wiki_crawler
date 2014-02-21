@@ -1,0 +1,17 @@
+Manual:Wiki on a stick
+By a "stick" we mean a USB stick, otherwise known as a USB key, flashdrive, keydrive, thumbdrive, or pendrive (en:Keydrive) However the instructions will apply to other removable storage media (memory card, PCMCIA/PC Card/CardBus disk, LS-120 SuperDisk, or other portable media). 
+
+
+Why put a wiki on a stick?
+Having a personal wiki as a wiki on a stick is useful for demonstrations, personal knowledge management, sophisticated note-taking, or super-fast installations using a simple copy.
+Considerations
+Always stop the servers and then use the system tray "unplug/eject" icon to stop the media before removing it.
+Take regular backups if you are putting a lot of effort into wiki content, or software configuration/customisation. Remember that a USB key is an easy thing to lose.
+Security
+If you lose your USB key, anyone finding it will have access to the information in your wiki. Note that conventional web security measures as described on Manual:Preventing access, do not help (much) in this situation, since they will have direct access to the database server (it's on the USB key!). So avoid placing sensitive/confidential information in your wiki pages. Or alternatively...
+You may want to use encryption software such as TrueCrypt, to protect your data. This requires you to mount a drive prior to server start up, and dismount the drive after server shut down each time.
+On Windows
+Manual:Installation on Uniform Server
+Using XAMPP Portable Light: Manual:Installing MediaWiki on XAMPP and Manual:Streamlined Windows Install Guide
+Language:
+English  • 日本語 • 粵語

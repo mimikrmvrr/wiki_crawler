@@ -1,0 +1,87 @@
+Manual:Using content from WikipediaWikipedia, a Wikimedia project, uses a large number of extensions, a very up-to-date copy of the MediaWiki software, and a number of hacks and add-ons that make duplicating its layout and content output rather difficult.
+However, there are some common issues that come up frequently enough to warrant a manual page on how to import content from Wikipedia.
+
+
+
+Template theft
+There are a few likely issues if you have copied templates from Wikipedia and they do not seem to be working as expected.
+{{#if: ...
+If you have copied templates directly from Wikipedia and you see output like {{#if: ...}} and {{#ifeq: ...}} it means that you do not have the ParserFunctions extension installed.
+{{#invoke: ...
+If you have copied templates directly from Wikipedia and you see output like {{#invoke: ...}} it means that you do not have the Scribunto extension installed.
+Script error
+If you copy templates from Wikipedia and then get a big red "Script error" where the Scribunto invocation (e.g. the template that uses {{#invoke:}}) should be, that probably means that you didn't import everything you needed. Make sure that you tick the "Include templates" box at wikipedia:Special:Export when you export.
+Odd colors and floating
+Wikipedia uses site-wide CSS pages for things such as class="infobox". They are located at w:MediaWiki:Common.css and w:MediaWiki:Vector.css. The latter is obviously only necessary if you're using MediaWiki's default skin, Vector. Some old tables may not contain the class="infobox" line, in which case you will need to add it.
+Show/hide links
+The show / hide links are controlled using site-wide JavaScript. The relevant page is w:MediaWiki:Common.js.
+HTMLTidy
+Wikimedia wikis (like Wikipedia) use an program called HTMLTidy that cleans up markup and validates it. If a template you have lifted from Wikipedia contains code that uses both wiki markup and HTML, you'll need to enable HTMLTidy in order for it to work. See also: Manual:$wgUseTidy.
+Template dependencies
+At times, templates will call sub-templates or other templates on a wiki. If you click the edit tab and look at the bottom of the page below the edit text area, new versions of MediaWiki will list other templates called by the current template. These may need to be copied over as well for the template to work. Documentation subpages (Template:Foobar/doc) are generally not needed, though they can be helpful for more complex templates. When you use Special:Export on Wikipedia, you can check a box to import sub-templates. Note that in some cases, you will want to open the downloaded XML file with your favorite text editor and do a search and replace. E.g., you may want to replace all mentions of "Wikipedia" with the name of your wiki and all "en.wikipedia" urls with the url of your wiki. Watch out for the difference between spaces and underscores if your wiki name consists of more than one word; there may be urls in that XML file that will break if you put a space in the middle of them. If the XML file consists of a lot of pages, to save work correcting it later, you may want to scroll down the XML file one last time before import as a sanity check to make sure you didn't forget anything that needed to be changed. On the other hand, if a mistake does slip through and you import a lot of faulty template pages, there's always Extension:DeleteBatch (see below).
+Outdated templates
+If the templates were added to your wiki a long time ago, you may run into issues from their being outdated. You can try to figure out which sub-template is causing the problem and try to fix it, or you can follow this procedure, which assumes you are an administrator on your wiki and that Extension:DeleteBatch is installed:
+1. Go to w:Special:Export (Wikipedia's export page). Enter the name of the template, e.g. Template:Citation. Check all three checkboxes: Include only the current revision, not the full history; Include templates; and Save as file.
+2. Go to Special:Import (on your wiki). Import the file. You'll get a list of imports that went through and imports that didn't, e.g.:
+
+   * Template:Citation 1 revision
+   * Template:AuthorMask doc 1 revision
+   * Template:Citation/authors 1 revision
+   * Template:Citation/core All revisions were previously imported.
+
+3. Check to see if the template works now. Make a small edit to a page that transcludes the template and it should reload.
+4. If it's still not working (as it probably won't be), follow the rest of the steps below.
+5. Fire up OpenOffice spreadsheet, or Microsoft Excel, or whatever.
+6. Copy and paste the list from step 2 into column A of this spreadsheet. (You may first want to copy and paste into gedit or Microsoft Notepad or whatever as an intermediate step, so that you can dispense with all the formatting that will otherwise end up in your spreadsheet.) In cell B1, put this formula: =IF(RIGHT(RIGHT(A1,LEN(A1)-6),9)="imported.",LEFT(RIGHT(A1,LEN(A1)-6),LEN(RIGHT(A1,LEN(A1)-6))-40),LEFT(RIGHT(A1,LEN(A1)-6),LEN(RIGHT(A1,LEN(A1)-6))-11))
+7. Copy and paste that formula all the way down column B, or at least far enough that it's even with the end of the list in column A.
+8. Now copy the content of column B into Special:DeleteBatch. Delete them all.
+9. Now do the import in step 2 again.
+10. Check to see if the template works now. (See step 3)
+ Caution:
+Be careful about mixing and matching templates from different wikis, as you may cause script errors or other problems if there are incompatibilities between imported templates and imported dependencies. This can be hard to troubleshoot and fix without doing mass deletions.
+Generic duplication
+Wikimedia's configuration files are available at http://noc.wikimedia.org/conf/
+The extensions currently enabled on a specific project are located at Special:Version (e.g., w:en:Special:Version).
+Wikimedia wikis use short URLs. More information regarding those is available at Manual:Short URL.
+Gadgets
+Harvest all of Wikipedia's gadgets by going to w:Special:Export and grabbing all the pages that start with MediaWiki:Gadget- from AllPages, or if you prefer, from PrefixIndex or from the API. If you pick the latter option, and want to use Calc, copy and paste that API output into column A, put in column B =SEARCH("title=",A1), put in column C =SEARCH("/>",A1), and put in column D =MID(A1,B1+7,C1-B1-9). That should give you what you need to copy and paste into Special:Export.
+Of course, it will still be necessary to make the necessary changes in MediaWiki:Common.css, MediaWiki:Common.js, and MediaWiki:Vector.css as the case may be. Also, a lot of those description pages, e.g. MediaWiki:Gadget-HotCat, have links that will break when imported, so you'll probably want to edit those.
+Extended content
+The following content has been placed in a collapsed box for improved usability.
+
+
+User:TheDJ/Gadget-HotCat.js
+User:Ioeth/friendly.js
+User:AzaToth/morebits.js
+User:Ioeth/friendlyclock.js
+User:Ioeth/friendlyshared.js
+User:Ioeth/friendlytabs.js
+User:Ioeth/friendlytag.js
+User:Ioeth/friendlytalkback.js
+User:Ioeth/friendlywelcome.js
+User:AzaToth/morebits.js
+User:AzaToth/twinklefluff.js
+User:AzaToth/twinklewarn.js
+User:AzaToth/twinklearv.js
+User:AzaToth/twinklespeedy.js
+User:AzaToth/twinklediff.js
+User:AzaToth/twinkleprotect.js
+User:AzaToth/twinkleprod.js
+User:AzaToth/twinklexfd.js
+User:AzaToth/twinkleimage.js
+User:AzaToth/twinkleunlink.js
+User:AzaToth/twinkledelimages.js
+User:AzaToth/twinkledeprod.js
+User:AzaToth/twinklebatchdelete.js
+User:AzaToth/twinklebatchprotect.js
+User:AzaToth/twinkleimagetraverse.js
+User:AzaToth/twinklebatchundelete.js
+User:Smith609/reftool.js
+
+See also
+http://www.wikihow.com/Import-XML-Dumps-to-Your-MediaWiki-Wiki
+m:Static version tools
+Extension:DumpHTML
+
+Manual:Importing XML dumps/from mediawiki.org
+commons:Help:Gadget-HotCat#Installing_HotCat_on_another_wiki

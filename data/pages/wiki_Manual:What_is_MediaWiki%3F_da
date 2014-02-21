@@ -1,0 +1,74 @@
+Manual:What is MediaWiki?This page is a translated version of a page Manual:What is MediaWiki? and the translation is 97% complete.
+
+
+asturianu  • ‎български  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（台灣）‎ 
+
+
+
+
+Grundlæggende introduktion til MediaWiki
+
+Indhold
+Hvad er MediaWiki?
+Dokumentation
+Tilpasning
+Versioner og download
+Installationsvejledning
+Support og kontakt
+Udvikling
+Alle andre emner
+Se menuen til venstre
+
+
+ Installationsvejledning | Om MediaWiki
+ Funktioner | Installationskrav
+ Download | Installation | Konfiguration
+
+
+Du kender vel Wikipedia, den frie encyklopædi, på dansk eller i en anden sprog-version, og bliver måske forvirret over ordene Wiki, Wikimedia og MediaWiki, som ligner hinanden, men de er ikke ensbetydende.
+For at undgå mere forvirring gør du klogt i at læse Wikipmediawiki-artiklen, hvor forskellighederne er forklaret.
+
+Generelt overblik
+
+
+
+
+MediaWiki kan bruges i store serverfarme, såsom Wikimedia's.
+
+
+MediaWiki er fri server-baseret software, der er licenseret under GNU General Public License (GPL). Det er designet til at fungere på en stor serverfarm for en hjemmeside, der har millioner af besøgende hver dag.
+MediaWiki er en ekstrem kraftfuld, fleksibel software med rig wiki-funktionalitet, og som benytter PHP til at behandle og vise data, der er lagret i en database, såsom MySQL.
+Siderne formateres med MediaWikis opmærkningssprog, således at brugerne uden videre kendskab til XHTML eller CSS let kan redigere dem.
+Når en bruger gemmer sin redigering af en side, skriver MediaWiki til databasen uden at slette forrige versioner af websiden, således at siden nemt kan gendannes i tilfælde af vandalisme eller spamming. MediaWiki kan håndtere billed- og multimediefiler, som bliver opbevaret i filsystemet. Store wikier med masser af brugere, kan let understøttes med hukommelses-buffer og evt. sammenkobles med Squid-proxyserver software.
+
+Hvad er MediaWiki?
+MediaWiki er wiki software
+Hvis du ikke ved hvad en wiki er, så læs Wikikipedia-artiklen "Wiki" inden du fortsætter!
+MediaWiki er server software
+Som med enhver software, du benytter på internettet, kan der være fejl eller sikkerhedsproblemer. Undlad at installere MediaWiki medmindre du agter at opdatere sikkerhedsopgraderinger (abonnér på meddelelser om sikkerhedsopdateringer).
+MediaWiki er indrettet efter Wikimedia-stiftelsens behov
+Programmet er primært udviklet til at køre på en stor serverfarm for Wikipedia og dets søsterprojekter. Funktionalitet, ydeevne, indstillingsmulighed, brugervenlighed, osv. er udformet med henblik på dette, så hvis dine behov er meget anderledes, er softwaren muligvis ikke brugbar for dig.
+MediaWiki er fri software
+Ingen garanti eller forsikring mod fejl af nogen art medfølger.
+Prøv wiki-opmærkningssproget
+
+
+
+
+Grundlæggende wiki-opmærkningssprog
+
+
+Du kan nemt redigere sider og (midlertidigt) udgive fjollede sætninger, og du kan endda (midlertidigt) helt ødelægge en webside i en wiki. Du behøver ingen programmeringskundskaber for at gøre dette.
+Vi foreslår, du benytter den indbyggede sandkasse, for at øve dig i at lave vellykket redigering. Vær venlig at nøjes med at forsøge dig frem der, for andre steder ser administratorerne ikke med milde øjne på fejlskud.
+Du kan også kigge på snydeskemaet, der indeholder de allermest grundlæggende formateringkommandoer.
+Noget som MediaWiki er mindre velegnet til
+Da MediaWiki er designet til åbent indhold, er programmet ofte ikke egnet til anvendelser, hvor der ønskes begrænset adgang til en del af wikien.
+MediaWiki er designet til at styre meget velbesøgte hjemmesider såsom Wikipedia og er optimeret til dette formål, hvorfor det kan være mindre velegnet til små servere / billigere webhoteller, hvor diskplads eller hukommelse er mere begrænset end båndbredden.
+MediaWiki er ikke beregnet til at være blogging software og lignende, hvis det da er den type server-software du søger.
+Der kan i disse tilfælde være andre typer software, som bedre opfylder dine behov.
+Se også
+Manual:Deciding whether to use a wiki as your website type
+Manual:Deciding which wiki software to use
+MediaWiki funktions-liste
+wikipedia:Comparison of wiki software
+www.wikimatrix.org - forskellige wiki-programmer sammenlignet side ved side

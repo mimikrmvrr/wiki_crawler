@@ -1,0 +1,212 @@
+Manual:Running MediaWiki on Damnsmalllinux
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+
+why that
+When i started using DSL, i wanted to set up a small server for a website on an old TravelMate 510 Series Notebook. The main problem was to get a wikisoftware installed. Read the following instructions, if you also want to do so
+preparing the notebook
+Before installing the wiki software, the notebook itself had to be set up. To do this, just follow the instructions here and here.
+getting the software
+prerequisites
+The wiki software i used was MediaWiki
+to install this, you also need MySql
+for the web interface, you need PHP5 and the apache web server.
+to install those software, there's a need to install
+gnu c compiler with libraries
+libxml2
+expat
+I did the installation with the following packages (no warranty to get other versions running):
+gcc1-with-lib.dsl, version 3.3.4
+libxml2-2.6.30.tar.gz
+expat-2.0.1.tar.gz
+mysql-max-4.1.22-pc-linux-gnu-i686.tar
+httpd-2.2.6.tar.gz (apache webserver)
+php-5.2.4.tar.gz
+mediawiki-1.6.10.tar.gz
+(optinal) imagemagick.uci from the MyDsl Extension Tool
+installing support software
+Get all the software above.
+Open the MyDsl Extension browser, navigate through "System" to gcc1-with-libs.dls. Select it, then press download. It will be installed.
+extracting the software archives
+cd into the directory, where you have all the sowftware packages
+
+ tar xvzf expat-2.0.1.tar.gz
+ tar xvzf libxml2-2.6.30.tar.gz
+ tar xvzf mysql-max-4.1.22-pc-linux-gnu-i686.tar.gz
+ tar xvzf httpd-2.2.6.tar.gz
+ tar xvzf php-5.2.4.tar.gz
+ tar xvzf mediawiki-1.6.10.tar.gz
+
+install expat
+
+ cd expat-2.0.1
+ ./configure --prefix=/usr/local/expat
+ make
+ make install
+ cd ..
+
+install libxml:
+
+ cd libxml2-2.6.30
+ ./configure --prefix=/usr/local/libxml
+ make
+ make install
+ cd ..
+
+now, you're ready to begin installing the wiki software parts:
+install mysql
+
+ mv mysql-max-4.1.22-pc-linux-gnu-i686 /usr/local/mysql
+ adduser mysql
+ 
+
+Now the mysql files are in the right place to do the setup.
+
+ cd /usr/local/mysql
+ scripts/mysql_install_db
+
+will set up the database.
+Then, you can directly start mysql, because the mentioned version is a ready-to-run package:
+
+ support-files/mysql.server start
+
+Now the sql server should be running. You now have to set up a superuser for the mysql database:
+
+ bin/mysqladmin -u root password <yourpasswordhere>
+
+i also did this with mysql 5.1.30
+install the apache web server
+
+ cd /httpd-2.2.6
+ ./configure --prefix=/usr/local/apache --enable-module=all --enable-so
+ make
+ make install
+ cd ..
+
+this has also been tested with apache 2.2.10
+installing php
+After that, the PHP binaries can be built:
+
+ cd php-5.2.4
+ ./configure \
+   --with-apxs2=/usr/local/apache/bin/apxs \
+   --with-config-file-path=/usr/local/apache/conf \
+   --with-mysql=/usr/local/mysql \
+   --with-libxml-dir=/usr/local/libxml \
+   --enable-ftp \
+   --with-gd \
+   --enable-bcmath \
+   --disable-debug \
+   --enable-track-vars
+ make
+ sudo make install
+
+also works with php 5.2.7, although track-vars is no longer supported
+Now, you've installed alle the prerequisites to install the wiki itself.
+installing the wiki
+
+ cd /usr/local/apache/htdocs
+ mv /<pathToPackage>/mediawiki-1.6.10 wiki
+
+This will move the files of the wiki to the directory /usr/local/apache/htdocs/wiki. Make sure, the wiki is allowd to operate in this directory:
+
+ cd wiki
+ chmod a+w config
+
+if the mysql server is running, you may now begin to create the wiki database:
+
+ /usr/local/mysql/bin/mysql -u root -p mysql
+
+This will ask you for the password you entered during mysql installation and start the mysql command line. On the command line, enter:
+
+ create database wikidb;
+ grant create, select, insert, update, delete, alter, lock tables on wikidb.* to 'wikiuser'@'localhost' identified by 'yourpasswordhere';
+ flush privileges;
+ \q
+
+Now start the web server:
+
+ sudo /usr/local/apache/bin/apachectl start
+
+Since a port (80) has to be opened, you have to do this as root user (using sudo).
+After that, you should be able to install the wiki via the web interface. Therefore, open http://localhost/wiki in your web browser and follow the online guide, which should appear.
+Troubleshooting
+If you just see a directory listing, this may be caused be apache not looking for index.php. In this case, you have to edit /usr/bin/apache/conf/httpd.conf, search for the line
+
+DirectoryIndex index.html
+
+and alter it to
+
+DirectoryIndex index.php index.html
+
+Afterwards, you have to restart apache using
+
+sudo /usr/local/apache/bin/apachectl restart
+
+In case the index php is opened, but not interpreted (you see it's source in the browser), you'll have to do 2 things: 1st, check if there's a file called php.ini in your /usr/local/apache/conf. If not do
+
+cd /usr/local/apache/conf
+cp /<path_to_php_setupfiles>/php.ini-recommended php.ini
+
+2nd, locate the line
+
+DefaultType text/plain
+
+in /usr/local/apache/conf/httpd.conf and add as next line:
+
+AddType application/x-httpd-php .php
+
+Now, restart the webserver using
+
+sudo /usr/local/apache/bin/apachectl restart
+
+and try http;//localhost/wiki again.
+additional hints
+if you would like to use thumbnail pictures within your wiki, you should download imagemagick.uci via the MyDsl Extension Tool (MyDSL Extensions > UCI > imagemagick.uci), load it via
+
+ mydsl-load /<pathToPackage>/imagemagick.uci
+
+and add the lines
+
+ $wgUseImageResize = true;
+ $wgUseImageMagick = true;
+
+to the file /usr/local/apache/htdocs/wiki/LocalSetting.php
+links to further information
+Tutorial how to install MySQL with PHP for ApacheMediaWiki installation manual
+
+
+
+
+

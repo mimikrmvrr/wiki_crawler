@@ -1,0 +1,235 @@
+Manual:Upgrading
+
+
+
+Download a package
+
+Stable version (1.22.2)
+mediawiki-1.22.2.tar.gz
+Git branch: REL1_22
+Legacy versions (1.21.5)
+mediawiki-1.21.5.tar.gz
+Git branch: REL1_21
+Alpha version
+MediaWiki nightly build
+Read more
+News
+Download from Git
+Upgrading to 1.22.2
+
+
+
+
+
+
+Basic overview
+File transfer
+Unless you have direct access to the server hosting the wiki, (and even then) you will have to choose a method for transferring files:
+Secure copy with SCP or WinSCP
+SSH File Transfer Protocol (SFTP)
+Using a FTP client.
+The hosting company might provide a file manager interface via the web browser; check with your provider.
+Some other method. There is a list of these at Wikipedia:List of file transfer protocols
+Preliminary
+Read the UPGRADE text file included in MediaWiki.
+Check the requirements
+Read the release notes
+Back up existing files and the database
+Unpack the new files
+Upgrade extensions
+Run the update script to check the database
+Test the update
+Check requirements
+MediaWiki 1.22 requires:
+PHP 5.3.2 or later
+Either MySQL 5.0.2 or later, PostgreSQL 8.3 or later or SQLite 3
+If you are using PostgreSQL, please also read Upgrading Postgres.
+For more information, please read the system requirements and compatibility.
+Read the release notes
+Within the distribution tarball, or within the files checked out/exported from Git, there are a number of files with capitalised filenames, one of which contains the RELEASE-NOTES (wiki). Now's the time to open it up and find out what's been changed in this release.
+Back up existing files and the database
+Full instructions: Manual:Backing up a wiki
+While the upgrade scripts are well-maintained and robust, things could still go awry. Before proceeding to update the database schema, make a full backup of the wiki, including both the database and the files:
+the wiki's content, from the database, (make sure you get the character set specified correctly, first check LocalSettings.php). It may be a good idea to create an XML dump in addition to the SQL database dump.
+MySQL:
+SQL dump: mysqldump --user=xxx --password=xxx <database name> > file.sql
+XML dump: mysqldump --user=xxx --password=xxx <database name> --xml > file.xml
+
+PostgreSQL:
+output for pg_restore: pg_dump --create -Fc -i yourwiki > yourwiki.db.dump
+
+SQLite:
+php maintenance/sqlite.php --backup-to filename
+
+
+images and other media files (the contents of the images directory, custom logo /skins/common/images/wiki.png)
+configuration files, e.g. LocalSettings.php and AdminSettings.php (if present)
+MediaWiki's program files, including all skins and extensions, especially if you modified them.
+Unpack the new files
+Using a tarball package
+If you extract the new version of MediaWiki directly on top of your old version, rather than in a new directory, you should follow #Back up existing files and the database: otherwise, if you've made any customizations you may erase them in a way that leaves you with no reference to re-apply them from. Extracting a tarball over top of your live copy of MediaWiki can leave behind files from the old version of MediaWiki which may interfere with the upgraded code. It's recommended that you unpack the new files into a new directory, and then apply customizations to the new directory (restoring LocalSettings.php, images folder, extensions, and other customizations like custom skins)
+If you are using a tarball package, decompress the file on the server, preferably on a new and empty folder.
+FTP or graphical
+Windows users: use 7zip to extract the tarball.
+FTP users: extract files locally and upload directories and files to server with your favorite FTP software.
+Command line
+You may need to run the command as sudo if you don't have full write permissions to the wiki install directories under your current user. When untarring a tarball package normally a new directory for the new wiki version will be created and you will have to copy the old configuration files and images directory from your old installation directory:
+
+$ tar xvzf mediawiki-1.22.2.tar.gz -C /path/to/your/new/installation/
+
+(Open)Solaris users should use gtar, or:
+
+$ gzip -dc mediawiki-1.22.2.tar.gz | tar xf -
+
+Other files
+After extracting the tarball, you should copy or move some files and folders from the old installation directory to the new one:
+LocalSettings.php, which contains your old configuration settings.
+The images (or uploads in older versions) directory, which contains all the uploaded files to the wiki, unless you have chosen a different upload directory, and change the ownership and permissions. chmod -R 755 images and chgrp -R apache images (e.g. if your web user is apache).
+Some extensions in the extension directory. You should always get updated extensions, old extensions aren't guaranteed to work with a newer version of MediaWiki.
+In case you use a custom logo this file also needs to be restored from backup (usually placed in /skins/common/images/).
+Custom skins from within the skins directory.
+Any modifications made to the old installation files.
+Any .htaccess file (if you're using Apache and you've defined any rules in them).
+Once done, make this new folder the published folder on the web server, or rename the old installation directory and then rename the new one to match the old name.
+Using Git
+If using Git, export the files into a clean location, and then copy the old customized files into the new location as described on the previous section.
+Using patch
+A small patch file is usually made available for a minor version upgrade. Manually download and extract the patch file from the dumps site or follow the directions with wget below.
+cd to your main MediaWiki directory (the one with LocalSettings.php).
+Download the patch file and gunzip it.
+Use patch -p1 --dry-run to check what will be changed (e.g., patch -p1 --dry-run < mediawiki-MW stable release number.patch )
+If all is well, run patch again without --dry-run.
+Check your Special:Version and you should see the new version number in place.
+Files remaining that may cause errors
+If you unpacked over the old installation directory, some old files can cause problems with the new version.
+
+MediaWiki version:
+≥ 1.18
+If you are not using profiling, but have a StartProfiler.php file in the MediaWiki root folder, you may receive errors referring to /includes/Profiler.php. Deleting, or renaming, the StartProfiler.php file will resolve this error. The StartProfiler.sample file, also in the MediaWiki root folder, can serve as a template should you enable profiling in the future.
+Upgrade extensions
+Certain extensions have been updated in order to work with the new version of MediaWiki. Be sure to upgrade to the latest versions of such extensions. You might need to perform manual updates to custom extensions.
+Different tarballs include some subsets of extensions and have versioning which helps you upgrade choosing the right one for your MediaWiki core release.
+Extension Distributor works well for most people who want a snapshot of extensions that will work with their supported versions of MediaWiki.
+If you want a lot of extensions then downloading from Git is probably best.
+
+Run the update script
+You can upgrade MediaWiki either from the command line or from the web. If you have shell access to your server, upgrading from the command line is recommended, since this reduces the risk of the upgrade process being interrupted by a timeout or connection reset.
+Command line
+Access the command line of your server or an SSH shell or similar. You can access the command line by connecting to your server via SSH. If the local PC you are working on runs Microsoft Windows, you will need a tool like PuTTY to use SSH. From the command line or the Shell, change to the maintenance directory and execute the update script:
+
+$ php maintenance/update.php
+
+On Linux if you get an error try performing same command as root (sudo php maintenance/update.php). Note for simple installations on Windows (e.g. with XAMPP): First make sure that your web server (such as Apache) and your database (such as MySQL) are running. Then run update.php: right-click it, select Open With, and browse to PHP.exe. The resulting command prompt window will likely autoclose when the schema upgrade completes.
+You might see a message that your PHP version is too old and that MediaWiki needs a newer version. After that message the update aborts. Reason for this error is that the commandline can use another PHP version than that one which you have when you execute MediaWiki from the webserver. When you get this message you should check, if you can execute a newer PHP version on the shell by using a different command: That might e.g. be php5 or php53. If another version is available and - if so - under which name, depends on the setup of your server. If it does not work, ask your hoster; he will surely know.
+MediaWiki will inspect the existing schema and update it to work with the new code, adding tables and columns as needed.
+What to do in case of "No superuser credentials" error
+In case the scripts abort with a message:
+
+No superuser credentials could be found. Please provide the details of a user with appropriate
+permissions to update the database. See AdminSettings.sample for more details"
+
+This means that you should check that you have defined $wgDBadminuser and $wgDBadminpassword in your LocalSettings.php file (in the main directory). These are the user and password needed by this script in order to access to the database. (Note: Prior to MediaWiki 1.16, these variables were located in AdminSettings.php. This file was removed in 1.16 and the variables were moved to LocalSettings.php.)
+What to do in case of "unexpected T_STRING" error
+Individuals running update.php from the command line may encounter the following error:
+
+syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' \
+in ~/maintenance/commandLine.inc on line 13
+
+This error occurs when update.php is run from php4.
+Individuals who have their site hosted by providers who provide both php4 and php5 should take the following steps:
+from the command line, enter the command 'whereis php5'
+once you have discerned the location of the php5 path, list the contents of php5/bin directory
+once you've determined the name of the php executable (either php or php5), type in the entire path to execute update.php
+Below is an example:
+
+$ whereis php5
+$ ls -la /usr/local/php5/bin
+$ /usr/local/php5/bin/php update.php
+
+What to do in case of 'register_argc_argv is set to false' error
+You may encounter the error:
+
+Cannot get command line arguments, register_argc_argv is set to false
+
+Go to ~/maintenance. Either edit an existing 'php.ini' file, or create one.
+Add a line as follows:
+
+register_argc_argv=true
+
+Re-run php update.php
+Web updater
+MediaWiki version:
+≥ 1.17
+See also update.php
+If your database is already big and in high production usage, then you should not be using the Web updater, e.g. because the update process will time out when the maximum_execution_time is reached. In that case you should use update.php from the command-line interface (not from the web). What exactly is "too big" depends on your server (e.g. on its performance, the load and on how long the maximum execution time of PHP allows the script to run). If your wiki is too big for the web updater and your hosting provider does not allow command-line access, then you need to migrate your wiki to another hosting account, preferably to one that does have shell access.
+Always backup before performing database maintenance.
+Navigate your webbrowser to /mw-config/. For example, if your wiki is at http://example.org/w/index.php, then navigate to http://example.org/w/mw-config/.
+Select your language and click continue.
+The existing installation should be detected. Follow the instructions on the screen to upgrade it.
+If asked for the "upgrade key", open your LocalSettings.php file and look for the key assigned to $wgUpgradeKey.
+It might happen that the web-updater does not seem to work: Instead of seeing the initial language selection screen, you might see an empty wiki page, possibly with some error message. In this case it is most likely that your webserver uses Rewrite Rules (most likely for short URLs), which do not show you the updater at mw-config/, but a wiki page at Mw-config/, with capital "M". In this case, rename the .htaccess file for the time of the update. Then you should be able to access the web-updater.
+ Warning:
+If you use this method, make sure to change the name of the .htaccess file back after running the upgrade script! Otherwise short URLs and possibly other stuff will be broken!
+Test the update
+Once the upgrade has been completed, browse to the wiki and check that the following operations work as expected:
+Viewing pages
+Editing pages
+Uploading a file
+Visit Special:Version and check that the version shown is correct and that the extensions are present.
+Frequently asked questions
+How hard is it to upgrade?
+If the only file you have modified is LocalSettings.php, and you are upgrading from 1.5 or later, the process is very simple. The amount of human work involved is only a few minutes. The database schema changes will take an amount of time proportional to the size of your database — potentially hours for wikis with millions of pages, but for a more typical size of a few thousand pages, it is usually done in seconds.
+Minor upgrades, within the same major version, say from 1.13.0 to 1.13.1, do not require any schema changes at all. You can just update the files. The database needs no update, hence it is not necessary to run the installer script.
+Upgrading from 1.4 or earlier is potentially complicated because support for character sets other than UTF-8 was dropped, and the schema for storing bulk text changed. Please read the relevant section in the UPGRADE file.
+Upgrading becomes difficult if you have modified our source code, and you don't want your changes to be overwritten. Tools such as diff, patch, Meld or WinMerge may be useful. There is also potential for trouble if you are using unmaintained extensions. Upgrade your extensions at the same time as you upgrade MediaWiki.
+If you have modified the skin or use a custom skin you very likely will have to adjust it to work again with the new version of MediaWiki.
+Tip: instead of patching your "global" css and js (javascript) files everytime you can simply add the code to your MediaWiki:Common.js and MediaWiki:Common.css pages. As these are part of the database which will be reused when you upgrade, you will not have to patch the MediaWiki core files any more.
+How do I upgrade from a really old version? In one step, or in several steps?
+It depends: If you are upgrading from MediaWiki 1.4 or older, you should upgrade to MediaWiki 1.5 first. If you are upgrading from a Latin-1 wiki, use upgrade1_5.php (found in MediaWiki 1.5) to convert the relevant parts of the database to UTF-8 ($wgUseLatin1 needs to be set to true in your LocalSettings.php for this to work). Next, run update.php, and then set the $wgLegacyEncoding option in LocalSettings.php to the encoding previously used by the wiki (e.g. windows-1252). This is basically how Wikipedia and other Wikimedia Foundation sites were upgraded from MediaWiki 1.4 to 1.5 – see the [relevant settings file (warning: huge page!) and some related notes at Wikitech. You may need to upgrade to MediaWiki 1.4 before running the upgrade1.5 script.
+If you are upgrading from MediaWiki 1.5 or newer, you can upgrade in one step, from your old version to the latest stable version. The vast majority of reports, as well as automated testing, indicate that doing it in one step works just fine.
+If you have trouble believing this, read this mailing list post.
+If upgrading from a MediaWiki version below 1.19, you may need to add the sha1 field to the revision table manually before running the update script (see bug 48820 and a relevant support desk thread).
+Should I back up first?
+Short answer: Yes.
+Long answer: It depends on a) how much you value your data, b) how hard it is to create a backup and c) how confident you are with MySQL maintenance and administration.
+An upgrade failure may leave your database in an inconsistent state, in between two versions. It may move an important table to a temporary name and then fail before it recreates the table correctly. It may change a field definition to an incorrect data type. It is very rare for an upgrade to cause irreversible data loss. More often, data corruption occurs which can be reversed by a skilled administrator.
+Recovery is often complex. Volunteers on the support forums are unlikely to be impressed if you neglect to make a backup and then need help to recover from upgrade-related corruption. A better outcome is if you can revert to your backup, and then report the bug in the upgrade process which caused the corruption.
+Can I keep my LocalSettings.php?
+Yes, but you may have to make some minor changes. The format of LocalSettings.php is largely backwards compatible. Changes which break LocalSettings.php compatibility will be documented in the "configuration changes" section of the release notes.
+Can my wiki stay online while it is upgrading?
+Generally yes, however Git may temporarily (for a few seconds) break it.
+If you are upgrading between minor releases of MediaWiki, all you need to do is update the source files.
+Note: the following assumes you have command line access. If you are upgrading between major releases of MediaWiki, the preferred procedure is as follows:
+Unpack the new version of MediaWiki into a new directory
+Prepare that new directory: copy your current LocalSettings.php from the old directory, copy any installed extensions and custom skins (if any).
+In the release notes for the new version, see if any changes need to be made to LocalSettings.php.
+Place the database in read-only mode by inserting the following variable into LocalSettings.php in the old directory - users will see this message if they attempt an edit during the upgrade process:$wgReadOnly = 'Upgrading to MediaWiki 1.22.2';
+Run the update script or the web updater in the new directory.
+Copy the images from the images sub-directory from the old directory to the new directory.
+Swap the old directory and the new directory.
+Why upgrade?
+Subscribe to mediawiki-announce to be notified of new releases.
+Because it's usually easy enough, a single step from your version to latest and also via web.
+Many upgrades solve security issues which help to keep your wiki and possibly even your host system safe from vandals, while old releases are not supported (see Version lifecycle). New major releases come with new features, which you might want to use. See the release notes for details. In case you need additional arguments to convince your bosses to let you upgrade from a pretty old version:
+Since 1.9, an undo button is available.
+Since 1.12, patrolling on Special:NewPages is much easier.
+Since 1.13, you can rename (move) files.
+Since 1.14, you can fix double redirects automatically.
+Since 1.16, InstantCommons is available.
+If you have appropriate caching, since 1.17 ResourceLoader optimizes pageload speeds a lot.
+Since 1.17, category sorting makes sense! (especially for non-English letters).
+In 1.19 the skinning system was reworked making it easier to reuse parts of existing skins in your own skins.
+Since 1.18 and 1.19, users of all languages and genders are correctly addressed by the interface and logs (before 1.15, no gender at all).
+Since 1.20, diffs are better readable.
+See also the list of the most voted fixed issues on bugzilla.
+Also, in MediaWiki 1.18 we started bundling some vital extensions, like a better editor and anti-vandalism tools ConfirmEdit and Nuke.
+
+See also
+Project:Support desk if you need help or something went wrong
+Manual:Backing up a wiki
+Manual:Restoring a wiki from backup
+Manual:Moving a wiki
+Manual:Restoring wiki code from cached HTML (if you don't have a successful backup)
+Manual:Installing
+Language:
+English  • català • Deutsch • français • magyar • Bahasa Indonesia • italiano • 日本語 • 한국어 • polski • português do Brasil • русский • 中文 • 中文（简体）‎

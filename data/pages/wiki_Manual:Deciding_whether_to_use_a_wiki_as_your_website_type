@@ -1,0 +1,31 @@
+Manual:Deciding whether to use a wiki as your website typeIf you're considering creating a website, your first decision, even before deciding which wiki software to use, is deciding whether to use a wiki at all. For the most part, it comes down to a decision of whether one believes in the wiki way, which is to make bad changes easy to fix rather than hard to make.
+A wiki is useful any time you want to have decentralized collaboration in a central place. This is in contrast to sites such as nytimes.com or britannica.com, which are large central repositories of content that are centrally controlled by editors and webmasters who report to their respective corporate entities; or the blogosphere, which consists of decentralized content production that results in the work being posted to many different sites, each of which is under the authority of, and is the responsibility of, the individual blogger.
+In some cases, it may be expedient to have a wiki be one component of one's website, and to have the rest be non-wiki. Even the Wikimedia Foundation uses a non-wiki front page for its portal to the wikis listed at wikimedia.org. Other sites, e.g. mises.org, have the wiki as one tab along a ribbon that includes blogs, online stores, etc. and allow the search bar to include results from the wiki in the search results for the whole site.
+
+
+
+Advantages and disadvantages of wikis
+Advantages of wikis
+Searchable content: Allows easy retrieval of archived information (as opposed to, say, Facebook, which buries old posts and threads in non-searchable archives).
+Fewer impediments to division of labor: Allows collaboration in which each person contributes his knowledge and effort to improving mainspace pages, as opposed to each person posting his own content that cannot be modified by others.
+Fast action on ideas community members come up with: Wikis allows decentralized action, in which people can make decisions that are reviewed afterward, rather than seeking permission first from a central decision-maker, who can be a bottleneck. A psychological component may be involved: users may be more likely to fix a problem if they get the relatively immediate gratification of seeing the results of their edit, than if they have to go through a process of reporting the problem to a central authority who may not act in a timely manner.
+Collaborative quality control: If an editor makes a mistake on a wiki, someone else can correct it so that it does not continue being shown to readers and reflecting badly on the organization. If the administrator of a non-wiki website makes a mistake, then it may go uncorrected and reflect badly on the organization.
+Charming quirkiness: Some readers enjoy the slightly chaotic nature of wikis, in which the decentralized nature of the production process is sometimes exposed to view. Sue Gardner viewed it as a feature rather than a bug that "Wikipedia has always been kind of a homely, awkward, handcrafted-looking site."[1]
+Disadvantages of wikis
+Spam, vandalism, etc.: Open editing (if that is what you use) renders the site vulnerable to spam, vandalism, and other unhelpful edits. This makes it necessary for someone to review the recent changes regularly and undo bad edits.
+Bad edits may be at least briefly visible: Even with people reviewing recent changes, there will be a lag between when bad edits are made and when they are reversed.
+Organizational reputation may suffer from users' actions: The wiki content may be deemed to reflect on the organization as a whole rather than on the editors who made the changes. This is different from the state of affairs that exists when, say, each user instead owns and administers his own website which he controls completely and for which he is responsible.
+New content may be presented in hard-to-read formats: Readers looking for the newest content have the options of going to (1) a recent changes page, which may not present the new content in a format that is easy for them to quickly peruse and grasp the meaning of (since it's presented as diffs); (2) a list of new pages, some of which may not be high-quality because they are still under construction and/or haven't been reviewed yet; or (3) a list of pages that have been reviewed for quality (such as Wikipedia's did you know), whose curation may require extra labor.
+Diffusion of responsibility: A wiki may remain empty or unattended as everyone is expecting others to make the necessary changes.
+Software that is relatively difficult to administer: There are many blog installations and comparatively few wiki installations. Therefore, a higher priority has been placed on making it easy to administer blogging software than has been the case with wiki software.
+Ways in which wikis are similar to other sites
+The buck must stop somewhere: Someone will have to be the ultimate authority on what content is to be allowed to remain on the site.
+The site is only as good as the contributors make it: If there isn't enough interest in adding high-quality content, then the site won't have it.
+The site can be run like a regular blog: It is possible to use either blogging software or wiki software as a content management system by adjusting the settings to limit open collaboration. (See, e.g., Manual:Using MediaWiki as a content management system.)
+References
+
+↑ Garber, Megan (12 July 2012). On the Ugliness of Wikipedia. The Atlantic.
+
+External links
+WordPress or MediaWiki: Choose Your Shooting Mark, cms2cms (see especially this chart)
+wikiindex:Differences between wikis and other kinds of websites

@@ -1,0 +1,144 @@
+Manual:Installation guide/daThis page is a translated version of a page Manual:Installation guide and the translation is 77% complete.
+
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+Grundlæggende introduktion til MediaWiki
+
+Indhold
+Hvad er MediaWiki?
+Dokumentation
+Tilpasning
+Versioner og download
+Installationsvejledning
+Support og kontakt
+Udvikling
+Alle andre emner
+Se menuen til venstre
+
+
+ Installationsvejledning | Om MediaWiki
+ Funktioner | Installationskrav
+ Download | Installation | Konfiguration
+
+Velkommen til MediaWiki installationsvejledning som indeholder oplysninger om, hvordan du manuelt installerer og konfigurerer MediaWiki på en webserver. Bemærk, at nogle brugere finder MediaWiki software bundles som et praktisk alternativ til manuel installation.
+Den første del af denne vejledning giver overordnede generelle anvisninger, mens det sidste afsnit indeholder en liste over bilag, der giver mere detaljerede installations-bemærkninger for specifikke systemkonfigurationer og andre mindre almindelige anvendelser af softwaren.
+
+
+
+Opgraderingsguide
+Hvis du allerede kører MediaWiki, se Upgrade guide.
+ Systemkrav
+
+Download MediaWiki (nyeste stabile version er 1.22.2)
+Web server som Apache eller IIS
+Lokal eller kommandolinjeadgang kræves for at køre vedligeholdelses-scripts
+
+PHP version 5.3.2 eller senere.
+På grund af sikkerhedsproblemer med PHP anbefales det stærkt at benytte PHP 5.3.5+ (se flere detaljer her).
+med Perl Compatible Regular Expressions
+med Standard PHP Library
+
+Database Server
+MySQL 5.0.2 eller senere (*)
+eller PostgreSQL 8.1 eller senere
+Kræver PL/pgSQL (indeholdt i bidrag)
+Fuldtekst søgning (Indbygget i >=8.3, kræver tsearch2 extension <=8.2)
+
+eller SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+Hurtig installationsvejledning
+Warning about webhost auto-installers
+Programmer leveret af webudbydere til automatisk installation af for eks. MediaWiki, kan ind imellem ødelægge processen, resulterende i fejl og manglende evne til at fuldføre installationen. Hvis du støder på dette problem, betyder det ikke, at du ikke kan installere MediaWiki, men at du skal installere det manuelt og det er meget let. Fordele ved at gøre det på denne måde kan kontrol over hvor på serveren og valg af stien hvor du ønsker at installere, mulighed for at bruge en delt database, og mulighed for at kontrollere flere funktioner i wikien under installationen.
+For experienced users, here is the quick version of the installation instructions. Most users will want to read the more detailed version, below.
+Check that your system meets the minimum requirements
+Download MediaWiki (direct link to latest version) and extract the archive to a web-accessible folder on your server.
+Point your browser to the directory where MediaWiki was extracted (e.g., http://[domain]/mediawiki/index.php). If installed on a local machine, replace [domain] with localhost. If installed on a remote server, replace [domain] with your server's domain name (eg: www.myserver.com).
+Follow the on-screen instructions to complete the process.
+Disse instruktioner er bevidst kortfattede. Der er mange ting, der kan gå galt, så hvis du er i tvivl, anbefales du at læse den udførlige instruktion nedenfor!
+
+Hoved-installationsvejledning
+Inden installationen
+Hvad er MediaWiki?
+MediaWiki feature list
+Installation requirements - Check installationskravene inden du går videre!
+
+Installing MediaWiki
+Konfigurering af MediaWiki
+Config script (brug konfigurations-script)
+Configuring MediaWiki
+Extensions
+
+Alternativ til manuel installation
+Nogle brugere vil måske foretrække at springe den manuelle installation over ved hjælp af præ-integrerede MediaWiki Software appliances.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+Tillæg
+Avanceret brug
+Følgende giver instruktion i hvordan MediaWiki installeres og konfigureres til andre mindre almindelige formål.
+Download fra Git
+Wiki on a stick
+Avanceret konfiguration
+De følgende sider dækker nogle af de mere avancerede konfigurations-muligheder:
+Configuration* Administrators
+MediaWiki-hjælp
+Den følgende side forklarer, hvordan man kopierer MediaWiki-hjælpesiderne til sin egen wiki
+PD help/Copying
+Installationshjælp
+FAQ: Installation og konfiguration (engelsk)
+IRC (#mediawiki)
+mediawiki-l - den flittigt benyttede mail-liste til support-spørgsmål.
+MediaWiki Users - et bruger-til-bruger MediaWiki support forum
+System-specifikke instruktioner
+De følgende sider giver mere detaljerede installationsanvisninger rettet mod specifikke systemer. I det hele taget er Manual:Installing MediaWikimere up to date og bedre skrevet end de til hvert enkelt system skrevne dokumenter, og derfor anbefales det du først læser Manual:Installing MediaWiki før du kigger på de til systemet skrevne dokumenter.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Newcomers guide
+Streamlined Guide
+Simple Windows Apache Installation
+
+Noter
+
+MediaWiki udgives med et installations-script, der tillader web-baseret konfiguration
+MediaWiki kan dele database med et andet web-baseret program, f.eks phpBB etc.
+Kendskab til PHP er nødvendig for at tilpasse softwaren
+PHP 5 support har været et krav siden MediaWiki 1.7 - hvis du bruger en ældre version af PHP og kan ikke opgradere, så skal du bruge MediaWiki 1.6.12 (download).
+MySQL 4 support har været et krav siden MediaWiki 1.6 – hvis du bruger en ældre version af MySQL og ikke kan opgradere, så skal du bruge MediaWiki 1.5.8 (download).
+MySQL 5 support kræves siden MediaWiki 1.19 – hvis du bruger en ældre version af MySQL og ikke kan opgradere, så skal du bruge MediaWiki 1.18.5 (download).
+Nogle brugere finder det nyttigt at installere ekstra software-pakker, såsom phpMyAdmin (MySQL) eller phpPgAdmin (Postgres) som hjælp til at administrere database serveren.
+
+Se også
+MediaWiki software bundles
+MediaWiki hosting services and wiki farms
+Before installing
+Upgrading
+Uninstallation
+FAQ

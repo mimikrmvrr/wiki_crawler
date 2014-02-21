@@ -1,0 +1,80 @@
+Manual:Running MediaWiki on Fedora
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+You have two options for installing MediaWiki on Fedora: installing it as an rpm/yum package or simply deploying the PHP yourself from the tarball or from the Git repository.
+
+
+
+Running manually
+This guide assumes that you are using Apache and MySQL. Feel free to add instructions for other servers and databases.
+You can simply drop the tarball in a directory accessible to your web server, navigate to it and run the installation wizard. It is closer to the way the developers work, so it makes it easier for the developers to support you.
+You need to have these packages installed before using MediaWiki:
+httpd
+mysql-server
+php
+php-pear
+php-xml
+php-mysql
+php-intl
+php-pecl-apc
+php-gd
+php-mbstring
+ImageMagick-perl
+So basically just doing the following command shall do
+
+sudo yum install -y httpd mysql-server php php-pear php-xml php-mysql php-intl php-pecl-apc php-gd php-mbstring ImageMagick-perl
+
+
+Installing as a package
+MediaWiki is available as a part of Fedora Extras (4 or later). In order to install it, you should run
+
+# yum install mediawiki
+
+as root. After installation, open the file /usr/share/doc/mediawiki-x.y.z/README.RPM and follow the instructions there.
+Bugs
+If blank page when clicking on "Please setup the wiki first." See this bug: (and fix) https://bugzilla.redhat.com/show_bug.cgi?id=967302
+See Also
+SELinux
+Language:
+English  • 日本語 • русский
+
+
+
+
+
+

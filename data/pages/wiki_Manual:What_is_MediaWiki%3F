@@ -1,0 +1,74 @@
+Manual:What is MediaWiki?
+
+asturianu  • ‎български  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（台灣）‎ 
+
+
+
+
+Fundamental Introduction to MediaWiki
+
+Contents
+What is MediaWiki?
+Documentation
+Customization
+Versions & Download
+Installation
+Support & Contact
+Development
+All other topics
+See navigation on the left
+
+
+ Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+
+You probably know Wikipedia, the free encyclopedia, and may possibly be a little bit confused by similar, but different, words such as Wiki, Wikimedia or MediaWiki.
+To avoid a possible confusion between the words you may first want to read the article about the names where the differences are explained.
+
+General Overview
+
+
+
+
+MediaWiki can be used in large enterprise server farms as in the Wikimedia Foundation cluster.
+
+
+MediaWiki is free server-based software which is licensed under the GNU General Public License (GPL). It's designed to be run on a large server farm for a website that gets millions of hits per day.
+MediaWiki is an extremely powerful, scalable software and a feature-rich wiki implementation that uses PHP to process and display data stored in a database, such as MySQL.
+Pages use MediaWiki's wikitext format, so that users without knowledge of XHTML or CSS can edit them easily.
+When a user submits an edit to a page, MediaWiki writes it to the database, but without deleting the previous versions of the page, thus allowing easy reverts in case of vandalism or spamming. MediaWiki can manage image and multimedia files, too, which are stored in the filesystem. For large wikis with lots of users, MediaWiki supports caching and can be easily coupled with Squid proxy server software.
+
+What MediaWiki is...
+MediaWiki is wiki software.
+If you don't know what a wiki is, then please read this Wikipedia article before going any further!
+MediaWiki is server software.
+As with any software that you expose to the internet, there may be bugs or security problems. Do not install MediaWiki unless you intend to keep up with security upgrades (please subscribe to receive announcements of security updates).
+MediaWiki is geared towards the needs of the Wikimedia Foundation.
+The program is primarily developed to run on a large server farm for Wikipedia and its sister projects. Features, performance, configurability, ease-of-use, etc are designed in this light; if your needs are radically different the software might not be appropriate for you.
+MediaWiki is free software.
+No guarantee or warranty of any kind is provided.
+Try out Wikitext
+
+
+
+
+Basic wikitext (wiki markup)
+
+
+Yes, you can easily modify pages and you can (temporarily) publish dummy sentences, and you can even (temporarily) completely destroy a page in a wiki. You don't need to have any programming skills to do this.
+We suggest you exercise yourself within our sandbox. Please isolate your testing there, though: the admins might not take too kindly to your mischief otherwise.
+You can also look up the cheat sheet which contains basic formatting commands.
+Some things MediaWiki doesn't do so well...
+Because MediaWiki was designed for open-content, it is often not suitable for situations where you want to restrict access to part of the wiki.
+MediaWiki has been designed to serve very high-traffic websites such as Wikipedia. It has been optimized for this use and may not be so suitable for smaller sites, where disk space or memory are bigger restrictions than bandwidth.
+MediaWiki is not normally a suitable replacement for dedicated forum/blogging software if that is what you are after.
+In the above cases there may be other wiki software (or non-wiki software) which better serves your needs.
+See also
+Manual:Deciding whether to use a wiki as your website type
+Manual:Deciding which wiki software to use
+Full list of MediaWiki features
+wikipedia:Comparison of wiki software
+www.wikimatrix.org — side-by-side comparison of various wiki engines.
+Translate this page

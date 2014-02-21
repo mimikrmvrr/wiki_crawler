@@ -1,0 +1,92 @@
+Semantic BundleSemantic Bundle (abbreviated as SB) is a pre-packaged bundle of extensions for use with wikis that are based around the Semantic MediaWiki extension. It can be obtained either through Git or by downloading a single .7z, .tgz or .zip file.
+
+
+
+Contents
+Semantic Bundle contains a large number of MediaWiki extensions; chief among them is, of course, Semantic MediaWiki, an extension that enables semantic storage and querying of data. Other SMW-based extensions included in this bundle are:
+Semantic Result Formats - defines many additional formats for SMW queries
+Semantic Forms - allows wiki administrators to create easy-to-use editing and querying interfaces for their wiki
+Semantic Compound Queries - allows for displaying multiple queries at the same time
+Semantic Internal Objects - allows for storing compound, "n-ary" data on pages
+Semantic Drilldown - defines an easy browsing tool for the data set
+Semantic Maps - allows for using various map services to display semantic coordinate data and enter coordinates within forms
+Semantic Watchlist - lets users be notified of specific changes to semantic data
+Semantic Tasks - allows for sending reminder and notification emails to users for tasks
+Semantic Forms Inputs - provides additional input types for Semantic Forms
+Semantic Image Input - allows for automatic adding of images from Wikipedia pages via a Semantic Forms input
+There are other extensions included in Semantic Bundle that, though they do not use Semantic MediaWiki directly, are often used in conjunction with SMW. These are:
+Admin Links - defines a special page that serves as a "control panel" for administrative tasks
+Approved Revs - allows for setting a single revision of any page as the "approved" one; if the page contains any SMW data, it's the approved revision's version that is stored
+Arrays - defines useful parser functions for manipulating arrays
+Data Transfer - allows importing data into and out of the wiki via XML and CSV formats
+External Data - allows for displaying data from outside APIs in the wiki
+Header Tabs - allows to convert top-level sections of the page into tabs; often used with Semantic Forms to make long forms more user-friendly
+Maps - allows for displaying individual points and geocoding addresses using various map services; required by Semantic Maps
+Page Schemas - lets users define a schema for each category that can be used to automatically generate templates, forms, etc. for that category
+Replace Text - provides a form for administrators to do a text search-and-replace across the wiki
+Validator - parameter-handling framework for MediaWiki and extensions; required by Semantic MediaWiki
+Widgets - allows adding widgets to the wiki by simply creating pages in the "Widget:" namespace
+Semantic Bundle is not at all meant to be a comprehensive set of useful extensions, and there are many other extensions that are also quite useful, either in conjunction with SMW or in general, that were not included in the bundle. Most notably, there are seven extensions that are bundled in MediaWiki since version 1.18, and thus don't need to be included in SB: ConfirmEdit, Gadgets, Nuke, ParserFunctions, Renameuser, Vector and WikiEditor. There are many others that weren't included, for technical or other reasons, and we would encourage administrators setting up an SMW-based wiki to look at the wide variety of other extensions available. Some of these other helpful extensions include ArticleFeedbackv5, CategoryTree, Cite, Live Translate, Math, OpenID, Push, Semantic Signup and SpamBlacklist.
+Download
+Semantic Bundle is available either as a downloadable .zip, 7z or .tgz file, or via SVN.
+Package download
+You can get these files at the download page of the Semantic Bundle Google Code project. Once you have the .zip, 7z or .tgz file, you should move it to the /extensions directory and extract it there.
+Downloading using Git (experimental)
+WARNING! This is experimental! You must know what you're doing!
+From your extensions directory, run:
+
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticBundle.git
+
+The bundle building code will be cloned into extensions/SemanticBundle. Change into this directory and run the following command:
+
+make
+
+this will create SVN externals in your /extensions folder for all the extensions in the bundle and will automatically run svn update to fetch all the components of the bundle.
+To check out development releases (trunks) of all the extensions in the bundle instead, run:
+
+make dev
+
+this will modify the externals and run update again switching over to trunk releases.
+Note: if your MediaWiki is not managed using SVN, you can get the latest version of Semantic Bundle using the SVN command above, then type:
+
+make all
+
+which will build a .tgz file which you can extract in your extensions directory.
+Installation
+Extracting the files will create directories under /extensions for each of the extensions contained in Semantic Bundle.
+If you enter the "semantic-bundle" or "SemanticBundle" directory, you will see SemanticBundleSettings.sample.php and SemanticBundle.php, among several other files. SemanticBundleSettings.sample.php contains calls to include all the extensions that Semantic Bundle contains. By default, the calls to all extensions but Semantic MediaWiki are commented out; don't un-comment until after Initializing Semantic MediaWiki, see below.
+Copy the existing SemanticBundleSettings.sample.php file to a new file, named SemanticBundleSettings.php. You shouldn't directly use SemanticBundleSettings.sample.php (even though it's possible), because any changes you make to the file SemanticBundleSettings.sample.php will be lost if you ever upgrade to a new version of Semantic Bundle.
+Then, include SemanticBundleSettings.php and SemanticBundle.php within LocalSettings.php:
+
+
+
+require_once( "$IP/extensions/SemanticBundle/SemanticBundleSettings.php" );
+require_once( "$IP/extensions/SemanticBundle/SemanticBundle.php" );
+
+
+If you got the code from git or a recent release, replace "semantic-bundle" with "SemanticBundle".
+It should be noted that SemanticBundle.php isn't actually required - but it holds version information for Semantic Bundle, which can help with debugging; and it's also good marketing for the Semantic Bundle project - so we ask you to please consider including it.
+Initializing Semantic MediaWiki
+The next step is to initialize Semantic MediaWiki. First, make sure that you are logged in as an administrator/sysop, such as the WikiSysop user. Then, go to Special:SMWAdmin, and click on the "Initialize or upgrade tables" button.
+After successful initialization, open up SemanticBundleSettings.php and uncomment the extensions you would like to use.
+Note: it's strongly recommended to initialize SMW before you include (i.e., uncomment) any of the other SB extensions (other than Validator, which is necessary), to avoid potential errors from extensions that require SMW.
+For more information on installing the extensions, see the installation and configuration sections for each extension. Of the extensions currently in SB, Approved Revs, Semantic Maps, Semantic Watchlist and Widgets require some additional setup before they can be used.
+Benefits
+Semantic Bundle provides a number of important benefits over downloading and installing individual extensions; among them:
+it provides a "best practices" set of extensions around Semantic MediaWiki, based on user experiences
+it simplifies download, especially for those systems that don't have Git, and especially for those extensions (like ParserFunctions) that don't have a standard downloadable version already
+it tries to guarantee working code by using tagged, stable versions of extensions whenever possible
+it simplifies installation by providing a pre-generated list of includes
+On the other hand, with individually-downloaded extensions, you may stand a better chance of having fully-up-to-date extensions, since the versions in Semantic Bundle are usually but not always the most recent.
+Authors
+Semantic Bundle was initially created by Sergey Chernyshev and Yaron Koren in May 2008. It is currently maintained by Yaron Koren and Jeroen De Dauw.
+License
+Semantic Bundle uses the BSD license.
+Each extension in the bundle uses its own license, however: please consult extension pages for licensing details.
+More information
+More information, and bug reporting, is available at the Semantic Bundle Google Code page.
+
+
+
+
+

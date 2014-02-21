@@ -1,0 +1,62 @@
+Manual:SQLite
+SQLite support for MediaWiki is of production quality as of MediaWiki 1.17, for example the continuous integration server used by our developers runs on SQLite. SQLite support had been part of the main code-base since MediaWiki version 1.13. There are some notes below on installing the SQLite library into your PHP environment.
+
+
+
+About SQLite
+SQLite is an open-source database library released into public domain. Unlike client-server database management systems, the SQLite library is linked into PHP and thus becomes an integral part of the server process. MediaWiki uses SQLite's functionality through simple function calls, which reduces latency in database access as function calls are more efficient than inter-process communication.
+Using SQLite as database backend for MediaWiki has its own pros and cons:
+Pros
+You don't have to install and maintain a standalone database server such as MySQL, this significantly reduces efforts spent on administration and removes some points of failure.
+The former also means that SQLite is much more suitable for portable MediaWiki installs running from a USB stick.
+You are not restricted by artificial database limitations on shared hosts.
+The entire database is stored as a single cross-platform file, simplifying backups and migration.
+Cons
+SQLite is not that scalable, so if you have a large and popular wiki, you should use MySQL.
+Although SQLite has its own search engine, it's not supported by more advanced solutions such as Lucene.
+Some PHP builds (RHEL, older XAMPP) come with outdated SQLite versions that limit the functionality and may contain bugs.
+Several extensions are known to have database update or installation issues with SQLite: AbuseFilter, Echo, Flagged Revisions and LiquidThreads.
+SQLite installation
+Although all SQLite versions above 3.1.2 (required for ADD COLUMN) are supported, SQLite 3.6 is recommended, as it has some data integrity bugs fixed. Also, in order to use full text search, SQLite must be compiled with FTS3 module enabled (most builds have it out of the box these days). SQLite3 works via PHP's PDO functions.
+To install SQLite3 on a Debian based system, use apt-get install php5-sqlite3.
+On newer Ubuntu and probably other distributions the package is called php5-sqlite (no 3 at the end!), be careful.
+Windows binaries from php.net are OK.
+
+Since PHP 5.1.0, SQLite depends on PDO. You should uncomment the following two lines in your php.ini (note: sometimes you can't even use phpinfo() to check if they are present, because an SQLite-enabled PHP tend to crash or fail when PDO is absent, especially on Windows):
+extension=php_pdo_sqlite.so (or extension=php_pdo_sqlite.dll for Windows)
+extension=php_pdo.so (or extension=php_pdo.dll for Windows)
+
+Where should you put the SQLite database itself? The default path seems to be $IP/../data/$dbname.sqlite . Anything outside of the webroot should be safe; it's good to keep it nearby. Or, if you feel like it, you could put it in the web root somewhere and make sure to use webserver config to deny access to it.
+Installing MediaWiki on SQLite backend
+If SQLite module for PHP is properly installed, MediaWiki installer (/config/index.php) should offer you an option to use SQLite. On MediaWiki versions prior to 1.16, you need to enter something into the "DB username" and "DB password" fields for installer to continue even though SQLite does not need them.
+If you enter nothing into the "SQLite data directory" field, your $wgSQLiteDataDir will be left empty, which corresponds to data directory in the parent of the document root, however this directory might be different for web scripts and maintenance scripts run from command line, so specifying it explicitly is recommended.
+Search engine
+MediaWiki version:
+1.16
+Search capabilities for SQLite backend was introduced in MediaWiki 1.16. They require SQLite with FTS3 module compiled-in, which is usually present in most modern builds. If you've recently updated your SQLite support to a version that includes FTS3, run the updater as if you're upgrading MediaWiki. After the updater script created the search index table, populate it with rebuildtextindex.php. Same applies to switches back to environments without FTS3: re-running the updater will downgrade the table to avoid SQL errors.
+Backing up
+If your wiki is currently offline, its database can be backed up by simply copying the database file. Otherwise, you should use a maintenance script: php maintenance/sqlite.php --backup-to <backup file name>, which will make sure that operation is atomic and there are no inconsistencies. If your database is not really huge and server is not under heavy load, users editing the wiki will notice nothing but a short lag. Users who are just reading will not notice anything in any case.
+Troubleshooting
+Unable to access the database on the terminal
+To get command-line access to the database, type on the terminal:
+
+sqlite3 /var/data/database_name.sqlite
+
+replacing /var/data with the directory that was set as the "SQLite data directory" during the installation process. Alternatively, look for the $wgSQLiteDataDir inside LocalSettings.php.
+This can be tricky if you are not experienced about SQLite and run sqlite3 database_name - because this will open a completely different database (creating it if it doesn't exist) since SQLite interprets the argument not as a system-wide database name, but instead as the file name that contains the db.
+Problems
+Bugs should be reported to Wikimedia's bug tracker. First check if your problem was already reported - check the dependencies of tracking bug 20257 and use search. If you can't find your problem, create a new issue. If the problem is directly related to SQLite backend, report it under MediaWiki → Database component. Otherwise (if the problem is related to one very specific aspect, of the software or an extension), select an appropriate product and component. In any case please take some steps to make your bug easy to find and track: mention SQLite is its summary field and make it depend on bug 20257.
+See also
+SQLite-specific configuration settings:
+$wgSQLiteDataDir
+$wgCountTotalSearchHits
+
+Maintenance script sqlite.php
+External links
+SQLite home page
+Wikipedia article on SQLite
+OrganicDesign:MediaWikiLite - a portable personal wiki based using MediaWiki, SQLite and NanoWeb the webserver written in PHP
+Databases
+Engines: MySQL – Oracle – PostgreSQL – SQLiteTechnical documentation: Schema (tables) – Field prefixes – Primary key storage in other fields – AccessTables: archive – category – categorylinks – change_tag – config – externallinks – filearchive – hitcounter – image – imagelinks – interwiki – iwlinks – ipblocks – job – l10n_cache – langlinks – logging – log_search – msg_resource – msg_resource_links – module_deps – objectcache – oldimage – page – pagelinks – page_props – page_restrictions – protected_titles – querycache – querycachetwo – querycache_info – recentchanges – redirect – revision – searchindex – sites – site_stats – tag_summary – templatelinks – text – transcache – updatelog – uploadstash – user – user_former_groups – user_groups – user_newtalk – user_properties – valid_tag – watchlist
+Language:
+English  • 日本語 • polski • 中文

@@ -1,0 +1,144 @@
+Manual:Installation guide/fr
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+Présentation de MediaWiki
+
+Contenu
+Qu'est-ce que MediaWiki ?
+Documentation
+Personnalisation
+Versions & Téléchargement
+Installation
+Support & Contact
+Développement
+Autres sujets
+Voir la barre de navigation sur la gauche
+
+
+ Guide d'installation | À propos de MediaWiki
+ Fonctionnalités | Prérequis
+ Téléchargement | Installation | Configuration
+
+Bienvenue sur le guide d'installation de MediaWiki qui a pour objectif de vous expliquer comment installer et configurer manuellement le logiciel MediaWiki sur un serveur web. Veuillez noter que certains utilisateurs peuvent éventuellement utiliser des packages logiciel(en) qui seront une alternative pratique à l'installation manuelle.
+La première partie de ce manuel donne des informations d'ordre général, tandis que la dernière section comprend une liste d'appendices qui donnent des instructions plus détaillées pour des configurations système spécifiques et des utilisations du logiciel moins courantes.
+
+
+
+Guide de mise à jour
+Si vous avez déjà une installation de MediaWiki qui tourne, voyez le guide de mise à jour.
+ Requis
+
+Téléchargement de MediaWiki (la dernière version stable est la 1.22.2)
+Un serveur web de type Apache ou IIS
+Un accès local ou la possibilité d'entrer des lignes de commande est nécessaire pour lancer des scripts de maintenance
+
+PHP version 5.3.2 ou ultérieure.
+Du fait d'un problème de sécurité avec PHP, il est fortement conseillé d'utiliser PHP 5.3.5+ (cliquez ici pour plus de détails).
+avec Perl Compatible Regular Expressions
+avec Standard PHP Library
+
+Serveur de bases de données
+MySQL 5.0.2 ou ultérieur (*)
+ou bien PostgreSQL 8.1 ou ultérieur
+Nécessite PL/pgSQL (fourni dans contribs)
+Recherche Full-Text (Natif dans les versions >=8.3, nécessite l'extension tsearch2 pour les versions <=8.2)
+
+ou alors SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+Guide d'installation rapide pour les utilisateurs expérimentés
+Avertissement au sujet des auto-installateurs des hébergeurs de site web
+Les programmes fournis par les hébergeurs de sites web qui ont pour but l'installation automatique d'applications comme MediaWiki peuvent plus souvent qu'à leur tour planter le processus, engendrant des erreurs et l'échec de l'installation de MediaWiki (ou toute autre application concernée). Si vous faites face à ce problème, cela ne veut absolument pas dire que vous ne pouvez pas installer MediaWiki : cela veut seulement dire que vous devriez le faire manuellement. Il s'agit d'une opération très facile et il y a des avantages à procéder de la sorte, comme un contrôle accru sur le serveur et le répertoire où vous voulez l'installer, la possibilité d'utiliser une base de données partagée ou la possibilité de contrôler plus de fonctionnalités du wiki durant l'installation.
+Pour les utilisateurs avancés, il s'agit de la version rapide du guide d'installation. La plupart des utilisateurs préféreront certainement lire des instructions bien plus détaillées ci-dessous.
+Vérifiez que le serveur dispose du minimum requis.
+Téléchargez MediaWiki (lien direct vers la dernière version) et extrayez l'archive dans un dossier accessible sur le serveur web.
+Allez avec votre navigateur dans le dossier où a été extrait MediaWiki (par exemple http://[domaine]/mediawiki/index.php. Si vous l'avez installé sur une machine locale, remplacez [domaine] par localhost. Si vous l'avez installé sur un serveur distant, remplacez [domaine] par le nom de domaine de votre serveur du style www.monserveur.com).
+Suivez les instructions affichées à l'écran pour terminer le processus d'installation.
+Ces instructions sont délibérément brèves. Malgré tout beaucoup de choses peuvent tourner mal, donc si vous avez le moindre doute, il est conseillé de suivre toutes les instructions ci-dessous !
+
+Guide d'installation principal
+Avant l'installation
+Qu'est ce que MediaWiki ?
+Liste des fonctionnalités (version complète en anglais)
+Prérequis pour l'installation - Vérifiez bien ces points avant d'aller plus loin !
+
+Installation de MediaWiki
+Configuration de MediaWiki
+Configuration initiale (en utilisant le script de configuration)
+Configuration avancée
+Installation d'extensions
+
+Alternatives à une installation manuelle
+Certains utilisateurs préfèreront s'affranchir de l'installation manuelle et opter pour un package logiciel avec MediaWiki préconfiguré.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+Appendices
+Utilisations avancées
+Les pages suivantes donnent des instructions pour installer et configurer MediaWiki pour d'autres raisons moins courantes.
+Installation depuis Git
+Installation de MediaWiki sur un support mémoire
+Configuration avancée
+Les pages suivantes couvrent certaines des options de configuration avancées :
+Configuration avancée
+Administration de wiki
+Aide sur MediaWiki
+La page suivante explique comment obtenir une copie des pages d'aide MediaWiki sur votre wiki personnel :
+Récupération des pages d'aide
+Assistance à l'installation
+FAQ : installation et configuration (version complète en anglais)
+IRC (#mediawiki)
+mediawiki-l (Liste de distribution) est une liste de distribution à fort trafic permettant de demander une assistance (en anglais)
+Utilisateurs MediaWiki (Forum) est un forum d'assistance MediaWiki d'utilisateur à utilisateur (en anglais)
+Instructions spécifiques par système
+Les pages suivantes donnent des instructions détaillées spécifiques à différents systèmes d'exploitation (en anglais sauf indication contraire). Cependant, la page d'installation de MediaWiki est en général beaucoup plus à jour et mieux rédigée que les documentations spécifiques aux systèmes. Il est donc préférable de s'y référer avant d'aller sur les documents d'installation dédiés aux systèmes.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Guide des débutants
+Guide simplifié
+Guide d'installation simplifiée Windows/Apache
+
+Notes
+
+MediaWiki est livré avec un script d'installation avec le support de PHP5
+MediaWiki peut partager la base de données d'une autre application orientée web comme phpBB, etc.
+Une connaissance de PHP est nécessaire si vous souhaitez personnaliser le logiciel.
+PHP 5 est nécessaire pour faire fonctionner MediaWiki depuis la version 1.7 - si vous utilisez une version plus ancienne de PHP et n'avez pas la possibilité de la mettre à jour, vous devriez plutôt utiliser MediaWiki 1.6.12 (téléchargement). Veuillez noter que cette version n'est plus supportée.
+MySQL 4 est nécessaire pour faire fonctionner MediaWiki depuis la version 1.6 - si vous utilisez une version plus ancienne de MySQL et n'avez pas la possibilité de la mettre à jour, vous devriez plutôt utiliser MediaWiki 1.5.8 (téléchargement). Veuillez noter que cette version n'est plus supportée.
+MySQL 5 est nécessaire depuis MediaWiki 1.19(en) – si vous utilisez une version plus ancienne de MySQL et n'avez pas la possibilité de la mettre à jour, vous devriez utiliser MediaWiki 1.18.5 (téléchargement).
+Certains utilisateurs trouveront utile d'installer des packages logiciel supplémentaires comme phpMyAdmin (MySQL) ou bien phpPgAdmin (Postgres) pour faciliter l'administration du serveur de bases de données.
+
+Voir aussi
+packages logiciels MediaWiki
+Avant l'installation
+Mise à jour
+Désinstallation
+Foire Aux Questions
+This page is a translated version of a page Manual:Installation guide and the translation is 83% complete.

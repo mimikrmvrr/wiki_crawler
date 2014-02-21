@@ -1,0 +1,29 @@
+Documentation
+
+
+Fundamental Introduction to MediaWiki
+
+Contents
+What is MediaWiki?
+Documentation
+Customization
+Versions & Download
+Installation
+Support & Contact
+Development
+All other topics
+See navigation on the left
+
+
+For many common questions about mediawiki, the FAQ page is a good place to start.
+For wiki users
+Help:Contents is the entry point for wiki user help at Mediawiki.org.
+There is more wiki user help on meta.
+For developers and system administrators
+Manual:Contents is the front door to MediaWiki system administration documentation at MediaWiki.org.
+The README file provides organization-specific information about the MediaWiki project.
+The docs directory provides other code-related documentation.
+The process used to document MediaWiki code is described at the manual page Comments and Documentation of code
+The Mediawiki core documentation provides documentation for the classes and files within Mediawiki itself.
+Language:
+English  • български • català • čeština • dansk • Deutsch • Ελληνικά • español • suomi • français • Bahasa Indonesia • italiano • 日本語 • Nederlands • polski • português • português do Brasil • русский • Türkçe • українська • Tiếng Việt • 粵語 • 中文 • 中文（繁體）‎

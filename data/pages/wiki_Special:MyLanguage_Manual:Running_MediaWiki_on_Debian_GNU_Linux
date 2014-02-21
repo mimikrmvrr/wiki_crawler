@@ -1,0 +1,238 @@
+Manual:Running MediaWiki on Debian GNU/Linux
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+This page describes how to install MediaWiki on Debian Squeeze using the latest official MediaWiki code.
+Quick install mediawiki version 1.15.5-2
+Debian will automatically add any required packages to the install.
+
+# apt-get install mediawiki mediawiki-extensions
+
+You will be asked to set a root MySQL password during the installation.
+
+# ln -s /var/lib/mediawiki /var/www
+# mv /var/www/mediawiki /var/www/wiki
+$ firefox localhost/wiki/config/index.php
+
+Edit Local Settings to change $wgLogo:
+
+# vi  /etc/mediawiki/LocalSettings.php
+
+Possibly, set short URL.
+
+
+
+Using the Debian packages
+ Warning:
+The packages created by linux distro's (including debian) are unofficial. It is recommended you read through the information on Software bundles before installing via a package.
+MediaWiki is now in Debian's main archive. The main packages are mediawiki (which provides the latest packaged version of mediawiki) and mediawiki 1.15.5 (which provides mediawiki version 1.15.5). This guide is mainly concerned with an installation without those packages. Debian is a stable and secure linux distribution because of the package system. Using it will allow you to receive upgrades and security fixes. It is easy to learn and will give you years of safe and trouble-free use.
+To install MediaWiki using Debian's packages, just type as root:
+
+ # apt-get install mediawiki
+
+You may also want to install the package mediawiki-extensions: NOTE: mediawiki-extensions is a large meta package containing mediawiki-extensions-base (Base package), mediawiki-extensions-collection (Collection extension), mediawiki-extensions-confirmedit (ConfirmEdit), mediawiki-extensions-fckeditor (FCKeditor), mediawiki-extensions-geshi (SyntaxHighlight_GeSHi extension), mediawiki-extensions-graphviz (GraphViz extension), mediawiki-extensions-ldapauth (LdapAuthentication extension), and mediawiki-extensions-openid (OpenID extension). Any of these extensions can be installed individually.
+
+ # apt-get install mediawiki-extensions
+
+For further information on using the Debian packages, see the section Installation with Debian-package below.
+Configure Apache
+If you want to have MediaWiki run on a virtual host, you'll want to add a file in the /etc/apache2/sites_available directory. See the Debian documentation for more information.
+Also be aware that if you have PHP configured in anything like a safe mode such that open_basedir is very restrictive then you'll need to add, in an appropriate place such as a <Location /mediawiki> section, something like:
+
+php_admin_value open_basedir ".:/var/lib/mediawiki1.7:/usr/share/mediawiki1.7:/etc/mediawiki1.7"
+
+
+Configure PHP
+Make sure your PHP configuration file (/etc/php4/apache/php.ini or /etc/php4/apache2/php.ini or the equivalent line if you have PHP5 which the MediaWiki 1.7 installation will have) has this line:
+
+memory_limit = 20M
+
+and the following lines uncommented:
+
+extension=mysql.so
+extension=gd.so
+
+Modify the open_basedir config variable to allow access to GNU diff3 and git binaries. Add :/usr/bin/ to the end:
+
+open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/var/www/:/usr/bin/
+
+restart Apache / Apache2
+
+apachectl restart  OR  apachectl graceful
+
+
+apache2ctl restart  OR  apache2ctl graceful
+
+Get latest MediaWiki
+Get the latest MediaWiki from Download page:
+
+wget http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz
+
+Copy it and extract in apache root directory:
+
+sudo mv mediawiki-1.22.2.tar.gz /var/www
+cd /var/www
+sudo tar vxfz mediawiki-1.22.2.tar.gz
+
+rename the extracted directory name to wiki
+
+sudo mv mediawiki-1.22.2 wiki
+
+Pay good attention for "Checking environment..." in MediaWiki installation script. This can solve a lot of problems for your MediaWiki successful installation. Fill out the configuration form and continue.
+Once configuration is done you'll need to download the LocalSettings.php file and put it in your wiki directory.
+For added safety you can then remove the config subdirectory entirely.
+
+rm -r config
+
+And navigate your browser to http://localhost/wiki to see your new wiki. Done!
+If you want to setup a master Source of wiki, and multi-slave for different wiki sites. You can ...
+get a auto. generate wiki slave script from create_slave_wiki
+run the wiki init. install on web, then create the LocalSettings.php.
+create a user, then change him/her to sysop.
+Installation with Debian-package
+
+Note: this description is still referring to the older mediawiki1.5.
+
+I just got it all working. What I did was to install a Debian-package with mediawiki1.5. After installation I pointed my browser to: http://localhost/mediawiki/setup and filled in the form there. After that I moved my LocalSettings.php from the folder where it was, to the suggested folder. I did a chmod 444 on all files in that folder. After that i did a "chmod 700 on the folder /etc/mediawiki1.5". Now I clicked on the URL in the installation results, and whamo, there it was, my wiki :) Did this twice on two different Debian installs today, so the procedure should work.
+Warning: The Ubuntu packages are several versions behind. As of 02:41, 13 October 2006 (UTC), it was on version 1.4.12.
+--- update for mediawiki1.7
+Did the install of the Mediawiki 1.7 on Debian Etch (apache2, mysql, php5) by "apt-get install mediawiki" and everything works right on without a glitch. Way to go Debian!
+TeX Support
+You need these packages installed:
+ocaml
+imagemagick
+gs
+cjk-latex (now called latex-cjk-all)
+tetex-extra (now in texlive-base, is installed by latex-cjk-all)
+php4-imagick
+binutils ("/usr/bin/as" is needed by make job)
+gcc
+
+apt-get install ocaml imagemagick gs cjk-latex tetex-extra php4-imagick binutils gcc
+
+or you can just use the mediawiki-math package. There is all packages needed include its.:
+
+apt-get install mediawiki-math
+
+After installation, enable inline LaTeX equations by uncommenting:
+
+
+
+$wgUseTeX           = true;
+
+
+in LocalSettings.php file.(by default in /etc/mediawiki)
+It is not necessary to make texvc if you install the mediawiki-math package. However, /var/www/wiki/math/README does not specify what permissions are necessary for the math directory. I get this error under Ubuntu Breezy after installing the mediawiki-math package. Failed to parse (Can't write to or create math output directory):
+If you get the above error, make sure that the '$wgUploadPath' and '$wgUploadDirectory' in LocalSettings.php point to an existing directory which is writable by the webserver. For the mediawiki1.5 1.5.8-1 package, you may have to edit LocalSettings.php to change the directory name from 'images' to 'upload' (check your /var/lib/mediawiki1.5 directory for this).
+Make sure your php.ini contains the following row: extension=imagick.so Next compile texvc in your math directory: cd /var/www/wiki/math make You may have to manually create the directories for math temp and output directories: cd /var/www/wiki/images mkdir -m777 math tmp
+Ocaml-fix
+NOTE: This problem is only about missing gcc.
+(Added 18/05/05)
+Using make I got some errors using Debian stable (Sarge) (unfortunately they are not in my console any more, so i cant show them) but installing additional packages worked. The Error Messages are similar to those (reproduced on ubuntu) :
+
+ocamlopt -c util.ml
+ocamlc -c render_info.mli
+ocamlc -c tex.mli
+ocamlyacc parser.mly
+ocamlc -c parser.mli
+ocamlopt -c parser.ml
+ocamlc -c html.mli
+ocamlopt -c html.ml
+ocamlc -c mathml.mli
+ocamlopt -c mathml.ml
+ocamlc -c texutil.mli
+ocamlopt -c texutil.ml
+ocamlopt -c render.ml
+ocamllex lexer.mll
+188 states, 3222 transitions, table size 14016 bytes
+ocamlopt -c lexer.ml
+ocamlopt -c texvc.ml
+ocamlopt -o texvc unix.cmxa util.cmx parser.cmx html.cmx mathml.cmx texutil.cmx render.cmx lexer.cmx texvc.cmx
+sh: gcc: command not found
+Error during linking
+make: *** [texvc] Error 2
+rm parser.ml lexer.ml
+
+In order to fix the problems do the following install:
+
+apt-get install ocaml-core gcc
+
+NOTE: If you have run ocaml -i thinking this would help (as I did) the script may have removed some files. If you can, copy the contents of a backup /images/math directory to your new one after having deleted the old files and run make again.
+Note that you have to change the LaTeX code to see if it works (purge the page.)
+This worked on etch and mediawiki 1.11
+go to /wiki/math/
+apt-get install ocaml texlive imagemagick build-essential ocaml-core gcc
+add new folder math in wiki/images
+chmod 777 math
+chown www-data math
+in localsettings.php insert $wgTmpDirectory = "$IP/images/math";
+in localsettings.php change to $wgUseTeX = true;
+test if it works - enter "* \int_a^x f(\alpha\,)\,dx" on a page and save it
+If you do "sudo chmod -R 0777 images"(losing safety), the following setting works well:
+The following LocalSetting.php settings works on Hardy and mediawiki 1.15
+$wgTexvc ="/usr/bin/texvc";
+$wgUseTeX = true;
+$wgUploadPath = "images";
+$wgUploadDirectory = "images";
+$wgMathPath = "$wgScriptPath/images";
+$wgMathPath = "$wgScriptPath/images";
+$wgTmpDirectory = "$wgScriptPath/images";
+Sufficient package combination for Etch and Mediawiki 1.12
+If you do not have texvc:
+
+apt-get install  texlive imagemagick gs make ocaml
+
+After build of texvc, you may remove every packages installed with "ocaml".
+If you have texvc (you can build it on another Etch):
+
+apt-get install  texlive imagemagick gs
+
+See also
+Manual:Running MediaWiki on Ubuntu
+Manual:Running MediaWiki on Linux
+MediaWiki and Security
+m:MediaWiki development
+Links
+MediaWiki installation in Debian and Windows XP (as part of Synarcher installation)
+Language:
+English  • 日本語
+
+
+
+
+
+

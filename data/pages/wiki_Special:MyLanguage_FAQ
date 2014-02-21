@@ -1,0 +1,1009 @@
+Manual:FAQ   Immediate help
+
+mediawiki-l, the MediaWiki mailing list.
+#mediawiki - the IRC channel.
+For more information about the above, please see communication.
+
+Frequently asked questions (FAQ) about MediaWiki usage. If your question is neither answered here nor in the MediaWiki documentation, then please ask for help in our IRC channel or in the Support desk.
+Language:
+English  • català • dansk • Deutsch • español • français • ગુજરાતી • עברית • Bahasa Indonesia • italiano • 日本語 • 한국어 • മലയാളം • occitan • polski • português • português do Brasil • русский • Türkçe • 中文 • 中文（简体）‎
+
+
+
+
+
+
+shortcut: FAQ
+The basics
+What are the differences between MediaWiki, Wikimedia, Wikipedia and wiki?
+This is a common question, please see Wikipmediawiki for a detailed answer.
+I want to use a MediaWiki instance to (blank). Am I allowed to?
+MediaWiki is free software: this means that you may use it for any purpose without legal hindrance. Furthermore, its licensing conditions apply solely to the software itself. This means that although many wikis license their content under a permissive license, you are not obliged to license the content submitted to your wiki in any particular way. Of course, as a project founded to support sites like Wikipedia, we encourage you to license the texts you write under a free license, but, in short, you are not required to.
+If you wish to alter or amend the software itself, in general, you are permitted to, but there are some restrictions and you should consult the full text of the GNU GPL version 2 for details. Because MediaWiki is provided free of charge, there is no warranty, to the extent permitted by applicable law.
+Installation and configuration
+Where do I download MediaWiki?
+Click here to download the latest stable release of MediaWiki. Files are supplied in a .tar.gz archive. MediaWiki can also be obtained directly from our Git repository.
+How to install MediaWiki?
+Installing MediaWiki takes around 10 to 30 minutes, and involves uploading/copying files, and running the installer script to configure the software. See the Installation Guide, where you will also find the minimum system requirements.
+How do I install MediaWiki using a package?
+Many Linux distributions provide MediaWiki in a packaged format for that distribution. The MediaWiki development team refers you to your Linux distribution for assistance with installing, configuring or using them. The individual communities and companies who maintain such packages should provide installation instructions.
+Be warned that third-party distributions may be older versions, so pay close attention to compatibility information for directions and extensions.
+See also: Software bundles.
+Can I install more than one wiki on a server using MediaWiki?
+It is possible to install more than one wiki on a server provided that:
+You use a different database for each wiki
+Or
+You use a different database prefix for each wiki (for Postgres, you can achieve a similar effect by using different schemas and users)
+For information on these options, see $wgDBname and $wgDBprefix respectively.
+For information on setting up a wiki family, see Manual:Wiki family.
+For information on an alternative way of setting up more than one wiki using the same server, database and source, see Steve Rumberg's (archived version) excellent exposé and additional comments from users.
+Does MediaWiki work with safe_mode enabled?
+Yes, but only to a limited degree. See Safe mode.
+Does MediaWiki require shell access?
+Shell access (SSH) is not required for installing MediaWiki, but it is highly recommended. Without shell access, it may even be difficult for you to get a backup of your wiki, or to upgrade to a new version. Some maintenance tasks are not possible at all without shell access. Many major extensions work best with shell access.
+How do I install extensions?
+See Manual:Extensions for information about installing extensions, as well as writing them. See the Extension Matrix and the Category:Extensions to find existing extensions.
+How do I add extra namespaces?
+To add a namespace, modify your LocalSettings.php file, and add namespaces via $wgExtraNamespaces. You can add the following code to add a "Portal" namespace, and its corresponding discussion namespace:
+
+
+
+define( "NS_PORTAL", 100 );
+define( "NS_PORTAL_TALK", 101 );
+$wgExtraNamespaces[NS_PORTAL] = "Portal";
+$wgExtraNamespaces[NS_PORTAL_TALK] = "Portal_talk";
+
+
+Be sure to add underscores instead of spaces, such as in Portal_talk. Otherwise, the namespace will not be declared properly!
+How do I enable uploading?
+File uploads are an often-used feature of MediaWiki, but are disabled by default in all current release versions. To enable them, first make the upload directory (default images) writable by the web server (chmod -R 777 ./images or allow the Apache user to write to it, etc.) then set $wgEnableUploads to true in LocalSettings.php (i.e. "$wgEnableUploads = true;"). If you get a "failed to mkdir" error when you try to upload, it probably means that there's a permissions problem.
+See also: Manual:Configuring file uploads
+How do I enable embedded math formulas?
+MediaWiki allows embedded math formulas via a helper program called texvc that uses LaTeX to render the formulas. See Manual:Math for setup instructions.
+How do I set the timezone for my MediaWiki?
+See: Manual:Timezone
+How do I purge a cached page?
+To purge a cached page, such as when making changes to the navigation bar, add &action=purge to the end of the page's dynamic URL.
+E.g. http://www.mediawiki.org/w/index.php?title=Main_Page&action=purge
+Or ?action=purge to the end of the page's short form URL:
+E.g. http://www.mediawiki.org/wiki/Main_Page?action=purge
+See also: Manual:Purge, Manual:Parameters to index.php.
+How do I completely disable caching?
+Add in your LocalSettings.php file the following lines:
+
+$wgEnableParserCache = false;
+$wgCachePages = false;
+
+How do I allow uploading of additional formats?
+MediaWiki requires that allowed file upload formats are specified using the $wgFileExtensions configuration directive. Usually this directive is situated in LocalSettings.php in the root of your MediaWiki installation.
+For example, to extend uploading to PDF files, add the following to LocalSettings.php:
+
+
+
+$wgFileExtensions[] = 'pdf';
+
+
+To extend uploading to more than one type of file, use the following syntax
+
+
+
+$wgFileExtensions = array_merge($wgFileExtensions, array( 'pdf', 'txt', 'mp3' ));
+
+
+See also: Manual:Configuring file uploads
+"File is corrupt or has an invalid extension"
+Some users have reported that after adding a file format to the allowed extensions list, an error is encountered. The text of the error is similar to the following:
+The file is corrupt or has an incorrect extension. Please check the file and upload again.
+Possible solutions:
+Set the value of $wgMimeDetectorCommand, e.g. under Unix or Linux, this would be
+$wgMimeDetectorCommand = "file --brief --mime";
+
+Compile/install the fileinfo PHP extension
+Fedora - yum install php-pecl-Fileinfo
+
+See also: Manual:Mime type detection.
+Initial user was not created by installer or it is not an administrator
+
+Sometimes, the installer fails to create the default user, or the user table is lost for some reason. There are a couple of options for solving this:
+maintenance/createAndPromote.php
+If your MediaWiki is older than 1.16, make sure AdminSettings.php is set up (see AdminSettings.sample)
+Execute maintenance/createAndPromote.php --username <new user name> --password <password for that user> from the shell. Append --bureaucrat to command line if you want that user to become a bureaucrat, in addition to becoming an administrator.
+This will create a new user and promote them to an administrator. For help, run the script with the parameter --help.
+Alter the database
+Register a new account using the regular method (Special:UserLogin).
+Check the user ID in Special:Preferences.
+Execute the following SQL statement against the database:
+INSERT INTO user_groups ( ug_user, ug_group ) VALUES ( <id>, 'bureaucrat' ), ( <id>, 'sysop' );
+
+
+<id> above should be replaced with the appropriate user ID which you can see on the user's preference page.
+Note: if $wgDBprefix is defined in LocalSettings.php, prepend its value to the table name. For example, if $wgDBprefix is "XYZ", then the table name to use is XYZuser_groups.
+
+Temporarily let everyone assign rights to promote your initial user
+ Warning:
+You should not let outsiders access your wiki while you do this, if you use this method. This method may leave your wiki temporarily vulnerable to attack while you do the procedure.
+This method essentially involves letting all users temporarily modify user permissions in order to promote one user
+Register a new account using the regular method (Special:UserLogin). Be logged in using that account.
+Add the following lines to the bottom of LocalSettings.php
+$wgAddGroups['user'] = true;
+
+Go to special:userrights and add the user you just created to the Administrator and Bureaucrat groups.
+Remove the $wgAddGroups['user'] = true; line from your LocalSettings.php . This step is very important, as until you remove it anyone can alter permissions, which is bad.
+How do I reset a user's MediaWiki password?
+See Manual:Resetting passwords
+How can I create interwiki links in my wiki?
+See Manual:Interwiki
+How do I make my base URLs shorter?
+(i.e. /wiki/Article_Name as opposed to /w/index.php?title=Article_Name)
+See Manual:Short URL
+How do I organize pages into subdirectories like /wiki/subdir/PageName?
+See Manual:$wgNamespacesWithSubpages, Help:Subpages
+Is downloading and using all of MediaWiki.org free?
+Yes, it is free in the sense of Free software. See Project:Copyrights for licensing issues regarding the written content of this site.
+How do I administrate/manage user rights?
+ See Manual:User rights and Manual:User rights management for general information. See Manual:Preventing access for methods and strategies for restricting access.
+How do I stop anonymous users from editing any page?
+The recommended method is by changing the value of the $wgGroupPermissions configuration option. Edit LocalSettings.php and add the line:
+
+
+
+$wgGroupPermissions['*']['edit'] = false;
+
+
+If you use Extension:AbuseFilter, any admin can also disable IP editing temporarily as needed.
+See also: Preventing access, Manual:User rights.
+How do I stop anonymous users from reading any page?
+Add this to the bottom of LocalSettings.php:
+
+
+
+$wgGroupPermissions['*']['read'] = false;
+
+
+See also Manual:$wgWhitelistRead. See Manual:Preventing access#Restrict viewing of all pages for more information.
+How do I restrict account creation?
+Add this to the bottom of LocalSettings.php:
+
+
+
+$wgGroupPermissions['*']['createaccount'] = false;
+
+
+See Manual:Preventing access#Restrict account creation for more information.
+How do I require an email address be specified at registration?
+See Manual:$wgEmailConfirmToEdit
+How do I put MediaWiki into Read Only mode?
+MediaWiki version:
+≥ 1.5
+See Manual:$wgReadOnly
+How do I change default user preferences?
+MediaWiki version:
+≥ 1.4
+The MediaWiki default user preferences are in the language file, i.e. languages/Language.php if you're using English. Don't edit that file, just use it for reference, like you do with DefaultSettings.php.
+Say if you want to change the default number of search results on a page. Language.php says:
+
+/* private */ $wgDefaultUserOptionsEn = array(
+       ...
+       'searchlimit'  => 20,
+       ...
+)
+
+To change it to 50, put this in your LocalSettings.php:
+
+$wgDefaultUserOptions = array( 'searchlimit' => 50 );
+
+Note that you are setting $wgDefaultUserOptions, which contains the site overrides, not $wgDefaultUserOptionsEn, which contains the software defaults. Any settings in $wgDefaultUserOptions will override those set in the language file.
+To change the default namespaces to be searched, in any version of MediaWiki, set $wgNamespacesToBeSearchedDefault in LocalSettings.php to an array mapping namespace indexes to boolean values. For example, to search the main namespace and the category namespace, use:
+
+$wgNamespacesToBeSearchedDefault = array(
+    NS_MAIN => true,
+    NS_CATEGORY => true,
+);
+
+In some cases, after you change a default user preference, you may also want to change the user preferences of all existing user accounts.
+If so, use the userOptions.php script in the Maintenance directory. Use the "--dry" option for the first run, assess the impact and go from there. (--dry does not write the the database)
+
+php userOptions.php --dry --nowarn searchlimit --old 20 --new 50
+
+Also, always backup your database before making these kinds of changes (you do not need to do use if you are just using --dry).
+See also: Manual:$wgDefaultUserOptions
+How can I make Mediawiki run faster?
+See: Manual:Performance tuning
+How do I enable a drop-down list of search suggestions?
+See: Manual:Enabling autocomplete in search box
+Upgrading
+See also: Manual:Upgrading
+How hard is it to upgrade?
+If the only file you have modified is LocalSettings.php, and you are upgrading from 1.5 or later, the process is very simple. The amount of human work involved is only a few minutes. The database schema changes will take an amount of time proportional to the size of your database — potentially hours for wikis with millions of pages, but for a more typical size of a few thousand pages, it is usually done in seconds.
+Minor upgrades, within the same major version, say from 1.13.0 to 1.13.1, do not require any schema changes at all. You can just update the files. The database needs no update, hence it is not necessary to run the installer script.
+Upgrading from 1.4 or earlier is potentially complicated because support for character sets other than UTF-8 was dropped, and the schema for storing bulk text changed. Please read the relevant section in the UPGRADE file.
+Upgrading becomes difficult if you have modified our source code, and you don't want your changes to be overwritten. Tools such as diff, patch, Meld or WinMerge may be useful. There is also potential for trouble if you are using unmaintained extensions. Upgrade your extensions at the same time as you upgrade MediaWiki.
+If you have modified the skin or use a custom skin you very likely will have to adjust it to work again with the new version of MediaWiki.
+Tip: instead of patching your "global" css and js (javascript) files everytime you can simply add the code to your MediaWiki:Common.js and MediaWiki:Common.css pages. As these are part of the database which will be reused when you upgrade, you will not have to patch the MediaWiki core files any more.
+How do I upgrade from a really old version? In one step, or in several steps?
+It depends: If you are upgrading from MediaWiki 1.4 or older, you should upgrade to MediaWiki 1.5 first. If you are upgrading from a Latin-1 wiki, use upgrade1_5.php (found in MediaWiki 1.5) to convert the relevant parts of the database to UTF-8 ($wgUseLatin1 needs to be set to true in your LocalSettings.php for this to work). Next, run update.php, and then set the $wgLegacyEncoding option in LocalSettings.php to the encoding previously used by the wiki (e.g. windows-1252). This is basically how Wikipedia and other Wikimedia Foundation sites were upgraded from MediaWiki 1.4 to 1.5 – see the [relevant settings file (warning: huge page!) and some related notes at Wikitech. You may need to upgrade to MediaWiki 1.4 before running the upgrade1.5 script.
+If you are upgrading from MediaWiki 1.5 or newer, you can upgrade in one step, from your old version to the latest stable version. The vast majority of reports, as well as automated testing, indicate that doing it in one step works just fine.
+If you have trouble believing this, read this mailing list post.
+If upgrading from a MediaWiki version below 1.19, you may need to add the sha1 field to the revision table manually before running the update script (see bug 48820 and a relevant support desk thread).
+Should I back up first?
+Short answer: Yes.
+Long answer: It depends on a) how much you value your data, b) how hard it is to create a backup and c) how confident you are with MySQL maintenance and administration.
+An upgrade failure may leave your database in an inconsistent state, in between two versions. It may move an important table to a temporary name and then fail before it recreates the table correctly. It may change a field definition to an incorrect data type. It is very rare for an upgrade to cause irreversible data loss. More often, data corruption occurs which can be reversed by a skilled administrator.
+Recovery is often complex. Volunteers on the support forums are unlikely to be impressed if you neglect to make a backup and then need help to recover from upgrade-related corruption. A better outcome is if you can revert to your backup, and then report the bug in the upgrade process which caused the corruption.
+Can I keep my LocalSettings.php?
+Yes, but you may have to make some minor changes. The format of LocalSettings.php is largely backwards compatible. Changes which break LocalSettings.php compatibility will be documented in the "configuration changes" section of the release notes.
+Can my wiki stay online while it is upgrading?
+Generally yes, however Git may temporarily (for a few seconds) break it.
+If you are upgrading between minor releases of MediaWiki, all you need to do is update the source files.
+Note: the following assumes you have command line access. If you are upgrading between major releases of MediaWiki, the preferred procedure is as follows:
+Unpack the new version of MediaWiki into a new directory
+Prepare that new directory: copy your current LocalSettings.php from the old directory, copy any installed extensions and custom skins (if any).
+In the release notes for the new version, see if any changes need to be made to LocalSettings.php.
+Place the database in read-only mode by inserting the following variable into LocalSettings.php in the old directory - users will see this message if they attempt an edit during the upgrade process:$wgReadOnly = 'Upgrading to MediaWiki 1.22.2';
+Run the update script or the web updater in the new directory.
+Copy the images from the images sub-directory from the old directory to the new directory.
+Swap the old directory and the new directory.
+Why upgrade?
+Subscribe to mediawiki-announce to be notified of new releases.
+Because it's usually easy enough, a single step from your version to latest and also via web.
+Many upgrades solve security issues which help to keep your wiki and possibly even your host system safe from vandals, while old releases are not supported (see Version lifecycle). New major releases come with new features, which you might want to use. See the release notes for details. In case you need additional arguments to convince your bosses to let you upgrade from a pretty old version:
+Since 1.9, an undo button is available.
+Since 1.12, patrolling on Special:NewPages is much easier.
+Since 1.13, you can rename (move) files.
+Since 1.14, you can fix double redirects automatically.
+Since 1.16, InstantCommons is available.
+If you have appropriate caching, since 1.17 ResourceLoader optimizes pageload speeds a lot.
+Since 1.17, category sorting makes sense! (especially for non-English letters).
+In 1.19 the skinning system was reworked making it easier to reuse parts of existing skins in your own skins.
+Since 1.18 and 1.19, users of all languages and genders are correctly addressed by the interface and logs (before 1.15, no gender at all).
+Since 1.20, diffs are better readable.
+See also the list of the most voted fixed issues on bugzilla.
+Also, in MediaWiki 1.18 we started bundling some vital extensions, like a better editor and anti-vandalism tools ConfirmEdit and Nuke.
+
+Moving
+Is it possible to move my wiki to a different machine?
+Yes. It should be. In essence, you will be backing up your old installation and then "restoring" it onto the new machine. Finally, you will have to make additional modifications to update the wiki configuration so that everything points to the new location.
+How do I move my wiki to a different server?
+Follow the instructions at Manual:Moving a wiki.
+Changing the interface
+How do I change the logo?
+The logo that appears in the top left of each page is determined by the $wgLogo configuration line in the LocalSettings.php file.
+There are two ways to change the logo:
+Upload a picture to your wiki using the normal file uploading interface. This allows the logo to be replaced easily, so you may want to protect the page if you use this method.
+Then add the $wgLogo line to LocalSettings.php, for example:
+
+
+
+
+$wgLogo = "{$wgUploadPath}/6/62/mylogo.png";
+
+
+
+
+Upload an image to your server by other means (such as FTP).
+Add the $wgLogo line to LocalSettings.php, for example:
+
+
+
+
+$wgLogo = "{$wgScriptPath}/mylogo.jpg";
+
+
+
+(In this example, the image is in the same folder as the LocalSettings.php file.)
+
+ Caution:
+Do not simply overwrite the default logo installed with MediaWiki (/skins/common/images/wiki.png); this file will be overwritten when you upgrade.
+The maximum logo size in Vector is ~160x160px, while MonoBook's is ~155x155px, and Standard / Classic's is 135x135px. A good logo size is 135x135px or one of 150x150px or 155x155px if you don't care about legacy skins. Note that in Vector and MonoBook a logo that is too large will be cut off, while in Standard / Classic a logo that is too large will simply extend a tiny bit into the content area.
+How do I edit the wiki's CSS?
+You shouldn't edit the CSS files (such as main.css) directly, because it will make upgrading harder if you need to apply your customizations each time you upgrade the software. Instead you need to edit a wiki page called MediaWiki:Common.css if you want to apply your CSS changes for all skins, or a wiki page called MediaWiki:Monobook.css if you want to apply the customizations only for Monobook skin.
+The content of MediaWiki:Common.css and MediaWiki:Monobook.css pages always override the default CSS styles specified in main.css.
+How do I hide the left vertical navigation toolbar
+In other words, how do you make the main content div take up 100% of the display, hiding the logo, toolbox, navigation and search engine?
+To hide it permanently, copy and paste the following into the MediaWiki:Common.css page:
+
+
+
+#column-content { margin: 0 0 .6em 0; }
+#content { margin: 2.8em 0 0 0; }
+#p-logo, .generated-sidebar, #p-lang, #p-tb, #p-search { display:none; }
+#p-cactions { left: .1em; }
+
+
+To instead hide the toolbar when the user presses F11, enter this in your wiki's MediaWiki:Common.js:
+
+document.onkeydown = function( e ) {
+        if( e == null ) e = event
+        if( testKey( e, 122 ) ) { //F11
+                appendCSS('#column-content {margin: 0 0 .6em 0;} #content {margin: 2.8em 0 0 0;} #p-logo, .generated-sidebar, #p-lang, #p-tb, #p-search {display:none;} #p-cactions {left: .1em;} #footer {display:none;}');
+                return false;
+        }}function testKey( e, intKeyCode ) {
+        if( window.createPopup )
+                return e.keyCode == intKeyCode
+        else
+                return e.which == intKeyCode}
+
+How do I hide the categories at the bottom of each page?
+You can hide display of the categories on each page by modifying your MediaWiki:Common.css and adding:
+
+
+
+.catlinks { display: none; }
+
+
+Can I customize the logo in the top left corner? If so, how?
+The logo is a portlet block without a pBody section. It is identified by the p-logo id. The background image is specified by the $wgLogo variable, which is defined in DefaultSettings.php. This location is relative to the web server root and not the system root. Redefine this in LocalSettings.php to change the image. If set wrong there will be no image on the page; check your web server error log and adjust accordingly. However the size of the p-logo will need to be big enough for the logo if it is not to be clipped. This is set in the stylesheet (main.css in Monobook), under the p-logo style, the default setting is:
+
+
+
+#p-logo {
+	z-index: 3;
+	position: absolute; /*needed to use z-index */
+	top: 0;
+	left: 0;
+	height: 155px;
+	width: 12em;
+	overflow: visible;
+}
+
+
+Note, if you are using a different sized logo, and want to change the CSS, please do not modify any of the core MediaWiki stylesheets. Instead add to the on-wiki css page (MediaWiki:Monobook.css for monobook, MediaWiki:Vector.css for vector. MediaWiki:Common.css will also work for all skins)
+How do I customize the link-URL of the site-logo in the top left corner of all pages that activates when the site-logo is clicked upon?
+By default, clicking the site-logo takes you to the main site-page. If you want to change which internal site-page is the "main" site-page, edit MediaWiki:Mainpage.
+To make the link of the site-logo link externally to any other arbitrary URL, you can add a hook to your LocalSettings.php to override the mainpage href which is used by the logo.
+
+
+
+/* Change the main page url used in things like the logo to an absolute url */
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfChangeMainPageURL';
+function lfChangeMainPageURL( $sk, &$tpl ) {
+	$tpl->data['nav_urls']['mainpage']['href'] = "http://www.your-desired-url.com/"; // Point the main page url to an absolute url
+	return true;
+}
+ 
+/* Change the main page url used in things like the logo to a url of another page on the wiki */
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfChangeMainPageURL';
+function lfChangeMainPageURL( $sk, &$tpl ) {
+	$tpl->data['nav_urls']['mainpage']['href'] = Title::newFromText('ThePage')->getLocalURL(); // Point the main page url to a wiki page's url
+	return true;
+}
+
+
+Reducing the size of the logo
+Note that a tag is on top of the logo so if you are trying to reduce the size of the logo's portlet you will also need to change the #p-logo a and #p-logo a:hover rules. The default setting for these is:
+
+
+
+#p-logo a,
+#p-logo a:hover {
+	display: block;
+	height: 200px;
+	width: 12.2em;
+	background-repeat: no-repeat;
+	background-position: 35% 50% !important;
+	text-decoration: none;
+}
+
+
+How do I change the icon in the browser's address line (favicon)?
+Simply upload your favicon.ico to the root of your domain/subdomain, make sure file name is in lower case and its name is favicon.ico
+Alternatively edit the $wgFavicon setting in LocalSettings.php and add $wgFavicon = "$wgScriptPath/path/to/your/favicon.ico";
+See Manual:$wgFavicon for more details.
+Tip: The favicon image should be either 16 x 16 pixels or 32 x 32 pixels.
+Rewrite Rule
+If you are using a rewrite rule in .htaccess to remove "index.php" from the URL, you will also need to add an exception for .ico files. Simply add the following rule to your .htaccess:
+RewriteRule .*\.ico$ - [L]
+This rule must appear before the index.php rule.
+Case sensitivity
+When uploading the favicon file, be sure the filename is in lowercase. (That is, "favicon.ico", not "Favicon.ico".) A lot of servers (e.g., those on UNIX-like operating systems) will not be able to find the file unless its name is in lowercase.
+How do I customize the navigation bar?
+The contents of the navigation bar which appears to the left of each page using the Monobook skin are determined by the MediaWiki:Sidebar page there on your wiki. For information on customising these, please see Manual:Interface/Sidebar.
+How do I put a text message (sitenotice) on every page?
+Put a text in the MediaWiki:Sitenotice page. It will be displayed on top of every article page.
+You can also add text to MediaWiki:Anonnotice to create a message that only displays for logged-out users. It is often a good idea to transclude the site notice on the anon notice to make sure that logged-out users still get the information on the site notice,
+How do I change which page is the main page?
+By default, MediaWiki looks for a page with the title Main Page and serves this as the default page. This can be changed by altering the contents of MediaWiki:Mainpage to point to a different title. If this does not change the 'Main Page' link included on the sidebar at install time, edit MediaWiki:Sidebar.
+How do I change the Main Page title?
+Simply click on the "Move" tab, and move the page to the desired page title.
+Usually you also want to change which page is the configured as "main page".
+How do I hide the main page title?
+MediaWiki does not have a built-in option to hide the main page title (see bug 6129), but you can use CSS to hide the title. Alternately, you can use the NoTitle extension.
+Method 1 (css)
+Add the following to MediaWiki:Common.css on your wiki:
+
+
+
+body.page-Main_Page h1.firstHeading { display: none; }
+
+
+If this doesn't work, look at the HTML source code to find the correct class to replace "page-Main_Page" with:
+
+
+
+<body class="mediawiki ns-0 ltr page-Some_title">
+
+
+If no unique class exists, then you cannot use this. You may be using a custom or outdated skin.
+As of MW 1.22 this method will no longer work.[1] Thus you should refer to method 2.
+Method 2 (display title)
+Add the following line to any page you want to disable showing the title for (requires setting $wgRestrictDisplayTitle to false)
+
+{{DISPLAYTITLE:<span style="display: none">{{FULLPAGENAME}}</span>}}
+
+FULLPAGENAME is not required, so if it does not need to be present (for screen readers, bots, etc), you can remove it as follows:
+
+{{DISPLAYTITLE:<span style="display: none"></span>}}
+
+This method will still leave a horizontal rule in the title's former position.
+As of MW 1.22 using "display:none" will not longer work. Instead you will have to use "position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);"[2], e. g.{{DISPLAYTITLE:<span style="position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);">{{FULLPAGENAME}}</span>}}
+How can I hide the table of contents?
+The table of contents (TOC) is automatically shown once there are four or more headings in the article. There are multiple ways to hide it.
+For one page
+Place the magic word __NOTOC__ into the page markup.
+For all pages
+Install Extension:NoTOC
+
+OR
+
+
+Add the following rule to MediaWiki:Common.css:
+
+
+
+.toc, #toc { display: none; }
+
+
+
+Per user
+Users can also opt to have the table of contents hidden. This is a user preference, set in Special:Preferences.
+How do I change the interface text?
+Interface text is altered using the MediaWiki namespace. For each deviation from the default in the site language there is a page MediaWiki:Englishmessagename, and for each deviation from the default in each other language a page MediaWiki:Englishmessagename/languagecode. (Since release 1.9 there are no pages for messages equal to the default.). On creation of a page the edit box autofills with the default. When creating a page to override the default it is useful to first save the default version, to allow diffs with it. See also Manual:System message.
+For a list of system messages, see Special:Allmessages
+To switch off the MediaWiki namespace, see the $wgUseDatabaseMessages configuration setting
+To remove the Privacy policy or Disclaimers links at the bottom of each page, set the content of pages MediaWiki:Privacy or MediaWiki:Disclaimers respectively to a single hyphen (-).
+How do I change the interface language?
+To change the default interface language, alter the value of $wgLanguageCode in LocalSettings.php, for example
+
+
+
+$wgLanguageCode = "fr";
+
+
+You may also need to bypass your browser's cache to see the changes.
+The new default interface language will be applied to all users who haven't ever customised it.
+If you want to provide users the possibility to create and choose pages and interface elements in languages other than the default one of the wiki, you need the Translate extension, which can make your wiki multilingual.
+In old versions, the new default will not affect existing users, so if you're logged in, you will need to change your language settings in your preferences.
+If you want to change the language settings for all existing users, use the userOptions.php maintenance script. For instance, to have all users with English set use French instead, run
+
+
+
+php userOptions.php language --old en --new fr
+
+
+
+How do I remove the article/edit etc tabs?
+For a little more control see: User:Subfader/Hide_page_tabs
+Edit MediaWiki:Common.css on your wiki, and add this:
+
+
+
+li#ca-edit { display: none; }
+
+
+See the page source for the various #ca-* ids used in the content tabs.
+Note: this will only work for Monobook and derived skins such as Modern and Vector (the default skin), and doesn't actually stop people from editing. To do that, see Manual:User rights.
+How do I add/remove tabs throughout my wiki?
+Use Extension:DynamicTabs on older MediaWiki installations or write your own extension (See: Manual:Hooks/SkinTemplateNavigation):
+For example, to remove the talk tab and then add a tab that always goes to the main page you would save this code in extensions/AR-Tabs.php:
+
+MediaWiki version:
+≤ 1.15
+
+
+
+<?php
+if( !defined( 'MEDIAWIKI' ) ){
+	die( "This is not a valid access point.\n" );
+}
+ 
+$wgHooks['SkinTemplateContentActions'][] = 'replaceTabs';
+function replaceTabs( $content_actions ) {  
+	unset( $content_actions['talk'] ); // only this to remove an action
+	$maintitle = Title::newFromText( wfMsgForContent( 'mainpage' ) );
+	$main_action['main'] = array(
+		'class' => false or 'selected', // if the tab should be highlighted
+		'text' => wfMsg( 'sitetitle' ), // what the tab says
+		'href' => $maintitle->getFullURL(), // where it links to
+	);
+	$content_actions = array_merge( $main_action, $content_actions ); // add a new action
+	return true;
+}
+
+
+MediaWiki version:
+≥ 1.16
+
+
+
+<?php
+if( !defined( 'MEDIAWIKI' ) ){
+	die( "This is not a valid access point.\n" );
+}
+ 
+$wgHooks['SkinTemplateNavigation'][] = 'replaceTabs';
+function replaceTabs( $skin, &$links) {  
+	unset( $links['namespaces']['talk'] ); // Remove the talk action
+	$maintitle = Title::newFromText( wfMsgForContent( 'mainpage' ) );
+	$links['namespaces']['main'] = array(
+		'class' => false or 'selected', // if the tab should be highlighted
+		'text' => wfMsg( 'sitetitle' ), // what the tab says
+		'href' => $maintitle->getFullURL(), // where it links to
+		'context' => 'main',
+	);
+	return true;
+}
+
+
+and then add
+
+
+
+require_once("extensions/AR-Tabs.php");
+
+
+to the bottom of LocalSettings.php
+How do I remove a tab on only one page?
+MediaWiki version:
+≥ 1.9
+For example, to remove the Discussion (talk) page tab from the Main Page, on the MediaWiki:Common.css page add:
+
+
+
+body.page-Main_Page li#ca-talk { display: none !important; }
+
+
+To modify MediaWiki:Common.css you must have administrative privileges.
+See also: Manual:Hide page tabs
+How do I remove a tab on all pages
+MediaWiki version:
+≥ 1.9
+For example, to remove the Discussion (talk) page tab on all wikipages, on the MediaWiki:Common.css page add:
+
+
+
+#ca-talk { display:none!important; }
+
+
+Other tabs to remove are #ca-history, #ca-viewsource, #ca-view (Read tab), #ca-nstab-main (Page tab), #ca-viewsource.
+Other drop down menu items you can remove are #ca-watch, #ca-move , #ca-delete.
+To modify MediaWiki:Common.css you must have administrative privileges.
+How do I hide the section edit links for users who are not logged in?
+You can change the value of the $wgDefaultUserOptions configuration option.
+Edit LocalSettings.php and add the line:
+
+
+
+$wgDefaultUserOptions ['editsection'] = false;
+
+
+Also see How can I prevent editing by anonymous users?
+How do I remove the "Talk for this IP" link at the top right when $wgDisableAnonTalk is true?
+Set $wgShowIPinHeader to false.
+How do I remove the "Create an Account or Login" link at the top right of the screen?
+To remove the login / create account links from the personal_urls you can use this code in your LocalSettings.php to hook in and remove them:
+
+
+
+$wgHooks['PersonalUrls'][] = 'lfRemoveLoginLink';
+function lfRemoveLoginLink( &$personal_urls, $title ) {
+	unset( $personal_urls['login'] );
+	unset( $personal_urls['anonlogin'] );
+	unset( $personal_urls['createaccount'] );
+	return true;
+}
+
+
+How can I suppress actions and special pages?
+NOTE: MediaWiki is not designed for this kind of usage! It should be noted that the following 'answer' is a hack that only 'works' with the Apache webserver. Note also that this system is not foolproof, its just one step further than hiding the links (see above).
+Suppressing actions and special pages can be useful when you want to create the illusion of a static website via a particular URL or VirtualHost, but also have an 'internal' view that is a true wiki. i.e. if you have an inward facing 'view' of your wiki that users can edit, and an outward facing 'view' that should appear like a static website (no history, no discussion, etc., etc.).
+After hiding all the appropriate links (see above), if you are using the Apache web server, you can disable actions and special pages using the following rewrite rules:
+
+# Lock down the site (disable MediaWiki commands)
+
+RewriteEngine On
+
+#RewriteLog /tmp/rewrite.log
+
+#RewriteLogLevel 9
+
+## See http://www.mediawiki.org/wiki/Manual:Parameters_to_index.php#Actions
+
+RewriteCond %{QUERY_STRING} (.*action=.*)
+RewriteRule .* http://www.my.domain.com?
+
+RewriteCond %{REQUEST_URI} !^/index.php/Special:Search
+RewriteCond %{REQUEST_URI}  ^(.*Special:.*)
+RewriteRule .* http://www.my.domain.com?
+
+## Catch a trick...
+RewriteCond %{QUERY_STRING} ^(.*Special:.*)
+RewriteRule .* http://www.my.domain.com?
+
+Above, a request for 'http://www.my.domain.com/wiki/Page_name?action=edit', for example, will be simply rewritten to 'http://www.my.domain.com'. Similarly any page in the Special namespace (with the exception of Special:Search) will be rewritten to 'http://www.my.domain.com'. Remember, this is only a hack, and isn't intended as a solution for a secure CMS.
+Note that you will need to adjust the above rules to match your specific URL naming schema.
+Other issues to consider when trying to lock down a site like this is the API and POST requests for the wiki content (rather than GET).
+How do I edit error messages?
+Special:Allmessages contains a complete list of messages (error or otherwise), that can be edited.
+How do I change the footer?
+See Manual:Footer and Manual:Configuration settings#Copyright
+How can I edit / remove the Powered by MediaWiki image in the footer?
+You can hide the Powered by MediaWiki image by adding the following to your wiki's MediaWiki:Common.css:
+
+
+
+#f-poweredbyico { display: none; }
+
+
+The Vector skin equivalent is:
+
+
+
+#footer-icon-poweredby { display: none; }
+
+
+In MW 1.17 with Vector Skin:
+
+
+
+#footer-icon-poweredbyico { display: none; }
+
+
+In MW 1.18 with Vector Skin:
+
+
+
+#footer-poweredbyico { display: none; }
+
+
+If you want to remove it completely in 1.17 you can use $wgFooterIcons to remove it using this in your LocalSettings.php:
+
+
+
+unset( $wgFooterIcons['poweredby'] );
+
+
+In 1.16 and below you will have to use a hook to remove it:
+
+
+
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfRemovePoweredBy';
+function lfRemovePoweredBy( $sk, &$tpl ) {
+	unset( $this->data['poweredbyico'] );
+	return true;
+}
+
+
+If you wish to change the icon images, urls, alt text, or add new icons please see $wgFooterIcons' documentation.
+How do I add a reply link to default signature tildes (~~~~) template?
+You can customize at: MediaWiki:Signature / MediaWiki:Signature-anon
+For example, changing the entries to [[{{ns:user}}:$1|$2]] ([[{{ns:user_talk}}:$1|talk]]) will put a link to users' talk pages and [[{{ns:user}}:$1|$2]] ([{{fullurl:{{ns:user_talk}}:$1|action=edit&section=new}} Reply]) would give a more direct link.
+Users can change it their preferences.
+How can I change what the <title> of each page is? Where do I make changes?
+Most of the text that you want to change can be found in the namespace of MediaWiki.
+In order to change titles, texts, announcements, etc., go to Special:AllMessages, where you will see the text associated with the pages you wish to change. You need to log in as an administrator to edit the protected entries in the MediaWiki namespace.
+If you want to change the title in your browser, you need to edit MediaWiki:Pagetitle. Go there and edit it just like you would any other page in your wiki.
+In recent versions of MediaWiki, MediaWiki:Pagetitle is $1 - {{SITENAME}} by default. If {{SITENAME}} is producing the wrong text for you, you need to set $wgSitename in your LocalSettings.php.
+If $wgSitename is correct in LocalSettings.php but {{SITENAME}} is still wrong, it may be that you're using a user-contributed language file which incorrectly sets $wgSitename to a transliteration of "Wikipedia". Edit the language file to correct this. For example, the Hebrew language file is at languages/LanguageHe.php in your wiki directory.
+Don't forget to clear your browser cache after you change your settings.
+Does MediaWiki automatically capitalize the first letter of $wgSitename?
+Yes. This can be changed using the $wgCapitalLinks configuration setting.
+How do I make external links open in a new window?
+See Opening external links in a new window
+How can I suppress MediaWiki from formatting URLs, tags, etc?
+Put "<nowiki>" tags around the URL or tag.
+Example:
+
+svn co <nowiki>http://svn.example.com/myproject/</nowiki>
+
+Produces:
+svn co http://svn.example.com/myproject/
+How can I force users to preview before they save?
+See: Manual:Force preview and Extension:ForcePreview
+How do I add more buttons on the edit page?
+See: Manual:Custom edit buttons
+How can I get more special characters or tags clickable on the edit page?
+For adding more selectable special characters, etc, below the edit field, see Extension:CharInsert.
+How can I use Wikipedia's default skin (Vector) on my wiki?
+MediaWiki version:
+≥ 1.16
+Vector was introduced in MediaWiki version 1.16, and was made the default skin in 1.17. See Manual:$wgDefaultSkin for more information on configuring your default skin.
+Additional features of the Vector skin are made available using the Vector extensions, which you must download and install separately.
+How do I disable external links from showing in the printable version of a page?
+Edit the page MediaWiki:Print.css on your wiki and add the following code there:
+
+
+
+#content a.external.text:after,
+#content a.external.autonumber:after {
+	content: none;
+}
+
+
+This will override the styles defined in skins/common/commonPrint.css in MediaWiki source code. For more information, see Manual:CSS.
+How do I change the text of the article (page name) tab of my wiki's main page?
+ To change the text of the tab, as one example used in Wikipedia, you first open the page "MediaWiki:Mainpage-nstab".
+After you've done that, click Edit and type in the edit box the text you want to be seen later on the main page - that's it. Don't forget to save the page as well.
+Basic usage
+How do I edit a page?
+To edit a page, simply click the edit link that appears on each page. Using the default Vector skin, this is in the form of a tab at the top of the page. A form will appear, containing the existing markup. When you have finished making modifications, click the Save button to commit your changes.
+See also: Help:Editing pages
+How do I create a new page?
+There are several ways to create a new page:
+Create a link to the page on another page, then click on the red link which appears
+Browse to the intended location of the page, e.g. http://www.example.com/index.php?title=New_page and click on the edit link.
+On some wikis, a failed search for a page will contain a link which allows you to edit that page.
+See also: Help:Starting a new page
+How do I delete an old version of a page?
+Old versions of page data are retained in the database and can be accessed via the page history features. This is useful for reviewing changes and correcting or reverting undesirable ones, but in some cases, administrators might want to make this information unavailable, for legal reasons, or to reduce the size of the database.
+Administrators can delete an old revision of a page by deleting the page, and then selectively undeleting revisions to be kept
+The Oversight extension (also known as HideRevision) can be used to move harmful revisions out of page histories on older versions of MediaWiki (<1.16).
+For newer MediaWikis (1.14+), you can enable the core RevisionDelete feature that allows privileged users to remove single revisions from page histories.
+The maintenance/deleteOldRevisions.php maintenance script can mass-delete all old revisions of pages and their associated text records.
+See also: Manual:Removing embarrassment
+How do I use oversight/delete revisions in the page history?
+See: RevisionDelete
+You can also delete a page, and then restore only the revisions you want.
+Are there any editing tutorials available?
+There are several editing tutorials available, mostly on Wikimedia sister projects, such as Wikipedia. There are also markup references, etc. available on Meta.
+The page Help:Editing pages on this site
+Editing help content on Meta
+The How to edit a page guide on the English Wikipedia
+How do I view the printable form of a page?
+MediaWiki includes stylesheets which automatically style a page appropriately when it is printed; using the print or print preview function within your browser ought to render the page in a printable form.
+You can also view this printable form using the printable version link in the sidebar under Toolbox or Print/export if using the Collection extension.
+How do I use templates?
+See Help:Templates
+Can I use media (images, video, audio, etc.) from Wikimedia Commons in my installed version of MediaWiki?
+Yes, this is encouraged through the use of Manual:$wgUseInstantCommons.
+See also: InstantCommons
+How do I use a template as a signature?
+When you look at your preferences, you see a check box for "raw signature." But the field will only take a certain number of characters. What if you want more?
+You will need to create two pages, possibly in your userspace.
+Create the first page (FIRST PAGE)
+Go to your preferences, check "raw signature" and put {{FIRST PAGE}} in the signature. Save
+Create a second page (SECOND PAGE) (possibly a sub-page of the first)
+Go back to the first page (FIRST PAGE) and do {{SECOND PAGE}}
+Go to the second page (SECOND PAGE) and place the code you wish to have for your signature.
+If you don't have this structure, you will still be inserting all your signature code into the raw code wherever your signature is used, because the software will insert "SUBST" in your preferences. You may not mind this, in which case you only need one page. If you want the raw code to only display {{FIRST PAGE}}, which looks a lot cleaner, then you need to use the two-page structure.
+How do I add the sandbox functionality to my installation of the wiki?
+In wiki terms, a sandbox is simply a "play pen"; a page which users can mess about in. This is an ordinary page created in the normal manner, and can be located wherever you like. There is no special sandbox functionality built into MediaWiki.
+Users often inquire about the Wikipedia sandboxes, which seem to be self-emptying. This is not quite correct; there are a number of volunteers who run bots to clean these up and return them to a certain state at regular time intervals.
+How do I add a "Sandbox" link to personal tools (top right)?
+You need to add the Gadget extension and add the Sandbox gadget. You will probably also want to make it a default gadget.
+How do I make my wiki serve all languages?
+To make your wiki multilingual and a tool for translation, allowing translation of pages and of the custom interface (like the sidebar), use the Translate extension; there's extensive documentation.
+Wiki Importing
+Importing from MediaWiki XML dumps
+See Manual:Importing XML dumps
+Importing from other types of wiki software
+Note: The following is directly copied from old meta FAQ. It might need to be corrected.
+There is some documentation about importing in the UPGRADE file distributed with MediaWiki.
+To follow on from those, this is how at least one individual imported pages from usemod to MediaWiki:
+Because MediaWiki does not automatically link to CamelCase style links, you will need to add brackets [[ ]] to all your links. You can do this with the following:
+First, obtain ImportStage1.txt (or whatever you want to call it) from the importUseModWiki.php script ( use > to pipe the output to a file )
+Second, do
+
+sed '/Importing/!s/\ [A-Z]\w*[a-z]\w*[A-Z]\w*[a-zA-Z]/\ \[\[&\]\] /g'
+    ImportStage1.txt > ImportStage2.txt
+
+This should create proper links in place of your CamelCase links.
+This doesn't work so well for SubPage links - someone care to fix?
+Then,
+
+sed 's/upload\:\w*\.\w*/http\:\/\/aberwiki\.org\/uploads\/& /g'
+    ImportStage2.txt > ImportStage3.txt
+
+This fixes your upload links. Change the replace text so it fills in your url such as http://www.yourwiki.org/uploads/filename
+You are now ready to import ImportStage3.txt into your database with a command such as
+
+mysql -u<mysqluser> -p<yourpass> <db name> < ImportStage3.txt
+
+Note: If your importUseModWiki.php outputs an XML file instead of SQL statements, this probably means you have a rather new version of MediaWiki. In such a case, you can import the XML file -- see Importing a Wikipedia database dump into MediaWiki, towards the bottom of the page ('Import XML'). Don't forget to rebuild all the tables -- that page also explains how to do that.
+Importing from other types of files
+There are a variety of tools available to help convert content from HTML (and other formats) to MediaWiki markup.
+Developer and SysAdmin tools
+HTML::WikiConverter::MediaWiki - a Perl module for converting from HTML to MediaWiki markup.
+Wikificator - a Javascript MediaWiki extension that converts XHTML to MediaWiki markup.
+The Edit.php, importImages.php and ImportTextFile.php maintenance scripts can be used to import text and images into MediaWiki.
+End-user tools
+HTML to Wiki Converter - an online HTML to MediaWiki markup conversion service. (Based on HTML::WikiConverter::MediaWiki)
+wikEd - a text editor for MediaWiki that can import HTML (including Microsoft Word-generated HTML.)
+Instructions
+Brief notes on converting from Microsoft .chm help files to MediaWiki
+Notes on converting from Microsoft Office formats to MediaWiki
+MediaWiki auto importing script
+Taken from wiki_import - MediaWiki auto import script:
+Description
+The script is designed to import a whole folder of files into MediaWiki, with the folder directory tree mapped as wiki category hierarchy.
+Features
+economic, build wiki site from existing knowledge base collection without "double-entry"
+persistent, map folder directory tree as wiki category hierarchy
+sophisticated, import/handle all well-known file types automatically
+complete, cover every applicable scenario, even the case when you need to control access to individual wiki pages
+versatile, highly customizable
+Quick Help
+wiki_import.sh $ $Revision: 1.1 $
+mediawiki automatic file import script
+Usage: wiki_import.sh [OPTIONS]...
+The script is designed to import a whole folder of files into mediawiki, with the folder directory tree mapped as wiki category hierarchy.
+The specification of the file-to-import is passed from standard input.
+Options:
+
+ -s, --sect=n     the root category section of the wiki
+                    of the imported article (mandatory)
+ -1, --header     include standard header (category hierarchy path & notice)
+ -l, --link       link to actual file on the web site
+ -f, --footer     include standard footer (article category)
+ -R, --res[=p]    add restricted tag in the footer
+                    as '{{<Res Param|Root Category> Restricted}}'  
+                    (default=`$_opt_sect')
+
+
+Configuration Options:
+
+ -p, --php=fn     mediawiki import php script specification
+ -r, --root=n     the root category name for the whole wiki site
+ -m, --max=n      max_allowed_packet for mysqld to import
+ -u, --user=n     wiki user used for the import
+ -a, --arch=p     the root url that linked-to archive files based on
+
+
+Examples:
+
+ echo ./path/to/file.ext | wiki_import.sh -1 -l -f -s 'Customer Support' -R 
+
+
+For the rest of details, check out wiki_import.
+Templates imported from other wikis (such as Wikipedia) don't work for me
+You probably need to install some extensions used on the source wiki, such as ParserFunctions or sometimes Cite. Also, make sure that you copied all site CSS and JavaScript required by the template.
+Customising further
+I want to have multiple wikis, but only require registration once
+If you're starting from scratch or you're switching from one wiki to multiple, you can use $wgSharedDB and $wgSharedTables to have all wikis share the user table of the "main" wiki. You can share other tables as well, as long as they don't contain any data dependent on non-shared tables or data specific to one wiki. See Manual:Shared database for examples and more information.
+If your wikis are already established and you want to switch to a single sign-on, you can use the CentralAuth extension. It has a few more features than a shared user table, but its more difficult to configure and its tailored toward a Wikimedia-style setup. However, it is easier than attempting to completely merge multiple user tables into one.
+How can I allow use of HTML tags?
+See Manual:$wgRawHtml as well as Manual:$wgGroupPermissions and Manual:Preventing access.
+ Caution: This can be easily abused to attack users
+See Extension:SecureHTML and Extension:HTMLets for ways to make this safer.
+How do I fix problems or add features to MediaWiki?
+The basic steps to improving MediaWiki (that is, becoming a MediaWiki developer) are:
+Install Git
+Download the Git "clone" of the MediaWiki source code
+Get a server, a database, and PHP running on your computer (this can be annoying, so please ask for help if something isn't working)
+Get MediaWiki running on your computer off that Git checkout (can be annoying as well, so, ditto)
+Fix the problem or add the feature you were thinking of, or if you don't have one in mind, look at one of the "annoying little bug"s
+Edit the source code of the relevant file(s) to fix the problem
+Follow Gerrit/Tutorial
+How do I run a bot?
+See Manual:Bots
+You might want to use the Pywikibot framework.
+How do I change noindex nofollow
+Set $wgNoFollowLinks = false; in LocalSettings.php
+How do I create a small wiki farm?
+See: Manual:Wiki family
+How do I add meta tags?
+The OutputPage class includes an addMeta methods which can be used to add meta tags. The RequestContext can be used to get the relevant OutputPage object.
+To add further Meta tags just add further lines as last lines of the function addMetaTags() like:
+
+$out->addMeta ( 'description', 'This is a meta description.' );
+
+Why...?
+…is the Help namespace empty?
+The Help namespace currently ships in a blank state. It's up to you how much or how little help you give to your site visitors and whether this relates to other aspects of your site. Obviously you can easily link your visitors to help resources elsewhere.
+We don't currently have a clean, internationalised set of help pages under a free license. However, if you want to copy in some help information onto your site, about how to use a wiki (a MediaWiki powered wiki) you are free to copy the Help:Contents from this wiki. This set of pages have been deliberately created for this purpose, with wiki-neutral information, and no license restrictions. See Project:PD help. More help is available at the Meta-Wiki MediaWiki Handbook.
+…are some of my images not showing up after an upgrade?
+Several users have reported that, following an upgrade or a moving of their wiki, several images fail to be shown inline. The files exist, and the image description pages show a MIME type of unknown / unknown and, in some cases, a warning about potentially dangerous files.
+To fix this, run the maintenance/rebuildImages.php script from the command line. This will set MIME information for each file in the database.
+…are all PNG files not being turned into thumbnails?
+After upgrading to a more recent version of PHP, it is possible a different MimeMagic.php function is being used to detect file MIME types, particularly the built-in PHP function mime_content_type, which fails to detect PNG files. Search the web for mime_content_type png for information on fixing this bug at the PHP level, possibly by editing your magic.mime file.
+See here for more info.
+…is a search for a short keyword giving no hits?
+By default, MediaWiki uses MyISAM's fulltext matching functionality to allow searching page content. The default settings for this mean that words of less than four characters won't be indexed, so will be ignored in searches with older versions of MediaWiki.
+MediaWiki 1.13 and earlier are unable to work around this; you must either change MySQL's configuration to index shorter words, or upgrade to a more recent version of MediaWiki.
+Note that some particular words may still not be indexed if they are in MySQL's default stopword list.
+…can't I download MediaWiki 1.23?
+MediaWiki 1.23 is in a development state at present, and has not been packaged into a general release. The code can be downloaded from Git if desired. Or, if you want the latest development version packaged as an archive, get it at mwSnapshots.
+…doesn't this work? It works on Wikipedia!
+Wikipedia and other Wikimedia web sites use the current version of the code in development; at present, this is MediaWiki 1.23wmf14 (922f311), pulled from the current development branch. Coupled with the use of several extensions, this means that functionality between these wikis and your particular setup may differ.
+To obtain the current development code, read Download from Git
+To check what version a Wikimedia wiki is running, as well as what extensions are installed, visit the Special:Version page for that wiki
+…do I get a 403 Forbidden error after setting permissions on my Fedora system?
+Fedora Core enables SELinux by default. Instructions for setting SELinux permissions for MediaWiki are available.
+…do I get logged out constantly?
+This is probably related to cookies or session data, for example a problem with PHP's session.save_path [1] setting. See Log in problems.
+…doesn't my wiki work on Sourceforge?
+See Manual:Installing MediaWiki on SourceForge.net.
+…is it a good idea to keep user accounts?
+At many times you just want to remove a user account out of the wiki either because it belonged to a spammer account or you just feel like it. The appropriate choice is to block the account or rename it if needed. Here is why:
+Do I just remove his row from the User table?
+Rob Church posted the following regarding this issue on the mediawiki-l mailing list:
+"If the user has made edits, then removing rows from the user table cause theoretical loss of referential integrity. Now, to be honest with you, I can't think of any conditions where this would cause an actual problem; "undefined behaviour" is the phrase we use.
+What I'd suggest doing, to be on the safe side, is running a couple of quick updates against the database:
+
+
+
+
+UPDATE revision SET rev_user = 0 WHERE rev_user = <current_user_id>
+
+
+
+
+
+
+
+UPDATE archive SET ar_user = 0 WHERE ar_user = <current_user_id>
+
+
+
+What this will do is cause MediaWiki to treat the revisions as having been made anonymously when generating things like page histories, which should eliminate any problems caused by these routines attempting to check user details from other tables.
+If the user has caused log entries, i.e. rows in the logging table, or uploaded images, then the situation becomes trickier, as you'll have to start mopping up all the rows everywhere and it could become a bit of a mess, so if the user's done anything other than edit, I would strongly recommend just blocking them indefinitely.
+If the username is offensive or undesirable, then you could consider renaming it using the RenameUser extension."
+Another option is to give Admins the 'hideuser' right, and indefinitely block the user with the Hide username from edits and lists option selected.
+Anti-spam
+Where do I get the spam blacklist from and how do I install it?
+The spam blacklist extension can be found in Git, just like all other officially supported extensions. For installation and configuration instructions, consult the README file and extension page over here.
+How do I use $wgSpamRegex to block more than one string?
+$wgSpamRegex (see Manual) is a powerful filter for page content. Adding multiple items to the regex, however, can be awkward. Consider this snippet:
+
+
+
+$wgSpamRegexLines[] = 'display\s*:\s*none';
+$wgSpamRegexLines[] = 'overflow\s*:\s*auto';
+[...]
+$wgSpamRegex = '/(' . implode( '|', $wgSpamRegexLines ) . ')/i';
+
+
+This example code allows convenient addition of additional items to the regex without fiddling about each time. It also demonstrates two popular filters, which block some of the most common spam attacks.
+See also: Extension:SpamRegex
+Are there additional ways to fight spam?
+See Manual:Combating spam for an overview of anti-spam measures such as Captcha, content filtering and restricting edition.
+Anti-vandalism
+See Manual:Combating vandalism for hints and suggestions on how to deal with wiki vandalism.
+Where now?
+I've found a bug or have a feature request. Where do I post it?
+Bugs and feature requests should be posted on MediaZilla, our implementation of Bugzilla. See How to report a bug.
+I'm getting a strange error. What now?
+See if it is covered by Manual:Errors and Symptoms
+Try to find out more about the problem, see How to debug MediaWiki
+See the section below for information on how to contact developers and other knowledgabe users.
+I tried that but it didn't work
+I had a problem, I came to this page and it told me how to fix it. But it didn't work, the problem is still there!!!!
+Nine times out of ten this is because you didn't clear your cache. The simple test for this is to request a page that hasn't been requested before. Select the part of the URL in the address bar that contains the page title (e.g. Main_Page). Twiddle your fingers on the keyboard for a while, hit enter. Check if the problem is on that page too.
+MediaWiki uses both a server-side cache and a client-side cache, so clearing your browser cache is often not enough. See the relevant entry below for more details.
+Here are some other things to check:
+Were you editing the right file? Try inserting some garbage into the file you edited, does it break anything?
+A great debugging tool in this case is to create a file called phpinfo.php, containing only <?php phpinfo() ?>. Upload it into your web directory and invoke it with your browser. Check the document root and the path to php.ini.
+
+Were you editing the right part of the file? Did you create a duplicate entry in php.ini? Add new settings to the end of LocalSettings.php, not to the beginning.
+If you created a .htaccess, are you sure AllowOverrides is on? Ask your hosting provider.
+I have a question not answered here. Where do I go next?
+If you've exhausted the FAQ above, please try the following:
+Check the other sources of help on this site
+Search the rest of this site
+Search older documentation archived on Meta; Useful developer documentation remains on Meta.wikimedia.org in the category Pages to be exported to MediaWiki.org until the m:Meta:MetaProject to transfer content to MediaWiki.org completes
+Search the web
+Dig into the source
+See the section below for information on how to contact developers and other knowledgeable users.
+Still no luck. Where can I ask for help?
+Post a message at Project:Support desk
+Email the mediawiki-l mailing list (perhaps search the archive first).
+Ask the developers in our IRC channel.
+Recommended reading
+Asking smart questions
+Effective bug reporting
+Getting help on IRC
+Books about MediaWiki
+References
+↑ See this commit for further information.
+↑ See this thread for further information.
+Language:
+English  • català • dansk • Deutsch • español • français • ગુજરાતી • עברית • Bahasa Indonesia • italiano • 日本語 • 한국어 • മലയാളം • occitan • polski • português • português do Brasil • русский • Türkçe • 中文 • 中文（简体）‎

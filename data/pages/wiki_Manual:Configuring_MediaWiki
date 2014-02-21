@@ -1,0 +1,17 @@
+Manual:Configuring MediaWiki
+It has been suggested that this page or section be merged with Manual:Configuration#Configuring MediaWiki. (Discuss)
+ Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+Basic configuration
+When you first install MediaWiki, you should run the supplied configuration script via your web browser. This will perform the basic configuration required to get the wiki up and running. See Manual:Config script for full details running the script.
+Further configuration
+Once the wiki has been installed and configured using the above configuration script, any further customizations need to be made by configuring LocalSettings.php
+For help with more advanced technical configuration, see Manual:System administration, Manual:Configuration, and Manual:Administrators.
+For a brief overview that addresses the empty help pages, see Project:PD help/Copying.
+See also
+Manual:FAQ
+Manual:Short URL for more user friendly URLs to article pages.
+Language:
+English  • čeština • dansk • Deutsch • français • Bahasa Indonesia • italiano • 日本語 • 한국어 • polski • português do Brasil • русский • 中文

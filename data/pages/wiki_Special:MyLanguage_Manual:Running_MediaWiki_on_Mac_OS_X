@@ -1,0 +1,478 @@
+Manual:Running MediaWiki on Mac OS X
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+
+
+
+This manual's page is outdated. It was written about an older version (or versions) of MediaWiki and may not apply to the most recent version.  and see the talk page for possible discussion on this.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+The primary development and deployment environment for MediaWiki is on Linux and Unix systems; Mac OS X is Unix under the hood, so it's fairly straightforward to run it.
+
+
+
+Required software
+Instead of setting the required software up separately you might be better off to start with MAMPstack + MediaWiki, which gives you Apache, MySQL, PHP & MediaWiki in one convenient package. This is described in more detail below
+Apache
+The Apache webserver is included in Mac OS X. It can be found in System Preferences — Sharing — Services. In most versions of Mac OS X, Apache is referred to as Personal Web Sharing there. In Mac OS X 10.5 (Leopard, Client Edition) it is referred to as "Web Sharing". Tick its checkbox or press the Start button to launch it.
+With the release of OS X Mountain Lion (10.8.x) you can no longer use System Preferences to start and stop the Apache server. The software is still part of the OS, but starting and stopping Apache must now be done through terminal. The following commands will start, stop and restart Apache on your computer.
+
+sudo apachectl start
+sudo apachectl stop
+sudo apachectl restart
+
+Security note:
+By default the included Apache configuration will serve pages to anyone who can open a network connection to your machine. If you have the firewall on, it will punch port 80 open in order to make the web serving public. To avoid any security breaches, you will thus need to manually edit Apache's configuration later, stay tuned.
+Up to Mac OS X 10.4 (Tiger, client edition), the Apache server's files are located on /private/etc/httpd. Beginning with Mac OS X 10.5 (Leopard, client edition), the web server's files are located in /private/etc/apache2. You may need to modify the paths shown in the instructions below as a result of this change.
+The default setup on a Macbook running OS X 10.5 (Leopard) may have issues starting the apache service. If you can not navigate to the web page (ie http://10.1.1.2/) from the Web Sharing system preferences pane, then have a look here for some tips.
+MySQL
+Distribution
+MySQL is preinstalled on Mac OS X Server.
+
+If you're using Mac OS X Client 10.4 or below, then your choice of which MySQL binary distribution to use is somewhat guided by the chip architecture of the machine you are installing MediaWiki on. If in doubt as to which version you have, you likely have the Client version! (Note that the "10.4" version installs and runs fine on 10.5 Leopard.)
+
+
+SQLite3 comes pre-installed on 10.5 Leopard and later. When installing MediaWiki it is possible to select SQLite in favour of MySQL. In that case, it is not needed to install MySQL nor is it necessary to set-up and manipulate a database manually as described here. The MediaWiki installation will take care of that.
+
+
+PPC based Macs
+
+
+
+Get the Complete MySQL install package. This package allows you to configure MySQL with a nice PreferencePane in System Preferences, "the Mac way". It's free software like the standard package mentioned below.
+If you're in danger of your new database being cracked, make sure you're going to be alone on the machine until it's configured.
+Inside the downloaded disk image is an installer. Run it.
+The preference pane has to be installed now. Double-click on MySQL.prefPane in the disk image and choose whether to install it for all users or just you.
+Click on "Initialize". (You may get prompted for your password here.) It's important that you don't click on "Start" yet: That would kind-of start up MySQL, but it wouldn't work correctly. And even worse, a program bug will prohibit you from clicking "initalize" in this case. If you've made this mistake and clicked "Start", reclick on the MySQL.prefpane file to start over. If this fails, just restart your machine and you get another chance to press the "Initialize" button.
+Having initialized MySQL, you should now click "Start". (If the server fails to start, check that the /tmp directory permissions are set correctly. You can ensure this by typing "sudo chmod 1777 /tmp" from the command line.)
+Finally, click "Set Root Password". The inital password is "nothing", so leave the first field empty and enter something in the other two.
+
+
+
+
+
+
+Database password caveat:
+The only MySql database prerequisite is the MySQL root password (which you've just set). It is needed for the installation below.
+
+
+
+
+PPC or Intel based Macs (RECOMMENDED)
+
+
+
+The 5.0 install package from mysql.com is suitable for 10.3 through 10.5, whilst the 4.0 install package works only with 10.3. These are the "standard" MySQL package. Note that the 4.0 version does not have a Preference Pane. Version 5.0 is preferred.
+Again, if you're in danger of your new database being hacked, make sure you're going to be alone on the machine until it's configured.
+In Version 5.0, there are two installer packages, one for MySQL and one for installing a StartupItem. The latter is for MySQL to launch as a server at system startup. You need to run both installers. Also included in the Version 5.0 disk image is a PreferencePane method. You should install this as well.
+After installing, you still need to secure the default accounts; if you don't, anyone can log into your database with full privileges (considered to be a Bad Thing™). If you follow the instructions to remove the anonymous accounts entirely, you may have difficulties later on when you try to set up and configure your database — read all the directions carefully prior to executing anything.
+
+
+
+Mac OS X 10.5
+If you're installing on 10.5 (Leopard), you may need to point MediaWiki at the MySQL socket file, which gets created in /tmp/mysql.sock instead of the expected /var/mysql/mysql.sock. Otherwise MediaWiki installation may fail in the middle, mysteriously.
+
+$ sudo mkdir /var/mysql
+$ sudo ln -s /tmp/mysql.sock /var/mysql
+
+Mac OS X 10.6 Server
+On Mac OS Server, MySQL is preinstalled, but is not enabled by default.
+Enable it with the GUI Server admin:
+Click on the server name
+Choose Settings and underneath Services
+In the list, enable MySQL
+Click on Save
+Click on the triangle at the left of the server name to open the list of services
+Choose the MySQL service
+Set the root password
+Click on Save
+On the bottom of the window, click on Start MySQL
+Creating MediaWiki Database
+In order for the MediaWiki software to be able to read and write to the MySQL database, you need to create and give it access to a new database by issuing the following commands in a terminal: (Commands are for MySQL version 5+)
+
+mysqladmin -u root -p create wikidb
+mysql -u root -p -e "GRANT ALL PRIVILEGES ON wikidb.* TO wikiuser IDENTIFIED BY 'wiki_password'"
+mysql -u root -p -e "SET PASSWORD FOR wikiuser = PASSWORD('wiki_password')"
+mysql -u root -p -e "FLUSH PRIVILEGES"
+
+Replace 'wiki_password' with a string of your choice. You will need to enter it later in the MediaWiki configuration. Extended instruction are available here.
+Troubleshooting
+If you have problems with MySQL you should try to uncheck the "Automatically Start MySQL on Startup"-Button, restart your Computer and start it by hand because it can sometimes be confusing if it does not work as expected.
+Upgrading MySQL can also be a problem, check if more than one MySQL process is running.
+PHP
+Mac OS 10.2 (Jaguar)
+On Mac OS X 10.2, you'll need to install PHP. There is an installable package here: http://www.entropy.ch/software/macosx/php/. At the time of this writing, the two most recent available versions there were PHP 4.3.6 and PHP 5.0.1. The problem with PHP 5.0 is that there currently still is an incompatibility between the monobook skin and that particular version; this issue is fixed in newer versions of PHP and MediaWiki.
+You can install from source too, of course, if you're a Unix-loving masochist.
+Mac OS 10.3 (Panther)
+Note that these instructions do not explain how to install the lastest version of MediaWiki which requires PHP 5.1 which is not released in binary for OS 10.3, the last verision of MediaWiki 4 should work.
+On Mac OS X 10.3, PHP is installed by default but not enabled. If you choose to use GD library (see below), you could, for convenience, still use the PHP installers mentioned in the Jaguar section above, as they include GD library. It won't hurt your system using these installers, even though you've already got PHP. (But the hints regarding PHP4/5 still apply!) However, GD library is not recommended (again see below), so you probably want to simply enable your existing PHP installation:
+To do so, you just need to edit this file:
+/etc/httpd/httpd.conf
+Use the terminal program (Applications/Utilities), open a new shell (command-N), and type: cd /etc/httpd/
+then
+pico httpd.conf
+this will open up a simple text editor with commands (^ means control key) at the bottom
+Uncomment (remove the preceding # characters from) the lines that contain
+"LoadModule php4_module libexec/httpd/libphp4.so"
+and
+"AddModule mod_php4.c".
+When you press Control-X you are asked if you want to save the changes, press Y to answer Yes. Now you will exit the program and your changes are saved. If you are unable to save the file after making edits, start over by typing
+sudo pico httpd.conf
+Then open the Sharing panel in System Preferences and stop and restart personal web sharing.
+Another method that needs further investigation: uncomment lines in /etc/httpd/users/php.conf
+Mac OS 10.4 Client (Tiger)
+On Mac OS 10.4 Client (Tiger), PHP 4 is preinstalled but it is not enabled by default in the pre-installed Apache. PHP 5 is not pre-installed. PHP 5.1 for Intel and PPC based Macs systems can be found here: http://www.entropy.ch/software/macosx/php/. Apache should not already have the pre-installed PHP 4 enabled. If it has been, this needs to be disabled. The PHP 5.1 from Entropy installs an Apache config file which enables PHP 5.1 automatically. The file is /usr/local/php5/entropy-php.conf. A symbolic link is created in /etc/httpd/users which points to /usr/local/php5/entropy-php.conf.
+Mac OS 10.4 Server (Tiger)
+On Mac OS 10.4 Server (Tiger), PHP is preinstalled but not enabled. To enable it, use the Server Admin GUI.
+In Server Admin, go to Web > Settings > Modules, check off php4_module, then click Save.
+'On 10.4.11 server this did the trick to resolve the socket error.
+After banging my head for an hour or so, I believe I have the fix for mysql.sock error. OS X10.3 by default put mysql.sock in /tmp/mysql.sock HOWEVER 10.4 puts it /private/tmp/mysql.sock. You can do two things to make sure the clients (PHP for example) and Server know where this is on startup.
+Create symlinks to point to /private/tmp/mysql.sock from /tmp/mysql.sock syntax: Code:
+ln /private/tmp/mysql.sock /tmp/mysql.sock
+OR you can edit the php.ini file where it asks for the mysql socket AND create a /etc/my.cnf file with an attribute of: Code: [mysqld] socket = /private/tmp/mysql.sock
+Mac OS 10.5 Client (Leopard)
+On Mac OS 10.5 Client (Leopard), PHP 5 is preinstalled, but is not enabled by default. In order to enable it, you have to open the Apache configuration file, httpd.conf, which is located in /private/etc/apache2. Look for the file with the following line:
+
+
+
+#LoadModule php5_module        libexec/apache2/libphp5.so
+
+
+Remove the hash sign from the front of the line, to make it look like this:
+
+
+
+LoadModule php5_module        libexec/apache2/libphp5.so
+
+
+PHP 5 will be enabled after the apache server is restarted by typing the following command in a Terminal window:
+
+
+
+sudo /usr/sbin/apachectl graceful
+
+
+Mac OS 10.6 Server (Snow Leopard)
+On Mac OS Server, PHP is preinstalled, but is not enabled by default.
+Enable it with the GUI Server admin:
+click on the triangle at the left of the server name to open the list of services
+Choose the Web service
+Choose Settings and underneath Modules
+In the list, enable php5_module
+Click on Save
+Graphics libraries
+MediaWiki's image thumbnailing requires either ImageMagick or GD library to work and neither are installed by default. This is not strictly required software in that you can install MediaWiki without either of the two and it will work — only the image thumbnailing feature will not function.
+If you're unsure whether you've got GD library or ImageMagick installed, you could simply proceed to "Setting up MediaWiki" — at the start of the process, MediaWiki will tell you if they're there or not and if they aren't you can still install them (as follows) before proceeding with the MediaWiki install proper.
+GD library produces poorer thumbnails than ImageMagick, so the latter is recommended. Note however that MediaWiki will currently use GD library (and not ImageMagick) if both are installed. (So there is merit in not even installing GD library.)
+To get MediaWiki to use ImageMagick despite GD being installed, you would need to edit the LocalSettings.php file in your MediaWiki directory after installation — you would need to change these lines:
+
+
+
+$wgUseImageResize  = true;
+# $wgUseImageMagick = true;
+# $wgImageMagickConvertCommand = "/usr/bin/convert";
+
+
+to this:
+
+
+
+$wgUseImageResize = true;
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/local/bin/convert";
+
+
+Again, you should not have to do this if GD library was not installed during MediaWiki installation or if you're happy to use it.
+GD library
+As already mentioned, the PHP installers mentioned in the Jaguar section above include GD library, so if you used them and are happy enough with GD library then you can skip the rest of this section.
+If you didn't use the said PHP installers/wish to install GD library separately, you could try installing it from http://www.boutell.com/gd/.
+ImageMagick
+The probably most convenient and Mac-alike way to install ImageMagick is by using the installer from the Entropy site (the same site that offered the PHP installers above). You can also install ImageMagick through Fink or Mac How].
+In order to be automatically found, convert should be located in one of:
+
+/usr/bin, /opt/csw/bin, /usr/local/bin, /sw/bin, /opt/local/bin
+
+If it isn't the case, a link can be setup
+
+ln -s $MAGICK_HOME/bin/convert /usr/local/bin/convert
+
+Setting up MediaWiki
+Web-based setup
+Get MediaWiki sources from Manual:Downloading MediaWiki.
+Untar the file in a temporary folder. (It's a good idea to refer to the INSTALL document in this folder.)
+Click on the config directory in the mediawiki folder and type Apple-I (get info); then, change the directory's permissions so that everyone can write to it. (This change in permission is insecure, but you'll be deleting the directory in a moment anyway.)
+Move the mediawiki directory to your "Sites" folder in your home directory.
+Browse to http://localhost/~short_username/mediawiki/ (where short_user name is your short username) You will see the mediawiki installer. If you don't get the page, go to the apple Preferences and check that web sharing is on.
+MediaWiki may complain right that it can't find ImageMagick or GD library. If so, then see above.
+Follow the instructions to install: Fill in the details it asks for and wait while the installer does its work. The system will ask for the following information:
+Site configuration
+Wiki name. fill in
+Contact email. fill in
+Language. drop down list
+Copyright/license. Select from: no license metadata, GNU Free Documentation License 1.2, A Creative Commons license.
+Admin username and password. fill in
+Whether caching will be turned on. If caching is turned on, memcached servers.
+Email configuration
+Whether email features are enabled globally.
+Whether user-to-user email is enabled.
+Email notification. Select from disabled, enabled for changes to user discussion pages only, or enabled for changes to user discussion page and to pages on watchlists.
+If email is enabled, whether email address authentication is enabled.
+
+Database config
+Database type. Select from MySQL or PostgreSQL or SQLite.
+Database host name. Fill in.
+Database name. Fill in. Defaults to "wikidb".
+Database username. Fill in. Defaults to "wikiuser".
+Database password. Fill in.
+Whether to use the superuser account to create the database user and tables. Check box.
+Database superuser name. Fill in. Defaults to "root".
+Database superuser password. Fill in.
+MySQL specific options
+Database table prefix. If more than one wiki is to use the same database instance, the prefix will separate the wiki instances. Fill in.
+Database character set. Select UTF-8 or experimental character sets.
+
+
+Unless the version of your database is compatible with the version assumed in the mediawiki setup, the above steps will produce an error about connecting to the database. This results from an incompatibility in the password format stored in the mysql database. You need to fix this problem by the following steps.
+run 'mysql' as the root mysql user (ie 'mysql -su root -p').
+type 'SELECT Host, User FROM mysql.user;'. You should get a list of hosts and users. Look for lines with wikiuser in them.
+type (for each host wikiuser has) 'SET PASSWORD FOR 'wikiuser'@'localhost' = OLD_PASSWORD('password');'.
+
+Connection errors may also occur if your mysql socket file mysql.sock is in an unexpected place. You will see Connecton failed next to SQL server host and error Can't connect to local MySQL server through socket '/var/mysql/mysql.sock'. To fix this, you can modify your /etc/php.ini file (if you don't have one, you can create it from /etc/php.ini.default) so that mysql.default_socket points to the correct location.[1] [2]
+The configuration may also fail because no database for MediaWiki to read and write has been created. Please refer to the 'MySQL' section above.
+As prompted by the webpage, copy the LocalSettings.php file from the config folder up one level, to the mediawiki folder.
+Eventually, you should be led to http://localhost/~short_username/mediawiki and you should see a nice new wiki waiting to be populated.
+Once this is working, or if you give up and have to leave it for more than a few minutes, change the permissions of the config folder to prevent reading by anyone. If the wiki is working, you may as well just delete this folder.
+Mac OS X 10.4 Server (Tiger)
+On Mac OS X 10.4 Server (Tiger), Apple provides an application to enable MySQL, set the root MySQL password, and start the MySQL service. You can find this app in /Applications/Server/MySQL Manager.app. See this article at Apple Support for more details.
+If you're having trouble getting PHP to talk to MySQL, see article 301457 at Apple Support.
+In the MediaWiki install web page, the MySQL server name must specify the fully qualified domain name of your server (change it from 'localhost' to your server's name, foo.bar.com).
+
+Note: With MySQL 4.1 and above, you might run into the "Couldn't connect to database" error. This is due to the new authentication protocol in MySQL. The remedy is to reset the users which connect to the MySQL server (DB root, and after creation the DB user, wikiuser is the default name, as well) to use an old-protocol password, as described in the MySQL manual (Appendix A, chapter "Client does not support authentication protocol error"). In the longer term, MediaWiki should probably update its client library... MySQL manual page
+
+I wonder if someone could write the requisite mysql commands here? I fear that the mysql steps are daunting (and uninteresting) enough to discourage folks who might otherwise to share interesting information using mediawiki. Ideally, the mediawiki system itself should explain this, probably on that first setup webpage, but until that happens, perhaps we can help each other on this site ... --DK 23:01, 2005 July 29 (UTC)
+
+
+
+In 10.4.4 (and following, I suppose) the following Terminal commands successful reestablish the link between MySQL and PHP:
+
+
+
+$ sudo mkdir /var/mysql
+$ sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
+
+
+
+In 10.4.10 the directory /var/mysql and file /var/mysql/mysql.sock already exists and the link parameters had to be reversed for the link to be successful:
+
+
+
+$ sudo ln -s /var/mysql/mysql.sock /tmp/mysql.sock
+
+
+-Edonovan (from Wikipedia) 2006 March 30
+
+
+In OS X 10.4.X Tiger, the preinstalled MySQL may also fail to recognize "localhost" as a valid host. In the web-based installer, try "servername.local" instead of "localhost", where servername=the computer name. If you are using Server Admin, this is the same as the Local Hostname setting. The web based installer for 1.5X and 1.6X through 1.6.7 will then fail at Initialising the Mediawiki namespace. This is because it is trying to connect as the wikiuser defined by the installer, but it is attempting to use localhost. Go into MySQL and change the host for the wikiuser and it will all work. MediaWiki should probably adjust the installer to create the wikiuser with the correct local hostname. - JimHu 18:46, 23 June 2006 (UTC)
+
+Securing/configuring Apache
+Create a text file named "wiki.conf" in /etc/httpd/users, or your respective directory, e.g. /private/etc/apache2 for 10.5
+(to see this folder you have to have hidden files made visible using the Terminal command - defaults write com.apple.Finder AppleShowAllFiles YES).
+Or use the menuitem "Go/Go to Folder..." and copy-paste the folder path into that dialog.
+The file should contain the following lines (modify them as applicable!):
+
+ Alias /wiki "/Users/YOUR-HOME-FOLDER/Sites/mediawiki"
+
+
+ <Directory "/Users/YOUR-HOME-FOLDER/Sites/mediawiki">
+       Options Indexes MultiViews FollowSymLinks
+       AllowOverride None
+       Order allow,deny
+       Allow from all
+ </Directory>
+
+
+ <Directory "/Users/YOUR-HOME-FOLDER/Sites/mediawiki/upload">
+    AllowOverride None
+    AddType text/plain .html .htm .shtml
+ # php_admin_flag engine off  # This doesn't seem to work.
+ </Directory>
+
+
+  RewriteEngine on
+  RewriteRule ^/wiki/en/(.*)$ /mediawiki/wiki.phtml?title=$1
+
+(You may have to create the above .../upload folder for file uploads to work.)
+On 10.3, you can simply create /etc/httpd/users/wiki.conf.
+On 10.2, you may need to add this line to the bottom of /private/etc/httpd/httpd.conf:
+
+Include /etc/httpd/users/wiki.conf
+
+That done, restart Apache. Restart it manually to make sure it reports any errors to you:
+
+ sudo apachectl restart
+
+(If you restart it from the Sharing panel and there's a config error, it'll just sit there mute. Very annoying.)
+Make sure that the .phtml extension is assigned to PHP as well as .php; there should be a line like this in the /etc/httpd/httpd.conf file:
+
+ AddType application/x-httpd-php .php .phtml
+
+Security note: Unless you've disabled uploads, do not forget to disable PHP in the upload directory.
+Presumably the above php_admin_flag engine off line is supposed to do this?
+I think so. I made it work by removing the comment "#This doesn't seem to work".
+Enabling uploads
+Uploads are disabled by default for security reasons.
+Before you do this, please make sure that your upload directory is configured in a safe manner so it's not possible to upload and execute arbitrary PHP code. Otherwise, someone could upload a PHP file, and might be able to do all sorts of horrible things like delete your entire website.
+To enable uploads, uncomment the following line in LocalSettings.php and make sure it is set to true:
+
+
+
+# $wgEnableUploads = true;
+
+
+You will also need to enable uploads from PHP; set the following in php.ini found in OS X 10.4 at /usr/local/php5/lib once PHP 5 has been installed:
+
+file_uploads = On
+
+Earlier versions of MediaWiki included a bug that potentially allows logged- in users to delete arbitrary files in directories writable by the web server user by manually feeding false form data; this is now fixed.
+To disable uploads, comment out or set the following option to false in LocalSettings.php:
+
+
+
+$wgEnableUploads = true;
+
+
+Notes: Some httpd.conf config files have this line by default:
+
+Alias /images/ /usr/share/images/
+
+It will break the access to images/ folder in MediaWiki. To prevent this, either change the default upload directory or remove this line.
+Be sure that you can write to the directory- check ownership, permissions, and any other restrictions which could prevent you from writing to the directory in question (including PHP security settings such as open_basedir).
+Enabling email
+To send outgoing mail (inter-user messages and password reminders) a mail server needs to be running.
+The mail server on 10.2 is sendmail, but is misconfigured in OS X client and won't run by default. [3]
+On 10.3 postfix is the default mail server; this post on macosxhints.com tells how to enable it.
+An alternative on OS X 10.3 is to use Postfix Enabler (shareware), which has a user-friendly Mac GUI.
+On 10.5, you can send email without extra configuration.
+Caveats
+If your wiki is configured as Latin-1, you cannot upload images with non-ASCII characters in their file names (bugzilla:362).
+Additional info
+The following sections are advanced information and describe an alternative (not necessarily better) choice of a MediaWiki install tree. They are included here so that advanced users may obtain additional information about which files are relevant for what.
+Alternative directory layout
+On my machine I've installed them under /Library/MediaWiki like so:
+
+ /Library/MediaWiki/wiki.conf
+   A bit of Apache configuration, see below
+
+
+ /Library/MediaWiki/php
+   the *.php files from include/ and languages/
+ 
+ /Library/MediaWiki/cache
+ /Library/MediaWiki/tmp <- temp files for TeX (?)
+   For file cache and TeX temp files (if using).
+   If using, must be writable by the www group.
+
+
+ /Library/MediaWiki/web
+   Here's where the web-exposed stuff will go:
+   wiki.phtml
+   redirect.phtml
+   LocalSettings.php
+   style/
+   upload/
+   math/
+
+Alternative Apache configuration
+The 'wiki.conf' might look something like this:
+
+ Alias /wiki "/Library/MediaWiki/web"
+
+
+ <Directory "/Library/MediaWiki/web">
+       Options Indexes MultiViews FollowSymLinks
+       AllowOverride None
+       Order allow,deny
+       Allow from all
+ </Directory>
+
+
+ <Directory "/Library/MediaWiki/web/upload">
+    AllowOverride None
+    AddType text/plain .html .htm .shtml
+    php_admin_flag engine off
+ </Directory>
+
+
+  RewriteEngine on
+  RewriteRule ^/wiki/en/(.*)$ /wiki/wiki.phtml?title=$1
+
+
+MAMP - An easier way to get Apache/MySQL/PHP set up
+For a personal Wiki environment, you may find it easier to install MAMP, if you are using Mac OS X 10.4 or newer (MAMP will not run on Mac OS X 10.3 or older). This installer will provide its own Apache, MySQL and PHP (with eAccelerator (an updated MMCache) and Zend Optimizer) and a nice simple control panel, running under your login (in other words, this really isn't configured to work as a production server, so don't do that). If you turn off the Mac's built-in personal web server, you can run MAMP's Apache on port 80.
+You will still need to install ImageMagick, but otherwise everything MediaWiki needs will be there. Note that with MAMP your personal Web directory defaults to /Applications/MAMP/htdocs instead of the Mac's usual /Users/yourname/Sites. If you don't want to store your own data files in the Applications directory, open MAMP's Preferences, select the Apache tab, and change the document root to the directory of your choice. /Users/yourname/Sites is an excellent choice. Clicking on MAMP's Open Start page button will open http://localhost:8888/MAMP/ in your browser to show you how things are configured.
+Installation of MediaWiki is simple:
+Untar the MediaWiki package as above into your Sites folder
+Change the name of the folder to something simple like mediawiki
+Change the permissions of MediaWiki's config folder so that it is writeable by everyone
+Open http://localhost:8888/mediawiki/mw-config/index.php
+Fill in the blanks on the initialization form
+Click Install and wait...be very patient
+When done, copy LocalSettings.php from the config folder to its parent folder
+You can now delete the config folder
+That's it! Open MediaWiki by pointing your browser to http://localhost:8888/mediawiki/index.php. You should have your wiki up and running in a few minutes after filling in the configuration form.
+On Mac OS X 10.4 Tiger, you can easily make Apache and MySQL start automatically upon login. See these instructions at MAMP's forums.
+TeX support
+See
+
+math/README
+
+in the distribution.
+The README above doesn't help much. See Manual talk:Running MediaWiki on Mac OS X#Mathematics for explicit instructions on how to add TeX support for MacOS X.
+Once you have added this support, until (if) MediaWiki is updated, you may want to look at TeX#TeX for instructions on how to modify your setup to get TeX pngs that are transparent (so look good against a grey background), scale in size to match the surrounding text, and are vertically aligned properly with surrounding text.
+Troubleshooting
+see Discussion
+Other resources
+Web Apps with Tiger: MediaWiki
+Language:
+English  • français • 日本語
+
+
+
+
+
+
+
+

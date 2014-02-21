@@ -1,0 +1,138 @@
+Manual:Config script
+
+
+IMPORTANT: The content of this page is outdated. If you have checked or updated this page and found the content to be suitable, please remove this notice.
+An English native speaker may translate the German version that is up-to-date.
+ Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+
+
+
+
+The 1.13alpha Config script
+
+
+Once you have uploaded/installed MediaWiki on web server, the first thing you need to do is complete the basic setup by running the supplied configuration script. This script allows you to tell MediaWiki the information it needs in order to get the wiki up and running.
+
+
+
+Opening the MediaWiki installation form
+In the following examples, it is assumed that your website is located at http://www.example.com/ which is physically located on your server at /home/example/web. You will need to adjust the examples to use the appropriate locations for your situation.
+Use your web browser to browse to the main wiki page. This is index.php inside the web-accessible folder that you installed MediaWiki into, and is typically /w/index.php (e.g. http://www.example.com/w/index.php, assuming you installed MediaWiki to /home/example/web/w). (You should not have used /wiki/ if you want to use it as a Short URL).
+You will see the version of MediaWiki installed and a link to "Please set up the wiki first." Click on the link to begin the configuration script. For reference (in case you want to go there directly), this is located in the wiki's mw-config directory (so using the example above you would go to http://www.example.com/w/mw-config/index.php).
+
+installer directory was called config before version 1.17.
+
+
+If the script spots any configuration errors then it will not allow you to continue. See below for details about the error messages you might encounter, and what to do if you do.
+If all the tests pass, you will be presented with a form to fill in the information that MediaWiki now requires.
+Filling out the form fields
+Follow the instructions on the form to fill in the required entries (refer to the following table if you're uncertain what to enter) and after that click on the "Install MediaWiki!" button. The script will now populate the database and write a configuration file.
+After the setup script has finished running successfully, a file called LocalSettings.php is created in the "config" directory. This file contains all the information needed by MediaWiki to run. Since it stores the specified database user's password in plain text, it is strongly suggested that you create a wiki specific database account (i.e. not root). (see Database username in the table below)
+Move this file to the main wiki directory (if you installed MediaWiki to /home/example/web/w, move it there).
+Set stringent permissions on the LocalSettings.php file.
+Set chmod 600 and chown <webserver owner> (Owner read and write, no other permissions).
+
+Delete the "config" (before version 1.17) or "mw-config" (after version 1.17) directory.
+Once you have done the above, your wiki should be ready to use. Browse to the address you installed it to (in our example http://www.example.com/w/index.php) and start editing!
+Field
+Explanation
+Wiki name
+The name of the wiki. This will appear as the main title for meta pages, as well as throughout the interface itself. It cannot contain the term "MediaWiki' or the "#" symbol. A short word without punctuation is preferred.
+Contact e-mail
+This is the main administrative e-mail address for the wiki, and usually appears as "admin@localhost". It will be displayed on some error messages and on all email notifications.
+Language
+This drop down menu sets the language for the wiki interface. Be aware that not all localizations are complete. Unicode (UTF-8) is the default character set for all choices.
+Copyright and Licenses
+Three choices are available:
+No license metadata
+GNU Free Documentation License 1.2
+A Creative Commons license
+Of these, only the GNU Free Documentation License is Wikipedia compatible
+
+Admin username and password
+Create a username and password. Administrators have the ability to block users from editing, and perform routine maintenance on the wiki.
+Object Caching
+Two options are available:
+No caching
+Memcached
+Memcached will provide a performance boost. Provide the server addresses and ports in field provided, separated by a comma. Mediawiki will also detect Turck MMCache, eAccelerator, APC and XCache. However, these programs are not recommended if the wiki will be running on multiple application servers.
+
+Database host
+The host where the database is located. If the database is located on the same host as the web server, use "localhost".Note: If running MySQL using a different socket file (e.g. mysql on localhost, using --socket=/tmp/mysocketfile), set the database host to:"localhost:/tmp/mysocketfile". Sometimes sockets are called ports. If you have a port number for your database host, follow the same syntax:"my.host.url:port".
+Database name
+The name of the MySQL or Postgres database you created to serve your wiki.Note: If you have superuser account of DB Server and will be using it on this form page then enter the name of the DB that you would like to be created for your wiki.Note: If you're installing on a site hosted by Yahoo, you may need to set database name to mysql.
+Database username
+The username used for accessing your wiki database.Note: If you have superuser account of DB Server and will be using it on this form page then simply fill the db username that you would like to be created for your wiki. Otherwise, create the db user and ensure that the user has SELECT, INSERT, UPDATE, and DELETE permissions on the MediaWiki database. For installation the user must also have CREATE and INDEX permissions. It is strongly suggested that you do not use a superuser account since the user password is stored in plain text.
+Database password
+The user password for accessing your wiki database.Note: If you have superuser account of DB Server and will be using it on this form page then just fill the db username that would like to be set on the database for your wiki. Alternately, supply a user password for the database that is already created to serve your wiki.
+Superuser account / Superuser password
+The root database user and password, if you have it. If you don't have this password, leave it as it is. If you have the password, you may be able to skip the above stages of creating the database and user manually since this form will be able to do this for you.
+Database table prefix
+(MySQL only) An optional prefix to prepend to the name of every table that will be created within your wiki database. If you plan to have several wikis, you might want use a prefix such as "w1_", so that all the tables associated with your first wiki will have "w1_" prepended. This allows you to install multiple wikis using the same databases by making the name unique. For example the generic name "archive" becomes "w1_archive", so that it is possible to add another MediaWiki installation without overwriting the tables.
+Database port
+(Postgres only) This is the port number Postgres is installed at. The default value of 5432 should work for most instances.
+Schema for mediawiki / Schema for tsearch2
+(Postgres only) The name of the schema to put your wiki inside of. The default value of "mediawiki" should be fine for most purposes. To use more than one wiki on the same database, both this schemaname and the username should be changed, preferably to the same name to lessen confusion. The default value of "public" for tsearch2 should almost never have to be changed.
+Database character set
+There are currently three options in this section:
+Backwards-compatible UTF-8: This option is used when upgrading the MediaWiki software. Additionally, this is a good option for those users who prefer an older, more stable character set.
+Experimental MySQL 4.1/5.0 UTF-8: This is a newer version of UTF-8, one that allows the user to enable Unicode support for MySQL servers 4.1 and 5.0. This version is very readable, but takes up more space.
+Experimental MySQL 4.1/5.0 Binary: This version is unicode, but is not readable.
+Both experimental character sets are not well documented and may cause problems with MediaWiki configuration.
+
+Installation errors
+When you run the config script it makes various checks of your system, and tells you if there are any problems.
+After installation if your server is redirecting to a non-existant url try and go back and hit stop before the page redirects and grab Localsettings.php.
+Add the following line after $wgSitename: $wgServer = 'http://your.servername.com';
+Parse error: parse error, expecting `T_STRING' in [...]\wiki\includes\Namespace.php on line 52
+Make sure you have the appropriate version of PHP for the version of MediaWiki you are installing.
+
+Attempting to connect to database server as wikiuser...failed with error [2004] Can't create TCP/IP socket (10106).
+Often found in the internet that you should turn on named pipes in the MySQL configuration, but this did not help me (this appeared under Win2000 with MySQL 5.0)
+
+"Warning: main() [function.main]: open_basedir restriction in effect. File(/convertLinks.inc) is not within the allowed path(s):"
+Apparently the include path sometimes needs to be set. Put [ php_value include_path '/var/www/vhosts/yourhost.com/httpdocs/pathtowiki' ] in you .htaccess file.
+
+(MediaWiki 1.10.1&1.11.2) After 'Running the script' 1. The text is: 'Setup has completed, your wiki is configured.' Selecting 'your wiki' opens a new screen with the address: http://localhost:8080/mediawiki/index.php and the error '404: The page cannot be found'.
+Path to php5isapi.dll is incorrect. In IIS manager go to web sites right click on web site go to properties then go to home directory tab and then click on configure find php in the list and then click edit and fix the path (C:\progra~1\php\php5is~1) Should be ("C:\program files\php\php5isapi.dll")
+
+Warning: getrusage() is not supported in this PHP build
+We do function_exists checks for getrusage, so if you see this error message, probably means you should file a bug.
+
+Parse error: syntax error, unexpected T_LNUMBER, expecting ';' in .../wiki/includes/GlobalFunctions.php on line 75
+Creating tables...Query "CREATE TABLE `user` ( user_id int" ..."You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TYPE=InnoDB' at line 20 (localhost)".
+In the latest version of MySQL, TYPE= syntax has been changed to ENGINE=. Modify the entire tables.sql script.
+
+Warning: domdocument::domdocument() expects at least 1 parameter, 0 given in C:\xampp\htdocs\w\includes\Preprocessor_DOM.php on line 566
+Fatal error: Call to undefined method domdocument::loadXML() in C:\xampp\htdocs\w\includes\Preprocessor_DOM.php on line 568
+Set $wgParserConf['preprocessorClass'] = 'Preprocessor_Hash'; in LocalSettings.php.
+
+Creating tables... using MySQL 4 table defs...Query "CREATE TABLE `v_job` ( job_id int(9) unsigned NOT NULL auto_increment, job_cmd varchar(255) NOT NULL default , job_namespace int NOT NULL, job_title varchar(255) binary NOT NULL, job_params blob NOT NULL default , PRIMARY KEY job_id (job_id), KEY (job_cmd, job_namespace, job_title) ) TYPE=InnoDB " failed with error code "Specified key was too long; max key length is 1024 bytes (h41mysql79.secureserver.net)
+Warning: ini_set() has been disabled for security reasons in .../includes/AutoLoader.php on line 5
+If there is MySQL 'DB connection refused' error, it is possible the default port in Apache's PHP file ('php.ini') is incorrect.
+Your system has a combination of PHP and libxml2 versions which is buggy and can cause hidden data corruption in MediaWiki and other web apps. Upgrade to PHP 5.2.9 or later and libxml2 2.7.3 or later! ABORTING (http://bugs.php.net/bug.php?id=45996 for details).
+Well as the error says, either upgrade one, or downgrade one.
+
+[TODO: This section should list all potential error messages and how to fix them. Or perhaps they should be on a separate page (depends how many there are, I guess... --HappyDog 22:05, 29 August 2007 (UTC)]
+Configuration errors
+[TODO: This section should list all errors that can occur when submitting the form, and how to handle them. Or perhaps on a separate page, if necessary]
+What about the $wgSecretKey e.g.
+Warning: $wgSecretKey key is insecure, generated with mt_rand(). Consider changing it manually.
+a) what is this and b) what is the solution ?
+Answer: It means your system doesn't support /dev/urandom so the key was generated with mt_rand(). You can manually edit the wgProxyKey field in LocalSettings.php.
+
+Specified key was too long
+Answer
+
+Advanced configuration
+Manual:$wgEnableUploads to enable image/files upload.
+Also see Manual:Short URL for having more user friendly url to article pages.
+See Manual:Configuring MediaWiki for links to more advanced configuration.
+See Manual:Wiki family to setup multiple instances of MediaWiki with single set of MediaWiki files.
+See also
+Manual about Errors/Symptoms in MediaWiki
+Language:
+English  • Deutsch • español • français • 日本語 • português do Brasil • русский • 中文 • 中文（台灣）‎

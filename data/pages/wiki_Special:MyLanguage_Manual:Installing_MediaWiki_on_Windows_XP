@@ -1,0 +1,567 @@
+Manual:Running MediaWiki on WindowsInstallation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+This page will give you information about installing MediaWiki on a Microsoft Windows system.
+
+
+
+Introduction
+Because MediaWiki is coded in PHP (a cross-platform language) it is quite simple to get running on Windows. If you already have a working internet-development environment which runs PHP, Apache and MySQL you may skip on to the sections about Optional Software.
+While this guide focuses on using the Apache HTTP server, you can see Installing MediaWiki on Windows Server 2003 for instructions on how to use IIS to run MediaWiki.
+This guide only supports the most recent versions of MediaWiki (1.18.x and later) to avoid explaining the fixes for bugs in every previous version. If you are new to Apache/PHP or MySQL, note that these applications are only supported by their developers on Windows 2000 and later.
+Software requirements and options
+Network Requirements
+For those of you choosing a hosting environment, you don't have much choice. However, if you are self-hosting or hosting on a corporate Intranet, there is one primary rule and it applies equally to Windows, Unix, or Linux; Never expose any computer directly to the raw Internet.
+This is because they are ALL vulnerable. The best and simplest Internet access method is via a NAT router behind which you can hide your laptops, workstations, and servers. You can then make your servers available via pinhole-route/port-forwarding techniques. The big benefit is that NAT boxes are too stupid to hack and only do exactly as they are told.
+Putting a computer directly on the internet is asking to get it hacked by viruses, worms, bot herders, or somebody's pet cat. Most zombies are exactly such machines. Instructions beyond this point assume that you have a secure network.
+Required software
+Supported software
+MySQL.
+Web Server: Apache, Abyss Web Server or IIS.
+PHP 5.x (depending on version).
+Windows 2000/XP/2003/Vista/7. -
+Server operating systems (optional): Windows Server 2003/Windows Server 2008.
+
+A local mail transport agent or accessible SMTP server
+if you wish to support user confirmation or email change notifications
+note: the MediaWiki 1.12 installer does not determine whether a local MTA is present before installation begins
+MediaWiki – the code itself
+Notes: While the MediaWiki development teams are familiar with LAMP, under Windows you are much better off with WIMP (Windows, IIS, MySQL, PHP). Apache under Windows is a loser, especially if you are going to do any sort of Active Directory integration. Certainly, running both Apache and IIS is confusing, error prone, and generally more work than it's worth. For this reason, the following stack is recommended (at this time). The guideline is to use the native tools as much as possible. They generally work better and you are more likely to get better support.
+Windows 2000 or later
+PHP 5.x (ISAPI version only, forget CGI)
+MySQL 5.x
+IIS 6 (Windows 2K) or IIS7 (XP, Vista, Server 2003 and Server 2008)
+
+For full production sites, one of the Windows server configurations is recommended. But this whole stack can even be implemented on a Vista or XP laptop, for example for use as a development environment.
+Optional utilities
+Texvc (needed for rendering Math formulas)
+PHP optimizing software (Zend Optimizer). Cleans up compiled PHP code to make it run 50-100% more efficiently.
+PHP caching software such as eAccelerator. Saves the compiled PHP for future use, so it doesn't need to be recompiled, speeding up execution by 100x or so.
+Image processing software (ImageMagick or GD). Used for format conversion and thumbnails
+Web page caching software (Squid). Used to store rendered pages for re-use.
+Hardware
+You will also need some serious hardware for a large database, e.g. the full Wikipedia database, depending on how much demand it will require. Meta-wiki has some information on how many clients its clusters support, and their configuration, which can be used to gauge this.
+A minimum of 256MB of RAM is recommended.
+Updates:
+Under Vista, 2GB of RAM is recommended
+Under the Windows Server versions, 2-4GB is recommended depending if the RDBMS will be implemented on the same box. If the database is going to be on another box, then 2GB should be sufficient.
+Win2KAS needs at least 512MB of RAM.
+
+The threshold condition is whether or not the server can run without pulling pages from the swapper.
+
+
+Choosing a software installation method
+MediaWiki is developed under a LAMP (Linux+Apache+MySQL+PHP) environment. It is possible to successfully implement in a WAMP (Windows+Apache+MySQL+PHP) or WIMP (Windows+IIS+MySQL+PHP).
+Although these products are not that difficult to configure under Windows, it can be extremely difficult to install (by difficult, it takes 30 minutes for WIMP) and configure Apache+MySQL+PHP one product at a time if completely new to apache/mysql/php. Under such circumstances it is highly recommended to look for a LAMP or WAMP pre-made combination which can just be installed and used. These will save you 99% of the trouble of configuring each package manually. The down-side is that some of these are trimmed down or modified versions which makes it hard to upgrade individual components, and other ones are seriously out of date.
+You can install the support components individually, or all together as a package. A step by step guide to installing MediaWiki with separate packages for Apache 2, MySQL 5 and PHP 5, on Windows, can be found at Manual:Newcomers guide to installing on Windows.
+Currently, there are a few up-to-date "all-in-one" packages for Windows:
+Abyss
+DeveloperSide.NET Web-Server Suite
+EasyPHP
+XAMPP
+Uniform Server
+See also: Comparison of WAMPs and Manual:Wiki on a stick.
+Installing Apache, PHP and MySQL as a Package
+Choose a package to download from the list above.
+Internet Information Services (IIS) Manager Installed
+If IIS is installed then there are some considerations. By default IIS and Apache both use port 80, so IIS will need to be uninstalled, disabled or moved to another port.
+NOTE: Saint WAMP allows the default port for apache to be changed during the install. If you plan to keep IIS on port 80 and run Apache on a different port then IIS can be left as is.
+To change the port IIS runs on:
+Open IIS Manager [Start -> Administrative Tools -> Internet Information Services (IIS) Manager]
+Expand Web Sites, right-click on Default Web Site and select Properties
+On the Web Site Tab change the Port field (example: 8080)
+Click OK
+Stop then start IIS to make the change come into effect
+
+Installing EasyPHP
+Run the downloaded EasyPHP installation package
+Use the default install directory or change as required
+When the install finishes wait, two dialogue boxes should appear on top of the final install screen
+Click OK on the 'Mise a jour' box.
+The EasyPHP Dialogue box should show Apache and SQL already started
+Go to http://localhost/ to test it
+Tasks after installation:
+Go to http://localhost/mysql/ to set root password for MySQL. Note that entering the trailing "/" matters! Select "Show MySQL system variables", "Privileges", then click icon at end of line starting with "root". Scroll down to password entry box and enter.
+
+Configure Apache
+The Document Root for Apache should be changed to point somewhere else, preferably on a separate volume. Create a new folder (i.e. D:\www) and then edit the Apache configuration file as follows:
+First, open the httpd.conf file in the .\apache\conf directory where Saint or PHP is installed
+Then search for DocumentRoot and edit it
+
+DocumentRoot "D:\www"
+
+Finally, scroll down and change the '<Directory>' directive (NOT the <Directory /> directive or the </Directory> directive!) to be the same as DocumentRoot (if you installed the Saint WAMP distribution, change the '<Directory htdocs>' directive)
+
+<Directory "D:\www">
+
+You need to restart TSW-Contentserver for the changes to take effect.
+You may want to install Memcache if not already included in your WAMP, and ImageMagick or some other graphical manipulation package. Instructions, and links to some Windows builds, are also given in Manual:Newcomers guide to installing on Windows, and the php settings needed are shown in the sample php.ini.
+Installing MediaWiki
+After successfully installing the underlying software, you can install MediaWiki.
+Download MediaWiki from sourceforge file list (not updated to last release) or latest release from portal page
+Uncompress the MediaWiki source tree under the Apache Document Root (Example. D:\www\mediawiki)
+Access http://localhost/mediawiki and configure MediaWiki as instructed by the page.
+In case you have difficulty accessing the database, you might need to do this in mysql:
+set password for 'root'@'localhost' = password ('new-password');
+
+If you get a blank page at this point, and it has not created the "LocalSettings.php" file, please contact someone for assistance (either on one of the IRC channels or mailing lists). Sometimes, just hitting Reload in your browser may solve the problem.
+
+Put the downloaded LocalSettings.php into .\mediawiki\, i.e. move it into MediaWiki root.
+Enjoy your MediaWiki under Windows now: http://localhost/mediawiki
+Prerequisite software installation
+Choose IIS or choose Apache. Do not choose both, unless you have special needs, such as a tendency towards masochism.
+Internet Information Server (IIS)
+Installation/Activation
+Under Windows, IIS comes shipped with the system (Even IIS7 on Vista) and only needs to be activated.
+Under Vista, this is Start->Control Panel->Programs and Features->Windows Features. You will want the IIS Web Management Console and all of the World Wide Web Services.
+Under Win2Kx, this is found under Start->Settings->Control Panel->Add/Remove Programs->Add/Remove Windows Components. Again, You will want the IIS Web Management Console and all of the World Wide Web Services.
+Configuration
+All management and configuration is performed through the Management Console. You can even control and configure IIS remotely. The only thing that you have to be logged into the same machine for is to create a new site and that can be done via Terminal Services. If it is a completely remote site, you might have to access Terminal Server via a VPN. For these instructions, we will assume that you are not on the same LAN. Oh yes, you will have to have Administrator access.
+Note: As shipped, IIS creates a default directory tree under c:/InetPub/WWWRoot
+Apache
+Download & Installation
+Download the Apache Web Server MSI installation package from here using the latest 2.0.x binaries (2.2.x is fairly new at the time of writing and is not well supported by binary files for PHP). Currently the latest version of Apache is version 2.0.59 (July 2007)
+The installation is fairly simple, however if you do not have Administration privileges on your server you will need to select Port 8080 manual-start installation, as installation of services requires admin privileges.
+Configuration
+You need to alter the httpd.conf file for apache. It should be located at "C:\Program Files\Apache Group\Apache2\conf" if you used the default installation:
+Add these lines at the end of the block of LoadModule lines:
+
+    LoadModule php5_module c:/php/php5apache2.dll
+    AddType application/x-httpd-php .php .php5 .phtml
+    AddType application/x-httpd-php-source .phps
+    #configure the path to php.ini
+    PHPIniDir c:/php
+
+You must alter c:/php/ to the location of your php5apache2.dll file (which will be downloaded and configured in the next section). It is recommended not to use a directory with a space.
+Note: if you are installing Apache 2.2. replace "php5apache2.dll" with "php5apache2_2.dll".
+PHP
+Download & Installation
+Download the Windows Binaries of PHP from here. Once you have downloaded the files you simply need to extract the files to the directory you specified in the Apache configuration file. It may also be necessary to place the PHP directory in your PATH if you receive DLL not found errors.
+Rename the file php.ini-recommended to php.ini.
+Configuration
+Make the following modifications to the php.ini file you renamed above.
+Extension Directory
+Set extension_dir to "./ext"
+MySQL
+Uncomment "extension=php_mysql.dll" (i.e. remove the ';')
+GD
+You will need to enable the GD library to use thumbnailing. The GD library is contained as an extension in the default download package.
+Uncomment "extension=php_gd2.dll"
+You may now use the services control panel or Apache2 Monitor to restart the Apache 2 server and make sure everything is working.
+MySQL Installation
+The download link below points to a page with all available versions of MySQL. You will more than likely want to download "Current Release (Recommended)" (which is 5.0 at the time of writing), followed by "Windows Essentials"
+While downloading, read the Install Guide using the second link below.
+Download
+Install Guide
+Once you've got MySQL set up correctly you can proceed to the installation of MediaWiki.
+
+Make sure libmysql.dll is in the PATH, either by adding c:\php or the MySQL install directory to the PATH or by copying libmysql.dll to someplace in the PATH (like C:\Windows).
+
+MediaWiki
+There are two options
+Last stable release of the MediaWiki software
+Latest development version.
+Stable release
+Go to Download
+Press Download on the left of "MediaWiki stable release"
+Save on your disk and extract it to c:\easyphp\www\mediawiki\
+Latest release and Git versions
+Often as well as the stable version, there will be a beta of the next version. There may also be an "up to the minute" latest in Git, not yet released.
+These are development versions of MediaWiki and include the latest changes made by the developers. They may work well, or may have serious problems (of any kind, trivial through to major data corruption), so be careful about using a beta or Git version. Generally use the stable version unless you need the development version to work around a bug you can't avoid, or to gain some key feature or compatibility with latest software, or resolve other issues. Always check the release notes if unsure. If you aren't familiar with computing and don't like to test the latest software, get the stable release.
+You can download all versions (stable and development) from Git, GitHub, or following links in this wiki. If you want to grab a Git version ("up to the minute" software) and do not already have a Git client, you will have to get one and install it. Get MediaWiki from the Git archives. see also:
+Download from Git
+Git
+Installing
+Believe it or not, after all that work, it's fairly simple to install MediaWiki. Head to wherever you extracted your wiki in your browser (for example, if you extracted it to \htdocs\wiki head to http://localhost/wiki) and click the link to begin set up. You should know all the details you need to fill in here, however note that it is wise to disable all forms of email communication if you did not configure PHP's outgoing SMTP.
+Hint: if you encounter spurious latencies on Windows Server 2008 or 20012R2, like e.g. waiting 5 seconds for a response, you can dramatically increase the performance by changing the SQL server settings in LocalSettings.php:
+
+#$wgDBserver         = "localhost";
+$wgDBserver         = "127.0.0.1";
+
+Optional Software
+Diffutils
+Diffutils (which contains diff3) can be downloaded from here, and File (file type checker) from here.
+To activate the use of diffutils within MediaWiki, you have to ignore the fact that they won't be found during installation (they may actually be found if you install diff into your path) and open up LocalSettings.php to make the following changes:
+
+$wgDiff3 = "/usr/bin/diff3";
+
+becomes
+
+$wgDiff3 = "C:/Program Files/GnuWin32/bin/diff3.exe";
+
+and replace:
+
+$wgMimeDetectorCommand = "file.exe -bi"; #use external mime detector (linux)
+
+with
+
+$wgMimeDetectorCommand = "C:/Program Files/GnuWin32/bin/file.exe -bi"; #use external mime detector
+
+Please note that you have to replace "C:/Progra..." with the actual location where you installed the tools to.
+ImageMagick
+Note: PHP now comes with GD enabled by default. This will work for thumbnailing, and will not require any configuration or modification. Therefore it's highly recommended to not install ImageMagick, since it is known to be unstable. In fact the $wgImageMagickConvertCommand and Image.php mentioned below does not exist in MW1.15.1
+Note: Settings for XAMPP v1.7.7 VC9 and MediaWiki v1.18.1
+The "Q8" ImageMagick releases use 8 bits per channel, while the "Q16" releases use 16 bits per channel. To make image thumbnailing work, you will need to open includes/Image.php, locate the line that starts with $cmd = $wgImageMagickConvertCommand ., and remove the escapeshellarg() function, then do the same to the next line, so that the command variable builds like this:
+
+$cmd  =  $wgImageMagickConvertCommand .
+      " -quality 85 -background white -geometry {$width} ".
+      ($this->imagePath) . " " .
+      ($thumbPath);
+
+
+In addition, check to be sure that the $wgImageMagickConvertCommand in localsettings.php points to
+(your imagemagick folder path)/convert.exe
+Note:
+use the .exe extension! It won't work, if omitted.
+use a path without spaces as install path for ImageMagick or use the short name of the path.
+
+Another way to make this work is to add the ImageMagick path to your Windows PATH variable, and simply setting the $wgImageMagickConvertCommand in LocalSettings.php as follows (note that you must still modify Image.php as shown above):
+
+$wgImageMagickConvertCommand = "convert.exe";
+
+Make sure that the Internet Guest Account (Usually IUSR_MACHINENAME) has Read & Execute rights to the ImageMagick bin directory. Without this you might see an PHP shell execution error similar to what happens when it can't find the convert.exe file.
+Mathematics Support
+MediaWiki uses a program called texvc to render math expressions into nice looking PNG.
+Getting it up and running on Windows can be somewhat troublesome, as it was developed on and for linux, so it is recommended to use one of the other options found below. The first alternative solution has the highest success rate, assuming you have the correct software installed.
+Note: Maths support is strictly optional. Your wiki will run fine without it, although you'll need it if you want to enter formulae which are more complicated than a simple subscript.
+What you'll need for all solutions:
+Latex and dvips (using the Miktex package for Windows)
+GhostScript for its Postscript libraries ([1]) (Caution! in newer versions the gswin32c.exe has to be renamed or linked to gs.exe)
+ImageMagick binaries for windows
+Install these packages to a short directory, preferably one which does not contain spaces. C:\texmf seems to be the most common. You may have to manually add these packages to the path.
+Once you have these programs installed, check if the commands gs, latex, dvips and convert (not the built-in windows-tool!) are working by typing them at the cmd prompt. (Note that you may have to use ctrl-c to quit them as they take input from the console if no arguments are supplied). If they're not found you'll have to modify your PATH variable and restart your operating system. (For some reason Apache or PHP doesn't update its PATH until reboot, a service stop-start does not work)
+Option A - Using texvc
+texvc is the tool that is included with MediaWiki, but it is written for Linux / Unix. Getting this to work in Windows can be challenging.
+Building texvc on Windows
+This is a quick and dirty hack to make texvc work under Windows.
+What you'll need:
+the texvc sources (included in the math directory of the MediaWiki distribution)
+a Make utility (for example mingw32-make, included in MinGW)
+an OCaml compiler
+If you use a pre-compiled binary you can skip this section, however you will still have to make the edits to Math.php and LocalSettings.php as described below.
+Before we compile texvc, we need to modify some of the files to reflect certain differences between Windows and Unix/Linux (mainly filesystem differences).
+Modify math\render.ml so it looks like the file found here (updated).
+If you have Visual C++ and MASM installed, make the optimized texvc.exe by running the make utility in the math directory. If you do not have Visual C++ and MASM, make the bytecode version texvc.bc (by typing for example mingw32-make texvc.bc in the math directory) and rename it to texvc.exe. If an error occurs by do it via command line, restart your machine and try it again.
+Configuring MediaWiki to use texvc
+In LocalSettings.php, uncomment or insert:
+
+$wgUseTeX = true;
+
+to activate texvc functionality.
+
+If you are using MediaWiki with IIS then you should replace "REQUEST_URI" with "SCRIPT_NAME" in all files.
+
+And finally, set the texvc executable path to the root path of Wiki, by inserting this line in LocalSettings.php:
+
+$wgTexvc = "texvc.exe"; # Location of the texvc binary
+
+Let me know how this works for you in the discussion page.
+Troubleshooting
+I have experienced several problems with this method in connection with math.php as of MediaWiki version 1.10.0 (I have no experience with earlier versions) and the above texvc executable (1.4.7) by Fernando. I chose the latter one because it required neither cygwin nor ocaml runtimes. Here's what I figured out:
+only the directory "$wgTmpDirectory" is passed to both the temp and the math directory that texvc expects on its command line. This somehow seems to cause unwanted deletion of the generated image.
+the math.php relies on the cygwin shell "sh" to be installed on the system, which is not the case on my system.
+"$wgTmpDirectory" and "$wgMathDirectory" contain some slashes instead of backslashes as is common for windows. This seems to mess something up for the texvc executable so the image file does not get generated. Surprisingly, if I copy the very same command-line from the MediaWiki debug logfile to a shell window, the file gets generated.
+after execution of texvc, the math.php looks for the image file in "$wgTmpDirectory" which is consistent with the call of texvc
+The following steps to change math.php were necessary for me to get it working.
+The constructor:
+
+
+
+function __construct( $tex, $params=array() ) {
+    if ( wfIsWindows() ) {
+        $tex = str_replace( "\n", ' ', $tex );
+    }
+    $this->tex = $tex;
+    $this->params = $params;
+}
+
+
+In "function render()";
+Make "$wgMathDirectory" accessible by changing
+
+
+
+function render() {
+    global $wgTmpDirectory, $wgInputEncoding;
+
+
+into
+
+
+
+function render() {
+    global $wgTmpDirectory,$wgMathDirectory, $wgInputEncoding;
+
+
+Then change the target directory for the texvc call into wgMathDirectory by replacing
+
+
+
+$cmd = $wgTexvc . ' ' .
+    escapeshellarg( $wgTmpDirectory ).' '.
+    escapeshellarg( $wgTmpDirectory ).' '.
+    escapeshellarg( $this->tex ).' '.
+    escapeshellarg( $wgInputEncoding );
+
+
+with
+
+
+
+$cmd = $wgTexvc . ' ' .
+    escapeshellarg( $wgTmpDirectory ).' '.
+    escapeshellarg( $wgMathDirectory ).' '.
+    escapeshellarg( $this->tex ).' '.
+    escapeshellarg( $wgInputEncoding );
+
+
+Now comment out the lines that try to use cygwin shell, if your system happens to be devoid of cygwin. Cmd.exe seems to be perfect for this anyway.
+
+
+
+/*if ( wfIsWindows() ) {
+    # Invoke it within cygwin sh, because texvc expects sh features in its default shell
+    $cmd = 'sh -c ' . wfEscapeShellArg( $cmd );
+}*/
+
+
+To solve the slash problem (if not already done) replace the line
+
+
+
+wfDebug( "TeX: $cmd\n" );
+
+
+with the lines
+
+
+
+ $cmd=str_replace("'","\"",$cmd); # replace single quotes by double quotes
+ $cmd=str_replace("/","\\",$cmd); # replace slash by backslash for windows so texvc can work with it
+ wfDebug( "TeX: $cmd\n" );
+
+
+Finally replace
+
+
+
+if( !file_exists( "$wgTmpDirectory/{$this->hash}.png" ) ) {
+
+
+by
+
+
+
+if( !file_exists( "$wgMathDirectory/{$this->hash}.png" ) ) {
+
+
+and
+
+
+
+if( filesize( "$wgTmpDirectory/{$this->hash}.png" ) == 0 ) {
+
+
+by
+
+
+
+if( filesize( "$wgMathDirectory/{$this->hash}.png" ) == 0 ) {
+
+
+and
+
+
+
+if( !rename( "$wgTmpDirectory/{$this->hash}.png", "$hashpath/{$this->hash}.png" ) ) {
+    return $this->_error( 'math_output_error' );
+}
+
+
+by
+
+
+
+if (!file_exists("$hashpath/{$this->hash}.png")) {
+    if( !rename( "$wgMathDirectory/{$this->hash}.png", "$hashpath/{$this->hash}.png" ) ) {
+        return $this->_error( 'math_output_error' );
+    }
+}
+
+
+so the generated file will be found where it has been saved. And if the image already exists at the final destination don't error when calling rename().
+The suggested solution is obviously a workaround for problems located in the specific texvc executable (with the exception of the probably missing cygwin shell). Perhaps it would be a cleaner solution to compile a texvc that does not have these problems, but personally I did not want to delve into the rather involved procedure of fixing and building texvc.
+Permissions
+If the math still is not working, turn on the debug log and find the command string that calls texvc. For example:
+
+TeX: C:\inetpub\wwwroot\w\math\texvc "C:\inetpub\wwwroot\w\images\tmp" "C:\inetpub\wwwroot\w\images\math" "\begin{align} y = & \frac{1}{2} + \frac{1}{3}x^2 + \\ & \frac{1}{4}x^3\end{align}" "utf-8"
+
+Try the command in the console. If it works, you may have a permission problem. Try:
+Setting the images directory to Everyone; and
+Setting the internet user to a local profile (Application pools in IIS).
+Run Process Monitor on the server, look for "ACCESS DENIED" status errors. The path and user of the event will show which user needs permissions and what directories they need permission on.
+Option B - Using LatexRender
+You may find compiling texvc to be very complicated or simply not working. Here is another solution (Using LatexRender, thanks to Benjamin Zeiss, completed by MetaSharp). The directories given here are examples, use your owns. This method has been successfully tested up to MediaWiki 1.10.0, 1.13.1 and on MediaWiki 1.15.1.
+Installation
+install the complete MikTeX (not the basic one, use the network installer) in D:\wikitex\miktex
+install the static (to be sure dependencies are embed) binary of ImageMagick in D:\wikitex\imagick (ensure there are no spaces in the path you choose)
+install AFPL GhostScript in D:\wikitex\ghostscript
+copy D:\wikitex\ghostscript\gs8.54\bin\gswin32c.exe to D:\wikitex\ghostscript\gs8.54\bin\gs.exe
+(8.54 can be different depending on version you install)
+
+add to the windows PATH environment variable this path: D:\wikitex\ghostscript\gs8.54\bin
+(again, 8.54 can be different depending on version you install)
+
+If you installed MiKTeX for all users and are running IIS, you may also need to create MiKTeX folders under "C:\Documents and Settings\Default User\Application Data" and "C:\Documents and Settings\Default User\Local Settings\Application Data". Make sure the IIS working process account running PHP (IUSR_[whoever]) has both read and write permissions to these directories!
+open a command line (start -> execute -> cmd.exe)
+verify that the following commands are working:
+
+latex
+dvips
+convert (not the Microsoft convert)
+gs
+
+Settings
+(your wiki directory = $)
+replace the file $/includes/Math.php with this one. Later, if you see error message Strict standards: Non-static method MathRenderer::renderMath() should not be called statically on the wiki page then change this line:
+
+function renderMath($latex_formula) {
+
+To this
+
+static function renderMath($latex_formula) {
+
+uncomment or insert in $/LocalSettings.php:
+
+$wgUseTeX= true;
+
+insert in $/LocalSettings.php:
+
+#ImageMagick
+$wgImageMagickConvertCommand    = 'D:\wikitex\imagick\convert.exe';
+$wgImageMagickIdentifyCommand   = 'D:\wikitex\imagick\identify.exe';
+#Tex
+$wgLaTexCommand                 = 'D:\wikitex\miktex\miktex\bin\latex.exe';
+$wgDvipsCommand                 = 'D:\wikitex\miktex\miktex\bin\dvips.exe';
+
+reboot if needed so that paths variables are updated for your services too
+Verifications
+and voilà ;) Now you can try in the sandbox to see whether it works. Enter something like this and hit preview to see if it works:
+
+<math>\sqrt{2}</math>
+
+the folders "math" and "tmp" should have been created in the "images" folder automatically.
+
+
+How to get the latex "picture" package to work
+Just put something like this into your wiki page:
+
+<math>\setlength{\unitlength}{1cm}
+ \begin{picture}(4,2)
+ \put(1,1){\circle{3}}
+ \put(3,1){\circle*{5}}
+ \end{picture}
+ </math>
+ 
+
+Here is the result (modified orders of magnitude!).
+Troubleshooting
+You might experience some problems with formulas not being displayed if you are not logged in. In such a case comment out the 3 following lines in $/LocalSettings.php:
+
+$wgMathPath         = "{$wgUploadPath}/math";
+$wgMathDirectory    = "{$wgUploadDirectory}/math";
+$wgTmpDirectory     = "{$wgUploadDirectory}/tmp";
+
+like this:
+
+#$wgMathPath         = "{$wgUploadPath}/math";
+#$wgMathDirectory    = "{$wgUploadDirectory}/math";
+#$wgTmpDirectory     = "{$wgUploadDirectory}/tmp";
+
+or just suppress them. Everything should be working fine now.
+You have to give permissions to the webserver to all the folders that need to access. Not just the ones in the wiki image and temporary folders, but also where you installed latex and the other software.
+Simplified solution with dvipng
+https://bitbucket.org/FrigoCoder/script/src/tip/MediaWiki
+This is a greatly simplified solution of the above, removing all code and comments unrelated to MediaWiki. It uses only LaTeX and dvipng compiled with FreeType, it does not require GhostScript or ImageMagick. MikTeX 2.9 contains these, 2.8 lacks FreeType to my knowledge. Since dvipng wraps the formulas, it does not check for correct image dimensions, though it could be implemented, dvipng can return the image dimensions somehow. It uses \displaystyle for all inline math. You can escape the inline math, but are still subject to the blacklist, so it is not recommended to write entire LaTeX books in it. Very, very verbose error messages revealing your paths and latex version, modify the last return line if you don't like them; I might make a $debug setting, though at the moment I don't see any possibility of exploits. It does not change the current directory, and does not clean up temporary files if some error occurred during rendering, so you can check whether someone tried to feed it something suspicious. Frigo 18:29, 11 April 2011 (UTC)
+0) Make sure you have LaTeX and dvipng with FreeType support (e.g. MikTeX 2.9)
+1) Copy the file to includes/Math.php
+2) Add the following to LocalSettings.php (executable names will suffice if you have them in PATH)
+
+
+
+$wgUseTeX = true;
+$wgLaTexCommand = "insert\path\here\latex.exe";
+$wgDvipngCommand = "insert\path\here\dvipng.exe";
+
+
+3) Try it. My test is usually <math>E=mc^2</math> :)
+Comments for the previous, messy version:
+Comment: This works for me in MediaWiki 1.11.0 except \begin{align}...\end{align} causes the image not to be rendered at all. This causes LaTeX to generate a blank DVI file and complain, "Package amsmath Error: \begin{align} allowed only in paragraph mode". If you comment out the usepackage{ams...} lines in Benjamin Zeiss's Math.php (function wrap_formula), the problem goes away. Maiden taiwan 20:21, 26 October 2007 (UTC)
+Comment: This works for right out of the box for MediaWiki 1.10.0. The MikTeX installer sets everything up and the basic MikTeK package was enough. Only thing I needed to do, was a reboot after the install was finished. Good stuff. User:florihupf 16:30, 7/July/2007
+Comment: Very easy and works great for MediaWiki 1.10.0. Why is there no MediaWiki Package with this for Installing Mediawiki with TeX on Windows?, 18.11.2007
+Comment: This works with MediaWiki 1.11.0. I used texvc 1.4.7, MiKTeX 2.7 (full package), ImageMagick and Ghostscript 8.60. My only gripe is the size of MiKTeX when installed... more than 1 Gigabyte!!!
+Alternative Solution with Texvc for experienced users (Mediawiki 1.16.0)
+install this
+wamp (included apache, php5, mysql)
+a Make utility (for example mingw32-make, included in MinGW)
+an OCaml compiler
+Latex and dvips (using the Miktex package for Windows)
+GhostScript for its Postscript libraries ([2]) (Caution! in newer versions the gswin32c.exe has to be renamed or linked to gs.exe)
+ImageMagick binaries for windows
+maybe cygwin i got it
+in upper manual is written how to install this
+try somehow build texvc Attention!!!!!!! not needed edit render.ml
+the texvc sources (included in the math directory of the MediaWiki distribution)
+C:\wamp\www\wiki\math> mingw32-make texvc.bc & mv texvc.bc to texvc.exe
+in upper manual is written how to build this
+Edit localconfig
+
+$wgUseTeX           = true;
+$wgTexvc = "c:/wamp/www/wiki/math/texvc.exe";
+
+Edit include/math.php This must be commented /* ... */
+
+/*                      if ( wfIsWindows() ) {
+                                # Invoke it within cygwin sh, because texvc expects sh features in its default shell
+                                $cmd = 'sh -c ' . wfEscapeShellArg( $cmd );
+                        }
+*/
+
+debug
+
+c:/wamp/www/wiki/math/texvc.exe "C:\wamp\www\wiki/images/tmp" "C:\wamp\www\wiki/images/tmp" "B^{X^{c + v}}_Y + 121\!\," "UTF-8" "transparent"
+or
+c:\wamp\www\wiki\math\texvc.exe "C:\wamp\www\wiki\images\tmp" "C:\wamp\www\wiki\images\tmp" "B^{X^{c + v}}_Y + 121\!\," "UTF-8" "transparent"
+
+
+
+
+
+
+Language:
+English  • 日本語 • русский

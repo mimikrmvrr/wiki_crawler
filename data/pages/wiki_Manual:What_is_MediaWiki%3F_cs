@@ -1,0 +1,74 @@
+Manuál:Co je MediaWiki?This page is a translated version of a page Manual:What is MediaWiki? and the translation is 100% complete.
+
+
+asturianu  • ‎български  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（台灣）‎ 
+
+
+
+
+Základní úvod do MediaWiki
+
+Obsah
+Jak MediaWiki funguje?
+Dokumentace
+Uživatelské úpravy
+Verze a download
+Instalace
+Podpora a kontakt
+Vývoj
+Ostatní témata
+Vizte možnosti vlevo
+
+
+ Instalační příručka | O MediaWiki
+ Funkce | Instalační požadavky
+ Download | Instalace | Konfigurace
+
+
+Asi znáte Wikipedii, otevřenou encyklopedii, a možná vás trochu matou podobná, ale různá, slova jako wiki, Wikimedia či MediaWiki.
+Pro vyjasnění si třeba budete chtít nejdříve přečíst článek o názvech, ve kterém jsou tyto rozdíly vysvětleny.
+
+Základní přehled
+
+
+
+
+MediaWiki lze využít i v rozsáhlých serverových farmách, jako je např. cluster nadace Wikimedia Foundation.
+
+
+MediaWiki je svobodný serverový software nabízený za podmínek licence GNU GPL. Je navržen pro běh na rozsáhlé serverové farmě provozující stránky s miliony návštěvníků denně.
+MediaWiki je extrémně schopná škálovatelná implementace wiki s mnoha funkcemi, která používá PHP pro zpracování a zobrazení dat uložených v databázi MySQL.
+Stránky jsou zapsány ve wikitextu, takže je mohou snadno editovat i uživatelé bez znalostí XHTML a CSS.
+Když uživatel uloží svou editaci nějaké stránky, MediaWiki ji zapíše do databáze, ale přitom zachová předchozí verze této stránky, čímž umožňuje snadný návrat v případě vandalismu nebo spamování. MediaWiki také podporuje práci s obrázky a multimediálními soubory uloženými v souborovém systému. Velké wiki s mnoha uživateli mohou využít podporu cachování a snadné propojení s proxy servery Squid.
+
+Co je MediaWiki…
+MediaWiki je wiki software.
+Pokud nevíte, co je to wiki, nejdříve si přečtěte tento článek na Wikipedii!
+MediaWiki je serverový software.
+Jako každý jiný software, který vystavujete na internet, může MediaWiki obsahovat chyby nebo bezpečnostní problémy. Neinstalujte MediaWiki, pokud nejste připraveni ji udržovat bezpečnostními aktualizacemi (přihlašte se prosím k odběru oznámení o bezpečnostních aktualizacích).
+Vývoj MediaWiki je směrován potřebami nadace Wikimedia Foundation.
+Program se primárně vyvíjí k provozu na velké serverové farmě pro Wikipedii a její sesterské projekty. Funkce, výkonnost, konfigurovatelnost, snadnost použití atd. jsou navrhovány s tímto ohledem; pokud jsou vašem potřeby zásadně odlišné, nemusí být tento software pro vás vhodný.
+MediaWiki je svobodný software.
+Neposkytují se žádné záruky.
+Vyzkoušejte si wikitext
+
+
+
+
+Základní wikitext (formátovací jazyk wiki)
+
+
+Ano, můžete snadno upravovat stránky a můžete (na chvilku) zveřejnit hlouposti, dokonce můžete (na chvilku) úplně zničit nějakou stránku wiki. A nepotřebujete k tomu žádné programátorské schopnosti.
+Zkuste si pohrát v našem pískovišti. Ale omezte prosím své testování na onu stránku: správcům by se jinak vaše experimenty nemusely líbit.
+Také se můžete podívat na přehled základních editačních příkazů.
+Některé věci, které MediaWiki příliš dobře neumí…
+Protože bylo MediaWiki navrženo pro otevřený obsah, není zpravidla vhodné pro situace, ve kterých chcete omezit přístup k částem wiki.
+MediaWiki bylo navrženo pro obsluhu velmi navštěvovaných webových projektů, jako je např. Wikipedie. Bylo pro takové použití optimalizováno a nemusí být až tak vhodné pro menší projekty, ve kterých jsou prostor na disku či paměť omezené více než přenosová kapacita.
+MediaWiki zpravidla není vhodná náhrada za specializovaný diskusní či blogovací software, pokud hledáte něco takového.
+Ve výše uvedených případech mohou existovat jiné implementace wiki (či ne-wiki), které budou vašim potřebám vyhovovat lépe.
+Související stránky
+Manual:Deciding whether to use a wiki as your website type
+Manual:Deciding which wiki software to use
+Seznam funkcí MediaWiki
+wikipedia:Comparison of wiki software
+www.wikimatrix.org – porovnání různých wiki enginů

@@ -1,0 +1,74 @@
+Manual:Was ist MediaWiki?
+
+asturianu  • ‎български  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（台灣）‎ 
+
+
+
+
+Grundlegende Einführung zu MediaWiki
+
+Inhalt
+Was ist MediaWiki?
+Dokumentation
+Personalisierung
+Versionen und Download
+Installation
+Unterstützung und Kontakt
+Entwicklung
+Alle anderen Themen
+Siehe Navigation links
+
+
+ Installationsanleitung | Über MediaWiki
+ Funktionsumfang | Installationsanforderungen
+ Herunterladen | Installieren | Konfiguration
+
+
+Wahrscheinlich kennen Sie Wikipedia, die freie Enzyklopädie, und sind möglicherweise ein wenig verwirrt durch ähnliche, aber unterschiedliche Wörter wie Wiki, Wikimedia oder MediaWiki.
+Um eine mögliche Verwechslung zwischen den Begriffen zu vermeiden, können Sie zuerst die Artikel über die Namen lesen, in denen die Unterschiede erläutert werden.
+
+Allgemeiner Überblick
+
+
+
+
+MediaWiki kann in großen Serverfarmen, wie im Wikimedia Foundation Cluster verwendet werden.
+
+
+MediaWiki ist eine freie Server-basierte Software, die unter der GNU General Public License (GPL) lizenziert ist. Es wurde entworfen, um auf einer großen Server-Farm eine Website zu betreiben, die Millionen Seitenzugriffe pro Tag erhält.
+MediaWiki ist eine äußerst leistungsfähige, skalierbare Software und eine funktionsreiche Wiki-Implementierung, die PHP verwendet, um Daten zu verarbeiten und anzuzeigen, die in einer Datenbank wie MySQL gespeichert sind.
+Auf den einzelnen Webseiten wird MediaWikis Wikitext-Format verwendet, so dass Anwender ohne Kenntnisse von XHTML oder CSS sie einfach bearbeiten und gestalten können.
+Wenn ein Benutzer eine Bearbeitung auf einer Seite anlegt, schreibt MediaWiki es in die Datenbank, aber ohne die vorherigen Versionen der Seite zu löschen, so dass einfache Zurücksetzungen im Falle von Vandalismus oder Spam möglich sind. MediaWiki kann auch Bild-und Multimedia-Dateien verwalten, die im Dateisystem gespeichert werden. Für große Wikis mit vielen Benutzern, unterstützt MediaWiki Caching und kann leicht mit Squid-Proxy-Server-Software gekoppelt werden.
+
+Was MediaWiki ist...
+MediaWiki ist Wiki-Software.
+Wenn Sie nicht wissen, was ein Wiki ist, dann lesen Sie diesen Wikipedia-Artikel, bevor es weitergeht!
+MediaWiki ist eine Serversoftware.
+Wie bei jeder anderen Software, die für das Internet genutzt wird, kann es Programmfehler oder Sicherheitsprobleme geben. Installieren Sie MediaWiki nicht, wenn Sie nicht beabsichtigten, die angebotenen Sicherheits-Verbesserungen anzuwenden (Bitte abonnieren, um Ankündigungen von Sicherheits-Updates zu erhalten).
+MediaWiki ist auf die Bedürfnisse der Wikimedia Foundation und ihrer Wikis ausgerichtet.
+Es wurde primär entwickelt, um auf einer großen Server-Farm die Wikipedia und deren Schwesterprojekte zu betreiben. Merkmale, Leistung, Konfigurierbarkeit, Einfachheit, usw. sind entsprechend entworfen; wenn Deine Anforderungen völlig anders sind, könnte MediaWiki für Dich nicht das Richtige sein.
+MediaWiki ist freie Software.
+Deswegen wird seitens der Entwickler, keinerlei Garantie gegeben oder irgend eine Gewährleistung jedweder Art gestellt.
+Probieren Sie Wikitext
+
+
+
+
+Grundlegender Wikitext (Wiki-Markup)
+
+
+Ja, Sie können die Seiten leicht ändern, und Sie können (vorübergehend) belanglose Sätze veröffentlichen, und Sie können sogar (vorübergehend) eine Seite vollständig in einem Wiki zerstören. Sie brauchen, um dies zu tun, keine Programmierkenntnisse zu haben.
+Wir bitten Sie und empfehlen Ihnen stattdessen aber, dass Sie innerhalb unseres Sandkastens erst einmal zu üben. Bitte isolieren Sie Ihre Tests dort, denn die Administratoren könnten Ihren Unfug in einem der Projekte vielleicht nicht besonders gut leiden.
+Sie können auch den Wikipedia-Spickzettel, der grundlegende Befehle zur Formatierung enthält, anschauen oder gleich als PDF-Datei herunterladen und ausdrucken.
+Dinge, die MediaWiki weniger gut kann
+Weil es für offene Inhalte entwickelt ist, ist es oft nicht passend für Anwendungen, bei denen man den Zugang zu Teilen des Wikis beschränken will.
+MediaWiki ist entworfen, um Seiten mit hohem Zugriff wie Wikipedia zu managen. Es wurde für diesen Zweck optimiert und kann für kleinere Server weniger optimal sein, bei denen Plattenplatz oder RAM größere Einschränkungen sind als Bandbreite.
+MediaWiki ist keine typische Forum- (BBS-) oder Blog-Software, falls Sie genau das suchen.
+In diesen Fällen könnte eine andere Art Software Ihre Bedürfnisse eventuell besser bedienen.
+Siehe auch
+Manual:Deciding whether to use a wiki as your website type
+Manual:Deciding which wiki software to use
+Vollständige Liste der MediaWiki Eigenschaften
+wikipedia:Comparison of wiki software
+www.wikimatrix.org - Punkt-für-Punkt-Vergleich verschiedener Wiki-Software-Pakete.
+This page is a translated version of a page Manual:What is MediaWiki? and the translation is 100% complete.

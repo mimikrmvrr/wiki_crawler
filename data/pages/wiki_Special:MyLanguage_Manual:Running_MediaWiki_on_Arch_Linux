@@ -1,0 +1,81 @@
+Manual:Running MediaWiki on Arch LinuxInstallation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+Arch Wiki has a page about MediaWiki that provides more details, but lacks paste-able code to quickly get things up and running. So the focus here is on just the basic recipe for a quick installation.
+
+
+
+Install Apache, PHP, MySQL, and MediaWiki
+
+pacman -S mediawiki mysql php apache php-apache
+
+Set up MySQL
+
+systemctl start mysqld; systemctl enable mysqld
+
+Set a database root password:
+
+mysqladmin -u root password password
+history -c
+
+Set up Apache and PHP
+
+cd /etc/webapps/mediawiki; grep -v open_basedir apache.example.conf > httpd-mediawiki.conf
+cd /usr/share/webapps/mediawiki; perl -p -i -e "s/deny/allow/" .htaccess
+
+
+cat >> /etc/httpd/conf/httpd.conf << EOF
+LoadModule php5_module modules/libphp5.so
+Include conf/extra/php5_module.conf
+Include /etc/webapps/mediawiki/httpd-mediawiki.conf
+EOF
+
+Edit /etc/php/php.ini and add ":/usr/share/webapps/:/var/lib/mediawiki" at the end of the "open_basedir=" line. (/var/lib/mediawiki is the directory for uploads.) In the same file, remove the leading semicolon in the line with the mysql module ("extension=mysql.so").
+Now start Apache and tell systemd to launch it during boot:
+
+systemctl start httpd; systemctl enable httpd
+
+Use the browser to configure MediaWiki
+Go to http://localhost/mediawiki/mw-config/index.php and follow the instructions. Enter the database root password you defined above in the appropriate box. Don't skip any parts of the installation even if the installer suggests it—you need those extra steps to enable file uploads and wiki extensions.
+When configuration is finished, your browser will download the file LocalSettings.php. Copy it to /usr/share/webapps/mediawiki/. Your Wiki should now be accessible at http://localhost/mediawiki/.
+Uploads and image thumbnails
+If you have enabled image uploads in LocalSettings.php ($wgEnableUploads = true;), you may want to install ImageMagick
+
+pacman -S imagemagick
+
+and uncomment the lines
+
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/bin/convert";
+
+in /usr/share/webapps/mediawiki/LocalSettings.php. Then restart Apache for the changes to take effect:
+
+systemctl restart httpd
+
+Language:
+English

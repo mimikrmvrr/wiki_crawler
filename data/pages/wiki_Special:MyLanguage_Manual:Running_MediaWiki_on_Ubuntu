@@ -1,0 +1,247 @@
+Manual:Running MediaWiki on UbuntuFor manual installation, some PC knowledge is required (i.e., installing applications), a bit about Operating Systems, and use of a text editor (like gedit, kate, nano, emacs, or vi (see vi in 10 minutes to get started)).
+To install MediaWiki on an Ubuntu Desktop Edition (prior to Ubuntu 11.04) primarily via the Gnome Desktop and Synaptic Package Manager, see this page. For Ubuntu 10.04 and later, see this page.
+
+
+
+Step-By-Step
+Ubuntu Server Edition makes LAMP (Apache, PHP, and MySQL) available for installation during the install process. During the installation step, make sure you choose to install a LAMP server. Alternately, you can install all of these packages from a normal Ubuntu installation using these commands:
+
+sudo apt-get install apache2 mysql-server php5 php5-mysql libapache2-mod-php5
+
+Optional:
+php-apc: Alternative PHP Cache.
+php5-intl: Unicode normalization.
+ImageMagick: Image thumbnailing.
+phpmyadmin: MySQL administration tool.
+vsftpd: FTP Server. (How To)
+
+sudo apt-get install php-apc php5-intl imagemagick phpmyadmin vsftpd
+
+After installing these packages, download the official tarball, and extract in your Web directory (usually /var/www/):
+
+tar -xvzf /pathtofile/mediawiki-*.tar.gz
+sudo mv mediawiki-* /var/www
+
+
+ Warning:
+MediaWiki can also be installed using aptitude. The Ubuntu MediaWiki package is unsupported and usually outdated. We do not recommend you use it.
+Also double check that Ubuntu is up-to-date by running:
+
+sudo apt-get update && sudo aptitude safe-upgrade && sudo do-release-upgrade
+
+
+ Warning:
+The 'do-release-upgrade' will upgrade your entire distribution to the next number (9.10->10.04), replacing hundreds of packages. is not strictly necessary and may cause problems with your system. Google for do-release-upgrade disaster or dist-upgrade fail for examples.
+If you want to run PHP commands from the command line, which is useful for debugging and running maintenance scripts, install PHP-cli like this:
+
+sudo apt-get install php5-cli
+
+If you want to use the GD library (instead of ImageMagick for image resizing)
+
+sudo apt-get install libgd2-xpm libgd2-xpm-dev php5-gd
+
+Configure MySQL
+ Note: consider running mysql_secure_installation . from man page:
+
+DESCRIPTION
+       This program enables you to improve the security of your MySQL installation in the following ways:
+
+       ·   You can set a password for root accounts.
+
+       ·   You can remove root accounts that are accessible from outside the local host.
+
+       ·   You can remove anonymous-user accounts.
+
+       ·   You can remove the test database (which by default can be accessed by all users, even anonymous users), and
+           privileges that permit anyone to access databases with names that start with test_.
+
+
+mysql_secure_installation
+
+ Note: This step is not necessary if you were prompted to create a mysql root password during MySQL installation.
+First, set up a mysql root password. Remember not to use same password for system root and mysql root. This will also clear your command history so that other users cannot get to your password.
+
+mysqladmin -u root password "<enter the new password here>"
+history -c
+
+Note: Remember this user (root) and password because you will need them when you configure MediaWiki. Note: MySQL being a pain with the passwords, look here how to fix a password trouble. http://www.debian-administration.org/articles/442
+Configure PHP
+ Note: These steps are optional. You can skip them entirely (or do them later) and MediaWiki should still work.
+Edit your PHP configuration file, php.ini. It will be located somewhere like /etc/php5/apache2/php.ini or /etc/php5/php.ini or maybe /etc/apache2/php/php.ini
+
+sudo gedit /etc/php5/apache2/php.ini
+
+Maximum upload file size
+Assuming that various files are going to be uploaded to the Wiki as content, the limit on the maximum size of an upload has to be adjusted. About one-half way down is the File Uploads section. Change:
+
+ upload_max_filesize = 2M
+
+to at least 8M. You may have to adjust this again in the future.
+
+ upload_max_filesize = 8M
+
+Memory limit
+Some PHP scripts require a lot of memory to run. To increase the maximum amount of memory a script can use, page down to about 21%, and change the following entry, if found, from
+
+memory_limit = 8M
+
+to
+
+memory_limit = 32M
+
+If it is already 32M or more, leave it as is.
+Extensions
+ Note: Under Ubuntu 9.04 and 9.10 this section is unnecessary.
+PHP MySQL support has to be enabled. Scroll down the page down a bit more (about 48%) and make sure the following line is uncommented:
+
+extension=mysql.so
+
+If you use the GD graphics library to do image resizing (instead of ImageMagick), also uncomment:
+
+extension=gd.so
+
+Save and exit out of the editor and restart Apache:
+
+sudo apache2ctl restart
+
+Configure Apache
+ Warning:
+This section only applies if you installed MediaWiki using apt-get or aptitude, which is not recommended.
+Edit apache.conf file at /etc/mediawiki/apache.conf
+
+ sudo nano /etc/mediawiki/apache.conf
+
+and uncomment this line:
+
+Alias /mediawiki /var/lib/mediawiki
+
+Save and exit out of the editor and restart Apache:
+
+sudo apache2ctl restart
+
+Configure MediaWiki
+Navigate your browser to http://localhost/mediawiki, to http://localhost/mediawiki/config or to http://wiki.hostname.com/config and continue with the installation. (Substitute "mediawiki" in the url with the precise folder you previously created, for example http://localhost/mediawiki-1.19.2.)
+Pay close attention for "Checking environment..." in MediaWiki installation script. This can solve a lot of problems for your MediaWiki successful installation by specifically identifying the source of any errors. Fill out the configuration form and continue.
+Under Database Config, you may change the database name and DB username to new values, but you must turn on "Use superuser account", name:
+
+debian-sys-maint
+
+giving the mysql root password you configured earlier.
+Once configuration is done you'll need to move the created LocalSettings.php to the parent directory. The configuration page will have the exact directory/filename that must be moved:
+
+ sudo chmod a+rwx /var/lib/mediawiki/config
+ sudo mv /var/lib/mediawiki/config/LocalSettings.php /etc/mediawiki
+
+For added safety you can then remove the config subdirectory entirely:
+
+sudo mv config/LocalSettings.php .
+sudo rm -rf config
+
+And navigate your browser to http://server_ip_address/mediawiki or to http://server_ip_address/mediawiki/index.php to see your new wiki. Possibly server_ip_address = localhost, so http://localhost/mediawiki may work.
+Done! You now have a working Wiki
+General information
+Under Ubuntu 9.04 and 9.10, MediaWiki is installed at /usr/share/mediawiki. However, configuration/customizations are actually installed in /var/lib/mediawiki.
+Confusingly, links are created in both locations so all files appear to be in both places.
+Additional wiki configuration
+The Wiki is configured by the LocalSettings.php file, usually found in /var/www/wiki. Manual:LocalSettings.php has detailed information that may be useful. The following are changes that appear to be universally helpful
+To edit LocalSettings.php use
+
+sudo gedit /etc/mediawiki/LocalSettings.php
+
+File uploads
+Enable uploads
+By default, the Wiki will not permit images to be uploaded. To change this find $wgEnableUploads and change it from false to true.
+Specifying uploadable file types
+You may want to modify the list of accepted extensions, which is stored within the $wgFileExtensions array. By default you will not be able to upload PDF files, for example, without making this change.
+If $wgFileExtensions is not already in LocalSettings.php add it at the end (before the ?> line, if one exists in your LocalSettings.php file):
+
+
+
+$wgFileExtensions = array('pdf','png','jpg','jpeg','ogg','doc','xls','ppt','mp3','sxc','nse');
+
+
+In addition to the $wgFileExtensions option, the following settings may cause files to be rejected (even if $wgStrictFileExtensions = false; is set):
+$wgFileBlacklist, a list of file extensions that are not uploadable
+$wgMimeTypeBlacklist, a list of forbidden MIME types.
+Check includes/DefaultSettings.php
+Image file uploads
+The images directory must be writeable:
+
+sudo chmod a+w /var/www/wiki/images
+
+Note: for Ubuntu 9.04 the command is:
+
+sudo chmod a+w /var/lib/mediawiki/images
+
+ Note: I just did a clean install into Ubuntu 8.04 LTS, and making the images directory writable was not required in order for image uploading to work. Seems like this step is superfluous and a little dangerous. --Mark 16:59, 22 September 2009 (UTC)
+ Note: I just did a clean install into Ubuntu 8.04.3 LTS, and making the images directory writeable was required to get SVG graphics to work. I don't see how it is dangerous to allow the WWW user to write to the images folder (?).
+ Note: WWW user, maybe not. Making the entire thing writeable by all, as shown here, is a different matter.
+ Note: if the WWW user could write the image folder, a bug could allow to a malicious user to upload an exploit into the server and execute it through the Web. Always is a good idea restrict the WWW user permissions at the minimum necessary.
+Enable thumbnails
+The |thumb option added to an image: tag will automatically generate a thumbnail version of a picture — if support has been enabled, as follows:
+The ImageMagick package must be installed:
+
+sudo apt-get install imagemagick
+
+In LocalSettings.php, make sure the following settings are in place and not commented out. They are normally about 80 lines down in the file marked "To enable image uploads":
+
+
+
+$wgUseImageResize = true;
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/bin/convert";
+
+
+Changing the logo
+The $wgLogo variable specifies the graphical logo that gets displayed on the top left corner by default. The variable $wgScriptPath contains the top directory of the wiki. There is no standard for the size of the logo image. But 135x135 pixels will fit most skins. If the logo it is oversized for a specific skin it will show the top left corner that fits. (This variable is not present in LocalSettings.php by default; you need to add in manually to the bottom.)
+
+
+
+$wgLogo = "$wgScriptPath/wiki.jpg";
+
+
+Caution: Do not simply overwrite the default logo installed with MediaWiki (/skins/common/images/wiki.png); this file will be overwritten when you upgrade.
+MediaWiki extensions
+The new installer for mediawiki comes with a package of 15 or so of the most popular extensions, but there are literally hundreds more. Go to http://www.mediawiki.org/wiki/Category:Extensions for a complete list.
+Extensions are added by following these two steps:
+Extensions are downloaded and stored in /var/lib/mediwiki/extensions
+The /var/lib/mediawiki/LocalSettings.php is edited to add a
+
+
+
+require_once ("$IP/extensions/yourextension/yourextension.php");
+
+
+line.
+Confirm you have installed it properly, by going to the Special pages in your wiki (link on left side) and choosing Version. All installed extensions are listed with versions, authors, and links to their home pages.
+A list of the other "standard" extensions included with Ubuntu can be found by just running this command:
+
+ ls /etc/mediawiki-extensions/extensions-available
+
+Let's take the ParserFunctions extension, for example. To install ParserFunctions follow this:
+
+ sudo apt-get install mediawiki-extensions
+ sudo mwenext ParserFunctions.php
+
+Once you enable it, it should be listed as a symbolic link in /etc/mediawiki-extensions/extensions-enabled. You should now be able to go to http://localhost/mediawiki/index.php/Special:Version and see ParserFunctions listed there as an installed extension to your mediawiki.
+Extensions from tarballs
+Some MediaWiki extensions that are not available in the Ubuntu package system can instead be gotten in tarball (tar.gz) format and installed manually. Basically, you download the tarball, unpack it to the "extensions" directory (on Ubuntu: "/var/lib/mediawiki/extensions"), edit (what line in it?) your "LocalSettings.php" (Ubuntu: /etc/mediawiki/LocalSettings.php), and then go to http://localhost/mediawiki/index.php/Special:Version to verify that it worked.
+A good list of extensions is available here: Category:Extensions in Wikimedia version control
+For an example, let's take the relatively simple extension called MiniDonation. This extension lets you put a <donationform> tag in your wiki code, and it will display a link to paypal on the page. The site for MiniDonation is here: Extension:MiniDonation
+Just follow the instructions on the page: Download the tarball (in Firefox it will probably end up in ~/Desktop), then do the following:
+
+ cd /var/lib/mediawiki/extensions
+ sudo tar -zxvf ~/Desktop/MiniDonation<tab>
+ sudo gedit /etc/mediawiki/LocalSettings.php
+
+Then check http://localhost/mediawiki/index.php/Special:Version, it should list MiniDonation there. Now edit a wikipage and add a <donationform> tag to it ... save the page and you should have a nice little paypal button on the screen.
+Replacing extensions that are in Ubuntu's mediawiki-extensions package with newer versions
+You can also "upgrade" one of the "standard" Ubuntu MediaWiki extensions (such as Cite.php) to a newer version if you need to. The important part is to remember to run "mwdisext ExtensionName.php" to disable it before you install the new version into /var/lib/mediawiki/extensions.
+The pitfall is that some versions of extension will not work with certain other versions of MediaWiki (or with other versions of other extensions that they depend on). In this case you can get a "fatal error" when you try to pull up certain MediaWiki pages (including even when pulling the "Special:Version" page), or it might just give you a blank page, in which case you can look at /var/log/apache2/errors.log for a hint as to what is wrong.
+Shorter URL
+If you want /wiki/* instead of /wiki/index.php/* on Ubuntu, follow the recommended short URL guide using '/mediawiki' as your script path instead of '/w' and placing the rewrites in /etc/apache2/conf.d/mediawiki.conf.
+See also
+Canonical maintains a MediaWiki page with more information.
+Ubuntuguide.org provides detailed instructions for setting up MediaWiki on Ubuntu and Kubuntu, including multiple wikis and nested subwikis.
+Language:
+English  • français • 日本語

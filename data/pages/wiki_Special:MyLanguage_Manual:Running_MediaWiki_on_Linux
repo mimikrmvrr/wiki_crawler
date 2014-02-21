@@ -1,0 +1,105 @@
+Manual:Running MediaWiki on GNU/Linux
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+
+
+
+Required software
+Main page: Manual:Installation
+A Web server with:
+Apache HTTP Server
+PHP version 5.3.2 or later.
+A database server, MySQL 5.0.2 or later. (see http://dev.mysql.com/doc/mysql/en/installing.html)
+These instructions assume you are using Linux and Apache, and that LAMP (Linux, Apache, MySQL, PHP) is already set up on your machine. It is possible to use other database servers such as PostgreSQL 8.1 or later.
+Installation (from a Linux perspective)
+You may prefer to see the general Installation instructions. The following installation steps give a quick overview from a Linux only perspective:
+Download MediaWiki: Download or see Download from Git
+If you downloaded a gzipped file, unzip the source files in some directory: tar zxvf mediawiki-x.y.z.tar.gz.
+(If you are not a real Linux Guru and you have WinRAR (like WinZip but works with gzipped files) on your Windows system you can cheat a little bit here. You can download the file to your Windows machine, use WinRAR to unzip the gzipped file into a directory in Windows and then use an FTP program like WS_FTP Pro to transfer the entire wiki directory for you.)
+The new web-based install usually does not require root access. If for some reason you are using the old installation you might need to use commands such as: su - and mv /path_to_mediawiki_unzip_dir/. At this point you should also read the README, RELEASE-NOTES, INSTALL inside the mediawiki-x.y.z directory. However, keep in mind that either those files or this guide may be outdated, in which case someone else would appreciate your updates to this page after you're done :)
+Move the directory into your web directory: e.g. mv mediawiki-x.y.z /usr/local/apache/htdocs/wiki or mv mediawiki-x.y.z public_html/wiki or use your FTP software to do this for you.
+Now you need to set up the databases on which you will store your wiki. In Cpanel you can click on MySQL Databases. You will need to Add Db with the name you want to call your database, Add User to create a user with access to this database, then Add User to Db to connect that user to the database. Remember all this information because you will need it when you run the MediaWiki install script. Finally click on phpMyAdmin at the bottom of the MySQL Account Maintenance page in Cpanel to check your information and get MySQL running.
+To run the install script, you'll need to temporarily make the 'config' subdirectory writable by the web server. The simplest way to do this on a Unix/Linux system is to make it world-writable by typing: chmod -R a+w config in the directory you intend to install MediaWiki in. To do this you will need a telnet client like PuTTY on your system. Note: On some newer Linux distributions you will also need to change the SELinux file type (see below)
+If you run the script and you get an error saying the script is unable to write to the tmp directory you may need to change the permissions for the tmp directory in your root. If you are installing on a new system you may need to change this. Often this directory will be already set up with write permission granted, so you can skip this step and come back if you run into a problem. To change the permissions for the tmp directory go into the root directory and type: chmod -R a+w tmp You typically must have root access in order to change the permissions to this directory. If you get an error message and you don't have root access then you will need to contact your service provider.
+At this point you should have Apache and MySQL running (this varies between distributions and setups, see their documentations for specifics). If you follow the steps above you really don't need to worry about this as they will be running automatically. Anyway, the install worked for me.
+Go to your browser and surf into the wiki directory. It'll direct you into the config script (if it doesn't, just load up the mediawiki-1.3.0beta4/config/index.php file). Fill out the form...remember you're probably not on an encrypted connection. Gaaah! :)
+If all goes well, you should soon be told that it's set up your wiki database and written a configuration file. There should now be a 'LocalSettings.php' in the config directory; move it back up to the main wiki directory, and the wiki should now be working.
+Once the wiki is set up, you should remove the config directory, or at least make it not world-writable (though it will refuse to config again if the wiki is set up) using again chmod -R a-w config. If you changed the tmp directory you can probably leave this as is so you can install other software on your system.
+Some Installation Gotchas
+SElinux
+Linux distributions which support SELinux ('Security Extensions') are becoming more widespread. On such systems, PHP scripts will still be unable to write to the config directory, after you have set the normal file permissions. You will also need to use the 'chcon' command to change the SELinux file type. See SELinux
+Running a PHP Accelerator?
+In some cases, when running 1.2.4, one may encounter problems during the install. If this happens, try disabling phpa by placing php_value phpa Off in .htaccess in the root directory of your install.
+Platform specific instructions
+See Manual:OS specific help for installation instructions for several common Linux distributions, as well for instructions for different operating systems.
+Debian GNU/Linux
+Running MediaWiki on Debian GNU/Linux
+Ubuntu GNU/Linux
+Running MediaWiki on Ubuntu
+Gentoo Linux
+Running MediaWiki on Gentoo Linux
+Mandrake Linux
+Running MediaWiki on Mandrake
+Fedora Core
+Running MediaWiki on Fedora Core
+Red Hat Linux
+Running MediaWiki on Red Hat Linux
+Slackware Linux
+Running MediaWiki on Slackware Linux
+SuSE Linux 9.3
+Running MediaWiki on SuSE Linux 9.3
+Related topics
+Manual:Running MediaWiki on Windows
+Manual:Running MediaWiki on Sourceforge.net
+Apache config
+PHP config
+MySQL config
+meta:Documentation:Configuration
+meta:Help:Configuration
+meta:Robots.txt -- how to prevent search engines from indexing the internals of your wiki
+Manual:Short URL -- how to get rid of /index.php in URLs
+References
+file INSTALL in mediawiki-1.3.2.tar.gz
+Language:
+English  • français • 日本語 • русский
+
+
+
+
+
+

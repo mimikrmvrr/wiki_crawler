@@ -1,0 +1,142 @@
+How to become a MediaWiki hacker
+
+
+For other ways to get involved in the MediaWiki community, see How to contribute.
+This article is written to help novice developers learn the skills needed to contribute to MediaWiki development.
+If you are an experienced developer, visit the developer hub instead.
+Overview
+MediaWiki is the software that powers Wikipedia, its sister projects and thousands of wikis all over the world. It runs on most operating systems, is written in PHP, primarily uses the MySQL database server and uses jQuery as the client Javascript library. Development of MediaWiki is primarily supported by the Wikimedia Foundation, though volunteer community developers play a huge part as well.
+This page should help you get started on the path to becoming a contributor to MediaWiki. It is not a tutorial; it just points you to various places where you can go learn whatever is necessary.
+Prerequisites
+
+
+
+
+MediaWiki contributors at work in Bangalore, India.
+
+
+PHP
+MediaWiki is written in PHP, so you'll need to get familiar with PHP to hack MediaWiki's core.
+Learn PHP
+
+PHP tutorial — Available in many different languages. If you have no knowledge of PHP but know how to program in other object-oriented programming languages, PHP will be easy for you to learn.
+PHP Programming at Wikibooks.
+PHP topic at Wikiversity.
+
+PHP resources
+
+The PHP manual — Available in many different languages.
+PHP coding conventions within the MediaWiki community.
+
+Stuff to know
+
+The script maintenance/eval.php in MediaWiki provides a basic PHP interpreter with MediaWiki objects and classes loaded.
+
+Database
+Many features require some amount of database manipulation, so you'll often need to be familiar with MySQL.
+Learn MySQL
+
+MySQL tutorial — From the MySQL 5.0 reference manual.
+MySQL at Wikibooks.
+
+MySQL resources
+
+MySQL Reference Manuals — Available in many different languages.
+Database coding conventions within the MediaWiki community.
+
+Stuff to know
+
+Test your code with MySQL.
+MediaWiki currently uses MySQL (and compatible ones) as the primary database back-end. It also supports other DBMSes, such as PostgreSQL and SQLite. However, almost all developers use MySQL and don't test other DBs, which consequently break on a regular basis. You're therefore advised to use MySQL when testing patches, unless you're specifically trying to improve support for another DB. In the latter case, make sure you're careful not to break MySQL (or write queries that are horribly inefficient in it), since MySQL is what everybody else uses.
+
+
+JavaScript and CSS
+JavaScript and CSS have become omnipresent in front-end code. You don't have to be familiar with JavaScript, jQuery and CSS to work on MediaWiki, but you might need to, depending on what you choose to work on.
+Learn JavaScript and CSS
+
+JavaScript and CSS at Wikibooks.
+Getting Started with jQuery — A jQuery tutorial.
+
+JavaScript and CSS resources
+
+JavaScript coding conventions within the MediaWiki community.
+CSS coding conventions within the MediaWiki community.
+
+MediaWiki
+The MediaWiki code base is large and some parts are ugly; don't be overwhelmed by it. When you're first starting off, aim to write features or fix bugs which are constrained to a small region of code.
+MediaWiki primers and must-reads
+
+MediaWiki architecture — A high-level overview of the main components of MediaWiki and how they work with each other.
+Security for developers — An overview of why and how to write secure code.
+
+MediaWiki resources
+
+Manual:Code — A list of important files and links to more detailed information.
+Coding conventions — An overview of general coding conventions within the MediaWiki community.
+Intro-to-MediaWiki workshop syllabus — Ways to hack MediaWiki, from user preferences to extensions and core.
+Code documentation — Automatically generated documentation from the code and code comments.
+How to debug — A guide to debugging MediaWiki.
+eval.php — A tool to interact with MediaWiki objects live.
+
+Set up your environment
+There are two ways to set up your development environment: using a pre-configured virtual machine setup (vagrant), or manual. Vagrant path is much quicker and easier, and is now the preferred method.
+Virtual Machine with Vagrant
+Vagrant installation — These steps will install MediaWiki server with all the requirements inside a Linux virtual machine (can be used on Linux, Windows, or Mac hosts)
+Manual installation
+Installation requirements — Check hardware requirements, and install a LAMP, MAMP or WAMP server (Linux, Mac or Windows, plus Apache, MySQL and PHP).
+Download from Git — Download the latest source code from Git.
+Installation guide — Continue with the installation and initial configuration
+Set up the various debug modes in your environment to display warning and errors early.
+It's not necessary to download Wikipedia database dumps in order to develop MediaWiki features. In fact, in many cases it's easier to use a near-empty database with a few specially-crafted test pages. However, if for some reason you want to have a copy of Wikipedia, you can get a dump.
+Get started
+
+
+ 
+
+
+Watch as a developer fixes a bug, including investigation, git commit, getting it reviewed and merged, and closing the Bugzilla ticket.
+
+
+The two main paths to get started with MediaWiki development are to fix an annoying little bug in the existing code, or to add a new feature, usually through a MediaWiki extension. In most cases when working with MediaWiki, you do not want to hack MediaWiki core unless you really know what you're doing.
+MediaWiki extensions primers
+
+Developing extensions — How to write an extension for MediaWiki.
+Writing an extension for deployment — If you intend to have your extension deployed on Wikimedia sites (including possibly Wikipedia), additional scrutiny is warranted in terms of performance and security.
+Extension writing tutorial
+
+MediaWiki extensions resources
+
+List of simple extensions — A simple way to become more familiar with how extensions work.
+A brief introduction to MediaWiki extension development — A video presentation about how to create a MediaWiki extension (slides).
+Making a MediaWiki extension — Covers how to develop an extension for Mediawiki, best practices, and how to engage the Mediawiki community. From February 2011.
+Special page template — Add a special page to display some handy information.
+Extending wiki markup — Add a parser hook to modify the content of wikitext.
+
+Submit your changes
+MediaWiki projects are hosted in Git repositories and code contributions are done through the Gerrit review tool. Check the short Getting started guide or the more explanatory Tutorial to learn how to work with Git for MediaWiki development.
+We used to accept patches attached to Bugzilla reports but such practice is currently discouraged.[1]
+Follow these steps:
+Get developer access if you do not already have it.
+Make your change in a branch in Git.
+Check your code against the pre-commit checklist. Don't skip this step; you'll be happy you didn't.
+Commit your change and upload it to Gerrit.
+Include the number of any bug report your change addresses in the commit message footer.
+A link to your change will be automatically added to the bug report, which will be set to PATCH_TO_REVIEW status.
+
+Ask for your code to be reviewed, watch for email updates, and make requested changes.
+
+Discuss and get help
+MediaWiki has a very friendly, large and diverse community. There are multiple places to get help. If you already have an idea for a feature you want to implement, it's also a good idea to talk to a senior developer before you start, especially if you're not sure how your feature will affect other parts of the code.
+IRC — Specifically, the #mediawikiconnect channel. The MediaWiki developer community is distributed around the world, and there most likely is someone awake, no matter what your timezone is. Hop in and start talking.
+Mailing Lists — Since you are looking to be a developer, wikitech-l is where you should be at. You can also browse through the archives to get a feel of how the community operates.
+See also
+"Learn how to hack MediaWiki" workshop
+Developer hub – When you've thoroughly read the information in this article, it's time to move on to the information in the developer hub.
+MediaWiki Virtual Library (MVL) books; this page forms also part of the MediaWiki Developers Guide.
+Notes
+
+↑ Attaching patches to Bugzilla reports was necessary before MediaWiki switched from Subversion to Git. Such reports are generally marked with the patch and patch-need-review keywords.
+
+
+Language:
+English  • dansk • Deutsch • Zazaki • français • Հայերեն • Bahasa Indonesia • 日本語 • 한국어 • occitan • polski • português do Brasil • српски / srpski • Türkçe • 中文

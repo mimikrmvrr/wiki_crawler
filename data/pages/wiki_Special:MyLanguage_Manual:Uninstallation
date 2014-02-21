@@ -1,0 +1,33 @@
+Manual:UninstallationRemoving MediaWiki entirely can be accomplished in two steps: removing the directory where MediaWiki was installed, and dropping the MediaWiki database from MySQL or Postgres.
+
+
+
+Deleting the MediaWiki files
+To uninstall the wiki itself, simply delete the directory containing the wiki's files. For example, if you installed MediaWiki to /var/www/mediawiki-xyz, you might do
+
+rm -rf /var/www/mediawiki-xyz
+
+
+ Warning:
+Depending how you configured your wiki, uploaded files and images may be stored within a sub-directory of the installation directory. If you don't want to delete the uploaded content, make sure you move this to a safe place before deleting!
+Deleting the database
+ Warning:
+This will completely delete all your wiki data. Also, if you installed your wiki into an existing database that also contains other unrelated tables DO NOT use the instructions below or you will lose everything. In this case you will need to manually delete each of the wiki's tables. See the instructions for your database software for more details about how to do this.
+This assumes that you used the default database name during install. If you used a database name other than wikidb you may have to replace wikidb below with whatever name you used for your databse.
+MySQL
+To remove the MySQL database holding your wiki, use the mysql utility to interactively connect to MySQL as a user with adequate permissions, then issue the following command at the mysql> prompt:
+
+DROP DATABASE wikidb;
+
+Alternatively, you can use a DB administrative tool, such as PHPMyAdmin, to perform the same action.
+Postgres
+To remove the Postgres database holding your wiki, run the following command:
+
+ dropdb wikidb
+
+or connect to the database as a user with the correct permissions and issue:
+
+ DROP DATABASE wikidb;
+
+Language:
+English  • français • italiano • 日本語 • polski • русский • 中文

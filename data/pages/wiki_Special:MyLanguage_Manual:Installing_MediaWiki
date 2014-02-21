@@ -1,0 +1,162 @@
+Manual:Installing MediaWiki Installation Guide | About MediaWiki
+ Features | Installation requirements
+ Downloading | Installing | Configuring
+
+MediaWiki installs itself using an interactive, web-based installation script. Before you can run this script, you need to do a couple of things. First, ensure that you have installed prerequisites (Apache/IIS, MySQL5 or later (4 or later for versions below and version 1.18) and PHP 5.3.2). Then you must acquire the MediaWiki software package and upload the MediaWiki software to your server. You may also have to create a new database for your wiki. If necessary, create an account on your web server by following the instructions at Manual:Installation/Creating system accounts.
+MediaWiki can be difficult to install for the average computer user who does not have experience with Apache, PHP and MySQL. Most users who wish to use wiki software may benefit from using a free wiki host (see a list of wiki hosts on Wikibooks) or via a software appliance.
+ Note: For troubleshooting information, see Manual:Errors and Symptoms#Installation Errors.
+
+
+
+Download MediaWiki software
+You can download a release version of MediaWiki from the official download page: generally, if you're using a production environment, you want to be running the stable release.
+Developers on the other hand should probably Download from Git to set up a local repository with the latest code in development.
+For example, to download MediaWiki 1.22.2, which is the latest stable release version, to a *nix machine you can use the following command:
+
+wget http://download.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz
+
+Alternatively, using cURL:
+
+curl -O http://dumps.wikimedia.org/mediawiki/1.22/mediawiki-1.22.2.tar.gz
+
+The downloaded files are in .tar.gz format, so will need to be uncompressed before use. This can be done locally (and then uploaded via FTP) or directly on your server. This is usually done with software such as 7-Zip (free), WinZip, WinRAR or IZArc (free) on Windows. On Linux and Mac OS X, you can untar the file using this command:
+
+tar xvzf mediawiki-*.tar.gz
+
+NOTE: If you untar the archive as root, you should probably change the ownership afterwards with chown, otherwise the files will end up owned as user # 1000, which may or may not be what you want.
+Uploaded files
+If you have not already uploaded the files to your web server, do so now.
+Make sure the "Change file names to lowercase" option for upload is disabled.
+Upload the files to your web server's web directory either by:
+directly copying the unzipped folder or
+by using an FTP client such as FileZilla (Open Source Software, Windows, OSX and Linux) or Cyberduck (OSX).
+If you installed Apache, the correct directory is specified in your httpd.conf file (it's typically <apache-folder>/htdocs).
+If you are using a Linux or Unix server you can instead copy the files to any directory on your server and then make a symbolic link to that folder from your web server's web directory.
+Rename the uploaded folder to whatever you would like to have in the URL. If your web server is running as http://localhost for example, renaming to /w/ directory would mean you would access your wiki at http://localhost/w/index.php. Do not use /wiki/ if you want to use it as a Short URL. (And don't set up short URLs until you have run the installation script.)
+This (renamed) folder will now be referred as <MediaWiki-folder>.
+Prepare the directories
+This step is very important, without preparing the directories, MediaWiki will not function properly.
+ Note:MediaWiki 1.16 and earlier needed to be able to write to the <MediaWiki-folder>/config directory when it ran its installation script. This is no longer required.
+Depending on the server configuration, in some cases you have to check all boxes (777) in FileZilla, to be able to run the installer. On Unix or Linux, if you have admin rights, you can run the command chmod 777 mw-config in your wiki directory.
+If you are running nginx webserver + spawn-fcgi and get the following error:
+Error starting session: session_start(): open(/var/lib/php/session/sess_xxxxxxxxxxxx, O_RDWR) failed: Permission denied (13)
+You will need to do the following:
+chmod 777 /var/lib/php/session
+If that doesn't work run:
+chmod 777 /var/lib/php
+ Note: If you are getting HTTP 403 errors even after you have the permissions set, you may need to adjust your SELinux settings for the wiki directory.
+[root@host wiki]# restorecon -r .
+ Note: MediaWiki should be installed into a subdirectory of your document root, not in the document root itself. That is, if your domain my.domain.org is for instance mapped to the document root /home/mysqld/public_html, then MediaWiki should be installed into /home/mysqld/public_html/w or similar. MediaWiki will then become available under http://my.domain.org/w. This is particularly important if you are going to use short URLs.
+Create a database
+If you already have a database server and know the root password for it, the MediaWiki installation script can create a new database for you. If this is the case, you can skip to the Run the installation script section below. If you don't know the root password, for example if you are on a hosted server, you will have to create a new database now. Currently, you must use SQLite, MySQL or Postgres to store the actual contents of your wiki.
+SQLite
+MediaWiki supports SQLite since version 1.13, however at least 1.16 is highly recommended. SQLite is a stand-alone database library that stores the database contents in a single file. If PHP has the pdo-sqlite module, no further setup is required.
+On the installation page, you will need to choose a database name (which can be anything) and the SQLite database directory. For the database directory, the installer will attempt to use a subdirectory outside of the document root and create it if needed. If this directory is not safe (for example, web-readable), change it manually to avoid making it accessible to everyone on the web.
+MySQL
+MediaWiki will ask you for database and user name and will attempt to create them if they don't already exist. If doing so from MediaWiki is impossible, you can do this using various control panels such as PhpMyAdmin, which are often available from shared hosts, or you may be able to use ssh to login to your host and type the commands into a MySQL prompt. See the corresponding documentation. Alternatively, contact your host provider to have them create an account for you.
+Unix/Linux installation
+
+Download and install MySQL - MediaWiki supports version 5.0.2 or later. MySQL typically installs in /usr/local/mysql. (If you use your Linux distribution's package manager to install MySQL, the following commands may be in some other directory; try typing them without the path prefix /usr/local/mysql/bin/ .)
+Check and see if the database server is running; for example, run /usr/local/mysql/bin/mysqladmin status. If it is not, run mysqld_safe to start it: sudo /usr/local/mysql/bin/mysqld_safe &.
+Another way to initially start the MySQL server is to run the configure script available at the root of the installation. It creates the initial tables and automatically starts the mysql daemon
+
+Set a password for the "root" account on your database server. /usr/local/mysql/bin/mysqladmin -u root password yourpassword
+Run the MySQL command-line client: /usr/local/mysql/bin/mysql -u root -p
+This will prompt for the "root" database password you just set, then connect to the MySQL server. Now, continue with the SQL commands below.
+
+Windows installation
+
+Download MySQL msi (mysql-5.5.22-winx64.msi for example)
+Run msi file and accept all defaults. When creating the root account, use a password that you will remember.
+Run Start->All Programs->MySQL->MySQL Server->MySQL Command Line Client
+Enter the root password you just created
+Now continue with the instructions below
+
+Installation continued
+
+ create database wikidb;
+ grant index, create, select, insert, update, delete, alter, lock tables on wikidb.* to 'wikiuser'@'localhost' identified by 'password';
+
+If your database is not running on the same server as your web server, you need to give the appropriate web server hostname -- mediawiki.example.com in my example -- as follows:
+
+ grant index, create, select, insert, update, delete, alter, lock tables on wikidb.* to
+ 'wikiuser'@'mediawiki.example.com' identified by 'password';
+
+Postgres
+If you are using Postgres, you will need to either have a database and user created for you, or simply supply the name of a Postgres user with "superuser" privileges to the configuration form. Often, this is the database user named postgres.
+The database that MediaWiki will use needs to have both plpgsql and tsearch2 installed. The installer script will try to install plpgsql, but you may need to install tsearch2 yourself. (tsearch2 is used for searching the text of your wiki). Here's one way to do most of the setup. This is for a Unix-like system, and assumes that you have already installed the plpgsql and tsearch2 modules. In this example, we'll create a database named wikidb, owned by a user named wikiuser. From the command-line, as the postgres user, perform the following steps.
+
+ createuser -S -D -R -P -E wikiuser (then enter the password)
+ createdb -O wikiuser wikidb
+
+or as superuser (default postgres) execute the following commands at the database prompt:
+
+CREATE USER wikiuser WITH NOCREATEDB NOCREATEROLE NOSUPERUSER ENCRYPTED PASSWORD 'password';
+CREATE DATABASE wikidb WITH OWNER wikiuser;
+
+ Note: If you're using PostgreSQL 9.0 and above, you don't need to add pl/pgsql as it is installed by default.
+
+ createlang plpgsql wikidb
+
+Adding tsearch2
+ Note: If you're using PostgreSQL 8.3.x, you don't need to perform the following steps to install tsearch2 since it has been integrated into the core.
+Adding tsearch2 to the database is not a simple step, but hopefully it will already be done for you by whatever packaging process installed the tsearch2 module. In any case, the installer will let you know right away if it cannot find tsearch2.
+The above steps are not all necessary, as the installer will try and do some of them for you if supplied with a superuser name and password.
+For installing tsearch2 to the wikidb database under Windows, do the following steps:
+Find tsearch2.sql (probably under .\PostgreSQL\8.x\share\contrib) and copy it to the postgresql\8.x\bin directory.
+From a command prompt at the postgresql\8.x\bin directory, type "psql wikidb < tsearch2.sql -U wikiuser".
+It will prompt you for the password for wikiuser.
+That's it!
+Point (2) seems only to work on windows, cause on debian linux 4.0 (etch) only user postgres is allowed to use language c. so there it must be called by:
+
+su - postgres -c psql wikidb < tsearch2.sql
+
+Granting select rights
+Afterwards you must grant select rights to wikiuser(s) to the tsearch tables and insert the correct locale.
+PostgreSQL 8.2 or earlier
+
+su - postgres
+psql -d wikidb -c "grant select on pg_ts_cfg to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_cfgmap to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_dict to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_parser to wikiuser;"
+psql -d wikidb -c "update pg_ts_cfg set locale = current_setting('lc_collate') where ts_name = 'default' and prs_name='default';"
+
+If you receive an error similar to "ERROR: relation "pg_ts_cfg" does not exist" when executing the above statements, try installing tsearch2 to the wikidb database again, but instead use these two separate steps (and then try the grant statements again):
+
+1) su - postgres
+2) psql wikidb -f tsearch2.sql
+
+PostgreSQL 8.3 or later
+
+su - postgres
+psql -d wikidb -c "grant select on pg_ts_config to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_config_map to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_dict to wikiuser;"
+psql -d wikidb -c "grant select on pg_ts_parser to wikiuser;"
+
+Run the installation script
+Once all of the above steps are complete, you can complete the installation through a web browser by going to the index.php URI in your browser -- check the instructions mentioned in Manual:Config script.
+If needed, you can run the command-line installer or CLI: php maintenance/install.php.
+Keep up to date!
+Subscribe to our release announcements mailing list.
+Once installed, make sure you stay up to date with releases, and keep your server secure!
+Installation assistance
+FAQ: FAQ#Installation and configuration
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support
+MediaWiki Users (Forum) is a user to user MediaWiki support forum
+See also
+Manual:$wgEnableUploads to enable image/files upload.
+Manual:Page customizations lists wiki pages that MediaWiki messages link to, you need to create these pages or edit the messages.
+Manual:Timezone to set default timezone of your wiki from UTC/GMT to your timezone. This reflects in History tab and other places.
+Extension:Cite/Cite.php, install this extension so that <ref> and </ref> tags work as expected.
+Manual:Configuring MediaWiki for links to more advanced configuration.
+Manual:Short URL for having more user-friendly URL to article pages.
+Manual:Wiki family to setup multiple instances of MediaWiki with single set of MediaWiki files.
+and
+Manual:Backing up a wiki
+Manual:Moving a wiki
+Manual:Restoring a wiki from backup
+Manual:Upgrading
+Language:
+English  • català • dansk • Deutsch • español • français • Bahasa Indonesia • italiano • 日本語 • 한국어 • português do Brasil • русский • 粵語 • 中文 • 中文（简体）‎ • 中文（繁體）‎ • 中文（台灣）‎

@@ -1,0 +1,145 @@
+Manual:Руководство по установке
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+Основное введение в MediaWiki
+
+Содержание
+Что такое MediaWiki?
+Документация
+Настройка
+Версии и загрузка
+Установка
+Поддержка и контакты
+Разработка
+Другие темы
+См. меню слева
+
+
+ Руководство по установке | Описание MediaWiki
+ Возможности | Требования для установки
+ Загрузка | Установка | Настройка
+
+Добро пожаловать в Руководство по установке MediaWiki, включающее инструкции по установке и настройке MediaWiki на веб-сервере. Обратите внимание, что некоторые пользователи могут предпочесть предустановленные наборы ПО MediaWiki и хостинги, предоставляющие услугу установки в 1 клик, а также вики-фермы в качестве удобной альтернативы ручной установке.
+Первая часть данного руководства содержит общие инструкции об установке и настройке MediaWiki на веб-сервере. Более подробное описание процесса установки на конкретные операционные системы смотрите в последнем разделе руководства.
+
+
+
+Руководство по обновлению
+Если вы уже используете MediaWiki, см. Руководство по обновлению.
+ Требования
+
+Скачать MediaWiki (текущая стабильная версия — 1.22.2)
+веб-сервер, например Apache или IIS
+локальный доступ или доступ с помощью командной строки, необходимый для запуска скриптов обслуживания
+
+PHP version 5.3.2 or later, but not PHP 5.5 currently.
+Due to a security issue with PHP it is strongly advised to use PHP 5.3.5+ (see here for more details).
+with Perl Compatible Regular Expressions
+with Standard PHP Library
+
+Database Server
+MySQL 5.0.2 or later (*)
+or PostgreSQL 8.1 or later
+Requires PL/pgSQL (contained in contribs)
+Full-Text searching (Native in >=8.3, requires tsearch2 extension <=8.2)
+
+or SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+Краткое руководство по установке
+Warning about webhost auto-installers
+Programs provided by webhosts to automatically install applications such as MediaWiki can, and frequently do, screw up the process, resulting in errors and a failure to install MediaWiki (or another application for that matter). If you encounter this problem, it does not mean that you cannot install MediaWiki; all it means is that you should do it manually. This is very easy and there are benefits to doing this, including more control over where on the server and file path you want to install it, the ability to use a shared database, or the ability to control more features of the wiki during the installation.
+Эта часть руководства содержит краткую версию инструкций по установке и предназначена для опытных пользователей. Более подробное описание можно найти ниже.
+Проверьте соответствие сервера минимальным требованиям.
+Скачайте MediaWiki (прямая ссылка на последнюю версию) и распакуйте архив в соответствующий каталог на сервере.
+С помощью браузера зайдите в каталог, куда вы распаковали MediaWiki (например, http://[domain]/mediawiki/index.php). Если устанавливаете на свой компьютер, замените [domain] на localhost. Если устанавливаете на удаленный сервер, замените [domain] на доменное имя сервера (такое, как www.myserver.com).
+Следуйте указаниям скрипта для завершения процесса установки.
+These instructions are deliberately brief. There is a lot that could go wrong, so if in doubt, you are advised to read the full instructions below!
+
+Основное руководство по установке
+Перед установкой
+Прочтите описание MediaWiki
+Проверьте список возможностей MediaWiki
+Требования для установки — прежде, чем идти дальше, проверьте соответствие вашего сервера этим требованиям!
+
+Установка MediaWiki
+Настройка MediaWiki:
+Первоначальная настройка (используя скрипт конфигурирования)
+Подробная настройка
+Установка расширений
+
+Альтернативы установке вручную
+Some users may prefer to skip manual installation by using a pre-integrated MediaWiki software appliance or hosting services with 1-click installation and wiki farms.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+Дополнения
+Расширенное использование
+В следующих статьях приводится информация об установке и настройке MediaWiki в специфических условиях.
+Установка из Git-репозитория
+Установка MediaWiki на съёмный диск
+Расширенная настройка
+Следующие статьи описывают дополнительные возможности конфигурирования MediaWiki.
+Расширенная настройка
+Администрирование Wiki
+Справка MediaWiki
+The following page explains how to get a copy of the MediaWiki help pages on your own wiki
+Copying help pages
+Помощь в установке
+FAQ: FAQ#Installation and configuration
+IRC (#mediawiki)
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support.
+MediaWiki Users (Forum) is a user-to-user MediaWiki support forum (offline)
+Установка на конкретные ОС
+The following pages give more detailed installation instructions aimed at specific systems. However, by and large Manual:Installing MediaWiki is more up to date, and better written than the per system docs, and as such it is recommended you first consult the main install instructions before looking at a per system installation documents.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Newcomers guide
+Streamlined Guide
+Simple Windows Apache Installation
+
+Замечания
+
+MediaWiki ships with an installation script which allows web-based configuration
+MediaWiki can share the database of another web-based application, e.g. phpBB etc.
+Knowledge of PHP is required in order to customize the software
+PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 (download). Note that this version is no longer supported.
+MySQL 5 support is required since MediaWiki 1.19 – if you are using an older version of MySQL and cannot upgrade, you should use MediaWiki 1.18.5 (download). Note that this version is no longer supported.
+Some users find it helpful to install an additional software package such as phpMyAdmin (MySQL) or phpPgAdmin (Postgres) to help administer the database server.
+
+См. также
+Предустановленные наборы ПО MediaWiki
+Хостинг-сервисы и вики-фермы MediaWiki
+Перед установкой
+Обновление
+Деинсталляция
+FAQ
+This page is a translated version of a page Manual:Installation guide and the translation is 63% complete.

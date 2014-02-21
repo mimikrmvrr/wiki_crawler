@@ -1,0 +1,74 @@
+Manual:What is MediaWiki?This page is a translated version of a page Manual:What is MediaWiki? and the translation is 94% complete.
+
+
+asturianu  • ‎български  • ‎català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（台灣）‎ 
+
+
+
+
+Introducció a MediaWiki
+
+Continguts
+Com funciona MediaWiki?
+Documentació
+Configuració
+Versions i baixades
+Instal·lació
+Suport i contacte
+Desenvolupament
+Per altres temes
+Vegeu la barra lateral de l'esquerra
+
+
+ Guia d'instal·lació | Què és Mediawiki
+ Llistat de funcions (en) | Requisits
+ Instal·lació | Configuració
+
+
+Segurament coneixeu la Viquipèdia, l'enciclopèdia lliure, i és possible que confongueu una mica les diferents paraules com Wiki, Wikimedia i MediaWiki.
+Per evitar una possible confusió entre aquests termes, llegiu en primera instància l'article article about the names.
+
+Presentació general
+
+
+
+
+MediaWiki pot ser utilitzat amb una granja de servidors de gran empresa com en el cluster Wikimedia.
+
+
+MediaWiki és un programari lliure basat en un servidor web, disponible sota GNU Llicència Pública General (GPL). Ha estat concebut per a funcionar en un centre de servidors per a un lloc web que pot tenir milions de visites per dia.
+MediaWiki és un programari extremadament robust, escalable i un producte que enriqueix l'univers wiki, utilitza PHP per a processar i mostrar dades emmagatzemades en la seva base de dades MySQL.
+Les pàgines empren el format wikitext de MediaWiki, pel que usuaris no necessiten el coneixement de HTML, XHTML o CSS per a editar pàgines fàcilment.
+Quan un usuari realitza una modificació d'una pàgina, MediaWiki l'escriu en la seva base de dades, però sense esborrar les edicions prèvies de la pàgina, permetent així restaurar fàcilment la pàgina en cas de vandalisme o spam. MediaWiki pot administrar imatges i arxius multimèdia, que es troben emmagatzemats en un sistema de fitxers. Per a wikis grans amb molts usuaris, MediaWiki suporta l'escorcoll i pot interactuar fàcilment amb el servidor proxy Squid.
+
+El que és MediaWiki...
+MediaWiki és un programari de wiki.
+Si no sabeu el que és un wiki, llegiu l'article de la Viquipèdia abans d'anar més lluny!
+MediaWiki és un programari servidor.
+Com tot programari que és en contacte amb internet, hi pot haver errors de programari o problemes de seguretat. No instal·leu MediaWiki sinó teniu la intenció d'instal·lar les actualitzacions de seguretat (si us plau suscriviu-vos per rebre comunicats d'actualitzacions de seguretat).
+MediaWiki és administrat per a les necessitats de la fundació Wikimedia.
+Aquest programa és concebut principalment per funcionar sobre una gran xarxa de servidors per a Viquipèdia i els projectes germans. Les funcionalitats, les prestacions, la configuració, la seva facilitat d'utilització són fetes en aquesta perspectiva. Si les seves necessitats són radicalment diferents, aquest programari pot no ser-vos útil.
+MediaWiki és un programari lliure.
+No es subministra cap mena de garantia.
+Intenti el Wikitexte
+
+
+
+
+Basic wikitext (wiki markup)
+
+
+Podeu modificar pàgines amb facilitat i (temporalment) publicar bestieses, i podeu eventualment destruir completament (i temporalment) una pàgina sobre un wiki. No necessita tenir de coneixements de la programació per això. Tanmateix és preferible escriure coses sensates per enriquir els continguts dels wikis.
+Li suggerim exercitar-se a la pàgina sandbox o a la test wiki.
+També podeu donar un cop d'ull a cheat sheet, les ordres bàsiques per donar format a un text.
+Les coses que MediaWiki no fa bé...
+Perquè MediaWiki ha estat concebut per a un contingut obert, no és recomanat per a les situacions on vol restringir l'accés a certes parts del programari.
+MediaWiki ha estat concebut per funcionar per a llocs web a molt gran trànsit com Viquipèdia. Està optimitzat per a això i pot no ser recomanat per a petits indrets on l'espai del disc o de la memòria importen més que l'amplada de banda.
+MediaWiki no és concebut per ser utilitzat com a blog o fòrum.
+Per als casos anteriors, la tria d'un altre programari pot ser preferible tant si és wiki com si no.
+Vegeu també
+Manual:Deciding whether to use a wiki as your website type
+Manual:Deciding which wiki software to use
+Full list of MediaWiki features
+wikipedia:Comparison of wiki software
+www.wikimatrix.org comparació de diferents programaris wiki.

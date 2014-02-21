@@ -1,0 +1,145 @@
+Manual:Installation guide/yueThis page is a translated version of a page Manual:Installation guide and the translation is 35% complete.
+
+Other languages:
+català  • ‎čeština  • ‎dansk  • ‎Deutsch  • ‎English  • ‎British English  • ‎español  • ‎français  • ‎עברית  • ‎Bahasa Indonesia  • ‎italiano  • ‎日本語  • ‎한국어  • ‎polski  • ‎português  • ‎português do Brasil  • ‎română  • ‎русский  • ‎українська  • ‎粵語  • ‎中文  • ‎中文（中国大陆）‎  • ‎中文（简体）‎  • ‎中文（繁體）‎  • ‎中文（台灣）‎ 
+
+
+
+
+MediaWiki嘅基礎介紹
+
+目錄
+MediaWiki點樣運作？
+檔案註解
+自定化
+版本同下載
+安裝
+支援＆聯絡
+開發
+所有其它主題
+睇左面嘅導航
+
+
+
+ 安裝指南 | 關於MediaWiki  功能 | 安裝需求  下載 | 安裝 | 調較
+
+歡迎來到MediaWiki安裝指南，提供響一個網頁伺服器度手動安裝同調較 MediaWiki 。留意用戶可以搵一啲 MediaWiki 軟件應用去做一啲方便嘅另類手動安裝。
+呢個指南嘅第一部份畀一啲大致上嘅指示，響最後嘅一節會有一個註腳，會畀啲更多對於特定嘅系統更詳細嘅安裝指示同埋對於軟件唔係太常用嘅貼士。
+
+
+
+Upgrade guide
+If you are already running MediaWiki, see the Upgrade guide.
+ Requirements
+
+Download MediaWiki (current stable version is 1.22.2)
+Web server such as Apache or IIS
+Local or command line access is needed for running maintenance scripts
+
+PHP version 5.3.2 or later, but not PHP 5.5 currently.
+Due to a security issue with PHP it is strongly advised to use PHP 5.3.5+ (see here for more details).
+with Perl Compatible Regular Expressions
+with Standard PHP Library
+
+Database Server
+MySQL 5.0.2 or later (*)
+or PostgreSQL 8.1 or later
+Requires PL/pgSQL (contained in contribs)
+Full-Text searching (Native in >=8.3, requires tsearch2 extension <=8.2)
+
+or SQLite
+
+For image thumbnailing and TeX-support, additional programs are required.
+(*) – MariaDB, a GPL fork of the MySQL code by Monty Widenius, the founder of MySQL, is an alternative and can also be used by MediaWiki. Debian/Ubuntu repos.
+
+快速安裝指南
+Warning about webhost auto-installers
+Programs provided by webhosts to automatically install applications such as MediaWiki can, and frequently do, screw up the process, resulting in errors and a failure to install MediaWiki (or another application for that matter). If you encounter this problem, it does not mean that you cannot install MediaWiki; all it means is that you should do it manually. This is very easy and there are benefits to doing this, including more control over where on the server and file path you want to install it, the ability to use a shared database, or the ability to control more features of the wiki during the installation.
+For experienced users, here is the quick version of the installation instructions. Most users will want to read the more detailed version, below.
+查吓係個系統符合最低要求 (網頁伺服器，PHP5，MySQL4 或者係 PostgreSQL 8.0)。
+下載 MediaWiki (最新版嘅直接連結) 同展開個壓縮檔到你伺服器嘅可瀏覽資料夾。
+指你個瀏覽器到 config 目錄 (好似： http://localhost/mediawiki/config/index.php)。
+按照螢光幕嘅指示去完成過程。
+呢啲嘅指示都係好簡單噉帶過。可能會有好多嘢都會做錯，如果有任何問題嘅話，你可以睇下面完整嘅指示！！
+
+主要安裝指南
+安裝前
+睇吓乜嘢係MediaWiki
+查吓MediaWiki功能一覽
+安裝需求 - 響去之前查吓呢啲！
+
+安裝 MediaWiki
+調較 MediaWiki:
+初步調較 (用調較代碼)
+更多調較
+安裝擴展
+
+Alternative to manual installation
+Some users may prefer to skip manual installation by using a pre-integrated MediaWiki software appliance or hosting services with 1-click installation and wiki farms.
+If you are installing only for development or testing, consider using mediawiki-vagrant. You must have (and enable) hardware virtualization. Many modern computers have this, and you can check in your BIOS.
+頁底
+進階使用
+下面嘅版畀一啲指示如何響其它，唔太常用情況下安裝／調較 MediaWiki 。
+自 Git 度安裝
+安裝 MediaWiki 響支 memory stick 度
+進階調較
+下面嘅版覆蓋一啲或者更高級嘅調較選項：
+進階調較
+Wiki管理
+MediaWiki Help
+The following page explains how to get a copy of the MediaWiki help pages on your own wiki
+Copying help pages
+Installation assistance
+FAQ: FAQ#Installation and configuration
+IRC (#mediawiki)
+mediawiki-l (Mailing List) is the high-traffic mailing list to ask for support.
+MediaWiki Users (Forum) is a user-to-user MediaWiki support forum (offline)
+
+指定系統個別指示
+The following pages give more detailed installation instructions aimed at specific systems. However, by and large Manual:Installing MediaWiki is more up to date, and better written than the per system docs, and as such it is recommended you first consult the main install instructions before looking at a per system installation documents.
+FreeBSD
+GNU/Linux
+ALT Linux
+Arch Linux
+Damnsmalllinux
+Debian
+Fedora
+Gentoo
+Mandriva
+Red Hat Enterprise Linux
+Slackware
+SuSE 9.3
+Ubuntu
+
+Mac OS X
+NetWare
+Solaris
+Solaris 10
+Solaris 9
+
+Windows
+Windows XP
+Windows Server 2003
+Windows Server 2008
+Windows Server 2008 R2
+Newcomers guide
+Streamlined Guide
+Simple Windows Apache Installation
+
+Notes
+
+MediaWiki ships with an installation script which allows web-based configuration
+MediaWiki can share the database of another web-based application, e.g. phpBB etc.
+Knowledge of PHP is required in order to customize the software
+PHP 5 support has been required since MediaWiki 1.7 – if you are using an older version of PHP and cannot upgrade then you should use MediaWiki 1.6.12 (download). Note that this version is no longer supported.
+MySQL 4 support has been required since MediaWiki 1.6 – if you are using an older version of MySQL and cannot upgrade then you should use MediaWiki 1.5.8 (download). Note that this version is no longer supported.
+MySQL 5 support is required since MediaWiki 1.19 – if you are using an older version of MySQL and cannot upgrade, you should use MediaWiki 1.18.5 (download). Note that this version is no longer supported.
+Some users find it helpful to install an additional software package such as phpMyAdmin (MySQL) or phpPgAdmin (Postgres) to help administer the database server.
+
+請參閱
+MediaWiki software bundles
+MediaWiki hosting services and wiki farms
+安裝之前
+升級
+反安裝
+FAQ

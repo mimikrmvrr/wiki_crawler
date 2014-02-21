@@ -1,0 +1,97 @@
+MediaWiki 1.19
+
+
+This page contains release notes for a legacy version of MediaWiki.
+The current version is 1.22.2. The legacy support version is 1.21.5. The legacy long term support version is 1.19.11.
+
+MediaWiki
+
+(older versions)
+MediaWiki 1.19.11 (legacy – LTS)
+MediaWiki 1.21.5 (legacy)
+MediaWiki 1.22.2 (stable)
+MediaWiki 1.23 (alpha; git master)
+
+Branch points
+MediaWiki 1.19 is a release that contains many new features and bug fixes. This is a summary of the major changes of interest to users. You can consult the RELEASE-NOTES file for the full list of changes in this version. It was deployed to Wikimedia wikis in February 2012, see Deployment announcement for a human-readable explanation. Final version released on 2012-05-02. This is a Long Term Support release (LTS) which will be supported until May 2015.
+
+
+
+
+
+MediaWiki 1.19
+Roadmap
+Release notes
+Communications
+Deployment to Wikimedia sites:
+Schedule
+
+What's new?
+There are hundreds of bug fixes, new features, and changed features. The comprehensive list of what's new is in the release notes. Here's an overview:
+Easier reading, editing, and maintenance
+Disable the partial HTML and MathML rendering options for Math, and render as PNG by default (see RFC and r104498).
+MathML mode was so incomplete most people thought it simply didn't work.
+The default user signature now contains a talk link in addition to the user link.
+Better timezone recognition in user preferences.
+Internationalization
+The log rewrite has finally been completed, although some gender support features are still missing from this release (bug 24156). Documentation for developers on how to use the new logging system is (or will be) at Manual:Logging to Special:Log.
+More gender support (for instance in user lists).
+Added language: Canadian English (en-ca).
+Language converter improved, e.g. it now works depending on the page content language.
+Time and number-formatting magic words also now depend on the page content language.
+Bidirectional support further improved after 1.18.
+Norwegian (bokmål) (nb) (renamed from no).
+The Latin script for Uyghur was incorrectly marked as right-to-left language.
+Make Brazilian Portuguese a fallback of Portuguese.
+Fallback language of Assamese from is now English.
+Update date format for Upper and Lower Sorbian: month names need the genitive.
+Serbian variant conversion improvements.
+Lower diacritics in titles for Indic languages (Assamese, Bengali, Hindi, Malyalam and Odiya) are no longer cut off.
+Gendered namespaces added for Czech.
+Larger numbers (e.g. Terabytes, Petabytes, Exabytes, Zetabytes and Yottabytes) are now supported.
+Extensions developers
+Extensions can now participate in the extraction of titles from URL paths.
+Removed SkinTemplateSetupPageCss hook; use BeforePageDisplay instead.
+Added two new GetLocalURL hooks to better serve extensions working on a limited type of titles.
+Hook added to check for exempt from account creation throttle. (name?)
+Added hook BitmapHandlerCheckImageArea.
+getUserPermissionsErrors and getUserPermissionsErrorsExpensive hooks are now also called when checking for 'read' permission.
+New path mappings can be added using the WebRequestPathInfoRouter hook and adding paths to the PathRouter.
+Extensions can use the Language::getMessagesFileName hook to define new languages using messages files outside of core.
+Extensions can use the RequestContextCreateSkin hook to override what skin is loaded in some contexts.
+Parser::clearTagHooks() now clear function tag hooks when it clears other tag hooks (bug 33525).
+Parser::getTags() now returns function tag hooks so that they show up on Special:Version (bug 33523).
+Added CSS classes for the action being performed (bug 4438).
+Added 'APIGetDescription' hook so that extension authors can add information to the output of api.php (r104441).
+The $variant argument in the hooks for the Title::get{Local,Full,Link,Canonical}URL methods have been removed, the variant is now part of the $query argument.
+Support for the deprecated hook MagicWordMagicWords was removed.
+Heads-up for MediaWiki administrators
+Bumped MySQL version requirement to 5.0.2 (r104437 r104209).
+The command-line installer supports various RDBMSes better.
+New skins/common/*.css files usable by skins instead of having to copy piles of generic styles from MonoBook or Vector's css.
+BREAKING CHANGE: CSS styling for the wikitable class is now more specific to prevent it from affecting nested tables, which caused various issues (bug 30485 and bug 33434). If your wiki has overridden CSS rules for ".wikitable", please revise them and adjust where necessary. For comparison, use the "table.wikitable" section in skins/common/shared.css as base.
+BREAKING CHANGE: Legacy global array 'ta' and global function 'akeytt' have been removed from wikibits.js.
+jquery.mwPrototypes module was renamed to jquery.mwExtension.
+The maintenance script populateSha1.php was renamed to the more descriptive populateImageSha1.php.
+There's a known issue where if PHP's PCRE is not compiled with the --enable-unicode-properties all text information on the installer setup page will be replaced with several instances of [1]. MediaWiki 1.19 requires the PCRE library used with PHP to be compiled with --enable-unicode-properties in order to function.
+And more!
+The interwiki links table can now be accessed also when the interwiki cache is used (used in the API and the Interwiki extension).
+ResourceLoader
+ResourceLoaderWikiModule are now also automatically purged if one of the messages used from the MediaWiki namespace are updated.
+ResourceLoader's loading system now supports custom sources for loading the modules (see $wgResourceLoaderSources for more information)
+"private" ResourceLoader modules embed has been moved from towards the </body> end, to up in the <head>. The embedding can no longer be disabled ($wgResourceLoaderInlinePrivateModules removed)
+Popular ResourceLoader modules (e.g. mediawiki.util) are now preloaded as stop-gap for scripts missing dependencies.
+New configuration variable $wgPreloadJavaScriptMwUtil has been introduced for this (set to false by default for new installations). Set to true if your wiki has a large amount of user/site scripts that are lacking dependency information. In the short to medium term these user/site scripts should be fixed by adding the used modules to the dependencies in the module registry and/or wrapping them in a callback to mw.loader.using.
+
+Watchlist
+Special:Watchlist no longer sets links to feed when the user is anonymous.
+Watchlist editing has been improved so that users can now remove broken or invalid titles.
+wlexcludeuser parameter added to ApiFeedWatchlist.
+Action=watch now parses messages using the correct title instead of "API".
+Logging
+Searching blocked usernames in block log is now clearer. The "User:" prefix is no longer necessary when searching for a user's block log entry.
+Log comments are now truncated correctly in multibyte character languages.
+Bundled extensions
+There were no newly bundled extensions in 1.19.
+Language:
+English  • Deutsch • 日本語 • polski

@@ -1,0 +1,264 @@
+Manual:Running MediaWiki on Solaris 10OpenCSWnative
+The content of this page has not been verified.
+Instructions written in this page have not been verified to be correct.
+If there are any inaccuracies, please drop a note at the support desk.
+Installation guides
+on FreeBSD
+on GNU/Linux
+- ALT Linux
+- Arch Linux
+- Damnsmalllinux
+- Debian
+- Fedora
+- Gentoo
+- Mandriva
+- Red Hat Enterprise Linux
+- Slackware
+- Ubuntu
+on Mac OS X
+on NetWare
+on Solaris
+- on Solaris 11 / opensolaris
+- on Solaris 10
+on Windows
+- Windows Server 2008
+- Windows Server 2003
+- Streamlined Guide
+- Simple Windows/Apache Guide
+- on a stick
+- on MoWeS Portable
+- on Uniform Server
+- on XAMPP
+- on Sourceforge.net
+
+
+This page was moved from MetaWiki.It probably requires cleanup – please feel free to help out. In addition, some links on the page may be red; respective pages might be found at Meta. Remove this template once cleanup is complete.
+
+
+
+For Solaris, one can do a native installation, or use one of the package providers.
+
+
+
+OpenCSW
+http://www.opencsw.org offers a packaging strategy inspired by http://debian.org. Installing the Mediawiki Solaris package is straightforward and installs the dependencies automatically.
+
+pkgadd -d http://mirror.opencsw.org/opencsw/pkg_get.pkg
+pkg-get install apache2 mediawiki mysql
+
+native
+The following are notes on how to enable MediaWiki, PHP, MySQL, and Apache in Solaris 10.
+MediaWiki requires a PHP-enabled webserver and MySQL. Stock Solaris 10 comes with Apache and MySQL. PHP is installed from the Solaris Software Companion CD. MediaWiki consists of downloaded PHP scripts that use MySQL. The following details each step.
+(Another method: CoolStack from Sun, specifically CSKamp for Apache, MySQL and PHP, and CSKmemcached for memcached.)
+MySQL
+MySQL is part of Stock Solaris 10. If not installed, install packages SUNWmysqlr, SUNWmysqlt, and SUNWmysqlu. To enable, see file /etc/sfw/mysql/README.solaris.mysql. Here's what I did:
+
+# /usr/sfw/bin/mysql_install_db
+# groupadd mysql
+# useradd -g mysql -d /var/mysql mysql
+# chgrp -R mysql /var/mysql
+# chmod -R 770 /var/mysql
+
+Start:
+
+# /usr/sfw/sbin/mysqld_safe --user=mysql &
+
+Set password:
+
+# /usr/sfw/bin/mysqladmin -u root password pw # <--SET password (don't use root's)
+
+Test:
+
+# cd /usr/sfw/mysql/mysql-test; ./mysql-test-run
+
+Automatic start and stop of mysql daemon at boot and shutdown:
+
+# ln /etc/sfw/mysql/mysql.server /etc/rc3.d/S99mysql
+# ln /etc/sfw/mysql/mysql.server /etc/rc0.d/K00mysql
+# ln /etc/sfw/mysql/mysql.server /etc/rc1.d/K00mysql
+# ln /etc/sfw/mysql/mysql.server /etc/rc2.d/K00mysql
+# ln /etc/sfw/mysql/mysql.server /etc/rcS.d/K00mysql
+
+PHP
+Heads up!
+When configuring MediaWiki, it complains that you don't have PHP5 installed. (so it would appear that PHP5 will be required, as the 1.7.1 version of MediaWiki doesn't work with PHP4.)
+PHP4
+PHP4 is available on the "Solaris Software Companion" CD. It comes with an php-module wich is compatible with apache1. If You want to use PHP5 and Apache2, step over to Section PHP5. Mount the CD and run the installer script that's appropriate for your architecture (x86 or SPARC). PHP is located in the Development/Languages group of packages. After PHP has been installed run the post-install script /opt/sfw/apache/x_postinstall. This will create the file /etc/apache/httpd.conf-php-example which you will need later.
+PHP5
+This part is only necessary if you want to use Apache2 and PHP 5 with your installation. In that case you don't need the PHP4 installation. Instead you should download the following packages from www.sunfreeware.com:
+
+libgcc
+libiconv
+zlib
+libxml2
+php
+
+Note that the version numbers may change on www.sunfreeware.com, due to updates. The best way to start is to look for an php-5.x.x package and then download the subsequent dependencies. You don't need to download Apache2 and mySQL as Solaris 10 already comes with these packages.
+I downloaded them to the directory /tmp/php-packages and installed them:
+
+# cd /tmp/php-packages
+# for i in *gz; do gunzip $i; done
+# for i in *local ; do pkgadd -d $i; done
+
+Now you have to copy the php-module and php.ini to their approriate directories:
+
+# cp -p /usr/local/apache2/modules/libphp5.so /usr/apache2/libexec
+# cp -p /usr/local/php/doc/php/php.ini-recommended  /etc/apache2/php.ini
+
+If you want a phpinfo page (see "Security Considerations" below), create it with:
+
+echo "<?php phpinfo(); ?>" >/var/apache2/htdocs/phpinfo.php
+
+Apache
+Apache 1.3
+If you want to use Apache2 with PHP 5, ignore this Section and see Apache2 chapter below.
+Solaris comes with Apache. If you don't have Apache installed, install packages SUNWapachd, SUNWapchr, and SUNWapchu.
+To enable Apache, copy /etc/apache/httpd.conf-php-example to /etc/apache/httpd.conf. Edit httpd.conf. At minimum you need to change the "ServerName" line. I also change the "User" and "Group" lines to "User apache" and "Group apache" after adding an apache group and apache user:
+
+# groupadd apache
+# useradd -g apache -d /var/apache apache
+
+The web documents live in /var/apache/htdocs.
+Start Apache the first time with "/etc/init.d/apache start". See if the httpd process is running, check the error log at /var/apache/logs/error_log, and access with your web browser. On subsequent reboots, Apache will restart automatically if httpd.conf is present.
+Verify PHP is enabled by going to http://localhost/phpinfo.php where localhost is the hostname of your system.
+Apache2
+If you want to use Apache2, which also comes with Solaris 10, you will have to use the PHP5 module and install it as described above, since the PHP4 module from the "Solaris Software Companion" CD is incompatible with the Apache2 Version.
+First copy /etc/apache2/httpd.conf-example to /etc/apache2/httpd.conf. Then edit /etc/apache2/httpd.conf and add the following lines in their appropriate places.
+
+LoadModule php5_module        libexec/libphp5.so
+
+
+AddType application/x-httpd-php .php
+
+Then start and enable the apache2 service:
+
+# svcadm -v enable /network/http:apache2
+
+If you are told that the argument doesn't match any instances, you need to pkill svc.configd. Details of the problem are at http://forum.sun.com/jive/thread.jspa?threadID=74430&tstart=210
+Check if apache is running.
+If not do the following as root in zone where wiki is installed
+1. check if the service state is enabled and online
+
+# svcs -l http
+fmri         svc:/network/http:apache2
+name         Apache 2 HTTP server
+enabled      false
+state        disabled
+next_state   none
+state_time   Thu Apr 20 15:56:44 2006
+restarter    svc:/system/svc/restarter:default
+dependency   require_all/error svc:/network/loopback:default (online)
+dependency   optional_all/error svc:/network/physical:default (online)
+
+2. enable the service
+
+# svcadm -v enable /network/http:apache2
+svc:/network/http:apache2 enabled.
+
+3. check current status
+
+# svcs -l http
+fmri         svc:/network/http:apache2
+name         Apache 2 HTTP server
+enabled      true
+state        online
+next_state   none
+state_time   Thu Apr 20 15:59:02 2006
+logfile      /var/svc/log/network-http:apache2.log
+restarter    svc:/system/svc/restarter:default
+contract_id  2197
+dependency   require_all/error svc:/network/loopback:default (online)
+dependency   optional_all/error svc:/network/physical:default (online)
+
+4. restart the service
+
+#svcadm restart /network/http:apache2
+
+5. check the process status
+
+# ps -ef |grep http
+    root  20530 20047   0 15:59:33 ?           0:00 /usr/apache2/bin/httpd -k start
+ webservd 20534 20530   0 15:59:34 ?           0:00 /usr/apache2/bin/httpd -k start
+ webservd 20531 20530   0 15:59:34 ?           0:00 /usr/apache2/bin/httpd -k start
+ webservd 20532 20530   0 15:59:34 ?           0:00 /usr/apache2/bin/httpd -k start
+ webservd 20535 20530   0 15:59:34 ?           0:00 /usr/apache2/bin/httpd -k start
+ webservd 20533 20530   0 15:59:34 ?           0:00 /usr/apache2/bin/httpd -k start
+    root 20537 20500   0 15:59:39 pts/2       0:00 grep http
+
+Verify PHP is enabled by going to http://localhost/phpinfo.php where localhost is the hostname of your system.
+MediaWiki
+There is no Solaris package for MediaWiki. Just download the PHP scripts from Download and follow the installation instructions at http://meta.wikimedia.org/wiki/Help:Installation Untar the files to /var/apache/htdocs/wiki (or /var/apache2/htdocs/wiki when using Apache2) such that you have file /var/apache/htdocs/wiki/index.php (you will need to move the files up a directory level). Then fix permissions as follows:
+Apache/PHP4 Version:
+
+ # cd /var/apache/htdocs/wiki
+ # chown -R apache:apache *
+ # chmod -R o-rwx *
+ # chmod -R g+rw config
+ 
+
+Apache2/PHP5 Version:
+
+ # cd /var/apache2/htdocs/wiki
+ # chown -R webservd:webservd *
+ # chmod -R o-rwx *
+ # chmod -R g+rw config
+ 
+
+Start the web browser and install and configure from there: http://localhost/wiki/config/ I kept the defaults for the database and sysop and set the password. The sysop and database password may be the same, but don't use root's password (as it's saved in cleartext in LocalSettings.php). After filling out the form click INSTALL. If you are successfully connected to the database, then copy and save the local settings:
+Apache/PHP4:
+
+# cd /var/apache/htdocs/wiki
+# mv config/LocalSettings.php .
+# cp LocalSettings.php LocalSettings.php.original
+
+Apache2/PHP5:
+
+# cd /var/apache2/htdocs/wiki
+# mv config/LocalSettings.php .
+# cp LocalSettings.php LocalSettings.php.original
+
+I made these customizations to LocalSettings.php:
+
+$wgLogo = "$wgScriptPath/images/logo.jpg";
+$wgEnableUploads = true;
+$wgEnableUploads  = true;
+$wgUseImageResize = true;
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/sfw/bin/convert";
+
+Now test by going to the main wiki page: http://localhost/wiki/ (where localhost is your system's hostname)
+After customizing, it's a good idea to backup your LocalSettings.php file and dump the database to a safe location:
+Apache/PHP4:
+
+# cp /var/apache/htdocs/wiki/LocalSettings.php LocalSettings.php.backup
+# /usr/sfw/bin/mysqldump --user=wikiuser --password=YOURPWHERE wikidb |gzip -9 >wiki-mysql-dump.txt.gz
+
+Apache2/PHP5:
+
+# cp /var/apache2/htdocs/wiki/LocalSettings.php LocalSettings.php.backup
+# /usr/sfw/bin/mysqldump --user=wikiuser --password=YOURPWHERE wikidb |gzip -9 >wiki-mysql-dump.txt.gz
+
+Security considerations
+Security Considerations
+As Apache and MediWiki is web-facing software, you should consider security, especially if it's on the public Internet. Keeping the software up-to-date is an important part of security. The following tips should help secure your site:
+Remove or rename phpinfo.php, as it leaks valuable information about your web server.
+Update your Apache and MySQL software with security patches, if any, from SunSolve. Solaris 10 uses Apache 1.3.3, MySQL 4.0.15, and PHP 4.3.2. For example, MySQL for Solaris 10 has a patch with several security fixes (patch 120292 SPARC or 120293 x86).
+You may want to download and compile the latest PHP software from www.php.net. The command line used to configure PHP is given by the phpinfo.php script. For Solaris 10 it is:
+
+./configure --disable-cli --with-apxs=/usr/apache/bin/apxs --with-config-file-path=/etc/apache \
+            --with-mysql --enable-track-vars --prefix=/opt/sfw
+
+Monitor MediaWiki for security updates.
+See also
+For more customizations and information see
+LocalSettings.php
+Manual:Running MediaWiki on Solaris 9
+External links
+This original article, by Dan Anderson
+BigAdmin lots of tips on Sun Solaris
+
+
+
+
+
+
