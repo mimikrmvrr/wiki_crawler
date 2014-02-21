@@ -136,4 +136,29 @@ class TestSimpleNumber < Test::Unit::TestCase
                   ["и на openfmi", 1]],
                  frequencies)
   end
+
+  def test_crawler_category
+    frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 0) 
+    assert_equal([["място", 7],
+                  ["acm", 7],
+                  ["букурещ", 5],
+                  ["регионалите", 5],
+                  ["index", 5],
+                  ["fmi", 4],
+                  ["sofia", 4],
+                  ["club", 4],
+                  ["класиране", 4],
+                  ["финали", 4],
+                  ["uni", 4],
+                  ["клуба", 4],
+                  ["фми", 3],
+                  ["финалите", 3],
+                  ["красимир", 3],
+                  ["icpc", 3],
+                  ["baylor", 3],
+                  ["report", 3],
+                  ["csclub", 3],
+                  ["edu", 3]],
+                 frequencies)
+  end
 end

@@ -223,7 +223,7 @@ class Crawler
         current_page.create_local_file
         text = ""
         File.open(current_page.file_name) { |file|  text = file.read }
-        counter = (keywords ? Searcher.new(keywords, text) : Counter.new(text))
+        counter = (keywords ? Searcher.new(keywords, text) : TextParser.new(text))
         #puts counter.frequencies
         frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count }
         #puts frequencies
