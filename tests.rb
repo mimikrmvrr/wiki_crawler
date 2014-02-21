@@ -126,6 +126,6 @@ class TestSimpleNumber < Test::Unit::TestCase
     assert_equal({"this is unfair to have so long long words"=>2,
                   "it is unfair unfair unfair"=>3,
                   "there must be words"=>1},
-                 searcher.find)
+                 searcher.frequencies)
   end
 end

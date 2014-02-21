@@ -22,50 +22,56 @@ page = Page.new(PAGE_URL)
 
 #puts page
 
-frequencies = Hash.new(0)
+# frequencies = Hash.new(0)
 
-queue = [page]
-until queue.empty?
-  current_page = queue.shift
-  #puts current_page.html
-  if current_page.level <= level
-    current_page.create_local_file
-    text = ""
-    File.open(current_page.file_name) { |file|  text = file.read }
-    counter = TextParser.new text
-    #puts counter.frequencies
-    frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count }
-    #puts frequencies
-    queue << current_page.neighbours
-    queue.flatten!
-  else
-    break
-  end
-end
-puts frequencies.sort_by { |word, count| -count }.first 20
+# queue = [page]
+# until queue.empty?
+#   current_page = queue.shift
+#   #puts current_page.html
+#   if current_page.level <= level
+#     current_page.create_local_file
+#     text = ""
+#     File.open(current_page.file_name) { |file|  text = file.read }
+#     counter = TextParser.new text
+#     #puts counter.frequencies
+#     frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count }
+#     #puts frequencies
+#     queue << current_page.neighbours
+#     queue.flatten!
+#   else
+#     break
+#   end
+# end
+# puts frequencies.sort_by { |word, count| -count }.first 20
 
-matching_queue = [page]
-matchings = Hash.new(0)
-
-until matching_queue.empty?
-  current_page = matching_queue.shift
-  #puts current_page.html
-  if current_page.level <= level
-    current_page.create_local_file
-    text = ""
-    File.open(current_page.file_name) { |file|  text = file.read }
-    searcher = Searcher.new(keywords, text)
-    #puts counter.frequencies
-    matchings.merge!(searcher.find) { |word, current_count, new_count| current_count + new_count }
-    #puts frequencies
-    matching_queue << current_page.neighbours
-    matching_queue.flatten!
-  else
-    break
-  end
+if keywords
+  puts Crawler.new.crawl page, level, keywords
+else
+  puts Crawler.new.crawl.page, lavel
 end
 
-puts matchings.sort_by { |word, count| -count }.first 20
+# matching_queue = [page]
+# matchings = Hash.new(0)
+
+# until matching_queue.empty?
+#   current_page = matching_queue.shift
+#   #puts current_page.html
+#   if current_page.level <= level
+#     current_page.create_local_file
+#     text = ""
+#     File.open(current_page.file_name) { |file|  text = file.read }
+#     searcher = Searcher.new(keywords, text)
+#     #puts counter.frequencies
+#     matchings.merge!(searcher.find) { |word, current_count, new_count| current_count + new_count }
+#     #puts frequencies
+#     matching_queue << current_page.neighbours
+#     matching_queue.flatten!
+#   else
+#     break
+#   end
+# end
+
+# puts matchings.sort_by { |word, count| -count }.first 20
 # text = ""
 # File.open(page.file_name) { |file|  text = file.read }
 

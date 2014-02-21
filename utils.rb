@@ -199,13 +199,41 @@ class Searcher
     @phrases = TextParser.new(text).phrases
   end
 
-  def find
+  def frequencies
     matches = Hash.new(0)
     @phrases.each do |phrase|
       frequencies = TextParser.new(phrase).split.select { |word| @kwords.include? word }.size
       matches[phrase] += frequencies if frequencies > 0
     end
     matches
+  end
+end
+
+class Crawler
+  def crawl(page, level, *keywords)
+    if keywords
+      keywords = keywords.first
+    end
+    frequencies = Hash.new(0)
+    queue = [page]
+    #klass = (type == :category ? Counter : Searcher)
+    until queue.empty?
+      current_page = queue.shift
+      if current_page.level <= level
+        current_page.create_local_file
+        text = ""
+        File.open(current_page.file_name) { |file|  text = file.read }
+        counter = (keywords ? Searcher.new(keywords, text) : Counter.new(text))
+        #puts counter.frequencies
+        frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count }
+        #puts frequencies
+        queue << current_page.neighbours
+        queue.flatten!
+      else
+        break
+      end
+    end
+    frequencies.sort_by { |word, count| -count }.first 20
   end
 end
 
