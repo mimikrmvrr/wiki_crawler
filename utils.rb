@@ -203,7 +203,7 @@ class Searcher
       frequencies = TextParser.new(phrase).split.select { |word| @kwords.include? word }.size
       f[phrase] += frequencies if frequencies > 0
     end
-    f.sort_by { |word, count| -count }
+    f
   end
 end
 

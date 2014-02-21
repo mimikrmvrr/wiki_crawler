@@ -44,19 +44,41 @@ until queue.empty?
 end
 puts frequencies.sort_by { |word, count| -count }.first 20
 
-text = ""
-File.open(page.file_name) { |file|  text = file.read }
+matching_queue = [page]
+matchings = Hash.new(0)
 
-# def find(keywords, text)
-#   kwords, phrases, f = TextParser.new(keywords).split, TextParser.new(text).phrases, Hash.new(0)
-#   puts kwords[0]
-#   phrases.each do |phrase|
-#     frequencies = TextParser.new(phrase).split.select { |word| kwords.include? word }.size
-#     f[phrase] += frequencies if frequencies > 0
-#   end
-#   f.sort_by { |word, count| -count }
-# end
+until matching_queue.empty?
+  current_page = matching_queue.shift
+  #puts current_page.html
+  if current_page.level <= level
+    current_page.create_local_file
+    text = ""
+    File.open(current_page.file_name) { |file|  text = file.read }
+    searcher = Searcher.new(keywords, text)
+    #puts counter.frequencies
+    matchings.merge!(searcher.find) { |word, current_count, new_count| current_count + new_count }
+    #puts frequencies
+    matching_queue << current_page.neighbours
+    matching_queue.flatten!
+  else
+    break
+  end
+end
 
-searcher = Searcher.new(keywords, text)
+puts matchings.sort_by { |word, count| -count }.first 20
+# text = ""
+# File.open(page.file_name) { |file|  text = file.read }
 
-puts searcher.find unless keywords.empty?
+# # def find(keywords, text)
+# #   kwords, phrases, f = TextParser.new(keywords).split, TextParser.new(text).phrases, Hash.new(0)
+# #   puts kwords[0]
+# #   phrases.each do |phrase|
+# #     frequencies = TextParser.new(phrase).split.select { |word| kwords.include? word }.size
+# #     f[phrase] += frequencies if frequencies > 0
+# #   end
+# #   f.sort_by { |word, count| -count }
+# # end
+
+# searcher = Searcher.new(keywords, text)
+
+# puts searcher.find unless keywords.empty?
