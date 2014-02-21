@@ -146,6 +146,19 @@ WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accor
   "worst", "would", "wouldn", "yes", "yet", "you", "your", "yours", "yourself", "yourselves", "zero"]
 
 
+class Counter
+  def initialize(text)
+    @words = text.split(%r{\W+}).map(&:downcase)
+  end
+
+  def frequencies
+    frequencies = Hash.new(0)
+    @words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
+    frequencies.sort_by { |word, count| count }.reverse
+  end
+end
+
+
 # page = Nokogiri::HTML(open(PAGE_URL))
 # page_title = page.title
 # h1 = page.css('h1').text

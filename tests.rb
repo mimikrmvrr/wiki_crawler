@@ -58,7 +58,7 @@ class TestSimpleNumber < Test::Unit::TestCase
   def test_pages
     page = Page.new("http://www.mediawiki.org/wiki/Installation")
     assert_equal("Manual:Installation guide", page.heading)
-    assert_equal("wiki_Installation", page.file_name)
+    assert_equal("data/pages/wiki_Installation", page.file_name)
     assert_equal(["/wiki/Category:Installation",
       "/wiki/Manual:Installation_guide/ca",
       "/wiki/Manual:Installation_guide/cs",
@@ -192,4 +192,33 @@ class TestSimpleNumber < Test::Unit::TestCase
       "/wiki/Project:General_disclaimer"], page.neighbours.map { |page| page.name })
   end
 
+  def test_counter_ignore_words
+    text = "This name is a or a is they can be here next"
+    counter = Counter.new(text)
+    assert_equal([], counter.frequencies)
+  end
+
+  def test_counter
+    text = "Badges are primarily shown on the TopCoder websites within a member profile (Studio or Software) or copilot profile.
+    They contain the achievement name and date the achievement was earned in a box that is visible upon mouse hover."
+    counter = Counter.new(text)
+    assert_equal([["profile", 2],
+        ["achievement", 2],
+        ["software", 1],
+        ["box", 1],
+        ["earned", 1],
+        ["date", 1],
+        ["mouse", 1],
+        ["copilot", 1],
+        ["visible", 1],
+        ["studio", 1],
+        ["hover", 1],
+        ["member", 1],
+        ["websites", 1],
+        ["topcoder", 1],
+        ["shown", 1],
+        ["primarily", 1],
+        ["badges", 1]],
+      counter.frequencies)
+  end
 end
