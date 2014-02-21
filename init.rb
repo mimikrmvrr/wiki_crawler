@@ -48,7 +48,7 @@ text = ""
 File.open(page.file_name) { |file|  text = file.read }
 
 def find(keywords, text)
-  kwords, words, f = keywords.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).map { |x| Regexp.new(x) }, text.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s), Hash.new(0)
+  kwords, words, f = TextParser.new(keywords).split.map { |x| Regexp.new(x) }, TextParser.new(text).split, Hash.new(0)
   kwords.each { |kword| words.each { |word| f[kword] += 1 if word =~ kword } }
   [f.values.inject(0) { |a, x| a + x }, f, f.size]
 end
