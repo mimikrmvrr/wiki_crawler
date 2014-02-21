@@ -17,9 +17,9 @@ page.create_local_file
 
 text = ""
 File.open(page.file_name) { |file|  text = file.read }
-words = text.split(%r{\W+})
+words = text.split(%r{\W+}).map(&:downcase)
 
 frequencies = Hash.new(0)
-words.each { |word| frequencies[word] += 1 }
+words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
 
 puts frequencies.sort_by(&:last)
