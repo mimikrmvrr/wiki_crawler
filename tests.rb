@@ -94,4 +94,29 @@ class TestSimpleNumber < Test::Unit::TestCase
         "hover"=>1},
       counter.frequencies)
   end
+
+  def test_text_parser
+    parser = TextParser.new("Намаляне на хардкоднатите неща. Все още има доста.")
+    assert_equal(["намаляне", "на", "хардкоднатите", "неща", "все", "още", "има", "доста"], parser.split)
+    assert_equal(["намаляне на хардкоднатите неща", "все още има доста"], parser.phrases)
+  end
+
+  def test_text_parser_latinic
+    parser = TextParser.new("this is unfair")
+    assert_equal(["this", "is", "unfair"], parser.split)
+    assert_equal(["this is unfair"], parser.phrases)
+  end
+
+  def test_text_parser_frequencies
+    parser = TextParser.new("this is unfair to have so long long words.
+         It is unfair unfair unfair! there must be words")
+    assert_equal({"unfair"=>4, "long"=>2, "words"=>2}, parser.frequencies)
+  end
+
+  def test_text_parser_frequencies_cyrillic
+    parser = TextParser.new("Тук ще се говори за състезания по програмиране. Защото състезанията по програмиране са важни.
+          -  Трябва да се правят състезания по програмиране!")
+    assert_equal({"говори"=>1, "състезания"=>2, "програмиране"=>3, "състезанията"=>1, "важни"=>1, "правят"=>1},
+                  parser.frequencies)
+  end
 end
