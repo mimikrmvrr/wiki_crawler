@@ -23,17 +23,17 @@ end
 BASE_URL = Url.new(PAGE_URL).base_url
 DATA_DIR = "data/pages"
 
-def get_links(page)
-  links = {}
-  page.xpath('//a[@href]').each do |link|
-    links[link.text.strip] = link['href']
-  end
-  links
-end
+# def get_links(page)
+#   links = {}
+#   page.xpath('//a[@href]').each do |link|
+#     links[link.text.strip] = link['href']
+#   end
+#   links
+# end
 
-def internal_links(links)
-  links.select { |link_name, link| link.start_with?('/') and not link.start_with?('//') }
-end
+# def internal_links(links)
+#   links.select { |link_name, link| link.start_with?('/') and not link.start_with?('//') }
+# end
 
 def get_absolute_url(link)
   "#{BASE_URL}#{link}"
@@ -52,8 +52,13 @@ class Page
   end
 
   def neighbours
-    links = get_links(@html.css('div#mw-content-text'))
-    neighbours = internal_links(links).values.map do |name|
+    links = {}
+    @html.css('div#mw-content-text').xpath('//a[@href]').each do |link|
+      links[link.text.strip] = link['href']
+    end
+    #links = get_links()
+    internal_links = links.select { |link_name, link| link.start_with?('/') and not link.start_with?('//') }
+    neighbours = internal_links.values.map do |name|
       if ObjectSpace.each_object(Page).select { |obj| obj.name == name }.empty?
         #puts get_absolute_url(name)
         Page.new(get_absolute_url(name))
