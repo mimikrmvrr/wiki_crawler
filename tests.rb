@@ -128,4 +128,12 @@ class TestSimpleNumber < Test::Unit::TestCase
                   "there must be words"=>1},
                  searcher.frequencies)
   end
+
+  def test_crawler
+    frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/Spoj0"), 0, "openfmi") 
+    assert_equal([["openfmi", 2],
+                  ["можете да подавате в страницата на проекта в openfmi", 1],
+                  ["и на openfmi", 1]],
+                 frequencies)
+  end
 end
