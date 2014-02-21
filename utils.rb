@@ -200,12 +200,12 @@ class Searcher
   end
 
   def find
-    f = Hash.new(0)
+    matches = Hash.new(0)
     @phrases.each do |phrase|
       frequencies = TextParser.new(phrase).split.select { |word| @kwords.include? word }.size
-      f[phrase] += frequencies if frequencies > 0
+      matches[phrase] += frequencies if frequencies > 0
     end
-    f
+    matches
   end
 end
 

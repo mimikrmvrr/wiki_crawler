@@ -119,4 +119,13 @@ class TestSimpleNumber < Test::Unit::TestCase
     assert_equal({"говори"=>1, "състезания"=>2, "програмиране"=>3, "състезанията"=>1, "важни"=>1, "правят"=>1},
                   parser.frequencies)
   end
+
+  def test_search
+    searcher = Searcher.new "words unfair" , "this is unfair to have so long long words.
+         It is unfair unfair unfair! there must be words"
+    assert_equal({"this is unfair to have so long long words"=>2,
+                  "it is unfair unfair unfair"=>3,
+                  "there must be words"=>1},
+                 searcher.find)
+  end
 end
