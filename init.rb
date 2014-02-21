@@ -40,14 +40,28 @@ def get_absolute_url(link)
 end
 
 class Page
+  attr_reader :name
+
   def initialize(url)
-    @html = Nokogiri::HTML(open(url))
-    @name = Url.new(url).path
+    begin
+      @html = Nokogiri::HTML(open(url))
+      @name = Url.new(url).path
+    rescue Exception=>e
+      puts "Cannot open #{url}"
+    end
   end
 
   def neighbours
     links = get_links(@html.css('div#mw-content-text'))
-    @neighbours = internal_links(links).values
+    neighbours = internal_links(links).values.map do |name|
+      if ObjectSpace.each_object(Page).select { |obj| obj.name == name }.empty?
+        #puts get_absolute_url(name)
+        Page.new(get_absolute_url(name))
+      else
+        ObjectSpace.each_object(Page).select { |obj| obj.name == name }.first
+      end
+    end
+    @neighbours = neighbours.select { |obj| not obj.name.nil? }
   end
 
   def create_local_file
