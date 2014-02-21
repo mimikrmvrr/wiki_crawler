@@ -15,6 +15,9 @@ BASE_URL = Url.new(PAGE_URL).base_url
 print "Depth level:"
 level = gets.to_i
 
+print "Keywords to serach:"
+keywords = gets
+
 page = Page.new(PAGE_URL)
 
 #puts page
@@ -41,8 +44,14 @@ until queue.empty?
 end
 puts frequencies.sort_by { |word, count| -count }.first 20
 
+text = ""
+File.open(page.file_name) { |file|  text = file.read }
+
 def find(keywords, text)
-  kwords, words, f = keywords.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).map { |x| Regexp.new(x) }, text.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s), {}
+  kwords, words, f = keywords.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).map { |x| Regexp.new(x) }, text.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s), Hash.new(0)
   kwords.each { |kword| words.each { |word| f[kword] += 1 if word =~ kword } }
   [f.values.inject(0) { |a, x| a + x }, f, f.size]
 end
+
+
+puts find(keywords, text) unless keywords.empty?

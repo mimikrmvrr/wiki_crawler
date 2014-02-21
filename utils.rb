@@ -27,11 +27,11 @@ class LinkUtils
     #page.xpath("//*[@class='mw-pt-languages-list autonym']").map(&:remove) if page.xpath("//*[@class='mw-pt-languages-list']")
     #page.xpath("//*[@class='nmbox']").remove if page.xpath("//*[@class='nmbox']")
     #age.css("div#mw-content-text").remove.xpath("//*[@id='footer-info']")
-    puts page.xpath('//a[@href]')
+    #puts page.xpath('//a[@href]')
     page.xpath('.//a[@href]').each do |link|
       links[link.text.strip] = link['href']
     end
-    puts links
+    #puts links
     links
   end
 
@@ -155,7 +155,10 @@ WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accor
   "wherever", "whether", "which", "whichever", "while", "whilst", "whither", "who", "whoever", "whole", "wholly", "whom",
   "whomever", "whose", "why", "will", "willing", "wish", "with", "within", "without", "wonder", "wondered", "wondering", "won",
   "worst", "would", "wouldn", "yes", "yet", "you", "your", "yours", "yourself", "yourselves", "zero", "на", "в", "и", "от", "е", "http",
-  "html", "то", "за", "при", "по", "го", "bg", "en", "мо", "са", "ви", "не", "се", "d0", "d1", "b5", "b8", "към", "b0", "1", "80", "b3"]
+  "html", "то", "за", "при", "по", "го", "bg", "en", "мо", "са", "ви", "не", "се", "d0", "d1", "b5", "b8", "към", "b0", "1", "80", "b3",
+  "ro", "po", "ро", "2", "eet", "си", "тази", "това", "ок", "00", "но", "ще", "или", "т", "22", "да", "в", "нещо", 'с', "със", "във",
+  "трябва", "като", "я", "и", "защото", "защо", "още", 'ако', "има", "30", 'а', "че", "може", "можете", "някои", "някоя", "някое", "някой",
+  "неща", "други", "др", "неща", "нещата", "около", "ми"]
 
 
 # class Counter
