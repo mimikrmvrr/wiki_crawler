@@ -1,6 +1,7 @@
 require './init'
 require "test/unit"
 
+
 class TestSimpleNumber < Test::Unit::TestCase
 
   def test_get_base_url
@@ -21,7 +22,7 @@ class TestSimpleNumber < Test::Unit::TestCase
     </body>
 </html>"
     expected_links = {"Foo"=>"#foo", "Bar"=>"#bar"}
-    #assert_equal(expected_links, get_links(Nokogiri::HTML(html)))
+    assert_equal(expected_links, LinkUtils.get_links(Nokogiri::HTML(html)))
   end
 
   def test_internal_links
@@ -34,7 +35,7 @@ class TestSimpleNumber < Test::Unit::TestCase
     </body>
 </html>"
     expected_links = {"Main page"=>'/main'}
-    #assert_equal(expected_links, internal_links(get_links(Nokogiri::HTML(html))))
+    assert_equal(expected_links, LinkUtils.internal_links(LinkUtils.get_links(Nokogiri::HTML(html))))
   end
 
   def test_absolute_urls
@@ -42,8 +43,8 @@ class TestSimpleNumber < Test::Unit::TestCase
     #expected_urls = ['http://www.mediawiki.org/wiki/Installation#foo', 'http://www.mediawiki.org/wiki/Installation#bar', 'http://www.mediawiki.org/main']
     #assert_equal('http://www.mediawiki.org/wiki/Installation#foo', get_absolute_url("#foo"))
     #assert_equal('http://www.mediawiki.org/wiki/Installation#bar', get_absolute_url("#bar"))
-    assert_equal('http://www.mediawiki.org/main', get_absolute_url("/main"))
-    assert_equal('http://www.mediawiki.org/foo', get_absolute_url("/foo"))
+    assert_equal('http://www.mediawiki.org/main', LinkUtils.get_absolute_url("/main"))
+    assert_equal('http://www.mediawiki.org/foo', LinkUtils.get_absolute_url("/foo"))
   end
 
   # def test_absolute_urls_uniq
