@@ -5,6 +5,12 @@ require 'nokogiri'
 require 'open-uri'
 require './utils'
 
-PAGE_URL = "http://www.mediawiki.org/wiki/Installation"
-BASE_URL = Url.new(PAGE_URL).base_url
 DATA_DIR = "data/pages"
+
+print "Enter a url: "
+
+PAGE_URL = gets
+BASE_URL = Url.new(PAGE_URL).base_url
+
+page = Page.new(PAGE_URL)
+page.create_local_file

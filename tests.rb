@@ -56,7 +56,7 @@ class TestSimpleNumber < Test::Unit::TestCase
   # end
 
   def test_pages
-    page = Page.new(PAGE_URL)
+    page = Page.new("http://www.mediawiki.org/wiki/Installation")
     assert_equal("Manual:Installation guide", page.heading)
     assert_equal("wiki_Installation", page.file_name)
     assert_equal(["/wiki/Category:Installation",

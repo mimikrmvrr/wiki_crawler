@@ -91,7 +91,8 @@ class Page
   end
 
   def file_name
-    @name.gsub('/', '_')[1..-1]
+    suffix = @name.gsub('/', '_')[1..-1]
+    "#{DATA_DIR}/#{suffix}"
   end
 end
 
