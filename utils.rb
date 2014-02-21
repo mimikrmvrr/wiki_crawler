@@ -187,7 +187,23 @@ class TextParser
   end
 
   def phrases
-    @text.split(/[[:punct:]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).select { |phrase| not phrase.empty? }
+    @text.split(/[[:punct:]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).select { |phrase| not phrase.empty? }.map(&:strip)
+  end
+end
+
+class Searcher
+  def initialize(keywords, text)
+    @kwords = TextParser.new(keywords).split
+    @phrases = TextParser.new(text).phrases
+  end
+
+  def find
+    f = Hash.new(0)
+    @phrases.each do |phrase|
+      frequencies = TextParser.new(phrase).split.select { |word| @kwords.include? word }.size
+      f[phrase] += frequencies if frequencies > 0
+    end
+    f.sort_by { |word, count| -count }
   end
 end
 
