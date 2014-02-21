@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
+require 'active_support/core_ext'
 
 
 class Url
@@ -157,15 +158,30 @@ WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accor
   "html", "то", "за", "при", "по", "го", "bg", "en", "мо", "са", "ви", "не", "се", "d0", "d1", "b5", "b8", "към", "b0", "1", "80", "b3"]
 
 
-class Counter
+# class Counter
+#   def frequencies(text)
+#     words = TextParser.new(text).split
+#     frequencies = Hash.new(0)
+#     words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
+#     frequencies
+#   end
+# end
+
+class TextParser
   def initialize(text)
-    @words = text.split(/[^[[:alnum:]]]+/).map(&:downcase)
+    @text = text
+  end
+
+  def split
+    @text.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s)
   end
 
   def frequencies
+    words = split
     frequencies = Hash.new(0)
-    @words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
+    words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
     frequencies
   end
 end
+
 

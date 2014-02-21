@@ -67,14 +67,14 @@ class TestSimpleNumber < Test::Unit::TestCase
 
   def test_counter_ignore_words
     text = "This name is a or a is they can be here next"
-    counter = Counter.new(text)
+    counter = TextParser.new text
     assert_equal({}, counter.frequencies)
   end
 
   def test_counter
     text = "Badges are primarily shown on the TopCoder websites within a member profile (Studio or Software) or copilot profile.
     They contain the achievement name and date the achievement was earned in a box that is visible upon mouse hover."
-    counter = Counter.new(text)
+    counter = TextParser.new text
     assert_equal({"badges"=>1,
         "primarily"=>1,
         "shown"=>1,

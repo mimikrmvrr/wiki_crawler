@@ -29,7 +29,7 @@ until queue.empty?
     current_page.create_local_file
     text = ""
     File.open(current_page.file_name) { |file|  text = file.read }
-    counter = Counter.new text
+    counter = TextParser.new text
     #puts counter.frequencies
     frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count }
     #puts frequencies
@@ -40,3 +40,9 @@ until queue.empty?
   end
 end
 puts frequencies.sort_by { |word, count| -count }.first 20
+
+def find(keywords, text)
+  kwords, words, f = keywords.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).map { |x| Regexp.new(x) }, text.split(/[^[[:alnum:]]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s), {}
+  kwords.each { |kword| words.each { |word| f[kword] += 1 if word =~ kword } }
+  [f.values.inject(0) { |a, x| a + x }, f, f.size]
+end
