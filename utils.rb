@@ -185,6 +185,10 @@ class TextParser
     words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
     frequencies
   end
+
+  def phrases
+    @text.split(/[[:punct:]]+/).map(&:mb_chars).map(&:downcase).map(&:to_s).select { |phrase| not phrase.empty? }
+  end
 end
 
 

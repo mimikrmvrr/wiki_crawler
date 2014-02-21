@@ -48,9 +48,13 @@ text = ""
 File.open(page.file_name) { |file|  text = file.read }
 
 def find(keywords, text)
-  kwords, words, f = TextParser.new(keywords).split.map { |x| Regexp.new(x) }, TextParser.new(text).split, Hash.new(0)
-  kwords.each { |kword| words.each { |word| f[kword] += 1 if word =~ kword } }
-  [f.values.inject(0) { |a, x| a + x }, f, f.size]
+  kwords, phrases, f = TextParser.new(keywords).split, TextParser.new(text).phrases, Hash.new(0)
+  puts kwords[0]
+  phrases.each do |phrase|
+    frequencies = TextParser.new(phrase).split.select { |word| kwords.include? word }.size
+    f[phrase] += frequencies if frequencies > 0
+  end
+  f
 end
 
 
