@@ -1,8 +1,6 @@
 require './init'
 require "test/unit"
 
-PAGE_URL = "http://www.mediawiki.org/wiki/Installation"
-
 class TestSimpleNumber < Test::Unit::TestCase
 
   def test_get_base_url
@@ -35,15 +33,15 @@ class TestSimpleNumber < Test::Unit::TestCase
         <a href='/main'>Main page</a>
     </body>
 </html>"
-    expected_links = {"Foo"=>"#foo", "Bar"=>"#bar", "Main page"=>'/main'}
+    expected_links = {"Main page"=>'/main'}
     assert_equal(expected_links, internal_links(get_links(Nokogiri::HTML(html))))
   end
 
   def test_absolute_urls
     #links = {"Foo"=>"#foo", "Bar"=>"#bar", "Main page"=>'/main'}
     #expected_urls = ['http://www.mediawiki.org/wiki/Installation#foo', 'http://www.mediawiki.org/wiki/Installation#bar', 'http://www.mediawiki.org/main']
-    assert_equal('http://www.mediawiki.org/wiki/Installation#foo', get_absolute_url("#foo"))
-    assert_equal('http://www.mediawiki.org/wiki/Installation#bar', get_absolute_url("#bar"))
+    #assert_equal('http://www.mediawiki.org/wiki/Installation#foo', get_absolute_url("#foo"))
+    #assert_equal('http://www.mediawiki.org/wiki/Installation#bar', get_absolute_url("#bar"))
     assert_equal('http://www.mediawiki.org/main', get_absolute_url("/main"))
     assert_equal('http://www.mediawiki.org/foo', get_absolute_url("/foo"))
   end
@@ -60,6 +58,141 @@ class TestSimpleNumber < Test::Unit::TestCase
     page = Page.new(PAGE_URL)
     assert_equal("Manual:Installation guide", page.heading)
     assert_equal("wiki_Installation", page.file_name)
+    assert_equal(["/wiki/Category:Installation",
+ "/wiki/Manual:Installation_guide/ca",
+ "/wiki/Manual:Installation_guide/cs",
+ "/wiki/Manual:Installation_guide/da",
+ "/wiki/Manual:Installation_guide/de",
+ "/wiki/Manual:Installation_guide/en-gb",
+ "/wiki/Manual:Installation_guide/es",
+ "/wiki/Manual:Installation_guide/fr",
+ "/wiki/Manual:Installation_guide/he",
+ "/wiki/Manual:Installation_guide/id",
+ "/wiki/Manual:Installation_guide/it",
+ "/wiki/Manual:Installation_guide/ja",
+ "/wiki/Manual:Installation_guide/ko",
+ "/wiki/Manual:Installation_guide/pl",
+ "/wiki/Manual:Installation_guide/pt",
+ "/wiki/Manual:Installation_guide/pt-br",
+ "/wiki/Manual:Installation_guide/ro",
+ "/wiki/Manual:Installation_guide/ru",
+ "/wiki/Manual:Installation_guide/uk",
+ "/wiki/Manual:Installation_guide/yue",
+ "/wiki/Manual:Installation_guide/zh",
+ "/wiki/Manual:Installation_guide/zh-cn",
+ "/wiki/Manual:Installation_guide/zh-hans",
+ "/wiki/Manual:Installation_guide/zh-hant",
+ "/wiki/Manual:Installation_guide/zh-tw",
+ "/wiki/Special:MyLanguage/MediaWiki",
+ "/wiki/Special:MyLanguage/Manual:What_is_MediaWiki%3F",
+ "/wiki/Special:MyLanguage/Documentation",
+ "/wiki/Special:MyLanguage/Customization",
+ "/wiki/Special:MyLanguage/Download",
+ "/wiki/Special:MyLanguage/Communication",
+ "/wiki/Special:MyLanguage/Development",
+ "/wiki/Manual:What_is_MediaWiki%3F",
+ "/wiki/Manual:MediaWiki_feature_list",
+ "/wiki/Special:MyLanguage/Manual:Installation_requirements",
+ "/wiki/Download",
+ "/wiki/Manual:Installing_MediaWiki",
+ "/wiki/Manual:Configuring_MediaWiki",
+ "/wiki/Special:MyLanguage/software_bundles",
+ "/wiki/Special:MyLanguage/Hosting_services",
+ "/w/index.php?title=Manual:Installation_guide&veaction=edit&section=12",
+ "/w/index.php?title=Manual:Installation_guide&action=edit&section=12",
+ "/wiki/Special:MyLanguage/Manual:Upgrading",
+ "/wiki/Special:MyLanguage/Download",
+ "/wiki/Special:MyLanguage/SQLite",
+ "/wiki/Special:MyLanguage/Manual:image_thumbnailing",
+ "/wiki/Special:MyLanguage/Texvc",
+ "/wiki/Special:MyLanguage/Manual:Installation_requirements",
+ "/wiki/Special:MyLanguage/Download",
+ "/wiki/Special:MyLanguage/Manual:Config_script",
+ "/wiki/Special:MyLanguage/Manual:What_is_MediaWiki%3F",
+ "/wiki/Special:MyLanguage/Manual:MediaWiki_feature_list",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki",
+ "/wiki/Special:MyLanguage/Manual:Config_script",
+ "/wiki/Special:MyLanguage/Manual:Configuring_MediaWiki",
+ "/wiki/Special:MyLanguage/Manual:Extensions",
+ "/wiki/Special:MyLanguage/Software_appliances",
+ "/wiki/Special:MyLanguage/How_to_become_a_MediaWiki_hacker",
+ "/wiki/Special:MyLanguage/mediawiki-vagrant",
+ "/wiki/Special:MyLanguage/Download_from_Git",
+ "/wiki/Special:MyLanguage/Manual:Wiki_on_a_stick",
+ "/wiki/Special:MyLanguage/Manual:Configuration",
+ "/wiki/Special:MyLanguage/Manual:Administrators",
+ "/wiki/Special:MyLanguage/Project:PD_help/Copying",
+ "/wiki/Special:MyLanguage/FAQ#Installation_and_configuration",
+ "/wiki/Special:MyLanguage/MediaWiki_on_IRC",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_FreeBSD",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_ALT_Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Arch_Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Damnsmalllinux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Debian_GNU/Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Fedora",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Gentoo_Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Mandriva",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Red_Hat_Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Slackware_Linux",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_SuSE_Linux_9.3",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Ubuntu",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Mac_OS_X",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_NetWare",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Solaris",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Solaris_10",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Solaris_9",
+ "/wiki/Special:MyLanguage/Manual:Running_MediaWiki_on_Windows",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki_on_Windows_XP",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki_on_Windows_Server_2003",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki_on_Windows_Server_2008",
+ "/wiki/Special:MyLanguage/Manual:Installing_MediaWiki_on_Windows_Server_2008_R2",
+ "/wiki/Special:MyLanguage/Manual:Newcomers_guide_to_installing_on_Windows",
+ "/wiki/Special:MyLanguage/Manual:Streamlined_Windows_Install_Guide",
+ "/wiki/Special:MyLanguage/Manual:Simple_Windows_Apache_Installation",
+ "/wiki/Special:MyLanguage/MediaWiki_1.19",
+ "/wiki/Special:MyLanguage/Software_bundles",
+ "/wiki/Special:MyLanguage/Hosting_services",
+ "/wiki/Special:MyLanguage/Manual:Before_installing",
+ "/wiki/Special:MyLanguage/Manual:Upgrading",
+ "/wiki/Special:MyLanguage/Manual:Uninstallation",
+ "/wiki/Manual:FAQ",
+ "/w/index.php?title=Special:Translate&group=page-Manual%3AInstallation+guide&language=en&action=page&filter=",
+ "/wiki/Special:Categories",
+ "/w/index.php?title=Special:UserLogin&returnto=Manual%3AInstallation+guide&type=signup",
+ "/w/index.php?title=Special:UserLogin&returnto=Manual%3AInstallation+guide",
+ "/wiki/Manual:Installation_guide",
+ "/wiki/Manual_talk:Installation_guide",
+ "/wiki/Manual:Installation_guide",
+ "/w/index.php?title=Manual:Installation_guide&veaction=edit",
+ "/w/index.php?title=Manual:Installation_guide&action=edit",
+ "/w/index.php?title=Manual:Installation_guide&action=history",
+ "/wiki/MediaWiki",
+ "/wiki/Download",
+ "/wiki/Category:Extensions",
+ "/wiki/Special:MyLanguage/Communication",
+ "/wiki/Help:Contents",
+ "/wiki/Manual:Contents",
+ "/wiki/Project:Support_desk",
+ "/wiki/Bugzilla",
+ "/wiki/Development_statistics",
+ "/wiki/Category:Top_level",
+ "/wiki/Project:Help",
+ "/wiki/Special:RecentChanges",
+ "/wiki/Project:Current_issues",
+ "/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Manual%3AInstallation+guide",
+ "/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Manual%3AInstallation+guide&oldid=909005&writer=rl",
+ "/w/index.php?title=Manual:Installation_guide&printable=yes",
+ "/wiki/Special:WhatLinksHere/Manual:Installation_guide",
+ "/wiki/Special:RecentChangesLinked/Manual:Installation_guide",
+ "/wiki/Special:SpecialPages",
+ "/w/index.php?title=Manual:Installation_guide&oldid=909005",
+ "/w/index.php?title=Manual:Installation_guide&action=info",
+ "/w/index.php?title=Special:Cite&page=Manual%3AInstallation_guide&id=909005",
+ "/wiki/Project:About",
+ "/wiki/Project:General_disclaimer"], page.neighbours)
   end
 
 end

@@ -32,11 +32,11 @@ def get_links(page)
 end
 
 def internal_links(links)
-  links.select { |link_name, link| link.start_with?('/', '#') }
+  links.select { |link_name, link| link.start_with?('/') and not link.start_with?('//') }
 end
 
 def get_absolute_url(link)
-  link.start_with?('#') ? "#{PAGE_URL}#{link}" : "#{BASE_URL}#{link}"
+  "#{BASE_URL}#{link}"
 end
 
 class Page
@@ -45,7 +45,7 @@ class Page
     @name = Url.new(url).path
   end
 
-  def neighbours()
+  def neighbours
     links = get_links(@html.css('div#mw-content-text'))
     @neighbours = internal_links(links).values
   end
