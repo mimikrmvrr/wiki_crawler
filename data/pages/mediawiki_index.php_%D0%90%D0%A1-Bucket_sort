@@ -1,0 +1,131 @@
+АС-Bucket sort
+			от Съзтезателно програмиране
+			
+									Направо към: навигация, търсене			
+			Анализ на алгоритъма:
+Bucket sort е алгоритъм за сортиране, който роботи разделяйки масива на краен брой "кофи". Всяка  
+кофа се сортира поотделно, като могат да се използват различни алгоритми за сортиране или bucket  
+sort да се приложи рекурсивно за всяка кофа. Bucket sort може да се изпълнява с линейно време -  
+(Θ(n)) Всяка кофа трябва да съдържа или един елемнт, или да се сортира.
+Bucket sort работи по следния алгоритъм:
+
+Раздели масива на първоначално празни кофи, всяка за елементи с определени стойности
+Изцикли първоначалният масив, разпределяйки елементите по кофи
+Сортирай всяка не празна кофа
+Сложи елементите от всяка непразна кофа в първоначалният масив.
+Този алгоритъм е особено интуитивен ако трябва да сортираме елементи с много ограничени стойности: например знаем, че ще получаваме числа до 10000 по големина. Тогава си правим масив с 10000 елемента за всяка възможна стойност, като всеки елемент от масива е брояч колко пъти сме срещнали дадена стойност. Накрая сортирания масив се получава като изциклим последователно "кофите" и вземем от всяка стойност толкова елемента колкото е броячът и(бел. ред.). 
+
+
+Файл:AS-Bucket-Sort-Second.png
+Примерен код:
+
+
+#include <iostream.h>
+
+class element            //element 
+{
+  public:
+  int value;
+  element *next;
+  element()
+  {
+    value=NULL;
+    next=NULL;
+  }
+};
+
+class bucket           //bucket containing a perticular range of values   
+{
+  public:
+  element *firstElement;
+  bucket()
+  {
+    firstElement = NULL;
+  }
+};
+
+void main()                     
+{
+  int lowend=0;         // minimum element
+  int highend=100;      //max element  
+  int interval=10;      //number of intervals    
+  const int noBuckets=(highend-lowend)/interval; 
+  bucket *buckets=new bucket[noBuckets];             
+  bucket *temp;
+  for(int a=0;a<noBuckets;a++)   //creation of required buckets    
+  {
+    temp=new bucket;
+    buckets[a]=*temp;
+  }
+  cout<<"-----The Elements to be Sorted using Bucket sort are ------\n";
+  int array[]={12,2,22,33,44,55,66,77,85,87,81,83,89,82,88,86,84,88,99};
+  for(int j=0;j<19;j++)   //sending elments into appropriate buckets
+  {
+    cout<<array[j]<<endl;
+    element *temp,*pre;
+    temp=buckets[array[j]/interval].firstElement;
+    if(temp==NULL)//if it is the first element of the bucket
+    {
+      temp=new element;
+      buckets[array[j]/interval].firstElement=temp;
+      temp->value=array[j];
+    }
+    else
+    {
+      pre=NULL;
+      while(temp!=NULL)    
+   	{
+        if(temp->value>array[j]) break;
+  	  pre=temp;
+   	  temp=temp->next;
+   	}
+      if(temp->value>array[j]) 
+      {
+        if(pre==NULL)  
+        {
+          element *firstNode;
+          firstNode=new element();
+          firstNode->value=array[j];
+          firstNode->next=temp;
+          buckets[array[j]/interval].firstElement=firstNode;
+        }
+        else  //insertion at middle
+        {
+          element *firstNode;
+          firstNode=new element();
+          firstNode->value=array[j];
+          firstNode->next=temp;
+          pre->next=firstNode;
+        }
+      }
+      else// if the new value is to be created at last of bucket
+      {
+        temp=new element;
+        pre->next=temp;
+        temp->value=array[j];
+      }
+    }
+  }
+  cout<<"----------------------The Sorted Elements Are-------------\n";
+  for(int jk=0;jk<10;jk++)
+  {
+    element *temp;
+    temp= buckets[jk].firstElement;
+    while(temp!=NULL)
+    {
+      cout<<"*"<<temp->value<<endl;
+      temp=temp->next;
+    }
+  }
+  cout<<"----------------------------END---------------------------\n";
+}
+
+
+
+
+
+
+Взето от „http://judge.openfmi.net:9080/mediawiki/index.php/%D0%90%D0%A1-Bucket_sort“.
+			Категории: Алгоритми | Сортиране			
+						
+		

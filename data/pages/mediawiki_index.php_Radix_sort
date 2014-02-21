@@ -1,0 +1,158 @@
+Radix sort
+			от Съзтезателно програмиране
+			
+									Направо към: навигация, търсене			
+			За почти всички случаи, стандартните qsort() и std::sort() биха ви свършили работа, но в случай, че се налага да сортирате неотрицателни цели числа, съществува и по-бързо решение.
+
+  Най-бързия алгоритъм за сортиране на неотрицателни цели числа 
+Ще използваме Radix Sort (българския превод на името на алгоритъма е "Метод на бройните системи"). Идеята е, че ще разглеждаме числата в 256-чният им запис и ще ги разпределим в 256 списъка, според последната им цифра. След което ще построим обединението на тези списъци и полученото ще преразпределим според предпоследната цифра. Продължаваме така, докато не изчерпим всички цифри (а те са общо 4, в случая за 32 bit unsigned int).
+
+  Кодът 
+Ето и имплементация на алгоритъма на C, заедно с механизмите за сравнение спрямо STL-ският sort():
+
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+#include <algorithm>
+
+// Sort N elements in the array A. If prov != NULL, it will be
+// used as a temp buffer, or else the required mem will be malloc()d
+void radix_sort(unsigned a[], unsigned n, unsigned prov[])
+{
+	unsigned sizes[256], offsets[256], shift = 0, bucket;
+	unsigned *b;
+	if (!prov) b = (unsigned*) malloc(n * sizeof(unsigned));
+	else b = prov;
+	unsigned *x = a, *y = b, *t;
+	int i, k;
+	for (k = 0; k < 4; k++, shift+=8) {
+		memset(sizes, 0, sizeof(sizes));
+		for (i = 0; i < n; i++) {
+			bucket = 0xff & (x[i] >> shift);
+			sizes[bucket]++;
+		}
+		offsets[0] = 0;
+		for (i = 1; i < 256; i++)
+			offsets[i] = offsets[i-1] + sizes[i-1];
+		for (i = 0; i < n; i++) {
+			bucket = 0xff & (x[i] >> shift);
+			y[offsets[bucket]++] = x[i];
+		}
+		t = x; x = y; y = t;
+	}
+	if (!prov) free(b);
+}
+
+void stl_qsort(unsigned a[], unsigned n, unsigned prov[])
+{
+	std::sort(a, a + n);
+}
+
+unsigned *generate_random(unsigned howmany)
+{
+	unsigned i;
+	unsigned *a = (unsigned *) malloc(howmany * sizeof(unsigned));
+	for (i = 0; i < howmany; i++)
+		a[i] = rand()%21076321;
+	return a;
+}
+
+void benchmark(void (*sortire)(unsigned a[], unsigned n, unsigned *), unsigned a[], unsigned n, const char *name)
+{
+	unsigned *temp = (unsigned *) malloc(n * sizeof(unsigned));
+	unsigned *provided = (unsigned *) malloc(n * sizeof(unsigned));
+	unsigned mtime = 999999999, clk;
+	for (int i = 0; i < 5; i++) {
+		memcpy(temp, a, n * sizeof(unsigned));
+		clk = clock();
+		sortire(temp, n, provided);
+		clk = clock() - clk;
+		if (mtime > clk) mtime = clk;
+	}
+	free(temp);
+	free(provided);
+	std::cout << name << ": minimum time for sorting " << n << " elements: " << mtime/(double) CLOCKS_PER_SEC << "s.\n";
+}
+
+int main(int argc, char **argv)
+{
+	bool quiet = argc == 2 && 0 == strcmp("--quiet", argv[1]);
+	srand(time(NULL));
+	int n;
+	if (!quiet) std::cout << "How many elements? ";
+	std::cin >> n;
+	unsigned * array = generate_random(n);
+	benchmark(stl_qsort, array, n,  "STL's Sort");
+	benchmark(radix_sort, array, n, "Radix Sort");
+	free(array);
+	if (!quiet) system("pause");
+	return 0;
+}
+
+
+  Емпирични резултати 
+Ето и резултатите от тестовете на две конкретни архитектури, при желание, добавете и резултатите от Вашата машина:
+
+
+Компилатор: gcc 3.4
+Машина 1: P4 Xeon 2.4 GHz, 512 KB Cache
+Машина 2: Athlon 64 2.4 GHz, 512 KB Cache
+
+Брой елементи
+P4::std::sort
+P4::Radix Sort
+А64::std::sort
+A64::Radix Sort
+100,000
+0.00s
+0.00s
+0.00s
+0.00s
+200,000
+0.015s
+0.015s
+0.01s
+0.01s
+500,000
+0.047s
+0.062s
+0.04s
+0.03s
+1,000,000
+0.125s
+0.11s
+0.10s
+0.06s
+2,000,000
+0.25s
+0.234s
+0.20s
+0.13s
+5,000,000
+0.625s
+0.609s
+0.54s
+0.33s
+10,000,000
+1.281s
+1.234s
+1.15s
+0.66s
+20,000,000
+2.578s
+2.453s
+2.39s
+1.34s
+50,000,000
+6.64s
+6.187s
+6.29s
+3.37s
+
+Взето от „http://judge.openfmi.net:9080/mediawiki/index.php/Radix_sort“.
+			Категории: Алгоритми | Сортиране			
+						
+		

@@ -1,0 +1,104 @@
+АС-Сортиране-Cpp
+			от Съзтезателно програмиране
+			
+									Направо към: навигация, търсене			
+			sort()
+
+Синтаксис:
+
+
+#include <algorithm>
+void sort( iterator start, iterator end );
+void sort( iterator start, iterator end, StrictWeakOrdering cmp );
+
+Командата sort() подрежда елементите в интервала [start, end) във възходящ ред. Равните елементи са случайно подредени.
+Ако е зададена функцията cmp, тя ще се използва за сравнение вместо операторът <.
+Функцията sort() използва introsort алгоритъм. Неговата сложност е <math>O(n\log n)</math>.
+Примерен код:
+
+
+ vector<int> v;
+ v.push_back( 23 );
+ v.push_back( -1 );
+ v.push_back( 9999 );
+ v.push_back( 0 );
+ v.push_back( 4 );              
+
+ cout << "Before sorting: ";
+ for( unsigned int i = 0; i < v.size(); i++ ) 
+ {
+   cout << v[i] << " ";
+ }
+ cout << endl;            
+
+ sort( v.begin(), v.end() );            
+
+ cout << "After sorting: ";
+ for( unsigned int i = 0; i < v.size(); i++ ) 
+ {
+   cout << v[i] << " ";
+ }
+ cout << endl;            
+<pre>
+
+
+'''Изход:'''
+
+<pre>
+ Before sorting: 23 -1 9999 0 4
+ After sorting: -1 0 4 23 9999          
+
+stable_sort()
+
+Синтаксис:
+
+
+  #include <algorithm>
+  void stable_sort( iterator start, iterator end );
+  void stable_sort( iterator start, iterator end, StrictWeakOrdering cmp );
+
+Командата stable_sort() действа като sort(), но с тази разлика, че запазва първоначалното подреждане на равните елементи един спрямо друг.
+Примерен код:
+
+
+inline bool lt_nocase(char c1, char c2) { return tolower(c1) < tolower(c2); }
+
+int main()
+{
+  char A[] = "fdBeACFDbEac";
+  const int N = sizeof(A) - 1;
+  stable_sort(A, A+N, lt_nocase);
+  printf("%s\n", A);
+  // резултатът е: ""AaBbCcdDeEfF".
+}
+
+partial_sort()
+
+Синтаксис:
+
+
+  #include <algorithm>
+  void partial_sort( iterator start, iterator middle, iterator end );
+  void partial_sort( iterator start, iterator middle, iterator end, StrictWeakOrdering cmp );
+
+Функцията partial_sort() сортира първите N елемента от интервала [strat, end) във възходящ ред. N е броя на елементите в интервала между start и middle
+По принцип за сравнение се използва операторът <, но начинът на сравнение може да се зададе и чрез функцията comp
+Примерен код:
+
+
+int A[] = {7, 2, 6, 11, 9, 3, 12, 10, 8, 4, 1, 5};
+const int N = sizeof(A) / sizeof(int);
+
+partial_sort(A, A + 5, A + N);
+copy(A, A + N, ostream_iterator<int>(cout, " "));
+// резултатът е: "1 2 3 4 5 11 12 10 9 8 7 6".
+
+
+
+
+
+
+Взето от „http://judge.openfmi.net:9080/mediawiki/index.php/%D0%90%D0%A1-%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%B0%D0%BD%D0%B5-Cpp“.
+			Категории: Алгоритми | Сортиране			
+						
+		

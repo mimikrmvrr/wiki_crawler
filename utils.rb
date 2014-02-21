@@ -10,7 +10,7 @@ class Url
 
   def base_url
     uri = URI.parse(@url)
-    "#{uri.scheme}://#{uri.host}"
+    "#{uri.scheme}://#{uri.host}:#{uri.port}"
   end
 
   def path
@@ -23,9 +23,11 @@ end
 class LinkUtils
   def self.get_links(page)
     links = {}
-    page.xpath("//*[@class='mw-pt-languages-list autonym']").map(&:remove) if page.xpath("//*[@class='mw-pt-languages-list']")
-    #page.css("div#mw-content-text").remove.xpath("//*[@id='footer-info']")
-    page.css("div#mw-content-text").xpath('//a[@href]').each do |link|
+    #page.xpath("//*[@class='mw-pt-languages-list autonym']").map(&:remove) if page.xpath("//*[@class='mw-pt-languages-list']")
+    #page.xpath("//*[@class='nmbox']").remove if page.xpath("//*[@class='nmbox']")
+    #age.css("div#mw-content-text").remove.xpath("//*[@id='footer-info']")
+    puts page.xpath('//a[@href]')
+    page.xpath('.//a[@href]').each do |link|
       links[link.text.strip] = link['href']
     end
     puts links
@@ -59,7 +61,7 @@ class Page
   end
 
   def neighbours
-    links = LinkUtils.get_links(@html)
+    links = LinkUtils.get_links(@html.css("div#bodyContent"))
     neighbours = LinkUtils.internal_links(links).values.map do |name|
       if ObjectSpace.each_object(Page).select { |obj| obj.name == name }.empty?
         Page.new(LinkUtils.get_absolute_url(name), @level + 1)
@@ -90,13 +92,12 @@ class Page
 
   def remove_useless
     @html.at('#toc').remove if @html.at('#toc')
-    @html.at_css('td[class="mw-pt-languages-label"]').remove if @html.at_css('td[class="mw-pt-languages-label"]')
-    @html.at_css('td[class="mw-pt-languages-list"]').remove if @html.at_css('td[class="mw-pt-languages-list"]')
-    @html.css('span[class="mw-editsection"]').map(&:remove) if @html.css('span[class="mw-editsection"]')
+    #@html.css('span[class="mw-editsection"]').map(&:remove) if @html.css('span[class="mw-editsection"]')
+    #@html.at('table[class="nmbox"]').remove if @html.at('table[class="nmbox"]')
   end
 
   def content
-    @html.css('div#mw-content-text').text
+    @html.css('div#bodyContent').text
   end
 
   def file_name
@@ -152,12 +153,13 @@ WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accor
   "what", "whatever", "when", "whence", "whenever", "where", "whereafter", "whereas", "whereby", "wherein", "whereupon",
   "wherever", "whether", "which", "whichever", "while", "whilst", "whither", "who", "whoever", "whole", "wholly", "whom",
   "whomever", "whose", "why", "will", "willing", "wish", "with", "within", "without", "wonder", "wondered", "wondering", "won",
-  "worst", "would", "wouldn", "yes", "yet", "you", "your", "yours", "yourself", "yourselves", "zero"]
+  "worst", "would", "wouldn", "yes", "yet", "you", "your", "yours", "yourself", "yourselves", "zero", "на", "в", "и", "от", "е", "http",
+  "html", "то", "за", "при", "по", "го", "bg", "en", "мо", "са", "ви", "не", "се", "d0", "d1", "b5", "b8", "към", "b0", "1", "80", "b3"]
 
 
 class Counter
   def initialize(text)
-    @words = text.split(%r{\W+}).map(&:downcase)
+    @words = text.split(/[^[[:alnum:]]]+/).map(&:downcase)
   end
 
   def frequencies

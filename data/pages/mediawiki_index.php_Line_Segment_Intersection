@@ -1,0 +1,391 @@
+Line Segment Intersection
+			от Съзтезателно програмиране
+			
+									Направо към: навигация, търсене			
+			 if (window.showTocToggle) { var tocShowText = "показване"; var tocHideText = "скриване"; showTocToggle(); }   Въведение 
+Съществува сравнително прост алгоритъм намиращ пресечната точка на две отсечки в случай че такава съществува за константно време( за сведение погледнете функцията intersect по-долу). Когато обаче се наложи да намерим бързо пресечните точки на всички двойки отсечки от някакво множество броят на пресечните точки може да достигне <math>n(n-1)/2</math> което е сравнимо с времето което ще използва наивен алгоритъм който опитва да пресече всеки две отсечки. Въпреки това в много от случаите пресечните точки ще са много по-малко а наивният алгоритъм ще отнема също толкова време. По-долу е описан алгоритъм които намира всички пресечни точки и има сложност <math>O((n+k)log(n))</math> където <math>n</math> е броят на отсечките а <math>k</math> е броят на пресечните точки.
+
+  Ограничения 
+От гледна точка простота на изложението приемаме че:
+1)никои три осечки не се пресичата в една точка.
+2)никои две отсечки не се застъпват( не се пресичат в повече от една точка).
+3)няма вертикални отсечки.
+
+  Алгоритъм 
+Ще "метем" през равнината (sweep line) с права успоредна на <math>O_y</math>. Във всеки един момент момент ще поддържаме структура базирана на двоично дърво за търсене която ще ни дава наредбата(по y-координати) на пресечните точки на отсечките със "метящата" права. Описаната наредба има свойнството че ако две отсечки се пресичат то те в някакъв момент са били съседни. Тази наредба се променя във в процеса на метене при 3 вида събития:
+1) Начало на отсечка.
+2) Край на отсечка.
+3) Пресичане на две отсечки.
+
+  Начало на отсечка 
+Когато срещнем началото на осечка я добавяме в дървото. След това проверяваме за пресечни точки със съседните й в наредбата отсечки а ако има такива ги добавяме в списъка със събития.
+
+  Край на отсечка 
+Когато срещнем краят на отсечка я премахваме от дървото и след това проверяваме за евентуална пресечна точка на двете и съседни отсечки. Ако такава съществува я добавяме в списъка със събития.
+
+  Пресечна точка 
+Когато две отсечки се пресечат то те си разменят местата в наредбата и съотвтно трябва да им раменим местата в дървото. След добавяме в списъка със събития евентуалните им пресечни точки със новите им съседи.
+Примерна реализация:
+
+
+#define _CRT_SECURE_NO_DEPRECATE
+
+#include <cstdio>
+#include <queue>
+#include <cmath>
+#include <set>
+#include <algorithm>
+
+using namespace std;
+
+struct Point
+{
+	double x,y;
+	bool operator < (const Point& p) const
+	{
+		if( x == p.x ) return y<p.y;
+		else return x<p.x;
+	};
+};
+
+struct Segment
+{
+	Point a,b;
+};
+
+double orient(Point& a,Point&b ,Point& c)
+{
+	return (a.x - c.x)*(b.y - c.y) - (a.y - c.y)*(b.x - c.x);
+}
+
+#define ABS(a) ((a)<0?-(a):(a))
+bool intersect(Segment& u,Segment& v,Point& p)
+{
+	double s1 = orient(u.a,u.b,v.a);
+	double s2 = orient(u.a,u.b,v.b);
+	double s3 = orient(v.a,v.b,u.a);
+	double s4 = orient(v.a,v.b,u.b);
+
+	if( ( (s1<0) == (s2<0) )  || (s1<0) == (s2<0) ) 
+		return false;
+	else
+	{
+		s1 = ABS(s1);
+		s2 = ABS(s2);
+		p.x = v.a.x + (s1/(s1+s2))*(v.b.x - v.a.x);
+		p.y = v.a.y + (s1/(s1+s2))*(v.b.y - v.a.y);
+		return true;
+	}
+}
+typedef enum 
+{
+		BEGIN=1,INTERSECTION=2,END=3
+} Type;
+struct Event
+{
+	double x;
+	Type type;
+	int a;
+	int b;
+	bool operator> (const Event& e) const 
+	{
+		if(x == e.x)
+			return type < e.type;
+		return x > e.x;
+	}
+	Event(double X,Type t,int A,int B=0)
+	{
+		x=X;
+		type=t;
+		a=A;
+		b=B;
+	};
+};
+
+struct Node
+{
+	int		idx;
+	Node*	par;
+	Node*	left;
+	Node*	right;
+};
+
+Node* root;
+
+Segment segs[1000000];
+Node	nodes[1000000];
+int n;
+
+double calcy(int idx ,double x)
+{
+	return segs[idx].a.y + ((x - segs[idx].a.x)/(segs[idx].b.x - segs[idx].a.x))*(segs[idx].b.y - segs[idx].a.y);
+}
+
+Node* low(Node*);
+Node* high(Node*);
+Node** find( int idx , double x )
+{
+	double y=calcy(idx,x);
+	Node** p=&root;
+	while( (*p) != NULL && (*p)->idx != idx)
+	{
+		double py = calcy((*p)->idx , x);
+		if(y < py)
+			p = &((*p)->left);
+		else if( y > py )
+			p = &((*p)->right);
+		else
+		{
+			Node *q=low(*p);
+			if( q && q->idx == idx )
+				p = &((*p)->left);
+			else
+				p = &((*p)->right);
+		}
+	}
+	return p;
+}
+
+Node* low(Node* t)
+{
+	Node* p;
+
+	if( t->left!=NULL )
+	{
+		for(p=t->left; p->right!=NULL ; p = p->right ) /**/;
+		return p;
+	}
+
+	for( p=t->par; p!=NULL && p->left==t; t=t->par,p=p->par) /**/;
+	
+	return p;
+}
+
+
+Node* high(Node* t)
+{
+	Node* p;
+
+	if( t->right!=NULL )
+	{
+		for(p=t->right; p->left!=NULL ; p = p->left ) /**/;
+		return p;
+	}
+
+	for( p=t->par; p!=NULL && p->right==t; t=t->par,p=p->par) /**/;
+	
+	return p;
+}
+
+void add(int idx,double x)
+{
+	double y=calcy(idx,x);
+	Node* p;
+	if( root == NULL )
+	{
+		nodes[idx].idx=idx;
+		nodes[idx].left=NULL;
+		nodes[idx].right=NULL;
+		nodes[idx].par=NULL;
+		root=&nodes[idx];
+		return;
+	}
+	p = root;
+	while( 1 )
+	{
+		double py = calcy(p->idx , x);
+		if(y < py)
+		{
+			if( p->left == NULL )
+			{
+				nodes[idx].idx=idx;
+				nodes[idx].left=NULL;
+				nodes[idx].right=NULL;
+				nodes[idx].par=p;
+				p->left=&nodes[idx];
+				break;
+			}
+			else
+				p = p->left;
+		}
+		else
+		{
+			if( p->right == NULL )
+			{
+				nodes[idx].idx=idx;
+				nodes[idx].left=NULL;
+				nodes[idx].right=NULL;
+				nodes[idx].par=p;
+				p->right=&nodes[idx];
+				break;
+			}
+			else
+				p = p->right;
+		}
+	}
+}
+
+void remove(int idx,double x)
+{
+	Node** p = find(idx,x);
+	Node** q = NULL;
+	Node* t;
+	
+	if( p == NULL )
+		return ;
+	if( (*p)->left )
+	{
+		for( q=&((*p)->left) ; (*q)->right!=NULL ; q = &((*q)->right) ) /**/;
+
+		t = *q;
+		(*q) = t->left;
+		
+		t->left = (*p)->left;
+		t->right = (*p)->right;
+		t->par = (*p)->par;
+
+		(*p) = t;
+	}
+	else if( (*p)->right )
+	{
+		for( q=&((*p)->right) ; (*q)->left!=NULL ; q = &((*q)->left) ) /**/;
+
+		t = *q;
+		(*q) = t->right;
+		
+		t->left = (*p)->left;
+		t->right = (*p)->right;
+		t->par = (*p)->par;
+
+		(*p) = t;
+	}
+	else
+		*p = NULL;
+}
+
+set<Point> inter;
+
+void solve()
+{
+	int i;
+	Node *p,*q;
+	int idx;
+	double x;
+	int idx2;
+	Point pnt;
+	priority_queue<Event,vector<Event>,greater<Event> > pq;
+	
+	
+	for(i=0;i<n;i++)
+	{
+		pq.push( Event(segs[i].a.x , BEGIN , i) );
+		pq.push( Event(segs[i].b.x , END , i) );
+	}
+
+	while( !pq.empty() )
+	{
+		Event e=pq.top();
+		pq.pop();
+		switch(e.type)
+		{
+		case BEGIN:
+			idx=e.a;
+			x=e.x;
+			add(idx, x);
+			p = high(&nodes[idx]);
+			q = low(&nodes[idx]);
+			if( p!=NULL && intersect( segs[idx], segs[p->idx], pnt ) )
+			{
+				if( pnt.x > x && inter.count(pnt)==0 )
+				{
+					pq.push( Event( pnt.x, INTERSECTION, idx, p->idx ) ); 
+					inter.insert( pnt );
+				}
+			}
+			if( q!=NULL && intersect( segs[idx], segs[q->idx], pnt ) )
+			{
+				if( pnt.x > x && inter.count(pnt)==0 )
+				{
+					pq.push( Event( pnt.x, INTERSECTION, q->idx, idx ) ); 
+					inter.insert( pnt );
+				}
+			}
+			break;
+		case END:
+			idx=e.a;
+			x=e.x;
+			p = high(&nodes[idx]);
+			q = low(&nodes[idx]);
+			remove(idx, x);
+
+			if( p!=NULL && q!=NULL && intersect( segs[p->idx], segs[q->idx], pnt ) )
+			{
+				if( pnt.x > x && inter.count(pnt)==0 )
+				{
+					pq.push( Event( pnt.x, INTERSECTION, q->idx, p->idx ) ); 
+					inter.insert( pnt );
+				}
+			}
+
+			break;
+		case INTERSECTION:
+			idx = e.a;
+			idx2 = e.b;
+			x = e.x;
+
+			p = *find(idx,  x);
+			q = *find(idx2, x);
+
+			p->idx = idx2;
+			q->idx = idx;
+
+			Node *u,*v;
+			
+			u = low(p);
+			v = high(q);
+
+			if( u!=NULL && intersect( segs[p->idx], segs[u->idx], pnt ) )
+			{
+				if( pnt.x > x && inter.count(pnt)==0 )
+				{
+					pq.push( Event( pnt.x, INTERSECTION, u->idx, p->idx ) ); 
+					inter.insert( pnt );
+				}
+			}
+			
+			if( v!=NULL && intersect( segs[q->idx], segs[v->idx], pnt ) )
+			{
+				if( pnt.x > x && inter.count(pnt)==0 )
+				{
+					pq.push( Event( pnt.x, INTERSECTION, q->idx, v->idx ) ); 
+					inter.insert( pnt );
+				}
+			}
+			break;
+		}
+	}
+
+}
+
+int main()
+{
+	int i;
+	freopen("inp.txt","r",stdin);
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%lf %lf %lf %lf",&segs[i].a.x,&segs[i].a.y,&segs[i].b.x,&segs[i].b.y);
+	solve();
+	for(set<Point>::iterator it=inter.begin();it!=inter.end();it++)
+		printf("%.3lf %.3lf\n",(*it).x,(*it).y);
+	return 0;
+}
+
+
+
+
+
+
+Взето от „http://judge.openfmi.net:9080/mediawiki/index.php/Line_Segment_Intersection“.
+			Категории: Алгоритми | Геометрия			
+						
+		

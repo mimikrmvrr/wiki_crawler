@@ -1,0 +1,52 @@
+АС-Сортиране-Java
+			от Съзтезателно програмиране
+			
+									Направо към: навигация, търсене			
+			Kласът java.utils.Arrays има статични функции за сортиране на масиви от примитивни типове или обекти. Тези функции могат да сортират целите масиви или определени части от тях. За обектите можете да зададете comparator, който да определя начина по който се сравняват обектите.
+Arrays.sort(pa); - сортира елементите на масив с елементи от примитивен тип във възходящ ред
+Arrays.sort(pa, from, to); - сортира елементите на масив с елементи от примитивен тип, които се намират в зададената част от масива
+Arrays.sort(oa); - сортира елементите на масив от обекти във възходящ ред, използвайки техния compareTo метод.
+Arrays.sort(oa, from, to); - сортира елементите на масив от обекти, които се намират в зададената област from...to във възходящ ред
+Arrays.sort(oa, comp); - сортира елементите на масив от обекти изполвайки за сравнение Comparator comp
+Arrays.sort(oa, from, to, comp); - сортира елементите на масив от обекти, които се намират във зададената област from...to използвайки Comparator comp
+Примерен код:
+Този пример сортира елементи от тип String или double. Всички обекти, които нямат метод compareTo() могат да бъдат сортирани използвайки comparator. 
+
+
+// File   : data-arrays/dblsort/Dblsrt.java
+// Purpose: To show how Arrays.sort() works with arrays
+//          of both primitive and object values.
+// Author : Fred Swartz 2006-08-23.  Public domain.
+
+import java.util.Arrays;
+
+public class Dblsrt {
+    //========================================================= main
+    public static void main(String[] args) {
+        //... 1. Sort strings - or any other Comparable objects.
+        String[] names = {"Zoe", "Alison", "David"};
+        Arrays.sort(names);
+        System.out.println(Arrays.toString(names));
+
+        //... 2. Sort doubles or other primitives.
+        double[] lengths = {120.0, 0.5, 0.0, 999.0, 77.3};
+        Arrays.sort(lengths);
+        System.out.println(Arrays.toString(lengths));
+    }
+}
+
+Изход:
+
+
+[Alison, David, Zoe]
+[0.0, 0.5, 77.3, 120.0, 999.0]
+
+
+
+
+
+
+Взето от „http://judge.openfmi.net:9080/mediawiki/index.php/%D0%90%D0%A1-%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%B0%D0%BD%D0%B5-Java“.
+			Категории: Алгоритми | Сортиране			
+						
+		

@@ -1,0 +1,214 @@
+Алгоритъм на Дийкстра
+			от Съзтезателно програмиране
+			
+									Направо към: навигация, търсене			
+			  Оптимален път в граф - алгоритъм на Дийкстра 
+Много от задачите свързани с графи изискват намирането на най-къс път между два върха. Най-ефективния начин за намиране на минималните пътища от даден връх до всички останали
+е алгоритъмът на Дийкстра.
+	Нека е даден претеглен ориентиран граф G(V,E). За да бъде приложен алгоритъмът,
+теглата на ребрата w(i,j) трябва да са положителни числа. Търси се минималният път от фиксиран
+връх s от множеството V до всички останали върхове на графа. С t(s,i) ще означим дължината на минималния път от s до i. Най-общо алгоритъмът на Дийкстра се основава на следния принцип: За да намерим t(s,i), 
+трябва да намерим минималното измежду t(s,j) + w(j,i), за всяко j, j ≠ i. Така на всеки връх от 
+графа се присвоява временна стойност dist[i], която представлява горна граница за t(s,i). В 
+процеса на работа на алгоритъма тази стойност намалява,  докато накрая dist[i] стане точно равна
+на t(s,i).
+Ето и кратко описание на алгоритъма:
+
+  Инициализираме масив dist[] по следния начин - dist[i] е равно или на теглото на реброто между s и i или на MAX_VALUE, ако няма ребро между s и i
+  Въвеждаме множество Т, което в началото съдържа всички върхове освен s, T = V\{s}
+  Докато Т съдържа поне един връх i, така че dist[i] < MAX_VALUE: 
+ Избираме връх j от множеството T такъв, че dist[j] да бъде минимално
+ Изключваме j от Т : Т = Т\{j}
+ За всяко i от Т изпълняваме dist[i] = min(dist[i], dist[j] +w(j,i)), където w(j,i)  е теглото на реброто между i и j.
+	За да възстановим върховете, участващи в минимален път (а не само дължината на пътя), ще 
+въведем допълнителен масив part[]. така в i-та позиция на part[] се записва върхът j, за който 
+t(s,j) + w(j,i) e било минимално.
+	В тази реализация на алгоритъма графа е представен чрез списък на наследниците.Сложността на 
+използвания тук алгоритъм е <math>O(n^2)</math>, но ако се използва пирамида тя може да стане <math>O((n + m) * \log n)</math> (m - брой на ребрата в графа). Ако графа е рядък (m не е голямо), то сложността става на практика <math>O(n * \log n)</math>. Дори по-ниска сложност може да се постигне (независимо от гъстотата на графа) с използването на фибоначиева пирамида, при която сложността става <math>O(m + n * \log n)</math>
+	Примерен граф - първите две числа са съответно броя на върховете V и броя на 
+ребрата E на графа, след което следват E реда тройки - два свързани върха и тегло на реброто, а 
+най-накрая е стартовият връх спрямо който ще се намират най-късите пътища.
+
+
+9 10
+1 2 5
+2 3 2
+2 4 14
+2 5 10
+3 6 3
+4 7 1
+5 6 6
+5 7 2
+6 8 4
+7 8 3
+1
+
+
+Примерна реализация:
+
+
+#include <stdio.h>
+
+#define SZ 1024
+#define NO_PARENT -1
+#define MAX_VALUE 65536
+
+int graph[SZ][SZ][2], V, E, Start, dist[SZ], part[SZ];
+	
+void input();
+void Djikstra(int);
+void printWay(int, int);
+void allPaths(int);
+
+int main()
+{
+	input();
+	Djikstra(Start);
+	allPaths(Start);
+	return 0;
+}
+
+void input()
+{
+	int v_i, v_j, weight, i, j;
+
+	scanf("%d %d", &V, &E);
+	
+	for (i = 0; i <= V; i++)
+	{
+		for (int j = 0; j <= V; j++)
+		{
+			graph[i][j][0] = -1;	
+			graph[i][j][1] = -1;
+		}			
+	}
+
+	for (i = 0; i < E; i++)
+	{
+		scanf("%d %d %d", &v_i, &v_j, &weight);
+
+		for (j = 0; graph[v_i][j][1] != -1; j++);
+		graph[v_i][j][0] = v_j;
+		graph[v_i][j][1] = weight;
+		for (j = 0; graph[v_j][j][1] != -1; j++);
+		graph[v_j][j][0] = v_i;
+		graph[v_j][j][1] = weight;
+	}
+
+	scanf("%d", &Start);
+}
+
+void Djikstra(int Start)
+{
+	int i, j = 0, index = -1, _min;
+	bool used[SZ];
+
+	for (i = 0; i <= V; i++) 
+	{
+		used[i] = false;
+		dist[i] = MAX_VALUE;
+		part[i] = NO_PARENT;
+	}
+
+	for (i = 0; graph[Start][i][1]; i++)
+	{
+		dist[graph[Start][i][0]] = graph[Start][i][1];
+		part[graph[Start][i][0]] = Start;
+	} 
+
+	part[Start] = -1;
+	dist[Start] = 0;
+	used[Start] = true;
+
+	while ( true )
+	{
+		_min = MAX_VALUE;
+		j = NO_PARENT;
+
+		for (i = 0; i < V; i++)
+		{
+			if ( ! used[i] )
+			{
+				if ( dist[i] < _min )
+				{
+					_min = dist[i];
+					j = i;
+				}
+			}
+		}
+
+		if ( j == NO_PARENT ) break;
+
+		used[j] = true;
+
+		for (i = 0; i < V; i++)
+		{
+			if ( ! used[i] )
+			{
+				for (index = 0; index < V && graph[j][index][0] != i; index++); 
+				if ( graph[j][index][0] == i )
+				{
+					if ( dist[i] > dist[j] + graph[j][index][1] ) 
+					{
+						dist[i] = dist[j] + graph[j][index][1];
+						part[i] = j;
+					}
+				}
+			}
+		}
+	}
+}
+
+void allPaths(int Start)
+{
+	for (int i = 1; i <= V; i++)
+	{
+		if ( i == Start ) continue;
+		if ( part[i] == -1 ) 
+		{
+			printf("There is no route from %d to %d\n", Start, i);
+			continue;
+		}
+		printf("The lenght of the shortest way between %d and %d is %d and \\
+			it passes through:%d", Start, i, dist[i], Start);
+		printWay(i, part[i]);
+		printf("\n");
+	}
+}
+
+void printWay(int u, int v)
+{
+	if ( part[v] != -1 ) printWay(v, part[v]);
+	printf(" -> %d", u);
+}
+
+Изход:
+
+
+The lenght of the shortest way between 1 and 2 is 5 and
+it passes through:1 -> 2
+The lenght of the shortest way between 1 and 3 is 7 and
+it passes through:1 -> 2 -> 3
+The lenght of the shortest way between 1 and 4 is 18 and
+it passes through:1 -> 2 -> 3 -> 6 -> 8 -> 7 -> 4
+The lenght of the shortest way between 1 and 5 is 15 and
+it passes through:1 -> 2 -> 5
+The lenght of the shortest way between 1 and 6 is 10 and
+it passes through:1 -> 2 -> 3 -> 6
+The lenght of the shortest way between 1 and 7 is 17 and
+it passes through:1 -> 2 -> 3 -> 6 -> 8 -> 7
+The lenght of the shortest way between 1 and 8 is 14 and
+it passes through:1 -> 2 -> 3 -> 6 -> 8
+There is no route from 1 to 9
+
+Използвана литература 
+Програмиране=++Алгоритми: - Преслав Наков, Панайот Добриков
+
+
+
+
+
+Взето от „http://judge.openfmi.net:9080/mediawiki/index.php/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D1%8A%D0%BC_%D0%BD%D0%B0_%D0%94%D0%B8%D0%B9%D0%BA%D1%81%D1%82%D1%80%D0%B0“.
+			Категории: Алгоритми | Графи			
+						
+		
