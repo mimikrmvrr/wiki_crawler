@@ -161,4 +161,9 @@ class TestSimpleNumber < Test::Unit::TestCase
                   ["edu", 3]],
                  frequencies)
   end
+
+  def test_crawer_level
+    frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 1, "LSBG")
+    assert_equal([["lsbg", 3]], frequencies)
+  end
 end

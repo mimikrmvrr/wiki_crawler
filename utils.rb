@@ -2,6 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 require 'active_support/core_ext'
+require 'date'
 
 
 class Url
@@ -24,10 +25,6 @@ end
 class LinkUtils
   def self.get_links(page)
     links = {}
-    #page.xpath("//*[@class='mw-pt-languages-list autonym']").map(&:remove) if page.xpath("//*[@class='mw-pt-languages-list']")
-    #page.xpath("//*[@class='nmbox']").remove if page.xpath("//*[@class='nmbox']")
-    #age.css("div#mw-content-text").remove.xpath("//*[@id='footer-info']")
-    #puts page.xpath('//a[@href]')
     page.xpath('.//a[@href]').each do |link|
       links[link.text.strip] = link['href']
     end
@@ -47,7 +44,7 @@ end
 
 class Page
   attr_accessor :level
-  attr_reader :name, :html
+  attr_reader :name, :html, :weight
 
   def initialize(url, level=0)
     begin
@@ -55,6 +52,9 @@ class Page
       @name = Url.new(url).path
       #create_local_file
       @level = level
+      views = @html.css('li#viewcount').text[/\d+/].to_i
+      lastmod = @html.css('li#lastmod').text[-5..-2].to_i
+      @weight = 5 + views / 1000 - (Date.today.strftime("%Y").to_i - lastmod)
       puts "Open #{url}"
     rescue Exception=>e
       puts "Cannot open #{url}"
@@ -93,8 +93,6 @@ class Page
 
   def remove_useless
     @html.at('#toc').remove if @html.at('#toc')
-    #@html.css('span[class="mw-editsection"]').map(&:remove) if @html.css('span[class="mw-editsection"]')
-    #@html.at('table[class="nmbox"]').remove if @html.at('table[class="nmbox"]')
   end
 
   def content
@@ -161,15 +159,6 @@ WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accor
   "неща", "други", "др", "неща", "нещата", "около", "ми", "има", "имате", "имат", "тук"]
 
 
-# class Counter
-#   def frequencies(text)
-#     words = TextParser.new(text).split
-#     frequencies = Hash.new(0)
-#     words.each { |word| frequencies[word] += 1 unless WORDS_TO_IGNORE.include? word }
-#     frequencies
-#   end
-# end
-
 class TextParser
   attr_reader :text
 
@@ -216,7 +205,6 @@ class Crawler
     end
     frequencies = Hash.new(0)
     queue = [page]
-    #klass = (type == :category ? Counter : Searcher)
     until queue.empty?
       current_page = queue.shift
       if current_page.level <= level
@@ -224,9 +212,9 @@ class Crawler
         text = ""
         File.open(current_page.file_name) { |file|  text = file.read }
         counter = (keywords ? Searcher.new(keywords, text) : TextParser.new(text))
-        #puts counter.frequencies
-        frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count }
-        #puts frequencies
+        puts "Before #{counter.frequencies}"
+        frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count * 5 }
+        puts "After #{frequencies}"
         queue << current_page.neighbours
         queue.flatten!
       else
