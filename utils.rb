@@ -3,6 +3,8 @@ require 'nokogiri'
 require 'open-uri'
 require 'active_support/core_ext'
 require 'date'
+require './crawler'
+require './page'
 
 
 class Url
@@ -41,69 +43,6 @@ class LinkUtils
   end
 end
 
-
-class Page
-  attr_accessor :level
-  attr_reader :name, :html, :weight
-
-  def initialize(url, level=0)
-    begin
-      @html = Nokogiri::HTML(open(url))
-      @name = Url.new(url).path
-      #create_local_file
-      @level = level
-      views = @html.css('li#viewcount').text[/\d+/].to_i
-      lastmod = @html.css('li#lastmod').text[-5..-2].to_i
-      @weight = 5 + views / 1000 - (Date.today.strftime("%Y").to_i - lastmod)
-      puts "Open #{url}"
-    rescue Exception=>e
-      puts "Cannot open #{url}"
-    end
-  end
-
-  def neighbours
-    links = LinkUtils.get_links(@html.css("div#bodyContent"))
-    neighbours = LinkUtils.internal_links(links).values.map do |name|
-      if ObjectSpace.each_object(Page).select { |obj| obj.name == name }.empty?
-        Page.new(LinkUtils.get_absolute_url(name), @level + 1)
-      else
-        ObjectSpace.each_object(Page).select { |obj| obj.name == name }.first
-      end
-    end
-    @neighbours = neighbours.select { |obj| not obj.name.nil? }
-  end
-
-  def create_local_file
-    remove_useless
-    begin
-      file = File.open(file_name, "w")
-      file.write(heading)
-      file.write(content)
-    rescue IOError => e
-      puts "Writing error"
-      #some error occur, dir not writable etc.
-    ensure
-      file.close unless file == nil
-    end
-  end
-
-  def heading
-    @html.css('h1').text
-  end
-
-  def remove_useless
-    @html.at('#toc').remove if @html.at('#toc')
-  end
-
-  def content
-    @html.css('div#bodyContent').text
-  end
-
-  def file_name
-    suffix = @name.gsub('/', '_')[1..-1]
-    "#{DATA_DIR}/#{suffix}"
-  end
-end
 
 WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accordingly", "across", "actually", "adj",
   "after", "afterwards", "again", "against", "ago", "ahead", "ain", "t", "all", "allow", "allows", "almost", "alone",
@@ -199,46 +138,3 @@ class Searcher
   end
 end
 
-
-class Crawler
-  attr_reader :frequencies
-
-  def crawl(page, level, *keywords)
-    if keywords
-      keywords = keywords.first
-    end
-    frequencies = Hash.new(0)
-    queue = [page]
-    until queue.empty?
-      current_page = queue.shift
-      if current_page.level <= level
-        current_page.create_local_file
-        text = ""
-        File.open(current_page.file_name) { |file|  text = file.read }
-        counter = (keywords ? Searcher.new(keywords, text) : TextParser.new(text))
-        weight = (keywords ? 1 : current_page.weight)
-        new_frequencies = counter.frequencies
-        new_frequencies.keys.each { |key| frequencies[key] = 0 unless frequencies.keys.include? key }
-        frequencies.merge!(new_frequencies) { |word, current_count, new_count| current_count + new_count * weight }
-        queue << current_page.neighbours
-        queue.flatten!
-      else
-        break
-      end
-    end
-    @frequencies = frequencies.sort_by { |word, count| -count }
-    keywords ? format(keywords) : format
-  end
-
-  def format(*keywords)
-    if keywords.empty?
-      frequencies_string = @frequencies.first(20).map { |phrase, _| "#{phrase} " }.reduce(&:+)
-      frequencies_string[-1] = "\n"
-      "Possible categories: #{frequencies_string}"
-    else
-      keywords = keywords.first
-      frequencies_string = @frequencies.first(20).map { |phrase, count| "#{phrase} - #{count} times\n" }.reduce(&:+)
-      "Found matchings: #{frequencies_string}"
-    end
-  end
-end
