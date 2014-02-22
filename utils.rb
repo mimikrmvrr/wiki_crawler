@@ -211,10 +211,10 @@ class Crawler
         current_page.create_local_file
         text = ""
         File.open(current_page.file_name) { |file|  text = file.read }
-        counter = (keywords ? Searcher.new(keywords, text) : TextParser.new(text))
-        puts "Before #{counter.frequencies}"
-        frequencies.merge!(counter.frequencies) { |word, current_count, new_count| current_count + new_count * 5 }
-        puts "After #{frequencies}"
+        counter = (keywords ? Searcher.new(keywords, text) : TextParser.new(text))        
+        new_frequencies = counter.frequencies
+        new_frequencies.keys.each { |key| frequencies[key] = 0 unless frequencies.keys.include? key }
+        frequencies.merge!(new_frequencies) { |word, current_count, new_count| current_count + new_count * current_page.weight }
         queue << current_page.neighbours
         queue.flatten!
       else

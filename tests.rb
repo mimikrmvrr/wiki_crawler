@@ -131,39 +131,39 @@ class TestSimpleNumber < Test::Unit::TestCase
 
   def test_crawler
     frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/Spoj0"), 0, "openfmi") 
-    assert_equal([["openfmi", 2],
-                  ["можете да подавате в страницата на проекта в openfmi", 1],
-                  ["и на openfmi", 1]],
+    assert_equal([["openfmi", 10],
+                  ["можете да подавате в страницата на проекта в openfmi", 5],
+                  ["и на openfmi", 5]],
                  frequencies)
   end
 
   def test_crawler_category
     frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 0) 
-    assert_equal([["място", 7],
-                  ["acm", 7],
-                  ["букурещ", 5],
-                  ["регионалите", 5],
-                  ["index", 5],
-                  ["fmi", 4],
-                  ["sofia", 4],
-                  ["club", 4],
-                  ["класиране", 4],
-                  ["финали", 4],
-                  ["uni", 4],
-                  ["клуба", 4],
-                  ["фми", 3],
-                  ["финалите", 3],
-                  ["красимир", 3],
-                  ["icpc", 3],
-                  ["baylor", 3],
-                  ["report", 3],
-                  ["csclub", 3],
-                  ["edu", 3]],
+    assert_equal([["място", 21],
+                  ["acm", 21],
+                  ["букурещ", 15],
+                  ["регионалите", 15],
+                  ["index", 15],
+                  ["fmi", 12],
+                  ["sofia", 12],
+                  ["club", 12],
+                  ["класиране", 12],
+                  ["финали", 12],
+                  ["uni", 12],
+                  ["клуба", 12],
+                  ["фми", 9],
+                  ["финалите", 9],
+                  ["красимир", 9],
+                  ["icpc", 9],
+                  ["baylor", 9],
+                  ["report", 9],
+                  ["csclub", 9],
+                  ["edu", 9]],
                  frequencies)
   end
 
   def test_crawer_level
     frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 1, "LSBG")
-    assert_equal([["lsbg", 3]], frequencies)
+    assert_equal([["lsbg", 6]], frequencies)
   end
 end
