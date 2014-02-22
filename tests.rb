@@ -164,7 +164,7 @@ class TestSimpleNumber < Test::Unit::TestCase
                   ["csclub", 9],
                   ["edu", 9]],
                  crawler.frequencies.first(20))
-    assert_equal("Possible categories: място acm букурещ регионалите index fmi sofia club класиране финали uni клуба фми финалите красимир icpc baylor report csclub edu ",
+    assert_equal("Possible categories: място acm букурещ регионалите index fmi sofia club класиране финали uni клуба фми финалите красимир icpc baylor report csclub edu\n",
                  output)
   end
 

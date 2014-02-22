@@ -182,6 +182,7 @@ class TextParser
   end
 end
 
+
 class Searcher
   def initialize(keywords, text)
     @kwords = TextParser.new(keywords).split
@@ -197,6 +198,7 @@ class Searcher
     matches
   end
 end
+
 
 class Crawler
   attr_reader :frequencies
@@ -231,6 +233,7 @@ class Crawler
   def format(*keywords)
     if keywords.empty?
       frequencies_string = @frequencies.first(20).map { |phrase, _| "#{phrase} " }.reduce(&:+)
+      frequencies_string[-1] = "\n"
       "Possible categories: #{frequencies_string}"
     else
       keywords = keywords.first
@@ -239,5 +242,3 @@ class Crawler
     end
   end
 end
-
-
