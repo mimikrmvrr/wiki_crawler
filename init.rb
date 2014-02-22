@@ -21,7 +21,7 @@ keywords = gets.strip
 page = Page.new(PAGE_URL)
 
 unless keywords.empty?
-  puts Crawler.new.crawl page, level, keywords
+  print Crawler.new.crawl page, level, keywords
 else
-  puts Crawler.new.crawl page, level
+  print Crawler.new.crawl page, level
 end

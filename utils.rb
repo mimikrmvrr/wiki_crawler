@@ -199,6 +199,8 @@ class Searcher
 end
 
 class Crawler
+  attr_reader :frequencies
+
   def crawl(page, level, *keywords)
     if keywords
       keywords = keywords.first
@@ -222,7 +224,19 @@ class Crawler
         break
       end
     end
-    frequencies.sort_by { |word, count| -count }.first 20
+    @frequencies = frequencies.sort_by { |word, count| -count }
+    keywords ? format(keywords) : format
+  end
+
+  def format(*keywords)
+    if keywords.empty?
+      frequencies_string = @frequencies.first(20).map { |phrase, _| "#{phrase} " }.reduce(&:+)
+      "Possible categories: #{frequencies_string}"
+    else
+      keywords = keywords.first
+      frequencies_string = @frequencies.first(20).map { |phrase, count| "#{phrase} - #{count} times\n" }.reduce(&:+)
+      "Found matchings: #{frequencies_string}"
+    end
   end
 end
 

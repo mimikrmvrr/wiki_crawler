@@ -130,15 +130,19 @@ class TestSimpleNumber < Test::Unit::TestCase
   end
 
   def test_crawler
-    frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/Spoj0"), 0, "openfmi") 
+    crawler = Crawler.new
+    output = crawler.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/Spoj0"), 0, "openfmi") 
     assert_equal([["openfmi", 2],
                   ["можете да подавате в страницата на проекта в openfmi", 1],
                   ["и на openfmi", 1]],
-                 frequencies)
+                 crawler.frequencies)
+    assert_equal("Found matchings: openfmi - 2 times\nможете да подавате в страницата на проекта в openfmi - 1 times\nи на openfmi - 1 times\n",
+                 output)
   end
 
   def test_crawler_category
-    frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 0) 
+    crawler = Crawler.new
+    output = crawler.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 0) 
     assert_equal([["място", 21],
                   ["acm", 21],
                   ["букурещ", 15],
@@ -159,11 +163,15 @@ class TestSimpleNumber < Test::Unit::TestCase
                   ["report", 9],
                   ["csclub", 9],
                   ["edu", 9]],
-                 frequencies)
+                 crawler.frequencies.first(20))
+    assert_equal("Possible categories: място acm букурещ регионалите index fmi sofia club класиране финали uni клуба фми финалите красимир icpc baylor report csclub edu ",
+                 output)
   end
 
   def test_crawer_level
-    frequencies = Crawler.new.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 1, "LSBG")
-    assert_equal([["lsbg", 3]], frequencies)
+    crawler = Crawler.new
+    output = crawler.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 1, "LSBG")
+    assert_equal([["lsbg", 3]], crawler.frequencies)
+    assert_equal("Found matchings: lsbg - 3 times\n", output)
   end
 end
