@@ -5,6 +5,7 @@ require 'active_support/core_ext'
 require 'date'
 require './crawler'
 require './page'
+require './constants'
 
 
 class Url
@@ -42,60 +43,6 @@ class LinkUtils
     "#{BASE_URL}#{link}"
   end
 end
-
-
-WORDS_TO_IGNORE =  ["a", "able", "about", "above", "abroad", "according", "accordingly", "across", "actually", "adj",
-  "after", "afterwards", "again", "against", "ago", "ahead", "ain", "t", "all", "allow", "allows", "almost", "alone",
-  "along", "alongside", "already", "also", "although", "always", "am", "amid", "amidst", "among", "amongst", "an",
-  "and", "another", "any", "anybody", "anyhow", "anyone", "anything", "anyway", "anyways", "anywhere", "apart", "appear",
-  "appreciate", "appropriate", "are", "aren", "around", "as", "s", "aside", "ask", "asking", "associated", "at",
-  "available", "away", "awfully", "back", "backward", "backwards", "be", "became", "because", "become", "becomes", "becoming",
-  "been", "before", "beforehand", "begin", "behind", "being", "believe", "below", "beside", "besides", "best", "better",
-  "between", "beyond", "both", "brief", "but", "by", "came", "can", "cannot", "cant", "caption", "cause", "causes", "certain",
-  "certainly", "changes", "clearly", "c", "mon", "co", "com", "come", "comes", "completely", "concerning", "consequently",
-  "consider", "considering", "contain", "containing", "contains", "corresponding", "could", "couldn", "course", "currently",
-  "dare", "daren", "decrease", "decreasingly", "definitely", "described", "despite", "did", "didn", "different", "directly",
-  "do", "does", "doesn", "doing", "done", "don", "down", "downwards", "during", "each", "eg", "eight", "eighty", "either",
-  "else", "elsewhere", "end", "ending", "enough", "entirely", "especially", "et", "etc", "even", "ever", "evermore", "every",
-  "everybody", "everyone", "everything", "everywhere", "ex", "exactly", "example", "except", "fairly", "far", "farther",
-  "few", "fewer", "fifth", "first", "firstly", "five", "followed", "following", "follows", "for", "forever", "former",
-  "formerly", "forth", "forward", "found", "four", "from", "further", "furthermore", "get", "gets", "getting", "given",
-  "gives", "go", "goes", "going", "gone", "got", "gotten", "greetings", "had", "hadn", "half", "happens", "hardly", "has",
-  "hasn", "have", "haven", "having", "he", "d", "ll", "hello", "help", "hence", "her", "here", "hereafter", "hereby", "herein",
-  "hereupon", "hers", "herself", "hi", "him", "himself", "his", "hither", "hopefully", "how", "howbeit", "however", "hundred",
-  "i", "ie", "if", "ignored", "m", "immediate", "in", "inasmuch", "inc", "increase", "increasingly", "indeed", "indicate",
-  "indicated", "indicates", "inner", "inside", "insofar", "instead", "into", "inward", "is", "isn", "it", "its", "itself",
-  "ve", "just", "keep", "keeps", "kept", "know", "known", "knows", "last", "lastly", "lately", "later", "latter", "latterly",
-  "least", "less", "lest", "let", "like", "liked", "likely", "likewise", "little", "look", "looking", "looks", "low", "lower",
-  "ltd", "made", "main", "mainly", "make", "makes", "many", "may", "maybe", "mayn", "me", "mean", "meantime", "meanwhile",
-  "merely", "might", "mightn", "mine", "minus", "miss", "more", "moreover", "most", "mostly", "mr", "mrs", "ms", "much", "must",
-  "mustn", "my", "myself", "name", "namely", "nd", "near", "nearly", "necessary", "need", "needn", "needs", "neither", "never",
-  "neverless", "nevertheless", "new", "next", "nine", "ninety", "no", "nobody", "non", "none", "nonetheless", "noone", "one",
-  "nor", "normally", "not", "nothing", "notwithstanding", "novel", "now", "nowhere", "obviously", "of", "off", "often", "oh",
-  "ok", "okay", "old", "on", "once", "ones", "only", "onto", "opposite", "or", "other", "others", "otherwise", "ought",
-  "oughtn", "our", "ours", "ourselves", "out", "outside", "over", "overall", "own", "particular", "particularly", "past",
-  "per", "perfectly", "perhaps", "placed", "please", "plus", "possible", "presumably", "probably", "provided", "provides",
-  "que", "quick", "quickly", "quite", "qv", "rather", "rd", "re", "really", "reasonably", "recent", "recently", "regarding",
-  "regardless", "regards", "relatively", "respectively", "right", "round", "said", "same", "saw", "say", "saying", "says",
-  "second", "secondly", "see", "seeing", "seem", "seemed", "seeming", "seems", "seen", "self", "selves", "sensible", "sent",
-  "serious", "seriously", "seven", "several", "shall", "shan", "she", "should", "shouldn", "since", "six", "so", "some",
-  "somebody", "someday", "somehow", "someone", "something", "sometime", "sometimes", "somewhat", "somewhere", "soon", "sorry",
-  "specified", "specify", "specifying", "still", "sub", "such", "sup", "sure", "surely", "take", "taken", "taking", "tell",
-  "tends", "th", "than", "thank", "thanks", "thanx", "that", "thats", "the", "their", "theirs", "them", "themselves", "then",
-  "thence", "there", "thereafter", "thereby", "therefore", "therein", "theres", "thereupon", "these", "they", "thing", "things",
-  "think", "third", "thirty", "this", "thorough", "thoroughly", "those", "though", "three", "thrice", "through", "throughout",
-  "thru", "thus", "thusly", "till", "to", "together", "too", "took", "toward", "towards", "tried", "tries", "truly", "try",
-  "trying", "twice", "two", "un", "under", "underneath", "undoing", "unfortunately", "unless", "unlike", "unlikely", "until",
-  "unto", "up", "upon", "upwards", "us", "use", "used", "useful", "uses", "using", "usually", "utterly", "value", "various",
-  "versus", "very", "via", "viz", "vs", "want", "wants", "was", "wasn", "way", "we", "welcome", "well", "went", "were", "weren",
-  "what", "whatever", "when", "whence", "whenever", "where", "whereafter", "whereas", "whereby", "wherein", "whereupon",
-  "wherever", "whether", "which", "whichever", "while", "whilst", "whither", "who", "whoever", "whole", "wholly", "whom",
-  "whomever", "whose", "why", "will", "willing", "wish", "with", "within", "without", "wonder", "wondered", "wondering", "won",
-  "worst", "would", "wouldn", "yes", "yet", "you", "your", "yours", "yourself", "yourselves", "zero", "на", "в", "и", "от", "е", "http",
-  "html", "то", "за", "при", "по", "го", "bg", "en", "мо", "са", "ви", "не", "се", "d0", "d1", "b5", "b8", "към", "b0", "1", "80", "b3",
-  "ro", "po", "ро", "2", "eet", "си", "тази", "това", "ок", "00", "но", "ще", "или", "т", "22", "да", "в", "нещо", 'с', "със", "във",
-  "трябва", "като", "я", "и", "защото", "защо", "още", 'ако', "има", "30", 'а', "че", "може", "можете", "някои", "някоя", "някое", "някой",
-  "неща", "други", "др", "неща", "нещата", "около", "ми", "има", "имате", "имат", "тук"]
 
 
 class TextParser
