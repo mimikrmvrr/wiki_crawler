@@ -36,7 +36,7 @@ class Crawler
     else
       keywords = keywords.first
       frequencies_string = @frequencies.first(20).map { |phrase, count| "#{phrase} - #{count} times\n" }.reduce(&:+)
-      "Found matchings: #{frequencies_string}"
+      "Found matches: #{frequencies_string}"
     end
   end
 end

@@ -136,7 +136,7 @@ class TestSimpleNumber < Test::Unit::TestCase
                   ["можете да подавате в страницата на проекта в openfmi", 1],
                   ["и на openfmi", 1]],
                  crawler.frequencies)
-    assert_equal("Found matchings: openfmi - 2 times\nможете да подавате в страницата на проекта в openfmi - 1 times\nи на openfmi - 1 times\n",
+    assert_equal("Found matches: openfmi - 2 times\nможете да подавате в страницата на проекта в openfmi - 1 times\nи на openfmi - 1 times\n",
                  output)
   end
 
@@ -172,6 +172,6 @@ class TestSimpleNumber < Test::Unit::TestCase
     crawler = Crawler.new
     output = crawler.crawl(Page.new("http://judge.openfmi.net:9080/mediawiki/index.php/CsClub"), 1, "LSBG")
     assert_equal([["lsbg", 3]], crawler.frequencies)
-    assert_equal("Found matchings: lsbg - 3 times\n", output)
+    assert_equal("Found matches: lsbg - 3 times\n", output)
   end
 end
